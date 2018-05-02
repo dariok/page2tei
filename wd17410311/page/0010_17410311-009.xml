@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>prov=University of Rostock/Institute of Mathematics/CITlab/Gundram Leifert/gundram.leifert@uni-rostock.de:name=best_net.sprnn::chars.txt:(v=1.0.2)
+prov=University of Rostock/Institute of Mathematics/CITlab/Tobias Gruening/tobias.gruening@uni-rostock.de:name=de.uro.citlab.module.baseline2polygon.B2PSeamMultiOriented(v=1.0.1)
+prov=University of Rostock/Institute of Mathematics/CITlab/Gundram Leifert/gundram.leifert@uni-rostock.de:name=net.sprnn:::(v=1.0.2)
+prov=University of Rostock/Institute of Mathematics/CITlab/Tobias Gruening/tobias.gruening@uni-rostock.de:name=de.uro.citlab.module.baseline2polygon.B2PSeamMultiOriented(v=1.0.1)
+</Creator>
+        <Created>2017-06-01T09:57:45.142+02:00</Created>
+        <LastChange>2018-04-24T11:44:32.082+02:00</LastChange>
+        <Comments>
+                Measurement unit: pixel
+                PrimaryLanguage: German
+                Language: GermanStandard
+                Producer: ABBYY FineReader Engine 11</Comments>
+        <TranskribusMetadata docId="20303" pageId="553869" pageNr="10" tsid="3199969" status="DONE" userId="7247" imgUrl="https://dbis-thure.uibk.ac.at/f/Get?id=XYPVGSAYOOCAFVXQGFKUKTCU&amp;fileType=view" xmlUrl="https://dbis-thure.uibk.ac.at/f/Get?id=UOQPDYPBETIKLKDNUIEERPTH" imageId="458617"/>
+    </Metadata>
+    <Page imageFilename="553869.png" imageWidth="1666" imageHeight="2213">
+        <PrintSpace>
+            <Coords points="0,0 1666,0 1666,2213 0,2213"/>
+        </PrintSpace>
+        <ReadingOrder>
+            <OrderedGroup id="ro_1502717894387" caption="Regions reading order">
+                <RegionRefIndexed index="0"/>
+            </OrderedGroup>
+        </ReadingOrder>
+    </Page>
+</PcGts>

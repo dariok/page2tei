@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<trpDocMetadata>
+    <docId>20299</docId>
+    <title>wd17320524</title>
+    <uploadTimestamp>1496230577247</uploadTimestamp>
+    <scriptType>GOTHIC</scriptType>
+    <uploader>Dario.Kampkaspar@oeaw.ac.at</uploader>
+    <uploaderId>7247</uploaderId>
+    <nrOfPages>10</nrOfPages>
+    <pageId>553796</pageId>
+    <url>https://dbis-thure.uibk.ac.at/f/Get?id=PALHQZDYHOYIYTNTRYFAYLDU&amp;fileType=view</url>
+    <thumbUrl>https://dbis-thure.uibk.ac.at/f/Get?id=PALHQZDYHOYIYTNTRYFAYLDU&amp;fileType=thumb</thumbUrl>
+    <status>0</status>
+    <fimgStoreColl>TrpDoc_DEA_20299</fimgStoreColl>
+    <createdFromTimestamp>0</createdFromTimestamp>
+    <createdToTimestamp>0</createdToTimestamp>
+    <collectionList>
+        <colList>
+            <colId>448</colId>
+            <colName>WrDiarium</colName>
+            <description>created by daniel.schopper@oeaw.ac.at</description>
+            <crowdsourcing>false</crowdsourcing>
+            <elearning>false</elearning>
+            <nrOfDocuments>0</nrOfDocuments>
+        </colList>
+        <colList>
+            <colId>11774</colId>
+            <colName>WrDiarium-Tranche01</colName>
+            <description>created by Dario.Kampkaspar@oeaw.ac.at</description>
+            <crowdsourcing>false</crowdsourcing>
+            <elearning>false</elearning>
+            <nrOfDocuments>0</nrOfDocuments>
+        </colList>
+    </collectionList>
+</trpDocMetadata>

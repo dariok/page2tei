@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>prov=University of Rostock/Institute of Mathematics/CITlab/Gundram Leifert/gundram.leifert@uni-rostock.de:name=WrDiarium_newM4(htr_id=959)::chars.txt::v=?1.0.2
+prov=University of Rostock/Institute of Mathematics/CITlab/Tobias Gruening/tobias.gruening@uni-rostock.de:name=de.uro.citlab.module.baseline2polygon.B2PSeamMultiOriented:v=?1.0.1
+prov=University of Rostock/Institute of Mathematics/CITlab/Gundram Leifert/gundram.leifert@uni-rostock.de:name=net.sprnn:::(v=1.0.2)
+prov=University of Rostock/Institute of Mathematics/CITlab/Tobias Gruening/tobias.gruening@uni-rostock.de:name=de.uro.citlab.module.baseline2polygon.B2PSeamMultiOriented(v=1.0.1)
+</Creator>
+        <Created>2017-06-01T10:10:04.656+02:00</Created>
+        <LastChange>2018-05-02T16:43:47.114+02:00</LastChange>
+        <Comments>
+                Measurement unit: pixel
+                PrimaryLanguage: 
+                Producer: ABBYY FineReader Engine 11</Comments>
+        <TranskribusMetadata docId="20308" pageId="553966" pageNr="14" tsid="3316710" status="DONE" userId="7247" imgUrl="https://dbis-thure.uibk.ac.at/f/Get?id=LQFJMVJCZVRPDJOKCZVOKUXX&amp;fileType=view" xmlUrl="https://dbis-thure.uibk.ac.at/f/Get?id=UWMSJNXVPTGZTWMUSVSLUWQM" imageId="458711"/>
+    </Metadata>
+    <Page imageFilename="553966.png" imageWidth="1637" imageHeight="2189"/>
+</PcGts>
