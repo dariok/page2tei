@@ -5,8 +5,8 @@
     xmlns:mets="http://www.loc.gov/METS/"
     xslt-version="3.0">
     
-    <!-- This XSPEC assumes that it is called from the directory in which the METS.xml is located
-        and which contains a directory `page` containg the PAGE XMLs -->
+    <!-- This XSPEC assumes that it is called from the `test` directory within the project directory.
+        Files referenced here need to be in sub-dir page -->
     
     <x:scenario label="teiHeader">
         <x:scenario label="Title" pending="true">
