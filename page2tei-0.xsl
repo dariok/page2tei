@@ -8,6 +8,7 @@
     xmlns:mets="http://www.loc.gov/METS/"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+    xmlns:local="local"
     xpath-default-namespace=""
     exclude-result-prefixes="xs math xd"
     version="3.0">
@@ -43,7 +44,7 @@
             <xsl:apply-templates select="mets:fileSec//mets:file" mode="facsimile" />
             <text>
                 <body>
-<!--                    <xsl:for-each></xsl:for-each>-->
+                    <xsl:apply-templates select="mets:fileSec//mets:file" mode="text" />
                 </body>
             </text>
         </TEI>
@@ -80,6 +81,18 @@
         </facsimile>
     </xsl:template>
     
+    <xd:doc>
+        <xd:desc>Apply by-page</xd:desc>
+    </xd:doc>
+    <xsl:template match="mets:file" mode="text">
+        <xsl:variable name="file" select="document(mets:FLocat/@xlink:href, /)"/>
+        <xsl:variable name="numCurr" select="position()"/>
+        
+        <xsl:apply-templates select="$file//p:Page" mode="text">
+            <xsl:with-param name="numCurr" select="$numCurr" tunnel="true" />
+        </xsl:apply-templates>
+    </xsl:template>
+    
     <!-- Templates for PAGE, facsimile -->
     <xd:doc>
         <xd:desc>
@@ -107,6 +120,10 @@
         </surface>
     </xsl:template>
     
+    <xd:doc>
+        <xd:desc>create the zones within facsimile/surface</xd:desc>
+        <xd:param name="numCurr">Numerus currens of the current page</xd:param>
+    </xd:doc>
     <xsl:template match="p:PrintSpace | p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TextLine" mode="facsimile">
         <xsl:param name="numCurr" tunnel="true" />
         
@@ -141,36 +158,91 @@
         </zone>
     </xsl:template>
     
-    <!--<xd:doc>
-        <xd:desc>Create tei:zone for print space</xd:desc>
-    </xd:doc>
-    <xsl:template match="p:PrintSpace" mode="facsimile">
-        <zone points="{p:Coords/@points}" rendition="printspace" />
-    </xsl:template>
-    
     <xd:doc>
-        <xd:desc>Create tei:zone for text regions</xd:desc>
+        <xd:desc>create the page content</xd:desc>
+        <xd:param name="numCurr">Numerus currens of the current page</xd:param>
     </xd:doc>
-    <xsl:template match="p:TextRegion" mode="facsimile">
-        <zone points="{p:Coords/@points}" renditio="TextRegion">
-            
-        </zone>
-    </xsl:template>
-    
-    <xd:doc>
-        <xd:desc>Create tei:zone for separators</xd:desc>
-    </xd:doc>
-    <xsl:template match="p:SeparatorRegion" mode="facsimile">
-        
-    </xsl:template>
-    
-    <xd:doc>
-        <xd:desc>Create tei:zone for text Graphics</xd:desc>
-    </xd:doc>
-    <xsl:template match="p:GraphicRegion" mode="facsimile">
-        
-    </xsl:template>-->
-    
     <!-- Templates for PAGE, text -->
+    <xsl:template match="p:Page" mode="text">
+        <xsl:param name="numCurr" tunnel="true" />
+        
+        <pb facs="#facs_{$numCurr}" n="{$numCurr}" />
+        <xsl:apply-templates select="p:TextRegion | p:SeparatorRegion | p:GraphicRegion" mode="text" />
+    </xsl:template>
     
+    <xd:doc>
+        <xd:desc>create p per TextRegion</xd:desc>
+        <xd:param name="numCurr"/>
+    </xd:doc>
+    <xsl:template match="p:TextRegion" mode="text">
+        <xsl:param name="numCurr" />
+        <p facs="#facs_{$numCurr}_{@id}">
+            <xsl:apply-templates select="p:TextLine" />
+        </p>
+    </xsl:template>
+    
+    <xsl:template match="p:TextLine">
+        <xsl:param name="numCurr" tunnel="true" />
+        
+        <!--<xsl:variable name="custom" as="map(xs:string, xs:string)">
+            <xsl:map>
+                <xsl:for-each-group select="tokenize(@custom||' lfd {'||$numCurr, '} ')" group-by="substring-before(., ' ')">
+                    <xsl:map-entry key="substring-before(., ' ')" select="string-join(current-group(), '–')" />
+                </xsl:for-each-group>
+            </xsl:map>
+        </xsl:variable>-->
+        <xsl:variable name="text" select="p:TextEquiv/p:Unicode"/>
+        <xsl:variable name="custom" select="tokenize(substring-after(@custom, '} '), '} ')"/>
+        <xsl:variable name="starts" as="map(*)">
+            <xsl:map>
+                <xsl:for-each-group select="$custom" group-by="substring-before(substring-after(., 'offset:'), ';')">
+                    <xsl:map-entry key="xs:int(current-grouping-key())" select="current-group()" />
+                </xsl:for-each-group>
+            </xsl:map>
+        </xsl:variable>
+        <xsl:variable name="ends" as="map(*)">
+            <xsl:map>
+                <xsl:for-each-group select="$custom" group-by="xs:int(substring-before(substring-after(., 'offset:'), ';'))
+                    + xs:int(substring-before(substring-after(., 'length:'), ';'))">
+                    <xsl:map-entry key="current-grouping-key()" select="current-group()" />
+                </xsl:for-each-group>
+            </xsl:map>
+        </xsl:variable>
+        <xsl:variable name="prepared">
+            <xsl:for-each select="0 to string-length($text)">
+                <xsl:if test=". &gt; 0"><xsl:value-of select="substring($text, ., 1)"/></xsl:if>
+                <xsl:for-each select="map:get($starts, .)">
+                    <xsl:element name="local:m">
+                        <xsl:attribute name="type" select="substring-before(., ' ')" />
+                        <xsl:attribute name="o" select="substring-after(., 'offset:')" />
+                        <xsl:attribute name="pos">s</xsl:attribute>
+                    </xsl:element>
+                </xsl:for-each>
+                <xsl:for-each select="map:get($ends, .)">
+                    <xsl:element name="local:m">
+                        <xsl:attribute name="type" select="substring-before(., ' ')" />
+                        <xsl:attribute name="o" select="substring-after(., 'offset:')" />
+                        <xsl:attribute name="pos">e</xsl:attribute>
+                    </xsl:element>
+                </xsl:for-each>
+            </xsl:for-each>
+        </xsl:variable>
+        <!-- TODO do we really need to support exporting <l>...</l>? -->
+        <xsl:text>
+            </xsl:text>
+        <lb facs="#facs_{$numCurr}_{@id}" n="N{format-number(position(), '000')}"/>
+        <xsl:for-each-group select="$prepared/node()" group-starting-with="local:m[@pos='s']">
+            <!--<xsl:choose>
+                <xsl:when test="current-group()/node()[1][self::local:m]">
+                    <xsl:element name="{current-group()/local:m[1]/@type}">
+                        <xsl:apply-templates select="local:m[1]/following-sibling::node()" />
+                    </xsl:element>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:sequence select="current-group()" />
+                </xsl:otherwise>
+            </xsl:choose>-->
+            <xsl:sequence select="(current-group()/node()[1])"/>
+        </xsl:for-each-group>
+    </xsl:template>
 </xsl:stylesheet>
