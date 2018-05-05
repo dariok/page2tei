@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><html xmlns:test="http://www.jenitennison.com/xslt/unit-test" xmlns="http://www.w3.org/1999/xhtml">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-      <title>Test Report for home/dario/eclipse-workspace/page2tei/page2tei-0.xsl (passed: 1 / pending: 1 / failed: 0 / total: 2)</title>
+      <title>Test Report for home/dario/eclipse-workspace/page2tei/page2tei-0.xsl (passed: 1 / pending: 1 / failed: 1 / total: 3)</title>
       <link rel="stylesheet" type="text/css" href="file:/home/dario/eclipse/plugins/com.oxygenxml.editor_20.0.0.v2018042410/frameworks/xspec/src/reporter/test-report.css" />
    </head>
    <body>
       <h1>Test Report</h1>
       <p>Stylesheet: <a href="file:/home/dario/eclipse-workspace/page2tei/page2tei-0.xsl">home/dario/eclipse-workspace/page2tei/page2tei-0.xsl</a></p>
-      <p>Tested: 3 May 2018 at 16:59</p>
+      <p>Tested: 5 May 2018 at 22:15</p>
       <h2>Contents</h2>
       <table class="xspec">
          <col width="75%" />
@@ -20,8 +20,8 @@
                <th></th>
                <th class="totals">passed: 1</th>
                <th class="totals">pending: 1</th>
-               <th class="totals">failed: 0</th>
-               <th class="totals">total: 2</th>
+               <th class="totals">failed: 1</th>
+               <th class="totals">total: 3</th>
             </tr>
          </thead>
          <tbody>
@@ -32,12 +32,12 @@
                <th class="totals">0</th>
                <th class="totals">1</th>
             </tr>
-            <tr class="successful">
+            <tr class="failed">
                <th><a href="#d3e149">facsimile</a></th>
                <th class="totals">1</th>
                <th class="totals">0</th>
-               <th class="totals">0</th>
                <th class="totals">1</th>
+               <th class="totals">2</th>
             </tr>
          </tbody>
       </table>
@@ -65,14 +65,14 @@
          </table>
       </div>
       <div id="d3e149">
-         <h2 class="successful">facsimile<span class="scenario-totals">passed: 1 / pending: 0 / failed: 0 / total: 1</span></h2>
+         <h2 class="successful">facsimile<span class="scenario-totals">passed: 1 / pending: 0 / failed: 1 / total: 2</span></h2>
          <table class="xspec" id="t-d3e149">
             <col width="75%" />
             <col width="25%" />
             <tbody>
                <tr class="successful">
                   <th>facsimile</th>
-                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+                  <th>passed: 1 / pending: 0 / failed: 1 / total: 2</th>
                </tr>
                <tr class="successful">
                   <th>Create facsimile, surface and graphic</th>
@@ -81,6 +81,603 @@
                <tr class="successful">
                   <td>facismile with ID, surface with params and graphic with url</td>
                   <td>Success</td>
+               </tr>
+               <tr class="failed">
+                  <th><a href="#d3e1140">Text</a></th>
+                  <th>passed: 0 / pending: 0 / failed: 1 / total: 1</th>
+               </tr>
+               <tr class="failed">
+                  <td><a href="#d3e1692">wie bevor</a></td>
+                  <td>Failure</td>
+               </tr>
+            </tbody>
+         </table>
+         <h3 id="d3e1140">facsimile Text</h3>
+         <h4 id="d3e1692">wie bevor</h4>
+         <table class="xspecResult">
+            <thead>
+               <tr>
+                  <th>Result</th>
+                  <th>Expected Result</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>
+                     <p>XPath <code>/node()</code> from:
+                     </p><pre><span class="whitespace">\n....</span><span class="whitespace">\n....</span>&lt;<span class="diff">pb</span> xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+         xmlns:local="local"
+         xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs_1"
+         <span class="diff">n</span>="1" /&gt;&lt;<span class="diff">p</span> xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+         xmlns:local="local"
+         xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs__TextRegion_1501232239812_647"&gt;
+   <span class="whitespace">\n............</span>
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__line_1501232263444_648"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Anno 1732. (Num. 13.) 13. Feb</span>&lt;<span class="diff">supplied</span>&gt;<span class="diff">ruar.</span>&lt;/supplied&gt;
+&lt;/p&gt;<span class="whitespace">\n............</span><span class="whitespace">\n........</span><span class="whitespace">\n............</span><span class="whitespace">\n........</span>&lt;<span class="diff">p</span> xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+         xmlns:local="local"
+         xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs__TextRegion_1501232279421_649"&gt;
+   <span class="whitespace">\n............</span>
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_3"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Wienerisches
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_4"
+     <span class="diff">n</span>="N002" /&gt;
+   &lt;<span class="diff">hi</span>&gt;<span class="diff">DIARIUM.</span>&lt;/hi&gt;
+&lt;/p&gt;<span class="whitespace">\n............</span><span class="whitespace">\n........</span>&lt;<span class="diff">p</span> xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+         xmlns:local="local"
+         xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs__r_5_3"&gt;
+   <span class="whitespace">\n............</span>
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_5"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Mit Jhrer Röm. Kaiserl. und Cathol. Majestät Freyheit.</span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+         xmlns:local="local"
+         xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs__TextRegion_1501232330223_650"&gt;
+   <span class="whitespace">\n............</span>
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__line_1501232378288_651"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Zu finden in der Kaiserlichen Hof=Buchdruckerey / gegen dem Ho=
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_8"
+     <span class="diff">n</span>="N002" /&gt;<span class="diff">Ball=Haus über / bey Johann Peter v. Ghelen.</span>&lt;/p&gt;<span class="whitespace">\n............</span><span class="whitespace">\n........</span>&lt;<span class="diff">p</span> xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+         xmlns:local="local"
+         xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs__r_7_1"&gt;
+   <span class="whitespace">\n............</span>
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_9"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Aus Asia.</span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+         xmlns:local="local"
+         xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs__r_7_2"&gt;
+   <span class="whitespace">\n............</span>
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_10"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Aleppo 6. December 1731.</span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+         xmlns:local="local"
+         xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs__r_7_3"&gt;
+   <span class="whitespace">\n............</span>
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_11"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">MAn hat alter Zeitung von Baf=
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_12"
+     <span class="diff">n</span>="N002" /&gt;<span class="diff">sora vom 4ten September / daß
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_13"
+     <span class="diff">n</span>="N003" /&gt;<span class="diff">das Hollendische Ost=Jndische
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_14"
+     <span class="diff">n</span>="N004" /&gt;<span class="diff">Schif / West=Frißland genannt / von
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_15"
+     <span class="diff">n</span>="N005" /&gt;<span class="diff">Batavia nach G</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">e</span>&lt;/unclear&gt;<span class="diff">mron / und Bassora
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_16"
+     <span class="diff">n</span>="N006" /&gt;<span class="diff">gehend / von 5. Jndianischen Raub=
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_17"
+     <span class="diff">n</span>="N007" /&gt;<span class="diff">Schiffen / und 10 kleinen Fahrzeugen
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_18"
+     <span class="diff">n</span>="N008" /&gt;<span class="diff">angegriffen / jed</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">o</span>&lt;/unclear&gt;<span class="diff">ch nach einem drey=
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_19"
+     <span class="diff">n</span>="N009" /&gt;<span class="diff">tägigen Gefechte z</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">u</span>&lt;/unclear&gt;<span class="diff"> Cochin glüklich ein=
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_20"
+     <span class="diff">n</span>="N010" /&gt;<span class="diff">gelauffen wäre: </span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">d</span>&lt;/unclear&gt;<span class="diff">ie Holländer hätten
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_21"
+     <span class="diff">n</span>="N011" /&gt;
+   &lt;<span class="diff">supplied</span>&gt;<span class="diff">i</span>&lt;/supplied&gt;<span class="diff">n diesem Gefechte nur 3. Todten / und
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_22"
+     <span class="diff">n</span>="N012" /&gt;<span class="diff">15. Verwundte bkommen; dahinge=
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_23"
+     <span class="diff">n</span>="N013" /&gt;<span class="diff">gen die Räuber / </span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">w</span>&lt;/unclear&gt;<span class="diff">elche Cangrim Gria
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_24"
+     <span class="diff">n</span>="N014" /&gt;<span class="diff">genannt werden / </span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">b</span>&lt;/unclear&gt;<span class="diff">ey dem Entern mehr
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_25"
+     <span class="diff">n</span>="N015" /&gt;<span class="diff">als 200. Mann ei</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">ng</span>&lt;/unclear&gt;<span class="diff">ebüsset.</span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+         xmlns:local="local"
+         xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs__r_7_4"&gt;
+   <span class="whitespace">\n............</span>
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_26"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Aus Spanien.</span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+         xmlns:local="local"
+         xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs__r_7_5"&gt;
+   <span class="whitespace">\n............</span>
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_27"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Sevilien </span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">6</span>&lt;/unclear&gt;<span class="diff">. Januarii.</span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+         xmlns:local="local"
+         xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs__TextRegion_1501232453857_652"&gt;
+   <span class="whitespace">\n............</span>
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_28"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Am abgewichen</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">e</span>&lt;/unclear&gt;<span class="diff">n Montag ware der
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_29"
+     <span class="diff">n</span>="N002" /&gt;<span class="diff">Groß Britannische Minister Herr Kee=
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_30"
+     <span class="diff">n</span>="N003" /&gt;
+   &lt;<span class="diff">unclear</span>&gt;<span class="diff">n</span>&lt;/unclear&gt;<span class="diff">e mit dem ersten Staats=</span>&lt;<span class="diff">hi</span>&gt;<span class="diff">Secretario</span>&lt;/hi&gt;
+   <span class="whitespace">\n............</span>
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_31"
+     <span class="diff">n</span>="N004" /&gt;<span class="diff">Marquis de la Pa</span>&lt;<span class="diff">gap</span> /&gt;<span class="diff"> in </span>&lt;<span class="diff">hi</span>&gt;<span class="diff">Conferenz</span>&lt;/hi&gt;<span class="diff">, so
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_32"
+     <span class="diff">n</span>="N005" /&gt;
+   &lt;<span class="diff">unclear</span>&gt;<span class="diff">h</span>&lt;/unclear&gt;<span class="diff">at auch der Holl</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">e</span>&lt;/unclear&gt;<span class="diff">ndische Minister Hr.
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_33"
+     <span class="diff">n</span>="N006" /&gt;
+   &lt;<span class="diff">supplied</span>&gt;<span class="diff">V</span>&lt;/supplied&gt;<span class="diff">an der Meer mit dem Staats=</span>&lt;<span class="diff">hi</span>&gt;<span class="diff">Secre-</span>&lt;/hi&gt;
+   <span class="whitespace">\n............</span>
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_34"
+     <span class="diff">n</span>="N007" /&gt;
+   &lt;<span class="diff">hi</span>&gt;
+      &lt;<span class="diff">supplied</span>&gt;<span class="diff">t</span>&lt;/supplied&gt;<span class="diff">tario</span>&lt;/hi&gt;<span class="diff"> Hrn. </span>&lt;<span class="diff">hi</span>&gt;<span class="diff">Patinho</span>&lt;/hi&gt;<span class="diff"> eine </span>&lt;<span class="diff">hi</span>&gt;<span class="diff">Conferenz</span>&lt;/hi&gt;<span class="diff"> ge=
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_35"
+     <span class="diff">n</span>="N008" /&gt;
+   &lt;<span class="diff">supplied</span>&gt;<span class="diff">h</span>&lt;/supplied&gt;<span class="diff">alten / in welcher dieser Minister ihme
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_36"
+     <span class="diff">n</span>="N009" /&gt;<span class="diff">Hrn. </span>&lt;<span class="diff">hi</span>&gt;<span class="diff">Patinho</span>&lt;/hi&gt;<span class="diff"> Klagen eingebracht we=
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_37"
+     <span class="diff">n</span>="N010" /&gt;
+   &lt;<span class="diff">supplied</span>&gt;<span class="diff">g</span>&lt;/supplied&gt;<span class="diff">en deme / daß die in denen Spanischen
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_38"
+     <span class="diff">n</span>="N011" /&gt;
+   &lt;<span class="diff">supplied</span>&gt;<span class="diff">H</span>&lt;/supplied&gt;<span class="diff">afen seßhafte Holländische Kauf=leute
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_39"
+     <span class="diff">n</span>="N012" /&gt;
+   &lt;<span class="diff">supplied</span>&gt;<span class="diff">i</span>&lt;/supplied&gt;<span class="diff">n ihrer Handlung wieder die errichtete
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_40"
+     <span class="diff">n</span>="N013" /&gt;
+   &lt;<span class="diff">unclear</span>&gt;<span class="diff">T</span>&lt;/unclear&gt;<span class="diff">ractaten zerstöhret würden; worauf
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_41"
+     <span class="diff">n</span>="N014" /&gt;
+   &lt;<span class="diff">supplied</span>&gt;<span class="diff">d</span>&lt;/supplied&gt;<span class="diff">erselbe erwehntem Minister die Versi=
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_42"
+     <span class="diff">n</span>="N015" /&gt;
+   &lt;<span class="diff">supplied</span>&gt;<span class="diff">ch</span>&lt;/supplied&gt;<span class="diff">erung gethan / daß solche Befehle ge=</span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+         xmlns:local="local"
+         xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs__r_8_1"&gt;
+   <span class="whitespace">\n............</span>
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_44"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">stellet werden solten / daß künftighin
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_45"
+     <span class="diff">n</span>="N002" /&gt;<span class="diff">die H</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">o</span>&lt;/unclear&gt;<span class="diff">lländische </span>&lt;<span class="diff">hi</span>&gt;<span class="diff">Negotian</span>&lt;/hi&gt;<span class="diff">ten keine Ur=
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_46"
+     <span class="diff">n</span>="N003" /&gt;<span class="diff">sach m</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">e</span>&lt;/unclear&gt;<span class="diff">hr zu klagen haben werden.</span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+         xmlns:local="local"
+         xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs__r_8_2"&gt;
+   <span class="whitespace">\n............</span>
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_47"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Aus Jtalien.</span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+         xmlns:local="local"
+         xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs__r_8_3"&gt;
+   <span class="whitespace">\n............</span>
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_48"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Livorno 25. Januarii.</span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+         xmlns:local="local"
+         xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs__r_8_4"&gt;
+   <span class="whitespace">\n............</span>
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_49"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Al</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">hi</span>&lt;/unclear&gt;<span class="diff">er ist ein Schif von Tunis ein=
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_50"
+     <span class="diff">n</span>="N002" /&gt;<span class="diff">geloff</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">en</span>&lt;/unclear&gt;<span class="diff"> / und hat sich der darauf be=
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_51"
+     <span class="diff">n</span>="N003" /&gt;<span class="diff">find</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">liche</span>&lt;/unclear&gt;<span class="diff"> / und von dem </span>&lt;<span class="diff">hi</span>&gt;<span class="diff">Bey</span>&lt;/hi&gt;<span class="diff"> abgeschik=
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_52"
+     <span class="diff">n</span>="N004" /&gt;<span class="diff">te T</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">une</span>&lt;/unclear&gt;<span class="diff">siner alsobald nacher Florentz
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_53"
+     <span class="diff">n</span>="N005" /&gt;<span class="diff">verf</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">üge</span>&lt;/unclear&gt;<span class="diff">t. Jhre Königl. Hoheit der </span>&lt;<span class="diff">hi</span>&gt;<span class="diff">In-</span>&lt;/hi&gt;
+   <span class="whitespace">\n............</span>
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_54"
+     <span class="diff">n</span>="N006" /&gt;
+   &lt;<span class="diff">hi</span>&gt;<span class="diff">fant D</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">on</span>&lt;/unclear&gt;<span class="diff">on Carlos</span>&lt;/hi&gt;<span class="diff"> seynd nunmehro völlig
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_55"
+     <span class="diff">n</span>="N007" /&gt;<span class="diff">ausser </span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">a</span>&lt;/unclear&gt;<span class="diff">ller Gefahr von denen gehabten
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_56"
+     <span class="diff">n</span>="N008" /&gt;<span class="diff">Kind</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">es</span>&lt;/unclear&gt;<span class="diff">=Blattern.</span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+         xmlns:local="local"
+         xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs__r_8_5"&gt;
+   <span class="whitespace">\n............</span>
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_57"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Rom 26. Januarii.</span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+         xmlns:local="local"
+         xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs__r_8_6"&gt;
+   <span class="whitespace">\n............</span>
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_58"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Di</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">en</span>&lt;/unclear&gt;<span class="diff">stag befanden Sich Jhre Heilig=
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_59"
+     <span class="diff">n</span>="N002" /&gt;<span class="diff">keit v</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">on</span>&lt;/unclear&gt;<span class="diff"> dem </span>&lt;<span class="diff">hi</span>&gt;<span class="diff">Podagra</span>&lt;/hi&gt;<span class="diff"> wieder gebessert /
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_60"
+     <span class="diff">n</span>="N003" /&gt;<span class="diff">und s</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">pei</span>&lt;/unclear&gt;<span class="diff">seten dannenhero zum ersten mal
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_61"
+     <span class="diff">n</span>="N004" /&gt;<span class="diff">wieder an der Tafel. Mittwoch erthei=
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_62"
+     <span class="diff">n</span>="N005" /&gt;<span class="diff">leten Selbe Dero Staats=Ministeren
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_63"
+     <span class="diff">n</span>="N006" /&gt;<span class="diff">Audi</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">entz</span>&lt;/unclear&gt;<span class="diff">. Donnerstags wohnete Jhre
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_64"
+     <span class="diff">n</span>="N007" /&gt;<span class="diff">Heilig</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">ke</span>&lt;/unclear&gt;<span class="diff">it der gewöhnlichen </span>&lt;<span class="diff">hi</span>&gt;<span class="diff">Congrega-</span>&lt;/hi&gt;
+   <span class="whitespace">\n............</span>
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_65"
+     <span class="diff">n</span>="N008" /&gt;
+   &lt;<span class="diff">hi</span>&gt;<span class="diff">tion</span>&lt;/hi&gt;<span class="diff"> d</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">es</span>&lt;/unclear&gt;<span class="diff"> Heil. </span>&lt;<span class="diff">hi</span>&gt;<span class="diff">Officii</span>&lt;/hi&gt;<span class="diff"> bey. Aus Spa=
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_66"
+     <span class="diff">n</span>="N009" /&gt;<span class="diff">nien i</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">st</span>&lt;/unclear&gt;<span class="diff"> der Befehl eingeloffen / alle hier
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_67"
+     <span class="diff">n</span>="N010" /&gt;<span class="diff">befind</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">lic</span>&lt;/unclear&gt;<span class="diff">he Spanier aufzuzeichnen / oh=
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_68"
+     <span class="diff">n</span>="N011" /&gt;<span class="diff">ne da</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">ß</span>&lt;/unclear&gt;<span class="diff"> man erfahren kan / aus was
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_69"
+     <span class="diff">n</span>="N012" /&gt;<span class="diff">Ursach </span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">s</span>&lt;/unclear&gt;<span class="diff">olches geschehe.</span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+         xmlns:local="local"
+         xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs__r_8_7"&gt;
+   <span class="whitespace">\n............</span>
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_70"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Florentz 26. Januarii.</span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+         xmlns:local="local"
+         xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs__r_8_8"&gt;
+   <span class="whitespace">\n............</span>
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_71"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Mo</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">nt</span>&lt;/unclear&gt;<span class="diff">ag ertheilete unser Groß=Her=
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_72"
+     <span class="diff">n</span>="N002" /&gt;<span class="diff">tzog d</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">em</span>&lt;/unclear&gt;<span class="diff"> Staats=</span>&lt;<span class="diff">hi</span>&gt;<span class="diff">Secretari</span>&lt;/hi&gt;<span class="diff">, wie auch
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_73"
+     <span class="diff">n</span>="N003" /&gt;<span class="diff">einem </span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">an</span>&lt;/unclear&gt;<span class="diff">gelangten Tunesiner / welcher
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_74"
+     <span class="diff">n</span>="N004" /&gt;<span class="diff">Seiner/ Königl. Hoheit im Namen des
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_75"
+     <span class="diff">n</span>="N005" /&gt;
+   &lt;<span class="diff">hi</span>&gt;<span class="diff">Bey</span>&lt;/hi&gt;<span class="diff"> se</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">hr</span>&lt;/unclear&gt;<span class="diff"> grosse Geschenknussen verehr=
+            </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__tl_76"
+     <span class="diff">n</span>="N006" /&gt;<span class="diff">te / A</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">udi</span>&lt;/unclear&gt;<span class="diff">entz.</span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+         xmlns:local="local"
+         xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs__TextRegion_1506004317324_2"&gt;
+   <span class="whitespace">\n............</span>
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__line_1506004317372_4"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">)(</span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+         xmlns:local="local"
+         xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs__TextRegion_1506004317324_1"&gt;
+   <span class="whitespace">\n............</span>
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs__line_1506004317372_3"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Mei=</span>&lt;/p&gt;<span class="whitespace">\n</span></pre></td>
+                  <td><pre>&lt;<span class="diff">pb</span> xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs_1"
+         <span class="diff">n</span>="1" /&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs_1_TextRegion_1501232239812_647"&gt;
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_line_1501232263444_648"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Anno 1732. (Num. 13.) 13. Feb</span>&lt;<span class="diff">supplied</span> <span class="diff">reason</span>=""&gt;<span class="diff">ruar.</span>&lt;/supplied&gt;
+&lt;/p&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs_1_TextRegion_1501232279421_649"&gt;
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_3"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Wienerisches
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_4"
+     <span class="diff">n</span>="N002" /&gt;
+   &lt;<span class="diff">hi</span> <span class="diff">rend</span>="fontFamily:Antiqua; fontSize:15.0;"&gt;<span class="diff">DIARIUM.</span>&lt;/hi&gt;
+&lt;/p&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs_1_r_5_3"&gt;
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_5"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Mit Jhrer Röm. Kaiserl. und Cathol. Majestät Freyheit.
+                </span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs_1_TextRegion_1501232330223_650"&gt;
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_line_1501232378288_651"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Zu finden in der Kaiserlichen Hof=Buchdruckerey / gegen dem Ho=
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_8"
+     <span class="diff">n</span>="N002" /&gt;<span class="diff">Ball=Haus über / bey Johann Peter v. Ghelen.
+                </span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs_1_r_7_1"&gt;
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_9"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Aus Asia.
+                </span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs_1_r_7_2"&gt;
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_10"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Aleppo 6. December 1731.
+                </span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs_1_r_7_3"&gt;
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_11"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">MAn hat alter Zeitung von Baf=
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_12"
+     <span class="diff">n</span>="N002" /&gt;<span class="diff">sora vom 4ten September / daß
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_13"
+     <span class="diff">n</span>="N003" /&gt;<span class="diff">das Hollendische Ost=Jndische
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_14"
+     <span class="diff">n</span>="N004" /&gt;<span class="diff">Schif / West=Frißland genannt / von
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_15"
+     <span class="diff">n</span>="N005" /&gt;<span class="diff">Batavia nach G</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">e</span>&lt;/unclear&gt;<span class="diff">mron / und Bassora
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_16"
+     <span class="diff">n</span>="N006" /&gt;<span class="diff">gehend / von 5. Jndianischen Raub=
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_17"
+     <span class="diff">n</span>="N007" /&gt;<span class="diff">Schiffen / und 10 kleinen Fahrzeugen
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_18"
+     <span class="diff">n</span>="N008" /&gt;<span class="diff">angegriffen / jed</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">o</span>&lt;/unclear&gt;<span class="diff">ch nach einem drey=
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_19"
+     <span class="diff">n</span>="N009" /&gt;<span class="diff">tägigen Gefechte z</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">u</span>&lt;/unclear&gt;<span class="diff"> Cochin glüklich ein=
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_20"
+     <span class="diff">n</span>="N010" /&gt;<span class="diff">gelauffen wäre: </span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">d</span>&lt;/unclear&gt;<span class="diff">ie Holländer hätten
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_21"
+     <span class="diff">n</span>="N011" /&gt;
+   &lt;<span class="diff">supplied</span> <span class="diff">reason</span>=""&gt;<span class="diff">i</span>&lt;/supplied&gt;<span class="diff">n diesem Gefechte nur 3. Todten / und
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_22"
+     <span class="diff">n</span>="N012" /&gt;<span class="diff">15. Verwundte bkommen; dahinge=
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_23"
+     <span class="diff">n</span>="N013" /&gt;<span class="diff">gen die Räuber / </span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">w</span>&lt;/unclear&gt;<span class="diff">elche Cangrim Gria
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_24"
+     <span class="diff">n</span>="N014" /&gt;<span class="diff">genannt werden / </span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">b</span>&lt;/unclear&gt;<span class="diff">ey dem Entern mehr
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_25"
+     <span class="diff">n</span>="N015" /&gt;<span class="diff">als 200. Mann ei</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">ng</span>&lt;/unclear&gt;<span class="diff">ebüsset.
+                </span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs_1_r_7_4"&gt;
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_26"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Aus Spanien.
+                </span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs_1_r_7_5"&gt;
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_27"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Sevilien </span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">6</span>&lt;/unclear&gt;<span class="diff">. Januarii.
+                </span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs_1_TextRegion_1501232453857_652"&gt;
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_28"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Am abgewichen</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">e</span>&lt;/unclear&gt;<span class="diff">n Montag ware der
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_29"
+     <span class="diff">n</span>="N002" /&gt;<span class="diff">Groß Britannische Minister Herr Kee=
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_30"
+     <span class="diff">n</span>="N003" /&gt;
+   &lt;<span class="diff">unclear</span>&gt;<span class="diff">n</span>&lt;/unclear&gt;<span class="diff">e mit dem ersten Staats=</span>&lt;<span class="diff">hi</span> <span class="diff">rend</span>="fontFamily:Antiqua;"&gt;<span class="diff">Secretario</span>&lt;/hi&gt;
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_31"
+     <span class="diff">n</span>="N004" /&gt;<span class="diff">Marquis de la Pa</span>&lt;<span class="diff">gap</span> /&gt;<span class="diff"> in </span>&lt;<span class="diff">hi</span> <span class="diff">rend</span>="fontFamily:Antiqua;"&gt;<span class="diff">Conferenz</span>&lt;/hi&gt;<span class="diff">, so
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_32"
+     <span class="diff">n</span>="N005" /&gt;
+   &lt;<span class="diff">unclear</span>&gt;<span class="diff">h</span>&lt;/unclear&gt;<span class="diff">at auch der Holl</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">e</span>&lt;/unclear&gt;<span class="diff">ndische Minister Hr.
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_33"
+     <span class="diff">n</span>="N006" /&gt;
+   &lt;<span class="diff">supplied</span> <span class="diff">reason</span>=""&gt;<span class="diff">V</span>&lt;/supplied&gt;<span class="diff">an der Meer mit dem Staats=</span>&lt;<span class="diff">hi</span> <span class="diff">rend</span>="fontFamily:Antiqua;"&gt;<span class="diff">Secre-</span>&lt;/hi&gt;
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_34"
+     <span class="diff">n</span>="N007" /&gt;
+   &lt;<span class="diff">hi</span> <span class="diff">rend</span>="fontFamily:Antiqua;"&gt;
+      &lt;<span class="diff">supplied</span> <span class="diff">reason</span>=""&gt;<span class="diff">t</span>&lt;/supplied&gt;<span class="diff">ario</span>&lt;/hi&gt;<span class="diff"> Hrn. </span>&lt;<span class="diff">hi</span> <span class="diff">rend</span>="fontFamily:Antiqua;"&gt;<span class="diff">Patinho</span>&lt;/hi&gt;<span class="diff"> eine </span>&lt;<span class="diff">hi</span> <span class="diff">rend</span>="fontFamily:Antiqua;"&gt;<span class="diff">Conferenz</span>&lt;/hi&gt;<span class="diff"> ge=
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_35"
+     <span class="diff">n</span>="N008" /&gt;
+   &lt;<span class="diff">supplied</span> <span class="diff">reason</span>=""&gt;<span class="diff">h</span>&lt;/supplied&gt;<span class="diff">alten / in welcher dieser Minister ihme
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_36"
+     <span class="diff">n</span>="N009" /&gt;<span class="diff">Hrn. </span>&lt;<span class="diff">hi</span> <span class="diff">rend</span>="fontFamily:Antiqua;"&gt;<span class="diff">Patinho</span>&lt;/hi&gt;<span class="diff"> Klagen eingebracht we=
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_37"
+     <span class="diff">n</span>="N010" /&gt;
+   &lt;<span class="diff">supplied</span> <span class="diff">reason</span>=""&gt;<span class="diff">g</span>&lt;/supplied&gt;<span class="diff">en deme / daß die in denen Spanischen
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_38"
+     <span class="diff">n</span>="N011" /&gt;
+   &lt;<span class="diff">supplied</span> <span class="diff">reason</span>=""&gt;<span class="diff">H</span>&lt;/supplied&gt;<span class="diff">afen seßhafte Holländische Kauf=leute
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_39"
+     <span class="diff">n</span>="N012" /&gt;
+   &lt;<span class="diff">supplied</span> <span class="diff">reason</span>=""&gt;<span class="diff">i</span>&lt;/supplied&gt;<span class="diff">n ihrer Handlung wieder die errichtete
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_40"
+     <span class="diff">n</span>="N013" /&gt;
+   &lt;<span class="diff">unclear</span>&gt;<span class="diff">T</span>&lt;/unclear&gt;<span class="diff">ractaten zerstöhret würden; worauf
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_41"
+     <span class="diff">n</span>="N014" /&gt;
+   &lt;<span class="diff">supplied</span> <span class="diff">reason</span>=""&gt;<span class="diff">d</span>&lt;/supplied&gt;<span class="diff">erselbe erwehntem Minister die Versi=
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_42"
+     <span class="diff">n</span>="N015" /&gt;
+   &lt;<span class="diff">supplied</span> <span class="diff">reason</span>=""&gt;<span class="diff">ch</span>&lt;/supplied&gt;<span class="diff">erung gethan / daß solche Befehle ge=
+                </span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs_1_r_8_1"&gt;
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_44"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">stellet werden solten / daß künftighin
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_45"
+     <span class="diff">n</span>="N002" /&gt;<span class="diff">die H</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">o</span>&lt;/unclear&gt;<span class="diff">lländische </span>&lt;<span class="diff">hi</span> <span class="diff">rend</span>="fontFamily:Antiqua;"&gt;<span class="diff">Negotian</span>&lt;/hi&gt;<span class="diff">ten keine Ur=
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_46"
+     <span class="diff">n</span>="N003" /&gt;<span class="diff">sach m</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">e</span>&lt;/unclear&gt;<span class="diff">hr zu klagen haben werden.
+                </span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs_1_r_8_2"&gt;
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_47"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Aus Jtalien.
+                </span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs_1_r_8_3"&gt;
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_48"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Livorno 25. Januarii.
+                </span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs_1_r_8_4"&gt;
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_49"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Al</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">hi</span>&lt;/unclear&gt;<span class="diff">er ist ein Schif von Tunis ein=
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_50"
+     <span class="diff">n</span>="N002" /&gt;<span class="diff">geloff</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">en</span>&lt;/unclear&gt;<span class="diff"> / und hat sich der darauf be=
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_51"
+     <span class="diff">n</span>="N003" /&gt;<span class="diff">find</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">liche</span>&lt;/unclear&gt;<span class="diff"> / und von dem </span>&lt;<span class="diff">hi</span> <span class="diff">rend</span>="fontFamily:Antiqua;"&gt;<span class="diff">Bey</span>&lt;/hi&gt;<span class="diff"> abgeschik=
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_52"
+     <span class="diff">n</span>="N004" /&gt;<span class="diff">te T</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">une</span>&lt;/unclear&gt;<span class="diff">siner alsobald nacher Florentz
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_53"
+     <span class="diff">n</span>="N005" /&gt;<span class="diff">verf</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">üge</span>&lt;/unclear&gt;<span class="diff">t. Jhre Königl. Hoheit der </span>&lt;<span class="diff">hi</span> <span class="diff">rend</span>="fontFamily:Antiqua;"&gt;<span class="diff">In-</span>&lt;/hi&gt;
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_54"
+     <span class="diff">n</span>="N006" /&gt;
+   &lt;<span class="diff">hi</span> <span class="diff">rend</span>="fontFamily:Antiqua;"&gt;<span class="diff">fant D</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">on</span>&lt;/unclear&gt;<span class="diff"> Carlos</span>&lt;/hi&gt;<span class="diff"> seynd nunmehro völlig
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_55"
+     <span class="diff">n</span>="N007" /&gt;<span class="diff">ausser </span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">a</span>&lt;/unclear&gt;<span class="diff">ller Gefahr von denen gehabten
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_56"
+     <span class="diff">n</span>="N008" /&gt;<span class="diff">Kind</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">es</span>&lt;/unclear&gt;<span class="diff">=Blattern.
+                </span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs_1_r_8_5"&gt;
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_57"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Rom 26. Januarii.
+                </span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs_1_r_8_6"&gt;
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_58"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Di</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">en</span>&lt;/unclear&gt;<span class="diff">stag befanden Sich Jhre Heilig=
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_59"
+     <span class="diff">n</span>="N002" /&gt;<span class="diff">keit v</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">on</span>&lt;/unclear&gt;<span class="diff"> dem </span>&lt;<span class="diff">hi</span> <span class="diff">rend</span>="fontFamily:Antiqua;"&gt;<span class="diff">Podagra</span>&lt;/hi&gt;<span class="diff"> wieder gebessert /
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_60"
+     <span class="diff">n</span>="N003" /&gt;<span class="diff">und s</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">pei</span>&lt;/unclear&gt;<span class="diff">seten dannenhero zum ersten mal
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_61"
+     <span class="diff">n</span>="N004" /&gt;<span class="diff">wieder an der Tafel. Mittwoch erthei=
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_62"
+     <span class="diff">n</span>="N005" /&gt;<span class="diff">leten Selbe Dero Staats=Ministeren
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_63"
+     <span class="diff">n</span>="N006" /&gt;<span class="diff">Audi</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">entz</span>&lt;/unclear&gt;<span class="diff">. Donnerstags wohnete Jhre
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_64"
+     <span class="diff">n</span>="N007" /&gt;<span class="diff">Heilig</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">ke</span>&lt;/unclear&gt;<span class="diff">it der gewöhnlichen </span>&lt;<span class="diff">hi</span> <span class="diff">rend</span>="fontFamily:Antiqua;"&gt;<span class="diff">Congrega-</span>&lt;/hi&gt;
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_65"
+     <span class="diff">n</span>="N008" /&gt;
+   &lt;<span class="diff">hi</span> <span class="diff">rend</span>="fontFamily:Antiqua;"&gt;<span class="diff">tion</span>&lt;/hi&gt;<span class="diff"> d</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">es</span>&lt;/unclear&gt;<span class="diff"> Heil. </span>&lt;<span class="diff">hi</span> <span class="diff">rend</span>="fontFamily:Antiqua;"&gt;<span class="diff">Officii</span>&lt;/hi&gt;<span class="diff"> bey. Aus Spa=
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_66"
+     <span class="diff">n</span>="N009" /&gt;<span class="diff">nien i</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">st</span>&lt;/unclear&gt;<span class="diff"> der Befehl eingeloffen / alle hier
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_67"
+     <span class="diff">n</span>="N010" /&gt;<span class="diff">befind</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">lic</span>&lt;/unclear&gt;<span class="diff">he Spanier aufzuzeichnen / oh=
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_68"
+     <span class="diff">n</span>="N011" /&gt;<span class="diff">ne da</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">ß</span>&lt;/unclear&gt;<span class="diff"> man erfahren kan / aus was
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_69"
+     <span class="diff">n</span>="N012" /&gt;<span class="diff">Ursach </span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">s</span>&lt;/unclear&gt;<span class="diff">olches geschehe.
+                </span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs_1_r_8_7"&gt;
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_70"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Florentz 26. Januarii.
+                </span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs_1_r_8_8"&gt;
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_71"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Mo</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">nt</span>&lt;/unclear&gt;<span class="diff">ag ertheilete unser Groß=Her=
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_72"
+     <span class="diff">n</span>="N002" /&gt;<span class="diff">tzog d</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">em</span>&lt;/unclear&gt;<span class="diff"> Staats=</span>&lt;<span class="diff">hi</span> <span class="diff">rend</span>="fontFamily:Antiqua;"&gt;<span class="diff">Secretari</span>&lt;/hi&gt;<span class="diff">, wie auch
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_73"
+     <span class="diff">n</span>="N003" /&gt;<span class="diff">einem </span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">an</span>&lt;/unclear&gt;<span class="diff">gelangten Tunesiner / welcher
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_74"
+     <span class="diff">n</span>="N004" /&gt;<span class="diff">Seiner/ Königl. Hoheit im Namen des
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_75"
+     <span class="diff">n</span>="N005" /&gt;
+   &lt;<span class="diff">hi</span> <span class="diff">rend</span>="fontFamily:Antiqua;"&gt;<span class="diff">Bey</span>&lt;/hi&gt;<span class="diff"> se</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">hr</span>&lt;/unclear&gt;<span class="diff"> grosse Geschenknussen verehr=
+                    </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_tl_76"
+     <span class="diff">n</span>="N006" /&gt;<span class="diff">te / A</span>&lt;<span class="diff">unclear</span>&gt;<span class="diff">udi</span>&lt;/unclear&gt;<span class="diff">entz.
+                </span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs_1_TextRegion_1506004317324_2"&gt;
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_line_1506004317372_4"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">)(
+                </span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:mets="http://www.loc.gov/METS/"
+         <span class="diff">facs</span>="#facs_1_TextRegion_1506004317324_1"&gt;
+   &lt;<span class="diff">lb</span> <span class="diff">facs</span>="#facs_1_line_1506004317372_3"
+     <span class="diff">n</span>="N001" /&gt;<span class="diff">Mei=
+                </span>&lt;/p&gt;</pre></td>
                </tr>
             </tbody>
          </table>

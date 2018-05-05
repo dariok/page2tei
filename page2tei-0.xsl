@@ -21,7 +21,7 @@
         </xd:desc>
     </xd:doc>
     
-    <xsl:output indent="true" />
+<!--    <xsl:output indent="true" />-->
     
     <xd:doc>
         <xd:desc>Entry point: start at the top of METS.xml</xd:desc>
@@ -164,7 +164,7 @@
     </xd:doc>
     <!-- Templates for PAGE, text -->
     <xsl:template match="p:Page" mode="text">
-        <xsl:param name="numCurr" tunnel="true" />
+        <xsl:param name="numCurr" tunnel="true" >1</xsl:param>
         
         <pb facs="#facs_{$numCurr}" n="{$numCurr}" />
         <xsl:apply-templates select="p:TextRegion | p:SeparatorRegion | p:GraphicRegion" mode="text" />
@@ -231,18 +231,50 @@
         <xsl:text>
             </xsl:text>
         <lb facs="#facs_{$numCurr}_{@id}" n="N{format-number(position(), '000')}"/>
-        <xsl:for-each-group select="$prepared/node()" group-starting-with="local:m[@pos='s']">
-            <!--<xsl:choose>
-                <xsl:when test="current-group()/node()[1][self::local:m]">
-                    <xsl:element name="{current-group()/local:m[1]/@type}">
-                        <xsl:apply-templates select="local:m[1]/following-sibling::node()" />
+        <!--<xsl:for-each-group select="$prepared/node()" group-starting-with="local:m[@pos='s']">
+            <xsl:choose>
+                <xsl:when test="current-group()[1][self::local:m]">
+                    <xsl:element name="{current-group()[1]/@type}">
+                        <xsl:variable name="o" select="@o"/>
+                        <!-\-<xsl:apply-templates select="current-group()[position() &gt; 1
+                            and not(preceding-sibling::local:m[1][@pos='e'])]" />-\->
+                        <xsl:apply-templates select="current-group()[1]/following-sibling::node()
+                            intersect current-group()[1]/following-sibling::local:m[@pos='e' and @o=$o]/preceding-sibling::node()" />
                     </xsl:element>
+                    <xsl:apply-templates
+                        select="current-group()[preceding-sibling::local:m[1][@pos='e']]" />
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:sequence select="current-group()" />
                 </xsl:otherwise>
-            </xsl:choose>-->
-            <xsl:sequence select="(current-group()/node()[1])"/>
-        </xsl:for-each-group>
+            </xsl:choose>
+        </xsl:for-each-group>-->
+        <xsl:apply-templates select="$prepared/text()[not(preceding-sibling::local:m)]" />
+        <xsl:apply-templates select="$prepared/local:m[@pos='s']
+            [not(preceding-sibling::local:m[1][@pos='s'])]" />
+    </xsl:template>
+    
+    <xsl:template match="local:m[@pos='s']">
+        <xsl:variable name="type">
+            <xsl:choose>
+                <xsl:when test="@type='textStyle'">hi</xsl:when>
+                <xsl:otherwise><xsl:value-of select="@type"/></xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+        <xsl:variable name="o" select="@o"/>
+        <xsl:element name="{$type}">
+            <xsl:apply-templates select="following-sibling::node()
+                intersect following-sibling::local:m[@o=$o]/preceding-sibling::node()"/>
+        </xsl:element>
+        <xsl:if test="preceding-sibling::local:m[1][@pos='e'] or not(preceding-sibling::local:m)">
+            <xsl:apply-templates select="following-sibling::local:m[@o=$o]/following-sibling::node()
+                [not(self::local:m) and preceding-sibling::local:m[1][@o=$o]]"/>
+        </xsl:if>
+    </xsl:template>
+    
+    <xsl:template match="p:Metadata" mode="text" />
+    
+    <xsl:template match="text()">
+        <xsl:value-of select="."/>
     </xsl:template>
 </xsl:stylesheet>

@@ -350,5 +350,126 @@
                 </facsimile>
             </x:expect>
         </x:scenario>
+        <x:scenario label="Text">
+            <x:context mode="text" href="page/0001_17320213-000.xml"/>
+            <x:expect label="wie bevor">
+                <pb facs='#facs_1' n='1'/>
+                <p facs='#facs_1_TextRegion_1501232239812_647'>
+                    <lb facs='#facs_1_line_1501232263444_648' n='N001'/>Anno 1732. (Num. 13.) 13. Feb<supplied reason=''>ruar.</supplied>
+                </p>
+                <p facs='#facs_1_TextRegion_1501232279421_649'>
+                    <lb facs='#facs_1_tl_3' n='N001'/>Wienerisches
+                    <lb facs='#facs_1_tl_4' n='N002'/><hi rend='fontFamily:Antiqua; fontSize:15.0;'>DIARIUM.</hi>
+                </p>
+                <p facs='#facs_1_r_5_3'>
+                    <lb facs='#facs_1_tl_5' n='N001'/>Mit Jhrer Röm. Kaiserl. und Cathol. Majestät Freyheit.
+                </p>
+                <p facs='#facs_1_TextRegion_1501232330223_650'>
+                    <lb facs='#facs_1_line_1501232378288_651' n='N001'/>Zu finden in der Kaiserlichen Hof=Buchdruckerey / gegen dem Ho=
+                    <lb facs='#facs_1_tl_8' n='N002'/>Ball=Haus über / bey Johann Peter v. Ghelen.
+                </p>
+                <p facs='#facs_1_r_7_1'>
+                    <lb facs='#facs_1_tl_9' n='N001'/>Aus Asia.
+                </p>
+                <p facs='#facs_1_r_7_2'>
+                    <lb facs='#facs_1_tl_10' n='N001'/>Aleppo 6. December 1731.
+                </p>
+                <p facs='#facs_1_r_7_3'>
+                    <lb facs='#facs_1_tl_11' n='N001'/>MAn hat alter Zeitung von Baf=
+                    <lb facs='#facs_1_tl_12' n='N002'/>sora vom 4ten September / daß
+                    <lb facs='#facs_1_tl_13' n='N003'/>das Hollendische Ost=Jndische
+                    <lb facs='#facs_1_tl_14' n='N004'/>Schif / West=Frißland genannt / von
+                    <lb facs='#facs_1_tl_15' n='N005'/>Batavia nach G<unclear>e</unclear>mron / und Bassora
+                    <lb facs='#facs_1_tl_16' n='N006'/>gehend / von 5. Jndianischen Raub=
+                    <lb facs='#facs_1_tl_17' n='N007'/>Schiffen / und 10 kleinen Fahrzeugen
+                    <lb facs='#facs_1_tl_18' n='N008'/>angegriffen / jed<unclear>o</unclear>ch nach einem drey=
+                    <lb facs='#facs_1_tl_19' n='N009'/>tägigen Gefechte z<unclear>u</unclear> Cochin glüklich ein=
+                    <lb facs='#facs_1_tl_20' n='N010'/>gelauffen wäre: <unclear>d</unclear>ie Holländer hätten
+                    <lb facs='#facs_1_tl_21' n='N011'/><supplied reason=''>i</supplied>n diesem Gefechte nur 3. Todten / und
+                    <lb facs='#facs_1_tl_22' n='N012'/>15. Verwundte bkommen; dahinge=
+                    <lb facs='#facs_1_tl_23' n='N013'/>gen die Räuber / <unclear>w</unclear>elche Cangrim Gria
+                    <lb facs='#facs_1_tl_24' n='N014'/>genannt werden / <unclear>b</unclear>ey dem Entern mehr
+                    <lb facs='#facs_1_tl_25' n='N015'/>als 200. Mann ei<unclear>ng</unclear>ebüsset.
+                </p>
+                <p facs='#facs_1_r_7_4'>
+                    <lb facs='#facs_1_tl_26' n='N001'/>Aus Spanien.
+                </p>
+                <p facs='#facs_1_r_7_5'>
+                    <lb facs='#facs_1_tl_27' n='N001'/>Sevilien <unclear>6</unclear>. Januarii.
+                </p>
+                <p facs='#facs_1_TextRegion_1501232453857_652'>
+                    <lb facs='#facs_1_tl_28' n='N001'/>Am abgewichen<unclear>e</unclear>n Montag ware der
+                    <lb facs='#facs_1_tl_29' n='N002'/>Groß Britannische Minister Herr Kee=
+                    <lb facs='#facs_1_tl_30' n='N003'/><unclear>n</unclear>e mit dem ersten Staats=<hi rend='fontFamily:Antiqua;'>Secretario</hi>
+                    <lb facs='#facs_1_tl_31' n='N004'/>Marquis de la Pa<gap /> in <hi rend='fontFamily:Antiqua;'>Conferenz</hi>, so
+                    <lb facs='#facs_1_tl_32' n='N005'/><unclear>h</unclear>at auch der Holl<unclear>e</unclear>ndische Minister Hr.
+                    <lb facs='#facs_1_tl_33' n='N006'/><supplied reason=''>V</supplied>an der Meer mit dem Staats=<hi rend='fontFamily:Antiqua;'>Secre-</hi>
+                    <lb facs='#facs_1_tl_34' n='N007'/><hi rend='fontFamily:Antiqua;'><supplied reason=''>t</supplied>ario</hi> Hrn. <hi rend='fontFamily:Antiqua;'>Patinho</hi> eine <hi rend='fontFamily:Antiqua;'>Conferenz</hi> ge=
+                    <lb facs='#facs_1_tl_35' n='N008'/><supplied reason=''>h</supplied>alten / in welcher dieser Minister ihme
+                    <lb facs='#facs_1_tl_36' n='N009'/>Hrn. <hi rend='fontFamily:Antiqua;'>Patinho</hi> Klagen eingebracht we=
+                    <lb facs='#facs_1_tl_37' n='N010'/><supplied reason=''>g</supplied>en deme / daß die in denen Spanischen
+                    <lb facs='#facs_1_tl_38' n='N011'/><supplied reason=''>H</supplied>afen seßhafte Holländische Kauf=leute
+                    <lb facs='#facs_1_tl_39' n='N012'/><supplied reason=''>i</supplied>n ihrer Handlung wieder die errichtete
+                    <lb facs='#facs_1_tl_40' n='N013'/><unclear>T</unclear>ractaten zerstöhret würden; worauf
+                    <lb facs='#facs_1_tl_41' n='N014'/><supplied reason=''>d</supplied>erselbe erwehntem Minister die Versi=
+                    <lb facs='#facs_1_tl_42' n='N015'/><supplied reason=''>ch</supplied>erung gethan / daß solche Befehle ge=
+                </p>
+                <p facs='#facs_1_r_8_1'>
+                    <lb facs='#facs_1_tl_44' n='N001'/>stellet werden solten / daß künftighin
+                    <lb facs='#facs_1_tl_45' n='N002'/>die H<unclear>o</unclear>lländische <hi rend='fontFamily:Antiqua;'>Negotian</hi>ten keine Ur=
+                    <lb facs='#facs_1_tl_46' n='N003'/>sach m<unclear>e</unclear>hr zu klagen haben werden.
+                </p>
+                <p facs='#facs_1_r_8_2'>
+                    <lb facs='#facs_1_tl_47' n='N001'/>Aus Jtalien.
+                </p>
+                <p facs='#facs_1_r_8_3'>
+                    <lb facs='#facs_1_tl_48' n='N001'/>Livorno 25. Januarii.
+                </p>
+                <p facs='#facs_1_r_8_4'>
+                    <lb facs='#facs_1_tl_49' n='N001'/>Al<unclear>hi</unclear>er ist ein Schif von Tunis ein=
+                    <lb facs='#facs_1_tl_50' n='N002'/>geloff<unclear>en</unclear> / und hat sich der darauf be=
+                    <lb facs='#facs_1_tl_51' n='N003'/>find<unclear>liche</unclear> / und von dem <hi rend='fontFamily:Antiqua;'>Bey</hi> abgeschik=
+                    <lb facs='#facs_1_tl_52' n='N004'/>te T<unclear>une</unclear>siner alsobald nacher Florentz
+                    <lb facs='#facs_1_tl_53' n='N005'/>verf<unclear>üge</unclear>t. Jhre Königl. Hoheit der <hi rend='fontFamily:Antiqua;'>In-</hi>
+                    <lb facs='#facs_1_tl_54' n='N006'/><hi rend='fontFamily:Antiqua;'>fant D<unclear>on</unclear> Carlos</hi> seynd nunmehro völlig
+                    <lb facs='#facs_1_tl_55' n='N007'/>ausser <unclear>a</unclear>ller Gefahr von denen gehabten
+                    <lb facs='#facs_1_tl_56' n='N008'/>Kind<unclear>es</unclear>=Blattern.
+                </p>
+                <p facs='#facs_1_r_8_5'>
+                    <lb facs='#facs_1_tl_57' n='N001'/>Rom 26. Januarii.
+                </p>
+                <p facs='#facs_1_r_8_6'>
+                    <lb facs='#facs_1_tl_58' n='N001'/>Di<unclear>en</unclear>stag befanden Sich Jhre Heilig=
+                    <lb facs='#facs_1_tl_59' n='N002'/>keit v<unclear>on</unclear> dem <hi rend='fontFamily:Antiqua;'>Podagra</hi> wieder gebessert /
+                    <lb facs='#facs_1_tl_60' n='N003'/>und s<unclear>pei</unclear>seten dannenhero zum ersten mal
+                    <lb facs='#facs_1_tl_61' n='N004'/>wieder an der Tafel. Mittwoch erthei=
+                    <lb facs='#facs_1_tl_62' n='N005'/>leten Selbe Dero Staats=Ministeren
+                    <lb facs='#facs_1_tl_63' n='N006'/>Audi<unclear>entz</unclear>. Donnerstags wohnete Jhre
+                    <lb facs='#facs_1_tl_64' n='N007'/>Heilig<unclear>ke</unclear>it der gewöhnlichen <hi rend='fontFamily:Antiqua;'>Congrega-</hi>
+                    <lb facs='#facs_1_tl_65' n='N008'/><hi rend='fontFamily:Antiqua;'>tion</hi> d<unclear>es</unclear> Heil. <hi rend='fontFamily:Antiqua;'>Officii</hi> bey. Aus Spa=
+                    <lb facs='#facs_1_tl_66' n='N009'/>nien i<unclear>st</unclear> der Befehl eingeloffen / alle hier
+                    <lb facs='#facs_1_tl_67' n='N010'/>befind<unclear>lic</unclear>he Spanier aufzuzeichnen / oh=
+                    <lb facs='#facs_1_tl_68' n='N011'/>ne da<unclear>ß</unclear> man erfahren kan / aus was
+                    <lb facs='#facs_1_tl_69' n='N012'/>Ursach <unclear>s</unclear>olches geschehe.
+                </p>
+                <p facs='#facs_1_r_8_7'>
+                    <lb facs='#facs_1_tl_70' n='N001'/>Florentz 26. Januarii.
+                </p>
+                <p facs='#facs_1_r_8_8'>
+                    <lb facs='#facs_1_tl_71' n='N001'/>Mo<unclear>nt</unclear>ag ertheilete unser Groß=Her=
+                    <lb facs='#facs_1_tl_72' n='N002'/>tzog d<unclear>em</unclear> Staats=<hi rend='fontFamily:Antiqua;'>Secretari</hi>, wie auch
+                    <lb facs='#facs_1_tl_73' n='N003'/>einem <unclear>an</unclear>gelangten Tunesiner / welcher
+                    <lb facs='#facs_1_tl_74' n='N004'/>Seiner/ Königl. Hoheit im Namen des
+                    <lb facs='#facs_1_tl_75' n='N005'/><hi rend='fontFamily:Antiqua;'>Bey</hi> se<unclear>hr</unclear> grosse Geschenknussen verehr=
+                    <lb facs='#facs_1_tl_76' n='N006'/>te / A<unclear>udi</unclear>entz.
+                </p>
+                <p facs='#facs_1_TextRegion_1506004317324_2'>
+                    <lb facs='#facs_1_line_1506004317372_4' n='N001'/>)(
+                </p>
+                <p facs='#facs_1_TextRegion_1506004317324_1'>
+                    <lb facs='#facs_1_line_1506004317372_3' n='N001'/>Mei=
+                </p>
+            </x:expect>
+        </x:scenario>
     </x:scenario>
 </x:description>
