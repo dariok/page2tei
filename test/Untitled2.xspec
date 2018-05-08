@@ -6,7 +6,7 @@
     xmlns:ns3="http://www.loc.gov/METS/"
     xslt-version="3.0">
     
-    <x:scenario label="test1">
+    <x:scenario label="17320213 - p.2">
         <x:context mode="text">
             <ns3:fileSec>
                 <ns3:fileGrp ID="MASTER">
@@ -52,5 +52,74 @@
             <lb facs='#facs_2_tl_78' n='N020'/>Majestät eine bey dieser Gelegenheit ge<supplied reason=''>=</supplied>
             <lb facs='#facs_2_tl_79' n='N021'/>prägte <hi rend='fontFamily:Antiqua;'>Medaille</hi> anzunehmen geruhen
             <lb facs='#facs_2_tl_80' n='N022'/><unclear>m</unclear>öchte.</p></x:expect>
+    </x:scenario>
+    <x:scenario label="17320213 - p.3">
+        <x:context mode="text">
+            <ns3:fileSec>
+                <ns3:fileGrp ID="MASTER">
+                    <ns3:fileGrp ID="PAGEXML">
+                        <ns3:file />
+                        <ns3:file />
+                        <ns3:file ID="PAGEXML_3" SEQ="3" MIMETYPE="application/xml" CREATED="2018-04-09T14:31:22.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
+                            <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="page/0003_17320213-002.xml"/>
+                        </ns3:file>
+                    </ns3:fileGrp>
+                </ns3:fileGrp>
+            </ns3:fileSec>
+            <ns3:structMap ID="TRP_STRUCTMAP" TYPE="MANUSCRIPT">
+                <ns3:div ID="TRP_DOC_DIV" ADMID="MD_ORIG">
+                    <ns3:div ID="PAGE_3" ORDER="3" TYPE="SINGLE_PAGE">
+                        <ns3:fptr>
+                            <ns3:area FILEID="PAGEXML_3"/>
+                        </ns3:fptr>
+                    </ns3:div>
+                </ns3:div>
+            </ns3:structMap>
+        </x:context>
+        <x:expect label="." xml:space="preserve"><pb facs="#facs_3"
+                n="3" /><p facs='#facs_3_TextRegion_1501850337174_559'>
+            <lb facs='#facs_3_tl_1' n='N001'/>nach=Mittag verfügte sich der der König
+            <lb facs='#facs_3_tl_2' n='N002'/>mit gewöhnlichen Ceremonien nachdem
+            <lb facs='#facs_3_tl_3' n='N003'/>Ober=Haus des Parlaments / w<unclear>or</unclear>inn
+            <lb facs='#facs_3_tl_4' n='N004'/>auch die Gemeine beruffen worden / die=
+            <lb facs='#facs_3_tl_5' n='N005'/>semnach Se. Majestät durch eine l<unclear>a</unclear>nge
+            <lb facs='#facs_3_tl_6' n='N006'/>Ansprach den Sitz von dem Parla<unclear>m</unclear>ent
+            <lb facs='#facs_3_tl_7' n='N007'/>eröfneten. Heute hat das Ober=Haus
+            <lb facs='#facs_3_tl_8' n='N008'/>schon durch eine Sr. Majestät übergebe=
+            <lb facs='#facs_3_tl_9' n='N009'/>nen Schrift sich wegen der an selbige
+            <lb facs='#facs_3_tl_10' n='N010'/>gethaner Ansprach bedanket / wo=
+            <lb facs='#facs_3_tl_11' n='N011'/>von dann künftig ein mehreres zu be=
+            <lb facs='#facs_3_tl_12' n='N012'/>richten seyn wird. Die Schiffe / der
+            <lb facs='#facs_3_tl_13' n='N013'/>Hertzog von Lothringen / Bedford / und
+            <lb facs='#facs_3_tl_14' n='N014'/>der Printz von Oranien von der Ost=
+            <lb facs='#facs_3_tl_15' n='N015'/>Jndischen Compagnie / seynd die T<unclear>em</unclear>s
+            <lb facs='#facs_3_tl_16' n='N016'/>nach Gravesand hinabgefahren / um bey
+            <lb facs='#facs_3_tl_17' n='N017'/>dem ersten günstigen Wind unter S<unclear>e</unclear>gel
+            <lb facs='#facs_3_tl_18' n='N018'/>zu gehen. Am Montag wurde in <unclear>d</unclear>em
+            <lb facs='#facs_3_tl_19' n='N019'/>Pallast von St. James ein grosser Raht
+            <lb facs='#facs_3_tl_20' n='N020'/>gehalten.Mit dem Frantzösi<unclear>sch</unclear>en
+            <lb facs='#facs_3_tl_21' n='N021'/>Botschafter Herrn von <hi rend='fontFamily:Antiqua;'>Chavig<unclear>ty</unclear></hi>,
+            <lb facs='#facs_3_tl_22' n='N022'/>werden die <hi rend='fontFamily:Antiqua;'>Conferenzi</hi>en eiferigst <unclear>fo</unclear>rt=
+            <lb facs='#facs_3_tl_23' n='N023'/>gesetzet / welchen der Kaiserl. M<unclear>i</unclear>ni=
+            <lb facs='#facs_3_tl_24' n='N024'/>ter Herr Graf von Kinsky öfters <unclear>b</unclear>ey=
+            <lb facs='#facs_3_tl_25' n='N025'/>wohnet. An vorgedachten Montag <unclear>w</unclear>a=
+            <lb facs='#facs_3_tl_26' n='N026'/>ren die Lords=<hi rend='fontFamily:Antiqua;'>Commissari</hi>en von der
+            <lb facs='#facs_3_tl_27' n='N027'/><hi rend='fontFamily:Antiqua;'>Admirali</hi>tät versammelt / und verga<unclear>b</unclear>en
+            <lb facs='#facs_3_tl_28' n='N028'/>dem Hauptmann Herrn Vincent <unclear>d</unclear>as
+            <lb facs='#facs_3_tl_29' n='N029'/>Kriegs=Schif der Sheernes / und dem
+            <lb facs='#facs_3_tl_30' n='N030'/>Hauptmann Herrn Fytch das vom Dol=
+            <lb facs='#facs_3_tl_31' n='N031'/>phin / jedes von 20. Canons / we<unclear>lc</unclear>he
+            <lb facs='#facs_3_tl_32' n='N032'/>auf das schleunigste ausgerüstet wer<unclear>d</unclear>en
+            <lb facs='#facs_3_tl_33' n='N033'/>müssen; der Obriste Cosby ehedessen <unclear>g</unclear>e=
+            <lb facs='#facs_3_tl_34' n='N034'/>wesener <hi rend='fontFamily:Antiqua;'>Gouverneur</hi> deren Leewaer<unclear>d</unclear>s=
+            <lb facs='#facs_3_tl_35' n='N035'/>Jnsulen / hatte am Samstag die E<unclear>h</unclear>re
+            <lb facs='#facs_3_tl_36' n='N036'/>des Königs Hand wegen dessen Ern<unclear>e</unclear>n=
+            <lb facs='#facs_3_tl_37' n='N037'/>nung zum Capitain / General und
+            <lb facs='#facs_3_tl_38' n='N038'/>Haupt=<hi rend='fontFamily:Antiqua;'>Commendeur </hi>von Neu=Yor<unclear>c</unclear>k /
+            <lb facs='#facs_3_tl_39' n='N039'/>und Neu=Jersey mit denen zugehörigen
+            <lb facs='#facs_3_tl_40' n='N040'/>Jnsulen / zu küssen / und unterthän<unclear>i</unclear>g=
+            <lb facs='#facs_3_tl_41' n='N041'/><unclear><supplied reason=''>s</supplied>t</unclear>en Dank abzustatten: es hat derse<unclear>l</unclear>be
+            <lb facs='#facs_3_tl_42' n='N042'/><gap />ieserhalben vorhin gehabtes Regime<unclear>n</unclear>t
+            <lb facs='#facs_3_tl_43' n='N043'/><hi rend='fontFamily:Antiqua;'><supplied reason=''>R</supplied>esigni</hi>ret / er behaltet aber seinen Ra<unclear>n</unclear>g</p></x:expect>
     </x:scenario>
 </x:description>

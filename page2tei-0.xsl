@@ -221,6 +221,7 @@
                     </xsl:element>
                 </xsl:for-each>
                 <xsl:for-each select="map:get($ends, .)">
+                    <xsl:sort select="substring-before(substring-after(.,'offset:'), ';')" order="descending"/>
                     <xsl:element name="local:m">
                         <xsl:attribute name="type" select="substring-before(., ' ')" />
                         <xsl:attribute name="o" select="substring-after(., 'offset:')" />
