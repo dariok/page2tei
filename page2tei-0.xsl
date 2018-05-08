@@ -9,8 +9,8 @@
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:map="http://www.w3.org/2005/xpath-functions/map"
     xmlns:local="local"
-    xpath-default-namespace=""
-    exclude-result-prefixes="xs math xd"
+    xmlns:wdb="https://github.com/dariok/wdbplus"
+    exclude-result-prefixes="#all"
     version="3.0">
     <xd:doc scope="stylesheet">
         <xd:desc>
@@ -22,6 +22,8 @@
     </xd:doc>
     
 <!--    <xsl:output indent="true" />-->
+    
+    <xsl:include href="string-pack.xsl"/>
     
     <xd:doc>
         <xd:desc>Entry point: start at the top of METS.xml</xd:desc>
@@ -164,7 +166,7 @@
     </xd:doc>
     <!-- Templates for PAGE, text -->
     <xsl:template match="p:Page" mode="text">
-        <xsl:param name="numCurr" tunnel="true" >1</xsl:param>
+        <xsl:param name="numCurr" tunnel="true" />
         
         <pb facs="#facs_{$numCurr}" n="{$numCurr}" />
         <xsl:apply-templates select="p:TextRegion | p:SeparatorRegion | p:GraphicRegion" mode="text" />
@@ -175,7 +177,7 @@
         <xd:param name="numCurr"/>
     </xd:doc>
     <xsl:template match="p:TextRegion" mode="text">
-        <xsl:param name="numCurr" />
+        <xsl:param name="numCurr" tunnel="true" />
         <p facs="#facs_{$numCurr}_{@id}">
             <xsl:apply-templates select="p:TextLine" />
         </p>
@@ -252,6 +254,7 @@
         <xsl:apply-templates select="$prepared/text()[not(preceding-sibling::local:m)]" />
         <xsl:apply-templates select="$prepared/local:m[@pos='s']
             [not(preceding-sibling::local:m[1][@pos='s'])]" />
+<!--        <xsl:sequence select="$prepared" />-->
     </xsl:template>
     
     <xsl:template match="local:m[@pos='s']">
@@ -262,14 +265,34 @@
             </xsl:choose>
         </xsl:variable>
         <xsl:variable name="o" select="@o"/>
+        
+        <xsl:variable name="elem">
+            <local:t>
+                <xsl:sequence select="following-sibling::node()
+                    intersect following-sibling::local:m[@o=$o]/preceding-sibling::node()" />
+            </local:t>
+        </xsl:variable>
+        
         <xsl:element name="{$type}">
-            <xsl:apply-templates select="following-sibling::node()
-                intersect following-sibling::local:m[@o=$o]/preceding-sibling::node()"/>
+            <xsl:if test="$type='supplied'">
+                <xsl:attribute name="reason" />
+            </xsl:if>
+            <xsl:if test="$type='hi'">
+                <xsl:attribute name="rend" select="wdb:substring-before-if-ends(substring-after(substring-after(@o, 'length'), ';'), '}')"/>
+            </xsl:if>
+            
+            <xsl:choose>
+                <xsl:when test="$elem//local:m">
+                    <xsl:apply-templates select="$elem/local:t/text()[not(preceding-sibling::local:m)]" />
+                    <xsl:apply-templates select="$elem/local:t/local:m[@pos='s']
+                        [not(preceding-sibling::local:m[1][@pos='s'])]" />
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:sequence select="$elem/local:t/node()" />
+                </xsl:otherwise>
+            </xsl:choose>
         </xsl:element>
-        <xsl:if test="preceding-sibling::local:m[1][@pos='e'] or not(preceding-sibling::local:m)">
-            <xsl:apply-templates select="following-sibling::local:m[@o=$o]/following-sibling::node()
-                [not(self::local:m) and preceding-sibling::local:m[1][@o=$o]]"/>
-        </xsl:if>
+        <xsl:apply-templates select="following-sibling::local:m[@pos='e' and @o=$o]/following-sibling::node()[1][self::text()]" />
     </xsl:template>
     
     <xsl:template match="p:Metadata" mode="text" />
