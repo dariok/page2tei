@@ -234,24 +234,6 @@
         <xsl:text>
             </xsl:text>
         <lb facs="#facs_{$numCurr}_{@id}" n="N{format-number(position(), '000')}"/>
-        <!--<xsl:for-each-group select="$prepared/node()" group-starting-with="local:m[@pos='s']">
-            <xsl:choose>
-                <xsl:when test="current-group()[1][self::local:m]">
-                    <xsl:element name="{current-group()[1]/@type}">
-                        <xsl:variable name="o" select="@o"/>
-                        <!-\-<xsl:apply-templates select="current-group()[position() &gt; 1
-                            and not(preceding-sibling::local:m[1][@pos='e'])]" />-\->
-                        <xsl:apply-templates select="current-group()[1]/following-sibling::node()
-                            intersect current-group()[1]/following-sibling::local:m[@pos='e' and @o=$o]/preceding-sibling::node()" />
-                    </xsl:element>
-                    <xsl:apply-templates
-                        select="current-group()[preceding-sibling::local:m[1][@pos='e']]" />
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:sequence select="current-group()" />
-                </xsl:otherwise>
-            </xsl:choose>
-        </xsl:for-each-group>-->
         <xsl:apply-templates select="$prepared/text()[not(preceding-sibling::local:m)]" />
         <xsl:apply-templates select="$prepared/local:m[@pos='s']
             [not(preceding-sibling::local:m[1][@pos='s'])]" />
