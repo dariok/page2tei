@@ -156,4 +156,32 @@
                 <lb facs="#facs_10_tl_75" n="N001"/>Johann Frantz Weishaubt / ware nno 1697. <supplied reason=""><hi rend="fontFamily:Antiqua;">Ex-</hi></supplied>
                 <lb facs="#facs_10_tl_76" n="N002"/><hi rend="fontFamily:Antiqua;">peditor</hi> bey der hoch=ansehentl. Geheimen Stelle in Gr<gap/></p></x:expect>
     </x:scenario>
+    <x:scenario label="17410624 - p. 7">
+        <x:context mode="text">
+            <ns3:fileSec>
+                <ns3:fileGrp ID="MASTER">
+                    <ns3:fileGrp ID="PAGEXML">
+                        <ns3:file />
+                        <ns3:file />
+                        <ns3:file />
+                        <ns3:file />
+                        <ns3:file />
+                        <ns3:file />
+                        <ns3:file ID="PAGEXML_7" SEQ="7" MIMETYPE="application/xml" CREATED="2018-05-02T14:57:16.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
+                            <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="page/0007_17410624-006.xml"/>
+                        </ns3:file>
+                    </ns3:fileGrp>
+                </ns3:fileGrp>
+            </ns3:fileSec>
+        </x:context>
+        <x:expect label="." xml:space="preserve"><pb facs="#facs_7" n="7"/><p facs="#facs_7_TextRegion_1502873594420_703">
+            <lb facs="#facs_7_tl_29" n="N001"/><hi rend="fontFamily:Antiqua;">Information Juridique &amp; conforme aux</hi>
+            <lb facs="#facs_7_tl_30" n="N002"/><hi rend="fontFamily:Antiqua;">Actes contre l&apos;Imprimé récemment publié</hi>
+            <lb facs="#facs_7_tl_31" n="N003"/><hi rend="fontFamily:Antiqua;">sous le tître</hi> Rechts=gegündete Eigentum rc.
+            <lb facs="#facs_7_tl_32" n="N004"/><hi rend="fontFamily:Antiqua;">Ou bien droit de Proprieté bien fondé de la</hi>
+            <lb facs="#facs_7_tl_33" n="N005"/><hi rend="fontFamily:Antiqua;">Maison Electorale de <unclear>B</unclear>randebourg sur les Du-</hi>
+            <lb facs="#facs_7_tl_34" n="N006"/><hi rend="fontFamily:Antiqua;">chés &amp; Principautes de la Silesie, Jagerndorf,</hi>
+            <lb facs="#facs_7_tl_35" n="N007"/><hi rend="fontFamily:Antiqua;">Li<unclear>g</unclear>nitz, Brieg, Wolau, &amp; Seigneur<unclear>iesy</unclear> / ap-</hi>
+            <lb facs="#facs_7_tl_36" n="N008"/><hi rend="fontFamily:Antiqua;">partenantes. L&apos;An 1741. </hi>Das St. geb. 30. kr.</p></x:expect>
+    </x:scenario>
 </x:description>

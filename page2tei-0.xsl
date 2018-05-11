@@ -262,7 +262,8 @@
         <lb facs="#facs_{$numCurr}_{@id}" n="N{format-number(position(), '000')}"/>
         <xsl:apply-templates select="$prepared/text()[not(preceding-sibling::local:m)]" />
         <xsl:apply-templates select="$prepared/local:m[@pos='s']
-            [not(preceding-sibling::local:m[1][@pos='s'])]" />
+            [count(preceding-sibling::local:m[@pos='s']) = count(preceding-sibling::local:m[@pos='e'])]" />
+            <!--[not(preceding-sibling::local:m[1][@pos='s'])]" />-->
     </xsl:template>
     
     <xsl:template match="local:m[@pos='s']">
