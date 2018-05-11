@@ -199,28 +199,34 @@
     <xsl:template match="p:TextLine">
         <xsl:param name="numCurr" tunnel="true" />
         
-        <!--<xsl:variable name="custom" as="map(xs:string, xs:string)">
-            <xsl:map>
-                <xsl:for-each-group select="tokenize(@custom||' lfd {'||$numCurr, '} ')" group-by="substring-before(., ' ')">
-                    <xsl:map-entry key="substring-before(., ' ')" select="string-join(current-group(), '–')" />
-                </xsl:for-each-group>
-            </xsl:map>
-        </xsl:variable>-->
         <xsl:variable name="text" select="p:TextEquiv/p:Unicode"/>
-        <xsl:variable name="custom" select="tokenize(substring-after(@custom, '} '), '} ')"/>
+        <xsl:variable name="custom" as="text()*">
+            <xsl:for-each select="tokenize(@custom, '}')">
+                <xsl:choose>
+                    <xsl:when test="string-length() &lt; 1 or starts-with(., 'readingOrder') or starts-with(normalize-space(), 'structure')" />
+                    <xsl:otherwise>
+                        <xsl:value-of select="normalize-space()"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:for-each>
+        </xsl:variable>
         <xsl:variable name="starts" as="map(*)">
             <xsl:map>
-                <xsl:for-each-group select="$custom" group-by="substring-before(substring-after(., 'offset:'), ';')">
-                    <xsl:map-entry key="xs:int(current-grouping-key())" select="current-group()" />
-                </xsl:for-each-group>
+                <xsl:if test="count($custom) &gt; 0">
+                    <xsl:for-each-group select="$custom" group-by="substring-before(substring-after(., 'offset:'), ';')">
+                        <xsl:map-entry key="xs:int(current-grouping-key())" select="current-group()" />
+                    </xsl:for-each-group>
+                </xsl:if>
             </xsl:map>
         </xsl:variable>
         <xsl:variable name="ends" as="map(*)">
             <xsl:map>
-                <xsl:for-each-group select="$custom" group-by="xs:int(substring-before(substring-after(., 'offset:'), ';'))
-                    + xs:int(substring-before(substring-after(., 'length:'), ';'))">
-                    <xsl:map-entry key="current-grouping-key()" select="current-group()" />
-                </xsl:for-each-group>
+                <xsl:if test="count($custom) &gt; 0">
+                    <xsl:for-each-group select="$custom" group-by="xs:int(substring-before(substring-after(., 'offset:'), ';'))
+                        + xs:int(substring-before(substring-after(., 'length:'), ';'))">
+                        <xsl:map-entry key="current-grouping-key()" select="current-group()" />
+                    </xsl:for-each-group>
+                </xsl:if>
             </xsl:map>
         </xsl:variable>
         <xsl:variable name="prepared">
@@ -233,7 +239,7 @@
                         + xs:int(substring-before(substring-after(., 'length:'), ';'))" order="descending" />
                     <xsl:sort select="substring(., 1, 3)" order="ascending" />
                     <xsl:element name="local:m">
-                        <xsl:attribute name="type" select="substring-before(., ' ')" />
+                        <xsl:attribute name="type" select="normalize-space(substring-before(., ' '))" />
                         <xsl:attribute name="o" select="substring-after(., 'offset:')" />
                         <xsl:attribute name="pos">s</xsl:attribute>
                     </xsl:element>
@@ -242,21 +248,21 @@
                     <xsl:sort select="substring-before(substring-after(.,'offset:'), ';')" order="descending"/>
                     <xsl:sort select="substring(., 1, 3)" order="descending"/>
                     <xsl:element name="local:m">
-                        <xsl:attribute name="type" select="substring-before(., ' ')" />
+                        <xsl:attribute name="type" select="normalize-space(substring-before(., ' '))" />
                         <xsl:attribute name="o" select="substring-after(., 'offset:')" />
                         <xsl:attribute name="pos">e</xsl:attribute>
                     </xsl:element>
                 </xsl:for-each>
             </xsl:for-each>
         </xsl:variable>
-        <!-- TODO do we really need to support exporting <l>...</l>? -->
+        
+        <!-- TODO parameter to create <l>...</l> - #1 -->
         <xsl:text>
             </xsl:text>
         <lb facs="#facs_{$numCurr}_{@id}" n="N{format-number(position(), '000')}"/>
         <xsl:apply-templates select="$prepared/text()[not(preceding-sibling::local:m)]" />
         <xsl:apply-templates select="$prepared/local:m[@pos='s']
             [not(preceding-sibling::local:m[1][@pos='s'])]" />
-<!--        <xsl:sequence select="$prepared" />-->
     </xsl:template>
     
     <xsl:template match="local:m[@pos='s']">
