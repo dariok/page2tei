@@ -150,6 +150,10 @@
             </xsl:map>
         </xsl:variable>
         
+        <xsl:if test="$renditionValue='Line'">
+            <xsl:text>
+                </xsl:text>
+        </xsl:if>
         <zone points="{p:Coords/@points}" rendition="{$renditionValue}">
             <xsl:if test="$renditionValue != 'printspace'">
                 <xsl:attribute name="xml:id"><xsl:value-of select="'facs_'||$numCurr||'_'||@id"/></xsl:attribute>
@@ -161,6 +165,11 @@
                 <xsl:attribute name="subtype" select="substring-after(substring-before(map:get($custom, 'structure'), ';'), ':')" />
             </xsl:if>
             <xsl:apply-templates select="p:TextLine" mode="facsimile" />
+            <xsl:if test="not($renditionValue= ('Line', 'Graphic', 'Separator', 'printspace'))">
+                <xsl:text>
+            </xsl:text>
+            </xsl:if>
+            
         </zone>
     </xsl:template>
     
