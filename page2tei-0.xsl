@@ -46,11 +46,11 @@
                 </fileDesc>
             </teiHeader>
             <xsl:if test="not($debug)">
-                <xsl:apply-templates select="mets:fileSec//mets:file" mode="facsimile" />
+                <xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID='PAGEXML']/mets:file" mode="facsimile" />
             </xsl:if>
             <text>
                 <body>
-                    <xsl:apply-templates select="mets:fileSec//mets:file" mode="text" />
+                    <xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID='PAGEXML']/mets:file" mode="text" />
                 </body>
             </text>
         </TEI>
