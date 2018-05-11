@@ -21,6 +21,8 @@
         </xd:desc>
     </xd:doc>
     
+    <xsl:param name="debug" select="false()" />
+    
 <!--    <xsl:output indent="true" />-->
     
     <xsl:include href="string-pack.xsl"/>
@@ -43,7 +45,9 @@
                     </sourceDesc>
                 </fileDesc>
             </teiHeader>
-            <xsl:apply-templates select="mets:fileSec//mets:file" mode="facsimile" />
+            <xsl:if test="not($debug)">
+                <xsl:apply-templates select="mets:fileSec//mets:file" mode="facsimile" />
+            </xsl:if>
             <text>
                 <body>
                     <xsl:apply-templates select="mets:fileSec//mets:file" mode="text" />
@@ -214,6 +218,11 @@
             <xsl:for-each select="0 to string-length($text)">
                 <xsl:if test=". &gt; 0"><xsl:value-of select="substring($text, ., 1)"/></xsl:if>
                 <xsl:for-each select="map:get($starts, .)">
+                    <!--<xsl:sort select="substring-before(substring-after(.,'offset:'), ';')" order="ascending"/>-->
+                    <!-- end of current tag -->
+                    <xsl:sort select="xs:int(substring-before(substring-after(., 'offset:'), ';'))
+                        + xs:int(substring-before(substring-after(., 'length:'), ';'))" order="descending" />
+                    <xsl:sort select="substring(., 1, 3)" order="ascending" />
                     <xsl:element name="local:m">
                         <xsl:attribute name="type" select="substring-before(., ' ')" />
                         <xsl:attribute name="o" select="substring-after(., 'offset:')" />
@@ -222,6 +231,7 @@
                 </xsl:for-each>
                 <xsl:for-each select="map:get($ends, .)">
                     <xsl:sort select="substring-before(substring-after(.,'offset:'), ';')" order="descending"/>
+                    <xsl:sort select="substring(., 1, 3)" order="descending"/>
                     <xsl:element name="local:m">
                         <xsl:attribute name="type" select="substring-before(., ' ')" />
                         <xsl:attribute name="o" select="substring-after(., 'offset:')" />

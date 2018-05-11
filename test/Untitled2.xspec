@@ -122,4 +122,38 @@
             <lb facs='#facs_3_tl_42' n='N042'/><gap />ieserhalben vorhin gehabtes Regime<unclear>n</unclear>t
             <lb facs='#facs_3_tl_43' n='N043'/><hi rend='fontFamily:Antiqua;'><supplied reason=''>R</supplied>esigni</hi>ret / er behaltet aber seinen Ra<unclear>n</unclear>g</p></x:expect>
     </x:scenario>
+    <x:scenario label="17320524 - p. 10">
+        <x:context mode="text">
+            <ns3:fileSec>
+                <ns3:fileGrp ID="MASTER">
+                    <ns3:fileGrp ID="PAGEXML">
+                        <ns3:file />
+                        <ns3:file />
+                        <ns3:file />
+                        <ns3:file />
+                        <ns3:file />
+                        <ns3:file />
+                        <ns3:file />
+                        <ns3:file />
+                        <ns3:file />
+                        <ns3:file ID="PAGEXML_10" SEQ="10" MIMETYPE="application/xml" CREATED="2018-04-11T18:00:20.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
+                            <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="page/0010_17320524-009.xml"/>
+                        </ns3:file>
+                    </ns3:fileGrp>
+                </ns3:fileGrp>
+            </ns3:fileSec>
+            <ns3:structMap ID="TRP_STRUCTMAP" TYPE="MANUSCRIPT">
+                <ns3:div ID="TRP_DOC_DIV" ADMID="MD_ORIG">
+                    <ns3:div ID="PAGE_10" ORDER="10" TYPE="SINGLE_PAGE">
+                        <ns3:fptr>
+                            <ns3:area FILEID="PAGEXML_10"/>
+                        </ns3:fptr>
+                    </ns3:div>
+                </ns3:div>
+            </ns3:structMap>
+        </x:context>
+        <x:expect label="." xml:space="preserve"><pb facs="#facs_10" n="10" /><p facs="#facs_10_r_2_7">
+                <lb facs="#facs_10_tl_75" n="N001"/>Johann Frantz Weishaubt / ware nno 1697. <supplied reason=""><hi rend="fontFamily:Antiqua;">Ex-</hi></supplied>
+                <lb facs="#facs_10_tl_76" n="N002"/><hi rend="fontFamily:Antiqua;">peditor</hi> bey der hoch=ansehentl. Geheimen Stelle in Gr<gap/></p></x:expect>
+    </x:scenario>
 </x:description>
