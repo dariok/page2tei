@@ -161,7 +161,7 @@
             <xsl:if test="@type">
                 <xsl:attribute name="subtype"><xsl:value-of select="@type"/></xsl:attribute>
             </xsl:if>
-            <xsl:if test="map:contains($custom, 'structure')">
+            <xsl:if test="map:contains($custom, 'structure') and not(@type)">
                 <xsl:attribute name="subtype" select="substring-after(substring-before(map:get($custom, 'structure'), ';'), ':')" />
             </xsl:if>
             <xsl:apply-templates select="p:TextLine" mode="facsimile" />
