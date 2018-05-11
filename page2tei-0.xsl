@@ -12,6 +12,7 @@
     xmlns:wdb="https://github.com/dariok/wdbplus"
     exclude-result-prefixes="#all"
     version="3.0">
+    
     <xd:doc scope="stylesheet">
         <xd:desc>
             <xd:p><xd:b>Author:</xd:b> Dario Kampkaspar, dario.kampkaspar@oeaw.ac.at</xd:p>
@@ -22,10 +23,6 @@
     </xd:doc>
     
     <xsl:param name="debug" select="false()" />
-    
-<!--    <xsl:output indent="true" />-->
-    
-    <xsl:include href="string-pack.xsl"/>
     
     <xd:doc>
         <xd:desc>Entry point: start at the top of METS.xml</xd:desc>
@@ -196,6 +193,10 @@
         </p>
     </xsl:template>
     
+    <xd:doc>
+        <xd:desc>Converts one line of PAGE to one line of TEI</xd:desc>
+        <xd:param name="numCurr">Numerus currens, to be tunneled through from the page level</xd:param>
+    </xd:doc>
     <xsl:template match="p:TextLine">
         <xsl:param name="numCurr" tunnel="true" />
         
@@ -266,6 +267,9 @@
             <!--[not(preceding-sibling::local:m[1][@pos='s'])]" />-->
     </xsl:template>
     
+    <xd:doc>
+        <xd:desc>Starting milestones for (possibly nested) elements</xd:desc>
+    </xd:doc>
     <xsl:template match="local:m[@pos='s']">
         <xsl:variable name="type">
             <xsl:choose>
@@ -304,9 +308,40 @@
         <xsl:apply-templates select="following-sibling::local:m[@pos='e' and @o=$o]/following-sibling::node()[1][self::text()]" />
     </xsl:template>
     
+    
+    <xd:doc>
+        <xd:desc>Leave out possibly unwanted parts</xd:desc>
+    </xd:doc>
     <xsl:template match="p:Metadata" mode="text" />
     
+    
+    <xd:doc>
+        <xd:desc>Text nodes to be copied</xd:desc>
+    </xd:doc>
     <xsl:template match="text()">
         <xsl:value-of select="."/>
     </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>
+            <xd:p>Returns the substring before a given test string if it ends with this test string.</xd:p>
+        </xd:desc>
+        <xd:param name="s">
+            <xd:p>The string to be checked</xd:p>
+        </xd:param>
+        <xd:param name="c">
+            <xd:p>The text to be searched for in the string value of <xd:pre>$s</xd:pre>.</xd:p>
+        </xd:param>
+        <xd:return>
+            <xd:p>If <xd:pre>$c</xd:pre> is found within the given string, the portion of <xd:pre>$s</xd:pre> before this
+                string (in final position) is returned; if <xd:pre>$c</xd:pre> cannot be found, <xd:pre>$s</xd:pre>
+                is returned unaltered.</xd:p>
+        </xd:return>
+    </xd:doc>
+    <xsl:function name="wdb:substring-before-if-ends">
+        <xsl:param name="s" as="xs:string"/>
+        <xsl:param name="c" as="xs:string"/>
+        <xsl:variable name="l" select="string-length($s)" />
+        <xsl:value-of select="if(ends-with($s, $c)) then substring($s, 1, $l - 1) else $s"/>
+    </xsl:function>
 </xsl:stylesheet>
