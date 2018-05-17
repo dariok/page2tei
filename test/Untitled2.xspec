@@ -184,4 +184,20 @@
             <lb facs="#facs_7_tl_35" n="N007"/><hi rend="fontFamily:Antiqua;">Li<unclear>g</unclear>nitz, Brieg, Wolau, &amp; Seigneur<unclear>iesy</unclear> / ap-</hi>
             <lb facs="#facs_7_tl_36" n="N008"/><hi rend="fontFamily:Antiqua;">partenantes. L&apos;An 1741. </hi>Das St. geb. 30. kr.</p></x:expect>
     </x:scenario>
+    <x:scenario label="überlapp">
+        <x:context mode="text">
+            <ns3:fileSec>
+                <ns3:fileGrp ID="MASTER">
+                    <ns3:fileGrp ID="PAGEXML">
+                        <ns3:file />
+                        <ns3:file ID="PAGEXML_2" SEQ="2" MIMETYPE="application/xml" CREATED="2018-05-17T15:08:03.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
+                            <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="page/1518862020bsb10358355-2.xml"/>
+                        </ns3:file>
+                    </ns3:fileGrp>
+                </ns3:fileGrp>
+            </ns3:fileSec>
+        </x:context>
+        <x:expect xml:space="preserve" label="."><pb  facs="#facs_2" n="2" /><p facs="#facs_2_r_1_7">
+            <lb facs="#facs_2_r2l10" n="N001" /><sic>7. Maria <supplied reason="">Theresia</supplied></sic><supplied reason="">, geb. 4 Stpt.</supplied> 1716.</p></x:expect>
+    </x:scenario>
 </x:description>

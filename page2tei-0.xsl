@@ -230,7 +230,7 @@
                 </xsl:if>
             </xsl:map>
         </xsl:variable>
-        <xsl:variable name="prepared">
+        <xsl:variable name="prepped">
             <xsl:for-each select="0 to string-length($text)">
                 <xsl:if test=". &gt; 0"><xsl:value-of select="substring($text, ., 1)"/></xsl:if>
                 <xsl:for-each select="map:get($starts, .)">
@@ -254,6 +254,37 @@
                         <xsl:attribute name="pos">e</xsl:attribute>
                     </xsl:element>
                 </xsl:for-each>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:variable name="prepared">
+            <xsl:for-each select="$prepped/node()">
+                <xsl:choose>
+                    <xsl:when test="@pos = 'e'">
+                        <xsl:variable name="position" select="count(preceding-sibling::node())" />
+                        <xsl:variable name="o" select="@o" />
+                        <xsl:variable name="precs"
+                            select="preceding-sibling::local:m[@pos = 's' and preceding-sibling::local:m[@o = $o]]" />
+                        
+                        <xsl:for-each select="$precs">
+                            <xsl:variable name="so" select="@o"/>
+                            <xsl:if test="following-sibling::local:m[@pos = 'e' and @o=$so
+                                and count(preceding-sibling::node()) &gt; $position]">
+                                <local:m type="{@type}" pos="e" o="{@o}" />
+                            </xsl:if>
+                        </xsl:for-each>
+                        <xsl:sequence select="." />
+                        <xsl:for-each select="$precs">
+                            <xsl:variable name="so" select="@o"/>
+                            <xsl:if test="following-sibling::local:m[@pos = 'e' and @o=$so
+                                and count(preceding-sibling::node()) &gt; $position]">
+                                <local:m type="{@type}" pos="s" o="{@o}" />
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:sequence select="." />
+                    </xsl:otherwise>
+                </xsl:choose>
             </xsl:for-each>
         </xsl:variable>
         
