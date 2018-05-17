@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>TRP
+NCSR LineSegmentationTool, v0.3.0 (17_3_2015)</Creator>
+        <Created>2016-03-01T13:53:25.404+01:00</Created>
+        <LastChange>2018-02-22T16:28:23.981+01:00</LastChange>
+        <TranskribusMetadata docId="4379" pageId="113458" pageNr="31" tsid="2366471" status="FINAL" userId="3667" imgUrl="https://dbis-thure.uibk.ac.at/f/Get?id=KGOWPIATTNHWMVDYMSGTSGSV&amp;fileType=view" xmlUrl="https://dbis-thure.uibk.ac.at/f/Get?id=CSEVJAFEVINJMJWULOBUCLIY" imageId="109104"/>
+    </Metadata>
+    <Page imageFilename="HS_115_31_object_128299.jpg" imageWidth="2683" imageHeight="4464">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1526560645878" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="r2"/>
+                <RegionRefIndexed index="1" regionRef="r1"/>
+                <RegionRefIndexed index="2" regionRef="r3"/>
+                <RegionRefIndexed index="3" regionRef="r4"/>
+                <RegionRefIndexed index="4" regionRef="r5"/>
+                <RegionRefIndexed index="5" regionRef="r6"/>
+                <RegionRefIndexed index="6" regionRef="r7"/>
+                <RegionRefIndexed index="7" regionRef="r8"/>
+                <RegionRefIndexed index="8" regionRef="r9"/>
+                <RegionRefIndexed index="9" regionRef="r10"/>
+                <RegionRefIndexed index="10" regionRef="r11"/>
+                <RegionRefIndexed index="11" regionRef="r12"/>
+                <RegionRefIndexed index="12" regionRef="r13"/>
+                <RegionRefIndexed index="13" regionRef="r14"/>
+                <RegionRefIndexed index="14" regionRef="r15"/>
+                <RegionRefIndexed index="15" regionRef="r16"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion type="page-number" id="r2" custom="readingOrder {index:0;}">
+            <Coords points="2282,201 2531,201 2531,361 2282,361"/>
+            <TextLine id="r2l1" custom="readingOrder {index:0;}">
+                <Coords points="2365,203 2328,241 2331,309 2338,313 2407,296 2438,226 2366,203"/>
+                <Baseline points="2326,326 2436,291"/>
+                <TextEquiv>
+                    <Unicode>15.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>15.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="drop-capital" id="r1" custom="readingOrder {index:1;}">
+            <Coords points="1029,610 889,603 889,213 1225,170"/>
+            <TextLine id="r1l2" custom="readingOrder {index:0;}">
+                <Coords points="962,488 945,491 931,507 931,520 1011,546 1015,543 1016,532 1015,516 1012,500 995,490 963,488"/>
+                <Baseline points="931,497 1078,496"/>
+                <TextEquiv>
+                    <Unicode>I</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>I</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="header" id="r3" custom="readingOrder {index:2;} structure {type:header;}">
+            <Coords points="2081,603 1039,608 1201,228 2081,213"/>
+            <TextLine id="r3l1" custom="readingOrder {index:0;}">
+                <Coords points="1306,304 1288,308 1078,445 1049,580 1051,582 2071,453 2080,433 2080,429 2027,354 1768,306 1307,304"/>
+                <Baseline points="1109,492 1220,475 1392,462 1563,457 1735,441 2080,440"/>
+                <TextEquiv>
+                    <Unicode>n Publico - Politicis.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>n Publico - Politicis.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="drop-capital" id="r4" custom="readingOrder {index:3;}">
+            <Coords points="130,530 549,530 433,857 130,850"/>
+            <TextLine id="r4l1" custom="readingOrder {index:0;}">
+                <Coords points="419,528 362,533 248,559 172,724 168,760 168,773 174,806 203,840 255,850 270,850 285,849 429,832 476,820 549,531 546,528 516,528 420,528"/>
+                <Baseline points="117,854 498,815"/>
+                <TextEquiv>
+                    <Unicode>A</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>A</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="heading" id="r5" custom="readingOrder {index:4;}">
+            <Coords points="2063,1573 527,1645 217,891 442,886 531,685 2496,591 2067,1583"/>
+            <TextLine id="r5l1" custom="readingOrder {index:0;} place {offset:5; length:5;} date {offset:15; length:16;year:1792; day:9; month:7; Ratssitzungstermin:+;} textStyle {offset:16; length:3;superscript:true;}">
+                <Coords points="1623,636 954,650 695,673 477,798 476,806 490,843 1044,835 1051,840 1048,847 1049,859 1053,860 1773,838 1915,816 2168,833 2391,750 2395,740 2395,733 2357,658 1624,636"/>
+                <Baseline points="476,834 795,801 1115,768 1433,766 1754,733 2395,729"/>
+                <TextEquiv>
+                    <Unicode>ctum Bozen den 9ten Julius 1792, </Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r5l2" custom="readingOrder {index:1;} abbrev {offset:9; length:3;} person {offset:14; length:28;} abbrev {offset:28; length:4;expansion:Joseph;} abbrev {offset:33; length:2;expansion:von;} abbrev {offset:43; length:2;}">
+                <Coords points="1909,833 1053,861 1048,859 1048,845 1050,843 1048,839 339,864 285,923 278,946 278,966 284,993 312,1009 806,1017 1135,996 1197,1015 1300,991 1529,993 1701,988 1724,989 1791,988 1924,993 2208,1016 2211,1006 2280,919 2281,912 2279,905 2243,850 1910,833"/>
+                <Baseline points="278,975 611,965 945,951 1278,934 1612,917 2281,925"/>
+                <TextEquiv>
+                    <Unicode>Vor Titl H'n: Bürgermeister Jos. v̅ Remich p.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r5l3" custom="readingOrder {index:2;} organization {offset:15; length:10;}">
+                <Coords points="1693,989 1298,992 1197,1016 1133,997 805,1018 687,1001 479,1001 439,1036 431,1076 463,1165 476,1171 480,1171 552,1130 749,1158 752,1148 754,1146 754,1143 756,1135 761,1136 783,1162 869,1127 906,1164 998,1124 1180,1109 1350,1117 1382,1144 1463,1111 1893,1136 2208,1019 2217,1027 2225,1009 2224,1003 2212,1005 2211,1015 1791,989 1694,989"/>
+                <Baseline points="431,1114 729,1097 1037,1093 1326,1058 1625,1051 2055,1054"/>
+                <TextEquiv>
+                    <Unicode>In Beÿseÿn der Magistrats Räthe:</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r5l4" custom="readingOrder {index:3;} abbrev {offset:0; length:2;} person {offset:3; length:26;} abbrev {offset:3; length:10;expansion:Oberlieutnant;} abbrev {offset:19; length:2;expansion:von;}">
+                <Coords points="1173,1110 998,1123 917,1166 869,1128 791,1164 761,1137 756,1136 755,1144 753,1146 753,1150 752,1156 748,1158 556,1131 486,1197 485,1205 520,1273 527,1275 585,1273 872,1234 1329,1234 1565,1223 1565,1227 1564,1231 1562,1234 1562,1243 1560,1250 1564,1264 1689,1220 1799,1211 1814,1164 1813,1159 1634,1116 1461,1112 1384,1147 1368,1122 1174,1110"/>
+                <Baseline points="485,1236 706,1222 927,1209 1148,1200 1369,1212 1814,1166"/>
+                <TextEquiv>
+                    <Unicode>H: Oberlieut. Karl v̅ Kuglern, </Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r5l5" custom="readingOrder {index:4;} abbrev {offset:0; length:2;} person {offset:3; length:21;} abbrev {offset:3; length:4;expansion:Doktor;} textStyle {offset:4; length:2;superscript:true;}">
+                <Coords points="1555,1223 1057,1256 871,1235 586,1275 525,1310 524,1317 534,1396 551,1404 552,1403 552,1394 553,1393 560,1397 576,1404 610,1400 616,1393 620,1382 633,1366 802,1364 933,1381 936,1366 943,1365 943,1374 944,1377 1034,1357 1168,1376 1244,1355 1328,1348 1585,1366 1769,1302 1790,1243 1777,1225 1690,1224 1566,1265 1560,1252 1561,1239 1561,1233 1563,1232 1563,1229 1564,1227 1564,1224 1556,1223"/>
+                <Baseline points="524,1344 734,1362 945,1322 1155,1312 1366,1315 1790,1281"/>
+                <TextEquiv>
+                    <Unicode>H: Dr. Leopold Spielmann, und</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r5l6" custom="readingOrder {index:5;} abbrev {offset:0; length:2;} person {offset:3; length:14;} abbrev {offset:9; length:2;expansion:von;}">
+                <Coords points="1325,1354 1243,1358 1166,1376 1034,1358 942,1375 942,1372 943,1371 943,1366 942,1365 937,1366 937,1374 631,1368 617,1393 613,1398 576,1405 560,1398 553,1394 553,1404 552,1405 573,1514 586,1518 629,1496 667,1513 706,1475 758,1503 832,1471 933,1512 1120,1462 1229,1504 1334,1410 1335,1362 1330,1354 1326,1354"/>
+                <Baseline points="552,1464 682,1474 812,1439 942,1441 1072,1434 1335,1408"/>
+                <TextEquiv>
+                    <Unicode>H: Franz v̅ Maÿrl.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r5l7" custom="readingOrder {index:6;} abbrev {offset:3; length:3;} person {offset:7; length:19;} abbrev {offset:7; length:3;expansion:Doktor;} textStyle {offset:8; length:2;superscript:true;}">
+                <Coords points="1948,1438 1447,1440 1327,1451 1231,1504 1118,1463 932,1513 832,1472 754,1502 703,1479 675,1509 627,1499 572,1622 572,1627 578,1631 1785,1602 1985,1583 2012,1471 2012,1454 2008,1445 1949,1438"/>
+                <Baseline points="572,1584 811,1571 1051,1556 1290,1546 1530,1539 2012,1491"/>
+                <TextEquiv>
+                    <Unicode>/: H'r Dr. Andree di Pauli abwesend :/</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>ctum Bozen den 9ten Julius 1792, 
+Vor Titl H'n: Bürgermeister Jos. v̅ Remich p.
+In Beÿseÿn der Magistrats Räthe:
+H: Oberlieut. Karl v̅ Kuglern, 
+H: Dr. Leopold Spielmann, und
+H: Franz v̅ Maÿrl.
+/: H'r Dr. Andree di Pauli abwesend :/</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="heading" id="r6" custom="readingOrder {index:5;}">
+            <Coords points="101,1667 1373,1667 1373,1783 101,1783"/>
+            <TextLine id="r6l1" custom="readingOrder {index:0;} abbrev {offset:5; length:3;} person {offset:9; length:23;} abbrev {offset:23; length:2;expansion:von;}">
+                <Coords points="1017,1672 146,1675 120,1691 115,1711 115,1721 124,1771 147,1779 325,1784 369,1784 587,1784 832,1784 1262,1784 1276,1784 1320,1706 1320,1694 1318,1687 1018,1672"/>
+                <Baseline points="115,1766 315,1762 516,1756 716,1751 917,1753 1320,1752"/>
+                <TextEquiv>
+                    <Unicode>Titl H'r Bürgermeister v̅ Remich.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>Titl H'r Bürgermeister v̅ Remich.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="heading" id="r7" custom="readingOrder {index:6;}">
+            <Coords points="640,1798 1187,1798 1187,1902 640,1902"/>
+            <TextLine id="r7l1" custom="readingOrder {index:0;} abbrev {offset:0; length:3;expansion:Numero;} textStyle {offset:1; length:1;superscript:true;}">
+                <Coords points="761,1796 714,1823 709,1871 711,1884 723,1887 867,1884 975,1879 993,1863 994,1850 994,1814 991,1807 797,1796 762,1796"/>
+                <Baseline points="709,1883 994,1866"/>
+                <TextEquiv>
+                    <Unicode>No 458.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>No 458.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="paragraph" id="r8" custom="readingOrder {index:7;}">
+            <Coords points="102,1916 1433,1891 1372,2439 102,2536"/>
+            <TextLine id="r8l1" custom="readingOrder {index:0;} schriftstueck {offset:0; length:9;} date {offset:25; length:3;year:1792; day:5; month:7; Ratssitzungstermin:-;} abbrev {offset:27; length:2;expansion:ten;} textStyle {offset:27; length:1;superscript:true;}">
+                <Coords points="1297,1892 370,1900 205,1905 181,1946 169,1944 160,1952 160,1957 170,1964 172,1972 161,1985 160,2019 167,2023 627,1991 1022,1990 1315,2003 1327,1978 1308,1892 1298,1892"/>
+                <Baseline points="160,1979 354,1974 548,1977 742,1976 936,1978 1327,1960"/>
+                <TextEquiv>
+                    <Unicode>Protokoll über die unterm 5t </Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r8l2" custom="readingOrder {index:1;} abbrev {offset:0; length:5;expansion:dieses\u0020Monats;} date {offset:0; length:5;year:1792; day:5; month:7; Ratssitzungstermin:-;} abbrev {offset:10; length:4;expansion:Titel;} person {offset:15; length:11; continued:true;} abbrev {offset:15; length:3;expansion:Herrn;}">
+                <Coords points="154,1925 137,1929 131,1944 135,2103 141,2115 574,2104 802,2125 1134,2120 1160,2100 1302,2055 1309,2041 1308,2035 1296,2016 1019,1991 623,1993 165,2024 159,2020 160,1986 172,1971 169,1962 159,1955 168,1943 178,1946 182,1942 182,1928 169,1925 155,1925"/>
+                <Baseline points="131,2102 327,2082 523,2068 719,2072 915,2082 1309,2036"/>
+                <TextEquiv>
+                    <Unicode>d. M. von Titl H'n Bürger¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r8l3" custom="readingOrder {index:2;} person {offset:0; length:7; continued:true;} abbrev {offset:8; length:12;expansion:vorgenommene;}">
+                <Coords points="1190,2098 1168,2099 1134,2121 802,2126 572,2105 359,2108 151,2141 124,2185 125,2190 315,2222 389,2190 676,2196 678,2203 682,2203 686,2187 684,2185 684,2181 685,2177 688,2179 688,2184 690,2184 691,2185 887,2184 1160,2197 1352,2153 1353,2145 1349,2136 1274,2104 1191,2098"/>
+                <Baseline points="124,2187 328,2179 533,2166 737,2165 942,2171 1353,2151"/>
+                <TextEquiv>
+                    <Unicode>meister vorgenom̅ene Revi¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r8l4" custom="readingOrder {index:3;} organization {offset:9; length:15;} abbrev {offset:10; length:8;expansion:städtischen;}">
+                <Coords points="683,2178 684,2181 684,2186 685,2185 687,2189 684,2199 682,2204 677,2203 676,2199 400,2190 315,2224 171,2225 132,2284 129,2349 130,2354 134,2355 223,2311 449,2301 516,2322 776,2328 842,2303 918,2350 975,2300 1291,2269 1330,2238 1331,2232 1314,2187 879,2184 691,2184 689,2185 688,2184 688,2181 687,2179 684,2178"/>
+                <Baseline points="129,2292 329,2277 529,2274 729,2272 929,2266 1331,2236"/>
+                <TextEquiv>
+                    <Unicode>sion der städtisch Kassa in ab¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r8l5" custom="readingOrder {index:4;} abbrev {offset:10; length:2;expansion:das;} date {offset:13; length:19; continued:true;}">
+                <Coords points="1297,2282 1174,2289 988,2296 922,2351 842,2303 776,2329 516,2322 509,2316 381,2301 220,2312 122,2393 121,2401 130,2454 140,2457 173,2442 762,2455 1121,2440 1360,2350 1366,2334 1362,2293 1354,2285 1298,2282"/>
+                <Baseline points="121,2391 328,2385 535,2397 742,2390 949,2377 1366,2333"/>
+                <TextEquiv>
+                    <Unicode>sicht auf ds zweÿte Solarquartal</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r8l6" custom="readingOrder {index:5;} date {offset:0; length:5; continued:true;year:0; day:0; month:0; Ratssitzungstermin:-;}">
+                <Coords points="171,2443 141,2506 142,2531 146,2534 204,2532 245,2531 316,2524 335,2506 326,2458 172,2443"/>
+                <Baseline points="141,2533 335,2508"/>
+                <TextEquiv>
+                    <Unicode>1792.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>Protokoll über die unterm 5t 
+d. M. von Titl H'n Bürger¬
+meister vorgenom̅ene Revi¬
+sion der städtisch Kassa in ab¬
+sicht auf ds zweÿte Solarquartal
+1792.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="heading" id="r9" custom="readingOrder {index:8;}">
+            <Coords points="1746,2260 2136,2260 2136,2396 1746,2396"/>
+            <TextLine id="r9l1" custom="readingOrder {index:0;} structure {type:heading;} abbrev {offset:0; length:8;expansion:Conclusum;}">
+                <Coords points="1833,2264 1785,2294 1774,2348 1774,2370 1774,2377 1785,2386 2083,2375 2107,2332 2094,2283 1834,2264"/>
+                <Baseline points="1774,2383 2107,2345"/>
+                <TextEquiv>
+                    <Unicode>Conclusu.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>Conclusu.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="paragraph" id="r10" custom="readingOrder {index:9;}">
+            <Coords points="2492,2718 1393,2718 1393,2412 2492,2412"/>
+            <TextLine id="r10l1" custom="readingOrder {index:0;} abbrev {offset:8; length:2;expansion:Herrn;} person {offset:11; length:18; continued:true;}">
+                <Coords points="2041,2410 1394,2414 1391,2421 1391,2513 1419,2545 1695,2539 1811,2506 1938,2534 2021,2505 2128,2497 2319,2528 2359,2495 2465,2448 2466,2440 2465,2435 2279,2410 2189,2410 2161,2410 2062,2410 2042,2410"/>
+                <Baseline points="1391,2493 1569,2489 1748,2489 1926,2472 2105,2459 2466,2456"/>
+                <TextEquiv>
+                    <Unicode>Ist dem H: Magistrats Kassier</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r10l2" custom="readingOrder {index:1;} person {offset:0; length:8; continued:true;} abbrev {offset:0; length:2;expansion:von;}">
+                <Coords points="2125,2498 2020,2506 1935,2535 1820,2507 1691,2540 1421,2546 1408,2536 1392,2548 1391,2594 1392,2618 1395,2625 1554,2616 1603,2629 1747,2621 1750,2643 1752,2648 1857,2591 2100,2577 2243,2572 2361,2577 2364,2583 2370,2566 2370,2564 2372,2557 2450,2555 2461,2535 2458,2524 2373,2499 2317,2529 2126,2498"/>
+                <Baseline points="1391,2620 1569,2596 1747,2574 1925,2569 2103,2558 2461,2540"/>
+                <TextEquiv>
+                    <Unicode>v̅ Maÿrl zum weiteren Ge¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r10l3" custom="readingOrder {index:2;}">
+                <Coords points="2373,2557 2371,2566 2370,2568 2368,2580 2363,2583 2360,2577 2241,2573 2094,2580 1856,2592 1755,2649 1749,2646 1749,2630 1746,2621 1551,2617 1409,2629 1393,2651 1391,2699 1395,2718 1581,2719 2105,2719 2426,2638 2432,2625 2374,2557"/>
+                <Baseline points="1391,2711 1564,2696 1737,2685 1910,2671 2083,2657 2432,2628"/>
+                <TextEquiv>
+                    <Unicode>brauche wieder rukzustellen.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>Ist dem H: Magistrats Kassier
+v̅ Maÿrl zum weiteren Ge¬
+brauche wieder rukzustellen.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="heading" id="r11" custom="readingOrder {index:10;}">
+            <Coords points="630,2689 1054,2689 1054,2834 630,2834"/>
+            <TextLine id="r11l1" custom="readingOrder {index:0;} abbrev {offset:0; length:2;expansion:Numero;} textStyle {offset:1; length:1;superscript:true;}">
+                <Coords points="774,2709 725,2722 682,2766 676,2806 679,2820 691,2829 866,2835 885,2835 921,2835 935,2828 949,2769 949,2759 947,2753 775,2709"/>
+                <Baseline points="665,2804 938,2829"/>
+                <TextEquiv>
+                    <Unicode>No 799.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>No 799.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="paragraph" id="r12" custom="readingOrder {index:11;}">
+            <Coords points="127,2822 1442,2822 1444,3360 1208,3564 127,3566"/>
+            <TextLine id="r12l1" custom="readingOrder {index:0;} abbrev {offset:0; length:9;expansion:kreisämtliches\u0020;} organization {offset:0; length:9;} abbrev {offset:19; length:5;expansion:de\u0020dato;} date {offset:25; length:2;year:1792; day:4; month:7; Ratssitzungstermin:-;} textStyle {offset:26; length:1;superscript:true;} abbrev {offset:26; length:1;expansion:ten;} abbrev {offset:28; length:5;expansion:protocollo;}">
+                <Coords points="853,2820 178,2821 162,2825 125,2863 125,2872 148,2995 191,2981 204,2951 270,2974 288,2951 474,2946 506,2955 630,2956 733,2952 773,2980 830,2945 1127,2944 1190,2972 1203,2940 1213,2936 1293,2957 1349,2929 1362,2847 1359,2832 1162,2821 922,2820 888,2820 854,2820"/>
+                <Baseline points="125,2911 330,2908 536,2924 741,2919 947,2909 1362,2891"/>
+                <TextEquiv>
+                    <Unicode>Kreisämt. Reskript d. d. 4t præs.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r12l2" custom="readingOrder {index:1;} date {offset:0; length:9;year:1792; day:6; month:7; Ratssitzungstermin:-;} textStyle {offset:1; length:2;superscript:true;} abbrev {offset:1; length:1;expansion:ten;}">
+                <Coords points="1210,2937 1196,2964 1187,2977 1126,2943 838,2945 780,2981 734,2947 636,2961 506,2956 307,2944 280,2965 218,2948 193,2980 149,2997 140,3001 139,3023 140,3031 145,3049 200,3062 290,3065 302,3064 308,3053 558,3049 669,3048 679,3064 683,3065 784,3048 968,3045 1086,3060 1178,3030 1313,3022 1334,2992 1334,2986 1211,2937"/>
+                <Baseline points="139,3042 337,3025 536,3016 734,3018 933,3022 1334,2997"/>
+                <TextEquiv>
+                    <Unicode>6t Julius, daß die nach dem </Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r12l3" custom="readingOrder {index:2;} place {offset:11; length:9;}">
+                <Coords points="956,3046 784,3049 682,3066 677,3064 676,3052 310,3053 302,3065 165,3056 126,3102 126,3108 135,3141 223,3180 229,3180 287,3154 308,3174 486,3172 618,3139 1074,3138 1195,3154 1207,3143 1320,3081 1321,3076 1320,3072 1173,3046 1083,3061 957,3046"/>
+                <Baseline points="126,3130 324,3118 523,3109 721,3113 920,3116 1321,3081"/>
+                <TextEquiv>
+                    <Unicode>lezthin zu Brauneken abge¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r12l4" custom="readingOrder {index:3;}">
+                <Coords points="1306,3132 1212,3140 1199,3155 1073,3139 617,3140 483,3173 305,3171 285,3154 229,3181 222,3181 183,3155 131,3206 134,3265 141,3271 390,3238 769,3240 1229,3232 1265,3254 1335,3193 1336,3180 1318,3133 1307,3132"/>
+                <Baseline points="131,3237 331,3223 532,3215 732,3216 933,3220 1336,3182"/>
+                <TextEquiv>
+                    <Unicode>haltenen Sonnenwend = Vieh¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r12l5" custom="readingOrder {index:4;}">
+                <Coords points="1225,3233 384,3239 155,3299 143,3323 145,3329 171,3351 518,3347 533,3377 549,3375 589,3349 612,3375 784,3348 859,3344 945,3336 1018,3367 1282,3377 1315,3351 1320,3355 1322,3360 1379,3269 1379,3265 1266,3255 1226,3233"/>
+                <Baseline points="143,3332 348,3317 554,3306 759,3312 965,3317 1379,3271"/>
+                <TextEquiv>
+                    <Unicode>markte geschöpfte Rindfleischtaxe</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r12l6" custom="readingOrder {index:5;} abbrev {offset:4; length:2;expansion:das;} abbrev {offset:21; length:2;expansion:Kreuzer;} abbrev {offset:24; length:4; continued:true;}">
+                <Coords points="937,3337 707,3369 610,3369 588,3350 535,3378 525,3372 524,3357 189,3348 138,3410 125,3468 125,3474 131,3479 432,3479 785,3480 1005,3468 1308,3442 1353,3393 1353,3380 1320,3358 1319,3355 1318,3354 1286,3377 1260,3373 1014,3365 947,3337 938,3337"/>
+                <Baseline points="125,3433 329,3426 533,3431 737,3425 941,3444 1353,3384"/>
+                <TextEquiv>
+                    <Unicode>für ds Pfund auf 6 ¾ Xr aus¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r12l7" custom="readingOrder {index:6;} abbrev {offset:0; length:6; continued:true;expansion:ausgefallen;}">
+                <Coords points="295,3478 125,3527 125,3535 165,3567 182,3567 262,3567 401,3567 464,3567 557,3567 630,3536 635,3518 591,3484 296,3478"/>
+                <Baseline points="125,3548 635,3530"/>
+                <TextEquiv>
+                    <Unicode>gefall seÿe.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>Kreisämt. Reskript d. d. 4t præs.
+6t Julius, daß die nach dem 
+lezthin zu Brauneken abge¬
+haltenen Sonnenwend = Vieh¬
+markte geschöpfte Rindfleischtaxe
+für ds Pfund auf 6 ¾ Xr aus¬
+gefall seÿe.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="heading" id="r13" custom="readingOrder {index:12;}">
+            <Coords points="1721,3293 2258,3293 2258,3427 1721,3427"/>
+            <TextLine id="r13l1" custom="readingOrder {index:0;} abbrev {offset:0; length:9;expansion:Conclusum;}">
+                <Coords points="1815,3305 1765,3326 1751,3388 1751,3405 1752,3414 1759,3422 1774,3423 1995,3417 2060,3412 2078,3379 2078,3371 2069,3329 2050,3315 1816,3305"/>
+                <Baseline points="1751,3419 2078,3395"/>
+                <TextEquiv>
+                    <Unicode>Conclusu.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>Conclusu.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="paragraph" id="r14" custom="readingOrder {index:13;}">
+            <Coords points="1361,3438 2492,3438 2492,4014 1361,4014"/>
+            <TextLine id="r14l1" custom="readingOrder {index:0;}">
+                <Coords points="2172,3436 1427,3437 1415,3440 1359,3527 1359,3536 1361,3541 1398,3548 1873,3525 2016,3555 2148,3543 2157,3532 2258,3499 2258,3518 2353,3515 2385,3539 2470,3475 2471,3471 2470,3466 2335,3436 2305,3436 2185,3436 2173,3436"/>
+                <Baseline points="1359,3530 1544,3519 1729,3504 1914,3499 2099,3491 2471,3474"/>
+                <TextEquiv>
+                    <Unicode>Da die dermalige Fleischtaxe</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r14l2" custom="readingOrder {index:1;}">
+                <Coords points="2254,3499 2158,3531 2153,3541 2016,3556 1871,3527 1399,3552 1373,3562 1359,3608 1359,3613 1379,3645 1750,3651 1835,3627 1931,3651 1945,3637 1963,3618 2206,3613 2242,3630 2268,3605 2449,3596 2480,3537 2481,3525 2476,3505 2460,3502 2396,3540 2357,3516 2272,3519 2258,3519 2258,3501 2255,3499"/>
+                <Baseline points="1359,3631 1545,3617 1732,3614 1918,3598 2105,3584 2481,3567"/>
+                <TextEquiv>
+                    <Unicode>bereits nach diesem Verhältnis</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r14l3" custom="readingOrder {index:2;} abbrev {offset:16; length:3;expansion:also;} abbrev {offset:25; length:2;expansion:das;}">
+                <Coords points="2345,3605 2274,3608 2242,3631 2206,3614 1962,3620 1935,3651 1930,3652 1833,3628 1750,3652 1443,3645 1362,3715 1359,3784 1364,3788 1415,3779 1420,3763 1420,3760 1421,3754 1630,3763 1731,3762 2039,3717 2226,3709 2393,3723 2443,3638 2446,3618 2446,3614 2444,3608 2346,3605"/>
+                <Baseline points="1359,3742 1539,3722 1720,3709 1900,3702 2081,3688 2446,3668"/>
+                <TextEquiv>
+                    <Unicode>schon bestehet, als wird ds Res¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r14l4" custom="readingOrder {index:3;}">
+                <Coords points="2220,3710 2034,3718 1730,3763 1626,3763 1423,3753 1421,3759 1421,3763 1416,3778 1365,3810 1365,3814 1376,3841 1475,3873 1525,3862 1750,3871 1903,3857 1957,3865 2260,3850 2416,3752 2417,3747 2415,3741 2221,3710"/>
+                <Baseline points="1365,3831 1540,3825 1715,3805 1890,3798 2065,3778 2417,3754"/>
+                <TextEquiv>
+                    <Unicode>kript lediglich zur Wissen¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r14l5" custom="readingOrder {index:4;} abbrev {offset:7; length:6;expansion:genommen;}">
+                <Coords points="1522,3863 1474,3874 1432,3870 1373,3904 1359,3968 1359,3991 1361,3993 1631,3988 1938,3944 1942,3923 1941,3887 1939,3879 1909,3863 1749,3872 1523,3863"/>
+                <Baseline points="1359,3946 1455,3932 1552,3909 1648,3914 1745,3916 1942,3890"/>
+                <TextEquiv>
+                    <Unicode>schaft genom̅.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>Da die dermalige Fleischtaxe
+bereits nach diesem Verhältnis
+schon bestehet, als wird ds Res¬
+kript lediglich zur Wissen¬
+schaft genom̅.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="heading" id="r15" custom="readingOrder {index:14;}">
+            <Coords points="638,3896 1014,3896 1014,4012 638,4012"/>
+            <TextLine id="r15l1" custom="readingOrder {index:0;} abbrev {offset:0; length:2;expansion:Numero;} textStyle {offset:1; length:1;superscript:true;}">
+                <Coords points="928,3899 770,3901 674,3966 666,4002 666,4012 680,4013 701,4013 874,4013 910,4008 955,3931 955,3915 949,3900 929,3899"/>
+                <Baseline points="662,3998 955,4011"/>
+                <TextEquiv>
+                    <Unicode>No 796.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>No 796.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="paragraph" id="r16" custom="readingOrder {index:15;}">
+            <Coords points="70,4013 1371,4013 1371,4158 70,4158"/>
+            <TextLine id="r16l1" custom="readingOrder {index:0;} schriftstueck {offset:0; length:9;} abbrev {offset:14; length:8;expansion:wohllöblichen;} organization {offset:23; length:7;}">
+                <Coords points="668,4011 171,4017 132,4019 107,4036 102,4057 102,4068 107,4082 184,4130 464,4159 811,4154 991,4149 1292,4135 1344,4088 1345,4080 1331,4024 1252,4014 868,4011 669,4011"/>
+                <Baseline points="102,4076 308,4097 515,4108 721,4108 928,4114 1345,4088"/>
+                <TextEquiv>
+                    <Unicode>Vorladung der wohllöb. Landes¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>Vorladung der wohllöb. Landes¬</Unicode>
+            </TextEquiv>
+        </TextRegion>
+    </Page>
+</PcGts>

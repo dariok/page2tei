@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>TRP</Creator>
+        <Created>2016-03-01T13:53:24.753+01:00</Created>
+        <LastChange>2016-04-07T09:54:36.854+02:00</LastChange>
+        <TranskribusMetadata docId="4379" pageId="113450" pageNr="30" tsid="2359793" status="FINAL" userId="3667" imgUrl="https://dbis-thure.uibk.ac.at/f/Get?id=UFPBOQFCEAPNSLDMPCSNLCQN&amp;fileType=view" xmlUrl="https://dbis-thure.uibk.ac.at/f/Get?id=EPMJBHZPHRUEFJNYITVJCHWH" imageId="109103"/>
+    </Metadata>
+    <Page imageFilename="HS_115_30_object_128298.jpg" imageWidth="2934" imageHeight="4443">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1526560645788" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="region_1460015662628_7"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion type="page-number" id="region_1460015662628_7" custom="readingOrder {index:0;} structure {type:page-number;}">
+            <Coords points="435,157 706,157 706,317 435,317"/>
+            <TextLine id="line_1460015666196_8" custom="readingOrder {index:0;}">
+                <Coords points="481,229 611,225 612,275 482,279"/>
+                <Baseline points="482,274 612,270"/>
+                <TextEquiv>
+                    <Unicode>15</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>15</Unicode>
+            </TextEquiv>
+        </TextRegion>
+    </Page>
+</PcGts>

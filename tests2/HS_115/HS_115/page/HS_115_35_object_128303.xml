@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>TRP
+NCSR LineSegmentationTool, v0.3.0 (17_3_2015)</Creator>
+        <Created>2016-03-01T13:53:28.322+01:00</Created>
+        <LastChange>2018-02-22T16:11:20.680+01:00</LastChange>
+        <TranskribusMetadata docId="4379" pageId="113491" pageNr="35" tsid="2366121" status="FINAL" userId="3667" imgUrl="https://dbis-thure.uibk.ac.at/f/Get?id=KCQCXYEEIXDDRJVFTKAKZIJL&amp;fileType=view" xmlUrl="https://dbis-thure.uibk.ac.at/f/Get?id=DIGZANCIKHDQFLDERPTULRCG" imageId="109108"/>
+    </Metadata>
+    <Page imageFilename="HS_115_35_object_128303.jpg" imageWidth="2689" imageHeight="4464">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1526560646237" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="r1"/>
+                <RegionRefIndexed index="1" regionRef="r2"/>
+                <RegionRefIndexed index="2" regionRef="r3"/>
+                <RegionRefIndexed index="3" regionRef="r4"/>
+                <RegionRefIndexed index="4" regionRef="r5"/>
+                <RegionRefIndexed index="5" regionRef="r6"/>
+                <RegionRefIndexed index="6" regionRef="r7"/>
+                <RegionRefIndexed index="7" regionRef="r8"/>
+                <RegionRefIndexed index="8" regionRef="r9"/>
+                <RegionRefIndexed index="9" regionRef="r10"/>
+                <RegionRefIndexed index="10" regionRef="r11"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion type="page-number" id="r1" custom="readingOrder {index:0;}">
+            <Coords points="2140,157 2413,157 2413,328 2140,328"/>
+            <TextLine id="r1l1" custom="readingOrder {index:0;}">
+                <Coords points="2237,217 2229,219 2213,236 2208,278 2208,282 2215,294 2268,296 2277,294 2325,223 2322,218 2279,217 2238,217"/>
+                <Baseline points="2229,299 2320,292"/>
+                <TextEquiv>
+                    <Unicode>17.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>17.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="header" id="r2" custom="readingOrder {index:1;} structure {type:header;}">
+            <Coords points="952,214 1913,214 1913,418 952,418"/>
+            <TextLine id="r2l1" custom="readingOrder {index:0;}">
+                <Coords points="1040,212 984,265 979,288 991,417 996,419 1806,373 1825,331 1825,325 1818,307 1679,236 1058,212 1041,212"/>
+                <Baseline points="979,394 1119,378 1271,373 1400,363 1556,382 1825,350"/>
+                <TextEquiv>
+                    <Unicode>In Publico - Politicis.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>In Publico - Politicis.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="heading" id="r3" custom="readingOrder {index:2;}">
+            <Coords points="86,498 1017,498 1017,600 86,600"/>
+            <TextLine id="r3l1" custom="readingOrder {index:0;} date {offset:3; length:16;year:1792; day:9; month:7; Ratssitzungstermin:-;} abbrev {offset:5; length:1;expansion:ten;} textStyle {offset:5; length:1;superscript:true;}">
+                <Coords points="162,496 95,580 94,587 96,592 315,601 383,601 420,601 489,601 796,601 841,601 936,545 937,540 931,503 902,496 767,496 700,496 656,496 489,496 402,496 163,496"/>
+                <Baseline points="94,585 234,565 374,589 514,570 654,552 937,551"/>
+                <TextEquiv>
+                    <Unicode>Den 9t Julius 1792.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>Den 9t Julius 1792.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="paragraph" id="r4" custom="readingOrder {index:3;}">
+            <Coords points="79,672 1350,604 1361,1663 79,1807"/>
+            <TextLine id="r4l1" custom="readingOrder {index:0;}">
+                <Coords points="1194,625 516,644 245,652 95,727 93,735 104,757 224,783 344,747 486,781 573,737 678,773 703,743 1296,716 1314,689 1312,677 1201,625 1195,625"/>
+                <Baseline points="93,748 296,734 499,728 702,719 905,704 1314,692"/>
+                <TextEquiv>
+                    <Unicode>wahrten Feuerhaken und leder¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r4l2" custom="readingOrder {index:1;}">
+                <Coords points="1227,728 1071,731 704,743 687,767 668,772 654,751 572,738 488,782 339,750 225,788 79,815 78,824 124,852 311,868 392,846 775,832 794,818 893,820 1105,854 1133,814 1150,811 1224,826 1261,816 1278,765 1277,748 1273,739 1228,728"/>
+                <Baseline points="78,825 277,826 477,825 676,814 876,802 1278,790"/>
+                <TextEquiv>
+                    <Unicode>nen Feuerkübel, wie auch c) </Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r4l3" custom="readingOrder {index:2;} abbrev {offset:6; length:9;expansion:dergleichen;}">
+                <Coords points="1278,808 1224,827 1145,812 1130,816 1125,850 887,821 787,822 777,832 390,847 315,879 95,894 77,921 77,926 89,948 486,963 703,954 1055,902 1063,910 1264,913 1305,868 1305,857 1287,809 1279,808"/>
+                <Baseline points="77,935 281,925 485,916 689,904 893,901 1305,869"/>
+                <TextEquiv>
+                    <Unicode>einer dergleich Leiter zur Ab¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r4l4" custom="readingOrder {index:3;} abbrev {offset:20; length:6;expansion:schweren;}">
+                <Coords points="1052,901 689,956 483,964 233,948 101,1005 95,1021 213,1067 425,1045 539,1035 590,1071 598,1071 801,1024 946,1013 1059,1043 1164,998 1285,1009 1286,1007 1286,1000 1296,997 1296,1001 1295,1005 1298,1008 1305,996 1305,937 1303,932 1134,906 1062,910 1053,901"/>
+                <Baseline points="95,1020 296,1021 497,1011 698,1003 899,988 1305,950"/>
+                <TextEquiv>
+                    <Unicode>name der großen und schwer </Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r4l5" custom="readingOrder {index:4;} abbrev {offset:19; length:3;}">
+                <Coords points="1292,996 1287,1000 1287,1008 1168,999 1058,1044 946,1014 708,1060 597,1072 588,1071 537,1036 213,1071 132,1053 86,1103 91,1181 103,1190 163,1155 755,1123 789,1145 1008,1162 1066,1138 1131,1097 1237,1093 1240,1095 1252,1074 1253,1074 1255,1077 1312,1060 1313,1052 1295,1006 1295,998 1293,996"/>
+                <Baseline points="86,1128 290,1125 494,1123 698,1108 902,1092 1313,1055"/>
+                <TextEquiv>
+                    <Unicode>Feuer . Leitern d) weg Beÿ¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r4l6" custom="readingOrder {index:5;} abbrev {offset:16; length:6;expansion:längeren;}">
+                <Coords points="1251,1075 1245,1093 1240,1096 1232,1089 1125,1097 1065,1141 1007,1163 788,1145 750,1122 415,1162 256,1150 163,1156 94,1232 93,1238 94,1287 98,1297 143,1276 207,1296 372,1291 376,1304 376,1307 377,1308 396,1281 410,1265 528,1244 809,1231 869,1278 1005,1258 1044,1222 1056,1221 1114,1222 1283,1236 1300,1248 1332,1253 1357,1156 1357,1150 1252,1075"/>
+                <Baseline points="93,1232 303,1223 513,1222 723,1209 933,1198 1357,1143"/>
+                <TextEquiv>
+                    <Unicode>schaffung einer länger Stange</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="line_1461833617543_25" custom="readingOrder {index:6;} abbrev {offset:4; length:4;expansion:rothen;}">
+                <Coords points="115,1311 1343,1232 1346,1282 118,1361"/>
+                <Baseline points="118,1356 1346,1277"/>
+                <TextEquiv>
+                    <Unicode>der roth Feuerfahne, und end¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="line_1461833620168_26" custom="readingOrder {index:7;} abbrev {offset:8; length:3;expansion:wegen;}">
+                <Coords points="113,1403 1336,1322 1339,1372 116,1453"/>
+                <Baseline points="116,1448 1339,1367"/>
+                <TextEquiv>
+                    <Unicode>lich e) weg Aufstellung einer</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="line_1461833624159_27" custom="readingOrder {index:8;}">
+                <Coords points="104,1530 1321,1437 1324,1487 107,1580"/>
+                <Baseline points="107,1575 1324,1482"/>
+                <TextEquiv>
+                    <Unicode>Pfal-Laterne vor dem Behäl¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r4l9" custom="readingOrder {index:9;}">
+                <Coords points="1211,1512 1185,1514 1144,1538 1114,1519 692,1547 496,1562 317,1598 316,1595 221,1575 82,1640 77,1651 77,1657 79,1662 454,1689 525,1655 536,1656 732,1661 770,1675 805,1656 813,1657 818,1674 832,1682 1129,1660 1308,1569 1310,1562 1299,1540 1212,1512"/>
+                <Baseline points="77,1657 282,1651 487,1643 692,1621 897,1603 1310,1564"/>
+                <TextEquiv>
+                    <Unicode>nis der Feüerlöschgeräthschaften </Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r4l10" custom="readingOrder {index:10;} place {offset:8; length:10;}">
+                <Coords points="523,1656 460,1689 454,1690 179,1671 97,1738 94,1755 95,1765 177,1797 836,1760 912,1705 913,1699 910,1692 827,1683 812,1658 806,1657 742,1668 524,1656"/>
+                <Baseline points="94,1757 230,1753 366,1748 502,1738 638,1724 913,1706"/>
+                <TextEquiv>
+                    <Unicode>auf dem Kornplatze.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>wahrten Feuerhaken und leder¬
+nen Feuerkübel, wie auch c) 
+einer dergleich Leiter zur Ab¬
+name der großen und schwer 
+Feuer . Leitern d) weg Beÿ¬
+schaffung einer länger Stange
+der roth Feuerfahne, und end¬
+lich e) weg Aufstellung einer
+Pfal-Laterne vor dem Behäl¬
+nis der Feüerlöschgeräthschaften 
+auf dem Kornplatze.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="heading" id="r5" custom="readingOrder {index:4;}">
+            <Coords points="1627,1526 2444,1526 2444,1651 1627,1651"/>
+            <TextLine id="r5l1" custom="readingOrder {index:0;} abbrev {offset:0; length:4;} person {offset:5; length:13;} abbrev {offset:5; length:2;expansion:Doktor;} textStyle {offset:6; length:2;superscript:true;}">
+                <Coords points="1702,1542 1649,1584 1648,1588 1671,1652 1730,1652 1963,1652 2302,1618 2328,1584 2328,1579 2326,1573 2090,1545 1703,1542"/>
+                <Baseline points="1648,1616 1761,1630 1874,1605 1987,1606 2100,1606 2328,1583"/>
+                <TextEquiv>
+                    <Unicode>H'r. Dr. Spielmann</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>H'r. Dr. Spielmann</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="paragraph" id="r6" custom="readingOrder {index:5;}">
+            <Coords points="1270,1688 2553,1635 2583,3034 1270,3208"/>
+            <TextLine id="r6l1" custom="readingOrder {index:0;}">
+                <Coords points="2164,1649 1659,1659 1347,1667 1326,1708 1324,1809 1326,1821 1335,1828 1341,1828 1388,1820 1468,1758 1477,1766 1477,1771 1477,1773 1482,1784 1668,1751 2049,1758 2550,1669 2550,1656 2549,1650 2300,1649 2165,1649"/>
+                <Baseline points="1324,1758 1528,1749 1732,1735 1936,1726 2140,1718 2429,1719"/>
+                <TextEquiv>
+                    <Unicode>Ist zwar ad a. b. c. und d: </Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r6l2" custom="readingOrder {index:1;} abbrev {offset:4; length:2;expansion:Herrn;} abbrev {offset:7; length:8;expansion:Referenten;} person {offset:7; length:8;} abbrev {offset:16; length:11;expansion:einverstanden;}">
+                <Coords points="2416,1723 1978,1742 1485,1788 1476,1772 1476,1767 1475,1765 1328,1851 1324,1863 1325,1867 1541,1907 1547,1905 1561,1890 1592,1901 1655,1891 1658,1894 1727,1898 1840,1858 1957,1887 2012,1866 2021,1848 2181,1841 2276,1866 2309,1842 2454,1845 2476,1791 2476,1785 2428,1725 2417,1723"/>
+                <Baseline points="1324,1868 1515,1853 1707,1844 1898,1824 2090,1811 2476,1775"/>
+                <TextEquiv>
+                    <Unicode>mit H. Referent einverstand,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r6l3" custom="readingOrder {index:2;} abbrev {offset:22; length:5;expansion:Meynung;}">
+                <Coords points="2544,1840 2309,1845 2273,1867 2180,1842 2026,1845 2015,1864 1957,1888 1863,1859 1723,1899 1658,1895 1654,1890 1590,1902 1563,1888 1542,1908 1450,1881 1356,1885 1298,1961 1298,1965 1321,1994 1423,2009 1520,2002 1551,1972 1737,1955 1741,1961 2150,1935 2288,1928 2304,1939 2319,1933 2400,1958 2547,1883 2549,1853 2548,1840 2545,1840"/>
+                <Baseline points="1298,1962 1506,1953 1714,1941 1922,1922 2130,1909 2471,1882"/>
+                <TextEquiv>
+                    <Unicode>doch ist derselbe der Meÿng, </Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r6l4" custom="readingOrder {index:3;}">
+                <Coords points="2546,1928 2399,1959 2319,1933 2303,1940 2288,1929 2149,1936 1740,1960 1736,1956 1550,1973 1522,2003 1423,2010 1387,1989 1350,1999 1314,2079 1316,2084 1402,2099 1408,2118 1414,2119 1623,2068 1751,2054 1908,2096 1924,2074 2065,2033 2093,2039 2100,2068 2131,2058 2138,2039 2331,2020 2414,2037 2550,1954 2551,1935 2547,1928"/>
+                <Baseline points="1314,2079 1519,2061 1725,2038 1930,2019 2136,2004 2478,2011"/>
+                <TextEquiv>
+                    <Unicode>daß der ad e) gemachte Vor¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r6l5" custom="readingOrder {index:4;}">
+                <Coords points="2551,2021 2331,2028 2145,2034 2131,2059 2113,2076 2091,2037 1934,2062 1921,2083 1907,2097 1750,2056 1413,2120 1404,2106 1337,2136 1322,2204 1322,2224 1325,2227 1388,2199 1473,2223 1527,2183 1789,2156 1937,2187 2071,2141 2202,2133 2351,2116 2429,2099 2557,2066 2557,2024 2552,2021"/>
+                <Baseline points="1322,2178 1527,2155 1733,2123 1938,2116 2144,2112 2478,2082"/>
+                <TextEquiv>
+                    <Unicode>schlag aus dem Grunde über¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r6l6" custom="readingOrder {index:5;}">
+                <Coords points="2199,2134 2072,2142 1939,2188 1789,2157 1527,2184 1482,2222 1471,2224 1393,2197 1317,2251 1316,2257 1318,2316 1324,2325 1331,2326 1570,2323 1659,2315 1777,2240 1786,2252 1984,2239 2192,2235 2299,2254 2435,2182 2436,2178 2430,2164 2351,2134 2200,2134"/>
+                <Baseline points="1316,2270 1502,2263 1688,2237 1874,2221 2060,2207 2436,2183"/>
+                <TextEquiv>
+                    <Unicode>flüßig seÿe, weil derje¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="line_1461833676612_28" custom="readingOrder {index:6;}">
+                <Coords points="1337,2356 2484,2262 2488,2312 1341,2406"/>
+                <Baseline points="1341,2401 2488,2307"/>
+                <TextEquiv>
+                    <Unicode>nige, welcher den Schlüssel </Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="line_1461833679705_29" custom="readingOrder {index:7;}">
+                <Coords points="1335,2444 2475,2343 2479,2393 1339,2494"/>
+                <Baseline points="1339,2489 2479,2388"/>
+                <TextEquiv>
+                    <Unicode>zur Erhebung der Feuersprit¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="line_1461833683768_30" custom="readingOrder {index:8;}">
+                <Coords points="1330,2551 2492,2452 2496,2502 1334,2601"/>
+                <Baseline points="1334,2596 2496,2497"/>
+                <TextEquiv>
+                    <Unicode>zen mit sich bringet, ohnehin </Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="line_1461833686425_31" custom="readingOrder {index:9;}">
+                <Coords points="1330,2654 2422,2555 2426,2605 1334,2704"/>
+                <Baseline points="1334,2699 2426,2600"/>
+                <TextEquiv>
+                    <Unicode>mit einem Lichte versehen </Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="line_1461833688581_32" custom="readingOrder {index:10;} person {offset:19; length:9; continued:true;}">
+                <Coords points="1331,2746 2445,2645 2449,2695 1335,2796"/>
+                <Baseline points="1335,2791 2449,2690"/>
+                <TextEquiv>
+                    <Unicode>seÿn muß, auch die Nachwäch¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="line_1461833690582_33" custom="readingOrder {index:11;} person {offset:0; length:3; continued:true;}">
+                <Coords points="1319,2838 2472,2716 2478,2766 1325,2888"/>
+                <Baseline points="1324,2883 2477,2761"/>
+                <TextEquiv>
+                    <Unicode>ter ein solches beÿ sich haben, </Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="line_1461833692996_34" custom="readingOrder {index:12;}">
+                <Coords points="1361,2939 2471,2840 2475,2890 1365,2989"/>
+                <Baseline points="1365,2984 2475,2885"/>
+                <TextEquiv>
+                    <Unicode>daß also die sonderbare Pfal¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="line_1461833695464_35" custom="readingOrder {index:13;}">
+                <Coords points="1395,3046 2462,2956 2466,3006 1399,3096"/>
+                <Baseline points="1328,3096 2466,3001"/>
+                <TextEquiv>
+                    <Unicode>laterne nicht nöthig zu seÿn</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r6l15" custom="readingOrder {index:14;}">
+                <Coords points="1389,3116 1333,3133 1307,3178 1307,3183 1320,3202 1329,3202 1374,3199 1576,3177 1587,3156 1587,3151 1390,3116"/>
+                <Baseline points="1307,3181 1587,3162"/>
+                <TextEquiv>
+                    <Unicode>scheine.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>Ist zwar ad a. b. c. und d: 
+mit H. Referent einverstand,
+doch ist derselbe der Meÿng, 
+daß der ad e) gemachte Vor¬
+schlag aus dem Grunde über¬
+flüßig seÿe, weil derje¬
+nige, welcher den Schlüssel 
+zur Erhebung der Feuersprit¬
+zen mit sich bringet, ohnehin 
+mit einem Lichte versehen 
+seÿn muß, auch die Nachwäch¬
+ter ein solches beÿ sich haben, 
+daß also die sonderbare Pfal¬
+laterne nicht nöthig zu seÿn
+scheine.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="heading" id="r7" custom="readingOrder {index:6;}">
+            <Coords points="1656,3171 2375,3080 2329,3193 1679,3288"/>
+            <TextLine id="r7l1" custom="readingOrder {index:0;} abbrev {offset:0; length:3;} person {offset:4; length:8;} abbrev {offset:4; length:2;expansion:von;}">
+                <Coords points="1880,3142 1748,3155 1702,3200 1701,3281 1702,3286 1719,3285 2075,3259 2176,3199 2177,3195 2160,3144 2151,3142 1881,3142"/>
+                <Baseline points="1701,3284 2177,3196"/>
+                <TextEquiv>
+                    <Unicode>H'r v̅ Maÿrl</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>H'r v̅ Maÿrl</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="paragraph" id="r8" custom="readingOrder {index:7;}">
+            <Coords points="1271,3353 2542,3167 2583,3421 1289,3507"/>
+            <TextLine id="line_1461833729333_36" custom="readingOrder {index:0;} person {offset:20; length:6; continued:true;} abbrev {offset:20; length:2;expansion:Herrn;} abbrev {offset:23; length:3;expansion:Doktor;} textStyle {offset:24; length:2;superscript:true;}">
+                <Coords points="1340,3368 2412,3263 2416,3313 1344,3418"/>
+                <Baseline points="1344,3413 2416,3308"/>
+                <TextEquiv>
+                    <Unicode>Ist der Meÿnung des H. Dr. </Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="line_1461833732646_37" custom="readingOrder {index:1;} person {offset:0; length:9; continued:true;}">
+                <Coords points="1370,3460 2335,3370 2339,3420 1374,3510"/>
+                <Baseline points="1374,3505 2339,3415"/>
+                <TextEquiv>
+                    <Unicode>Spielmann beÿgetretten.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>Ist der Meÿnung des H. Dr. 
+Spielmann beÿgetretten.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="heading" id="r9" custom="readingOrder {index:8;}">
+            <Coords points="1709,3511 2435,3511 2435,3613 1709,3613"/>
+            <TextLine id="r9l1" custom="readingOrder {index:0;}">
+                <Coords points="1851,3509 1811,3522 1798,3575 1800,3588 1813,3601 1826,3602 2075,3591 2229,3566 2236,3547 2235,3541 1984,3509 1852,3509"/>
+                <Baseline points="1798,3596 2236,3558"/>
+                <TextEquiv>
+                    <Unicode>Conclusum</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>Conclusum</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="heading" id="r10" custom="readingOrder {index:9;}">
+            <Coords points="1679,3617 2375,3617 2372,3671 1679,3727"/>
+            <TextLine id="r10l1" custom="readingOrder {index:0;}">
+                <Coords points="1726,3615 1710,3619 1694,3638 1687,3698 1689,3709 1699,3714 1746,3714 2054,3705 2226,3665 2227,3658 2225,3650 2189,3625 1938,3616 1727,3615"/>
+                <Baseline points="1687,3713 1776,3701 1866,3698 1955,3689 2045,3686 2276,3679"/>
+                <TextEquiv>
+                    <Unicode>Per Majora.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>Per Majora.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="paragraph" id="r11" custom="readingOrder {index:10;}">
+            <Coords points="1252,3739 2534,3667 2553,4163 1252,4163"/>
+            <TextLine id="r11l1" custom="readingOrder {index:0;}">
+                <Coords points="2043,3693 1369,3727 1307,3787 1300,3813 1299,3844 1300,3850 1310,3860 1355,3860 2278,3831 2314,3799 2403,3772 2408,3747 2407,3742 2308,3703 2044,3693"/>
+                <Baseline points="1299,3860 1483,3833 1668,3831 1852,3807 2037,3792 2408,3765"/>
+                <TextEquiv>
+                    <Unicode>Ad a: b: c: et d. cum Refe¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r11l2" custom="readingOrder {index:1;} abbrev {offset:13; length:6;}">
+                <Coords points="2314,3812 2271,3833 1871,3827 1477,3856 1325,3900 1307,3939 1308,3945 1358,3959 1627,3938 1759,3931 1853,3959 1963,3973 1994,3947 1997,3920 2055,3911 2061,3947 2084,3949 2106,3912 2118,3911 2192,3950 2205,3927 2235,3900 2246,3899 2304,3929 2315,3937 2403,3851 2404,3842 2402,3836 2323,3812 2315,3812"/>
+                <Baseline points="1307,3945 1489,3927 1672,3915 1854,3901 2037,3874 2404,3858"/>
+                <TextEquiv>
+                    <Unicode>rente. ad e. hingeg seÿe</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="line_1461833744416_38" custom="readingOrder {index:2;}">
+                <Coords points="1331,4020 2503,3943 2506,3993 1334,4070"/>
+                <Baseline points="1334,4065 2506,3988"/>
+                <TextEquiv>
+                    <Unicode>die sonderbare Pfal-Laterne</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="line_1461833746551_39" custom="readingOrder {index:3;}">
+                <Coords points="1376,4110 2040,4063 2043,4113 1379,4160"/>
+                <Baseline points="1379,4155 2043,4108"/>
+                <TextEquiv>
+                    <Unicode>nicht beÿzuschaffen.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>Ad a: b: c: et d. cum Refe¬
+rente. ad e. hingeg seÿe
+die sonderbare Pfal-Laterne
+nicht beÿzuschaffen.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+    </Page>
+</PcGts>

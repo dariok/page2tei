@@ -1,0 +1,418 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns='http://www.tei-c.org/ns/1.0'>
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title type='main'>Varrentrapp</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>tranScriptorium</publisher>
+			</publicationStmt>
+			<sourceDesc>
+				<bibl><publisher>TRP document creator: Dario.Kampkaspar@oeaw.ac.at</publisher></bibl>
+			</sourceDesc>
+		</fileDesc>
+	</teiHeader>
+	<facsimile xml:id='facs_2'>
+		<surface ulx='0' uly='0' lrx='7387' lry='6250'>
+			<graphic url='1518862020bsb10358355-2.png' width='7387px' height='6250px'/>
+			<zone points='359,88 6250,88 6250,7348 359,7348' rendition='printspace'/>
+			<zone points='590,148 3072,148 3072,317 590,317' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_1_1'>
+				<zone points='591,149 3071,149 3071,316 591,316' rendition='Line' xml:id='facs_2_tl_1'/>
+			</zone>
+			<zone points='606,297 1343,297 1343,423 606,423' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_1_2'>
+				<zone points='607,298 1342,298 1342,422 607,422' rendition='Line' xml:id='facs_2_tl_2'/>
+			</zone>
+			<zone points='470,402 3080,402 3080,953 470,953' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_1_3'>
+				<zone points='471,403 3072,403 3072,576 471,576' rendition='Line' xml:id='facs_2_tl_3'/>
+				<zone points='603,540 2159,540 2159,687 603,687' rendition='Line' xml:id='facs_2_tl_4'/>
+				<zone points='471,655 3079,655 3079,823 471,823' rendition='Line' xml:id='facs_2_tl_5'/>
+				<zone points='475,787 2454,787 2454,952 475,952' rendition='Line' xml:id='facs_2_tl_6'/>
+			</zone>
+			<zone points='471,917 2470,917 2470,1073 471,1073' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_1_4'>
+				<zone points='472,918 2469,918 2469,1072 472,1072' rendition='Line' xml:id='facs_2_tl_7'/>
+			</zone>
+			<zone points='476,1043 2426,1043 2426,1203 476,1203' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_1_5'>
+				<zone points='477,1044 2425,1044 2425,1202 477,1202' rendition='Line' xml:id='facs_2_tl_8'/>
+			</zone>
+			<zone points='465,1167 2431,1167 2431,1322 465,1322' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_1_6'>
+				<zone points='466,1168 2430,1168 2430,1321 466,1321' rendition='Line' xml:id='facs_2_tl_9'/>
+			</zone>
+			<zone points='468,1298 3070,1298 3070,1826 468,1826' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_1_7'>
+				<zone points='475,1299 2252,1299 2252,1452 475,1452' rendition='Line' xml:id='facs_2_tl_10'/>
+				<zone points='469,1412 3059,1412 3059,1590 469,1590' rendition='Line' xml:id='facs_2_tl_11'/>
+				<zone points='598,1540 3069,1540 3069,1707 598,1707' rendition='Line' xml:id='facs_2_tl_12'/>
+				<zone points='598,1678 2824,1678 2824,1825 598,1825' rendition='Line' xml:id='facs_2_tl_13'/>
+			</zone>
+			<zone points='461,1792 3062,1792 3062,2603 461,2603' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_1_8'>
+				<zone points='467,1793 3061,1793 3061,1967 467,1967' rendition='Line' xml:id='facs_2_tl_14'/>
+				<zone points='591,1924 3056,1924 3056,2083 591,2083' rendition='Line' xml:id='facs_2_tl_15'/>
+				<zone points='600,2050 3059,2050 3059,2222 600,2222' rendition='Line' xml:id='facs_2_tl_16'/>
+				<zone points='473,2173 3061,2173 3061,2352 473,2352' rendition='Line' xml:id='facs_2_tl_17'/>
+				<zone points='597,2300 2798,2300 2798,2459 597,2459' rendition='Line' xml:id='facs_2_tl_18'/>
+				<zone points='462,2425 3060,2425 3060,2602 462,2602' rendition='Line' xml:id='facs_2_tl_19'/>
+			</zone>
+			<zone points='448,2551 3061,2551 3061,3234 448,3234' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_1_9'>
+				<zone points='592,2552 3059,2552 3059,2735 592,2735' rendition='Line' xml:id='facs_2_tl_20'/>
+				<zone points='589,2684 3057,2684 3057,2852 589,2852' rendition='Line' xml:id='facs_2_tl_21'/>
+				<zone points='585,2811 2672,2811 2672,2968 585,2968' rendition='Line' xml:id='facs_2_tl_22'/>
+				<zone points='449,2926 3060,2926 3060,3106 449,3106' rendition='Line' xml:id='facs_2_tl_23'/>
+				<zone points='638,3056 2871,3056 2871,3233 638,3233' rendition='Line' xml:id='facs_2_tl_24'/>
+			</zone>
+			<zone points='468,3176 3071,3176 3071,3470 468,3470' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_1_10'>
+				<zone points='469,3177 3070,3177 3070,3345 469,3345' rendition='Line' xml:id='facs_2_tl_25'/>
+				<zone points='596,3318 1844,3318 1844,3469 596,3469' rendition='Line' xml:id='facs_2_tl_26'/>
+			</zone>
+			<zone points='459,3433 3068,3433 3068,3842 459,3842' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_1_11'>
+				<zone points='460,3434 3065,3434 3065,3598 460,3598' rendition='Line' xml:id='facs_2_tl_27'/>
+				<zone points='590,3565 3067,3565 3067,3728 590,3728' rendition='Line' xml:id='facs_2_tl_28'/>
+				<zone points='596,3703 1726,3703 1726,3841 596,3841' rendition='Line' xml:id='facs_2_tl_29'/>
+			</zone>
+			<zone points='1342,3834 2127,3834 2127,3967 1342,3967' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_1_12'>
+				<zone points='1343,3835 2126,3835 2126,3966 1343,3966' rendition='Line' xml:id='facs_2_tl_30'/>
+			</zone>
+			<zone points='461,3952 3062,3952 3062,4501 461,4501' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_2_1'>
+				<zone points='462,3953 3061,3953 3061,4136 462,4136' rendition='Line' xml:id='facs_2_tl_31'/>
+				<zone points='599,4094 3054,4094 3054,4274 599,4274' rendition='Line' xml:id='facs_2_tl_32'/>
+				<zone points='600,4220 3041,4220 3041,4388 600,4388' rendition='Line' xml:id='facs_2_tl_33'/>
+				<zone points='596,4346 2304,4346 2304,4500 596,4500' rendition='Line' xml:id='facs_2_tl_34'/>
+			</zone>
+			<zone points='1300,4485 2245,4485 2245,4647 1300,4647' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_2_2'>
+				<zone points='1301,4486 2244,4486 2244,4646 1301,4646' rendition='Line' xml:id='facs_2_tl_35'/>
+			</zone>
+			<zone points='462,4619 3060,4619 3060,5027 462,5027' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_2_3'>
+				<zone points='463,4620 3059,4620 3059,4794 463,4794' rendition='Line' xml:id='facs_2_tl_36'/>
+				<zone points='591,4754 3051,4754 3051,4911 591,4911' rendition='Line' xml:id='facs_2_tl_37'/>
+				<zone points='592,4896 1212,4896 1212,5026 592,5026' rendition='Line' xml:id='facs_2_tl_38'/>
+			</zone>
+			<zone points='1310,5013 2163,5013 2163,5189 1310,5189' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_2_4'>
+				<zone points='1311,5014 2162,5014 2162,5188 1311,5188' rendition='Line' xml:id='facs_2_tl_39'/>
+			</zone>
+			<zone points='459,5166 1146,5166 1146,5297 459,5297' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_2_5'>
+				<zone points='460,5167 1145,5167 1145,5296 460,5296' rendition='Line' xml:id='facs_2_tl_40'/>
+			</zone>
+			<zone points='1536,5298 2029,5298 2029,5432 1536,5432' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_2_6'>
+				<zone points='1537,5299 2028,5299 2028,5431 1537,5431' rendition='Line' xml:id='facs_2_tl_41'/>
+			</zone>
+			<zone points='457,5427 3042,5427 3042,5603 457,5603' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_3_1'>
+				<zone points='458,5428 3041,5428 3041,5602 458,5602' rendition='Line' xml:id='facs_2_tl_42'/>
+			</zone>
+			<zone points='1046,5565 2444,5565 2444,5749 1046,5749' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_3_2'>
+				<zone points='1047,5566 2443,5566 2443,5748 1047,5748' rendition='Line' xml:id='facs_2_tl_43'/>
+			</zone>
+			<zone points='461,5718 3039,5718 3039,5880 461,5880' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_3_3'>
+				<zone points='462,5719 3038,5719 3038,5879 462,5879' rendition='Line' xml:id='facs_2_tl_44'/>
+			</zone>
+			<zone points='586,5849 1171,5849 1171,5983 586,5983' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_3_4'>
+				<zone points='587,5850 1170,5850 1170,5982 587,5982' rendition='Line' xml:id='facs_2_tl_45'/>
+			</zone>
+			<zone points='1517,5974 1948,5974 1948,6119 1517,6119' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_3_5'>
+				<zone points='1518,5975 1947,5975 1947,6118 1518,6118' rendition='Line' xml:id='facs_2_tl_46'/>
+			</zone>
+			<zone points='594,6103 2872,6103 2872,6399 594,6399' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_3_6'>
+				<zone points='595,6104 2871,6104 2871,6286 595,6286' rendition='Line' xml:id='facs_2_tl_47'/>
+				<zone points='1296,6254 2133,6254 2133,6398 1296,6398' rendition='Line' xml:id='facs_2_tl_48'/>
+			</zone>
+			<zone points='448,6358 3039,6358 3039,6909 448,6909' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_3_7'>
+				<zone points='452,6359 3036,6359 3036,6536 452,6536' rendition='Line' xml:id='facs_2_tl_49'/>
+				<zone points='583,6494 3038,6494 3038,6666 583,6666' rendition='Line' xml:id='facs_2_tl_50'/>
+				<zone points='449,6612 3031,6612 3031,6788 449,6788' rendition='Line' xml:id='facs_2_tl_51'/>
+				<zone points='581,6750 2640,6750 2640,6908 581,6908' rendition='Line' xml:id='facs_2_tl_52'/>
+			</zone>
+			<zone points='3235,178 5741,178 5741,354 3235,354' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_4_1'>
+				<zone points='3236,179 5740,179 5740,353 3236,353' rendition='Line' xml:id='facs_2_tl_53'/>
+			</zone>
+			<zone points='3309,309 5074,309 5074,464 3309,464' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_4_2'>
+				<zone points='3310,310 5073,310 5073,463 3310,463' rendition='Line' xml:id='facs_2_tl_54'/>
+			</zone>
+			<zone points='3310,439 5198,439 5198,589 3310,589' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_4_3'>
+				<zone points='3311,440 5197,440 5197,588 3311,588' rendition='Line' xml:id='facs_2_tl_55'/>
+			</zone>
+			<zone points='3304,563 5088,563 5088,713 3304,713' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_4_4'>
+				<zone points='3305,564 5087,564 5087,712 3305,712' rendition='Line' xml:id='facs_2_tl_56'/>
+			</zone>
+			<zone points='3239,688 5535,688 5535,852 3239,852' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_4_5'>
+				<zone points='3240,689 5534,689 5534,851 3240,851' rendition='Line' xml:id='facs_2_tl_57'/>
+			</zone>
+			<zone points='4194,831 4851,831 4851,1001 4194,1001' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_4_6'>
+				<zone points='4195,832 4850,832 4850,1000 4195,1000' rendition='Line' xml:id='facs_2_tl_58'/>
+			</zone>
+			<zone points='3500,967 5594,967 5594,1132 3500,1132' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_4_7'>
+				<zone points='3501,968 5593,968 5593,1131 3501,1131' rendition='Line' xml:id='facs_2_tl_59'/>
+			</zone>
+			<zone points='3249,1089 5845,1089 5845,2508 3249,2508' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_4_8'>
+				<zone points='3250,1090 5836,1090 5836,1266 3250,1266' rendition='Line' xml:id='facs_2_tl_60'/>
+				<zone points='3371,1225 5844,1225 5844,1390 3371,1390' rendition='Line' xml:id='facs_2_tl_61'/>
+				<zone points='3368,1354 5839,1354 5839,1509 3368,1509' rendition='Line' xml:id='facs_2_tl_62'/>
+				<zone points='3369,1476 5837,1476 5837,1635 3369,1635' rendition='Line' xml:id='facs_2_tl_63'/>
+				<zone points='3369,1608 5830,1608 5830,1765 3369,1765' rendition='Line' xml:id='facs_2_tl_64'/>
+				<zone points='3370,1729 5830,1729 5830,1891 3370,1891' rendition='Line' xml:id='facs_2_tl_65'/>
+				<zone points='3366,1855 5829,1855 5829,2024 3366,2024' rendition='Line' xml:id='facs_2_tl_66'/>
+				<zone points='3369,1983 5831,1983 5831,2148 3369,2148' rendition='Line' xml:id='facs_2_tl_67'/>
+				<zone points='3362,2109 5839,2109 5839,2275 3362,2275' rendition='Line' xml:id='facs_2_tl_68'/>
+				<zone points='3370,2228 5836,2228 5836,2387 3370,2387' rendition='Line' xml:id='facs_2_tl_69'/>
+				<zone points='3365,2358 5197,2358 5197,2507 3365,2507' rendition='Line' xml:id='facs_2_tl_70'/>
+			</zone>
+			<zone points='3226,2486 5831,2486 5831,3131 3226,3131' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_4_9'>
+				<zone points='3227,2487 5825,2487 5825,2651 3227,2651' rendition='Line' xml:id='facs_2_tl_71'/>
+				<zone points='3362,2607 5823,2607 5823,2775 3362,2775' rendition='Line' xml:id='facs_2_tl_72'/>
+				<zone points='3357,2740 5830,2740 5830,2900 3357,2900' rendition='Line' xml:id='facs_2_tl_73'/>
+				<zone points='3362,2858 5826,2858 5826,3021 3362,3021' rendition='Line' xml:id='facs_2_tl_74'/>
+				<zone points='3368,2992 4779,2992 4779,3130 3368,3130' rendition='Line' xml:id='facs_2_tl_75'/>
+			</zone>
+			<zone points='3242,3111 5637,3111 5637,3275 3242,3275' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_4_10'>
+				<zone points='3243,3112 5636,3112 5636,3274 3243,3274' rendition='Line' xml:id='facs_2_tl_76'/>
+			</zone>
+			<zone points='3246,3241 5039,3241 5039,3392 3246,3392' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_4_11'>
+				<zone points='3247,3242 5038,3242 5038,3391 3247,3391' rendition='Line' xml:id='facs_2_tl_77'/>
+			</zone>
+			<zone points='3239,3364 5782,3364 5782,3537 3239,3537' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_4_12'>
+				<zone points='3240,3365 5781,3365 5781,3536 3240,3536' rendition='Line' xml:id='facs_2_tl_78'/>
+			</zone>
+			<zone points='3829,3534 5185,3534 5185,3718 3829,3718' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_4_13'>
+				<zone points='3830,3535 5184,3535 5184,3717 3830,3717' rendition='Line' xml:id='facs_2_tl_79'/>
+			</zone>
+			<zone points='3224,3682 5817,3682 5817,4348 3224,4348' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_4_14'>
+				<zone points='3225,3683 5809,3683 5809,3851 3225,3851' rendition='Line' xml:id='facs_2_tl_80'/>
+				<zone points='3353,3812 5809,3812 5809,3978 3353,3978' rendition='Line' xml:id='facs_2_tl_81'/>
+				<zone points='3371,3940 5810,3940 5810,4102 3371,4102' rendition='Line' xml:id='facs_2_tl_82'/>
+				<zone points='3352,4063 5816,4063 5816,4237 3352,4237' rendition='Line' xml:id='facs_2_tl_83'/>
+				<zone points='3356,4194 5035,4194 5035,4347 3356,4347' rendition='Line' xml:id='facs_2_tl_84'/>
+			</zone>
+			<zone points='3222,4318 5815,4318 5815,4970 3222,4970' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_4_15'>
+				<zone points='3223,4319 5802,4319 5802,4497 3223,4497' rendition='Line' xml:id='facs_2_tl_85'/>
+				<zone points='3344,4446 5804,4446 5804,4619 3344,4619' rendition='Line' xml:id='facs_2_tl_86'/>
+				<zone points='3346,4576 5808,4576 5808,4747 3346,4747' rendition='Line' xml:id='facs_2_tl_87'/>
+				<zone points='3357,4699 5814,4699 5814,4875 3357,4875' rendition='Line' xml:id='facs_2_tl_88'/>
+				<zone points='3347,4827 4375,4827 4375,4969 3347,4969' rendition='Line' xml:id='facs_2_tl_89'/>
+			</zone>
+			<zone points='3221,4948 5815,4948 5815,5253 3221,5253' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_4_16'>
+				<zone points='3222,4949 5797,4949 5797,5123 3222,5123' rendition='Line' xml:id='facs_2_tl_90'/>
+				<zone points='3349,5079 5814,5079 5814,5252 3349,5252' rendition='Line' xml:id='facs_2_tl_91'/>
+			</zone>
+			<zone points='3213,5199 5809,5199 5809,6502 3213,6502' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_4_17'>
+				<zone points='3214,5200 5808,5200 5808,5383 3214,5383' rendition='Line' xml:id='facs_2_tl_92'/>
+				<zone points='3346,5330 5801,5330 5801,5490 3346,5490' rendition='Line' xml:id='facs_2_tl_93'/>
+				<zone points='3341,5459 5806,5459 5806,5632 3341,5632' rendition='Line' xml:id='facs_2_tl_94'/>
+				<zone points='3341,5582 5798,5582 5798,5739 3341,5739' rendition='Line' xml:id='facs_2_tl_95'/>
+				<zone points='3336,5710 5791,5710 5791,5891 3336,5891' rendition='Line' xml:id='facs_2_tl_96'/>
+				<zone points='3333,5826 5794,5826 5794,6003 3333,6003' rendition='Line' xml:id='facs_2_tl_97'/>
+				<zone points='3347,5961 5787,5961 5787,6121 3347,6121' rendition='Line' xml:id='facs_2_tl_98'/>
+				<zone points='3340,6091 5806,6091 5806,6245 3340,6245' rendition='Line' xml:id='facs_2_tl_99'/>
+				<zone points='3334,6212 5796,6212 5796,6394 3334,6394' rendition='Line' xml:id='facs_2_tl_100'/>
+				<zone points='3341,6336 5542,6336 5542,6501 3341,6501' rendition='Line' xml:id='facs_2_tl_101'/>
+			</zone>
+			<zone points='3853,6481 5111,6481 5111,6662 3853,6662' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_4_18'>
+				<zone points='3854,6482 5110,6482 5110,6661 3854,6661' rendition='Line' xml:id='facs_2_tl_102'/>
+			</zone>
+			<zone points='3201,6623 5089,6623 5089,6790 3201,6790' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_4_19'>
+				<zone points='3202,6624 5088,6624 5088,6789 3202,6789' rendition='Line' xml:id='facs_2_tl_103'/>
+			</zone>
+			<zone points='5524,6805 5791,6805 5791,6931 5524,6931' rendition='TextRegion' subtype='paragraph' xml:id='facs_2_r_4_20'>
+				<zone points='5525,6806 5790,6806 5790,6930 5525,6930' rendition='Line' xml:id='facs_2_tl_104'/>
+			</zone>
+			<zone points='6228,324 6250,324 6250,1328 6228,1328' rendition='Separator' xml:id='facs_2_r_5'/>
+			<zone points='6216,1504 6250,1504 6250,4312 6216,4312' rendition='Separator' xml:id='facs_2_r_6'/>
+			<zone points='6215,4496 6250,4496 6250,7348 6215,7348' rendition='Separator' xml:id='facs_2_r_7'/>
+		</surface>
+	</facsimile>
+	<text>
+		<body>
+			<pb facs='#facs_2' n='2'/>
+			<p facs='#facs_2_r_1_1'>
+				<lb facs='#facs_2_tl_1' n='N001'/>April -7r;. ward Stern. Creutz-Ordens-Dame
+			</p>
+			<p facs='#facs_2_r_1_2'>
+				<lb facs='#facs_2_tl_2' n='N001'/>14 Sept. -7N.
+			</p>
+			<p facs='#facs_2_r_1_3'>
+				<lb facs='#facs_2_tl_3' n='N001'/>Kinder: i. Josephus Wencesl. Joh. Nepomuccnus,
+				<lb facs='#facs_2_tl_4' n='N002'/>Erb Prmtz,geb.ri Mart. 1728.
+				<lb facs='#facs_2_tl_5' n='N003'/>a.Carol ßorromaeusEgon Maria,geb. 7 May 1729.
+				<lb facs='#facs_2_tl_6' n='N004'/>z Maria Augusta, geb. Id Mart. 17)«.
+			</p>
+			<p facs='#facs_2_r_1_4'>
+				<lb facs='#facs_2_tl_7' n='N001'/>4* Maria Henrica, ged.; 1 Matt- 17 ja*
+			</p>
+			<p facs='#facs_2_r_1_5'>
+				<lb facs='#facs_2_tl_8' n='N001'/>5.Maria Emanuela, geb.2?Dtt. i7IJ*
+			</p>
+			<p facs='#facs_2_r_1_6'>
+				<lb facs='#facs_2_tl_9' n='N001'/>6 Prosper Maria, g(b. 26 Matt. i7JS*
+			</p>
+			<p facs='#facs_2_r_1_7'>
+				<lb facs='#facs_2_tl_10' n='N001'/>7. Maria Theresia, geb* 4 Sept. 17
+				<lb facs='#facs_2_tl_11' n='N002'/>Geschwister: 1.Maria Eleonora Elifabetha, geb. 8
+				<lb facs='#facs_2_tl_12' n='N003'/>Dee. 169). nerni. mit Josephe Wilh. Erd-Truchse-
+				<lb facs='#facs_2_tl_13' n='N004'/>von Walddurq in Drauchburg,im Nov. 172; *
+			</p>
+			<p facs='#facs_2_r_1_8'>
+				<lb facs='#facs_2_tl_14' n='N001'/>1. Maria Augusta,gcb. 7 May 169s. Denn* mit Wen-
+				<lb facs='#facs_2_tl_15' n='N002'/>ceslao Alberto &gt; Graf von Wurden und Freuden«
+				<lb facs='#facs_2_tl_16' n='N003'/>thal, den j Man 171 r Wittwe seit «732- *» Sept.
+				<lb facs='#facs_2_tl_17' n='N004'/>z. Maria Elisabeth, ged. 28 Jebr. 170z. verm. mit
+				<lb facs='#facs_2_tl_18' n='N005'/>Franc. Ernestö. Grafen von Waldstciu 1727-
+				<lb facs='#facs_2_tl_19' n='N006'/>4.Ludov. August.&apos;aliasEgon)Posthumus, geb. 4
+			</p>
+			<p facs='#facs_2_r_1_9'>
+				<lb facs='#facs_2_tl_20' n='N001'/>g&lt;bM7of. Kayserl. Geh. Rath und Odrister eines
+				<lb facs='#facs_2_tl_21' n='N002'/>Regiments des Schwab. Crey es, seit 17;6. im Oet.
+				<lb facs='#facs_2_tl_22' n='N003'/>Reichs-General-Felv-MarschassLiemeitant.
+				<lb facs='#facs_2_tl_23' n='N004'/>Baasen von der ausgcstorbenen ^Zelligenbergi-
+				<lb facs='#facs_2_tl_24' n='N005'/>schen Linie, Fürst Antonii Egoins Töchter.
+			</p>
+			<p facs='#facs_2_r_1_10'>
+				<lb facs='#facs_2_tl_25' n='N001'/>1. Louise, verm. im Man. 1704. mit Carolo, Grasen
+				<lb facs='#facs_2_tl_26' n='N002'/>von Noy, Wittwe 1718.
+			</p>
+			<p facs='#facs_2_r_1_11'>
+				<lb facs='#facs_2_tl_27' n='N001'/>2. Maria Loaisa Mauntia.üerm. mit Johanne ßapti-
+				<lb facs='#facs_2_tl_28' n='N002'/>ftaColbert, Marquis de Seignelay, 10 Jan. 1708.
+				<lb facs='#facs_2_tl_29' n='N003'/>Wittwe 29 Zebr. 171a.
+			</p>
+			<p facs='#facs_2_r_1_12'>
+				<lb facs='#facs_2_tl_30' n='N001'/>Sr. Gallen.
+			</p>
+			<p facs='#facs_2_r_2_1'>
+				<lb facs='#facs_2_tl_31' n='N001'/>Abt: CelestinusGugger von 8taudach, gebürtig von
+				<lb facs='#facs_2_tl_32' n='N002'/>Feldkirch, gewesener Capitular und Superior des
+				<lb facs='#facs_2_tl_33' n='N003'/>Stifftöunv GotlesrHauses St-Gallen, erwählt aj
+				<lb facs='#facs_2_tl_34' n='N004'/>Mart-1740. zum Fürsten und Abt.
+			</p>
+			<p facs='#facs_2_r_2_2'>
+				<lb facs='#facs_2_tl_35' n='N001'/>Gandersheim.
+			</p>
+			<p facs='#facs_2_r_2_3'>
+				<lb facs='#facs_2_tl_36' n='N001'/>Aebtißin: Elifabetha Erneüina Antonia, Prinzeßin
+				<lb facs='#facs_2_tl_37' n='N002'/>von Sachsen-Meiningen, geb. z Dcc. 1681. erw. 2
+				<lb facs='#facs_2_tl_38' n='N003'/>Sept. i7&apos;J.
+			</p>
+			<p facs='#facs_2_r_2_4'>
+				<lb facs='#facs_2_tl_39' n='N001'/>Gengenbach.
+			</p>
+			<p facs='#facs_2_r_2_5'>
+				<lb facs='#facs_2_tl_40' n='N001'/>Abt: Paulus.
+			</p>
+			<p facs='#facs_2_r_2_6'>
+				<lb facs='#facs_2_tl_41' n='N001'/>Genua.
+			</p>
+			<p facs='#facs_2_r_3_1'>
+				<lb facs='#facs_2_tl_42' n='N001'/>Doge: Dominicus Canevaro. erw. 20 Febr. 174».
+			</p>
+			<p facs='#facs_2_r_3_2'>
+				<lb facs='#facs_2_tl_43' n='N001'/>Sr. Georgrr in Wey.
+			</p>
+			<p facs='#facs_2_r_3_3'>
+				<lb facs='#facs_2_tl_44' n='N001'/>Abt: Alphonstis Torelli»geb. 8 Nvv. 1664. erw. »o
+			</p>
+			<p facs='#facs_2_r_3_4'>
+				<lb facs='#facs_2_tl_45' n='N001'/>May 1701.
+			</p>
+			<p facs='#facs_2_r_3_5'>
+				<lb facs='#facs_2_tl_46' n='N001'/>Giech.
+			</p>
+			<p facs='#facs_2_r_3_6'>
+				<lb facs='#facs_2_tl_47' n='N001'/>Llr^eichs Gr.lfi. -LZauß zur Fränkischen
+				<lb facs='#facs_2_tl_48' n='N002'/>Banck gehörig.
+			</p>
+			<p facs='#facs_2_r_3_7'>
+				<lb facs='#facs_2_tl_49' n='N001'/>Graf: Carl Maximilian, regierender Grafvon Giech,
+				<lb facs='#facs_2_tl_50' n='N002'/>Herr zu Lhmnau und Buchau, geb. 17 Sept. 169;.
+				<lb facs='#facs_2_tl_51' n='N003'/>Gut&apos;, Henriette, Graf Albrechts von Wolffstein Toch¬
+				<lb facs='#facs_2_tl_52' n='N004'/>ter, geb. 2 Nov. 1707.verm. 19 Nov. 1727.
+			</p>
+			<p facs='#facs_2_r_4_1'>
+				<lb facs='#facs_2_tl_53' n='N001'/>Kinder: I. Christiart Frid. Carl, geb. 4Jan. t 7*9»
+			</p>
+			<p facs='#facs_2_r_4_2'>
+				<lb facs='#facs_2_tl_54' n='N001'/>2. Carl Ludwig, geb. 24 Apk. &gt;7Z2.
+			</p>
+			<p facs='#facs_2_r_4_3'>
+				<lb facs='#facs_2_tl_55' n='N001'/>z.LarlWilhelm, geb.i; May »7je.
+			</p>
+			<p facs='#facs_2_r_4_4'>
+				<lb facs='#facs_2_tl_56' n='N001'/>4. Carl Heinrich, geb. 9 Oct. 17 J 4*
+			</p>
+			<p facs='#facs_2_r_4_5'>
+				<lb facs='#facs_2_tl_57' n='N001'/>Bruder: Christian Carl, geb. Jo Mart. 1698.
+			</p>
+			<p facs='#facs_2_r_4_6'>
+				<lb facs='#facs_2_tl_58' n='N001'/>Gonzaga.
+			</p>
+			<p facs='#facs_2_r_4_7'>
+				<lb facs='#facs_2_tl_59' n='N001'/>Gonzaga - Tastiglione und Solferino.
+			</p>
+			<p facs='#facs_2_r_4_8'>
+				<lb facs='#facs_2_tl_60' n='N001'/>Fürst: Ludovicus ( Aloysius) Gonzaga, geb. 19.
+				<lb facs='#facs_2_tl_61' n='N002'/>Nov. 1630. Hat sich mit einer &apos;Persohn niedrigen
+				<lb facs='#facs_2_tl_62' n='N003'/>Standes verehliget, mit welcher er etliche Kinder
+				<lb facs='#facs_2_tl_63' n='N004'/>gezeuget, lebt zu Venedig und führt den Titul von
+				<lb facs='#facs_2_tl_64' n='N005'/>dem FurstenthumCastiglione, dessen sein Herr Dat¬
+				<lb facs='#facs_2_tl_65' n='N006'/>ier Ferdinandus n. (weil er in dem Span. Suc¬
+				<lb facs='#facs_2_tl_66' n='N007'/>cession* - Krug die Spanis. und Irantzösts. Par-
+				<lb facs='#facs_2_tl_67' n='N008'/>thie gehalten,) vom Kayser entsetzet worden; Er
+				<lb facs='#facs_2_tl_68' n='N009'/>solle zwar nach Innhalt des Daadischen Friedens
+				<lb facs='#facs_2_tl_69' n='N010'/>in sem väterlich Land restituiret werden: die Exe-
+				<lb facs='#facs_2_tl_70' n='N011'/>cution ist aber biß dato unterblieben.
+			</p>
+			<p facs='#facs_2_r_4_9'>
+				<lb facs='#facs_2_tl_71' n='N001'/>Gebruoere: &gt;. Franciscus, geb. 8. May 1684. Her-
+				<lb facs='#facs_2_tl_72' n='N002'/>tzvg von Solsermo, lebt am Spanis. Hofe ZU Ma-
+				<lb facs='#facs_2_tl_73' n='N003'/>Dru und ist verm. zum »ren mal mit Julia chitte-
+				<lb facs='#facs_2_tl_74' n='N004'/>ria, Fitt stens Carminei Nicolai Caraccioh von
+				<lb facs='#facs_2_tl_75' n='N005'/>Santo ßuono Tochter 1722.
+			</p>
+			<p facs='#facs_2_r_4_10'>
+				<lb facs='#facs_2_tl_76' n='N001'/>Sohn: Philippus Aloysiu*, geb. 19. Der* 1740.
+			</p>
+			<p facs='#facs_2_r_4_11'>
+				<lb facs='#facs_2_tl_77' n='N001'/>a. Almenus, Adl, geb. i.Febr. 5S86.
+			</p>
+			<p facs='#facs_2_r_4_12'>
+				<lb facs='#facs_2_tl_78' n='N001'/>Valters,Bruder: Christiernus,geb. rz Oet.i6;5.
+			</p>
+			<p facs='#facs_2_r_4_13'>
+				<lb facs='#facs_2_tl_79' n='N001'/>Gonzaga--Guafkalla.
+			</p>
+			<p facs='#facs_2_r_4_14'>
+				<lb facs='#facs_2_tl_80' n='N001'/>Hertzog: Josephus Maria» geb. 2v.Apr. 1690. fuc-
+				<lb facs='#facs_2_tl_81' n='N002'/>cedirt fernem HerrnBruder Antonio Ferdinando,
+				<lb facs='#facs_2_tl_82' n='N003'/>ly April, 1729. im Hertzogthum Guastalla, und
+				<lb facs='#facs_2_tl_83' n='N004'/>Sabionetta. wie auch in denen Fürftenthümern
+				<lb facs='#facs_2_tl_84' n='N005'/>ßozzolo, Luzzaria unD Reggioli.
+			</p>
+			<p facs='#facs_2_r_4_15'>
+				<lb facs='#facs_2_tl_85' n='N001'/>Gern. Maria Eleonora, Hertzogs Leopoldi von
+				<lb facs='#facs_2_tl_86' n='N002'/>Hollstein-Wlesinburg Tochter, geb. i8Febr.i7ir.
+				<lb facs='#facs_2_tl_87' n='N003'/>verm. 2-Mart. 17; i- führt, wegen Blödigkeit
+				<lb facs='#facs_2_tl_88' n='N004'/>ihres Herrrr Gemahls, die Administration des Her-
+				<lb facs='#facs_2_tl_89' n='N005'/>tzvgthums Ouastalla.
+			</p>
+			<p facs='#facs_2_r_4_16'>
+				<lb facs='#facs_2_tl_90' n='N001'/>Bruders Wittwe: Theodora» Philippi Lanvgrafen-
+				<lb facs='#facs_2_tl_91' n='N002'/>vvn Heffen-DarmstadtTochttr,verm. 2 JFebr. 1727.
+			</p>
+			<p facs='#facs_2_r_4_17'>
+				<lb facs='#facs_2_tl_92' n='N001'/>Anverwandter: Isidorus de la Cerda, Manrique
+				<lb facs='#facs_2_tl_93' n='N002'/>Sc Gonzaga » Graf Don Paredes . Marchio de
+				<lb facs='#facs_2_tl_94' n='N003'/>laLaguna&amp;c. geb. 15 May 1712. Wtttwer 174).
+				<lb facs='#facs_2_tl_95' n='N004'/>lebt zu Madrit, und ist als Descendent von Ve-
+				<lb facs='#facs_2_tl_96' n='N005'/>(pasiano I. Hertzogen Dptl Guastalla und Fürsten
+				<lb facs='#facs_2_tl_97' n='N006'/>von Molsetta Scc. vermög eines unterm 28 April
+				<lb facs='#facs_2_tl_98' n='N007'/>1620, voll Ferdinando II. Hertzog zu Guastalla
+				<lb facs='#facs_2_tl_99' n='N008'/>errichteten und vom Kayser Ferdinando u. con-
+				<lb facs='#facs_2_tl_100' n='N009'/>firmirten Instrumenti Primogenitura; der eintzi-
+				<lb facs='#facs_2_tl_101' n='N010'/>ge Succesibr in dem Hertzogthum Guastalla.
+			</p>
+			<p facs='#facs_2_r_4_18'>
+				<lb facs='#facs_2_tl_102' n='N001'/>Gonzaga^Luzzara.
+			</p>
+			<p facs='#facs_2_r_4_19'>
+				<lb facs='#facs_2_tl_103' n='N001'/>Fürst: Lasilius, ged. 26 Sept* 17&quot;&apos;
+			</p>
+			<p facs='#facs_2_r_4_20'>
+				<lb facs='#facs_2_tl_104' n='N001'/>Sem.
+			</p>
+		</body>
+	</text>
+</TEI>
