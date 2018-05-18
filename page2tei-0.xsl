@@ -302,12 +302,6 @@
         <xd:desc>Starting milestones for (possibly nested) elements</xd:desc>
     </xd:doc>
     <xsl:template match="local:m[@pos='s']">
-        <xsl:variable name="type">
-            <xsl:choose>
-                <xsl:when test="@type='textStyle'">hi</xsl:when>
-                <xsl:otherwise><xsl:value-of select="@type"/></xsl:otherwise>
-            </xsl:choose>
-        </xsl:variable>
         <xsl:variable name="o" select="@o"/>
         
         <xsl:variable name="elem">
@@ -317,28 +311,51 @@
             </local:t>
         </xsl:variable>
         
-        <xsl:element name="{$type}">
-            <xsl:if test="$type='supplied'">
-                <xsl:attribute name="reason" />
-            </xsl:if>
-            <xsl:if test="$type='hi'">
-                <xsl:attribute name="rend" select="wdb:substring-before-if-ends(substring-after(substring-after(@o, 'length'), ';'), '}')"/>
-            </xsl:if>
-            
-            <xsl:choose>
-                <xsl:when test="$elem//local:m">
-                    <xsl:apply-templates select="$elem/local:t/text()[not(preceding-sibling::local:m)]" />
-                    <xsl:apply-templates select="$elem/local:t/local:m[@pos='s']
-                        [not(preceding-sibling::local:m[1][@pos='s'])]" />
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:sequence select="$elem/local:t/node()" />
-                </xsl:otherwise>
-            </xsl:choose>
-        </xsl:element>
+        <xsl:choose>
+            <xsl:when test="@type = 'textStyle'">
+                <hi rend="{wdb:substring-before-if-ends(substring-after(substring-after(@o, 'length'), ';'), '}')}">
+                    <xsl:call-template name="elem">
+                        <xsl:with-param name="elem" select="$elem" />
+                    </xsl:call-template>
+                </hi>
+            </xsl:when>
+            <xsl:when test="@type = 'supplied'">
+                <supplied reason="">
+                    <xsl:call-template name="elem">
+                        <xsl:with-param name="elem" select="$elem" />
+                    </xsl:call-template>
+                </supplied>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:element name="{@type}">
+                    <xsl:call-template name="elem">
+                        <xsl:with-param name="elem" select="$elem" />
+                    </xsl:call-template>
+                </xsl:element>
+            </xsl:otherwise>
+        </xsl:choose>
+        
         <xsl:apply-templates select="following-sibling::local:m[@pos='e' and @o=$o]/following-sibling::node()[1][self::text()]" />
     </xsl:template>
     
+    <xd:doc>
+        <xd:desc>Process what's between a pair of local:m</xd:desc>
+        <xd:param name="elem"/>
+    </xd:doc>
+    <xsl:template name="elem">
+        <xsl:param name="elem" />
+        
+        <xsl:choose>
+            <xsl:when test="$elem//local:m">
+                <xsl:apply-templates select="$elem/local:t/text()[not(preceding-sibling::local:m)]" />
+                <xsl:apply-templates select="$elem/local:t/local:m[@pos='s']
+                    [not(preceding-sibling::local:m[1][@pos='s'])]" />
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:sequence select="$elem/local:t/node()" />
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
     
     <xd:doc>
         <xd:desc>Leave out possibly unwanted parts</xd:desc>
