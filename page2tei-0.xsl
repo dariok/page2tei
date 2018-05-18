@@ -341,6 +341,17 @@
                     </abbr>
                 </choice>
             </xsl:when>
+            <xsl:when test="@type = 'date'">
+                <date>
+                    <!--<xsl:variable name="year" select=" if(contains($o, 'year')) then format-number(xs:integer(substring-before(substring-after($o, 'year'), ';')), '0000') else '00'"/>
+                    <xsl:variable name="month" select=" if(contains($o, 'month')) then format-number(xs:integer(substring-before(substring-after($o, 'year'), ';')), '00') else '00'"/>
+                    <xsl:variable name="year" select=" if(contains($o, 'day')) then format-number(xs:integer(substring-before(substring-after($o, 'day'), ';')), '00') else '00'"/>
+                    <xsl:variable name="when" select="$year||'-'||$month||'-'||$day" />
+                    <xsl:if test="$when != '0000-00-00">
+                        <xsl:attribute name="when" select="$when" />
+                    </xsl:if>-->
+                </date>
+            </xsl:when>
             <xsl:otherwise>
                 <xsl:element name="{@type}">
                     <xsl:call-template name="elem">
