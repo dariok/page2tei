@@ -9,7 +9,7 @@
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:map="http://www.w3.org/2005/xpath-functions/map"
     xmlns:local="local"
-    xmlns:wdb="https://github.com/dariok/wdbplus"
+    xmlns:xstring = "https://github.com/dariok/XStringUtils"
     exclude-result-prefixes="#all"
     version="3.0">
     
@@ -21,6 +21,9 @@
             <xd:p>This stylesheet, when applied to mets.xml of the PAGE output, will create (valid) TEI</xd:p>
         </xd:desc>
     </xd:doc>
+    
+    <!-- use extended string functions from https://github.com/dariok/XStringUtils -->
+    <xsl:include href="string-pack.xsl"/>
     
     <xsl:param name="debug" select="false()" />
     
@@ -313,7 +316,7 @@
         
         <xsl:choose>
             <xsl:when test="@type = 'textStyle'">
-                <hi rend="{wdb:substring-before-if-ends(substring-after(substring-after(@o, 'length'), ';'), '}')}">
+                <hi rend="{xstring:substring-before-if-ends(substring-after(substring-after(@o, 'length'), ';'), '}')}">
                     <xsl:call-template name="elem">
                         <xsl:with-param name="elem" select="$elem" />
                     </xsl:call-template>
@@ -328,7 +331,7 @@
             </xsl:when>
             <xsl:when test="@type = 'abbrev'">
                 <choice>
-                    <expan><xsl:value-of select="substring-after($o, 'expansion:')"/></expan>
+                    <expan><xsl:value-of select="xstring:substring-before(substring-after($o, 'expansion:'), ';')"/></expan>
                     <abbr>
                         <xsl:call-template name="elem">
                             <xsl:with-param name="elem" select="$elem" />
@@ -379,27 +382,4 @@
     <xsl:template match="text()">
         <xsl:value-of select="."/>
     </xsl:template>
-    
-    <xd:doc>
-        <xd:desc>
-            <xd:p>Returns the substring before a given test string if it ends with this test string.</xd:p>
-        </xd:desc>
-        <xd:param name="s">
-            <xd:p>The string to be checked</xd:p>
-        </xd:param>
-        <xd:param name="c">
-            <xd:p>The text to be searched for in the string value of <xd:pre>$s</xd:pre>.</xd:p>
-        </xd:param>
-        <xd:return>
-            <xd:p>If <xd:pre>$c</xd:pre> is found within the given string, the portion of <xd:pre>$s</xd:pre> before this
-                string (in final position) is returned; if <xd:pre>$c</xd:pre> cannot be found, <xd:pre>$s</xd:pre>
-                is returned unaltered.</xd:p>
-        </xd:return>
-    </xd:doc>
-    <xsl:function name="wdb:substring-before-if-ends">
-        <xsl:param name="s" as="xs:string"/>
-        <xsl:param name="c" as="xs:string"/>
-        <xsl:variable name="l" select="string-length($s)" />
-        <xsl:value-of select="if(ends-with($s, $c)) then substring($s, 1, $l - 1) else $s"/>
-    </xsl:function>
 </xsl:stylesheet>
