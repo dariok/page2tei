@@ -219,7 +219,9 @@
             </x:context>
             <x:expect label="choice, expan + abbr" xml:space="preserve"><pb facs="#facs_25" n="25"/><p facs="#facs_25_r1">
                 <lb facs="#facs_25_r1l1" n="N001"/>12.</p><p facs="#facs_25_r2">
-                <lb facs="#facs_25_r2l1" n="N001"/><choice><expan/><abbr>H&apos;r</abbr></choice></p></x:expect>
+                <lb facs="#facs_25_r2l1" n="N001"/><choice><expan/><abbr>H&apos;r</abbr></choice>
+                <lb facs="#facs_25_line_1459841092982_10"
+                    n="N002" />getragen werden, die in <choice><expan>den</expan><abbr>d</abbr></choice></p></x:expect>
         </x:scenario>
     </x:scenario>
 </x:description>

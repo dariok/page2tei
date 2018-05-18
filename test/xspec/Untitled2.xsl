@@ -1196,6 +1196,18 @@
                      <xsl:text>H'r</xsl:text>
                   </abbr>
                </choice>
+               <xsl:text>
+                </xsl:text>
+               <lb facs="#facs_25_line_1459841092982_10" n="N002"/>
+               <xsl:text>getragen werden, die in </xsl:text>
+               <choice>
+                  <expan>
+                     <xsl:text>den</xsl:text>
+                  </expan>
+                  <abbr>
+                     <xsl:text>d</xsl:text>
+                  </abbr>
+               </choice>
             </p>
          </xsl:document>
       </xsl:variable>

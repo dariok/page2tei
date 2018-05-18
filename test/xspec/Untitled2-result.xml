@@ -9,7 +9,7 @@
           xmlns:ns2="http://www.w3.org/1999/xlink"
           xmlns:ns3="http://www.loc.gov/METS/"
           stylesheet="file:/home/dario/eclipse-workspace/page2tei/page2tei-0.xsl"
-          date="2018-05-18T12:16:36.595+02:00">
+          date="2018-05-18T13:59:56.29+02:00">
    <x:scenario>
       <x:label>test 1 (WD)</x:label>
       <x:scenario>
@@ -561,6 +561,12 @@
                   <expan/>
                   <abbr>H'r</abbr>
                </choice>
+               <test:ws xmlns:pkg="http://expath.org/ns/pkg">
+            </test:ws>
+               <lb facs="#facs_25_line_1459841092982_10" n="N002"/>getragen werden, die in <choice>
+                  <expan>den</expan>
+                  <abbr>d</abbr>
+               </choice>
             </p>
          </x:result>
          <x:test successful="true">
@@ -578,6 +584,12 @@
                   <choice>
                      <expan/>
                      <abbr>H'r</abbr>
+                  </choice>
+                  <test:ws xmlns:pkg="http://expath.org/ns/pkg">
+                </test:ws>
+                  <lb facs="#facs_25_line_1459841092982_10" n="N002"/>getragen werden, die in <choice>
+                     <expan>den</expan>
+                     <abbr>d</abbr>
                   </choice>
                </p>
             </x:expect>

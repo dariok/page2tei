@@ -36,9 +36,13 @@ NCSR LineSegmentationTool, v0.3.0 (17_3_2015)</Creator>
                     <Unicode>H'r</Unicode>
                 </TextEquiv>
             </TextLine>
-            <TextEquiv>
-                <Unicode>H'r v̄ Kuglern.</Unicode>
-            </TextEquiv>
+            <TextLine id="line_1459841092982_10" custom="readingOrder {index:2;} abbrev {offset:24; length:1;expansion:den;}">
+                <Coords points="1393,1870 2456,1799 2459,1849 1396,1920"/>
+                <Baseline points="1396,1915 2459,1844"/>
+                <TextEquiv>
+                    <Unicode>getragen werden, die in d</Unicode>
+                </TextEquiv>
+            </TextLine>
         </TextRegion>
     </Page>
 </PcGts>
