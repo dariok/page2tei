@@ -74,7 +74,7 @@
     </xd:doc>
     <xsl:template match="mets:file" mode="facsimile">
         <xsl:variable name="file" select="document(mets:FLocat/@xlink:href, /)"/>
-        <xsl:variable name="numCurr" select="position()"/>
+        <xsl:variable name="numCurr" select="@SEQ"/>
         
         <facsimile xml:id="facs_{$numCurr}">
             <xsl:apply-templates select="$file//p:Page" mode="facsimile">
