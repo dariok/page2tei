@@ -479,7 +479,7 @@
             <lb facs="#facs_25_r4l7" n="N007"/>gehäußen, beÿ welchen sich laut 
             <lb facs="#facs_25_r4l8" n="N008"/>Feuervisitatons Protokoll und 
             <lb facs="#facs_25_r4l9" n="N009"/>in folge dessen <choice><expan>erlassenen</expan><abbr>erlassen</abbr></choice> Dekrets
-            <lb facs="#facs_25_r4l10" n="N010"/>vom <date>8<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice> <choice><expan>vorigen\u0020Monats</expan><abbr>v. M.</abbr></choice></date> eine Feüersgefahr
+            <lb facs="#facs_25_r4l10" n="N010"/>vom <date Ratssitzungstermin="-" month="6" day="8" year="1792">8<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice> <choice><expan>vorigen Monats</expan><abbr>v. M.</abbr></choice></date> eine Feüersgefahr
             <lb facs="#facs_25_r4l11" n="N011"/>gezeiget hat, aus dem Hauße
             <lb facs="#facs_25_r4l12" n="N012"/>alsogleich zu entlassen, und 
             <lb facs="#facs_25_r4l13" n="N013"/>das Nöthige vorzukehren. </p><p facs="#facs_25_r5">
@@ -497,7 +497,7 @@
             <lb facs="#facs_25_r8l3" n="N003"/>Bericht über den Zustand der
             <lb facs="#facs_25_r8l4" n="N004"/>deutschen schuhlen dieses <choice><expan/><abbr>Landghts</abbr></choice>
             <lb facs="#facs_25_line_1459841123489_15" n="N005"/>nach geendigten <choice><expan>Sommerkurse</expan><abbr>Som̄erkurse</abbr></choice>
-            <lb facs="#facs_25_line_1459841127226_16" n="N006"/><date>1792</date>, als auch <choice><expan/><abbr>ds</abbr></choice> verzeichnis
+            <lb facs="#facs_25_line_1459841127226_16" n="N006"/><date Ratssitzungstermin="-" year="1792">1792</date>, als auch <choice><expan/><abbr>ds</abbr></choice> verzeichnis
             <lb facs="#facs_25_r8l6" n="N007"/>von der <choice><expan/><abbr>dermalig</abbr></choice> Erfodernis
             <lb facs="#facs_25_r8l7" n="N008"/>und Bedekung der schuhlen nebst
             <lb facs="#facs_25_r8l8" n="N009"/>12 Exemplarien der Einladung 
@@ -505,12 +505,12 @@
             <lb facs="#facs_25_r8l10" n="N011"/>machet die Anzeige, daß <choice><expan/><abbr>den¬</abbr></choice>
             <lb facs="#facs_25_r8l11" n="N012"/><choice><expan/><abbr>selb</abbr></choice> in Folge einer <choice><expan/><abbr>hoh</abbr></choice> <choice><expan/><abbr>Verordn</abbr></choice>
             <lb facs="#facs_25_r8l12" n="N013"/>vom <date>1<choice><expan/><abbr><hi rend="superscript:true;">t</hi></abbr></choice></date> und <choice><expan/><abbr><organization>kreißämt.</organization><organization/></abbr></choice> Inti¬<organization/> Inti¬
-            <lb facs="#facs_25_r8l13" n="N014"/>mats vom <date>20<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice> <choice><expan>vorigen\u0020Monats</expan><abbr>v. M.</abbr></choice></date><choice><expan>vorigen\u0020Monats</expan><abbr/></choice> die be¬
+            <lb facs="#facs_25_r8l13" n="N014"/>mats vom <date Ratssitzungstermin="-" month="6" day="20" year="1792">20<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice> <choice><expan>vorigen Monats</expan><abbr>v. M.</abbr></choice></date><choice><expan>vorigen Monats</expan><abbr/></choice> die be¬
             <lb facs="#facs_25_r8l14" n="N015"/>fremdliche Weisung gegeben
             <lb facs="#facs_25_r8l15" n="N016"/>wurde, die berichte, welche die</p><pb facs="#facs_26" n="26"/><p facs="#facs_26_r1">
             <lb facs="#facs_26_r1l1" n="N001"/>13</p><p facs="#facs_26_r2">
             <lb facs="#facs_26_line_1459843021985_21" n="N001"/><person>Schuhldirektoren</person> in Beziehung
-            <lb facs="#facs_26_line_1459843033921_22" n="N002"/>auf die <choice><expan>abgehaltenen</expan><abbr>abgehalten</abbr></choice> <choice><expan>Prüffungen\u0020</expan><abbr>Prüffung</abbr></choice>, 
+            <lb facs="#facs_26_line_1459843033921_22" n="N002"/>auf die <choice><expan>abgehaltenen</expan><abbr>abgehalten</abbr></choice> <choice><expan>Prüffungen </expan><abbr>Prüffung</abbr></choice>, 
             <lb facs="#facs_26_r2l2" n="N003"/>wie auch auf den Stand der
             <lb facs="#facs_26_r2l3" n="N004"/><choice><expan>Hauptschuhlen</expan><abbr>Hauptschuhl</abbr></choice> einzustellen habe, 
             <lb facs="#facs_26_r2l4" n="N005"/>nach jedes maliger Semestral
@@ -549,7 +549,7 @@
             <lb facs="#facs_26_r4l15" n="N016"/>auch keine stillschweigende be¬</p><pb facs="#facs_27" n="27"/><p facs="#facs_27_r2">
             <lb facs="#facs_27_r2l1" n="N001"/>13.</p><p facs="#facs_27_r1">
             <lb facs="#facs_27_r1l2" n="N001"/>In Publico - Politicis.</p><p facs="#facs_27_r3">
-            <lb facs="#facs_27_r3l1" n="N001"/>Den <date>5<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice> Julius 1792</date>.</p><p facs="#facs_27_r4">
+            <lb facs="#facs_27_r3l1" n="N001"/>Den <date Ratssitzungstermin="-" month="7" day="5" year="1792">5<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice> Julius 1792</date>.</p><p facs="#facs_27_r4">
             <lb facs="#facs_27_r4l1" n="N001"/>fremdliche Ahndung enthalte. 
             <lb facs="#facs_27_r4l2" n="N002"/>Übrigens solle der schulbericht 
             <lb facs="#facs_27_r4l3" n="N003"/>nebst dem verzeichnisse und den 
@@ -572,7 +572,7 @@
             <lb facs="#facs_27_line_1459845050447_48" n="N005"/><choice><expan/><abbr>steuerpflichtg</abbr></choice> zu vermögen.</p><p facs="#facs_27_r10">
             <lb facs="#facs_27_r10l1" n="N001"/><choice><expan>Numero</expan><abbr>N<hi rend="superscript:true;">o</hi></abbr></choice> 779.</p><p facs="#facs_27_r11">
             <lb facs="#facs_27_r11l1" n="N001"/><schriftstueck>Amts Vortrag</schriftstueck> über die unterm 
-            <lb facs="#facs_27_r11l3" n="N002"/><date>27<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice> <choice><expan>vorigen\u0020Monats</expan><abbr>v. M.</abbr></choice></date> gegen 4. Uhr früh nächst
+            <lb facs="#facs_27_r11l3" n="N002"/><date Ratssitzungstermin="-" month="6" day="27" year="1792">27<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice> <choice><expan>vorigen Monats</expan><abbr>v. M.</abbr></choice></date> gegen 4. Uhr früh nächst
             <lb facs="#facs_27_r11l4" n="N003"/><place><choice><expan>sankt</expan><abbr>St.</abbr></choice> Johann im Dorf</place> in der <person><place>Zukri¬</place><place/></person><place/>
             <lb facs="#facs_27_r11l5" n="N004"/><place><person>stianischen</person> Mühle</place> beÿ dem d<person>aselbsti¬</person>
             <lb facs="#facs_27_r11l6" n="N005"/><person>gen Mühlbeständner <choice><expan>Johann</expan><abbr>Joh.</abbr></choice> Murr</person>
@@ -651,7 +651,7 @@
             <lb facs="#facs_31_r1l2" n="N001"/>I</p><p facs="#facs_31_r3">
             <lb facs="#facs_31_r3l1" n="N001"/>n Publico - Politicis.</p><p facs="#facs_31_r4">
             <lb facs="#facs_31_r4l1" n="N001"/>A</p><p facs="#facs_31_r5">
-            <lb facs="#facs_31_r5l1" n="N001"/>ctum <place>Bozen</place> den <date>9<hi rend="superscript:true;">ten</hi> Julius 1792</date>, 
+            <lb facs="#facs_31_r5l1" n="N001"/>ctum <place>Bozen</place> den <date Ratssitzungstermin="+" month="7" day="9" year="1792">9<hi rend="superscript:true;">ten</hi> Julius 1792</date>, 
             <lb facs="#facs_31_r5l2" n="N002"/>Vor Titl <choice><expan/><abbr>H'n</abbr></choice>: <person>Bürgermeister <choice><expan>Joseph</expan><abbr>Jos.</abbr></choice> <choice><expan>von</expan><abbr>v̅</abbr></choice> Remich</person> <choice><expan/><abbr>p.</abbr></choice>
             <lb facs="#facs_31_r5l3" n="N003"/>In Beÿseÿn der <organization>Magistrats</organization> Räthe:
             <lb facs="#facs_31_r5l4" n="N004"/><choice><expan/><abbr>H:</abbr></choice> <person><choice><expan>Oberlieutnant</expan><abbr>Oberlieut.</abbr></choice> Karl <choice><expan>von</expan><abbr>v̅</abbr></choice> Kuglern</person>, 
@@ -660,19 +660,19 @@
             <lb facs="#facs_31_r5l7" n="N007"/>/: <choice><expan/><abbr>H'r</abbr></choice> <person><choice><expan>Doktor</expan><abbr>D<hi rend="superscript:true;">r.</hi></abbr></choice> Andree di Pauli</person> abwesend :/</p><p facs="#facs_31_r6">
             <lb facs="#facs_31_r6l1" n="N001"/>Titl <choice><expan/><abbr>H'r</abbr></choice> <person>Bürgermeister <choice><expan>von</expan><abbr>v̅</abbr></choice> Remich</person>.</p><p facs="#facs_31_r7">
             <lb facs="#facs_31_r7l1" n="N001"/><choice><expan>Numero</expan><abbr>N<hi rend="superscript:true;">o</hi> </abbr></choice>458.</p><p facs="#facs_31_r8">
-            <lb facs="#facs_31_r8l1" n="N001"/><schriftstueck>Protokoll</schriftstueck> über die unterm<date> 5<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice></date><choice><expan>ten</expan><abbr> </abbr></choice>
-            <lb facs="#facs_31_r8l2" n="N002"/><choice><expan>dieses\u0020Monats</expan><abbr><date>d. M.</date></abbr></choice> von <choice><expan>Titel</expan><abbr>Titl</abbr></choice> <person><choice><expan>Herrn</expan><abbr>H'n</abbr></choice> Bürger¬</person>
+            <lb facs="#facs_31_r8l1" n="N001"/><schriftstueck>Protokoll</schriftstueck> über die unterm<date Ratssitzungstermin="-" month="7" day="5" year="1792"> 5<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice></date><choice><expan>ten</expan><abbr> </abbr></choice>
+            <lb facs="#facs_31_r8l2" n="N002"/><choice><expan>dieses Monats</expan><abbr><date Ratssitzungstermin="-" month="7" day="5" year="1792">d. M.</date></abbr></choice> von <choice><expan>Titel</expan><abbr>Titl</abbr></choice> <person><choice><expan>Herrn</expan><abbr>H'n</abbr></choice> Bürger¬</person>
             <lb facs="#facs_31_r8l3" n="N003"/><person>meister</person> <choice><expan>vorgenommene</expan><abbr>vorgenom̅ene</abbr></choice> Revi¬
             <lb facs="#facs_31_r8l4" n="N004"/>sion der <organization>s<choice><expan>städtischen</expan><abbr>tädtisch</abbr></choice> Kassa</organization> in ab¬
-            <lb facs="#facs_31_r8l5" n="N005"/>sicht auf <choice><expan>das</expan><abbr>ds</abbr></choice> <date>zweÿte Solarquartal</date>
-            <lb facs="#facs_31_r8l6" n="N006"/><date>1792.</date></p><p facs="#facs_31_r9">
+            <lb facs="#facs_31_r8l5" n="N005"/>sicht auf <choice><expan>das</expan><abbr>ds</abbr></choice> <date continued="true">zweÿte Solarquartal</date>
+            <lb facs="#facs_31_r8l6" n="N006"/><date Ratssitzungstermin="-" month="0" day="0" year="0" continued="true">1792.</date></p><p facs="#facs_31_r9">
             <lb facs="#facs_31_r9l1" n="N001"/><choice><expan>Conclusum</expan><abbr>Conclusu</abbr></choice>.</p><p facs="#facs_31_r10">
             <lb facs="#facs_31_r10l1" n="N001"/>Ist dem <choice><expan>Herrn</expan><abbr>H:</abbr></choice> <person>Magistrats Kassier</person>
             <lb facs="#facs_31_r10l2" n="N002"/><person><choice><expan>von</expan><abbr>v̅</abbr></choice> Maÿrl</person> zum weiteren Ge¬
             <lb facs="#facs_31_r10l3" n="N003"/>brauche wieder rukzustellen.</p><p facs="#facs_31_r11">
             <lb facs="#facs_31_r11l1" n="N001"/><choice><expan>Numero</expan><abbr>N<hi rend="superscript:true;">o</hi></abbr></choice> 799.</p><p facs="#facs_31_r12">
-            <lb facs="#facs_31_r12l1" n="N001"/><choice><expan>kreisämtliches\u0020</expan><abbr><organization>Kreisämt.</organization></abbr></choice> Reskript <choice><expan>de\u0020dato</expan><abbr>d. d.</abbr></choice> <date>4<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice></date> <choice><expan>protocollo</expan><abbr>præs.</abbr></choice>
-            <lb facs="#facs_31_r12l2" n="N002"/><date>6<hi rend="superscript:true;"><choice><expan>ten</expan><abbr>t</abbr></choice> </hi>Julius</date>, daß die nach dem 
+            <lb facs="#facs_31_r12l1" n="N001"/><choice><expan>kreisämtliches </expan><abbr><organization>Kreisämt.</organization></abbr></choice> Reskript <choice><expan>de dato</expan><abbr>d. d.</abbr></choice> <date Ratssitzungstermin="-" month="7" day="4" year="1792">4<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice></date> <choice><expan>protocollo</expan><abbr>præs.</abbr></choice>
+            <lb facs="#facs_31_r12l2" n="N002"/><date Ratssitzungstermin="-" month="7" day="6" year="1792">6<hi rend="superscript:true;"><choice><expan>ten</expan><abbr>t</abbr></choice> </hi>Julius</date>, daß die nach dem 
             <lb facs="#facs_31_r12l3" n="N003"/>lezthin zu <place>Brauneken</place> abge¬
             <lb facs="#facs_31_r12l4" n="N004"/>haltenen Sonnenwend = Vieh¬
             <lb facs="#facs_31_r12l5" n="N005"/>markte geschöpfte Rindfleischtaxe
@@ -697,7 +697,7 @@
             <lb facs="#facs_32_line_1460022188871_40" n="N004"/><choice><expan>zukommen</expan><abbr>zukom̅en</abbr></choice> haben.</p><p facs="#facs_32_r5">
             <lb facs="#facs_32_r5l1" n="N001"/>Titl <choice><expan>Herr</expan><abbr>H'r</abbr></choice> <person>Bürgermeister <choice><expan>von</expan><abbr>v̅</abbr></choice> Remich</person>.</p><p facs="#facs_32_r6">
             <lb facs="#facs_32_r6l1" n="N001"/><choice><expan>Numero</expan><abbr>N<hi rend="superscript:true;">o</hi></abbr></choice> 797.</p><p facs="#facs_32_r7">
-            <lb facs="#facs_32_r7l1" n="N001"/><person><choice><expan>Magdalena\u0020</expan><abbr>Magd.</abbr></choice> Moserin</person> bittet neüerlich
+            <lb facs="#facs_32_r7l1" n="N001"/><person><choice><expan>Magdalena </expan><abbr>Magd.</abbr></choice> Moserin</person> bittet neüerlich
             <lb facs="#facs_32_r7l2" n="N002"/>in die <organization>Spital</organization>spflege hier <choice><expan/><abbr>auf¬</abbr></choice>
             <lb facs="#facs_32_r7l3" n="N003"/><choice><expan>aufgenommen</expan><abbr>genom̅</abbr></choice> zu werden, <choice><expan>wogegen</expan><abbr>wogeg</abbr></choice>
             <lb facs="#facs_32_r7l4" n="N004"/>selbe ihr weniges <choice><expan/><abbr>Vermög</abbr></choice>
@@ -710,11 +710,11 @@
             <lb facs="#facs_32_r9l4" n="N004"/><person><organization>tel</organization>meister</person> zu seiner Beneh¬
             <lb facs="#facs_32_r9l5" n="N005"/>mung zu <choice><expan>verständigen</expan><abbr>verständig</abbr></choice> <choice><expan>kommet</expan><abbr>kom̅et</abbr></choice>.</p><p facs="#facs_32_r10">
             <lb facs="#facs_32_r10l1" n="N001"/><choice><expan>Numero</expan><abbr>N<hi rend="superscript:true;">o</hi></abbr></choice> 803.</p><p facs="#facs_32_r11">
-            <lb facs="#facs_32_r11l1" n="N001"/><schriftstueck><choice><expan/><abbr><organization>Kreisämt.</organization><organization/></abbr></choice> Intimatum<organization/> Intimatum</schriftstueck> <choice><expan>de\u0020dato</expan><abbr>d. d.</abbr></choice> <date>30<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice> </date>
-            <lb facs="#facs_32_r11l2" n="N002"/><date>Junius</date>, <choice><expan>protocollo</expan><abbr>præs.</abbr></choice> <date>7<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice> Julius</date>, es
+            <lb facs="#facs_32_r11l1" n="N001"/><schriftstueck><choice><expan/><abbr><organization>Kreisämt.</organization><organization/></abbr></choice> Intimatum<organization/> Intimatum</schriftstueck> <choice><expan>de dato</expan><abbr>d. d.</abbr></choice> <date Ratssitzungstermin="-" month="6" day="30" year="1792" continued="true">30<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice> </date>
+            <lb facs="#facs_32_r11l2" n="N002"/><date Ratssitzungstermin="-" month="6" day="30" year="1792" continued="true">Junius</date>, <choice><expan>protocollo</expan><abbr>præs.</abbr></choice> <date Ratssitzungstermin="-" month="7" day="7" year="1792">7<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice> Julius</date>, es
             <lb facs="#facs_32_r11l3" n="N003"/>seÿe über das von diesem
-            <lb facs="#facs_32_r11l4" n="N004"/><organization>Stadtmagistrat</organization> unterm <date>7<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice></date>
-            <lb facs="#facs_32_r11l5" n="N005"/><date>Maÿ</date> abhin eingereichte und
+            <lb facs="#facs_32_r11l4" n="N004"/><organization>Stadtmagistrat</organization> unterm <date Ratssitzungstermin="-" month="5" day="7" year="1792" continued="true">7<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice></date>
+            <lb facs="#facs_32_r11l5" n="N005"/><date Ratssitzungstermin="-" month="7" day="5" year="1792" continued="true">Maÿ</date> abhin eingereichte und
             <lb facs="#facs_32_r11l6" n="N006"/>von der <organization>gubernierenden Land¬</organization>
             <lb facs="#facs_32_r11l7" n="N007"/><organization>desstelle</organization> an die höchste <organization>Hof¬</organization>
             <lb facs="#facs_32_r11l8" n="N008"/><organization>stelle</organization> unterstützte Gesuch, 
@@ -722,7 +722,7 @@
             <lb facs="#facs_32_r11l10" n="N010"/><choice><expan>Repräsentanten</expan><abbr>sentant</abbr></choice> die gebührende Achtung
             <lb facs="#facs_32_r11l11" n="N011"/>verschaffet werden möchte, ver¬
             <lb facs="#facs_32_line_1460022224641_41" n="N012"/>mittelst einer <choice><expan>höchsten</expan><abbr>höchst</abbr></choice> <organization>Hof</organization>ver¬
-            <lb facs="#facs_32_line_1460022226622_42" n="N013"/>ordnung vom <date>8<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice> <choice><expan>vorigen\u0020Monats</expan><abbr>v. M.</abbr></choice></date> er¬
+            <lb facs="#facs_32_line_1460022226622_42" n="N013"/>ordnung vom <date Ratssitzungstermin="-" month="6" day="8" year="1792">8<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice> <choice><expan>vorigen Monats</expan><abbr>v. M.</abbr></choice></date> er¬
             <lb facs="#facs_32_r11l14" n="N014"/>wiederet worden, daß die
             <lb facs="#facs_32_r11l15" n="N015"/>Repräsentanten lediglich in
             <lb facs="#facs_32_r11l16" n="N016"/>jenen Gegenständen, worüber
@@ -746,7 +746,7 @@
             <lb facs="#facs_33_r2l13" n="N013"/>an <choice><expan>das</expan><abbr>ds</abbr></choice> <organization>Appellazionsgericht</organization> gehet, 
             <lb facs="#facs_33_r2l14" n="N014"/>und die Repräsentanten gar
             <lb facs="#facs_33_r2l15" n="N015"/>keine Instanz <choice><expan/><abbr>ausmach</abbr></choice>, so seÿ
-            <lb facs="#facs_33_r2l16" n="N016"/><choice><expan>ihnen</expan><abbr>ihn</abbr></choice> die Annahme der <choice><expan>Vorstellung\u0020</expan><abbr>Vorstellg</abbr></choice>
+            <lb facs="#facs_33_r2l16" n="N016"/><choice><expan>ihnen</expan><abbr>ihn</abbr></choice> die Annahme der <choice><expan>Vorstellung </expan><abbr>Vorstellg</abbr></choice>
             <lb facs="#facs_33_r2l17" n="N017"/>von den Hafnermeistern eben
             <lb facs="#facs_33_r2l18" n="N018"/>so, wie die sich gegen <choice><expan>den</expan><abbr>dn</abbr></choice> vor¬
             <lb facs="#facs_33_r2l19" n="N019"/>gesetzen <organization>Magistrat</organization> erlaubte
@@ -812,7 +812,7 @@
             <lb facs="#facs_34_r13l13" n="N013"/>Höhe des Behältnisses aufbe¬</p><pb facs="#facs_35" n="35"/><p facs="#facs_35_r1">
             <lb facs="#facs_35_r1l1" n="N001"/>17.</p><p facs="#facs_35_r2">
             <lb facs="#facs_35_r2l1" n="N001"/>In Publico - Politicis.</p><p facs="#facs_35_r3">
-            <lb facs="#facs_35_r3l1" n="N001"/>Den<date> 9<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice> Julius 1792.</date></p><p facs="#facs_35_r4">
+            <lb facs="#facs_35_r3l1" n="N001"/>Den<date Ratssitzungstermin="-" month="7" day="9" year="1792"> 9<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice> Julius 1792.</date></p><p facs="#facs_35_r4">
             <lb facs="#facs_35_r4l1" n="N001"/>wahrten Feuerhaken und leder¬
             <lb facs="#facs_35_r4l2" n="N002"/>nen Feuerkübel, wie auch c) 
             <lb facs="#facs_35_r4l3" n="N003"/>einer <choice><expan>dergleichen</expan><abbr>dergleich</abbr></choice> Leiter zur Ab¬

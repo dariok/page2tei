@@ -1114,6 +1114,7 @@
       <x:scenario>
          <x:label>weitere Elemente</x:label>
          <xsl:call-template name="x:d5e525"/>
+         <xsl:call-template name="x:d5e575"/>
       </x:scenario>
    </xsl:template>
    <xsl:template name="x:d5e525">
@@ -1245,6 +1246,118 @@
       </xsl:if>
       <x:test successful="{$impl:successful}">
          <x:label>choice, expan + abbr</x:label>
+         <xsl:call-template name="test:report-value">
+            <xsl:with-param name="value" select="$impl:expected"/>
+            <xsl:with-param name="wrapper-name" select="'x:expect'"/>
+            <xsl:with-param name="wrapper-ns" select="'http://www.jenitennison.com/xslt/xspec'"/>
+         </xsl:call-template>
+      </x:test>
+   </xsl:template>
+   <xsl:template name="x:d5e575">
+      <xsl:message>..date</xsl:message>
+      <x:scenario>
+         <x:label>date</x:label>
+         <x:context mode="text">
+            <ns3:fileSec>
+               <ns3:fileGrp ID="MASTER">
+                  <ns3:fileGrp ID="PAGEXML">
+                     <ns3:file ID="PAGEXML_25"
+                               SEQ="25"
+                               MIMETYPE="application/xml"
+                               CREATED="2018-05-17T14:37:25.000+02:00"
+                               CHECKSUM=""
+                               CHECKSUMTYPE="MD5">
+                        <ns3:FLocat LOCTYPE="OTHER"
+                                    OTHERLOCTYPE="FILE"
+                                    ns2:type="simple"
+                                    ns2:href="page/HS_115_25_object_128293-2.xml"/>
+                     </ns3:file>
+                  </ns3:fileGrp>
+               </ns3:fileGrp>
+            </ns3:fileSec>
+         </x:context>
+         <xsl:variable name="x:result" as="item()*">
+            <xsl:variable name="impl:context-doc" as="document-node()">
+               <xsl:document>
+                  <ns3:fileSec>
+                     <ns3:fileGrp ID="MASTER">
+                        <ns3:fileGrp ID="PAGEXML">
+                           <ns3:file ID="PAGEXML_25"
+                                     SEQ="25"
+                                     MIMETYPE="application/xml"
+                                     CREATED="2018-05-17T14:37:25.000+02:00"
+                                     CHECKSUM=""
+                                     CHECKSUMTYPE="MD5">
+                              <ns3:FLocat LOCTYPE="OTHER"
+                                          OTHERLOCTYPE="FILE"
+                                          ns2:type="simple"
+                                          ns2:href="page/HS_115_25_object_128293-2.xml"/>
+                           </ns3:file>
+                        </ns3:fileGrp>
+                     </ns3:fileGrp>
+                  </ns3:fileSec>
+               </xsl:document>
+            </xsl:variable>
+            <xsl:variable name="impl:context" select="$impl:context-doc/node()"/>
+            <xsl:apply-templates select="$impl:context" mode="text"/>
+         </xsl:variable>
+         <xsl:call-template name="test:report-value">
+            <xsl:with-param name="value" select="$x:result"/>
+            <xsl:with-param name="wrapper-name" select="'x:result'"/>
+            <xsl:with-param name="wrapper-ns" select="'http://www.jenitennison.com/xslt/xspec'"/>
+         </xsl:call-template>
+         <xsl:call-template name="x:d5e582">
+            <xsl:with-param name="x:result" select="$x:result"/>
+         </xsl:call-template>
+      </x:scenario>
+   </xsl:template>
+   <xsl:template name="x:d5e582">
+      <xsl:param name="x:result" required="yes"/>
+      <xsl:message>date mit Attributen</xsl:message>
+      <xsl:variable name="impl:expected-doc" as="document-node()">
+         <xsl:document>
+            <pb facs="#facs_25" n="25"/>
+            <p facs="#facs_25_r4">
+               <xsl:text>
+                    </xsl:text>
+               <lb facs="#facs_25_r4l10" n="N010"/>
+               <xsl:text>vom </xsl:text>
+               <date Ratssitzungstermin="-" month="6" year="1792" day="8">
+                  <xsl:text>8</xsl:text>
+                  <choice>
+                     <expan>
+                        <xsl:text>ten</xsl:text>
+                     </expan>
+                     <abbr>
+                        <hi rend="superscript:true;">
+                           <xsl:text>t</xsl:text>
+                        </hi>
+                     </abbr>
+                  </choice>
+                  <xsl:text>
+                    </xsl:text>
+                  <choice>
+                     <expan>
+                        <xsl:text>vorigen Monats</xsl:text>
+                     </expan>
+                     <abbr>
+                        <xsl:text>v. M.</xsl:text>
+                     </abbr>
+                  </choice>
+               </date>
+               <xsl:text> eine Feüersgefahr</xsl:text>
+            </p>
+         </xsl:document>
+      </xsl:variable>
+      <xsl:variable name="impl:expected" select="$impl:expected-doc/node()"/>
+      <xsl:variable name="impl:successful"
+                    as="xs:boolean"
+                    select="test:deep-equal($impl:expected, $x:result, 3)"/>
+      <xsl:if test="not($impl:successful)">
+         <xsl:message>      FAILED</xsl:message>
+      </xsl:if>
+      <x:test successful="{$impl:successful}">
+         <x:label>date mit Attributen</x:label>
          <xsl:call-template name="test:report-value">
             <xsl:with-param name="value" select="$impl:expected"/>
             <xsl:with-param name="wrapper-name" select="'x:expect'"/>

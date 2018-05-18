@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>TRP
+NCSR LineSegmentationTool, v0.3.0 (17_3_2015)</Creator>
+        <Created>2016-03-01T13:53:22.003+01:00</Created>
+        <LastChange>2018-02-22T16:07:52.268+01:00</LastChange>
+        <TranskribusMetadata docId="4379" pageId="113410" pageNr="25" tsid="2366048" status="FINAL" userId="3667" imgUrl="https://dbis-thure.uibk.ac.at/f/Get?id=XMBXVKXNVTBKPZNNDSGFHEMS&amp;fileType=view" xmlUrl="https://dbis-thure.uibk.ac.at/f/Get?id=NWKXIEALOIZDXGYBLGJNQVZR" imageId="109098"/>
+    </Metadata>
+    <Page imageFilename="HS_115_25_object_128293.jpg" imageWidth="2740" imageHeight="4447">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1526560645228" caption="Regions reading order">
+                <RegionRefIndexed index="3" regionRef="r4"/>
+            </OrderedGroup>
+        </ReadingOrder><TextRegion type="paragraph" id="r4" custom="readingOrder {index:3;}">
+            <Coords points="177,561 1461,561 1419,1369 1277,1803 177,1865"/>
+            <TextLine id="r4l10" custom="readingOrder {index:9;} date {offset:4; length:8;year:1792; day:8; month:6; Ratssitzungstermin:-;} abbrev {offset:5; length:1;expansion:ten;} textStyle {offset:5; length:1;superscript:true;} abbrev {offset:7; length:5;expansion:vorigen\u0020Monats;}">
+                <Coords points="1322,1373 1273,1375 1135,1374 1117,1405 1031,1381 972,1408 965,1402 965,1400 967,1399 967,1397 966,1392 630,1411 611,1431 568,1397 413,1410 410,1406 311,1435 211,1423 175,1474 175,1484 176,1492 193,1507 468,1510 921,1480 927,1486 927,1492 929,1494 929,1497 931,1499 1105,1480 1165,1502 1179,1483 1190,1480 1200,1481 1227,1497 1257,1477 1301,1491 1355,1415 1355,1410 1330,1374 1323,1373"/>
+                <Baseline points="175,1496 371,1481 567,1471 763,1458 959,1448 1355,1427"/>
+                <TextEquiv>
+                    <Unicode>vom 8t v. M. eine Feüersgefahr</Unicode>
+                </TextEquiv>
+            </TextLine>
+        </TextRegion>
+    </Page>
+</PcGts>

@@ -308,6 +308,16 @@
     </xd:doc>
     <xsl:template match="local:m[@pos='s']">
         <xsl:variable name="o" select="@o"/>
+        <xsl:variable name="custom" as="map(*)">
+            <xsl:map>
+                <xsl:variable name="t" select="tokenize(@o, ';')"/>
+                <xsl:if test="count($t) &gt; 1">
+                    <xsl:for-each select="$t[. != '']">
+                        <xsl:map-entry key="normalize-space(substring-before(., ':'))" select="normalize-space(substring-after(., ':'))" />
+                    </xsl:for-each>
+                </xsl:if>
+            </xsl:map>
+        </xsl:variable>
         
         <xsl:variable name="elem">
             <local:t>
@@ -333,7 +343,7 @@
             </xsl:when>
             <xsl:when test="@type = 'abbrev'">
                 <choice>
-                    <expan><xsl:value-of select="replace(xstring:substring-before(substring-after($o, 'expansion:'), ';'), '\\u0020', ' ')"/></expan>
+                    <expan><xsl:value-of select="replace(map:get($custom, 'expansion'), '\\u0020', ' ')"/></expan>
                     <abbr>
                         <xsl:call-template name="elem">
                             <xsl:with-param name="elem" select="$elem" />
@@ -343,13 +353,21 @@
             </xsl:when>
             <xsl:when test="@type = 'date'">
                 <date>
-                    <!--<xsl:variable name="year" select=" if(contains($o, 'year')) then format-number(xs:integer(substring-before(substring-after($o, 'year'), ';')), '0000') else '00'"/>
-                    <xsl:variable name="month" select=" if(contains($o, 'month')) then format-number(xs:integer(substring-before(substring-after($o, 'year'), ';')), '00') else '00'"/>
-                    <xsl:variable name="year" select=" if(contains($o, 'day')) then format-number(xs:integer(substring-before(substring-after($o, 'day'), ';')), '00') else '00'"/>
+                    <!--<xsl:variable name="year" select="if(map:keys($custom) = 'year') then format-number(xs:integer(map:get($custom, 'year')), '0000') else '00'"/>
+                    <xsl:variable name="month" select=" if(map:keys($custom) = 'month') then format-number(xs:integer(map:get($custom, 'month')), '00') else '00'"/>
+                    <xsl:variable name="day" select=" if(map:keys($custom) = 'day') then format-number(xs:integer(map:get($custom, 'day')), '00') else '00'"/>
                     <xsl:variable name="when" select="$year||'-'||$month||'-'||$day" />
-                    <xsl:if test="$when != '0000-00-00">
+                    <xsl:if test="$when != '0000-00-00'">
                         <xsl:attribute name="when" select="$when" />
                     </xsl:if>-->
+                    <xsl:for-each select="map:keys($custom)">
+                        <xsl:if test=". != 'length' and . != ''">
+                            <xsl:attribute name="{.}" select="map:get($custom, .)" /> 
+                        </xsl:if>
+                    </xsl:for-each>
+                    <xsl:call-template name="elem">
+                        <xsl:with-param name="elem" select="$elem" />
+                    </xsl:call-template>
                 </date>
             </xsl:when>
             <xsl:otherwise>

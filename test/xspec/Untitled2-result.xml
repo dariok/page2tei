@@ -9,7 +9,7 @@
           xmlns:ns2="http://www.w3.org/1999/xlink"
           xmlns:ns3="http://www.loc.gov/METS/"
           stylesheet="file:/home/dario/eclipse-workspace/page2tei/page2tei-0.xsl"
-          date="2018-05-18T14:33:08.513+02:00">
+          date="2018-05-18T16:07:51.075+02:00">
    <x:scenario>
       <x:label>test 1 (WD)</x:label>
       <x:scenario>
@@ -617,6 +617,68 @@
                      <expan>vorigen Monats</expan>
                      <abbr>v. M.</abbr>
                   </choice> eine Feüersgefahr</p>
+            </x:expect>
+         </x:test>
+      </x:scenario>
+      <x:scenario>
+         <x:label>date</x:label>
+         <x:context mode="text">
+            <ns3:fileSec>
+               <ns3:fileGrp ID="MASTER">
+                  <ns3:fileGrp ID="PAGEXML">
+                     <ns3:file ID="PAGEXML_25"
+                               SEQ="25"
+                               MIMETYPE="application/xml"
+                               CREATED="2018-05-17T14:37:25.000+02:00"
+                               CHECKSUM=""
+                               CHECKSUMTYPE="MD5">
+                        <ns3:FLocat LOCTYPE="OTHER"
+                                    OTHERLOCTYPE="FILE"
+                                    ns2:type="simple"
+                                    ns2:href="page/HS_115_25_object_128293-2.xml"/>
+                     </ns3:file>
+                  </ns3:fileGrp>
+               </ns3:fileGrp>
+            </ns3:fileSec>
+         </x:context>
+         <x:result>
+            <pb facs="#facs_25" n="25"/>
+            <p facs="#facs_25_r4">
+               <test:ws xmlns:pkg="http://expath.org/ns/pkg">
+            </test:ws>
+               <lb facs="#facs_25_r4l10" n="N010"/>vom <date Ratssitzungstermin="-" month="6" day="8" year="1792">8<choice>
+                     <expan>ten</expan>
+                     <abbr>
+                        <hi rend="superscript:true;">t</hi>
+                     </abbr>
+                  </choice>
+                  <test:ws xmlns:pkg="http://expath.org/ns/pkg"> </test:ws>
+                  <choice>
+                     <expan>vorigen Monats</expan>
+                     <abbr>v. M.</abbr>
+                  </choice>
+               </date> eine Feüersgefahr</p>
+         </x:result>
+         <x:test successful="true">
+            <x:label>date mit Attributen</x:label>
+            <x:expect>
+               <pb facs="#facs_25" n="25"/>
+               <p facs="#facs_25_r4">
+                  <test:ws xmlns:pkg="http://expath.org/ns/pkg">
+                    </test:ws>
+                  <lb facs="#facs_25_r4l10" n="N010"/>vom <date Ratssitzungstermin="-" month="6" year="1792" day="8">8<choice>
+                        <expan>ten</expan>
+                        <abbr>
+                           <hi rend="superscript:true;">t</hi>
+                        </abbr>
+                     </choice>
+                     <test:ws xmlns:pkg="http://expath.org/ns/pkg">
+                    </test:ws>
+                     <choice>
+                        <expan>vorigen Monats</expan>
+                        <abbr>v. M.</abbr>
+                     </choice>
+                  </date> eine Feüersgefahr</p>
             </x:expect>
          </x:test>
       </x:scenario>

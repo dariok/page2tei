@@ -225,5 +225,23 @@
                 <lb facs="#facs_25_r4l10" n="N010"/>vom 8<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice>
                     <choice><expan>vorigen Monats</expan><abbr>v. M.</abbr></choice> eine Feüersgefahr</p></x:expect>
         </x:scenario>
+        <x:scenario label="date">
+            <x:context mode="text">
+                <ns3:fileSec>
+                    <ns3:fileGrp ID="MASTER">
+                        <ns3:fileGrp ID="PAGEXML">
+                            <ns3:file ID="PAGEXML_25" SEQ="25" MIMETYPE="application/xml" CREATED="2018-05-17T14:37:25.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
+                                <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="page/HS_115_25_object_128293-2.xml"/>
+                            </ns3:file>
+                        </ns3:fileGrp>
+                    </ns3:fileGrp>
+                </ns3:fileSec>
+            </x:context>
+            <!-- TODO adjust to @when pending a decision -->
+            <x:expect label="date mit Attributen" xml:space="preserve"><pb facs="#facs_25" n="25"/><p facs="#facs_25_r4">
+                    <lb facs="#facs_25_r4l10" n="N010"/>vom <date
+                    Ratssitzungstermin="-" month="6" year="1792" day="8">8<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice>
+                    <choice><expan>vorigen Monats</expan><abbr>v. M.</abbr></choice></date> eine Feüersgefahr</p></x:expect>
+        </x:scenario>
     </x:scenario>
 </x:description>
