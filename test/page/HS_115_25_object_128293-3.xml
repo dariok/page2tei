@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>TRP
+NCSR LineSegmentationTool, v0.3.0 (17_3_2015)</Creator>
+        <Created>2016-03-01T13:53:22.003+01:00</Created>
+        <LastChange>2018-02-22T16:07:52.268+01:00</LastChange>
+        <TranskribusMetadata docId="4379" pageId="113410" pageNr="25" tsid="2366048" status="FINAL" userId="3667" imgUrl="https://dbis-thure.uibk.ac.at/f/Get?id=XMBXVKXNVTBKPZNNDSGFHEMS&amp;fileType=view" xmlUrl="https://dbis-thure.uibk.ac.at/f/Get?id=NWKXIEALOIZDXGYBLGJNQVZR" imageId="109098"/>
+    </Metadata>
+    <Page imageFilename="HS_115_25_object_128293.jpg" imageWidth="2740" imageHeight="4447">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1526560645228" caption="Regions reading order">
+                <RegionRefIndexed index="1" regionRef="r2"/>
+                <RegionRefIndexed index="2" regionRef="r3"/>
+                <RegionRefIndexed index="3" regionRef="r4"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion type="heading" id="r2" custom="readingOrder {index:1;}">
+            <Coords points="589,318 1220,318 1220,433 589,433"/>
+            <TextLine id="r2l1" custom="readingOrder {index:0;} abbrev {offset:0; length:3;} person {offset:4; length:11;} abbrev {offset:4; length:2;expansion:Herr;}">
+                <Coords points="757,316 633,319 591,352 590,359 590,432 595,434 643,434 666,434 938,434 1129,422 1144,398 1144,394 861,316 758,316"/>
+                <Baseline points="594,410 687,414 782,430 874,425 966,426 1152,416"/>
+                <TextEquiv>
+                    <Unicode>H'r v̄ Kuglern.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>H'r v̄ Kuglern.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="heading" id="r3" custom="readingOrder {index:2;}">
+            <Coords points="749,433 1189,433 1189,554 749,554"/>
+            <TextLine id="r3l1" custom="readingOrder {index:0;} abbrev {offset:0; length:2;expansion:Numero;} textStyle {offset:1; length:1;superscript:true;}">
+                <Coords points="922,431 873,435 828,448 794,497 790,524 790,529 804,538 994,536 1038,532 1090,457 1090,450 1089,443 1082,435 923,431"/>
+                <Baseline points="775,525 1079,528"/>
+                <TextEquiv>
+                    <Unicode>No 786.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>No 786.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="paragraph" id="r4" custom="readingOrder {index:3;}">
+            <Coords points="177,561 1461,561 1419,1369 1277,1803 177,1865"/>
+            <TextLine id="r4l1" custom="readingOrder {index:0;} organization {offset:19; length:14; continued:true;}">
+                <Coords points="202,559 175,609 175,619 178,628 205,660 385,681 425,681 508,646 833,640 888,672 1266,631 1272,628 1369,642 1413,601 1423,561 1419,559 1288,559 1222,559 1204,559 1030,559 218,559 203,559"/>
+                <Baseline points="175,636 382,633 590,624 797,621 1005,618 1423,596"/>
+                <TextEquiv>
+                    <Unicode>Remisschreiben des Frauenklosters</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r4l2" custom="readingOrder {index:1;} organization {offset:0; length:23; continued:true;} abbrev {offset:0; length:3;expansion:Sankt;} place {offset:17; length:6;}">
+                <Coords points="1267,632 887,673 846,642 505,648 425,682 385,682 236,659 184,697 183,709 193,749 315,770 402,754 404,761 551,745 579,773 654,740 663,749 661,763 659,765 659,768 656,778 660,780 713,743 893,772 901,764 902,765 902,768 905,770 950,739 1015,736 1351,714 1374,677 1268,632"/>
+                <Baseline points="183,738 381,726 579,709 777,710 975,707 1374,685"/>
+                <TextEquiv>
+                    <Unicode>St. Elisabeth zu Brixen mit dem </Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r4l3" custom="readingOrder {index:2;} abbrev {offset:0; length:6;expansion:Ansuchen;} abbrev {offset:24; length:7;expansion:alldaigen;}">
+                <Coords points="1211,736 1013,737 951,740 905,771 902,768 902,765 900,765 895,772 716,744 661,781 655,778 659,766 660,765 660,761 662,751 661,747 654,741 589,774 556,747 407,765 402,756 350,764 216,767 175,814 175,825 179,839 282,886 288,885 305,857 382,879 534,843 561,872 719,830 822,817 917,848 1003,816 1114,814 1284,815 1290,828 1291,834 1292,838 1300,839 1306,823 1312,813 1335,826 1348,802 1347,767 1340,754 1212,736"/>
+                <Baseline points="175,830 370,822 565,817 760,810 955,798 1348,773"/>
+                <TextEquiv>
+                    <Unicode>Ansuch, daß der auf den alldaig</Unicode>
+                </TextEquiv>
+            </TextLine>
+        </TextRegion>
+        
+        
+        
+        
+    </Page>
+</PcGts>

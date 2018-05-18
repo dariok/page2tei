@@ -243,5 +243,27 @@
                     Ratssitzungstermin="-" month="6" year="1792" day="8">8<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice>
                     <choice><expan>vorigen Monats</expan><abbr>v. M.</abbr></choice></date> eine Feüersgefahr</p></x:expect>
         </x:scenario>
+        <x:scenario label="person, place, organization">
+            <x:context mode="text">
+                <ns3:fileSec>
+                    <ns3:fileGrp ID="MASTER">
+                        <ns3:fileGrp ID="PAGEXML">
+                            <ns3:file ID="PAGEXML_25" SEQ="25" MIMETYPE="application/xml" CREATED="2018-05-17T14:37:25.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
+                                <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="page/HS_115_25_object_128293-3.xml"/>
+                            </ns3:file>
+                        </ns3:fileGrp>
+                    </ns3:fileGrp>
+                </ns3:fileSec>
+            </x:context>
+            <!-- TODO adjust to rs pending a decision -->
+            <x:expect label="." xml:space="preserve"><pb facs="#facs_25" n="25"/><p facs="#facs_25_r2">
+                    <lb facs="#facs_25_r2l1" n="N001"/><choice><expan/><abbr>H&apos;r</abbr></choice>
+                    <persName><choice><expan>Herr</expan><abbr>v̄</abbr></choice> Kuglern.</persName>
+                </p><p facs="#facs_25_r3">
+                    <lb facs="#facs_25_r3l1" n="N001"/><choice><expan>Numero</expan><abbr>N<hi rend="superscript:true;">o</hi></abbr></choice> 786.</p><p facs="#facs_25_r4">
+                    <lb facs="#facs_25_r4l1" n="N001"/>Remisschreiben des <orgName>Frauenklosters</orgName>
+                    <lb facs="#facs_25_r4l2" n="N002"/><orgName><choice><expan>Sankt</expan><abbr>St.</abbr></choice> Elisabeth zu <placeName>Brixen</placeName></orgName> mit dem 
+            <lb facs="#facs_25_r4l3" n="N003"/><choice><expan>Ansuchen</expan><abbr>Ansuch</abbr></choice>, daß der auf den <choice><expan>alldaigen</expan><abbr>alldaig</abbr></choice></p></x:expect>
+        </x:scenario>
     </x:scenario>
 </x:description>

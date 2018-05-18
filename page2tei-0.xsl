@@ -370,6 +370,30 @@
                     </xsl:call-template>
                 </date>
             </xsl:when>
+            <xsl:when test="@type = 'person'">
+                <!-- TODO use of tei:rs would be more appropriate here; change after dicussion -->
+                <persName>
+                    <xsl:call-template name="elem">
+                        <xsl:with-param name="elem" select="$elem" />
+                    </xsl:call-template>
+                </persName>
+            </xsl:when>
+            <xsl:when test="@type = 'place'">
+                <!-- TODO use of tei:rs would be more appropriate here; change after dicussion -->
+                <placeName>
+                    <xsl:call-template name="elem">
+                        <xsl:with-param name="elem" select="$elem" />
+                    </xsl:call-template>
+                </placeName>
+            </xsl:when>
+            <xsl:when test="@type = 'organization'">
+                <!-- TODO use of tei:rs would be more appropriate here; change after dicussion -->
+                <orgName>
+                    <xsl:call-template name="elem">
+                        <xsl:with-param name="elem" select="$elem" />
+                    </xsl:call-template>
+                </orgName>
+            </xsl:when>
             <xsl:otherwise>
                 <xsl:element name="{@type}">
                     <xsl:call-template name="elem">

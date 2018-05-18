@@ -1115,6 +1115,7 @@
          <x:label>weitere Elemente</x:label>
          <xsl:call-template name="x:d5e525"/>
          <xsl:call-template name="x:d5e575"/>
+         <xsl:call-template name="x:d5e606"/>
       </x:scenario>
    </xsl:template>
    <xsl:template name="x:d5e525">
@@ -1306,12 +1307,12 @@
             <xsl:with-param name="wrapper-name" select="'x:result'"/>
             <xsl:with-param name="wrapper-ns" select="'http://www.jenitennison.com/xslt/xspec'"/>
          </xsl:call-template>
-         <xsl:call-template name="x:d5e582">
+         <xsl:call-template name="x:d5e583">
             <xsl:with-param name="x:result" select="$x:result"/>
          </xsl:call-template>
       </x:scenario>
    </xsl:template>
-   <xsl:template name="x:d5e582">
+   <xsl:template name="x:d5e583">
       <xsl:param name="x:result" required="yes"/>
       <xsl:message>date mit Attributen</xsl:message>
       <xsl:variable name="impl:expected-doc" as="document-node()">
@@ -1358,6 +1359,177 @@
       </xsl:if>
       <x:test successful="{$impl:successful}">
          <x:label>date mit Attributen</x:label>
+         <xsl:call-template name="test:report-value">
+            <xsl:with-param name="value" select="$impl:expected"/>
+            <xsl:with-param name="wrapper-name" select="'x:expect'"/>
+            <xsl:with-param name="wrapper-ns" select="'http://www.jenitennison.com/xslt/xspec'"/>
+         </xsl:call-template>
+      </x:test>
+   </xsl:template>
+   <xsl:template name="x:d5e606">
+      <xsl:message>..person, place, organization</xsl:message>
+      <x:scenario>
+         <x:label>person, place, organization</x:label>
+         <x:context mode="text">
+            <ns3:fileSec>
+               <ns3:fileGrp ID="MASTER">
+                  <ns3:fileGrp ID="PAGEXML">
+                     <ns3:file ID="PAGEXML_25"
+                               SEQ="25"
+                               MIMETYPE="application/xml"
+                               CREATED="2018-05-17T14:37:25.000+02:00"
+                               CHECKSUM=""
+                               CHECKSUMTYPE="MD5">
+                        <ns3:FLocat LOCTYPE="OTHER"
+                                    OTHERLOCTYPE="FILE"
+                                    ns2:type="simple"
+                                    ns2:href="page/HS_115_25_object_128293-3.xml"/>
+                     </ns3:file>
+                  </ns3:fileGrp>
+               </ns3:fileGrp>
+            </ns3:fileSec>
+         </x:context>
+         <xsl:variable name="x:result" as="item()*">
+            <xsl:variable name="impl:context-doc" as="document-node()">
+               <xsl:document>
+                  <ns3:fileSec>
+                     <ns3:fileGrp ID="MASTER">
+                        <ns3:fileGrp ID="PAGEXML">
+                           <ns3:file ID="PAGEXML_25"
+                                     SEQ="25"
+                                     MIMETYPE="application/xml"
+                                     CREATED="2018-05-17T14:37:25.000+02:00"
+                                     CHECKSUM=""
+                                     CHECKSUMTYPE="MD5">
+                              <ns3:FLocat LOCTYPE="OTHER"
+                                          OTHERLOCTYPE="FILE"
+                                          ns2:type="simple"
+                                          ns2:href="page/HS_115_25_object_128293-3.xml"/>
+                           </ns3:file>
+                        </ns3:fileGrp>
+                     </ns3:fileGrp>
+                  </ns3:fileSec>
+               </xsl:document>
+            </xsl:variable>
+            <xsl:variable name="impl:context" select="$impl:context-doc/node()"/>
+            <xsl:apply-templates select="$impl:context" mode="text"/>
+         </xsl:variable>
+         <xsl:call-template name="test:report-value">
+            <xsl:with-param name="value" select="$x:result"/>
+            <xsl:with-param name="wrapper-name" select="'x:result'"/>
+            <xsl:with-param name="wrapper-ns" select="'http://www.jenitennison.com/xslt/xspec'"/>
+         </xsl:call-template>
+         <xsl:call-template name="x:d5e614">
+            <xsl:with-param name="x:result" select="$x:result"/>
+         </xsl:call-template>
+      </x:scenario>
+   </xsl:template>
+   <xsl:template name="x:d5e614">
+      <xsl:param name="x:result" required="yes"/>
+      <xsl:message>.</xsl:message>
+      <xsl:variable name="impl:expected-doc" as="document-node()">
+         <xsl:document>
+            <pb facs="#facs_25" n="25"/>
+            <p facs="#facs_25_r2">
+               <xsl:text>
+                    </xsl:text>
+               <lb facs="#facs_25_r2l1" n="N001"/>
+               <choice>
+                  <expan/>
+                  <abbr>
+                     <xsl:text>H'r</xsl:text>
+                  </abbr>
+               </choice>
+               <xsl:text>
+                    </xsl:text>
+               <persName>
+                  <choice>
+                     <expan>
+                        <xsl:text>Herr</xsl:text>
+                     </expan>
+                     <abbr>
+                        <xsl:text>v&#x304;</xsl:text>
+                     </abbr>
+                  </choice>
+                  <xsl:text> Kuglern.</xsl:text>
+               </persName>
+               <xsl:text>
+                </xsl:text>
+            </p>
+            <p facs="#facs_25_r3">
+               <xsl:text>
+                    </xsl:text>
+               <lb facs="#facs_25_r3l1" n="N001"/>
+               <choice>
+                  <expan>
+                     <xsl:text>Numero</xsl:text>
+                  </expan>
+                  <abbr>
+                     <xsl:text>N</xsl:text>
+                     <hi rend="superscript:true;">
+                        <xsl:text>o</xsl:text>
+                     </hi>
+                  </abbr>
+               </choice>
+               <xsl:text> 786.</xsl:text>
+            </p>
+            <p facs="#facs_25_r4">
+               <xsl:text>
+                    </xsl:text>
+               <lb facs="#facs_25_r4l1" n="N001"/>
+               <xsl:text>Remisschreiben des </xsl:text>
+               <orgName>
+                  <xsl:text>Frauenklosters</xsl:text>
+               </orgName>
+               <xsl:text>
+                    </xsl:text>
+               <lb facs="#facs_25_r4l2" n="N002"/>
+               <orgName>
+                  <choice>
+                     <expan>
+                        <xsl:text>Sankt</xsl:text>
+                     </expan>
+                     <abbr>
+                        <xsl:text>St.</xsl:text>
+                     </abbr>
+                  </choice>
+                  <xsl:text> Elisabeth zu </xsl:text>
+                  <placeName>
+                     <xsl:text>Brixen</xsl:text>
+                  </placeName>
+               </orgName>
+               <xsl:text> mit dem 
+            </xsl:text>
+               <lb facs="#facs_25_r4l3" n="N003"/>
+               <choice>
+                  <expan>
+                     <xsl:text>Ansuchen</xsl:text>
+                  </expan>
+                  <abbr>
+                     <xsl:text>Ansuch</xsl:text>
+                  </abbr>
+               </choice>
+               <xsl:text>, daﬂ der auf den </xsl:text>
+               <choice>
+                  <expan>
+                     <xsl:text>alldaigen</xsl:text>
+                  </expan>
+                  <abbr>
+                     <xsl:text>alldaig</xsl:text>
+                  </abbr>
+               </choice>
+            </p>
+         </xsl:document>
+      </xsl:variable>
+      <xsl:variable name="impl:expected" select="$impl:expected-doc/node()"/>
+      <xsl:variable name="impl:successful"
+                    as="xs:boolean"
+                    select="test:deep-equal($impl:expected, $x:result, 3)"/>
+      <xsl:if test="not($impl:successful)">
+         <xsl:message>      FAILED</xsl:message>
+      </xsl:if>
+      <x:test successful="{$impl:successful}">
+         <x:label>.</x:label>
          <xsl:call-template name="test:report-value">
             <xsl:with-param name="value" select="$impl:expected"/>
             <xsl:with-param name="wrapper-name" select="'x:expect'"/>

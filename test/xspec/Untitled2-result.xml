@@ -9,7 +9,7 @@
           xmlns:ns2="http://www.w3.org/1999/xlink"
           xmlns:ns3="http://www.loc.gov/METS/"
           stylesheet="file:/home/dario/eclipse-workspace/page2tei/page2tei-0.xsl"
-          date="2018-05-18T16:07:51.075+02:00">
+          date="2018-05-18T16:30:43.859+02:00">
    <x:scenario>
       <x:label>test 1 (WD)</x:label>
       <x:scenario>
@@ -679,6 +679,132 @@
                         <abbr>v. M.</abbr>
                      </choice>
                   </date> eine Feüersgefahr</p>
+            </x:expect>
+         </x:test>
+      </x:scenario>
+      <x:scenario>
+         <x:label>person, place, organization</x:label>
+         <x:context mode="text">
+            <ns3:fileSec>
+               <ns3:fileGrp ID="MASTER">
+                  <ns3:fileGrp ID="PAGEXML">
+                     <ns3:file ID="PAGEXML_25"
+                               SEQ="25"
+                               MIMETYPE="application/xml"
+                               CREATED="2018-05-17T14:37:25.000+02:00"
+                               CHECKSUM=""
+                               CHECKSUMTYPE="MD5">
+                        <ns3:FLocat LOCTYPE="OTHER"
+                                    OTHERLOCTYPE="FILE"
+                                    ns2:type="simple"
+                                    ns2:href="page/HS_115_25_object_128293-3.xml"/>
+                     </ns3:file>
+                  </ns3:fileGrp>
+               </ns3:fileGrp>
+            </ns3:fileSec>
+         </x:context>
+         <x:result>
+            <pb facs="#facs_25" n="25"/>
+            <p facs="#facs_25_r2">
+               <test:ws xmlns:pkg="http://expath.org/ns/pkg">
+            </test:ws>
+               <lb facs="#facs_25_r2l1" n="N001"/>
+               <choice>
+                  <expan/>
+                  <abbr>H'r</abbr>
+               </choice>
+               <test:ws xmlns:pkg="http://expath.org/ns/pkg"> </test:ws>
+               <persName>
+                  <choice>
+                     <expan>Herr</expan>
+                     <abbr>v̄</abbr>
+                  </choice> Kuglern.</persName>
+            </p>
+            <p facs="#facs_25_r3">
+               <test:ws xmlns:pkg="http://expath.org/ns/pkg">
+            </test:ws>
+               <lb facs="#facs_25_r3l1" n="N001"/>
+               <choice>
+                  <expan>Numero</expan>
+                  <abbr>N<hi rend="superscript:true;">o</hi>
+                  </abbr>
+               </choice> 786.</p>
+            <p facs="#facs_25_r4">
+               <test:ws xmlns:pkg="http://expath.org/ns/pkg">
+            </test:ws>
+               <lb facs="#facs_25_r4l1" n="N001"/>Remisschreiben des <orgName>Frauenklosters</orgName>
+               <test:ws xmlns:pkg="http://expath.org/ns/pkg">
+            </test:ws>
+               <lb facs="#facs_25_r4l2" n="N002"/>
+               <orgName>
+                  <choice>
+                     <expan>Sankt</expan>
+                     <abbr>St.</abbr>
+                  </choice> Elisabeth zu <placeName>Brixen</placeName>
+               </orgName> mit dem 
+            <lb facs="#facs_25_r4l3" n="N003"/>
+               <choice>
+                  <expan>Ansuchen</expan>
+                  <abbr>Ansuch</abbr>
+               </choice>, daß der auf den <choice>
+                  <expan>alldaigen</expan>
+                  <abbr>alldaig</abbr>
+               </choice>
+            </p>
+         </x:result>
+         <x:test successful="true">
+            <x:label>.</x:label>
+            <x:expect>
+               <pb facs="#facs_25" n="25"/>
+               <p facs="#facs_25_r2">
+                  <test:ws xmlns:pkg="http://expath.org/ns/pkg">
+                    </test:ws>
+                  <lb facs="#facs_25_r2l1" n="N001"/>
+                  <choice>
+                     <expan/>
+                     <abbr>H'r</abbr>
+                  </choice>
+                  <test:ws xmlns:pkg="http://expath.org/ns/pkg">
+                    </test:ws>
+                  <persName>
+                     <choice>
+                        <expan>Herr</expan>
+                        <abbr>v̄</abbr>
+                     </choice> Kuglern.</persName>
+                  <test:ws xmlns:pkg="http://expath.org/ns/pkg">
+                </test:ws>
+               </p>
+               <p facs="#facs_25_r3">
+                  <test:ws xmlns:pkg="http://expath.org/ns/pkg">
+                    </test:ws>
+                  <lb facs="#facs_25_r3l1" n="N001"/>
+                  <choice>
+                     <expan>Numero</expan>
+                     <abbr>N<hi rend="superscript:true;">o</hi>
+                     </abbr>
+                  </choice> 786.</p>
+               <p facs="#facs_25_r4">
+                  <test:ws xmlns:pkg="http://expath.org/ns/pkg">
+                    </test:ws>
+                  <lb facs="#facs_25_r4l1" n="N001"/>Remisschreiben des <orgName>Frauenklosters</orgName>
+                  <test:ws xmlns:pkg="http://expath.org/ns/pkg">
+                    </test:ws>
+                  <lb facs="#facs_25_r4l2" n="N002"/>
+                  <orgName>
+                     <choice>
+                        <expan>Sankt</expan>
+                        <abbr>St.</abbr>
+                     </choice> Elisabeth zu <placeName>Brixen</placeName>
+                  </orgName> mit dem 
+            <lb facs="#facs_25_r4l3" n="N003"/>
+                  <choice>
+                     <expan>Ansuchen</expan>
+                     <abbr>Ansuch</abbr>
+                  </choice>, daß der auf den <choice>
+                     <expan>alldaigen</expan>
+                     <abbr>alldaig</abbr>
+                  </choice>
+               </p>
             </x:expect>
          </x:test>
       </x:scenario>
