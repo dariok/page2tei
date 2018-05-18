@@ -201,7 +201,7 @@
             </ns3:fileSec>
         </x:context>
         <x:expect xml:space="preserve" label="."><pb  facs="#facs_2" n="2" /><p facs="#facs_2_r_1_7">
-            <lb facs="#facs_2_r2l10" n="N001" /><sic>7. Maria <supplied reason="">Theresia</supplied></sic><supplied reason="">, geb. 4 Stpt.</supplied> 1716.</p></x:expect>
+            <lb facs="#facs_2_r2l10" n="N010" /><sic>7. Maria <supplied reason="">Theresia</supplied></sic><supplied reason="">, geb. 4 Stpt.</supplied> 1716.</p></x:expect>
     </x:scenario>
     
     <x:scenario label="weitere Elemente">
@@ -221,7 +221,9 @@
                 <lb facs="#facs_25_r1l1" n="N001"/>12.</p><p facs="#facs_25_r2">
                 <lb facs="#facs_25_r2l1" n="N001"/><choice><expan/><abbr>H&apos;r</abbr></choice>
                 <lb facs="#facs_25_line_1459841092982_10"
-                    n="N002" />getragen werden, die in <choice><expan>den</expan><abbr>d</abbr></choice></p></x:expect>
+                    n="N003" />getragen werden, die in <choice><expan>den</expan><abbr>d</abbr></choice>
+                <lb facs="#facs_25_r4l10" n="N010"/>vom 8<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice>
+                    <choice><expan>vorigen Monats</expan><abbr>v. M.</abbr></choice> eine Feüersgefahr</p></x:expect>
         </x:scenario>
     </x:scenario>
 </x:description>

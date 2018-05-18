@@ -1079,7 +1079,7 @@
             <p facs="#facs_2_r_1_7">
                <xsl:text>
             </xsl:text>
-               <lb facs="#facs_2_r2l10" n="N001"/>
+               <lb facs="#facs_2_r2l10" n="N010"/>
                <sic>
                   <xsl:text>7. Maria </xsl:text>
                   <supplied reason="">
@@ -1198,7 +1198,7 @@
                </choice>
                <xsl:text>
                 </xsl:text>
-               <lb facs="#facs_25_line_1459841092982_10" n="N002"/>
+               <lb facs="#facs_25_line_1459841092982_10" n="N003"/>
                <xsl:text>getragen werden, die in </xsl:text>
                <choice>
                   <expan>
@@ -1208,6 +1208,31 @@
                      <xsl:text>d</xsl:text>
                   </abbr>
                </choice>
+               <xsl:text>
+                </xsl:text>
+               <lb facs="#facs_25_r4l10" n="N010"/>
+               <xsl:text>vom 8</xsl:text>
+               <choice>
+                  <expan>
+                     <xsl:text>ten</xsl:text>
+                  </expan>
+                  <abbr>
+                     <hi rend="superscript:true;">
+                        <xsl:text>t</xsl:text>
+                     </hi>
+                  </abbr>
+               </choice>
+               <xsl:text>
+                    </xsl:text>
+               <choice>
+                  <expan>
+                     <xsl:text>vorigen Monats</xsl:text>
+                  </expan>
+                  <abbr>
+                     <xsl:text>v. M.</xsl:text>
+                  </abbr>
+               </choice>
+               <xsl:text> eine Feüersgefahr</xsl:text>
             </p>
          </xsl:document>
       </xsl:variable>

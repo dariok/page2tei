@@ -43,6 +43,13 @@ NCSR LineSegmentationTool, v0.3.0 (17_3_2015)</Creator>
                     <Unicode>getragen werden, die in d</Unicode>
                 </TextEquiv>
             </TextLine>
+            <TextLine id="r4l10" custom="readingOrder {index:9;} abbrev {offset:5; length:1;expansion:ten;} textStyle {offset:5; length:1;superscript:true;} abbrev {offset:7; length:5;expansion:vorigen\u0020Monats;}">
+                <Coords points="1322,1373 1273,1375 1135,1374 1117,1405 1031,1381 972,1408 965,1402 965,1400 967,1399 967,1397 966,1392 630,1411 611,1431 568,1397 413,1410 410,1406 311,1435 211,1423 175,1474 175,1484 176,1492 193,1507 468,1510 921,1480 927,1486 927,1492 929,1494 929,1497 931,1499 1105,1480 1165,1502 1179,1483 1190,1480 1200,1481 1227,1497 1257,1477 1301,1491 1355,1415 1355,1410 1330,1374 1323,1373"/>
+                <Baseline points="175,1496 371,1481 567,1471 763,1458 959,1448 1355,1427"/>
+                <TextEquiv>
+                    <Unicode>vom 8t v. M. eine Feüersgefahr</Unicode>
+                </TextEquiv>
+            </TextLine>
         </TextRegion>
     </Page>
 </PcGts>

@@ -291,10 +291,12 @@
             </xsl:for-each>
         </xsl:variable>
         
+        <xsl:variable name="pos" select="xs:integer(substring-before(substring-after(@custom, 'index:'), ';')) + 1" />
+        
         <!-- TODO parameter to create <l>...</l> - #1 -->
         <xsl:text>
             </xsl:text>
-        <lb facs="#facs_{$numCurr}_{@id}" n="N{format-number(position(), '000')}"/>
+        <lb facs="#facs_{$numCurr}_{@id}" n="N{format-number($pos, '000')}"/>
         <xsl:apply-templates select="$prepared/text()[not(preceding-sibling::local:m)]" />
         <xsl:apply-templates select="$prepared/local:m[@pos='s']
             [count(preceding-sibling::local:m[@pos='s']) = count(preceding-sibling::local:m[@pos='e'])]" />
@@ -331,7 +333,7 @@
             </xsl:when>
             <xsl:when test="@type = 'abbrev'">
                 <choice>
-                    <expan><xsl:value-of select="xstring:substring-before(substring-after($o, 'expansion:'), ';')"/></expan>
+                    <expan><xsl:value-of select="replace(xstring:substring-before(substring-after($o, 'expansion:'), ';'), '\\u0020', ' ')"/></expan>
                     <abbr>
                         <xsl:call-template name="elem">
                             <xsl:with-param name="elem" select="$elem" />

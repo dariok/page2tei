@@ -9,7 +9,7 @@
           xmlns:ns2="http://www.w3.org/1999/xlink"
           xmlns:ns3="http://www.loc.gov/METS/"
           stylesheet="file:/home/dario/eclipse-workspace/page2tei/page2tei-0.xsl"
-          date="2018-05-18T13:59:56.29+02:00">
+          date="2018-05-18T14:33:08.513+02:00">
    <x:scenario>
       <x:label>test 1 (WD)</x:label>
       <x:scenario>
@@ -505,7 +505,7 @@
          <p facs="#facs_2_r_1_7">
             <test:ws xmlns:pkg="http://expath.org/ns/pkg">
             </test:ws>
-            <lb facs="#facs_2_r2l10" n="N001"/>
+            <lb facs="#facs_2_r2l10" n="N010"/>
             <sic>7. Maria <supplied reason="">Theresia</supplied>
             </sic>
             <supplied reason="">, geb. 4 Stpt.</supplied> 1716.</p>
@@ -517,7 +517,7 @@
             <p facs="#facs_2_r_1_7">
                <test:ws xmlns:pkg="http://expath.org/ns/pkg">
             </test:ws>
-               <lb facs="#facs_2_r2l10" n="N001"/>
+               <lb facs="#facs_2_r2l10" n="N010"/>
                <sic>7. Maria <supplied reason="">Theresia</supplied>
                </sic>
                <supplied reason="">, geb. 4 Stpt.</supplied> 1716.</p>
@@ -563,11 +563,23 @@
                </choice>
                <test:ws xmlns:pkg="http://expath.org/ns/pkg">
             </test:ws>
-               <lb facs="#facs_25_line_1459841092982_10" n="N002"/>getragen werden, die in <choice>
+               <lb facs="#facs_25_line_1459841092982_10" n="N003"/>getragen werden, die in <choice>
                   <expan>den</expan>
                   <abbr>d</abbr>
                </choice>
-            </p>
+               <test:ws xmlns:pkg="http://expath.org/ns/pkg">
+            </test:ws>
+               <lb facs="#facs_25_r4l10" n="N010"/>vom 8<choice>
+                  <expan>ten</expan>
+                  <abbr>
+                     <hi rend="superscript:true;">t</hi>
+                  </abbr>
+               </choice>
+               <test:ws xmlns:pkg="http://expath.org/ns/pkg"> </test:ws>
+               <choice>
+                  <expan>vorigen Monats</expan>
+                  <abbr>v. M.</abbr>
+               </choice> eine Feüersgefahr</p>
          </x:result>
          <x:test successful="true">
             <x:label>choice, expan + abbr</x:label>
@@ -587,11 +599,24 @@
                   </choice>
                   <test:ws xmlns:pkg="http://expath.org/ns/pkg">
                 </test:ws>
-                  <lb facs="#facs_25_line_1459841092982_10" n="N002"/>getragen werden, die in <choice>
+                  <lb facs="#facs_25_line_1459841092982_10" n="N003"/>getragen werden, die in <choice>
                      <expan>den</expan>
                      <abbr>d</abbr>
                   </choice>
-               </p>
+                  <test:ws xmlns:pkg="http://expath.org/ns/pkg">
+                </test:ws>
+                  <lb facs="#facs_25_r4l10" n="N010"/>vom 8<choice>
+                     <expan>ten</expan>
+                     <abbr>
+                        <hi rend="superscript:true;">t</hi>
+                     </abbr>
+                  </choice>
+                  <test:ws xmlns:pkg="http://expath.org/ns/pkg">
+                    </test:ws>
+                  <choice>
+                     <expan>vorigen Monats</expan>
+                     <abbr>v. M.</abbr>
+                  </choice> eine Feüersgefahr</p>
             </x:expect>
          </x:test>
       </x:scenario>
