@@ -89,7 +89,7 @@
     </xd:doc>
     <xsl:template match="mets:file" mode="text">
         <xsl:variable name="file" select="document(mets:FLocat/@xlink:href, /)"/>
-        <xsl:variable name="numCurr" select="position()"/>
+        <xsl:variable name="numCurr" select="@SEQ"/>
         
         <xsl:apply-templates select="$file//p:Page" mode="text">
             <xsl:with-param name="numCurr" select="$numCurr" tunnel="true" />
