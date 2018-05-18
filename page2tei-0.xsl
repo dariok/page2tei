@@ -326,6 +326,16 @@
                     </xsl:call-template>
                 </supplied>
             </xsl:when>
+            <xsl:when test="@type = 'abbrev'">
+                <choice>
+                    <expan><xsl:value-of select="substring-after($o, 'expansion:')"/></expan>
+                    <abbr>
+                        <xsl:call-template name="elem">
+                            <xsl:with-param name="elem" select="$elem" />
+                        </xsl:call-template>
+                    </abbr>
+                </choice>
+            </xsl:when>
             <xsl:otherwise>
                 <xsl:element name="{@type}">
                     <xsl:call-template name="elem">

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>TRP
+NCSR LineSegmentationTool, v0.3.0 (17_3_2015)</Creator>
+        <Created>2016-03-01T13:53:22.003+01:00</Created>
+        <LastChange>2018-02-22T16:07:52.268+01:00</LastChange>
+        <TranskribusMetadata docId="4379" pageId="113410" pageNr="25" tsid="2366048" status="FINAL" userId="3667" imgUrl="https://dbis-thure.uibk.ac.at/f/Get?id=XMBXVKXNVTBKPZNNDSGFHEMS&amp;fileType=view" xmlUrl="https://dbis-thure.uibk.ac.at/f/Get?id=NWKXIEALOIZDXGYBLGJNQVZR" imageId="109098"/>
+    </Metadata>
+    <Page imageFilename="HS_115_25_object_128293.jpg" imageWidth="2740" imageHeight="4447">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1526560645228" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="r1"/>
+                <RegionRefIndexed index="1" regionRef="r2"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion type="page-number" id="r1" custom="readingOrder {index:0;}">
+            <Coords points="2296,186 2525,186 2525,356 2296,356"/>
+            <TextLine id="r1l1" custom="readingOrder {index:0;}">
+                <Coords points="2347,241 2330,247 2318,294 2318,305 2322,323 2416,319 2454,304 2455,297 2438,248 2410,242 2348,241"/>
+                <Baseline points="2318,317 2455,308"/>
+                <TextEquiv>
+                    <Unicode>12.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>12.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="heading" id="r2" custom="readingOrder {index:1;}">
+            <Coords points="589,318 1220,318 1220,433 589,433"/>
+            <TextLine id="r2l1" custom="readingOrder {index:0;} abbrev {offset:0; length:3;}">
+                <Coords points="757,316 633,319 591,352 590,359 590,432 595,434 643,434 666,434 938,434 1129,422 1144,398 1144,394 861,316 758,316"/>
+                <Baseline points="594,410 687,414 782,430 874,425 966,426 1152,416"/>
+                <TextEquiv>
+                    <Unicode>H'r</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>H'r v̄ Kuglern.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+    </Page>
+</PcGts>

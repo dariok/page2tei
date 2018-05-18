@@ -31,15 +31,23 @@
          <xsl:processing-instruction name="xml-stylesheet">type="text/xsl" href="file:/home/dario/eclipse/plugins/com.oxygenxml.editor_20.0.0.v2018042410/frameworks/xspec/src/compiler/format-xspec-report.xsl"</xsl:processing-instruction>
          <x:report stylesheet="{$x:stylesheet-uri}" date="{current-dateTime()}">
             <xsl:call-template name="x:d5e2"/>
-            <xsl:call-template name="x:d5e180"/>
-            <xsl:call-template name="x:d5e397"/>
-            <xsl:call-template name="x:d5e435"/>
-            <xsl:call-template name="x:d5e502"/>
+            <xsl:call-template name="x:d5e503"/>
+            <xsl:call-template name="x:d5e524"/>
          </x:report>
       </xsl:result-document>
    </xsl:template>
    <xsl:template name="x:d5e2">
-      <xsl:message>17320213 - p.2</xsl:message>
+      <xsl:message>test 1 (WD)</xsl:message>
+      <x:scenario>
+         <x:label>test 1 (WD)</x:label>
+         <xsl:call-template name="x:d5e3"/>
+         <xsl:call-template name="x:d5e181"/>
+         <xsl:call-template name="x:d5e398"/>
+         <xsl:call-template name="x:d5e436"/>
+      </x:scenario>
+   </xsl:template>
+   <xsl:template name="x:d5e3">
+      <xsl:message>..17320213 - p.2</xsl:message>
       <x:scenario>
          <x:label>17320213 - p.2</x:label>
          <x:context mode="text">
@@ -111,12 +119,12 @@
             <xsl:with-param name="wrapper-name" select="'x:result'"/>
             <xsl:with-param name="wrapper-ns" select="'http://www.jenitennison.com/xslt/xspec'"/>
          </xsl:call-template>
-         <xsl:call-template name="x:d5e15">
+         <xsl:call-template name="x:d5e16">
             <xsl:with-param name="x:result" select="$x:result"/>
          </xsl:call-template>
       </x:scenario>
    </xsl:template>
-   <xsl:template name="x:d5e15">
+   <xsl:template name="x:d5e16">
       <xsl:param name="x:result" required="yes"/>
       <xsl:message>.</xsl:message>
       <xsl:variable name="impl:expected-doc" as="document-node()">
@@ -337,8 +345,8 @@
          </xsl:call-template>
       </x:test>
    </xsl:template>
-   <xsl:template name="x:d5e180">
-      <xsl:message>17320213 - p.3</xsl:message>
+   <xsl:template name="x:d5e181">
+      <xsl:message>..17320213 - p.3</xsl:message>
       <x:scenario>
          <x:label>17320213 - p.3</x:label>
          <x:context mode="text">
@@ -412,12 +420,12 @@
             <xsl:with-param name="wrapper-name" select="'x:result'"/>
             <xsl:with-param name="wrapper-ns" select="'http://www.jenitennison.com/xslt/xspec'"/>
          </xsl:call-template>
-         <xsl:call-template name="x:d5e194">
+         <xsl:call-template name="x:d5e195">
             <xsl:with-param name="x:result" select="$x:result"/>
          </xsl:call-template>
       </x:scenario>
    </xsl:template>
-   <xsl:template name="x:d5e194">
+   <xsl:template name="x:d5e195">
       <xsl:param name="x:result" required="yes"/>
       <xsl:message>.</xsl:message>
       <xsl:variable name="impl:expected-doc" as="document-node()">
@@ -708,8 +716,8 @@
          </xsl:call-template>
       </x:test>
    </xsl:template>
-   <xsl:template name="x:d5e397">
-      <xsl:message>17320524 - p. 10</xsl:message>
+   <xsl:template name="x:d5e398">
+      <xsl:message>..17320524 - p. 10</xsl:message>
       <x:scenario>
          <x:label>17320524 - p. 10</x:label>
          <x:context mode="text">
@@ -797,12 +805,12 @@
             <xsl:with-param name="wrapper-name" select="'x:result'"/>
             <xsl:with-param name="wrapper-ns" select="'http://www.jenitennison.com/xslt/xspec'"/>
          </xsl:call-template>
-         <xsl:call-template name="x:d5e418">
+         <xsl:call-template name="x:d5e419">
             <xsl:with-param name="x:result" select="$x:result"/>
          </xsl:call-template>
       </x:scenario>
    </xsl:template>
-   <xsl:template name="x:d5e418">
+   <xsl:template name="x:d5e419">
       <xsl:param name="x:result" required="yes"/>
       <xsl:message>.</xsl:message>
       <xsl:variable name="impl:expected-doc" as="document-node()">
@@ -845,8 +853,8 @@
          </xsl:call-template>
       </x:test>
    </xsl:template>
-   <xsl:template name="x:d5e435">
-      <xsl:message>17410624 - p. 7</xsl:message>
+   <xsl:template name="x:d5e436">
+      <xsl:message>..17410624 - p. 7</xsl:message>
       <x:scenario>
          <x:label>17410624 - p. 7</x:label>
          <x:context mode="text">
@@ -910,12 +918,12 @@
             <xsl:with-param name="wrapper-name" select="'x:result'"/>
             <xsl:with-param name="wrapper-ns" select="'http://www.jenitennison.com/xslt/xspec'"/>
          </xsl:call-template>
-         <xsl:call-template name="x:d5e448">
+         <xsl:call-template name="x:d5e449">
             <xsl:with-param name="x:result" select="$x:result"/>
          </xsl:call-template>
       </x:scenario>
    </xsl:template>
-   <xsl:template name="x:d5e448">
+   <xsl:template name="x:d5e449">
       <xsl:param name="x:result" required="yes"/>
       <xsl:message>.</xsl:message>
       <xsl:variable name="impl:expected-doc" as="document-node()">
@@ -1002,7 +1010,7 @@
          </xsl:call-template>
       </x:test>
    </xsl:template>
-   <xsl:template name="x:d5e502">
+   <xsl:template name="x:d5e503">
       <xsl:message>überlapp</xsl:message>
       <x:scenario>
          <x:label>überlapp</x:label>
@@ -1057,12 +1065,12 @@
             <xsl:with-param name="wrapper-name" select="'x:result'"/>
             <xsl:with-param name="wrapper-ns" select="'http://www.jenitennison.com/xslt/xspec'"/>
          </xsl:call-template>
-         <xsl:call-template name="x:d5e510">
+         <xsl:call-template name="x:d5e511">
             <xsl:with-param name="x:result" select="$x:result"/>
          </xsl:call-template>
       </x:scenario>
    </xsl:template>
-   <xsl:template name="x:d5e510">
+   <xsl:template name="x:d5e511">
       <xsl:param name="x:result" required="yes"/>
       <xsl:message>.</xsl:message>
       <xsl:variable name="impl:expected-doc" as="document-node()">
@@ -1094,6 +1102,112 @@
       </xsl:if>
       <x:test successful="{$impl:successful}">
          <x:label>.</x:label>
+         <xsl:call-template name="test:report-value">
+            <xsl:with-param name="value" select="$impl:expected"/>
+            <xsl:with-param name="wrapper-name" select="'x:expect'"/>
+            <xsl:with-param name="wrapper-ns" select="'http://www.jenitennison.com/xslt/xspec'"/>
+         </xsl:call-template>
+      </x:test>
+   </xsl:template>
+   <xsl:template name="x:d5e524">
+      <xsl:message>weitere Elemente</xsl:message>
+      <x:scenario>
+         <x:label>weitere Elemente</x:label>
+         <xsl:call-template name="x:d5e525"/>
+      </x:scenario>
+   </xsl:template>
+   <xsl:template name="x:d5e525">
+      <xsl:message>..abbrev</xsl:message>
+      <x:scenario>
+         <x:label>abbrev</x:label>
+         <x:context mode="text">
+            <ns3:fileSec>
+               <ns3:fileGrp ID="MASTER">
+                  <ns3:fileGrp ID="PAGEXML">
+                     <ns3:file ID="PAGEXML_25"
+                               SEQ="25"
+                               MIMETYPE="application/xml"
+                               CREATED="2018-05-17T14:37:25.000+02:00"
+                               CHECKSUM=""
+                               CHECKSUMTYPE="MD5">
+                        <ns3:FLocat LOCTYPE="OTHER"
+                                    OTHERLOCTYPE="FILE"
+                                    ns2:type="simple"
+                                    ns2:href="page/HS_115_25_object_128293-1.xml"/>
+                     </ns3:file>
+                  </ns3:fileGrp>
+               </ns3:fileGrp>
+            </ns3:fileSec>
+         </x:context>
+         <xsl:variable name="x:result" as="item()*">
+            <xsl:variable name="impl:context-doc" as="document-node()">
+               <xsl:document>
+                  <ns3:fileSec>
+                     <ns3:fileGrp ID="MASTER">
+                        <ns3:fileGrp ID="PAGEXML">
+                           <ns3:file ID="PAGEXML_25"
+                                     SEQ="25"
+                                     MIMETYPE="application/xml"
+                                     CREATED="2018-05-17T14:37:25.000+02:00"
+                                     CHECKSUM=""
+                                     CHECKSUMTYPE="MD5">
+                              <ns3:FLocat LOCTYPE="OTHER"
+                                          OTHERLOCTYPE="FILE"
+                                          ns2:type="simple"
+                                          ns2:href="page/HS_115_25_object_128293-1.xml"/>
+                           </ns3:file>
+                        </ns3:fileGrp>
+                     </ns3:fileGrp>
+                  </ns3:fileSec>
+               </xsl:document>
+            </xsl:variable>
+            <xsl:variable name="impl:context" select="$impl:context-doc/node()"/>
+            <xsl:apply-templates select="$impl:context" mode="text"/>
+         </xsl:variable>
+         <xsl:call-template name="test:report-value">
+            <xsl:with-param name="value" select="$x:result"/>
+            <xsl:with-param name="wrapper-name" select="'x:result'"/>
+            <xsl:with-param name="wrapper-ns" select="'http://www.jenitennison.com/xslt/xspec'"/>
+         </xsl:call-template>
+         <xsl:call-template name="x:d5e532">
+            <xsl:with-param name="x:result" select="$x:result"/>
+         </xsl:call-template>
+      </x:scenario>
+   </xsl:template>
+   <xsl:template name="x:d5e532">
+      <xsl:param name="x:result" required="yes"/>
+      <xsl:message>choice, expan + abbr</xsl:message>
+      <xsl:variable name="impl:expected-doc" as="document-node()">
+         <xsl:document>
+            <pb facs="#facs_25" n="25"/>
+            <p facs="#facs_25_r1">
+               <xsl:text>
+                </xsl:text>
+               <lb facs="#facs_25_r1l1" n="N001"/>
+               <xsl:text>12.</xsl:text>
+            </p>
+            <p facs="#facs_25_r2">
+               <xsl:text>
+                </xsl:text>
+               <lb facs="#facs_25_r2l1" n="N001"/>
+               <choice>
+                  <expan/>
+                  <abbr>
+                     <xsl:text>H'r</xsl:text>
+                  </abbr>
+               </choice>
+            </p>
+         </xsl:document>
+      </xsl:variable>
+      <xsl:variable name="impl:expected" select="$impl:expected-doc/node()"/>
+      <xsl:variable name="impl:successful"
+                    as="xs:boolean"
+                    select="test:deep-equal($impl:expected, $x:result, 3)"/>
+      <xsl:if test="not($impl:successful)">
+         <xsl:message>      FAILED</xsl:message>
+      </xsl:if>
+      <x:test successful="{$impl:successful}">
+         <x:label>choice, expan + abbr</x:label>
          <xsl:call-template name="test:report-value">
             <xsl:with-param name="value" select="$impl:expected"/>
             <xsl:with-param name="wrapper-name" select="'x:expect'"/>

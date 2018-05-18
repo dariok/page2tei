@@ -6,6 +6,7 @@
     xmlns:ns3="http://www.loc.gov/METS/"
     xslt-version="3.0">
     
+    <x:scenario label="test 1 (WD)">
     <x:scenario label="17320213 - p.2">
         <x:context mode="text">
             <ns3:fileSec>
@@ -184,6 +185,8 @@
             <lb facs="#facs_7_tl_35" n="N007"/><hi rend="fontFamily:Antiqua;">Li<unclear>g</unclear>nitz, Brieg, Wolau, &amp; Seigneur<unclear>iesy</unclear> / ap-</hi>
             <lb facs="#facs_7_tl_36" n="N008"/><hi rend="fontFamily:Antiqua;">partenantes. L&apos;An 1741. </hi>Das St. geb. 30. kr.</p></x:expect>
     </x:scenario>
+    </x:scenario>
+    
     <x:scenario label="überlapp">
         <x:context mode="text">
             <ns3:fileSec>
@@ -199,5 +202,24 @@
         </x:context>
         <x:expect xml:space="preserve" label="."><pb  facs="#facs_2" n="2" /><p facs="#facs_2_r_1_7">
             <lb facs="#facs_2_r2l10" n="N001" /><sic>7. Maria <supplied reason="">Theresia</supplied></sic><supplied reason="">, geb. 4 Stpt.</supplied> 1716.</p></x:expect>
+    </x:scenario>
+    
+    <x:scenario label="weitere Elemente">
+        <x:scenario label="abbrev">
+            <x:context mode="text">
+                <ns3:fileSec>
+                    <ns3:fileGrp ID="MASTER">
+                        <ns3:fileGrp ID="PAGEXML">
+                            <ns3:file ID="PAGEXML_25" SEQ="25" MIMETYPE="application/xml" CREATED="2018-05-17T14:37:25.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
+                                <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="page/HS_115_25_object_128293-1.xml"/>
+                            </ns3:file>
+                        </ns3:fileGrp>
+                    </ns3:fileGrp>
+                </ns3:fileSec>
+            </x:context>
+            <x:expect label="choice, expan + abbr" xml:space="preserve"><pb facs="#facs_25" n="25"/><p facs="#facs_25_r1">
+                <lb facs="#facs_25_r1l1" n="N001"/>12.</p><p facs="#facs_25_r2">
+                <lb facs="#facs_25_r2l1" n="N001"/><choice><expan/><abbr>H&apos;r</abbr></choice></p></x:expect>
+        </x:scenario>
     </x:scenario>
 </x:description>
