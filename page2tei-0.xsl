@@ -11,7 +11,7 @@
     xmlns:local="local"
     xmlns:xstring = "https://github.com/dariok/XStringUtils"
     exclude-result-prefixes="#all"
-    version="3.0">
+    version="2.0">
     
     <xd:doc scope="stylesheet">
         <xd:desc>
@@ -270,17 +270,19 @@
                         
                         <xsl:for-each select="$precs">
                             <xsl:variable name="so" select="@o"/>
+                            <xsl:variable name="myP" select="count(following-sibling::local:m[@pos='e' and @o=$so]/preceding-sibling::node())"/>
                             <xsl:if test="following-sibling::local:m[@pos = 'e' and @o=$so
-                                and count(preceding-sibling::node()) &gt; $position]">
-                                <local:m type="{@type}" pos="e" o="{@o}" />
+                                and $myP &gt; $position]">
+                                <local:m type="{@type}" pos="e" o="{@o}" prev="{$myP||'.'||$position||($myP > $position)}" />
                             </xsl:if>
                         </xsl:for-each>
                         <xsl:sequence select="." />
                         <xsl:for-each select="$precs">
                             <xsl:variable name="so" select="@o"/>
+                            <xsl:variable name="myP" select="count(following-sibling::local:m[@pos='e' and @o=$so]/preceding-sibling::node())"/>
                             <xsl:if test="following-sibling::local:m[@pos = 'e' and @o=$so
-                                and count(preceding-sibling::node()) &gt; $position]">
-                                <local:m type="{@type}" pos="s" o="{@o}" />
+                                and $myP &gt; $position]">
+                                <local:m type="{@type}" pos="s" o="{@o}" prev="{$myP||'.'||$position||($myP > $position)}" />
                             </xsl:if>
                         </xsl:for-each>
                     </xsl:when>
