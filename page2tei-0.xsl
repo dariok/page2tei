@@ -223,7 +223,7 @@
     <xsl:template match="p:Page" mode="text">
         <xsl:param name="numCurr" tunnel="true" />
         
-        <pb facs="#facs_{$numCurr}" n="{$numCurr}" />
+        <pb facs="#facs_{$numCurr}" n="{$numCurr}" xml:id="img_{format-number($numCurr, '0000')}"/>
         <xsl:apply-templates select="p:TextRegion | p:SeparatorRegion | p:GraphicRegion" mode="text" />
     </xsl:template>
     
