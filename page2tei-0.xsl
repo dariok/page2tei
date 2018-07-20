@@ -54,7 +54,9 @@
                 </fileDesc>
             </teiHeader>
             <xsl:if test="not($debug)">
-                <xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID='PAGEXML']/mets:file" mode="facsimile" />
+                <facsimile>
+                    <xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID='PAGEXML']/mets:file" mode="facsimile" />
+                </facsimile>
             </xsl:if>
             <text>
                 <body>
@@ -121,12 +123,10 @@
         <xsl:variable name="file" select="document(mets:FLocat/@xlink:href, /)"/>
         <xsl:variable name="numCurr" select="@SEQ"/>
         
-        <facsimile xml:id="facs_{$numCurr}">
-            <xsl:apply-templates select="$file//p:Page" mode="facsimile">
-                <xsl:with-param name="imageName" select="substring-after(mets:FLocat/@xlink:href, '/')" />
-                <xsl:with-param name="numCurr" select="$numCurr" tunnel="true" />
-            </xsl:apply-templates>
-        </facsimile>
+        <xsl:apply-templates select="$file//p:Page" mode="facsimile">
+            <xsl:with-param name="imageName" select="substring-after(mets:FLocat/@xlink:href, '/')" />
+            <xsl:with-param name="numCurr" select="$numCurr" tunnel="true" />
+        </xsl:apply-templates>
     </xsl:template>
     
     <xd:doc>
@@ -162,8 +162,9 @@
         
         <!-- NOTE: up to now, lry and lry were mixed up. This is fiex here. -->
         <surface ulx="0" uly="0"
-            lrx="{@imageWidth}" lry="{@imageHeight}">
-            <graphic url="{substring-before($imageName, '.')||'.'||$type}" width="{@imageWidth}px" height="{@imageHeight}px"/>
+            lrx="{@imageWidth}" lry="{@imageHeight}"
+            xml:id="facs_{$numCurr}">
+            <graphic url="{encode-for-uri(substring-before($imageName, '.'))||'.'||$type}" width="{@imageWidth}px" height="{@imageHeight}px"/>
             <xsl:apply-templates select="p:PrintSpace | p:TextRegion | p:SeparatorRegion | p:GraphicRegion" mode="facsimile"/>
         </surface>
     </xsl:template>
