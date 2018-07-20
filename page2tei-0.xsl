@@ -13,6 +13,8 @@
     exclude-result-prefixes="#all"
     version="3.0">
     
+    <xsl:output indent="1" />
+    
     <xd:doc scope="stylesheet">
         <xd:desc>
             <xd:p><xd:b>Author:</xd:b> Dario Kampkaspar, dario.kampkaspar@oeaw.ac.at</xd:p>
@@ -35,13 +37,19 @@
             <teiHeader>
                 <fileDesc>
                     <titleStmt>
-                        <xsl:apply-templates select="mets:amdSec//title" />
+                        <xsl:apply-templates select="mets:amdSec//trpDocMetadata/title" />
+                        <xsl:apply-templates select="mets:amdSec//trpDocMetadata/author" />
+                        <xsl:apply-templates select="mets:amdSec//trpDocMetadata/uploader" />
                     </titleStmt>
                     <publicationStmt>
                         <publisher>tranScriptorium</publisher>
                     </publicationStmt>
+                    <seriesStmt>
+                        <xsl:apply-templates select="mets:amdSec//trpDocMetadata/collectionList/colList[1]/colName" />
+                    </seriesStmt>
                     <sourceDesc>
-                        <bibl><publisher>TRP document creator: <xsl:value-of select="mets:amdSec//uploader"/></publisher></bibl>
+                        <p>TRP document creator: <xsl:value-of select="mets:amdSec//uploader"/></p>
+                        <xsl:apply-templates select="mets:amdSec//trpDocMetadata/desc" />
                     </sourceDesc>
                 </fileDesc>
             </teiHeader>
@@ -69,6 +77,40 @@
             </xsl:if>
             <xsl:apply-templates />
         </title>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>The author as stated in Transkribus meta data.
+            Will be used in the teiHeader as titleStmt/author</xd:desc>
+    </xd:doc>
+    <xsl:template match="author">
+        <author>
+            <xsl:apply-templates />
+        </author>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>The uploader of the current document.
+            Will be used as titleStmt/principal</xd:desc>
+    </xd:doc>
+    <xsl:template match="uploader">
+        <principal><xsl:apply-templates /></principal>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>The description as given in Transkribus meta data.
+            Will be used in sourceDesc</xd:desc>
+    </xd:doc>
+    <xsl:template match="desc">
+        <p><xsl:apply-templates /></p>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>The name of the collection from which this document was exported.
+            Will be used as seriesStmt/title</xd:desc>
+    </xd:doc>
+    <xsl:template match="colName">
+        <title><xsl:apply-templates /></title>
     </xsl:template>
     
     <!-- Templates for METS -->
