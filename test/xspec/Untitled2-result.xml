@@ -9,7 +9,7 @@
           xmlns:ns2="http://www.w3.org/1999/xlink"
           xmlns:ns3="http://www.loc.gov/METS/"
           stylesheet="file:/home/dario/eclipse-workspace/page2tei/page2tei-0.xsl"
-          date="2018-08-08T18:01:11.614+02:00">
+          date="2018-08-08T19:00:37.304+02:00">
    <x:scenario>
       <x:label>test 1 (WD)</x:label>
       <x:scenario>
@@ -668,11 +668,10 @@
                   <expan/>
                   <abbr>
                      <orgName>kreißämt.</orgName>
-                     <orgName/>
                   </abbr>
-               </choice> Inti¬<orgName/> Inti¬</p>
+               </choice> Inti¬</p>
          </x:result>
-         <x:test successful="false">
+         <x:test successful="true">
             <x:label>date mit Attributen</x:label>
             <x:expect>
                <pb facs="#facs_25" n="25" xml:id="img_0025"/>

@@ -308,6 +308,7 @@
                     <xsl:when test="@pos = 'e'">
                         <xsl:variable name="position" select="count(preceding-sibling::node())" />
                         <xsl:variable name="o" select="@o" />
+                        <xsl:variable name="id" select="@type" />
                         <xsl:variable name="precs"
                             select="preceding-sibling::local:m[@pos = 's' and preceding-sibling::local:m[@o = $o]]" />
                         
@@ -315,7 +316,7 @@
                             <xsl:variable name="so" select="@o"/>
                             <xsl:variable name="myP" select="count(following-sibling::local:m[@pos='e' and @o=$so]/preceding-sibling::node())"/>
                             <xsl:if test="following-sibling::local:m[@pos = 'e' and @o=$so
-                                and $myP &gt; $position]">
+                                and $myP &gt; $position] and not(@type = $id)">
                                 <local:m type="{@type}" pos="e" o="{@o}" prev="{$myP||'.'||$position||($myP > $position)}" />
                             </xsl:if>
                         </xsl:for-each>
@@ -324,7 +325,7 @@
                             <xsl:variable name="so" select="@o"/>
                             <xsl:variable name="myP" select="count(following-sibling::local:m[@pos='e' and @o=$so]/preceding-sibling::node())"/>
                             <xsl:if test="following-sibling::local:m[@pos = 'e' and @o=$so
-                                and $myP &gt; $position]">
+                                and $myP &gt; $position] and not(@type = $id)">
                                 <local:m type="{@type}" pos="s" o="{@o}" prev="{$myP||'.'||$position||($myP > $position)}" />
                             </xsl:if>
                         </xsl:for-each>
