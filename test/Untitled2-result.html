@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><html xmlns:test="http://www.jenitennison.com/xslt/unit-test" xmlns="http://www.w3.org/1999/xhtml">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-      <title>Test Report for home/dario/eclipse-workspace/page2tei/page2tei-0.xsl (passed: 8 / pending: 0 / failed: 0 / total: 8)</title>
-      <link rel="stylesheet" type="text/css" href="file:/home/dario/eclipse/plugins/com.oxygenxml.editor_20.0.0.v2018042410/frameworks/xspec/src/reporter/test-report.css" />
+      <title>Test Report for home/dario/eclipse-workspace/page2tei/page2tei-0.xsl (passed: 7 / pending: 0 / failed: 1 / total: 8)</title>
+      <link rel="stylesheet" type="text/css" href="file:/home/dario/.p2/pool/plugins/com.oxygenxml.editor_20.1.0.v2018061313/frameworks/xspec/src/reporter/test-report.css" />
    </head>
    <body>
       <h1>Test Report</h1>
       <p>Stylesheet: <a href="file:/home/dario/eclipse-workspace/page2tei/page2tei-0.xsl">home/dario/eclipse-workspace/page2tei/page2tei-0.xsl</a></p>
-      <p>Tested: 18 May 2018 at 16:30</p>
+      <p>Tested: 8 August 2018 at 18:01</p>
       <h2>Contents</h2>
       <table class="xspec">
          <col width="75%" />
@@ -18,9 +18,9 @@
          <thead>
             <tr>
                <th></th>
-               <th class="totals">passed: 8</th>
+               <th class="totals">passed: 7</th>
                <th class="totals">pending: 0</th>
-               <th class="totals">failed: 0</th>
+               <th class="totals">failed: 1</th>
                <th class="totals">total: 8</th>
             </tr>
          </thead>
@@ -39,11 +39,11 @@
                <th class="totals">0</th>
                <th class="totals">1</th>
             </tr>
-            <tr class="successful">
+            <tr class="failed">
                <th><a href="#d3e1337">weitere Elemente</a></th>
-               <th class="totals">3</th>
+               <th class="totals">2</th>
                <th class="totals">0</th>
-               <th class="totals">0</th>
+               <th class="totals">1</th>
                <th class="totals">3</th>
             </tr>
          </tbody>
@@ -111,14 +111,14 @@
          </table>
       </div>
       <div id="d3e1337">
-         <h2 class="successful">weitere Elemente<span class="scenario-totals">passed: 3 / pending: 0 / failed: 0 / total: 3</span></h2>
+         <h2 class="successful">weitere Elemente<span class="scenario-totals">passed: 2 / pending: 0 / failed: 1 / total: 3</span></h2>
          <table class="xspec" id="t-d3e1337">
             <col width="75%" />
             <col width="25%" />
             <tbody>
                <tr class="successful">
                   <th>weitere Elemente</th>
-                  <th>passed: 3 / pending: 0 / failed: 0 / total: 3</th>
+                  <th>passed: 2 / pending: 0 / failed: 1 / total: 3</th>
                </tr>
                <tr class="successful">
                   <th>abbrev</th>
@@ -128,13 +128,13 @@
                   <td>choice, expan + abbr</td>
                   <td>Success</td>
                </tr>
-               <tr class="successful">
-                  <th>date</th>
-                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               <tr class="failed">
+                  <th><a href="#d3e1517">date</a></th>
+                  <th>passed: 0 / pending: 0 / failed: 1 / total: 1</th>
                </tr>
-               <tr class="successful">
-                  <td>date mit Attributen</td>
-                  <td>Success</td>
+               <tr class="failed">
+                  <td><a href="#d3e1611">date mit Attributen</a></td>
+                  <td>Failure</td>
                </tr>
                <tr class="successful">
                   <th>person, place, organization</th>
@@ -143,6 +143,103 @@
                <tr class="successful">
                   <td>.</td>
                   <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+         <h3 id="d3e1517">weitere Elemente date</h3>
+         <h4 id="d3e1611">date mit Attributen</h4>
+         <table class="xspecResult">
+            <thead>
+               <tr>
+                  <th>Result</th>
+                  <th>Expected Result</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td><pre>&lt;<span class="same">pb</span> xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:ns2="http://www.w3.org/1999/xlink"
+         xmlns:ns3="http://www.loc.gov/METS/"
+         <span class="same">facs</span>="#facs_25"
+         <span class="same">n</span>="25"
+         <span class="same">xml:id</span>="img_0025" /&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:ns2="http://www.w3.org/1999/xlink"
+         xmlns:ns3="http://www.loc.gov/METS/"
+         <span class="same">facs</span>="#facs_25_r4"&gt;
+   <span class="whitespace">\n............</span>
+   &lt;<span class="same">lb</span> <span class="same">facs</span>="#facs_25_r4l10"
+     <span class="same">n</span>="N010" /&gt;<span class="same">vom </span>&lt;<span class="same">date</span> <span class="same">Ratssitzungstermin</span>="-"
+     <span class="same">month</span>="6"
+     <span class="same">day</span>="8"
+     <span class="same">year</span>="1792"&gt;<span class="same">8</span>&lt;<span class="same">choice</span>&gt;
+         &lt;<span class="same">expan</span>&gt;<span class="same">ten</span>&lt;/expan&gt;
+         &lt;<span class="same">abbr</span>&gt;
+            &lt;<span class="same">hi</span> <span class="same">rend</span>="superscript:true;"&gt;<span class="same">t</span>&lt;/hi&gt;
+         &lt;/abbr&gt;
+      &lt;/choice&gt;
+      <span class="whitespace">.</span>
+      &lt;<span class="same">choice</span>&gt;
+         &lt;<span class="same">expan</span>&gt;<span class="same">vorigen Monats</span>&lt;/expan&gt;
+         &lt;<span class="same">abbr</span>&gt;<span class="same">v. M.</span>&lt;/abbr&gt;
+      &lt;/choice&gt;
+   &lt;/date&gt;<span class="same"> eine Feüersgefahr
+            </span>&lt;<span class="same">lb</span> <span class="same">facs</span>="#facs_25_r8l12"
+     <span class="same">n</span>="N013" /&gt;<span class="same">vom </span>&lt;<span class="same">date</span>&gt;<span class="same">1</span>&lt;<span class="same">choice</span>&gt;
+         &lt;<span class="same">expan</span> /&gt;
+         &lt;<span class="same">abbr</span>&gt;
+            &lt;<span class="same">hi</span> <span class="same">rend</span>="superscript:true;"&gt;<span class="same">t</span>&lt;/hi&gt;
+         &lt;/abbr&gt;
+      &lt;/choice&gt;
+   &lt;/date&gt;<span class="same"> und </span>&lt;<span class="diff">choice</span>&gt;
+      &lt;<span class="same">expan</span> /&gt;
+      &lt;<span class="diff">abbr</span>&gt;
+         &lt;<span class="same">orgName</span>&gt;<span class="same">kreißämt.</span>&lt;/orgName&gt;
+         &lt;<span class="diff">orgName</span> /&gt;
+      &lt;/abbr&gt;
+   &lt;/choice&gt;<span class="same"> Inti¬</span>&lt;<span class="diff">orgName</span> /&gt;<span class="diff"> Inti¬</span>&lt;/p&gt;</pre></td>
+                  <td><pre>&lt;<span class="same">pb</span> xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:ns2="http://www.w3.org/1999/xlink"
+         xmlns:ns3="http://www.loc.gov/METS/"
+         <span class="same">facs</span>="#facs_25"
+         <span class="same">n</span>="25"
+         <span class="same">xml:id</span>="img_0025" /&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+         xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+         xmlns:ns2="http://www.w3.org/1999/xlink"
+         xmlns:ns3="http://www.loc.gov/METS/"
+         <span class="same">facs</span>="#facs_25_r4"&gt;
+   <span class="whitespace">\n....................</span>
+   &lt;<span class="same">lb</span> <span class="same">facs</span>="#facs_25_r4l10"
+     <span class="same">n</span>="N010" /&gt;<span class="same">vom </span>&lt;<span class="same">date</span> <span class="same">Ratssitzungstermin</span>="-"
+     <span class="same">month</span>="6"
+     <span class="same">year</span>="1792"
+     <span class="same">day</span>="8"&gt;<span class="same">8</span>&lt;<span class="same">choice</span>&gt;
+         &lt;<span class="same">expan</span>&gt;<span class="same">ten</span>&lt;/expan&gt;
+         &lt;<span class="same">abbr</span>&gt;
+            &lt;<span class="same">hi</span> <span class="same">rend</span>="superscript:true;"&gt;<span class="same">t</span>&lt;/hi&gt;
+         &lt;/abbr&gt;
+      &lt;/choice&gt;
+      <span class="whitespace">\n....................</span>
+      &lt;<span class="same">choice</span>&gt;
+         &lt;<span class="same">expan</span>&gt;<span class="same">vorigen Monats</span>&lt;/expan&gt;
+         &lt;<span class="same">abbr</span>&gt;<span class="same">v. M.</span>&lt;/abbr&gt;
+      &lt;/choice&gt;
+   &lt;/date&gt;<span class="same"> eine Feüersgefahr
+            </span>&lt;<span class="same">lb</span> <span class="same">facs</span>="#facs_25_r8l12"
+     <span class="same">n</span>="N013" /&gt;<span class="same">vom </span>&lt;<span class="same">date</span>&gt;<span class="same">1</span>&lt;<span class="same">choice</span>&gt;
+         &lt;<span class="same">expan</span> /&gt;
+         &lt;<span class="same">abbr</span>&gt;
+            &lt;<span class="same">hi</span> <span class="same">rend</span>="superscript:true;"&gt;<span class="same">t</span>&lt;/hi&gt;
+         &lt;/abbr&gt;
+      &lt;/choice&gt;
+   &lt;/date&gt;<span class="same"> und </span>&lt;<span class="diff">choice</span>&gt;
+      &lt;<span class="same">expan</span> /&gt;
+      &lt;<span class="diff">abbr</span>&gt;
+         &lt;<span class="same">orgName</span>&gt;<span class="same">kreißämt.</span>&lt;/orgName&gt;
+      &lt;/abbr&gt;
+   &lt;/choice&gt;<span class="same"> Inti¬</span>&lt;/p&gt;</pre></td>
                </tr>
             </tbody>
          </table>

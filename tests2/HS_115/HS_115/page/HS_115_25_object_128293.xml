@@ -20,7 +20,7 @@ NCSR LineSegmentationTool, v0.3.0 (17_3_2015)</Creator>
                 <RegionRefIndexed index="7" regionRef="r8"/>
             </OrderedGroup>
         </ReadingOrder>
-        <TextRegion type="page-number" id="r1" custom="readingOrder {index:0;}">
+        <!--<TextRegion type="page-number" id="r1" custom="readingOrder {index:0;}">
             <Coords points="2296,186 2525,186 2525,356 2296,356"/>
             <TextLine id="r1l1" custom="readingOrder {index:0;}">
                 <Coords points="2347,241 2330,247 2318,294 2318,305 2322,323 2416,319 2454,304 2455,297 2438,248 2410,242 2348,241"/>
@@ -254,10 +254,10 @@ wegzuschaffen.</Unicode>
             <TextEquiv>
                 <Unicode>No 787.</Unicode>
             </TextEquiv>
-        </TextRegion>
+        </TextRegion>-->
         <TextRegion type="paragraph" id="r8" custom="readingOrder {index:7;}">
             <Coords points="164,2375 1458,2375 1458,4117 164,4117"/>
-            <TextLine id="r8l1" custom="readingOrder {index:0;} person {offset:4; length:27; continued:true;} abbrev {offset:18; length:2;expansion:Herr;} abbrev {offset:21; length:4;expansion:Johann;}">
+            <!--<TextLine id="r8l1" custom="readingOrder {index:0;} person {offset:4; length:27; continued:true;} abbrev {offset:18; length:2;expansion:Herr;} abbrev {offset:21; length:4;expansion:Johann;}">
                 <Coords points="696,2373 245,2376 162,2469 162,2473 163,2477 198,2495 237,2484 356,2503 874,2505 980,2507 1312,2460 1327,2436 1326,2431 1270,2386 697,2373"/>
                 <Baseline points="162,2475 355,2463 549,2470 742,2451 936,2461 1327,2440"/>
                 <TextEquiv>
@@ -340,7 +340,7 @@ wegzuschaffen.</Unicode>
                 <TextEquiv>
                     <Unicode>selb in Folge einer hoh Verordn</Unicode>
                 </TextEquiv>
-            </TextLine>
+            </TextLine>-->
             <TextLine id="r8l12" custom="readingOrder {index:12;} date {offset:4; length:2;} abbrev {offset:5; length:1;} textStyle {offset:5; length:1;superscript:true;} abbrev {offset:11; length:9;} organization {offset:11; length:9;}">
                 <Coords points="1294,3641 1076,3649 1010,3677 961,3661 761,3651 656,3659 600,3704 590,3699 602,3673 602,3665 497,3696 481,3659 326,3695 226,3662 180,3706 176,3719 176,3728 177,3734 195,3760 476,3780 771,3755 850,3778 1089,3749 1145,3748 1160,3763 1266,3721 1353,3692 1354,3687 1353,3674 1299,3641 1295,3641"/>
                 <Baseline points="176,3747 372,3732 568,3730 764,3725 960,3718 1354,3692"/>

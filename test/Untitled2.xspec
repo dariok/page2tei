@@ -6,6 +6,7 @@
     xmlns:ns3="http://www.loc.gov/METS/"
     xslt-version="3.0">
     
+    
     <x:scenario label="test 1 (WD)">
     <x:scenario label="17320213 - p.2">
         <x:context mode="text">
@@ -29,7 +30,7 @@
                 </ns3:div>
             </ns3:structMap>
         </x:context>
-        <x:expect label="." xml:space="preserve"><pb facs="#facs_2"
+        <x:expect label="." xml:space="preserve"><pb facs="#facs_2" xml:id="img_0002"
                 n="2" /><p facs='#facs_2_r_2_4'>
             <lb facs='#facs_2_tl_59' n='N001'/>Gestern langete hier ein <hi rend='fontFamily:Antiqua;'>Express</hi>er von
             <lb facs='#facs_2_tl_60' n='N002'/>de<unclear>m</unclear> Herrn Keene aus Spanien an /
@@ -77,7 +78,7 @@
                 </ns3:div>
             </ns3:structMap>
         </x:context>
-        <x:expect label="." xml:space="preserve"><pb facs="#facs_3"
+        <x:expect label="." xml:space="preserve"><pb facs="#facs_3" xml:id="img_0003"
                 n="3" /><p facs='#facs_3_TextRegion_1501850337174_559'>
             <lb facs='#facs_3_tl_1' n='N001'/>nach=Mittag verfügte sich der der König
             <lb facs='#facs_3_tl_2' n='N002'/>mit gewöhnlichen Ceremonien nachdem
@@ -153,7 +154,7 @@
                 </ns3:div>
             </ns3:structMap>
         </x:context>
-        <x:expect label="." xml:space="preserve"><pb facs="#facs_10" n="10" /><p facs="#facs_10_r_2_7">
+        <x:expect label="." xml:space="preserve"><pb facs="#facs_10" n="10" xml:id="img_0010" /><p facs="#facs_10_r_2_7">
                 <lb facs="#facs_10_tl_75" n="N001"/>Johann Frantz Weishaubt / ware nno 1697. <supplied reason=""><hi rend="fontFamily:Antiqua;">Ex-</hi></supplied>
                 <lb facs="#facs_10_tl_76" n="N002"/><hi rend="fontFamily:Antiqua;">peditor</hi> bey der hoch=ansehentl. Geheimen Stelle in Gr<gap/></p></x:expect>
     </x:scenario>
@@ -175,7 +176,7 @@
                 </ns3:fileGrp>
             </ns3:fileSec>
         </x:context>
-        <x:expect label="." xml:space="preserve"><pb facs="#facs_7" n="7"/><p facs="#facs_7_TextRegion_1502873594420_703">
+        <x:expect label="." xml:space="preserve"><pb facs="#facs_7" n="7" xml:id="img_0007" /><p facs="#facs_7_TextRegion_1502873594420_703">
             <lb facs="#facs_7_tl_29" n="N001"/><hi rend="fontFamily:Antiqua;">Information Juridique &amp; conforme aux</hi>
             <lb facs="#facs_7_tl_30" n="N002"/><hi rend="fontFamily:Antiqua;">Actes contre l&apos;Imprimé récemment publié</hi>
             <lb facs="#facs_7_tl_31" n="N003"/><hi rend="fontFamily:Antiqua;">sous le tître</hi> Rechts=gegündete Eigentum rc.
@@ -200,7 +201,7 @@
                 </ns3:fileGrp>
             </ns3:fileSec>
         </x:context>
-        <x:expect xml:space="preserve" label="."><pb  facs="#facs_2" n="2" /><p facs="#facs_2_r_1_7">
+        <x:expect xml:space="preserve" label="."><pb  facs="#facs_2" n="2" xml:id="img_0002" /><p facs="#facs_2_r_1_7">
             <lb facs="#facs_2_r2l10" n="N010" /><sic>7. Maria <supplied reason="">Theresia</supplied></sic><supplied reason="">, geb. 4 Stpt.</supplied> 1716.</p></x:expect>
     </x:scenario>
     
@@ -217,7 +218,7 @@
                     </ns3:fileGrp>
                 </ns3:fileSec>
             </x:context>
-            <x:expect label="choice, expan + abbr" xml:space="preserve"><pb facs="#facs_25" n="25"/><p facs="#facs_25_r1">
+            <x:expect label="choice, expan + abbr" xml:space="preserve"><pb facs="#facs_25" n="25" xml:id="img_0025" /><p facs="#facs_25_r1">
                 <lb facs="#facs_25_r1l1" n="N001"/>12.</p><p facs="#facs_25_r2">
                 <lb facs="#facs_25_r2l1" n="N001"/><choice><expan/><abbr>H&apos;r</abbr></choice>
                 <lb facs="#facs_25_line_1459841092982_10"
@@ -238,10 +239,11 @@
                 </ns3:fileSec>
             </x:context>
             <!-- TODO adjust to @when pending a decision -->
-            <x:expect label="date mit Attributen" xml:space="preserve"><pb facs="#facs_25" n="25"/><p facs="#facs_25_r4">
-                    <lb facs="#facs_25_r4l10" n="N010"/>vom <date
+            <x:expect label="date mit Attributen" xml:space="preserve"><pb facs="#facs_25" n="25" xml:id="img_0025" /><p facs="#facs_25_r4">
+                    <lb facs="#facs_25_r4l10" n="N010" />vom <date
                     Ratssitzungstermin="-" month="6" year="1792" day="8">8<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice>
-                    <choice><expan>vorigen Monats</expan><abbr>v. M.</abbr></choice></date> eine Feüersgefahr</p></x:expect>
+                    <choice><expan>vorigen Monats</expan><abbr>v. M.</abbr></choice></date> eine Feüersgefahr
+            <lb facs="#facs_25_r8l12" n="N013"/>vom <date>1<choice><expan/><abbr><hi rend="superscript:true;">t</hi></abbr></choice></date> und <choice><expan/><abbr><orgName>kreißämt.</orgName></abbr></choice> Inti¬</p></x:expect>
         </x:scenario>
         <x:scenario label="person, place, organization">
             <x:context mode="text">
@@ -256,7 +258,7 @@
                 </ns3:fileSec>
             </x:context>
             <!-- TODO adjust to rs pending a decision -->
-            <x:expect label="." xml:space="preserve"><pb facs="#facs_25" n="25"/><p facs="#facs_25_r2">
+            <x:expect label="." xml:space="preserve"><pb facs="#facs_25" n="25" xml:id="img_0025" /><p facs="#facs_25_r2">
                     <lb facs="#facs_25_r2l1" n="N001"/><choice><expan/><abbr>H&apos;r</abbr></choice>
                     <persName><choice><expan>Herr</expan><abbr>v̄</abbr></choice> Kuglern.</persName>
                 </p><p facs="#facs_25_r3">

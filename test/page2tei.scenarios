@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<serialized version="20.0" xml:space="preserve">
+<serialized version="20.1" xml:space="preserve">
 	<serializableOrderedMap>
 		<entry>
 			<String>scenarios</String>
@@ -12,7 +12,7 @@
 						<String></String>
 					</field>
 					<field name="buildFilePath">
-						<String>${frameworksDir}/xspec/build.xml</String>
+						<String>build.xml</String>
 					</field>
 					<field name="ditaParams">
 						<list>
@@ -47,7 +47,7 @@
 									<String>Cleans up all the intermediate files created by the unit process. Set in to false if you want to inspect these files.</String>
 								</field>
 								<field name="value">
-									<String>true</String>
+									<String>false</String>
 								</field>
 								<field name="defaultValue">
 									<null/>
@@ -218,16 +218,16 @@
 						<String></String>
 					</field>
 					<field name="workingDir">
-						<String>${pd}/test</String>
+						<String>${frameworksDir}/xspec/</String>
 					</field>
 					<field name="showConsoleAlways">
-						<Boolean>false</Boolean>
+						<Boolean>true</Boolean>
 					</field>
 					<field name="advancedOptionsMap">
 						<null/>
 					</field>
 					<field name="name">
-						<String>XSpec Test - in folder "test"</String>
+						<String>Run XSpec Test - Copy</String>
 					</field>
 					<field name="baseURL">
 						<null/>
@@ -313,6 +313,7 @@
 							<String>${oxygenHome}/lib/oxygenEclipse.jar</String>
 							<String>${oxygenHome}/lib/oxygenAuthorEclipse.jar</String>
 							<String>${oxygenHome}/lib/oxygenDeveloperEclipse.jar</String>
+							<String>${oxygenHome}/lib/oxygen-basic-utilities.jar</String>
 							<String>${oxygenHome}/lib/xml-apis.jar</String>
 							<String>${oxygenHome}/lib/resolver.jar</String>
 							<String>${oxygenHome}/lib/saxon9ee.jar</String>

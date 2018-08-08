@@ -13,8 +13,8 @@
                 version="3.0"
                 exclude-result-prefixes="pkg impl">
    <xsl:import href="file:/home/dario/eclipse-workspace/page2tei/page2tei-0.xsl"/>
-   <xsl:import href="file:/home/dario/eclipse/plugins/com.oxygenxml.editor_20.0.0.v2018042410/frameworks/xspec/src/compiler/generate-tests-utils.xsl"/>
-   <xsl:import href="file:/home/dario/eclipse/plugins/com.oxygenxml.editor_20.0.0.v2018042410/frameworks/xspec/src/schematron/sch-location-compare.xsl"/>
+   <xsl:import href="file:/home/dario/.p2/pool/plugins/com.oxygenxml.editor_20.1.0.v2018061313/frameworks/xspec/src/compiler/generate-tests-utils.xsl"/>
+   <xsl:import href="file:/home/dario/.p2/pool/plugins/com.oxygenxml.editor_20.1.0.v2018061313/frameworks/xspec/src/schematron/sch-location-compare.xsl"/>
    <xsl:namespace-alias stylesheet-prefix="__x" result-prefix="xsl"/>
    <xsl:variable name="x:stylesheet-uri"
                  as="xs:string"
@@ -28,7 +28,7 @@
          <xsl:value-of select="system-property('xsl:product-version')"/>
       </xsl:message>
       <xsl:result-document format="x:report">
-         <xsl:processing-instruction name="xml-stylesheet">type="text/xsl" href="file:/home/dario/eclipse/plugins/com.oxygenxml.editor_20.0.0.v2018042410/frameworks/xspec/src/compiler/format-xspec-report.xsl"</xsl:processing-instruction>
+         <xsl:processing-instruction name="xml-stylesheet">type="text/xsl" href="file:/home/dario/.p2/pool/plugins/com.oxygenxml.editor_20.1.0.v2018061313/frameworks/xspec/src/compiler/format-xspec-report.xsl"</xsl:processing-instruction>
          <x:report stylesheet="{$x:stylesheet-uri}" date="{current-dateTime()}">
             <xsl:call-template name="x:d5e2"/>
             <xsl:call-template name="x:d5e503"/>
@@ -129,7 +129,7 @@
       <xsl:message>.</xsl:message>
       <xsl:variable name="impl:expected-doc" as="document-node()">
          <xsl:document>
-            <pb facs="#facs_2" n="2"/>
+            <pb facs="#facs_2" xml:id="img_0002" n="2"/>
             <p facs="#facs_2_r_2_4">
                <xsl:text>
             </xsl:text>
@@ -430,7 +430,7 @@
       <xsl:message>.</xsl:message>
       <xsl:variable name="impl:expected-doc" as="document-node()">
          <xsl:document>
-            <pb facs="#facs_3" n="3"/>
+            <pb facs="#facs_3" xml:id="img_0003" n="3"/>
             <p facs="#facs_3_TextRegion_1501850337174_559">
                <xsl:text>
             </xsl:text>
@@ -815,7 +815,7 @@
       <xsl:message>.</xsl:message>
       <xsl:variable name="impl:expected-doc" as="document-node()">
          <xsl:document>
-            <pb facs="#facs_10" n="10"/>
+            <pb facs="#facs_10" n="10" xml:id="img_0010"/>
             <p facs="#facs_10_r_2_7">
                <xsl:text>
                 </xsl:text>
@@ -928,7 +928,7 @@
       <xsl:message>.</xsl:message>
       <xsl:variable name="impl:expected-doc" as="document-node()">
          <xsl:document>
-            <pb facs="#facs_7" n="7"/>
+            <pb facs="#facs_7" n="7" xml:id="img_0007"/>
             <p facs="#facs_7_TextRegion_1502873594420_703">
                <xsl:text>
             </xsl:text>
@@ -1075,7 +1075,7 @@
       <xsl:message>.</xsl:message>
       <xsl:variable name="impl:expected-doc" as="document-node()">
          <xsl:document>
-            <pb facs="#facs_2" n="2"/>
+            <pb facs="#facs_2" n="2" xml:id="img_0002"/>
             <p facs="#facs_2_r_1_7">
                <xsl:text>
             </xsl:text>
@@ -1115,7 +1115,7 @@
          <x:label>weitere Elemente</x:label>
          <xsl:call-template name="x:d5e525"/>
          <xsl:call-template name="x:d5e575"/>
-         <xsl:call-template name="x:d5e606"/>
+         <xsl:call-template name="x:d5e622"/>
       </x:scenario>
    </xsl:template>
    <xsl:template name="x:d5e525">
@@ -1181,7 +1181,7 @@
       <xsl:message>choice, expan + abbr</xsl:message>
       <xsl:variable name="impl:expected-doc" as="document-node()">
          <xsl:document>
-            <pb facs="#facs_25" n="25"/>
+            <pb facs="#facs_25" n="25" xml:id="img_0025"/>
             <p facs="#facs_25_r1">
                <xsl:text>
                 </xsl:text>
@@ -1317,7 +1317,7 @@
       <xsl:message>date mit Attributen</xsl:message>
       <xsl:variable name="impl:expected-doc" as="document-node()">
          <xsl:document>
-            <pb facs="#facs_25" n="25"/>
+            <pb facs="#facs_25" n="25" xml:id="img_0025"/>
             <p facs="#facs_25_r4">
                <xsl:text>
                     </xsl:text>
@@ -1346,7 +1346,31 @@
                      </abbr>
                   </choice>
                </date>
-               <xsl:text> eine Feüersgefahr</xsl:text>
+               <xsl:text> eine Feüersgefahr
+            </xsl:text>
+               <lb facs="#facs_25_r8l12" n="N013"/>
+               <xsl:text>vom </xsl:text>
+               <date>
+                  <xsl:text>1</xsl:text>
+                  <choice>
+                     <expan/>
+                     <abbr>
+                        <hi rend="superscript:true;">
+                           <xsl:text>t</xsl:text>
+                        </hi>
+                     </abbr>
+                  </choice>
+               </date>
+               <xsl:text> und </xsl:text>
+               <choice>
+                  <expan/>
+                  <abbr>
+                     <orgName>
+                        <xsl:text>kreißämt.</xsl:text>
+                     </orgName>
+                  </abbr>
+               </choice>
+               <xsl:text> Inti¬</xsl:text>
             </p>
          </xsl:document>
       </xsl:variable>
@@ -1366,7 +1390,7 @@
          </xsl:call-template>
       </x:test>
    </xsl:template>
-   <xsl:template name="x:d5e606">
+   <xsl:template name="x:d5e622">
       <xsl:message>..person, place, organization</xsl:message>
       <x:scenario>
          <x:label>person, place, organization</x:label>
@@ -1419,17 +1443,17 @@
             <xsl:with-param name="wrapper-name" select="'x:result'"/>
             <xsl:with-param name="wrapper-ns" select="'http://www.jenitennison.com/xslt/xspec'"/>
          </xsl:call-template>
-         <xsl:call-template name="x:d5e614">
+         <xsl:call-template name="x:d5e630">
             <xsl:with-param name="x:result" select="$x:result"/>
          </xsl:call-template>
       </x:scenario>
    </xsl:template>
-   <xsl:template name="x:d5e614">
+   <xsl:template name="x:d5e630">
       <xsl:param name="x:result" required="yes"/>
       <xsl:message>.</xsl:message>
       <xsl:variable name="impl:expected-doc" as="document-node()">
          <xsl:document>
-            <pb facs="#facs_25" n="25"/>
+            <pb facs="#facs_25" n="25" xml:id="img_0025"/>
             <p facs="#facs_25_r2">
                <xsl:text>
                     </xsl:text>

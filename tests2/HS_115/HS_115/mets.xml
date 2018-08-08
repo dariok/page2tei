@@ -48,7 +48,7 @@
                 <ns3:file ID="PAGEXML_25" SEQ="25" MIMETYPE="application/xml" CREATED="2018-05-17T14:37:25.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
                     <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="page/HS_115_25_object_128293.xml"/>
                 </ns3:file>
-                <ns3:file ID="PAGEXML_26" SEQ="26" MIMETYPE="application/xml" CREATED="2018-05-17T14:37:25.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
+                <!--<ns3:file ID="PAGEXML_26" SEQ="26" MIMETYPE="application/xml" CREATED="2018-05-17T14:37:25.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
                     <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="page/HS_115_26_object_128294.xml"/>
                 </ns3:file>
                 <ns3:file ID="PAGEXML_27" SEQ="27" MIMETYPE="application/xml" CREATED="2018-05-17T14:37:25.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
@@ -77,7 +77,7 @@
                 </ns3:file>
                 <ns3:file ID="PAGEXML_35" SEQ="35" MIMETYPE="application/xml" CREATED="2018-05-17T14:37:26.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
                     <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="page/HS_115_35_object_128303.xml"/>
-                </ns3:file>
+                </ns3:file>-->
             </ns3:fileGrp>
         </ns3:fileGrp>
     </ns3:fileSec>

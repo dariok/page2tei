@@ -21,6 +21,13 @@ NCSR LineSegmentationTool, v0.3.0 (17_3_2015)</Creator>
                     <Unicode>vom 8t v. M. eine Feüersgefahr</Unicode>
                 </TextEquiv>
             </TextLine>
+            <TextLine id="r8l12" custom="readingOrder {index:12;} date {offset:4; length:2;} abbrev {offset:5; length:1;} textStyle {offset:5; length:1;superscript:true;} abbrev {offset:11; length:9;} organization {offset:11; length:9;}">
+                <Coords points="1294,3641 1076,3649 1010,3677 961,3661 761,3651 656,3659 600,3704 590,3699 602,3673 602,3665 497,3696 481,3659 326,3695 226,3662 180,3706 176,3719 176,3728 177,3734 195,3760 476,3780 771,3755 850,3778 1089,3749 1145,3748 1160,3763 1266,3721 1353,3692 1354,3687 1353,3674 1299,3641 1295,3641"/>
+                <Baseline points="176,3747 372,3732 568,3730 764,3725 960,3718 1354,3692"/>
+                <TextEquiv>
+                    <Unicode>vom 1t und kreißämt. Inti¬</Unicode>
+                </TextEquiv>
+            </TextLine>
         </TextRegion>
     </Page>
 </PcGts>

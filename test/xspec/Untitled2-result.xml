@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="file:/home/dario/eclipse/plugins/com.oxygenxml.editor_20.0.0.v2018042410/frameworks/xspec/src/compiler/format-xspec-report.xsl"?>
+<?xml-stylesheet type="text/xsl" href="file:/home/dario/.p2/pool/plugins/com.oxygenxml.editor_20.1.0.v2018061313/frameworks/xspec/src/compiler/format-xspec-report.xsl"?>
 <x:report xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
           xmlns:xs="http://www.w3.org/2001/XMLSchema"
           xmlns:test="http://www.jenitennison.com/xslt/unit-test"
@@ -9,7 +9,7 @@
           xmlns:ns2="http://www.w3.org/1999/xlink"
           xmlns:ns3="http://www.loc.gov/METS/"
           stylesheet="file:/home/dario/eclipse-workspace/page2tei/page2tei-0.xsl"
-          date="2018-05-18T16:30:43.859+02:00">
+          date="2018-08-08T18:01:11.614+02:00">
    <x:scenario>
       <x:label>test 1 (WD)</x:label>
       <x:scenario>
@@ -44,7 +44,7 @@
             </ns3:structMap>
          </x:context>
          <x:result>
-            <pb facs="#facs_2" n="2"/>
+            <pb facs="#facs_2" n="2" xml:id="img_0002"/>
             <p facs="#facs_2_r_2_4">
                <test:ws xmlns:pkg="http://expath.org/ns/pkg">
             </test:ws>
@@ -102,7 +102,7 @@
          <x:test successful="true">
             <x:label>.</x:label>
             <x:expect>
-               <pb facs="#facs_2" n="2"/>
+               <pb facs="#facs_2" xml:id="img_0002" n="2"/>
                <p facs="#facs_2_r_2_4">
                   <test:ws xmlns:pkg="http://expath.org/ns/pkg">
             </test:ws>
@@ -192,7 +192,7 @@
             </ns3:structMap>
          </x:context>
          <x:result>
-            <pb facs="#facs_3" n="3"/>
+            <pb facs="#facs_3" n="3" xml:id="img_0003"/>
             <p facs="#facs_3_TextRegion_1501850337174_559">
                <test:ws xmlns:pkg="http://expath.org/ns/pkg">
             </test:ws>
@@ -250,7 +250,7 @@
          <x:test successful="true">
             <x:label>.</x:label>
             <x:expect>
-               <pb facs="#facs_3" n="3"/>
+               <pb facs="#facs_3" xml:id="img_0003" n="3"/>
                <p facs="#facs_3_TextRegion_1501850337174_559">
                   <test:ws xmlns:pkg="http://expath.org/ns/pkg">
             </test:ws>
@@ -347,7 +347,7 @@
             </ns3:structMap>
          </x:context>
          <x:result>
-            <pb facs="#facs_10" n="10"/>
+            <pb facs="#facs_10" n="10" xml:id="img_0010"/>
             <p facs="#facs_10_r_2_7">
                <test:ws xmlns:pkg="http://expath.org/ns/pkg">
             </test:ws>
@@ -363,7 +363,7 @@
          <x:test successful="true">
             <x:label>.</x:label>
             <x:expect>
-               <pb facs="#facs_10" n="10"/>
+               <pb facs="#facs_10" n="10" xml:id="img_0010"/>
                <p facs="#facs_10_r_2_7">
                   <test:ws xmlns:pkg="http://expath.org/ns/pkg">
                 </test:ws>
@@ -406,7 +406,7 @@
             </ns3:fileSec>
          </x:context>
          <x:result>
-            <pb facs="#facs_7" n="7"/>
+            <pb facs="#facs_7" n="7" xml:id="img_0007"/>
             <p facs="#facs_7_TextRegion_1502873594420_703">
                <test:ws xmlns:pkg="http://expath.org/ns/pkg">
             </test:ws>
@@ -442,7 +442,7 @@
          <x:test successful="true">
             <x:label>.</x:label>
             <x:expect>
-               <pb facs="#facs_7" n="7"/>
+               <pb facs="#facs_7" n="7" xml:id="img_0007"/>
                <p facs="#facs_7_TextRegion_1502873594420_703">
                   <test:ws xmlns:pkg="http://expath.org/ns/pkg">
             </test:ws>
@@ -501,7 +501,7 @@
          </ns3:fileSec>
       </x:context>
       <x:result>
-         <pb facs="#facs_2" n="2"/>
+         <pb facs="#facs_2" n="2" xml:id="img_0002"/>
          <p facs="#facs_2_r_1_7">
             <test:ws xmlns:pkg="http://expath.org/ns/pkg">
             </test:ws>
@@ -513,7 +513,7 @@
       <x:test successful="true">
          <x:label>.</x:label>
          <x:expect>
-            <pb facs="#facs_2" n="2"/>
+            <pb facs="#facs_2" n="2" xml:id="img_0002"/>
             <p facs="#facs_2_r_1_7">
                <test:ws xmlns:pkg="http://expath.org/ns/pkg">
             </test:ws>
@@ -548,7 +548,7 @@
             </ns3:fileSec>
          </x:context>
          <x:result>
-            <pb facs="#facs_25" n="25"/>
+            <pb facs="#facs_25" n="25" xml:id="img_0025"/>
             <p facs="#facs_25_r1">
                <test:ws xmlns:pkg="http://expath.org/ns/pkg">
             </test:ws>
@@ -584,7 +584,7 @@
          <x:test successful="true">
             <x:label>choice, expan + abbr</x:label>
             <x:expect>
-               <pb facs="#facs_25" n="25"/>
+               <pb facs="#facs_25" n="25" xml:id="img_0025"/>
                <p facs="#facs_25_r1">
                   <test:ws xmlns:pkg="http://expath.org/ns/pkg">
                 </test:ws>
@@ -642,7 +642,7 @@
             </ns3:fileSec>
          </x:context>
          <x:result>
-            <pb facs="#facs_25" n="25"/>
+            <pb facs="#facs_25" n="25" xml:id="img_0025"/>
             <p facs="#facs_25_r4">
                <test:ws xmlns:pkg="http://expath.org/ns/pkg">
             </test:ws>
@@ -657,12 +657,25 @@
                      <expan>vorigen Monats</expan>
                      <abbr>v. M.</abbr>
                   </choice>
-               </date> eine Feüersgefahr</p>
+               </date> eine Feüersgefahr
+            <lb facs="#facs_25_r8l12" n="N013"/>vom <date>1<choice>
+                     <expan/>
+                     <abbr>
+                        <hi rend="superscript:true;">t</hi>
+                     </abbr>
+                  </choice>
+               </date> und <choice>
+                  <expan/>
+                  <abbr>
+                     <orgName>kreißämt.</orgName>
+                     <orgName/>
+                  </abbr>
+               </choice> Inti¬<orgName/> Inti¬</p>
          </x:result>
-         <x:test successful="true">
+         <x:test successful="false">
             <x:label>date mit Attributen</x:label>
             <x:expect>
-               <pb facs="#facs_25" n="25"/>
+               <pb facs="#facs_25" n="25" xml:id="img_0025"/>
                <p facs="#facs_25_r4">
                   <test:ws xmlns:pkg="http://expath.org/ns/pkg">
                     </test:ws>
@@ -678,7 +691,19 @@
                         <expan>vorigen Monats</expan>
                         <abbr>v. M.</abbr>
                      </choice>
-                  </date> eine Feüersgefahr</p>
+                  </date> eine Feüersgefahr
+            <lb facs="#facs_25_r8l12" n="N013"/>vom <date>1<choice>
+                        <expan/>
+                        <abbr>
+                           <hi rend="superscript:true;">t</hi>
+                        </abbr>
+                     </choice>
+                  </date> und <choice>
+                     <expan/>
+                     <abbr>
+                        <orgName>kreißämt.</orgName>
+                     </abbr>
+                  </choice> Inti¬</p>
             </x:expect>
          </x:test>
       </x:scenario>
@@ -704,7 +729,7 @@
             </ns3:fileSec>
          </x:context>
          <x:result>
-            <pb facs="#facs_25" n="25"/>
+            <pb facs="#facs_25" n="25" xml:id="img_0025"/>
             <p facs="#facs_25_r2">
                <test:ws xmlns:pkg="http://expath.org/ns/pkg">
             </test:ws>
@@ -755,7 +780,7 @@
          <x:test successful="true">
             <x:label>.</x:label>
             <x:expect>
-               <pb facs="#facs_25" n="25"/>
+               <pb facs="#facs_25" n="25" xml:id="img_0025"/>
                <p facs="#facs_25_r2">
                   <test:ws xmlns:pkg="http://expath.org/ns/pkg">
                     </test:ws>
