@@ -442,6 +442,10 @@
                     <xsl:if test="$rs">
                         <xsl:attribute name="type">place</xsl:attribute>
                     </xsl:if>
+                    <xsl:if test="$custom('placeName') != ''">
+                        <xsl:attribute name="key" select="replace($custom('placeName'), '\\u0020', ' ')" />
+                    </xsl:if>
+                    
                     <xsl:call-template name="elem">
                         <xsl:with-param name="elem" select="$elem" />
                     </xsl:call-template>

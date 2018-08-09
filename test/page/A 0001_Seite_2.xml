@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>TRP
+NCSR LineSegmentationTool, v0.3.0 (17_3_2015)</Creator>
+        <Created>2016-12-06T01:40:00</Created>
+        <LastChange>2018-07-20T15:24:58.151+02:00</LastChange>
+        <TranskribusMetadata docId="8496" pageId="258583" pageNr="2" tsid="4655744" status="IN_PROGRESS" userId="383" imgUrl="https://dbis-thure.uibk.ac.at/f/Get?id=TUCQVKBNAZJRAKNTKTEFPZJN&amp;fileType=view" xmlUrl="https://dbis-thure.uibk.ac.at/f/Get?id=OFZOOYXMKMOTDXGJPNRHKRVE" imageId="242898"/>
+    </Metadata>
+    <Page imageFilename="A 0001_Seite_2.jpg" imageWidth="2632" imageHeight="4156">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1533812482199" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="region_1480062023146_1"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion id="region_1480062023146_1" custom="readingOrder {index:0;}">
+            <Coords points="260,351 2593,351 2593,534 260,534"/>
+            <TextLine id="r1052" custom="readingOrder {index:5;} place {offset:22; length:9;placeName:(Wien-)Simmering;}">
+                <Coords points="1798,3856 351,3872 312,3918 312,3923 312,3925 316,3930 791,3936 1277,3936 2020,3928 2513,3919 2529,3900 2530,3894 2530,3890 2442,3860 2369,3860 2363,3859 2241,3859 2230,3858 1808,3858 1799,3856"/>
+                <Baseline points="312,3916 681,3912 1050,3907 1419,3900 1788,3898 2530,3895"/>
+                <TextEquiv>
+                    <Unicode>en Oeconomie-Hofes in Simmering überwachen könnte, während die Akademie</Unicode>
+                </TextEquiv>
+            </TextLine>
+        </TextRegion>
+    </Page>
+</PcGts>

@@ -293,5 +293,22 @@
             <lb facs="#facs_1_r1016" n="N004"/><choice><expan>Der</expan><abbr>"</abbr></choice> zweite Secretär <rs type="person" key="Wolf, Ferdinand">Wolf</rs></p><p facs="#facs_1_region_1479997987283_34">
             <lb facs="#facs_1_r1018" n="N001"/>die wirklichen Mitglieder <rs type="person" key="Prechtl, von, Johann Joseph">Prechtl</rs></p></x:expect>
         </x:scenario>
+        <x:scenario label="place (1)">
+            <x:context mode="text">
+                <ns3:fileSec>
+                    <ns3:fileGrp ID="MASTER">
+                        <ns3:fileGrp ID="PAGEXML">
+                            <ns3:file ID="PAGEXML_1" SEQ="1" MIMETYPE="application/xml" CREATED="2018-08-09T13:01:22.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
+                                <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="page/A 0001_Seite_2.xml"/>
+                            </ns3:file>
+                        </ns3:fileGrp>
+                    </ns3:fileGrp>
+                </ns3:fileSec>
+            </x:context>
+            <x:expect label="name within rs">
+                <pb facs="#facs_1" n="1" xml:id="img_0001" /><p facs="#facs_1_region_1480062023146_1">
+                    <lb facs="#facs_1_r1052" n="N006" />en Oeconomie-Hofes in <rs type="place"
+                        key="(Wien-)Simmering">Simmering</rs> überwachen könnte, während die Akademie</p></x:expect>
+        </x:scenario>
     </x:scenario>
 </x:description>
