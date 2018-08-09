@@ -15,6 +15,11 @@
     
     <xsl:output indent="1" />
     
+    <xd:doc>
+        <xd:desc>Whether to create `rs type="..."` for person/place/org (default) or `persName` etc. (false())</xd:desc>
+    </xd:doc>
+    <xsl:param name="rs" select="true()" />
+    
     <xd:doc scope="stylesheet">
         <xd:desc>
             <xd:p><xd:b>Author:</xd:b> Dario Kampkaspar, dario.kampkaspar@oeaw.ac.at</xd:p>
@@ -417,28 +422,37 @@
                 </date>
             </xsl:when>
             <xsl:when test="@type = 'person'">
-                <!-- TODO use of tei:rs would be more appropriate here; change after dicussion -->
-                <persName>
+                <xsl:variable name="elName" select="if ($rs) then 'rs' else 'persName'" />
+                <xsl:element name="{$elName}">
+                    <xsl:if test="$rs">
+                        <xsl:attribute name="type">person</xsl:attribute>
+                    </xsl:if>
                     <xsl:call-template name="elem">
                         <xsl:with-param name="elem" select="$elem" />
                     </xsl:call-template>
-                </persName>
+                </xsl:element>
             </xsl:when>
             <xsl:when test="@type = 'place'">
-                <!-- TODO use of tei:rs would be more appropriate here; change after dicussion -->
-                <placeName>
+                <xsl:variable name="elName" select="if ($rs) then 'rs' else 'placeName'" />
+                <xsl:element name="{$elName}">
+                    <xsl:if test="$rs">
+                        <xsl:attribute name="type">place</xsl:attribute>
+                    </xsl:if>
                     <xsl:call-template name="elem">
                         <xsl:with-param name="elem" select="$elem" />
                     </xsl:call-template>
-                </placeName>
+                </xsl:element>
             </xsl:when>
             <xsl:when test="@type = 'organization'">
-                <!-- TODO use of tei:rs would be more appropriate here; change after dicussion -->
-                <orgName>
+                <xsl:variable name="elName" select="if ($rs) then 'rs' else 'orgName'" />
+                <xsl:element name="{$elName}">
+                    <xsl:if test="$rs">
+                        <xsl:attribute name="type">org</xsl:attribute>
+                    </xsl:if>
                     <xsl:call-template name="elem">
                         <xsl:with-param name="elem" select="$elem" />
                     </xsl:call-template>
-                </orgName>
+                </xsl:element>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:element name="{@type}">
