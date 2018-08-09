@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>TRP
+NCSR LineSegmentationTool, v0.3.0 (17_3_2015)</Creator>
+        <Created>2016-12-06T01:39:46</Created>
+        <LastChange>2018-07-20T15:28:05.675+02:00</LastChange>
+        <TranskribusMetadata docId="8496" pageId="258582" pageNr="1" tsid="4655755" status="IN_PROGRESS" userId="383" imgUrl="https://dbis-thure.uibk.ac.at/f/Get?id=ATQGAGMYUTQSIWNIVYZYHHSI&amp;fileType=view" xmlUrl="https://dbis-thure.uibk.ac.at/f/Get?id=AGQHPDVLTZEPYMWQKAAISOFW" imageId="242897"/>
+    </Metadata>
+    <Page imageFilename="A 0001_Seite_1.jpg" imageWidth="2632" imageHeight="4156">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1533812482065" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="region_1479996533458_8"/>
+                <RegionRefIndexed index="1" regionRef="region_1479996502881_4"/>
+                <RegionRefIndexed index="2" regionRef="region_1479996509199_5"/>
+                <RegionRefIndexed index="3" regionRef="region_1479996516875_6"/>
+                <RegionRefIndexed index="4" regionRef="region_1479996526172_7"/>
+                <RegionRefIndexed index="5" regionRef="region_1479997987283_34"/>
+                <RegionRefIndexed index="6" regionRef="region_1479996566873_10"/>
+                <RegionRefIndexed index="7" regionRef="region_1479996574704_11"/>
+                <RegionRefIndexed index="8" regionRef="region_1479998237369_49"/>
+                <RegionRefIndexed index="9" regionRef="region_1479998978731_61"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion id="region_1479996533458_8" custom="readingOrder {index:0;}">
+            <Coords points="87,40 367,40 367,178 87,178"/>
+            <TextLine id="r1003" custom="readingOrder {index:0;} textStyle {offset:0; length:5;underlined:true; fontSize:0.0; kerning:0;}">
+                <Coords points="324,84 184,147 183,147 161,146 109,158 105,167 105,171 135,173 340,173 344,172 348,141 336,88 325,84"/>
+                <Baseline points="105,170 348,168"/>
+                <TextEquiv>
+                    <Unicode>A. 1.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>A. 1.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion id="region_1479996502881_4" custom="readingOrder {index:1;}">
+            <Coords points="93,186 2447,186 2447,375 93,375"/>
+            <TextLine id="r1005" custom="readingOrder {index:0;}">
+                <Coords points="340,217 211,222 91,305 92,356 100,376 2111,374 2392,352 2403,332 2406,300 2406,292 2405,287 2397,276 2068,237 1743,237 1706,236 1641,236 1632,235 1117,236 1109,236 341,217"/>
+                <Baseline points="91,330 476,327 862,330 1247,328 1633,329 2406,322"/>
+                <TextEquiv>
+                    <Unicode>Kaiserliche Akademie der Wissenschaften.</Unicode>
+                </TextEquiv>
+            </TextLine>
+        </TextRegion>
+        <TextRegion id="region_1479996509199_5" custom="readingOrder {index:2;}">
+            <Coords points="923,433 1576,433 1576,614 923,614"/>
+            <TextLine id="r1008" custom="readingOrder {index:0;}">
+                <Coords points="1479,523 1279,524 1141,546 1131,546 1072,545 1055,550 1054,550 1050,546 1049,546 1039,545 979,564 975,576 975,581 975,583 985,588 1511,585 1544,584 1550,583 1556,558 1556,553 1526,524 1515,523 1480,523"/>
+                <Baseline points="975,586 1071,572 1168,581 1264,578 1361,576 1556,577"/>
+                <TextEquiv>
+                    <Unicode>Protokoll</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>Protokoll</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion id="region_1479996516875_6" custom="readingOrder {index:3;}">
+            <Coords points="357,598 1951,598 1951,789 357,789"/>
+            <TextLine id="r1010" custom="readingOrder {index:0;}">
+                <Coords points="1821,602 482,609 368,661 367,664 368,669 632,694 1281,703 1849,703 1860,701 1890,692 1907,653 1907,651 1831,603 1822,602"/>
+                <Baseline points="367,663 623,664 879,662 1135,665 1391,660 1907,658"/>
+                <TextEquiv>
+                    <Unicode>der außerordentlichen Gesammtsitzung</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r1011" custom="readingOrder {index:1;}">
+                <Coords points="1185,702 991,708 794,715 746,742 746,748 750,754 980,787 1625,785 1695,755 1699,717 1699,715 1694,707 1670,707 1661,703 1198,703 1186,702"/>
+                <Baseline points="746,744 904,746 1063,751 1221,747 1380,746 1699,748"/>
+                <TextEquiv>
+                    <Unicode>am 27. November 1847</Unicode>
+                </TextEquiv>
+            </TextLine>
+        </TextRegion>
+        <TextRegion id="region_1479996526172_7" custom="readingOrder {index:4;}">
+            <Coords points="223,835 2464,835 2464,1191 223,1191"/>
+            <TextLine id="r1013" custom="readingOrder {index:0;} person {offset:34; length:19;firstname:Joseph; lastname:Hammer-Purgstall,\u0020von;} abbrev {offset:34; length:2;}">
+                <Coords points="809,836 301,857 249,906 248,917 248,919 255,929 849,945 1369,948 1474,933 1482,933 2181,952 2415,935 2435,908 2436,901 2434,881 2431,873 2347,847 2242,847 2183,836 810,836"/>
+                <Baseline points="248,913 612,909 976,913 1340,908 1704,906 2436,910"/>
+                <TextEquiv>
+                    <Unicode>Anwesende: Der Präsident Freiherr v. Hammer-Purgstall	</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r1014" custom="readingOrder {index:1;} abbrev {offset:0; length:1;expansion:Der;} person {offset:17; length:11;firstname:Andreas; lastname:Baumgartner,\u0020von;}">
+                <Coords points="1471,934 1369,949 1364,949 1220,948 1219,948 1187,947 1076,947 1071,946 883,946 726,973 715,990 715,999 716,1003 733,1020 964,1030 1568,1020 1580,1020 1635,1034 1910,1013 1953,980 1955,973 1955,967 1952,961 1818,941 1592,941 1589,941 1472,934"/>
+                <Baseline points="715,999 921,994 1127,993 1333,992 1539,988 1955,987"/>
+                <TextEquiv>
+                    <Unicode>" Vice-Präsident Baumgartner</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r1015" custom="readingOrder {index:2;} abbrev {offset:0; length:1;expansion:Der;} person {offset:19; length:16;firstname:Andreas; lastname:Ettingshausen,\u0020von;} abbrev {offset:19; length:2;expansion:von;}">
+                <Coords points="1563,1021 1303,1027 864,1036 267,1085 265,1090 265,1102 265,1104 268,1109 704,1118 1554,1108 1701,1114 2056,1099 2080,1066 2080,1061 2080,1059 2077,1054 1854,1025 1635,1035 1630,1035 1580,1021 1564,1021"/>
+                <Baseline points="724,1078 789,1078 869,1078 1171,1079 1473,1073 2080,1076"/>
+                <TextEquiv>
+                    <Unicode>" General-Secretär v. Ettingshausen</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="r1016" custom="readingOrder {index:3;} abbrev {offset:0; length:1;expansion:Der;} person {offset:18; length:4;firstname:Ferdinand; lastname:Wolf;}">
+                <Coords points="1552,1111 1329,1113 990,1119 738,1136 723,1156 722,1160 724,1170 724,1171 824,1192 1561,1192 1617,1192 1667,1174 1684,1115 1684,1113 1673,1112 1578,1112 1574,1111 1553,1111"/>
+                <Baseline points="722,1165 882,1163 1042,1162 1202,1164 1362,1165 1684,1152"/>
+                <TextEquiv>
+                    <Unicode>" zweite Secretär Wolf</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>Anwesende: Der Präsident Freiherr v. Hammer-Purgstall	
+" Vice-Präsident Baumgartner
+" General-Secretär v. Ettingshausen
+" zweite Secretär Wolf</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion id="region_1479997987283_34" custom="readingOrder {index:5;}">
+            <Coords points="197,1175 2577,1175 2577,2050 197,2050"/>
+            <TextLine id="r1018" custom="readingOrder {index:0;} person {offset:26; length:7;firstname:Johann\u0020Joseph; lastname:Prechtl,\u0020von;}">
+                <Coords points="831,1173 375,1183 246,1238 241,1249 241,1253 244,1257 612,1285 964,1279 1544,1250 1784,1265 1809,1195 1809,1193 1800,1183 1696,1183 1629,1173 832,1173"/>
+                <Baseline points="241,1247 502,1246 763,1248 1024,1246 1285,1241 1809,1240"/>
+                <TextEquiv>
+                    <Unicode>die wirklichen Mitglieder Prechtl	</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>Es sind im Ganzen drei und dreißig Gesuche um Bedienstun-
+gen bei der Akademie eingegangen.
+Hiervon fallen jedoch sogleich sieben Gesuche weg, nämlich
+1. Das Gesuch des Doctors der Medicin Roman Botzenhart um die
+Stelle des Actuars, welches der Bittwerber mittels einer späteren Eingabe
+wieder zurücknahm.
+2. Das an Seine kaiserl. Hoheit den durchlauchtigsten Herrn Erzherzog Curator
+gerichtete Pro Memoria des Rechnungs-Officials der k.k. Gefällen- und Domänen-
+Hofbuchhaltung Moritz Burger, welcher um die Stelle eines Buchhalters der Aka-
+demie ansucht, von welcher Stelle keine Rede ist.
+3. Das Gesuch des Rechnungs-Officials der k.k. Hofstaats-Buchhaltung Franz Srbik,
+welcher sich erbietet, das Rechnungs- oder Registratur Geschäft der Akademie als
+Nebengeschäft in seinen außerämtlichen Stunden zu versehen.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+    </Page>
+</PcGts>

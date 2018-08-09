@@ -427,6 +427,10 @@
                     <xsl:if test="$rs">
                         <xsl:attribute name="type">person</xsl:attribute>
                     </xsl:if>
+                    <xsl:if test="$custom('lastname') != '' or $custom('firstname') != ''">
+                        <xsl:attribute name="cRef" select="replace($custom('lastname'), '\\u0020', '_') || ',_' || replace($custom('firstname'), '\\u0020', '_')" />
+                    </xsl:if>
+                    
                     <xsl:call-template name="elem">
                         <xsl:with-param name="elem" select="$elem" />
                     </xsl:call-template>
