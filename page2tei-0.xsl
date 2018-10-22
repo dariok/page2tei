@@ -27,9 +27,9 @@
             <xd:p></xd:p>
             <xd:p>This stylesheet, when applied to mets.xml of the PAGE output, will create (valid) TEI</xd:p>
             <xd:p></xd:p>
-            <xd:p><xd:b>Contributer</xd:b> Matthias Boenig, boenig@bbaw.de</xd:p>
+            <xd:p><xd:b>Contributor</xd:b> Matthias Boenig, boenig@bbaw.de</xd:p>
             <xd:p>OCR-D, Berlin-Brandenburg Academy of Sciences and Humanities http://ocr-d.de/eng</xd:p>
-            <xd:p>expand the origin XSL-Stylesheet to specific elements based on the @typing of the text region</xd:p>
+            <xd:p>extend the original XSL-Stylesheet by specific elements based on the @typing of the text region</xd:p>
         </xd:desc>
     </xd:doc>
     
