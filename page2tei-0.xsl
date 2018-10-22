@@ -26,6 +26,10 @@
             <xd:p>Austrian Centre for Digital Humanities http://acdh.oeaw.ac.at</xd:p>
             <xd:p></xd:p>
             <xd:p>This stylesheet, when applied to mets.xml of the PAGE output, will create (valid) TEI</xd:p>
+            <xd:p></xd:p>
+            <xd:p><xd:b>Contributer</xd:b> Matthias Boenig, boenig@bbaw.de</xd:p>
+            <xd:p>OCR-D, Berlin-Brandenburg Academy of Sciences and Humanities http://ocr-d.de/eng</xd:p>
+            <xd:p>expand the origin XSL-Stylesheet to specific elements based on the @typing of the text region</xd:p>
         </xd:desc>
     </xd:doc>
     
@@ -63,10 +67,19 @@
                     <xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID='PAGEXML']/mets:file" mode="facsimile" />
                 </facsimile>
             </xsl:if>
-            <text>
-                <body>
-                    <xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID='PAGEXML']/mets:file" mode="text" />
-                </body>
+            <text><body>
+             <xsl:variable name="make_div">
+                <div>
+                  <xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID='PAGEXML']/mets:file" mode="text" />
+                </div>
+             </xsl:variable>
+             <xsl:message select="$make_div"></xsl:message>
+              <xsl:for-each-group select="$make_div//*[local-name() = 'div']/*" group-starting-with="*[local-name() = 'head']" >
+               <div xmlns="http://www.tei-c.org/ns/1.0">
+                <xsl:copy-of select="current-group()"/>
+               </div>
+              </xsl:for-each-group>
+             </body>
             </text>
         </TEI>
     </xsl:template>
@@ -234,14 +247,72 @@
     </xsl:template>
     
     <xd:doc>
-        <xd:desc>create p per TextRegion</xd:desc>
+     <xd:desc>
+      <xd:p>create specific elements based on the @typing of the text region</xd:p>
+      <xd:p>PAGE labels for text region see: https://www.primaresearch.org/tools/PAGELibraries
+       caption observed 
+       header observed 
+       footer observed 
+       page-number observed 
+       drop-capital ignored
+       credit ignored
+       floating ignored
+       signature-mark observed 
+       catch-word observed 
+       marginalia observed 
+       footnote observed 
+       footnote-continued
+       endnote ignored
+       TOC-entry ignored
+       list-label ignored
+       other observed
+      </xd:p></xd:desc>
         <xd:param name="numCurr"/>
     </xd:doc>
-    <xsl:template match="p:TextRegion" mode="text">
+     <xsl:template match="p:TextRegion" mode="text">
         <xsl:param name="numCurr" tunnel="true" />
-        <p facs="#facs_{$numCurr}_{@id}">
-            <xsl:apply-templates select="p:TextLine" />
-        </p>
+     <xsl:choose>
+      <xsl:when test="@type = 'heading'">
+        <head facs="#facs_{$numCurr}_{@id}">
+        <xsl:apply-templates select="p:TextLine" />
+       </head>
+      </xsl:when>
+      <xsl:when test="@type = 'caption'">
+       <figure>
+        <head facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></head>
+       </figure>
+      </xsl:when>
+      <xsl:when test="@type = 'header'">
+       <fw type="header" place="top" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></fw>
+      </xsl:when>
+      <xsl:when test="@type = 'footer'">
+       <fw type="header" place="bottom" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></fw>
+      </xsl:when>
+      <xsl:when test="@type = 'catch-word'">
+       <fw type="catch" place="bottom" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></fw>
+      </xsl:when>
+      <xsl:when test="@type = 'signature-mark'">
+       <fw place="bottom" type="sig" facs="#facs_{$numCurr}_{@id}">
+        <xsl:apply-templates select="p:TextLine" />
+       </fw>
+      </xsl:when>
+      <xsl:when test="@type = 'marginalia'">
+       <note place="[direction]" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></note>
+      </xsl:when>
+      <xsl:when test="@type = 'footnote'">
+       <note place="foot" n="[footnote reference]" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></note>
+      </xsl:when>
+      <xsl:when test="@type = 'other'">
+       <p facs="#facs_{$numCurr}_{@id}">
+        <xsl:apply-templates select="p:TextLine" />
+       </p>
+      </xsl:when>
+      <xsl:otherwise>
+       <p facs="#facs_{$numCurr}_{@id}">
+        <xsl:apply-templates select="p:TextLine" />
+       </p>
+      </xsl:otherwise>
+     </xsl:choose>
     </xsl:template>
     
     <xd:doc>
