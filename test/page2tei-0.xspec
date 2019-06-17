@@ -312,7 +312,7 @@
         </x:scenario>
     </x:scenario>
     
-    <!--<x:scenario label="continued">
+    <x:scenario label="continued">
         <x:call template="continuation">
             <x:param name="context">
                 <p facs="#facs_2_r1" xml:space="preserve">
@@ -382,5 +382,5 @@
                     <lb facs="#facs_2_r1l30" n="N030"/>demischer Druckschriften von der
                     <lb facs="#facs_2_r1l31" n="N031"/>Akademie zur Disposition zu er-
                     <lb facs="#facs_2_r1l32" n="N032"/>halten.</x:expect>
-    </x:scenario>-->
+    </x:scenario>
 </x:description>

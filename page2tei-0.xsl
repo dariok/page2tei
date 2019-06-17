@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:math="http://www.w3.org/2005/xpath-functions/math"
     xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
     xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
     xmlns:mets="http://www.loc.gov/METS/"
     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -138,7 +138,7 @@
         <xd:desc>Apply by-page</xd:desc>
     </xd:doc>
     <xsl:template match="mets:file" mode="text">
-        <xsl:variable name="file" select="document(mets:FLocat/@xlink:href, /)"/>
+        <xsl:variable name="file" select="document(mets:FLocat/@xlink:href, .)"/>
         <xsl:variable name="numCurr" select="@SEQ"/>
         
         <xsl:apply-templates select="$file//p:Page" mode="text">
@@ -239,29 +239,48 @@
     </xd:doc>
     <xsl:template match="p:TextRegion" mode="text">
         <xsl:param name="numCurr" tunnel="true" />
-        <xsl:variable name="content">
+        <xsl:variable name="tei">
             <xsl:apply-templates select="p:TextLine" />
         </xsl:variable>
         <p facs="#facs_{$numCurr}_{@id}">
             <xsl:call-template name="continuation">
-                <xsl:with-param name="context" select="$content" />
+                <xsl:with-param name="context" select="$tei" />
             </xsl:call-template>
+<!--            <xsl:sequence select="$tei"></xsl:sequence>-->
         </p>
     </xsl:template>
+    <xd:doc>
+        <xd:desc>
+            Combine taggings marked with “continued” – cf. https://github.com/dariok/page2tei/issues/10
+            Thanks to @thodel for reporting.
+        </xd:desc>
+        <xd:param name="context" />
+    </xd:doc>
     <xsl:template name="continuation">
         <xsl:param name="context" />
-        <xsl:for-each select="node()">
+        <xsl:for-each select="$context/node()">
             <xsl:choose>
-                <xsl:when test="@continued and following-sibling::node()[1][self::tei:lb]">
+                <xsl:when test="@continued
+                    and following-sibling::*[1][self::tei:lb]
+                    and string-length(normalize-space(following-sibling::node()[1])) = 0">
                     <xsl:element name="{local-name()}">
-                        <xsl:sequence select="@*[not(local-name='continued')]" />
+                        <xsl:sequence select="@*[not(local-name() = 'continued')]" />
                         <xsl:sequence select="node()" />
-                        <xsl:sequence select="following-sibling::*[1]" />
+                        <lb>
+                            <xsl:sequence select="following-sibling::*[1]/@*" />
+                            <xsl:attribute name="break" select="'no'" />
+                        </lb>
                         <xsl:sequence select="following-sibling::*[2]/node()" />
                     </xsl:element>
                 </xsl:when>
-                <xsl:when test="(self::tei:lb and preceding-sibling::*/@continued)
-                    or (@continued and preceding-sibling::*[1][self::tei:lb]" />
+                <xsl:when test="(self::tei:lb
+                        and preceding-sibling::*[1]/@continued
+                        and string-length(normalize-space(preceding-sibling::node()[1])) = 0
+                        and following-sibling::node()[1]/@continued)
+                    or (@continued and preceding-sibling::node()[1][self::tei:lb])
+                    or (normalize-space() = ''
+                        and preceding-sibling::node()[1]/@continued
+                        and following-sibling::node()[1][self::tei:lb])" />
                 <xsl:otherwise>
                     <xsl:sequence select="." />
                 </xsl:otherwise>
