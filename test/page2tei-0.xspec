@@ -15,7 +15,7 @@
                     <ns3:fileGrp ID="PAGEXML">
                         <ns3:file />
                         <ns3:file ID="PAGEXML_2" SEQ="2" MIMETYPE="application/xml" CREATED="2018-04-09T14:31:22.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
-                            <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="page/0002_17320213-001.xml"/>
+                            <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/0002_17320213-001.xml"/>
                         </ns3:file>
                     </ns3:fileGrp>
                 </ns3:fileGrp>
@@ -63,7 +63,7 @@
                         <ns3:file />
                         <ns3:file />
                         <ns3:file ID="PAGEXML_3" SEQ="3" MIMETYPE="application/xml" CREATED="2018-04-09T14:31:22.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
-                            <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="page/0003_17320213-002.xml"/>
+                            <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/0003_17320213-002.xml"/>
                         </ns3:file>
                     </ns3:fileGrp>
                 </ns3:fileGrp>
@@ -139,7 +139,7 @@
                         <ns3:file />
                         <ns3:file />
                         <ns3:file ID="PAGEXML_10" SEQ="10" MIMETYPE="application/xml" CREATED="2018-04-11T18:00:20.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
-                            <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="page/0010_17320524-009.xml"/>
+                            <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/0010_17320524-009.xml"/>
                         </ns3:file>
                     </ns3:fileGrp>
                 </ns3:fileGrp>
@@ -170,7 +170,7 @@
                         <ns3:file />
                         <ns3:file />
                         <ns3:file ID="PAGEXML_7" SEQ="7" MIMETYPE="application/xml" CREATED="2018-05-02T14:57:16.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
-                            <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="page/0007_17410624-006.xml"/>
+                            <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/0007_17410624-006.xml"/>
                         </ns3:file>
                     </ns3:fileGrp>
                 </ns3:fileGrp>
@@ -195,7 +195,7 @@
                     <ns3:fileGrp ID="PAGEXML">
                         <ns3:file />
                         <ns3:file ID="PAGEXML_2" SEQ="2" MIMETYPE="application/xml" CREATED="2018-05-17T15:08:03.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
-                            <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="page/1518862020bsb10358355-2.xml"/>
+                            <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/1518862020bsb10358355-2.xml"/>
                         </ns3:file>
                     </ns3:fileGrp>
                 </ns3:fileGrp>
@@ -212,7 +212,7 @@
                     <ns3:fileGrp ID="MASTER">
                         <ns3:fileGrp ID="PAGEXML">
                             <ns3:file ID="PAGEXML_25" SEQ="25" MIMETYPE="application/xml" CREATED="2018-05-17T14:37:25.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
-                                <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="page/HS_115_25_object_128293-1.xml"/>
+                                <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/HS_115_25_object_128293-1.xml"/>
                             </ns3:file>
                         </ns3:fileGrp>
                     </ns3:fileGrp>
@@ -232,7 +232,7 @@
                     <ns3:fileGrp ID="MASTER">
                         <ns3:fileGrp ID="PAGEXML">
                             <ns3:file ID="PAGEXML_25" SEQ="25" MIMETYPE="application/xml" CREATED="2018-05-17T14:37:25.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
-                                <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="page/HS_115_25_object_128293-2.xml"/>
+                                <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/HS_115_25_object_128293-2.xml"/>
                             </ns3:file>
                         </ns3:fileGrp>
                     </ns3:fileGrp>
@@ -251,7 +251,7 @@
                     <ns3:fileGrp ID="MASTER">
                         <ns3:fileGrp ID="PAGEXML">
                             <ns3:file ID="PAGEXML_25" SEQ="25" MIMETYPE="application/xml" CREATED="2018-05-17T14:37:25.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
-                                <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="page/HS_115_25_object_128293-3.xml"/>
+                                <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/HS_115_25_object_128293-3.xml"/>
                             </ns3:file>
                         </ns3:fileGrp>
                     </ns3:fileGrp>
@@ -275,7 +275,7 @@
                     <ns3:fileGrp ID="MASTER">
                         <ns3:fileGrp ID="PAGEXML">
                             <ns3:file ID="PAGEXML_1" SEQ="1" MIMETYPE="application/xml" CREATED="2018-08-09T13:01:22.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
-                                <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="page/A 0001_Seite_1.xml"/>
+                                <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/A 0001_Seite_1.xml"/>
                             </ns3:file>
                         </ns3:fileGrp>
                     </ns3:fileGrp>
@@ -299,7 +299,7 @@
                     <ns3:fileGrp ID="MASTER">
                         <ns3:fileGrp ID="PAGEXML">
                             <ns3:file ID="PAGEXML_1" SEQ="1" MIMETYPE="application/xml" CREATED="2018-08-09T13:01:22.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
-                                <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="page/A 0001_Seite_2.xml"/>
+                                <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/A 0001_Seite_2.xml"/>
                             </ns3:file>
                         </ns3:fileGrp>
                     </ns3:fileGrp>
@@ -311,4 +311,76 @@
                         key="(Wien-)Simmering">Simmering</rs> überwachen könnte, während die Akademie</p></x:expect>
         </x:scenario>
     </x:scenario>
+    
+    <!--<x:scenario label="continued">
+        <x:call template="continuation">
+            <x:param name="context">
+                <p facs="#facs_2_r1" xml:space="preserve">
+                    <lb facs="#facs_2_r1l1" n="N001"/><hi rend="underlined:true; fontSize:0.0; kerning:0;">Verhandlungen.</hi>
+                    <lb facs="#facs_2_r1l2" n="N002"/>Der hohe <rs type="person" key="Bach, von, Alexander">Curator</rs> der kaisl.
+                    <lb facs="#facs_2_r1l3" n="N003"/>Akademie genehmigt mit Erlaß
+                    <lb facs="#facs_2_r1l4" n="N004"/>vom 24. März <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice> die Abhaltung
+                    <lb facs="#facs_2_r1l5" n="N005"/>einer feierlichen Sitzung am 30. Mai <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice>
+                    <lb facs="#facs_2_r1l6" n="N006"/>Der <rs type="person" key="Schrötter, von, Anton">General-Secretär</rs> bringt
+                    <lb facs="#facs_2_r1l7" n="N007"/>die Modalitäten der feierlichen Sit-
+                    <lb facs="#facs_2_r1l8" n="N008"/>zung zur Sprache und bemerkt,
+                    <lb facs="#facs_2_r1l9" n="N009"/>daß der 30. Mai auf den Pfingst-
+                    <lb facs="#facs_2_r1l10" n="N010"/>samstag fällt.
+                    <lb facs="#facs_2_r1l11" n="N011"/>Die Akademie entscheidet sich
+                    <lb facs="#facs_2_r1l12" n="N012"/>für den 29. Mai und der Herr
+                    <lb facs="#facs_2_r1l13" n="N013"/><rs type="person" key="Baumgartner, von, Andreas">Präsident</rs> übernimmt es, die Erlaub-
+                    <lb facs="#facs_2_r1l14" n="N014"/>niß hiezu beim Herrn <rs type="person" key="Bach, von, Alexander" continued="true">Cura-</rs>
+                    <lb facs="#facs_2_r1l15" n="N015"/><rs type="person" key="Bach, von, Alexander" continued="true">tor</rs> auszuwirken. In Betreff
+                    <lb facs="#facs_2_r1l16" n="N016"/>der Locales entscheidet sich die
+                    <lb facs="#facs_2_r1l17" n="N017"/>Akademie für den Landständi-
+                    <lb facs="#facs_2_r1l18" n="N018"/>schen Saal, für dessen Einräu-
+                    <lb facs="#facs_2_r1l19" n="N019"/>mung seiner Zeit mit Geneh-
+                    <lb facs="#facs_2_r1l20" n="N020"/>migung des Herrn <rs type="person" key="Bach, von, Alexander">Curator</rs>s
+                    <lb facs="#facs_2_r1l21" n="N021"/>die nöthigen Schritte zu machen
+                    <lb facs="#facs_2_r1l22" n="N022"/>sind.
+                    <lb facs="#facs_2_r1l23" n="N023"/>Das hohe <choice><expan>kaiserlich-königliche</expan><abbr>k. k.</abbr></choice> Ministerium
+                    <lb facs="#facs_2_line_1542113768058_321" n="N024"/>129.
+                    <lb facs="#facs_2_r1l25" n="N025"/>für Cultus <choice><expan>etcetera</expan><abbr>etc.</abbr></choice> hat mit Erlaß
+                    <lb facs="#facs_2_r1l26" n="N026"/>vom 19. Jänner <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice> Zahl 9197/164 den
+                    <lb facs="#facs_2_r1l27" n="N027"/>Wunsch ausgedrückt, zur weite-
+                    <lb facs="#facs_2_r1l28" n="N028"/>ren Betheilung von Lehran-
+                    <lb facs="#facs_2_r1l29" n="N029"/>stalten noch eine Anzahl aka-
+                    <lb facs="#facs_2_r1l30" n="N030"/>demischer Druckschriften von der
+                    <lb facs="#facs_2_r1l31" n="N031"/>Akademie zur Disposition zu er-
+                    <lb facs="#facs_2_r1l32" n="N032"/>halten.</p>
+            </x:param>
+        </x:call>
+        <x:expect label="continued rs" xml:space="preserve">
+                    <lb facs="#facs_2_r1l1" n="N001"/><hi rend="underlined:true; fontSize:0.0; kerning:0;">Verhandlungen.</hi>
+                    <lb facs="#facs_2_r1l2" n="N002"/>Der hohe <rs type="person" key="Bach, von, Alexander">Curator</rs> der kaisl.
+                    <lb facs="#facs_2_r1l3" n="N003"/>Akademie genehmigt mit Erlaß
+                    <lb facs="#facs_2_r1l4" n="N004"/>vom 24. März <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice> die Abhaltung
+                    <lb facs="#facs_2_r1l5" n="N005"/>einer feierlichen Sitzung am 30. Mai <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice>
+                    <lb facs="#facs_2_r1l6" n="N006"/>Der <rs type="person" key="Schrötter, von, Anton">General-Secretär</rs> bringt
+                    <lb facs="#facs_2_r1l7" n="N007"/>die Modalitäten der feierlichen Sit-
+                    <lb facs="#facs_2_r1l8" n="N008"/>zung zur Sprache und bemerkt,
+                    <lb facs="#facs_2_r1l9" n="N009"/>daß der 30. Mai auf den Pfingst-
+                    <lb facs="#facs_2_r1l10" n="N010"/>samstag fällt.
+                    <lb facs="#facs_2_r1l11" n="N011"/>Die Akademie entscheidet sich
+                    <lb facs="#facs_2_r1l12" n="N012"/>für den 29. Mai und der Herr
+                    <lb facs="#facs_2_r1l13" n="N013"/><rs type="person" key="Baumgartner, von, Andreas">Präsident</rs> übernimmt es, die Erlaub-
+                    <lb facs="#facs_2_r1l14" n="N014"/>niß hiezu beim Herrn <rs type="person" key="Bach, von, Alexander">Cura-<lb facs="#facs_2_r1l15" n="N015" break="no"/>tor</rs> auszuwirken. In Betreff
+                    <lb facs="#facs_2_r1l16" n="N016"/>der Locales entscheidet sich die
+                    <lb facs="#facs_2_r1l17" n="N017"/>Akademie für den Landständi-
+                    <lb facs="#facs_2_r1l18" n="N018"/>schen Saal, für dessen Einräu-
+                    <lb facs="#facs_2_r1l19" n="N019"/>mung seiner Zeit mit Geneh-
+                    <lb facs="#facs_2_r1l20" n="N020"/>migung des Herrn <rs type="person" key="Bach, von, Alexander">Curator</rs>s
+                    <lb facs="#facs_2_r1l21" n="N021"/>die nöthigen Schritte zu machen
+                    <lb facs="#facs_2_r1l22" n="N022"/>sind.
+                    <lb facs="#facs_2_r1l23" n="N023"/>Das hohe <choice><expan>kaiserlich-königliche</expan><abbr>k. k.</abbr></choice> Ministerium
+                    <lb facs="#facs_2_line_1542113768058_321" n="N024"/>129.
+                    <lb facs="#facs_2_r1l25" n="N025"/>für Cultus <choice><expan>etcetera</expan><abbr>etc.</abbr></choice> hat mit Erlaß
+                    <lb facs="#facs_2_r1l26" n="N026"/>vom 19. Jänner <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice> Zahl 9197/164 den
+                    <lb facs="#facs_2_r1l27" n="N027"/>Wunsch ausgedrückt, zur weite-
+                    <lb facs="#facs_2_r1l28" n="N028"/>ren Betheilung von Lehran-
+                    <lb facs="#facs_2_r1l29" n="N029"/>stalten noch eine Anzahl aka-
+                    <lb facs="#facs_2_r1l30" n="N030"/>demischer Druckschriften von der
+                    <lb facs="#facs_2_r1l31" n="N031"/>Akademie zur Disposition zu er-
+                    <lb facs="#facs_2_r1l32" n="N032"/>halten.</x:expect>
+    </x:scenario>-->
 </x:description>
