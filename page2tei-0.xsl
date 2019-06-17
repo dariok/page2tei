@@ -13,7 +13,7 @@
     exclude-result-prefixes="#all"
     version="3.0">
     
-    <xsl:output indent="1" />
+    <xsl:output indent="0" />
     
     <xd:doc>
         <xd:desc>Whether to create `rs type="..."` for person/place/org (default) or `persName` etc. (false())</xd:desc>
@@ -239,9 +239,34 @@
     </xd:doc>
     <xsl:template match="p:TextRegion" mode="text">
         <xsl:param name="numCurr" tunnel="true" />
-        <p facs="#facs_{$numCurr}_{@id}">
+        <xsl:variable name="content">
             <xsl:apply-templates select="p:TextLine" />
+        </xsl:variable>
+        <p facs="#facs_{$numCurr}_{@id}">
+            <xsl:call-template name="continuation">
+                <xsl:with-param name="context" select="$content" />
+            </xsl:call-template>
         </p>
+    </xsl:template>
+    <xsl:template name="continuation">
+        <xsl:param name="context" />
+        <xsl:for-each select="node()">
+            <xsl:choose>
+                <xsl:when test="@continued and following-sibling::node()[1][self::tei:lb]">
+                    <xsl:element name="{local-name()}">
+                        <xsl:sequence select="@*[not(local-name='continued')]" />
+                        <xsl:sequence select="node()" />
+                        <xsl:sequence select="following-sibling::*[1]" />
+                        <xsl:sequence select="following-sibling::*[2]/node()" />
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="(self::tei:lb and preceding-sibling::*/@continued)
+                    or (@continued and preceding-sibling::*[1][self::tei:lb]" />
+                <xsl:otherwise>
+                    <xsl:sequence select="." />
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:for-each>
     </xsl:template>
     
     <xd:doc>
@@ -429,6 +454,9 @@
                     </xsl:if>
                     <xsl:if test="$custom('lastname') != '' or $custom('firstname') != ''">
                         <xsl:attribute name="key" select="replace($custom('lastname'), '\\u0020', ' ') || ', ' || replace($custom('firstname'), '\\u0020', ' ')" />
+                    </xsl:if>
+                    <xsl:if test="$custom('continued')">
+                        <xsl:attribute name="continued" select="true()" />
                     </xsl:if>
                     
                     <xsl:call-template name="elem">
