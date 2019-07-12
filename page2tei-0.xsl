@@ -230,7 +230,7 @@
         <xsl:param name="numCurr" tunnel="true" />
         
         <pb facs="#facs_{$numCurr}" n="{$numCurr}" xml:id="img_{format-number($numCurr, '0000')}"/>
-        <xsl:apply-templates select="p:TextRegion | p:SeparatorRegion | p:GraphicRegion" mode="text" />
+        <xsl:apply-templates select="p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion" mode="text" />
     </xsl:template>
     
     <xd:doc>
@@ -249,6 +249,55 @@
 <!--            <xsl:sequence select="$tei"></xsl:sequence>-->
         </p>
     </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>create a table</xd:desc>
+        <xd:param name="numCurr"/>
+    </xd:doc>
+    <xsl:template match="p:TableRegion" mode="text">
+        <xsl:param name="numCurr" tunnel="true" />
+        <table facs="#facs_{$numCurr}_{@id}">
+            <xsl:for-each-group select="p:TableCell" group-by="@row">
+                <xsl:sort select="@col" />
+                <row n="{@row}">
+                    <xsl:apply-templates select="current-group()" />
+                </row>
+            </xsl:for-each-group>
+        </table>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>create table cells</xd:desc>
+        <xd:param name="numCurr"/>
+    </xd:doc>
+    <xsl:template match="p:TableCell">
+        <xsl:param name="numCurr" tunnel="true" />
+        <cell xml:id="#facs_{$numCurr}_{@id}" n="{@col}">
+            <xsl:apply-templates select="@rowSpan | @colSpan" />
+            <xsl:attribute name="rend">
+                <xsl:value-of select="number(xs:boolean(@leftBorderVisible))" />
+                <xsl:value-of select="number(xs:boolean(@topBorderVisible))" />
+                <xsl:value-of select="number(xs:boolean(@rightBorderVisible))" />
+                <xsl:value-of select="number(xs:boolean(@bottomBorderVisible))" />
+            </xsl:attribute>
+            <xsl:apply-templates select="p:TextLine" />
+        </cell>
+    </xsl:template>
+    <xsl:template match="@rowSpan">
+        <xsl:choose>
+            <xsl:when test=". &gt; 1">
+                <xsl:attribute name="rows" select="." />
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    <xsl:template match="@colSpan">
+        <xsl:choose>
+            <xsl:when test=". &gt; 1">
+                <xsl:attribute name="cols" select="." />
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    
     <xd:doc>
         <xd:desc>
             Combine taggings marked with “continued” – cf. https://github.com/dariok/page2tei/issues/10
@@ -278,7 +327,8 @@
                         and string-length(normalize-space(preceding-sibling::node()[1])) = 0
                         and following-sibling::node()[1]/@continued)
                     or (@continued and preceding-sibling::node()[1][self::tei:lb])
-                    or (normalize-space() = ''
+                    or (self::text()
+                        and normalize-space() = ''
                         and preceding-sibling::node()[1]/@continued
                         and following-sibling::node()[1][self::tei:lb])" />
                 <xsl:otherwise>
