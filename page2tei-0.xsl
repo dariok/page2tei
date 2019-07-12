@@ -221,6 +221,10 @@
         </zone>
     </xsl:template>
     
+    <xd:doc>
+        <xd:desc>Create the zone for a table</xd:desc>
+        <xd:param name="numCurr">Numerus currens of the current page</xd:param>
+    </xd:doc>
     <xsl:template match="p:TableRegion" mode="facsimile">
         <xsl:param name="numCurr" tunnel="true" />
         
@@ -265,9 +269,13 @@
     </xd:doc>
     <xsl:template match="p:TableRegion" mode="text">
         <xsl:param name="numCurr" tunnel="true" />
+        <xsl:text>
+            </xsl:text>
         <table facs="#facs_{$numCurr}_{@id}">
             <xsl:for-each-group select="p:TableCell" group-by="@row">
                 <xsl:sort select="@col" />
+                <xsl:text>
+                </xsl:text>
                 <row n="{@row}">
                     <xsl:apply-templates select="current-group()" />
                 </row>
@@ -281,6 +289,8 @@
     </xd:doc>
     <xsl:template match="p:TableCell">
         <xsl:param name="numCurr" tunnel="true" />
+        <xsl:text>
+                    </xsl:text>
         <cell xml:id="#facs_{$numCurr}_{@id}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan" />
             <xsl:attribute name="rend">
@@ -292,6 +302,9 @@
             <xsl:apply-templates select="p:TextLine" />
         </cell>
     </xsl:template>
+    <xd:doc>
+        <xd:desc>rowspan -> rows</xd:desc>
+    </xd:doc>
     <xsl:template match="@rowSpan">
         <xsl:choose>
             <xsl:when test=". &gt; 1">
@@ -299,6 +312,9 @@
             </xsl:when>
         </xsl:choose>
     </xsl:template>
+    <xd:doc>
+        <xd:desc>colspan -> cols</xd:desc>
+    </xd:doc>
     <xsl:template match="@colSpan">
         <xsl:choose>
             <xsl:when test=". &gt; 1">
