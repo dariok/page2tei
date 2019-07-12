@@ -170,7 +170,7 @@
             lrx="{@imageWidth}" lry="{@imageHeight}"
             xml:id="facs_{$numCurr}">
             <graphic url="{encode-for-uri(substring-before($imageName, '.'))||'.'||$type}" width="{@imageWidth}px" height="{@imageHeight}px"/>
-            <xsl:apply-templates select="p:PrintSpace | p:TextRegion | p:SeparatorRegion | p:GraphicRegion" mode="facsimile"/>
+            <xsl:apply-templates select="p:PrintSpace | p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion" mode="facsimile"/>
         </surface>
     </xsl:template>
     
@@ -218,6 +218,15 @@
             </xsl:text>
             </xsl:if>
             
+        </zone>
+    </xsl:template>
+    
+    <xsl:template match="p:TableRegion" mode="facsimile">
+        <xsl:param name="numCurr" tunnel="true" />
+        
+        <zone points="{p:Coords/@points}" rendition="Table">
+            <xsl:attribute name="xml:id"><xsl:value-of select="'facs_'||$numCurr||'_'||@id"/></xsl:attribute>
+            <xsl:apply-templates select="p:TableCell//p:TextLine" mode="facsimile" />
         </zone>
     </xsl:template>
     
