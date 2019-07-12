@@ -383,4 +383,19 @@
                     <lb facs="#facs_2_r1l31" n="N031"/>Akademie zur Disposition zu er-
                     <lb facs="#facs_2_r1l32" n="N032"/>halten.</x:expect>
     </x:scenario>
+    
+    <x:scenario label="table">
+        <x:context mode="text">
+            <ns3:fileSec>
+                <ns3:fileGrp ID="MASTER">
+                    <ns3:fileGrp ID="PAGEXML">
+                        <ns3:file ID="PAGEXML_9" SEQ="9" MIMETYPE="application/xml" CREATED="2019-07-12T16:10:56.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
+                            <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/17160815-008.xml"/>
+                        </ns3:file>
+                    </ns3:fileGrp>
+                </ns3:fileGrp>
+            </ns3:fileSec>
+        </x:context>
+        <x:expect label="table2" href="page/table.xml" select="*:body/node()" xml:space="preserve" />
+    </x:scenario>
 </x:description>

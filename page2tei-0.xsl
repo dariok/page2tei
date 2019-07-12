@@ -291,7 +291,7 @@
         <xsl:param name="numCurr" tunnel="true" />
         <xsl:text>
                     </xsl:text>
-        <cell xml:id="#facs_{$numCurr}_{@id}" n="{@col}">
+        <cell facs="#facs_{$numCurr}_{@id}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan" />
             <xsl:attribute name="rend">
                 <xsl:value-of select="number(xs:boolean(@leftBorderVisible))" />
