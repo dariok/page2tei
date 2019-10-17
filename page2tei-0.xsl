@@ -183,7 +183,7 @@
             lrx="{@imageWidth}" lry="{@imageHeight}"
             xml:id="facs_{$numCurr}">
             <graphic url="{encode-for-uri(substring-before($imageName, '.'))||'.'||$type}" width="{@imageWidth}px" height="{@imageHeight}px"/>
-            <xsl:apply-templates select="p:PrintSpace | p:TextRegion | p:SeparatorRegion | p:GraphicRegion" mode="facsimile"/>
+            <xsl:apply-templates select="p:PrintSpace | p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion" mode="facsimile"/>
         </surface>
     </xsl:template>
     
@@ -191,7 +191,7 @@
         <xd:desc>create the zones within facsimile/surface</xd:desc>
         <xd:param name="numCurr">Numerus currens of the current page</xd:param>
     </xd:doc>
-    <xsl:template match="p:PrintSpace | p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TextLine" mode="facsimile">
+    <xsl:template match="p:PrintSpace | p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TextLine | p:TableRegion" mode="facsimile">
         <xsl:param name="numCurr" tunnel="true" />
         
         <xsl:variable name="renditionValue">
@@ -200,6 +200,7 @@
                 <xsl:when test="local-name() = 'SeparatorRegion'">Separator</xsl:when>
                 <xsl:when test="local-name() = 'GraphicRegion'">Graphic</xsl:when>
                 <xsl:when test="local-name() = 'TextLine'">Line</xsl:when>
+                <xsl:when test="local-name() = 'TableRegion'">TableRegion</xsl:when>
                 <xsl:otherwise>printspace</xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
@@ -242,8 +243,8 @@
     <xsl:template match="p:Page" mode="text">
         <xsl:param name="numCurr" tunnel="true" />
         
-        <pb facs="#facs_{$numCurr}" n="{$numCurr}" xml:id="img_{format-number($numCurr, '0000')}"/>
-        <xsl:apply-templates select="p:TextRegion | p:SeparatorRegion | p:GraphicRegion" mode="text" />
+        <pb facs="#f{format-number($numCurr, '0000')}" n="{$numCurr}" xml:id="img_{format-number($numCurr, '0000')}"/>
+        <xsl:apply-templates select="p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion" mode="text" />
     </xsl:template>
     
     <xd:doc>
@@ -261,7 +262,7 @@
        catch-word observed 
        marginalia observed 
        footnote observed 
-       footnote-continued
+       footnote-continued observed
        endnote ignored
        TOC-entry ignored
        list-label ignored
@@ -302,6 +303,9 @@
       <xsl:when test="@type = 'footnote'">
        <note place="foot" n="[footnote reference]" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></note>
       </xsl:when>
+         <xsl:when test="@type = 'footnote-continued'">
+             <note place="foot" n="[footnote-continued reference]" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></note>
+      </xsl:when>
       <xsl:when test="@type = 'other'">
        <p facs="#facs_{$numCurr}_{@id}">
         <xsl:apply-templates select="p:TextLine" />
@@ -314,6 +318,69 @@
       </xsl:otherwise>
      </xsl:choose>
     </xsl:template>
+
+
+    <xd:doc>
+        <xd:desc>create a table</xd:desc>
+        <xd:param name="numCurr"/>
+    </xd:doc>
+    <xsl:template match="p:TableRegion" mode="text">
+        <xsl:param name="numCurr" tunnel="true" />
+        <xsl:text>
+            </xsl:text>
+        <table facs="#facs_{$numCurr}_{@id}">
+            <xsl:for-each-group select="p:TableCell" group-by="@row">
+                <xsl:sort select="@col" />
+                <xsl:text>
+                </xsl:text>
+                <row n="{@row}">
+                    <xsl:apply-templates select="current-group()" />
+                </row>
+            </xsl:for-each-group>
+        </table>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>create table cells</xd:desc>
+        <xd:param name="numCurr"/>
+    </xd:doc>
+    <xsl:template match="p:TableCell">
+        <xsl:param name="numCurr" tunnel="true" />
+        <xsl:text>
+                    </xsl:text>
+        <cell facs="#facs_{$numCurr}_{@id}" n="{@col}">
+            <xsl:apply-templates select="@rowSpan | @colSpan" />
+            <xsl:attribute name="rend">
+                <xsl:value-of select="number(xs:boolean(@leftBorderVisible))" />
+                <xsl:value-of select="number(xs:boolean(@topBorderVisible))" />
+                <xsl:value-of select="number(xs:boolean(@rightBorderVisible))" />
+                <xsl:value-of select="number(xs:boolean(@bottomBorderVisible))" />
+            </xsl:attribute>
+            <xsl:apply-templates select="p:TextLine" />
+        </cell>
+    </xsl:template>
+    <xd:doc>
+        <xd:desc>rowspan -> rows</xd:desc>
+    </xd:doc>
+    <xsl:template match="@rowSpan">
+        <xsl:choose>
+            <xsl:when test=". &gt; 1">
+                <xsl:attribute name="rows" select="." />
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    <xd:doc>
+        <xd:desc>colspan -> cols</xd:desc>
+    </xd:doc>
+    <xsl:template match="@colSpan">
+        <xsl:choose>
+            <xsl:when test=". &gt; 1">
+                <xsl:attribute name="cols" select="." />
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+
+
     
     <xd:doc>
         <xd:desc>Converts one line of PAGE to one line of TEI</xd:desc>
