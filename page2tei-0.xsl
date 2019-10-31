@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:math="http://www.w3.org/2005/xpath-functions/math"
     xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
     xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
     xmlns:mets="http://www.loc.gov/METS/"
     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -13,7 +13,7 @@
     exclude-result-prefixes="#all"
     version="3.0">
     
-    <xsl:output indent="1" />
+    <xsl:output indent="0" />
     
     <xd:doc>
         <xd:desc>Whether to create `rs type="..."` for person/place/org (default) or `persName` etc. (false())</xd:desc>
@@ -151,7 +151,7 @@
         <xd:desc>Apply by-page</xd:desc>
     </xd:doc>
     <xsl:template match="mets:file" mode="text">
-        <xsl:variable name="file" select="document(mets:FLocat/@xlink:href, /)"/>
+        <xsl:variable name="file" select="document(mets:FLocat/@xlink:href, .)"/>
         <xsl:variable name="numCurr" select="@SEQ"/>
         
         <xsl:apply-templates select="$file//p:Page" mode="text">
@@ -236,13 +236,25 @@
     </xsl:template>
     
     <xd:doc>
+        <xd:desc>Create the zone for a table</xd:desc>
+        <xd:param name="numCurr">Numerus currens of the current page</xd:param>
+    </xd:doc>
+    <xsl:template match="p:TableRegion" mode="facsimile">
+        <xsl:param name="numCurr" tunnel="true" />
+        
+        <zone points="{p:Coords/@points}" rendition="Table">
+            <xsl:attribute name="xml:id"><xsl:value-of select="'facs_'||$numCurr||'_'||@id"/></xsl:attribute>
+            <xsl:apply-templates select="p:TableCell//p:TextLine" mode="facsimile" />
+        </zone>
+    </xsl:template>
+    
+    <xd:doc>
         <xd:desc>create the page content</xd:desc>
         <xd:param name="numCurr">Numerus currens of the current page</xd:param>
     </xd:doc>
     <!-- Templates for PAGE, text -->
     <xsl:template match="p:Page" mode="text">
         <xsl:param name="numCurr" tunnel="true" />
-        
         <pb facs="#f{format-number($numCurr, '0000')}" n="{$numCurr}" xml:id="img_{format-number($numCurr, '0000')}"/>
         <xsl:apply-templates select="p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion" mode="text" />
     </xsl:template>
@@ -318,8 +330,7 @@
       </xsl:otherwise>
      </xsl:choose>
     </xsl:template>
-
-
+    
     <xd:doc>
         <xd:desc>create a table</xd:desc>
         <xd:param name="numCurr"/>
@@ -379,8 +390,46 @@
             </xsl:when>
         </xsl:choose>
     </xsl:template>
-
-
+    
+    <xd:doc>
+        <xd:desc>
+            Combine taggings marked with “continued” – cf. https://github.com/dariok/page2tei/issues/10
+            Thanks to @thodel for reporting.
+        </xd:desc>
+        <xd:param name="context" />
+    </xd:doc>
+    <xsl:template name="continuation">
+        <xsl:param name="context" />
+        <xsl:for-each select="$context/node()">
+            <xsl:choose>
+                <xsl:when test="@continued
+                    and following-sibling::*[1][self::tei:lb]
+                    and string-length(normalize-space(following-sibling::node()[1])) = 0">
+                    <xsl:element name="{local-name()}">
+                        <xsl:sequence select="@*[not(local-name() = 'continued')]" />
+                        <xsl:sequence select="node()" />
+                        <lb>
+                            <xsl:sequence select="following-sibling::*[1]/@*" />
+                            <xsl:attribute name="break" select="'no'" />
+                        </lb>
+                        <xsl:sequence select="following-sibling::*[2]/node()" />
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="(self::tei:lb
+                        and preceding-sibling::*[1]/@continued
+                        and string-length(normalize-space(preceding-sibling::node()[1])) = 0
+                        and following-sibling::node()[1]/@continued)
+                    or (@continued and preceding-sibling::node()[1][self::tei:lb])
+                    or (self::text()
+                        and normalize-space() = ''
+                        and preceding-sibling::node()[1]/@continued
+                        and following-sibling::node()[1][self::tei:lb])" />
+                <xsl:otherwise>
+                    <xsl:sequence select="." />
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:for-each>
+    </xsl:template>
     
     <xd:doc>
         <xd:desc>Converts one line of PAGE to one line of TEI</xd:desc>
@@ -567,6 +616,9 @@
                     </xsl:if>
                     <xsl:if test="$custom('lastname') != '' or $custom('firstname') != ''">
                         <xsl:attribute name="key" select="replace($custom('lastname'), '\\u0020', ' ') || ', ' || replace($custom('firstname'), '\\u0020', ' ')" />
+                    </xsl:if>
+                    <xsl:if test="$custom('continued')">
+                        <xsl:attribute name="continued" select="true()" />
                     </xsl:if>
                     
                     <xsl:call-template name="elem">
