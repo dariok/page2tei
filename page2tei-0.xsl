@@ -294,10 +294,10 @@
         <cell facs="#facs_{$numCurr}_{@id}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan" />
             <xsl:attribute name="rend">
-                <xsl:value-of select="number(xs:boolean(@leftBorderVisible))" />
-                <xsl:value-of select="number(xs:boolean(@topBorderVisible))" />
-                <xsl:value-of select="number(xs:boolean(@rightBorderVisible))" />
-                <xsl:value-of select="number(xs:boolean(@bottomBorderVisible))" />
+                <xsl:value-of select="number((xs:boolean(@leftBorderVisible), false())[1])" />
+                <xsl:value-of select="number((xs:boolean(@topBorderVisible), false())[1])" />
+                <xsl:value-of select="number((xs:boolean(@rightBorderVisible), false())[1])" />
+                <xsl:value-of select="number((xs:boolean(@bottomBorderVisible), false())[1])" />
             </xsl:attribute>
             <xsl:apply-templates select="p:TextLine" />
         </cell>
