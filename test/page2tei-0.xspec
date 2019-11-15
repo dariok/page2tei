@@ -219,12 +219,12 @@
                 </ns3:fileSec>
             </x:context>
             <x:expect label="choice, expan + abbr" xml:space="preserve"><pb facs="#facs_25" n="25" xml:id="img_0025" /><p facs="#facs_25_r1">
-                <lb facs="#facs_25_r1l1" n="N001"/>12.</p><p facs="#facs_25_r2">
+                <lb facs="#facs_25_r1l1" n="N001"/>12.</p><head facs="#facs_25_r2">
                 <lb facs="#facs_25_r2l1" n="N001"/><choice><expan/><abbr>H&apos;r</abbr></choice>
                 <lb facs="#facs_25_line_1459841092982_10"
                     n="N003" />getragen werden, die in <choice><expan>den</expan><abbr>d</abbr></choice>
                 <lb facs="#facs_25_r4l10" n="N010"/>vom 8<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice>
-                    <choice><expan>vorigen Monats</expan><abbr>v. M.</abbr></choice> eine Feüersgefahr</p></x:expect>
+                    <choice><expan>vorigen Monats</expan><abbr>v. M.</abbr></choice> eine Feüersgefahr</head></x:expect>
         </x:scenario>
         <x:scenario label="date">
             <x:context mode="text">
@@ -257,11 +257,11 @@
                     </ns3:fileGrp>
                 </ns3:fileSec>
             </x:context>
-            <x:expect label="." xml:space="preserve"><pb facs="#facs_25" n="25" xml:id="img_0025" /><p facs="#facs_25_r2">
+            <x:expect label="." xml:space="preserve"><pb facs="#facs_25" n="25" xml:id="img_0025" /><head facs="#facs_25_r2">
                     <lb facs="#facs_25_r2l1" n="N001"/><choice><expan/><abbr>H&apos;r</abbr></choice>
                     <rs type="person"><choice><expan>Herr</expan><abbr>v̄</abbr></choice> Kuglern.</rs>
-                </p><p facs="#facs_25_r3">
-                    <lb facs="#facs_25_r3l1" n="N001"/><choice><expan>Numero</expan><abbr>N<hi rend="superscript:true;">o</hi></abbr></choice> 786.</p><p facs="#facs_25_r4">
+                </head><head facs="#facs_25_r3">
+                    <lb facs="#facs_25_r3l1" n="N001"/><choice><expan>Numero</expan><abbr>N<hi rend="superscript:true;">o</hi></abbr></choice> 786.</head><p facs="#facs_25_r4">
                     <lb facs="#facs_25_r4l1" n="N001"/>Remisschreiben des <rs type="org">Frauenklosters</rs>
                     <lb facs="#facs_25_r4l2" n="N002"/><rs type="org"><choice><expan>Sankt</expan><abbr>St.</abbr></choice> Elisabeth zu <rs type="place">Brixen</rs></rs> mit dem 
             <lb facs="#facs_25_r4l3" n="N003"/><choice><expan>Ansuchen</expan><abbr>Ansuch</abbr></choice>, daß der auf den <choice><expan>alldaigen</expan><abbr>alldaig</abbr></choice></p></x:expect>
