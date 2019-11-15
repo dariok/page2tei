@@ -73,7 +73,7 @@
                   <xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID='PAGEXML']/mets:file" mode="text" />
                 </div>
              </xsl:variable>
-             <xsl:message select="$make_div"></xsl:message>
+<!--             <xsl:message select="$make_div"></xsl:message>-->
               <xsl:for-each-group select="$make_div//*[local-name() = 'div']/*" group-starting-with="*[local-name() = 'head']" >
                <div xmlns="http://www.tei-c.org/ns/1.0">
                 <xsl:copy-of select="current-group()"/>
@@ -191,16 +191,16 @@
         <xd:desc>create the zones within facsimile/surface</xd:desc>
         <xd:param name="numCurr">Numerus currens of the current page</xd:param>
     </xd:doc>
-    <xsl:template match="p:PrintSpace | p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TextLine | p:TableRegion" mode="facsimile">
+    <xsl:template match="p:PrintSpace | p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TextLine" mode="facsimile">
         <xsl:param name="numCurr" tunnel="true" />
         
         <xsl:variable name="renditionValue">
             <xsl:choose>
+                <xsl:when test="local-name(parent::*) = 'TableCell'">TableCell</xsl:when>
                 <xsl:when test="local-name() = 'TextRegion'">TextRegion</xsl:when>
                 <xsl:when test="local-name() = 'SeparatorRegion'">Separator</xsl:when>
                 <xsl:when test="local-name() = 'GraphicRegion'">Graphic</xsl:when>
                 <xsl:when test="local-name() = 'TextLine'">Line</xsl:when>
-                <xsl:when test="local-name() = 'TableRegion'">TableRegion</xsl:when>
                 <xsl:otherwise>printspace</xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
@@ -212,7 +212,7 @@
             </xsl:map>
         </xsl:variable>
         
-        <xsl:if test="$renditionValue='Line'">
+        <xsl:if test="$renditionValue = ('Line', 'TableCell')">
             <xsl:text>
                 </xsl:text>
         </xsl:if>
@@ -227,11 +227,10 @@
                 <xsl:attribute name="subtype" select="substring-after(substring-before(map:get($custom, 'structure'), ';'), ':')" />
             </xsl:if>
             <xsl:apply-templates select="p:TextLine" mode="facsimile" />
-            <xsl:if test="not($renditionValue= ('Line', 'Graphic', 'Separator', 'printspace'))">
+            <xsl:if test="not($renditionValue= ('Line', 'Graphic', 'Separator', 'printspace', 'TableCell'))">
                 <xsl:text>
             </xsl:text>
             </xsl:if>
-            
         </zone>
     </xsl:template>
     
@@ -255,7 +254,7 @@
     <!-- Templates for PAGE, text -->
     <xsl:template match="p:Page" mode="text">
         <xsl:param name="numCurr" tunnel="true" />
-        <pb facs="#f{format-number($numCurr, '0000')}" n="{$numCurr}" xml:id="img_{format-number($numCurr, '0000')}"/>
+        <pb facs="#facs_{$numCurr}" n="{$numCurr}" xml:id="img_{format-number($numCurr, '0000')}"/>
         <xsl:apply-templates select="p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion" mode="text" />
     </xsl:template>
     
