@@ -5,7 +5,7 @@ Use the METS File for your transformation:
 ```
 java -jar saxon9he.jar -xsl:page2tei-0.xsl -s:mets.xml PAGEXML=[the value of mets:fileGrp/@ID or @USE] PAGEprogram=[Transkribus or OCR-D> [your tei file].xml
 ```
-Example:
+## Example:
 
 Transkribus mets.xml
 * snippet from mets.xml
