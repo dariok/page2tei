@@ -235,7 +235,7 @@
         <xd:param name="numCurr">Numerus currens of the current page</xd:param>
     </xd:doc>
     <xsl:template
-        match="p:PrintSpace | p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion | pc:PrintSpace | pc:TextRegion | pc:SeparatorRegion | pc:GraphicRegion | pc:TableRegion"
+        match="p:PrintSpace | p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TextLine | pc:PrintSpace | pc:TextRegion | pc:SeparatorRegion | pc:GraphicRegion |  pc:TextLine"
         mode="facsimile">
         <xsl:param name="numCurr" tunnel="true"/>
 
@@ -309,8 +309,7 @@
     <!-- Templates for PAGE, text -->
     <xsl:template match="p:Page | pc:Page" mode="text">
         <xsl:param name="numCurr" tunnel="true"/>
-        <pb facs="#f{format-number($numCurr, '0000')}" n="{$numCurr}"
-            xml:id="img_{format-number($numCurr, '0000')}"/>
+        <pb facs="#facs_{$numCurr}" n="{$numCurr}" xml:id="img_{format-number($numCurr, '0000')}"/>
         <xsl:apply-templates
             select="p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion | pc:TextRegion | pc:SeparatorRegion | pc:GraphicRegion | pc:TableRegion" mode="text"
         />
