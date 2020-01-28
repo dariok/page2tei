@@ -241,11 +241,11 @@
 
         <xsl:variable name="renditionValue">
             <xsl:choose>
+                <xsl:when test="local-name(parent::*) = 'TableCell'">TableCell</xsl:when>
                 <xsl:when test="local-name() = 'TextRegion'">TextRegion</xsl:when>
                 <xsl:when test="local-name() = 'SeparatorRegion'">Separator</xsl:when>
                 <xsl:when test="local-name() = 'GraphicRegion'">Graphic</xsl:when>
                 <xsl:when test="local-name() = 'TextLine'">Line</xsl:when>
-                <xsl:when test="local-name() = 'TableRegion'">TableRegion</xsl:when>
                 <xsl:otherwise>printspace</xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
@@ -258,8 +258,7 @@
                 </xsl:for-each-group>
             </xsl:map>
         </xsl:variable>
-
-        <xsl:if test="$renditionValue = 'Line'">
+        <xsl:if test="$renditionValue = ('Line', 'TableCell')">
             <xsl:text>
                 </xsl:text>
         </xsl:if>
@@ -280,7 +279,7 @@
                 />
             </xsl:if>
             <xsl:apply-templates select="p:TextLine | pc:TextLine" mode="facsimile"/>
-            <xsl:if test="not($renditionValue = ('Line', 'Graphic', 'Separator', 'printspace'))">
+            <xsl:if test="not($renditionValue= ('Line', 'Graphic', 'Separator', 'printspace', 'TableCell'))">
                 <xsl:text>
             </xsl:text>
             </xsl:if>
@@ -422,10 +421,10 @@
         <cell facs="#facs_{$numCurr}_{@id}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan"/>
             <xsl:attribute name="rend">
-                <xsl:value-of select="number(xs:boolean(@leftBorderVisible))"/>
-                <xsl:value-of select="number(xs:boolean(@topBorderVisible))"/>
-                <xsl:value-of select="number(xs:boolean(@rightBorderVisible))"/>
-                <xsl:value-of select="number(xs:boolean(@bottomBorderVisible))"/>
+                <xsl:value-of select="number((xs:boolean(@leftBorderVisible), false())[1])" />
+                <xsl:value-of select="number((xs:boolean(@topBorderVisible), false())[1])" />
+                <xsl:value-of select="number((xs:boolean(@rightBorderVisible), false())[1])" />
+                <xsl:value-of select="number((xs:boolean(@bottomBorderVisible), false())[1])" />
             </xsl:attribute>
             <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
         </cell>
