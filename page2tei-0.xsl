@@ -588,6 +588,16 @@
                     </abbr>
                 </choice>
             </xsl:when>
+            <xsl:when test="@type = 'sic'">
+                <choice>
+                    <corr><xsl:value-of select="replace(map:get($custom, 'correction'), '\\u0020', ' ')"/></corr>
+                    <sic>
+                        <xsl:call-template name="elem">
+                            <xsl:with-param name="elem" select="$elem" />
+                        </xsl:call-template>
+                    </sic>
+                </choice>
+            </xsl:when>
             <xsl:when test="@type = 'date'">
                 <date>
                     <!--<xsl:variable name="year" select="if(map:keys($custom) = 'year') then format-number(xs:integer(map:get($custom, 'year')), '0000') else '00'"/>
