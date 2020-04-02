@@ -319,15 +319,16 @@
       </xsl:when>
       <xsl:when test="@type = 'other'">
        <p facs="#facs_{$numCurr}_{@id}">
-        <xsl:apply-templates select="p:TextLine" />
-       </p>
-      </xsl:when>
-      <xsl:otherwise>
-       <p facs="#facs_{$numCurr}_{@id}">
-        <xsl:apply-templates select="p:TextLine" />
-       </p>
-      </xsl:otherwise>
-     </xsl:choose>
+                <xsl:apply-templates select="p:TextLine" />
+            </p>
+        </xsl:when>
+        <!-- the fallback option should be a semantically open element such as <ab> -->
+        <xsl:otherwise>
+            <ab facs="#facs_{$numCurr}_{@id}">
+                <xsl:apply-templates select="p:TextLine" />
+            </ab>
+        </xsl:otherwise>
+    </xsl:choose>
     </xsl:template>
     
     <xd:doc>
