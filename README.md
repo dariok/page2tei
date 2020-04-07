@@ -1,5 +1,15 @@
 # page2tei
 
+## Installation
+
+Clone the repository:
+
+```sh
+git clone ocrd_fileformat
+cd ocrd_fileformat
+```
+
+## Using
 Use the METS File for your transformation:
 
 ```
