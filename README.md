@@ -20,7 +20,7 @@ java -jar saxon9he.jar -xsl:page2tei-0.xsl -s:mets.xml PAGEXML=[the value of met
 ```
 ## Example:
 
-Transkribus mets.xml
+**Transkribus** mets.xml
 * snippet from mets.xml
 
 ```xml
@@ -31,7 +31,7 @@ Transkribus mets.xml
 java -jar saxon9he.jar -xsl:page2tei-0.xsl -s:mets.xml PAGEXML=PAGEXML PAGEprogram=Transkribus -o:[your tei file].xml
 ```
 
-OCR-D mets.xml
+**OCR-D** mets.xml
 * snippet from mets.xml
 ```xml
 <mets:fileGrp USE="OCR-D-OCR-TESSEROCR">
