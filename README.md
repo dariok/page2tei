@@ -5,8 +5,8 @@
 Clone the repository:
 
 ```sh
-git clone ocrd_fileformat
-cd ocrd_fileformat
+git clone https://github.com/tboenig/page2tei.git
+
 ```
 
 ## Using
