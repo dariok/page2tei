@@ -2,11 +2,14 @@
 
 ## Installation
 
-Clone the repository:
+You install the page2tei conversion with cloning:
 
 ```sh
 git clone https://github.com/tboenig/page2tei.git
-
+```
+You find all files: 
+```sh
+cd page2tei
 ```
 
 ## Using
