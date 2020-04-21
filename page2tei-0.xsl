@@ -325,7 +325,7 @@
      <xsl:when test="@type = 'footnote-continued'">
        <note place="foot" n="[footnote-continued reference]" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></note>
     </xsl:when>
-    <xsl:when test="@type = 'other'">
+    <xsl:when test="@type = ('other', 'paragraph')">
      <p facs="#facs_{$numCurr}_{@id}">
         <xsl:apply-templates select="p:TextLine" />
       </p>
