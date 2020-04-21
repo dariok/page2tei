@@ -202,7 +202,7 @@
             </ns3:fileSec>
         </x:context>
         <x:expect xml:space="preserve" label="."><pb  facs="#facs_2" n="2" xml:id="img_0002" /><p facs="#facs_2_r_1_7">
-      <lb facs="#facs_2_r2l10" n="N010" /><sic>7. Maria <supplied reason="">Theresia</supplied></sic><supplied reason="">, geb. 4 Stpt.</supplied> 1716.</p></x:expect>
+      <lb facs="#facs_2_r2l10" n="N010" /><choice><corr/><sic>7. Maria <supplied reason="">Theresia</supplied></sic></choice><supplied reason="">, geb. 4 Stpt.</supplied> 1716.</p></x:expect>
     </x:scenario>
     
     <x:scenario label="weitere Elemente">
