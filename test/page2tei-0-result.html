@@ -1,67 +1,553 @@
-<?xml version="1.0" encoding="UTF-8"?><html xmlns:test="http://www.jenitennison.com/xslt/unit-test" xmlns="http://www.w3.org/1999/xhtml">
+<?xml version="1.0" encoding="UTF-8"?><html xmlns="http://www.w3.org/1999/xhtml">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-      <title>Test Report for home/dario/eclipse-workspace/page2tei/page2tei-0.xsl (passed: 12 / pending: 0 / failed: 0 / total: 12)</title>
-      <link rel="stylesheet" type="text/css" href="file:/home/dario/.p2/pool/plugins/com.oxygenxml.editor_20.1.0.v2018122403/frameworks/xspec/src/reporter/test-report.css" />
+      <title>Test Report for /media/p5/home/dario/git/page2tei/page2tei-0.xsl (passed: 7 / pending: 0 / failed: 5 / total: 12)</title>
+      <style type="text/css">/****************************************************************************/
+/*  File:       test-report.css                                             */
+/*  Author:     Jeni Tennison                                               */
+/*  Tags:                                                                   */
+/*    Copyright (c) 2008, 2010 Jeni Tennison (see end of file.)             */
+/* ------------------------------------------------------------------------ */
+
+
+/* test */
+
+/* box model */
+
+body {
+	margin-right: 5%;
+	margin-left: 5%;
+	}
+
+h1 {
+	padding: 0.3em 0.5em 0.3em 0.5em;
+	position: relative;
+	}
+
+h2 {
+	padding: 0.1em 0.5em 0.2em 0.5em;
+	}
+
+h3 {
+	padding-left: 0.6em;
+	}
+
+h4 {
+	padding-left: 0.8em;
+	}
+
+p, table {
+	margin-left: 5%;
+	}
+
+dd ul, dd ol {
+	margin-left: 0%;
+	}
+
+li ul, li ol {
+	margin-left: 5%;
+	}
+
+dl, ul, ol, blockquote {
+	margin-left: 10%;
+	}
+
+dt {
+  padding-top: 3px;
+  padding-bottom: 3px;
+	clear: both;
+	}
+
+dd p {
+	margin-left: -5px;
+	margin-top: 5px;
+	clear: both;
+	}
+
+p.link {
+	margin-top: 4px;
+	margin-bottom: 0px;
+	clear: both;
+	}
+
+tr td, td p, li, li p {
+	margin-left: 0%;
+	}
+
+td {
+	padding-right: 5%;
+	}
+
+.link img, dt img {
+	vertical-align: middle;
+	position: relative;
+	top: -5px;
+	}
+
+img {
+	position: relative;
+	}
+
+#xml-link {
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	width: 10%;
+	margin-left: 0%;
+	}
+
+#link-up {
+	position: absolute;
+	left: 93%;
+	right: 2em;
+	top: 0.3em;
+	}
+
+#link-top {
+	position: absolute;
+	left: 89%;
+	right: 4em;
+	top: 0.3em;
+	}
+	
+.popup {
+	display: block;
+	visibility: hidden;
+	float: right;
+	position: absolute;
+	top: 5px;
+	left: -200px;
+	z-index: 1;
+	padding: 0.3em;
+	width: 220px;
+	}
+
+.note {
+	position: relative;
+	}
+
+.post {
+	margin-left: 5%;
+	padding-top: 1em;
+	}
+	
+.example, .sidebar {
+  margin-left: 5%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  }
+
+pre {
+	padding-left: 5%;
+	margin-left: 5%;
+	}
+
+dd pre, li pre {
+	padding-left: 5%;
+	}
+
+/* fonts */
+body {
+	font-family: sans-serif;
+	font-size: small;
+	}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: sans-serif;
+	}
+
+h1 {
+	font-size: 173%;
+	font-weight: bold;
+	}
+
+h2 {
+	font-size: 144%;
+	font-weight: bold;
+	}
+
+h3 {
+	font-size: 120%;
+	font-weight: normal;
+	}
+
+h4 {
+  font-size: 100%;
+  font-weight: bold;
+}
+
+dt {
+	font-weight: bold;
+	}
+
+a:link, a:visited, a:active, a:hover {
+	font-weight: bold;
+	}
+
+a.offsite:link, a.offsite:visited, a.offsite:active, a.offsite:hover {
+	font-weight: normal;
+	}
+
+/* suppress the normal italics */
+address {
+	font-style: normal;
+	}
+
+div.example, .sidebar {
+  font-family: sans-serif;
+  font-size: 100%;
+  }
+
+
+.note, .link {
+	font-family: sans-serif;
+	font-size: 83%;
+	}
+
+.example, .string, .rtf, .code, pre, code {
+	font-family: monospace;
+  font-size: 83%;
+	}
+
+.boolean {
+	font-style: italic;
+	}
+
+#colophon, #xml-link {
+	font-size: 69%;
+	}
+
+.question, .title {
+	font-weight: bold;
+	}
+
+/* colours */
+body {
+	background-color: white;
+	color: black;
+	border: 0px none black;
+	}
+
+/* this is to make Navigator fill the entire line */
+h1, h2 {
+	border: 1px solid white;
+	width: auto;
+	}
+
+h1 {
+	background: #606;
+	color: #6F6;
+	}
+
+h2 {
+	color: #606;
+	background: #CFC;
+	}
+
+hr {
+	color: #606;
+	background: white;
+	}
+
+img, a:link img, a:visited img, a:hover img, a:active img, #link-up img, #link-top img {
+	border: 0px none white;
+	background: transparent;
+	}
+
+a:link {
+	color: #636;
+	background: transparent;
+	border: 0px none white;
+	}
+
+a:visited {
+	color: #606;
+	background: transparent;
+	border: 0px none white;
+	}
+
+a:active {
+	color: #6F6;
+	background: #606;
+	border: 0px none white;
+	}
+
+a:hover {
+	color: #636;
+	background: #9F9;
+	border: 0px none white;
+	}
+
+a.img:hover, a.img:active {
+	background: transparent;
+	}
+
+#colophon, #xml-link, .note {
+	color: #666;
+	}
+
+#colophon a:link, #colophon a:visited, #colophon a:hover,
+#xml-link a:link, #xml-link a:visited, #xml-link a:hover,
+.note a:link, .note a:visited, .note a:hover {
+	color: #969;
+	background: transparent;
+	}
+
+#colophon a:hover, #xml-link a:hover, .note a:hover {
+	background: #CFC;
+	color: #969;
+	}
+
+.popup {
+	background: white;
+	border: 1px solid #606;
+	}
+
+.post {
+	border-top: 2px solid #606;
+	}
+	
+.example {
+  border-top: 2px solid #606;
+  border-bottom: 2px solid #606;
+  }
+  
+.sidebar {
+  border-top: 2px solid #090;
+  border-bottom: 2px solid #090;
+  }
+  
+.rng {
+  border-left: 2px solid #666;
+  }
+
+.same {
+  background-color: rgb(206, 239, 174);
+}
+
+.inner-diff {
+  background-color: rgba(255, 204, 204, .4);
+}
+
+.diff {
+  background-color: #FCC;
+}
+
+.whitespace {
+	/*font-style: italic;*/
+	color: #999;
+	/*background: white;*/
+}
+
+.ellipsis {
+	color: #999;
+}
+
+.ignored {
+  font-style: italic;
+  color: #999;
+  background: white;
+}
+
+.hit {
+}
+
+.missed {
+  background-color: #A33;
+  color: white;
+}
+
+/* text */
+ol ol li {
+	list-style: lower-alpha;
+	}
+
+td {
+	vertical-align: top;
+	}
+
+h1 {
+	text-transform: uppercase;
+	}
+
+.question {
+	text-indent: -33px;
+	}
+
+.byline {
+	text-align: right;
+	}
+
+#link-top, #link-up {
+	text-align: right;
+	}
+
+a {
+	text-decoration: none;
+	}
+
+body > h2:first-of-type {
+    background: inherit;
+    margin-bottom: 0;
+}
+
+table { width: 95%;
+        /* border: collapse; */ }
+
+th { text-align: left; }
+
+th.totals { text-align: center; font-weight: normal; }
+
+div > table > tbody > tr > th:first-child {
+    font-weight:bold;
+    color: #474747;
+}
+
+.xspec tbody th { font-weight: normal; font-size: 0.8em; border-top: 1px #666 solid; }
+.xspec tbody td { font-size: 0.8em; color: #262626; }
+
+.successful { background-color: #CFC; }
+.pending { background-color: #EEE; color: #666; }
+.failed { background-color: #FCC; }
+
+.successful td:first-child:before, 
+body > table:first-of-type tr.successful th:first-child:before
+{ 
+margin-right: 5px; 
+
+/* optimized version of ../../graphics/success12.png */
+content:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAABcUlEQVR42m1SPUsDQRB9661BIoEQDBqJnRhE1BD8CP4AgwhWEbQIKIhi6Q/QwspCtBBs/CBG1Fb9AWK0iBosLCQgYmGQEFARRUguezfuLeZygsWbmZ037zEMyxZ2W0IgHBIoIjPoF6q2QQYIWVlPcxmS3mYt4vFpjmEpd4pNaJ9vRvS9ILa57Aw2ejUYBtVcTdsZPnc7Qk0juNQ3QC/o55JkhnAO19wDnjAmIkkcZBMwBVmci1uEoR5Od4K73o94eAuZpx3kX+9U35TgVjAqVWdmZUWOhldQrnwhnduEELD7dVYhdMJY9zom+/ZAgqOnNY7OQAynt0sol3TFSyiRWklUCKXyN8Jt40gM7SPo68VDIY1c/ly5KlBtJaU+vlmEpyGArmBMkiZOrpdV3yFQ4PJBkmBkCqTO5jE3fITixyOei/dy0L5aVSjY7Jo/w10sqnFmn9VU+e+ZhW7BvGAzq/4O2UiBMCBJRv9/DyHDFQFTPwI/IlPYPLYnAAAAAElFTkSuQmCC')
+}
+
+.failed td:first-child:before,
+body > table:first-of-type tr.failed th:first-child:before
+{ 
+margin-right: 5px; 
+
+/* optimized version of ../../graphics/fail12.png */
+content:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAMAAABhq6zVAAAAjVBMVEWDKBSQLBadMBidMBiSLBWSLRaLKhWCKBOZLheHKRT//////v3ivLPgt67dsafhraLfqJvcopXQl4vNkoTKjH3RbljKaVO8aVaxYlCsUDylUDusOh+wNxu0OBu4ORy7OhzAOx3EPB2rNRqnNBqjMhifMRidMBeaLxeXLhaULRaRLBaOKxWLKhWIKRSFKBRkN75PAAAACnRSTlP7+c3Hx8TIwicknixbQAAAAIZJREFUeNoNwsEKgkAUBdD77jzSXKhDuEpyURBE//8h0SratQuKRK3QsdccjqTjDgLEV9VpPSEyYHPjVtFb9LYQKNYPrVk7fOyAfdMUWRnX9VHFLO9GJB4ClR8wxyIQYmGveZmGu1BUJFjm5fHtShDM8xVZFZ4nXtQVjDxd4hbPytGRPLf8A/K/MGOep8atAAAAAElFTkSuQmCC')
+}
+
+.pending td:first-child:before,
+body > table:first-of-type tr.pending th:first-child:before
+{
+margin-right: 5px; 
+
+/* optimized version of ../../graphics/pending12.png */
+content:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAMAAABhq6zVAAAAt1BMVEVgYGBZWVldXV1gYGBjY2NmZmZnZ2dnZ2diYmJfX19dXV1hYWFZWVlYWFhiYmJeXl5YWFhoaGj6+vr39/fz8/Py8vLv7+/p6enk5OR9fX18fHx7e3t6enp5eXl4eHh3d3d2dnZ1dXV0dHRzc3NycnJxcXFwcHBvb29ubm5tbW1sbGxra2tqamppaWloaGhnZ2dmZmZlZWVkZGRjY2NiYmJhYWFfX19eXl5dXV1cXFxbW1taWlpZWVl0CTiLAAAAEnRSTlP++/75/P7Nx8fHyMTBwygmIycZZx20AAAAdElEQVR42jWKvQ4BURSEzzdzED+NQiFRaCWi4f1rhcor2EZl2RDdcq+YyUzyZYb5c0MUn3PIaPUKKk4aBgsqfHPRVpLl0nuFbbkKoe7te5ftw0jue4OJFIeOn4KZsNN26SB28Z9OHi+RJUTePL0263LMY5sfIzMU3HCY7dEAAAAASUVORK5CYII=')
+}
+
+
+
+.xspecResult { width: 95%; table-layout: fixed; }
+
+.xspecResult td,
+.xspecResult th { width: 50%; }
+
+.xspecResult pre { 
+  margin-left: 0; 
+  padding: 0.5em; 
+  overflow: auto; 
+  border: 1px #999 dotted;
+}
+
+span.scenario-totals {float: right; text-align: right}
+
+/* highlight the link target */
+*:target {
+	box-shadow: -0.5rem 0 0 0 #FC511D;
+}
+
+/* ------------------------------------------------------------------------ */
+/*  DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS COMMENT.               */
+/*                                                                          */
+/*  Copyright (c) 2008, 2010 Jeni Tennison                                  */
+/*                                                                          */
+/*  The contents of this file are subject to the MIT License (see the URI   */
+/*  http://www.opensource.org/licenses/mit-license.php for details).        */
+/*                                                                          */
+/*  Permission is hereby granted, free of charge, to any person obtaining   */
+/*  a copy of this software and associated documentation files (the         */
+/*  "Software"), to deal in the Software without restriction, including     */
+/*  without limitation the rights to use, copy, modify, merge, publish,     */
+/*  distribute, sublicense, and/or sell copies of the Software, and to      */
+/*  permit persons to whom the Software is furnished to do so, subject to   */
+/*  the following conditions:                                               */
+/*                                                                          */
+/*  The above copyright notice and this permission notice shall be          */
+/*  included in all copies or substantial portions of the Software.         */
+/*                                                                          */
+/*  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,         */
+/*  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF      */
+/*  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  */
+/*  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY    */
+/*  CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,    */
+/*  TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE       */
+/*  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                  */
+/* ------------------------------------------------------------------------ */
+</style>
    </head>
    <body>
       <h1>Test Report</h1>
-      <p>Stylesheet: <a href="file:/home/dario/eclipse-workspace/page2tei/page2tei-0.xsl">home/dario/eclipse-workspace/page2tei/page2tei-0.xsl</a></p>
-      <p>Tested: 15 November 2019 at 13:35</p>
+      <p>Stylesheet: <a href="file:/media/p5/home/dario/git/page2tei/page2tei-0.xsl">/media/p5/home/dario/git/page2tei/page2tei-0.xsl</a></p>
+      <p>XSpec: <a href="file:/media/p5/home/dario/git/page2tei/test/page2tei-0.xspec">/media/p5/home/dario/git/page2tei/test/page2tei-0.xspec</a></p>
+      <p>Tested: 21 April 2020 at 17:47</p>
       <h2>Contents</h2>
       <table class="xspec">
-         <col width="75%" />
-         <col width="6.25%" />
-         <col width="6.25%" />
-         <col width="6.25%" />
-         <col width="6.25%" />
+         <colgroup>
+            <col style="width:75%" />
+            <col style="width:6.25%" />
+            <col style="width:6.25%" />
+            <col style="width:6.25%" />
+            <col style="width:6.25%" />
+         </colgroup>
          <thead>
             <tr>
                <th></th>
-               <th class="totals">passed: 12</th>
+               <th class="totals">passed: 7</th>
                <th class="totals">pending: 0</th>
-               <th class="totals">failed: 0</th>
+               <th class="totals">failed: 5</th>
                <th class="totals">total: 12</th>
             </tr>
          </thead>
          <tbody>
-            <tr class="successful">
-               <th><a href="#d3e4">test 1 (WD)</a></th>
-               <th class="totals">4</th>
-               <th class="totals">0</th>
-               <th class="totals">0</th>
-               <th class="totals">4</th>
-            </tr>
-            <tr class="successful">
-               <th><a href="#d3e1262">überlapp</a></th>
-               <th class="totals">1</th>
-               <th class="totals">0</th>
-               <th class="totals">0</th>
-               <th class="totals">1</th>
-            </tr>
-            <tr class="successful">
-               <th><a href="#d3e1337">weitere Elemente</a></th>
+            <tr class="failed">
+               <th><a href="#top-level-scenario-d5e3">test 1 (WD)</a></th>
                <th class="totals">3</th>
                <th class="totals">0</th>
+               <th class="totals">1</th>
+               <th class="totals">4</th>
+            </tr>
+            <tr class="failed">
+               <th><a href="#top-level-scenario-d5e834">überlapp</a></th>
                <th class="totals">0</th>
+               <th class="totals">0</th>
+               <th class="totals">1</th>
+               <th class="totals">1</th>
+            </tr>
+            <tr class="failed">
+               <th><a href="#top-level-scenario-d5e871">weitere Elemente</a></th>
+               <th class="totals">2</th>
+               <th class="totals">0</th>
+               <th class="totals">1</th>
                <th class="totals">3</th>
             </tr>
-            <tr class="successful">
-               <th><a href="#d3e1932">convert user data</a></th>
+            <tr class="failed">
+               <th><a href="#top-level-scenario-d5e1133">convert user data</a></th>
+               <th class="totals">0</th>
+               <th class="totals">0</th>
                <th class="totals">2</th>
-               <th class="totals">0</th>
-               <th class="totals">0</th>
                <th class="totals">2</th>
             </tr>
             <tr class="successful">
-               <th><a href="#d3e2298">continued</a></th>
+               <th><a href="#top-level-scenario-d5e1302">continued</a></th>
                <th class="totals">1</th>
                <th class="totals">0</th>
                <th class="totals">0</th>
                <th class="totals">1</th>
             </tr>
             <tr class="successful">
-               <th><a href="#d3e2731">table</a></th>
+               <th><a href="#top-level-scenario-d5e1635">table</a></th>
                <th class="totals">1</th>
                <th class="totals">0</th>
                <th class="totals">0</th>
@@ -69,15 +555,17 @@
             </tr>
          </tbody>
       </table>
-      <div id="d3e4">
-         <h2 class="successful">test 1 (WD)<span class="scenario-totals">passed: 4 / pending: 0 / failed: 0 / total: 4</span></h2>
-         <table class="xspec" id="t-d3e4">
-            <col width="75%" />
-            <col width="25%" />
+      <div id="top-level-scenario-d5e3">
+         <h2 class="successful">test 1 (WD)<span class="scenario-totals">passed: 3 / pending: 0 / failed: 1 / total: 4</span></h2>
+         <table class="xspec" id="t-d5e3">
+            <colgroup>
+               <col style="width:75%" />
+               <col style="width:25%" />
+            </colgroup>
             <tbody>
                <tr class="successful">
                   <th>test 1 (WD)</th>
-                  <th>passed: 4 / pending: 0 / failed: 0 / total: 4</th>
+                  <th>passed: 3 / pending: 0 / failed: 1 / total: 4</th>
                </tr>
                <tr class="successful">
                   <th>17320213 - p.2</th>
@@ -95,13 +583,13 @@
                   <td>.</td>
                   <td>Success</td>
                </tr>
-               <tr class="successful">
-                  <th>17320524 - p. 10</th>
-                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               <tr class="failed">
+                  <th><a href="#scenario-d5e676">17320524 - p. 10</a></th>
+                  <th>passed: 0 / pending: 0 / failed: 1 / total: 1</th>
                </tr>
-               <tr class="successful">
-                  <td>.</td>
-                  <td>Success</td>
+               <tr class="failed">
+                  <td><a href="#test-d5e713">.</a></td>
+                  <td>Failure</td>
                </tr>
                <tr class="successful">
                   <th>17410624 - p. 7</th>
@@ -113,41 +601,144 @@
                </tr>
             </tbody>
          </table>
+         <div id="scenario-d5e676">
+            <h3>test 1 (WD) 17320524 - p. 10</h3>
+            <div id="test-d5e713">
+               <h4>.</h4>
+               <table class="xspecResult">
+                  <thead>
+                     <tr>
+                        <th>Result</th>
+                        <th>Expected Result</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>
+                           <p>XPath <code class="same">/element()</code> from:</p>
+                           <pre>&lt;<span class="same">pb</span> xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+    xmlns:ns2="http://www.w3.org/1999/xlink"
+    xmlns:ns3="http://www.loc.gov/METS/"
+    <span class="same">facs</span>=<span class="same">"#facs_10"</span>
+    <span class="same">n</span>=<span class="same">"10"</span>
+    <span class="same">xml:id</span>=<span class="same">"img_0010"</span> /&gt;&lt;<span class="diff">ab</span> xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+    xmlns:ns2="http://www.w3.org/1999/xlink"
+    xmlns:ns3="http://www.loc.gov/METS/"
+    <span class="same">facs</span>=<span class="same">"#facs_10_r_2_7"</span>
+    <span class="diff">type</span>=<span class="diff">"list"</span>&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_10_tl_75"</span>
+       <span class="same">n</span>=<span class="same">"N001"</span> /&gt;<span class="same">Johann Frantz Weishaubt / ware nno 1697. </span>&lt;<span class="same">supplied</span> <span class="same">reason</span>=<span class="same">""</span>&gt;&lt;<span class="same">hi</span> <span class="same">rend</span>=<span class="same">"fontFamily:Antiqua;"</span>&gt;<span class="same">Ex-</span>&lt;/hi&gt;&lt;/supplied&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_10_tl_76"</span>
+       <span class="same">n</span>=<span class="same">"N002"</span> /&gt;&lt;<span class="same">hi</span> <span class="same">rend</span>=<span class="same">"fontFamily:Antiqua;"</span>&gt;<span class="same">peditor</span>&lt;/hi&gt;<span class="same"> bey der hoch=ansehentl. Geheimen Stelle in Gr</span>&lt;<span class="same">gap</span> /&gt;&lt;/ab&gt;</pre>
+                        </td>
+                        <td>
+                           <p>XPath <code class="same">/element()</code> from:</p>
+                           <pre>&lt;<span class="same">pb</span> xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+    xmlns:ns2="http://www.w3.org/1999/xlink"
+    xmlns:ns3="http://www.loc.gov/METS/"
+    <span class="same">facs</span>=<span class="same">"#facs_10"</span>
+    <span class="same">n</span>=<span class="same">"10"</span>
+    <span class="same">xml:id</span>=<span class="same">"img_0010"</span> /&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+   xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+   xmlns:ns2="http://www.w3.org/1999/xlink"
+   xmlns:ns3="http://www.loc.gov/METS/"
+   <span class="same">facs</span>=<span class="same">"#facs_10_r_2_7"</span>&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_10_tl_75"</span>
+       <span class="same">n</span>=<span class="same">"N001"</span> /&gt;<span class="same">Johann Frantz Weishaubt / ware nno 1697. </span>&lt;<span class="same">supplied</span> <span class="same">reason</span>=<span class="same">""</span>&gt;&lt;<span class="same">hi</span> <span class="same">rend</span>=<span class="same">"fontFamily:Antiqua;"</span>&gt;<span class="same">Ex-</span>&lt;/hi&gt;&lt;/supplied&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_10_tl_76"</span>
+       <span class="same">n</span>=<span class="same">"N002"</span> /&gt;&lt;<span class="same">hi</span> <span class="same">rend</span>=<span class="same">"fontFamily:Antiqua;"</span>&gt;<span class="same">peditor</span>&lt;/hi&gt;<span class="same"> bey der hoch=ansehentl. Geheimen Stelle in Gr</span>&lt;<span class="same">gap</span> /&gt;&lt;/p&gt;</pre>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
       </div>
-      <div id="d3e1262">
-         <h2 class="successful">überlapp<span class="scenario-totals">passed: 1 / pending: 0 / failed: 0 / total: 1</span></h2>
-         <table class="xspec" id="t-d3e1262">
-            <col width="75%" />
-            <col width="25%" />
+      <div id="top-level-scenario-d5e834">
+         <h2 class="failed">überlapp<span class="scenario-totals">passed: 0 / pending: 0 / failed: 1 / total: 1</span></h2>
+         <table class="xspec" id="t-d5e834">
+            <colgroup>
+               <col style="width:75%" />
+               <col style="width:25%" />
+            </colgroup>
             <tbody>
-               <tr class="successful">
+               <tr class="failed">
                   <th>überlapp</th>
-                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+                  <th>passed: 0 / pending: 0 / failed: 1 / total: 1</th>
                </tr>
-               <tr class="successful">
-                  <td>.</td>
-                  <td>Success</td>
+               <tr class="failed">
+                  <td><a href="#test-d5e857">.</a></td>
+                  <td>Failure</td>
                </tr>
             </tbody>
          </table>
+         <div id="scenario-d5e834">
+            <h3>überlapp</h3>
+            <div id="test-d5e857">
+               <h4>.</h4>
+               <table class="xspecResult">
+                  <thead>
+                     <tr>
+                        <th>Result</th>
+                        <th>Expected Result</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>
+                           <p>XPath <code class="same">/element()</code> from:</p>
+                           <pre>&lt;<span class="same">pb</span> xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+    xmlns:ns2="http://www.w3.org/1999/xlink"
+    xmlns:ns3="http://www.loc.gov/METS/"
+    <span class="same">facs</span>=<span class="same">"#facs_2"</span>
+    <span class="same">n</span>=<span class="same">"2"</span>
+    <span class="same">xml:id</span>=<span class="same">"img_0002"</span> /&gt;&lt;<span class="inner-diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+   xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+   xmlns:ns2="http://www.w3.org/1999/xlink"
+   xmlns:ns3="http://www.loc.gov/METS/"
+   <span class="same">facs</span>=<span class="same">"#facs_2_r_1_7"</span>&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_2_r2l10"</span>
+       <span class="same">n</span>=<span class="same">"N010"</span> /&gt;&lt;<span class="diff">choice</span>&gt;&lt;<span class="diff">corr</span> /&gt;&lt;<span class="diff">sic</span>&gt;<span class="diff">7. Maria </span>&lt;<span class="diff">supplied</span> <span class="diff">reason</span>=<span class="diff">""</span>&gt;<span class="diff">Theresia</span>&lt;/supplied&gt;&lt;/sic&gt;&lt;/choice&gt;&lt;<span class="same">supplied</span> <span class="same">reason</span>=<span class="same">""</span>&gt;<span class="same">, geb. 4 Stpt.</span>&lt;/supplied&gt;<span class="same"> 1716.</span>&lt;/p&gt;</pre>
+                        </td>
+                        <td>
+                           <p>XPath <code class="same">/element()</code> from:</p>
+                           <pre>&lt;<span class="same">pb</span> xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+    xmlns:ns2="http://www.w3.org/1999/xlink"
+    xmlns:ns3="http://www.loc.gov/METS/"
+    <span class="same">facs</span>=<span class="same">"#facs_2"</span>
+    <span class="same">n</span>=<span class="same">"2"</span>
+    <span class="same">xml:id</span>=<span class="same">"img_0002"</span> /&gt;&lt;<span class="inner-diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+   xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+   xmlns:ns2="http://www.w3.org/1999/xlink"
+   xmlns:ns3="http://www.loc.gov/METS/"
+   <span class="same">facs</span>=<span class="same">"#facs_2_r_1_7"</span>&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_2_r2l10"</span>
+       <span class="same">n</span>=<span class="same">"N010"</span> /&gt;&lt;<span class="diff">sic</span>&gt;<span class="diff">7. Maria </span>&lt;<span class="diff">supplied</span> <span class="diff">reason</span>=<span class="diff">""</span>&gt;<span class="diff">Theresia</span>&lt;/supplied&gt;&lt;/sic&gt;&lt;<span class="same">supplied</span> <span class="same">reason</span>=<span class="same">""</span>&gt;<span class="same">, geb. 4 Stpt.</span>&lt;/supplied&gt;<span class="same"> 1716.</span>&lt;/p&gt;</pre>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
       </div>
-      <div id="d3e1337">
-         <h2 class="successful">weitere Elemente<span class="scenario-totals">passed: 3 / pending: 0 / failed: 0 / total: 3</span></h2>
-         <table class="xspec" id="t-d3e1337">
-            <col width="75%" />
-            <col width="25%" />
+      <div id="top-level-scenario-d5e871">
+         <h2 class="successful">weitere Elemente<span class="scenario-totals">passed: 2 / pending: 0 / failed: 1 / total: 3</span></h2>
+         <table class="xspec" id="t-d5e871">
+            <colgroup>
+               <col style="width:75%" />
+               <col style="width:25%" />
+            </colgroup>
             <tbody>
                <tr class="successful">
                   <th>weitere Elemente</th>
-                  <th>passed: 3 / pending: 0 / failed: 0 / total: 3</th>
+                  <th>passed: 2 / pending: 0 / failed: 1 / total: 3</th>
                </tr>
-               <tr class="successful">
-                  <th>abbrev</th>
-                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               <tr class="failed">
+                  <th><a href="#scenario-d5e873">abbrev</a></th>
+                  <th>passed: 0 / pending: 0 / failed: 1 / total: 1</th>
                </tr>
-               <tr class="successful">
-                  <td>choice, expan + abbr</td>
-                  <td>Success</td>
+               <tr class="failed">
+                  <td><a href="#test-d5e913">choice, expan + abbr</a></td>
+                  <td>Failure</td>
                </tr>
                <tr class="successful">
                   <th>date</th>
@@ -167,41 +758,283 @@
                </tr>
             </tbody>
          </table>
+         <div id="scenario-d5e873">
+            <h3>weitere Elemente abbrev</h3>
+            <div id="test-d5e913">
+               <h4>choice, expan + abbr</h4>
+               <table class="xspecResult">
+                  <thead>
+                     <tr>
+                        <th>Result</th>
+                        <th>Expected Result</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>
+                           <p>XPath <code class="same">/element()</code> from:</p>
+                           <pre>&lt;<span class="same">pb</span> xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+    xmlns:ns2="http://www.w3.org/1999/xlink"
+    xmlns:ns3="http://www.loc.gov/METS/"
+    <span class="same">facs</span>=<span class="same">"#facs_25"</span>
+    <span class="same">n</span>=<span class="same">"25"</span>
+    <span class="same">xml:id</span>=<span class="same">"img_0025"</span> /&gt;&lt;<span class="diff">ab</span> xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+    xmlns:ns2="http://www.w3.org/1999/xlink"
+    xmlns:ns3="http://www.loc.gov/METS/"
+    <span class="same">facs</span>=<span class="same">"#facs_25_r1"</span>
+    <span class="diff">type</span>=<span class="diff">"page-number"</span>&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_25_r1l1"</span>
+       <span class="same">n</span>=<span class="same">"N001"</span> /&gt;<span class="same">12.</span>&lt;/ab&gt;&lt;<span class="inner-diff">head</span> xmlns="http://www.tei-c.org/ns/1.0"
+      xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+      xmlns:ns2="http://www.w3.org/1999/xlink"
+      xmlns:ns3="http://www.loc.gov/METS/"
+      <span class="same">facs</span>=<span class="same">"#facs_25_r2"</span>&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_25_r2l1"</span>
+       <span class="same">n</span>=<span class="same">"N001"</span> /&gt;&lt;<span class="same">choice</span>&gt;&lt;<span class="same">expan</span> /&gt;&lt;<span class="same">abbr</span>&gt;<span class="same">H'r</span>&lt;/abbr&gt;&lt;/choice&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_25_line_1459841092982_10"</span>
+       <span class="same">n</span>=<span class="same">"N003"</span> /&gt;<span class="same">getragen werden, die in </span>&lt;<span class="same">choice</span>&gt;&lt;<span class="same">expan</span>&gt;<span class="same">den</span>&lt;/expan&gt;&lt;<span class="same">abbr</span>&gt;<span class="same">d</span>&lt;/abbr&gt;&lt;/choice&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_25_r4l10"</span>
+       <span class="same">n</span>=<span class="same">"N010"</span> /&gt;<span class="same">vom 8</span>&lt;<span class="same">choice</span>&gt;&lt;<span class="same">expan</span>&gt;<span class="same">ten</span>&lt;/expan&gt;&lt;<span class="same">abbr</span>&gt;&lt;<span class="same">hi</span> <span class="same">rend</span>=<span class="same">"superscript:true;"</span>&gt;<span class="same">t</span>&lt;/hi&gt;&lt;/abbr&gt;&lt;/choice&gt;<span class="diff whitespace">␣</span>&lt;<span class="same">choice</span>&gt;&lt;<span class="same">expan</span>&gt;<span class="same">vorigen Monats</span>&lt;/expan&gt;&lt;<span class="same">abbr</span>&gt;<span class="same">v. M.</span>&lt;/abbr&gt;&lt;/choice&gt;<span class="same"> eine Feüersgefahr</span>&lt;/head&gt;</pre>
+                        </td>
+                        <td>
+                           <p>XPath <code class="same">/element()</code> from:</p>
+                           <pre>&lt;<span class="same">pb</span> xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+    xmlns:ns2="http://www.w3.org/1999/xlink"
+    xmlns:ns3="http://www.loc.gov/METS/"
+    <span class="same">facs</span>=<span class="same">"#facs_25"</span>
+    <span class="same">n</span>=<span class="same">"25"</span>
+    <span class="same">xml:id</span>=<span class="same">"img_0025"</span> /&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+   xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+   xmlns:ns2="http://www.w3.org/1999/xlink"
+   xmlns:ns3="http://www.loc.gov/METS/"
+   <span class="same">facs</span>=<span class="same">"#facs_25_r1"</span>&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_25_r1l1"</span>
+       <span class="same">n</span>=<span class="same">"N001"</span> /&gt;<span class="same">12.</span>&lt;/p&gt;&lt;<span class="inner-diff">head</span> xmlns="http://www.tei-c.org/ns/1.0"
+      xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+      xmlns:ns2="http://www.w3.org/1999/xlink"
+      xmlns:ns3="http://www.loc.gov/METS/"
+      <span class="same">facs</span>=<span class="same">"#facs_25_r2"</span>&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_25_r2l1"</span>
+       <span class="same">n</span>=<span class="same">"N001"</span> /&gt;&lt;<span class="same">choice</span>&gt;&lt;<span class="same">expan</span> /&gt;&lt;<span class="same">abbr</span>&gt;<span class="same">H'r</span>&lt;/abbr&gt;&lt;/choice&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_25_line_1459841092982_10"</span>
+       <span class="same">n</span>=<span class="same">"N003"</span> /&gt;<span class="same">getragen werden, die in </span>&lt;<span class="same">choice</span>&gt;&lt;<span class="same">expan</span>&gt;<span class="same">den</span>&lt;/expan&gt;&lt;<span class="same">abbr</span>&gt;<span class="same">d</span>&lt;/abbr&gt;&lt;/choice&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_25_r4l10"</span>
+       <span class="same">n</span>=<span class="same">"N010"</span> /&gt;<span class="same">vom 8</span>&lt;<span class="same">choice</span>&gt;&lt;<span class="same">expan</span>&gt;<span class="same">ten</span>&lt;/expan&gt;&lt;<span class="same">abbr</span>&gt;&lt;<span class="same">hi</span> <span class="same">rend</span>=<span class="same">"superscript:true;"</span>&gt;<span class="same">t</span>&lt;/hi&gt;&lt;/abbr&gt;&lt;/choice&gt;<span class="diff whitespace">\n␣␣␣␣␣␣␣␣␣␣</span>&lt;<span class="same">choice</span>&gt;&lt;<span class="same">expan</span>&gt;<span class="same">vorigen Monats</span>&lt;/expan&gt;&lt;<span class="same">abbr</span>&gt;<span class="same">v. M.</span>&lt;/abbr&gt;&lt;/choice&gt;<span class="same"> eine Feüersgefahr</span>&lt;/head&gt;</pre>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
       </div>
-      <div id="d3e1932">
-         <h2 class="successful">convert user data<span class="scenario-totals">passed: 2 / pending: 0 / failed: 0 / total: 2</span></h2>
-         <table class="xspec" id="t-d3e1932">
-            <col width="75%" />
-            <col width="25%" />
+      <div id="top-level-scenario-d5e1133">
+         <h2 class="successful">convert user data<span class="scenario-totals">passed: 0 / pending: 0 / failed: 2 / total: 2</span></h2>
+         <table class="xspec" id="t-d5e1133">
+            <colgroup>
+               <col style="width:75%" />
+               <col style="width:25%" />
+            </colgroup>
             <tbody>
                <tr class="successful">
                   <th>convert user data</th>
-                  <th>passed: 2 / pending: 0 / failed: 0 / total: 2</th>
+                  <th>passed: 0 / pending: 0 / failed: 2 / total: 2</th>
                </tr>
-               <tr class="successful">
-                  <th>person (1)</th>
-                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               <tr class="failed">
+                  <th><a href="#scenario-d5e1135">person (1)</a></th>
+                  <th>passed: 0 / pending: 0 / failed: 1 / total: 1</th>
                </tr>
-               <tr class="successful">
-                  <td>name within rs</td>
-                  <td>Success</td>
+               <tr class="failed">
+                  <td><a href="#test-d5e1208">name within rs</a></td>
+                  <td>Failure</td>
                </tr>
-               <tr class="successful">
-                  <th>place (1)</th>
-                  <th>passed: 1 / pending: 0 / failed: 0 / total: 1</th>
+               <tr class="failed">
+                  <th><a href="#scenario-d5e1274">place (1)</a></th>
+                  <th>passed: 0 / pending: 0 / failed: 1 / total: 1</th>
                </tr>
-               <tr class="successful">
-                  <td>name within rs</td>
-                  <td>Success</td>
+               <tr class="failed">
+                  <td><a href="#test-d5e1291">name within rs</a></td>
+                  <td>Failure</td>
                </tr>
             </tbody>
          </table>
+         <div id="scenario-d5e1135">
+            <h3>convert user data person (1)</h3>
+            <div id="test-d5e1208">
+               <h4>name within rs</h4>
+               <table class="xspecResult">
+                  <thead>
+                     <tr>
+                        <th>Result</th>
+                        <th>Expected Result</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>
+                           <p>XPath <code class="same">/element()</code> from:</p>
+                           <pre>&lt;<span class="same">pb</span> xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+    xmlns:ns2="http://www.w3.org/1999/xlink"
+    xmlns:ns3="http://www.loc.gov/METS/"
+    <span class="same">facs</span>=<span class="same">"#facs_1"</span>
+    <span class="same">n</span>=<span class="same">"1"</span>
+    <span class="same">xml:id</span>=<span class="same">"img_0001"</span> /&gt;&lt;<span class="diff">ab</span> xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+    xmlns:ns2="http://www.w3.org/1999/xlink"
+    xmlns:ns3="http://www.loc.gov/METS/"
+    <span class="same">facs</span>=<span class="same">"#facs_1_region_1479996533458_8"</span>
+    <span class="diff">type</span>=<span class="diff">""</span>&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_1_r1003"</span>
+       <span class="same">n</span>=<span class="same">"N001"</span> /&gt;&lt;<span class="same">hi</span> <span class="same">rend</span>=<span class="same">"underlined:true; fontSize:0.0; kerning:0;"</span>&gt;<span class="same">A. 1.</span>&lt;/hi&gt;&lt;/ab&gt;&lt;<span class="diff">ab</span> xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+    xmlns:ns2="http://www.w3.org/1999/xlink"
+    xmlns:ns3="http://www.loc.gov/METS/"
+    <span class="same">facs</span>=<span class="same">"#facs_1_region_1479996502881_4"</span>
+    <span class="diff">type</span>=<span class="diff">""</span>&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_1_r1005"</span>
+       <span class="same">n</span>=<span class="same">"N001"</span> /&gt;<span class="same">Kaiserliche Akademie der Wissenschaften.</span>&lt;/ab&gt;&lt;<span class="diff">ab</span> xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+    xmlns:ns2="http://www.w3.org/1999/xlink"
+    xmlns:ns3="http://www.loc.gov/METS/"
+    <span class="same">facs</span>=<span class="same">"#facs_1_region_1479996509199_5"</span>
+    <span class="diff">type</span>=<span class="diff">""</span>&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_1_r1008"</span>
+       <span class="same">n</span>=<span class="same">"N001"</span> /&gt;<span class="same">Protokoll</span>&lt;/ab&gt;&lt;<span class="diff">ab</span> xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+    xmlns:ns2="http://www.w3.org/1999/xlink"
+    xmlns:ns3="http://www.loc.gov/METS/"
+    <span class="same">facs</span>=<span class="same">"#facs_1_region_1479996516875_6"</span>
+    <span class="diff">type</span>=<span class="diff">""</span>&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_1_r1010"</span>
+       <span class="same">n</span>=<span class="same">"N001"</span> /&gt;<span class="same">der außerordentlichen Gesammtsitzung
+      </span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_1_r1011"</span>
+       <span class="same">n</span>=<span class="same">"N002"</span> /&gt;<span class="same">am 27. November 1847</span>&lt;/ab&gt;&lt;<span class="diff">ab</span> xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+    xmlns:ns2="http://www.w3.org/1999/xlink"
+    xmlns:ns3="http://www.loc.gov/METS/"
+    <span class="same">facs</span>=<span class="same">"#facs_1_region_1479996526172_7"</span>
+    <span class="diff">type</span>=<span class="diff">""</span>&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_1_r1013"</span>
+       <span class="same">n</span>=<span class="same">"N001"</span> /&gt;<span class="same">Anwesende: Der Präsident Freiherr </span>&lt;<span class="same">rs</span> <span class="same">type</span>=<span class="same">"person"</span>
+       <span class="same">key</span>=<span class="same">"Hammer-Purgstall, von, Joseph"</span>&gt;&lt;<span class="same">choice</span>&gt;&lt;<span class="same">expan</span> /&gt;&lt;<span class="same">abbr</span>&gt;<span class="same">v.</span>&lt;/abbr&gt;&lt;/choice&gt;<span class="same"> Hammer-Purgstall</span>&lt;/rs&gt;<span class="same whitespace">\t\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_1_r1014"</span>
+       <span class="same">n</span>=<span class="same">"N002"</span> /&gt;&lt;<span class="same">choice</span>&gt;&lt;<span class="same">expan</span>&gt;<span class="same">Der</span>&lt;/expan&gt;&lt;<span class="same">abbr</span>&gt;<span class="same">"</span>&lt;/abbr&gt;&lt;/choice&gt;<span class="same"> Vice-Präsident </span>&lt;<span class="same">rs</span> <span class="same">type</span>=<span class="same">"person"</span>
+       <span class="same">key</span>=<span class="same">"Baumgartner, von, Andreas"</span>&gt;<span class="same">Baumgartner</span>&lt;/rs&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_1_r1015"</span>
+       <span class="same">n</span>=<span class="same">"N003"</span> /&gt;&lt;<span class="same">choice</span>&gt;&lt;<span class="same">expan</span>&gt;<span class="same">Der</span>&lt;/expan&gt;&lt;<span class="same">abbr</span>&gt;<span class="same">"</span>&lt;/abbr&gt;&lt;/choice&gt;<span class="same"> General-Secretär </span>&lt;<span class="same">rs</span> <span class="same">type</span>=<span class="same">"person"</span>
+       <span class="same">key</span>=<span class="same">"Ettingshausen, von, Andreas"</span>&gt;&lt;<span class="same">choice</span>&gt;&lt;<span class="same">expan</span>&gt;<span class="same">von</span>&lt;/expan&gt;&lt;<span class="same">abbr</span>&gt;<span class="same">v.</span>&lt;/abbr&gt;&lt;/choice&gt;<span class="same"> Ettingshausen</span>&lt;/rs&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_1_r1016"</span>
+       <span class="same">n</span>=<span class="same">"N004"</span> /&gt;&lt;<span class="same">choice</span>&gt;&lt;<span class="same">expan</span>&gt;<span class="same">Der</span>&lt;/expan&gt;&lt;<span class="same">abbr</span>&gt;<span class="same">"</span>&lt;/abbr&gt;&lt;/choice&gt;<span class="same"> zweite Secretär </span>&lt;<span class="same">rs</span> <span class="same">type</span>=<span class="same">"person"</span>
+       <span class="same">key</span>=<span class="same">"Wolf, Ferdinand"</span>&gt;<span class="same">Wolf</span>&lt;/rs&gt;&lt;/ab&gt;&lt;<span class="diff">ab</span> xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+    xmlns:ns2="http://www.w3.org/1999/xlink"
+    xmlns:ns3="http://www.loc.gov/METS/"
+    <span class="same">facs</span>=<span class="same">"#facs_1_region_1479997987283_34"</span>
+    <span class="diff">type</span>=<span class="diff">""</span>&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_1_r1018"</span>
+       <span class="same">n</span>=<span class="same">"N001"</span> /&gt;<span class="same">die wirklichen Mitglieder </span>&lt;<span class="same">rs</span> <span class="same">type</span>=<span class="same">"person"</span>
+       <span class="same">key</span>=<span class="same">"Prechtl, von, Johann Joseph"</span>&gt;<span class="same">Prechtl</span>&lt;/rs&gt;<span class="diff whitespace">\t</span>&lt;/ab&gt;</pre>
+                        </td>
+                        <td>
+                           <p>XPath <code class="same">/element()</code> from:</p>
+                           <pre>&lt;<span class="same">pb</span> xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+    xmlns:ns2="http://www.w3.org/1999/xlink"
+    xmlns:ns3="http://www.loc.gov/METS/"
+    <span class="same">facs</span>=<span class="same">"#facs_1"</span>
+    <span class="same">n</span>=<span class="same">"1"</span>
+    <span class="same">xml:id</span>=<span class="same">"img_0001"</span> /&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+   xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+   xmlns:ns2="http://www.w3.org/1999/xlink"
+   xmlns:ns3="http://www.loc.gov/METS/"
+   <span class="same">facs</span>=<span class="same">"#facs_1_region_1479996533458_8"</span>&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_1_r1003"</span>
+       <span class="same">n</span>=<span class="same">"N001"</span> /&gt;&lt;<span class="same">hi</span> <span class="same">rend</span>=<span class="same">"underlined:true; fontSize:0.0; kerning:0;"</span>&gt;<span class="same">A. 1.</span>&lt;/hi&gt;&lt;/p&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+   xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+   xmlns:ns2="http://www.w3.org/1999/xlink"
+   xmlns:ns3="http://www.loc.gov/METS/"
+   <span class="same">facs</span>=<span class="same">"#facs_1_region_1479996502881_4"</span>&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_1_r1005"</span>
+       <span class="same">n</span>=<span class="same">"N001"</span> /&gt;<span class="same">Kaiserliche Akademie der Wissenschaften.</span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+   xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+   xmlns:ns2="http://www.w3.org/1999/xlink"
+   xmlns:ns3="http://www.loc.gov/METS/"
+   <span class="same">facs</span>=<span class="same">"#facs_1_region_1479996509199_5"</span>&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_1_r1008"</span>
+       <span class="same">n</span>=<span class="same">"N001"</span> /&gt;<span class="same">Protokoll</span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+   xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+   xmlns:ns2="http://www.w3.org/1999/xlink"
+   xmlns:ns3="http://www.loc.gov/METS/"
+   <span class="same">facs</span>=<span class="same">"#facs_1_region_1479996516875_6"</span>&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_1_r1010"</span>
+       <span class="same">n</span>=<span class="same">"N001"</span> /&gt;<span class="same">der außerordentlichen Gesammtsitzung
+      </span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_1_r1011"</span>
+       <span class="same">n</span>=<span class="same">"N002"</span> /&gt;<span class="same">am 27. November 1847</span>&lt;/p&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+   xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+   xmlns:ns2="http://www.w3.org/1999/xlink"
+   xmlns:ns3="http://www.loc.gov/METS/"
+   <span class="same">facs</span>=<span class="same">"#facs_1_region_1479996526172_7"</span>&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_1_r1013"</span>
+       <span class="same">n</span>=<span class="same">"N001"</span> /&gt;<span class="same">Anwesende: Der Präsident Freiherr </span>&lt;<span class="same">rs</span> <span class="same">type</span>=<span class="same">"person"</span>
+       <span class="same">key</span>=<span class="same">"Hammer-Purgstall, von, Joseph"</span>&gt;&lt;<span class="same">choice</span>&gt;&lt;<span class="same">expan</span> /&gt;&lt;<span class="same">abbr</span>&gt;<span class="same">v.</span>&lt;/abbr&gt;&lt;/choice&gt;<span class="same"> Hammer-Purgstall</span>&lt;/rs&gt;<span class="same whitespace">\t\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_1_r1014"</span>
+       <span class="same">n</span>=<span class="same">"N002"</span> /&gt;&lt;<span class="same">choice</span>&gt;&lt;<span class="same">expan</span>&gt;<span class="same">Der</span>&lt;/expan&gt;&lt;<span class="same">abbr</span>&gt;<span class="same">"</span>&lt;/abbr&gt;&lt;/choice&gt;<span class="same"> Vice-Präsident </span>&lt;<span class="same">rs</span> <span class="same">type</span>=<span class="same">"person"</span>
+       <span class="same">key</span>=<span class="same">"Baumgartner, von, Andreas"</span>&gt;<span class="same">Baumgartner</span>&lt;/rs&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_1_r1015"</span>
+       <span class="same">n</span>=<span class="same">"N003"</span> /&gt;&lt;<span class="same">choice</span>&gt;&lt;<span class="same">expan</span>&gt;<span class="same">Der</span>&lt;/expan&gt;&lt;<span class="same">abbr</span>&gt;<span class="same">"</span>&lt;/abbr&gt;&lt;/choice&gt;<span class="same"> General-Secretär </span>&lt;<span class="same">rs</span> <span class="same">type</span>=<span class="same">"person"</span>
+       <span class="same">key</span>=<span class="same">"Ettingshausen, von, Andreas"</span>&gt;&lt;<span class="same">choice</span>&gt;&lt;<span class="same">expan</span>&gt;<span class="same">von</span>&lt;/expan&gt;&lt;<span class="same">abbr</span>&gt;<span class="same">v.</span>&lt;/abbr&gt;&lt;/choice&gt;<span class="same"> Ettingshausen</span>&lt;/rs&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_1_r1016"</span>
+       <span class="same">n</span>=<span class="same">"N004"</span> /&gt;&lt;<span class="same">choice</span>&gt;&lt;<span class="same">expan</span>&gt;<span class="same">Der</span>&lt;/expan&gt;&lt;<span class="same">abbr</span>&gt;<span class="same">"</span>&lt;/abbr&gt;&lt;/choice&gt;<span class="same"> zweite Secretär </span>&lt;<span class="same">rs</span> <span class="same">type</span>=<span class="same">"person"</span>
+       <span class="same">key</span>=<span class="same">"Wolf, Ferdinand"</span>&gt;<span class="same">Wolf</span>&lt;/rs&gt;&lt;/p&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+   xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+   xmlns:ns2="http://www.w3.org/1999/xlink"
+   xmlns:ns3="http://www.loc.gov/METS/"
+   <span class="same">facs</span>=<span class="same">"#facs_1_region_1479997987283_34"</span>&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_1_r1018"</span>
+       <span class="same">n</span>=<span class="same">"N001"</span> /&gt;<span class="same">die wirklichen Mitglieder </span>&lt;<span class="same">rs</span> <span class="same">type</span>=<span class="same">"person"</span>
+       <span class="same">key</span>=<span class="same">"Prechtl, von, Johann Joseph"</span>&gt;<span class="same">Prechtl</span>&lt;/rs&gt;&lt;/p&gt;</pre>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+         <div id="scenario-d5e1274">
+            <h3>convert user data place (1)</h3>
+            <div id="test-d5e1291">
+               <h4>name within rs</h4>
+               <table class="xspecResult">
+                  <thead>
+                     <tr>
+                        <th>Result</th>
+                        <th>Expected Result</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>
+                           <p>XPath <code class="same">/element()</code> from:</p>
+                           <pre>&lt;<span class="same">pb</span> xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+    xmlns:ns2="http://www.w3.org/1999/xlink"
+    xmlns:ns3="http://www.loc.gov/METS/"
+    <span class="same">facs</span>=<span class="same">"#facs_1"</span>
+    <span class="same">n</span>=<span class="same">"1"</span>
+    <span class="same">xml:id</span>=<span class="same">"img_0001"</span> /&gt;&lt;<span class="diff">ab</span> xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+    xmlns:ns2="http://www.w3.org/1999/xlink"
+    xmlns:ns3="http://www.loc.gov/METS/"
+    <span class="same">facs</span>=<span class="same">"#facs_1_region_1480062023146_1"</span>
+    <span class="diff">type</span>=<span class="diff">""</span>&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_1_r1052"</span>
+       <span class="same">n</span>=<span class="same">"N006"</span> /&gt;<span class="same">en Oeconomie-Hofes in </span>&lt;<span class="same">rs</span> <span class="same">type</span>=<span class="same">"place"</span>
+       <span class="same">key</span>=<span class="same">"(Wien-)Simmering"</span>&gt;<span class="same">Simmering</span>&lt;/rs&gt;<span class="same"> überwachen könnte, während die Akademie</span>&lt;/ab&gt;</pre>
+                        </td>
+                        <td>
+                           <p>XPath <code class="same">/element()</code> from:</p>
+                           <pre>&lt;<span class="same">pb</span> xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+    xmlns:ns2="http://www.w3.org/1999/xlink"
+    xmlns:ns3="http://www.loc.gov/METS/"
+    <span class="same">facs</span>=<span class="same">"#facs_1"</span>
+    <span class="same">n</span>=<span class="same">"1"</span>
+    <span class="same">xml:id</span>=<span class="same">"img_0001"</span> /&gt;&lt;<span class="diff">p</span> xmlns="http://www.tei-c.org/ns/1.0"
+   xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+   xmlns:ns2="http://www.w3.org/1999/xlink"
+   xmlns:ns3="http://www.loc.gov/METS/"
+   <span class="same">facs</span>=<span class="same">"#facs_1_region_1480062023146_1"</span>&gt;<span class="same whitespace">\n␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs_1_r1052"</span>
+       <span class="same">n</span>=<span class="same">"N006"</span> /&gt;<span class="same">en Oeconomie-Hofes in </span>&lt;<span class="same">rs</span> <span class="same">type</span>=<span class="same">"place"</span>
+       <span class="same">key</span>=<span class="same">"(Wien-)Simmering"</span>&gt;<span class="same">Simmering</span>&lt;/rs&gt;<span class="same"> überwachen könnte, während die Akademie</span>&lt;/p&gt;</pre>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
       </div>
-      <div id="d3e2298">
+      <div id="top-level-scenario-d5e1302">
          <h2 class="successful">continued<span class="scenario-totals">passed: 1 / pending: 0 / failed: 0 / total: 1</span></h2>
-         <table class="xspec" id="t-d3e2298">
-            <col width="75%" />
-            <col width="25%" />
+         <table class="xspec" id="t-d5e1302">
+            <colgroup>
+               <col style="width:75%" />
+               <col style="width:25%" />
+            </colgroup>
             <tbody>
                <tr class="successful">
                   <th>continued</th>
@@ -214,11 +1047,13 @@
             </tbody>
          </table>
       </div>
-      <div id="d3e2731">
+      <div id="top-level-scenario-d5e1635">
          <h2 class="successful">table<span class="scenario-totals">passed: 1 / pending: 0 / failed: 0 / total: 1</span></h2>
-         <table class="xspec" id="t-d3e2731">
-            <col width="75%" />
-            <col width="25%" />
+         <table class="xspec" id="t-d5e1635">
+            <colgroup>
+               <col style="width:75%" />
+               <col style="width:25%" />
+            </colgroup>
             <tbody>
                <tr class="successful">
                   <th>table</th>

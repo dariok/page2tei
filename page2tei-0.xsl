@@ -289,54 +289,58 @@
     </xd:p></xd:desc>
     <xd:param name="numCurr"/>
   </xd:doc>
-   <xsl:template match="p:TextRegion" mode="text">
+  <xsl:template match="p:TextRegion" mode="text">
     <xsl:param name="numCurr" tunnel="true" />
-   <xsl:choose>
-    <xsl:when test="@type = 'heading'">
-    <head facs="#facs_{$numCurr}_{@id}">
-    <xsl:apply-templates select="p:TextLine" />
-     </head>
-    </xsl:when>
-    <xsl:when test="@type = 'caption'">
-     <figure>
-    <head facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></head>
-     </figure>
-    </xsl:when>
-    <xsl:when test="@type = 'header'">
-     <fw type="header" place="top" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></fw>
-    </xsl:when>
-    <xsl:when test="@type = 'footer'">
-     <fw type="header" place="bottom" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></fw>
-    </xsl:when>
-    <xsl:when test="@type = 'catch-word'">
-     <fw type="catch" place="bottom" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></fw>
-    </xsl:when>
-    <xsl:when test="@type = 'signature-mark'">
-     <fw place="bottom" type="sig" facs="#facs_{$numCurr}_{@id}">
-    <xsl:apply-templates select="p:TextLine" />
-     </fw>
-    </xsl:when>
-    <xsl:when test="@type = 'marginalia'">
-     <note place="[direction]" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></note>
-    </xsl:when>
-    <xsl:when test="@type = 'footnote'">
-     <note place="foot" n="[footnote reference]" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></note>
-    </xsl:when>
-     <xsl:when test="@type = 'footnote-continued'">
-       <note place="foot" n="[footnote-continued reference]" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></note>
-    </xsl:when>
-    <xsl:when test="@type = ('other', 'paragraph')">
-     <p facs="#facs_{$numCurr}_{@id}">
-        <xsl:apply-templates select="p:TextLine" />
-      </p>
-    </xsl:when>
-    <!-- the fallback option should be a semantically open element such as <ab> -->
-    <xsl:otherwise>
-      <ab facs="#facs_{$numCurr}_{@id}">
-        <xsl:apply-templates select="p:TextLine" />
-      </ab>
-    </xsl:otherwise>
-  </xsl:choose>
+    <xsl:variable name="custom" as="map(*)">
+      <xsl:apply-templates select="@custom" />
+    </xsl:variable>
+    
+    <xsl:choose>
+      <xsl:when test="@type = 'heading'">
+        <head facs="#facs_{$numCurr}_{@id}">
+          <xsl:apply-templates select="p:TextLine" />
+        </head>
+      </xsl:when>
+      <xsl:when test="@type = 'caption'">
+        <figure>
+          <head facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></head>
+        </figure>
+      </xsl:when>
+      <xsl:when test="@type = 'header'">
+        <fw type="header" place="top" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></fw>
+      </xsl:when>
+      <xsl:when test="@type = 'footer'">
+        <fw type="header" place="bottom" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></fw>
+      </xsl:when>
+      <xsl:when test="@type = 'catch-word'">
+        <fw type="catch" place="bottom" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></fw>
+      </xsl:when>
+      <xsl:when test="@type = 'signature-mark'">
+        <fw place="bottom" type="sig" facs="#facs_{$numCurr}_{@id}">
+          <xsl:apply-templates select="p:TextLine" />
+        </fw>
+      </xsl:when>
+      <xsl:when test="@type = 'marginalia'">
+        <note place="[direction]" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></note>
+      </xsl:when>
+      <xsl:when test="@type = 'footnote'">
+        <note place="foot" n="[footnote reference]" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></note>
+      </xsl:when>
+      <xsl:when test="@type = 'footnote-continued'">
+        <note place="foot" n="[footnote-continued reference]" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></note>
+      </xsl:when>
+      <xsl:when test="@type = ('other', 'paragraph')">
+        <p facs="#facs_{$numCurr}_{@id}">
+          <xsl:apply-templates select="p:TextLine" />
+        </p>
+      </xsl:when>
+      <!-- the fallback option should be a semantically open element such as <ab> -->
+      <xsl:otherwise>
+        <ab facs="#facs_{$numCurr}_{@id}" type="{@type}{$custom?structure?type}">
+          <xsl:apply-templates select="p:TextLine" />
+        </ab>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
   
   <xd:doc>
@@ -706,6 +710,22 @@
   </xd:doc>
   <xsl:template match="p:Metadata" mode="text" />
   
+  <xd:doc>
+    <xd:desc>Parse the content of an attribute such as @custom into a map.</xd:desc>
+  </xd:doc>
+  <xsl:template match="@custom" as="map(*)">
+    <xsl:map>
+      <xsl:for-each select="tokenize(., '}')[normalize-space() != '']">
+        <xsl:map-entry key="substring-before(normalize-space(), ' ')">
+          <xsl:map>
+            <xsl:for-each select="tokenize(substring-after(., '{'), ';')[normalize-space() != '']">
+              <xsl:map-entry key="substring-before(., ':')" select="substring-after(., ':')" />
+            </xsl:for-each>
+          </xsl:map>
+        </xsl:map-entry>
+      </xsl:for-each>
+    </xsl:map>
+  </xsl:template>
   
   <xd:doc>
     <xd:desc>Text nodes to be copied</xd:desc>
