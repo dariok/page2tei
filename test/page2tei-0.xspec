@@ -154,9 +154,9 @@
                 </ns3:div>
             </ns3:structMap>
         </x:context>
-        <x:expect label="." xml:space="preserve"><pb facs="#facs_10" n="10" xml:id="img_0010" /><p facs="#facs_10_r_2_7">
+        <x:expect label="." xml:space="preserve"><pb facs="#facs_10" n="10" xml:id="img_0010" /><ab facs="#facs_10_r_2_7" type="list">
       <lb facs="#facs_10_tl_75" n="N001"/>Johann Frantz Weishaubt / ware nno 1697. <supplied reason=""><hi rend="fontFamily:Antiqua;">Ex-</hi></supplied>
-      <lb facs="#facs_10_tl_76" n="N002"/><hi rend="fontFamily:Antiqua;">peditor</hi> bey der hoch=ansehentl. Geheimen Stelle in Gr<gap/></p></x:expect>
+      <lb facs="#facs_10_tl_76" n="N002"/><hi rend="fontFamily:Antiqua;">peditor</hi> bey der hoch=ansehentl. Geheimen Stelle in Gr<gap/></ab></x:expect>
     </x:scenario>
     <x:scenario label="17410624 - p. 7">
         <x:context mode="text">
@@ -218,13 +218,13 @@
                     </ns3:fileGrp>
                 </ns3:fileSec>
             </x:context>
-            <x:expect label="choice, expan + abbr" xml:space="preserve"><pb facs="#facs_25" n="25" xml:id="img_0025" /><p facs="#facs_25_r1">
-      <lb facs="#facs_25_r1l1" n="N001"/>12.</p><head facs="#facs_25_r2">
+            <x:expect label="choice, expan + abbr" xml:space="preserve"><pb facs="#facs_25" n="25" xml:id="img_0025" /><ab facs="#facs_25_r1" type="page-number">
+      <lb facs="#facs_25_r1l1" n="N001"/>12.</ab><head facs="#facs_25_r2">
       <lb facs="#facs_25_r2l1" n="N001"/><choice><expan/><abbr>H&apos;r</abbr></choice>
       <lb facs="#facs_25_line_1459841092982_10"
           n="N003" />getragen werden, die in <choice><expan>den</expan><abbr>d</abbr></choice>
-      <lb facs="#facs_25_r4l10" n="N010"/>vom 8<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice>
-          <choice><expan>vorigen Monats</expan><abbr>v. M.</abbr></choice> eine Feüersgefahr</head></x:expect>
+      <lb facs="#facs_25_r4l10" n="N010"/>vom 8<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice> <choice
+        ><expan>vorigen Monats</expan><abbr>v. M.</abbr></choice> eine Feüersgefahr</head></x:expect>
         </x:scenario>
         <x:scenario label="date">
             <x:context mode="text">
@@ -278,17 +278,17 @@
                     </ns3:fileGrp>
                 </ns3:fileSec>
             </x:context>
-            <x:expect label="name within rs" xml:space="preserve"><pb facs="#facs_1" n="1" xml:id="img_0001"/><p facs="#facs_1_region_1479996533458_8">
-      <lb facs="#facs_1_r1003" n="N001"/><hi rend="underlined:true; fontSize:0.0; kerning:0;">A. 1.</hi></p><p facs="#facs_1_region_1479996502881_4">
-      <lb facs="#facs_1_r1005" n="N001"/>Kaiserliche Akademie der Wissenschaften.</p><p facs="#facs_1_region_1479996509199_5">
-      <lb facs="#facs_1_r1008" n="N001"/>Protokoll</p><p facs="#facs_1_region_1479996516875_6">
+            <x:expect label="name within rs" xml:space="preserve"><pb facs="#facs_1" n="1" xml:id="img_0001"/><ab type="" facs="#facs_1_region_1479996533458_8">
+      <lb facs="#facs_1_r1003" n="N001"/><hi rend="underlined:true; fontSize:0.0; kerning:0;">A. 1.</hi></ab><ab type="" facs="#facs_1_region_1479996502881_4">
+      <lb facs="#facs_1_r1005" n="N001"/>Kaiserliche Akademie der Wissenschaften.</ab><ab type="" facs="#facs_1_region_1479996509199_5">
+      <lb facs="#facs_1_r1008" n="N001"/>Protokoll</ab><ab type="" facs="#facs_1_region_1479996516875_6">
       <lb facs="#facs_1_r1010" n="N001"/>der außerordentlichen Gesammtsitzung
-      <lb facs="#facs_1_r1011" n="N002"/>am 27. November 1847</p><p facs="#facs_1_region_1479996526172_7">
+      <lb facs="#facs_1_r1011" n="N002"/>am 27. November 1847</ab><ab type="" facs="#facs_1_region_1479996526172_7">
       <lb facs="#facs_1_r1013" n="N001"/>Anwesende: Der Präsident Freiherr <rs type="person" key="Hammer-Purgstall, von, Joseph"><choice><expan/><abbr>v.</abbr></choice> Hammer-Purgstall</rs>	
       <lb facs="#facs_1_r1014" n="N002"/><choice><expan>Der</expan><abbr>"</abbr></choice> Vice-Präsident <rs type="person" key="Baumgartner, von, Andreas">Baumgartner</rs>
       <lb facs="#facs_1_r1015" n="N003"/><choice><expan>Der</expan><abbr>"</abbr></choice> General-Secretär <rs type="person" key="Ettingshausen, von, Andreas"><choice><expan>von</expan><abbr>v.</abbr></choice> Ettingshausen</rs>
-      <lb facs="#facs_1_r1016" n="N004"/><choice><expan>Der</expan><abbr>"</abbr></choice> zweite Secretär <rs type="person" key="Wolf, Ferdinand">Wolf</rs></p><p facs="#facs_1_region_1479997987283_34">
-      <lb facs="#facs_1_r1018" n="N001"/>die wirklichen Mitglieder <rs type="person" key="Prechtl, von, Johann Joseph">Prechtl</rs></p></x:expect>
+      <lb facs="#facs_1_r1016" n="N004"/><choice><expan>Der</expan><abbr>"</abbr></choice> zweite Secretär <rs type="person" key="Wolf, Ferdinand">Wolf</rs></ab><ab type="" facs="#facs_1_region_1479997987283_34">
+      <lb facs="#facs_1_r1018" n="N001"/>die wirklichen Mitglieder <rs type="person" key="Prechtl, von, Johann Joseph">Prechtl</rs>	</ab></x:expect>
         </x:scenario>
         <x:scenario label="place (1)">
             <x:context mode="text">
@@ -302,9 +302,9 @@
                     </ns3:fileGrp>
                 </ns3:fileSec>
             </x:context>
-            <x:expect label="name within rs" xml:space="preserve"><pb facs="#facs_1" n="1" xml:id="img_0001" /><p facs="#facs_1_region_1480062023146_1">
+            <x:expect label="name within rs" xml:space="preserve"><pb facs="#facs_1" n="1" xml:id="img_0001" /><ab type="" facs="#facs_1_region_1480062023146_1">
       <lb facs="#facs_1_r1052" n="N006" />en Oeconomie-Hofes in <rs type="place"
-        key="(Wien-)Simmering">Simmering</rs> überwachen könnte, während die Akademie</p></x:expect>
+        key="(Wien-)Simmering">Simmering</rs> überwachen könnte, während die Akademie</ab></x:expect>
         </x:scenario>
     </x:scenario>
     
