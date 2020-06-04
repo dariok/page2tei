@@ -214,8 +214,8 @@
     </xsl:variable>
     <xsl:variable name="custom" as="map(xs:string, xs:string)">
       <xsl:map>
-        <xsl:for-each-group select="tokenize(@custom||' lfd {'||$numCurr, '} ')" group-by="substring-before(., ' ')">
-          <xsl:map-entry key="substring-before(., ' ')" select="string-join(substring-after(., '{'), '–')" />
+        <xsl:for-each-group select="tokenize(@custom||' lfd {'||$numCurr, '\} ')" group-by="substring-before(., ' ')">
+          <xsl:map-entry key="substring-before(., ' ')" select="string-join(substring-after(., '\{'), '–')" />
         </xsl:for-each-group>
       </xsl:map>
     </xsl:variable>
@@ -452,7 +452,7 @@
     
     <xsl:variable name="text" select="p:TextEquiv/p:Unicode"/>
     <xsl:variable name="custom" as="text()*">
-      <xsl:for-each select="tokenize(@custom, '}')">
+      <xsl:for-each select="tokenize(@custom, '\}')">
         <xsl:choose>
           <xsl:when test="string-length() &lt; 1 or starts-with(., 'readingOrder') or starts-with(normalize-space(), 'structure')" />
           <xsl:otherwise>
@@ -715,10 +715,10 @@
   </xd:doc>
   <xsl:template match="@custom" as="map(*)">
     <xsl:map>
-      <xsl:for-each select="tokenize(., '}')[normalize-space() != '']">
+      <xsl:for-each select="tokenize(., '\}')[normalize-space() != '']">
         <xsl:map-entry key="substring-before(normalize-space(), ' ')">
           <xsl:map>
-            <xsl:for-each select="tokenize(substring-after(., '{'), ';')[normalize-space() != '']">
+            <xsl:for-each select="tokenize(substring-after(., '\{'), ';')[normalize-space() != '']">
               <xsl:map-entry key="substring-before(., ':')" select="substring-after(., ':')" />
             </xsl:for-each>
           </xsl:map>
