@@ -16,7 +16,7 @@ cd page2tei
 Use the METS File for your transformation:
 
 ```
-java -jar saxon9he.jar -xsl:page2tei-0.xsl -s:mets.xml PAGEXML=[the value of mets:fileGrp/@ID or @USE] PAGEprogram=[Transkribus or OCR-D -o:[your tei file].xml
+java -jar saxon9he.jar -xsl:page2tei-0.xsl -s:mets.xml PAGEXML=[the value of mets:fileGrp/@ID or @USE] PAGE program=[Transkribus or OCR-D -o:[your tei file].xml
 ```
 ## Example:
 
@@ -39,6 +39,6 @@ java -jar saxon9he.jar -xsl:page2tei-0.xsl -s:mets.xml PAGEXML=PAGEXML PAGEprogr
 
 
 ```sh
-java -jar saxon9he.jar -xsl:page2tei-0.xsl -s:mets.xml PAGEXML=OCR-D-OCR-TESSEROCR PAGEprogram=OCR-D -o:[your tei file].xml
+java -jar saxon9he.jar -xsl:page2tei-0.xsl -s:mets.xml PAGEXML=OCR-D-OCR-TESSEROCR PAGE program=OCR-D -o:[your tei file].xml
 ```
 
