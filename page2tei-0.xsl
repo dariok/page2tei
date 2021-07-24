@@ -22,12 +22,13 @@
   
   <xd:doc scope="stylesheet">
     <xd:desc>
-      <xd:p><xd:b>Author:</xd:b> Dario Kampkaspar, dario.kampkaspar@oeaw.ac.at</xd:p>
-      <xd:p>Austrian Centre for Digital Humanities http://acdh.oeaw.ac.at</xd:p>
+      <xd:p><xd:b>Author:</xd:b> Dario Kampkaspar, dario.kampkaspar@oeaw.ac.at | dario.kampkaspar@tu-darmstadt.de</xd:p>
+      <xd:p>Austrian Centre for Digital Humanities http://acdh.oeaw.ac.at | University and State Library Darmstadt
+        https://ulb.tu-darmstadt.de</xd:p>
       <xd:p></xd:p>
       <xd:p>This stylesheet, when applied to mets.xml of the PAGE output, will create (valid) TEI</xd:p>
       <xd:p></xd:p>
-      <xd:p><xd:b>Contributor</xd:b> Matthias Boenig, boenig@bbaw.de</xd:p>
+      <xd:p><xd:b>Contributor</xd:b> Matthias Boenig, github:@tboenig</xd:p>
       <xd:p>OCR-D, Berlin-Brandenburg Academy of Sciences and Humanities http://ocr-d.de/eng</xd:p>
       <xd:p>extend the original XSL-Stylesheet by specific elements based on the @typing of the text region</xd:p>
       <xd:p></xd:p>
@@ -35,7 +36,7 @@
       <xd:p>Carl-Maria-von-Weber-Gesamtausgabe</xd:p>
       <xd:p>Added corrections to tei:sic/tei:corr</xd:p>
       <xd:p></xd:p>
-      <xd:p><xd:b>Contributor</xd:b> Till Graller, github:@tillgrallert</xd:p>
+      <xd:p><xd:b>Contributor</xd:b> Till Grallert, github:@tillgrallert</xd:p>
       <xd:p>Orient-Institut Beirut</xd:p>
       <xd:p>Use tei:ab as fallback instead of tei:p</xd:p>
     </xd:desc>
