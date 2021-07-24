@@ -27,6 +27,9 @@
         https://ulb.tu-darmstadt.de</xd:p>
       <xd:p></xd:p>
       <xd:p>This stylesheet, when applied to mets.xml of the PAGE output, will create (valid) TEI</xd:p>
+      <xd:p>While this XSLT is designed to run on many different flavours of PAGE-XMLs described by a common mets.xml
+        file, some special care was taken to include meta data provided by Transkribus; other meta data providers may be
+        included if examples are provided.</xd:p>
       <xd:p></xd:p>
       <xd:p><xd:b>Contributor</xd:b> Matthias Boenig, github:@tboenig</xd:p>
       <xd:p>OCR-D, Berlin-Brandenburg Academy of Sciences and Humanities http://ocr-d.de/eng</xd:p>
@@ -48,49 +51,83 @@
   <xsl:param name="debug" select="false()" />
   
   <xd:doc>
+    <xd:desc>helper: gather page contents</xd:desc>
+  </xd:doc>
+  <xsl:variable name="make_div">
+    <div>
+      <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID='PAGEXML']/mets:file" mode="text" />
+    </div>
+  </xsl:variable>
+  <xd:doc>
     <xd:desc>Entry point: start at the top of METS.xml</xd:desc>
   </xd:doc>
-  <xsl:template match="/mets:mets">
-    <TEI>
-      <teiHeader>
-        <fileDesc>
-          <titleStmt>
-            <xsl:apply-templates select="mets:amdSec//trpDocMetadata/title" />
-            <xsl:apply-templates select="mets:amdSec//trpDocMetadata/author" />
-            <xsl:apply-templates select="mets:amdSec//trpDocMetadata/uploader" />
-          </titleStmt>
-          <publicationStmt>
-            <publisher>tranScriptorium</publisher>
-          </publicationStmt>
-          <seriesStmt>
-            <xsl:apply-templates select="mets:amdSec//trpDocMetadata/collectionList/colList[1]/colName" />
-          </seriesStmt>
-          <sourceDesc>
-            <p>TRP document creator: <xsl:value-of select="mets:amdSec//uploader"/></p>
-            <xsl:apply-templates select="mets:amdSec//trpDocMetadata/desc" />
-          </sourceDesc>
-        </fileDesc>
-      </teiHeader>
-      <xsl:if test="not($debug)">
-        <facsimile>
-          <xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID='PAGEXML']/mets:file" mode="facsimile" />
-        </facsimile>
-      </xsl:if>
-      <text><body>
-       <xsl:variable name="make_div">
-        <div>
-          <xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID='PAGEXML']/mets:file" mode="text" />
-        </div>
-       </xsl:variable>
-<!--       <xsl:message select="$make_div"></xsl:message>-->
-        <xsl:for-each-group select="$make_div//*[local-name() = 'div']/*" group-starting-with="*[local-name() = 'head']" >
+  <xsl:template match="/mets:mets" xml:space="preserve">
+<TEI>
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <xsl:apply-templates select="mets:amdSec" mode="titleStmt" />
+         </titleStmt>
+         <seriesStmt>
+            <xsl:apply-templates select="mets:amdSec" mode="seriesStmt" />
+         </seriesStmt>
+         <sourceDesc>
+            <bibl>
+               <xsl:apply-templates select="mets:amdSec" mode="sourceDesc" />
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <facsimile>
+      <xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID='PAGEXML']/mets:file" mode="facsimile" />
+   </facsimile>
+   <text>
+      <body
+      ><xsl:for-each-group select="$make_div//*[local-name() = 'div']/*" group-starting-with="*[local-name() = 'head']" >
          <div xmlns="http://www.tei-c.org/ns/1.0">
-        <xsl:copy-of select="current-group()"/>
+           <xsl:copy-of select="current-group()"/>
          </div>
-        </xsl:for-each-group>
-       </body>
-      </text>
-    </TEI>
+      </xsl:for-each-group
+      ></body>
+   </text>
+</TEI>
+</xsl:template>
+  
+  <!-- create teiHeader from METS and (if present) included Transkribus Meta data -->
+  <xd:doc>
+    <xd:desc>Contents for titleStmt</xd:desc>
+  </xd:doc>
+  <xsl:template match="mets:amdSec" mode="titleStmt">
+    <xsl:apply-templates select="descendant::trpDocMetadata/title" />
+    <xsl:apply-templates select="descendant::trpDocMetadata/author" />
+  </xsl:template>
+  
+  <xd:doc>
+    <xd:desc>Contents for seriesStmt</xd:desc>
+  </xd:doc>
+  <xsl:template match="mets:amdSec" mode="seriesStmt">
+    <xsl:apply-templates select="descendant::trpDocMetadata//colList[1]/colName" />
+  </xsl:template>
+  
+  <xd:doc>
+    <xd:desc>Contents for sourceDesc</xd:desc>
+  </xd:doc>
+  <xsl:template match="mets:amdSec" mode="sourceDesc">
+    <xsl:apply-templates select="descendant::trpDocMetadata/title" />
+    <xsl:apply-templates select="descendant::trpDocMetadata/author | descendant::trpDocMetadata/writer" />
+    <idno type="Transkribus">
+      <xsl:value-of select="descendant::trpDocMetadata/docId" />
+    </idno>
+    <xsl:apply-templates select="descendant::trpDocMetadata/externalId" />
+    <xsl:apply-templates select="descendant::trpDocMetadata/desc" />
+  </xsl:template>
+  
+  <xd:doc>
+    <xd:desc>Contents for editionStmt</xd:desc>
+  </xd:doc>
+  <xsl:template match="mets:amdSec" mode="editionStmt">
+    <p>TRP document creator: <xsl:value-of select="descendant::trpDocMetadata/uploader"/></p>
+    <xsl:apply-templates select="mets:amdSec//trpDocMetadata/desc" />
   </xsl:template>
   
   <!-- Templates for trpMetaData -->
@@ -119,11 +156,14 @@
   </xsl:template>
   
   <xd:doc>
-    <xd:desc>The uploader of the current document.
-      Will be used as titleStmt/principal</xd:desc>
+    <xd:desc>The author as stated in Transkribus meta data.
+      Will be used in the teiHeader as titleStmt/respStmt</xd:desc>
   </xd:doc>
-  <xsl:template match="uploader">
-    <principal><xsl:apply-templates /></principal>
+  <xsl:template match="writer">
+    <respStmt>
+      <resp>Writer</resp>
+      <name><xsl:apply-templates /></name>
+    </respStmt>
   </xsl:template>
   
   <xd:doc>
@@ -131,7 +171,7 @@
       Will be used in sourceDesc</xd:desc>
   </xd:doc>
   <xsl:template match="desc">
-    <p><xsl:apply-templates /></p>
+    <note><xsl:apply-templates /></note>
   </xsl:template>
   
   <xd:doc>
@@ -140,6 +180,15 @@
   </xd:doc>
   <xsl:template match="colName">
     <title><xsl:apply-templates /></title>
+  </xsl:template>
+  
+  <xd:doc>
+    <xd:desc>Transkribus meta data: external ID</xd:desc>
+  </xd:doc>
+  <xsl:template match="externalId">
+    <idno type="external">
+      <xsl:value-of select="."/>
+    </idno>
   </xsl:template>
   
   <!-- Templates for METS -->
