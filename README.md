@@ -39,6 +39,6 @@ java -jar saxon9he.jar -xsl:page2tei-0.xsl -s:mets.xml PAGEXML=PAGEXML PAGEprogr
 
 
 ```sh
-java -jar saxon9he.jar -xsl:page2tei-0.xsl -s:mets.xml PAGEXML=OCR-D-OCR-TESSEROCR PAGE PAGEprogram=OCR-D -o:[your tei file].xml
+java -jar saxon9he.jar -xsl:page2tei-0.xsl -s:mets.xml PAGEXML=OCR-D-OCR-TESSEROCR PAGE PAGEprogram=OCRD -o:[your tei file].xml
 ```
 
