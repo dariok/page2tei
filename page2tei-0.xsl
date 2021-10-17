@@ -49,48 +49,45 @@
   <xd:doc>
     <xd:desc>Entry point: start at the top of METS.xml</xd:desc>
   </xd:doc>
-  <xsl:template match="/mets:mets">
-    <TEI>
-      <teiHeader>
-        <fileDesc>
-          <titleStmt>
+  <xsl:template match="/mets:mets" xml:space="preserve">
+<TEI>
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
             <xsl:apply-templates select="mets:amdSec//trpDocMetadata/title" />
             <xsl:apply-templates select="mets:amdSec//trpDocMetadata/author" />
             <xsl:apply-templates select="mets:amdSec//trpDocMetadata/uploader" />
-          </titleStmt>
-          <publicationStmt>
+         </titleStmt>
+         <publicationStmt>
             <publisher>tranScriptorium</publisher>
-          </publicationStmt>
-          <seriesStmt>
+         </publicationStmt>
+         <seriesStmt>
             <xsl:apply-templates select="mets:amdSec//trpDocMetadata/collectionList/colList[1]/colName" />
-          </seriesStmt>
-          <sourceDesc>
+         </seriesStmt>
+         <sourceDesc>
             <p>TRP document creator: <xsl:value-of select="mets:amdSec//uploader"/></p>
             <xsl:apply-templates select="mets:amdSec//trpDocMetadata/desc" />
-          </sourceDesc>
-        </fileDesc>
-      </teiHeader>
-      <xsl:if test="not($debug)">
-        <facsimile>
-          <xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID='PAGEXML']/mets:file" mode="facsimile" />
-        </facsimile>
-      </xsl:if>
-      <text><body>
-       <xsl:variable name="make_div">
-        <div>
-          <xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID='PAGEXML']/mets:file" mode="text" />
-        </div>
-       </xsl:variable>
-<!--       <xsl:message select="$make_div"></xsl:message>-->
-        <xsl:for-each-group select="$make_div//*[local-name() = 'div']/*" group-starting-with="*[local-name() = 'head']" >
-         <div xmlns="http://www.tei-c.org/ns/1.0">
-        <xsl:copy-of select="current-group()"/>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <facsimile>
+      <xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID='PAGEXML']/mets:file" mode="facsimile" />
+   </facsimile>
+   <text>
+      <body
+         ><xsl:variable name="make_div">
+         <div>
+            <xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID='PAGEXML']/mets:file" mode="text" />
          </div>
-        </xsl:for-each-group>
-       </body>
-      </text>
-    </TEI>
-  </xsl:template>
+         </xsl:variable
+         ><xsl:for-each-group select="$make_div//*[local-name() = 'div']/node()" group-starting-with="*[local-name() = 'head']" >
+         <div xmlns="http://www.tei-c.org/ns/1.0"
+            ><xsl:copy-of select="current-group()"
+         /></div>
+         </xsl:for-each-group>
+      </body>
+   </text>
+</TEI></xsl:template>
   
   <!-- Templates for trpMetaData -->
   <xd:doc>
@@ -255,16 +252,16 @@
     </zone>
   </xsl:template>
   
-  <xd:doc>
-    <xd:desc>create the page content</xd:desc>
-    <xd:param name="numCurr">Numerus currens of the current page</xd:param>
-  </xd:doc>
-  <!-- Templates for PAGE, text -->
-  <xsl:template match="p:Page" mode="text">
-    <xsl:param name="numCurr" tunnel="true" />
-    <pb facs="#facs_{$numCurr}" n="{$numCurr}" xml:id="img_{format-number($numCurr, '0000')}"/>
-    <xsl:apply-templates select="p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion" mode="text" />
-  </xsl:template>
+   <xd:doc>
+      <xd:desc>create the page content</xd:desc>
+      <xd:param name="numCurr">Numerus currens of the current page</xd:param>
+   </xd:doc>
+   <!-- Templates for PAGE, text -->
+   <xsl:template match="p:Page" mode="text">
+      <xsl:param name="numCurr" tunnel="true" />
+      <pb facs="#facs_{$numCurr}" n="{$numCurr}" xml:id="img_{format-number($numCurr, '0000')}"/>
+      <xsl:apply-templates select="p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion" mode="text" />
+   </xsl:template>
   
   <xd:doc>
    <xd:desc>
@@ -295,31 +292,27 @@
       <xsl:apply-templates select="@custom" />
     </xsl:variable>
     
-    <xsl:choose>
-      <xsl:when test="@type = 'heading'">
-        <head facs="#facs_{$numCurr}_{@id}">
-          <xsl:apply-templates select="p:TextLine" />
-        </head>
-      </xsl:when>
+      <xsl:choose>
+         <xsl:when test="@type = 'heading'" xml:space="preserve">
+            <head facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine"
+               /></head></xsl:when>
       <xsl:when test="@type = 'caption'">
         <figure>
           <head facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></head>
         </figure>
       </xsl:when>
-      <xsl:when test="@type = 'header'">
-        <fw type="header" place="top" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></fw>
-      </xsl:when>
-      <xsl:when test="@type = 'footer'">
-        <fw type="header" place="bottom" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></fw>
-      </xsl:when>
-      <xsl:when test="@type = 'catch-word'">
-        <fw type="catch" place="bottom" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></fw>
-      </xsl:when>
-      <xsl:when test="@type = 'signature-mark'">
-        <fw place="bottom" type="sig" facs="#facs_{$numCurr}_{@id}">
-          <xsl:apply-templates select="p:TextLine" />
-        </fw>
-      </xsl:when>
+         <xsl:when test="@type = 'header'" xml:space="preserve">
+            <fw type="header" place="top" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine"
+            /></fw></xsl:when>
+         <xsl:when test="@type = 'footer'" xml:space="preserve">
+            <fw type="header" place="bottom" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine"
+            /></fw></xsl:when>
+         <xsl:when test="@type = 'catch-word'" xml:space="preserve">
+            <fw type="catch" place="bottom" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine"
+            /></fw></xsl:when>
+         <xsl:when test="@type = 'signature-mark'" xml:space="preserve">
+            <fw place="bottom" type="sig" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine"
+            /></fw></xsl:when>
       <xsl:when test="@type = 'marginalia'">
         <note place="[direction]" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></note>
       </xsl:when>
@@ -329,19 +322,20 @@
       <xsl:when test="@type = 'footnote-continued'">
         <note place="foot" n="[footnote-continued reference]" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></note>
       </xsl:when>
-      <xsl:when test="@type = ('other', 'paragraph')">
-        <p facs="#facs_{$numCurr}_{@id}">
-          <xsl:apply-templates select="p:TextLine" />
-        </p>
-      </xsl:when>
-      <!-- the fallback option should be a semantically open element such as <ab> -->
-      <xsl:otherwise>
-        <ab facs="#facs_{$numCurr}_{@id}" type="{@type}{$custom?structure?type}">
-          <xsl:apply-templates select="p:TextLine" />
-        </ab>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
+         <xsl:when test="@type = ('other', 'paragraph')">
+            <xsl:text>
+            </xsl:text>
+            <p facs="#facs_{$numCurr}_{@id}">
+               <xsl:apply-templates select="p:TextLine" />
+            </p>
+         </xsl:when>
+         <!-- the fallback option should be a semantically open element such as <ab> -->
+         <xsl:otherwise xml:space="preserve">
+            <ab facs="#facs_{$numCurr}_{@id}" type="{@type}{$custom?structure?type}"
+               ><xsl:apply-templates select="p:TextLine" />
+            </ab></xsl:otherwise>
+      </xsl:choose>
+   </xsl:template>
   
   <xd:doc>
     <xd:desc>create a table</xd:desc>
@@ -543,14 +537,14 @@
     
     <xsl:variable name="pos" select="xs:integer(substring-before(substring-after(@custom, 'index:'), ';')) + 1" />
     
-    <!-- TODO parameter to create <l>...</l> - #1 -->
-    <xsl:text>
-      </xsl:text>
-    <lb facs="#facs_{$numCurr}_{@id}" n="N{format-number($pos, '000')}"/>
-    <xsl:apply-templates select="$prepared/text()[not(preceding-sibling::local:m)]" />
-    <xsl:apply-templates select="$prepared/local:m[@pos='s']
-      [count(preceding-sibling::local:m[@pos='s']) = count(preceding-sibling::local:m[@pos='e'])]" />
-      <!--[not(preceding-sibling::local:m[1][@pos='s'])]" />-->
+      <!-- TODO parameter to create <l>...</l> - #1 -->
+      <xsl:text>
+               </xsl:text>
+      <lb facs="#facs_{$numCurr}_{@id}" n="N{format-number($pos, '000')}"/>
+      <xsl:apply-templates select="$prepared/text()[not(preceding-sibling::local:m)]" />
+      <xsl:apply-templates select="$prepared/local:m[@pos='s']
+         [count(preceding-sibling::local:m[@pos='s']) = count(preceding-sibling::local:m[@pos='e'])]" />
+         <!--[not(preceding-sibling::local:m[1][@pos='s'])]" />-->
   </xsl:template>
   
   <xd:doc>
