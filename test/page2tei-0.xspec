@@ -446,4 +446,26 @@
       </x:context>
       <x:expect label="table2" href="page/table.xml" select="*:body/node()" />
    </x:scenario>
+   
+   <x:scenario label="Marginalia">
+      <x:scenario label="T7.1">
+         <x:context mode="text">
+            <ns3:fileSec>
+               <ns3:fileGrp ID="MASTER">
+                  <ns3:fileGrp ID="PAGEXML">
+                     <ns3:file ID="PAGEXML_10" SEQ="10" MIMETYPE="application/xml" CREATED="2021-10-16T20:56:32.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
+                        <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/16096974378888bsb10940504-0010.xml"/>
+                     </ns3:file>
+                  </ns3:fileGrp>
+               </ns3:fileGrp>
+            </ns3:fileSec>
+         </x:context>
+         <x:expect label="." xml:space="preserve"
+            ><pb facs="#facs_10" n="10" xml:id="img_0010"
+            /><note place="margin-right" facs="#facs_10_region_1625235938563_86">
+               <lb facs="#facs_10_line_1625236076413_163" n="N001"/>Geneſ. 1.</note
+            ><note place="margin-left" facs="#facs_10_region_1625235942631_89">
+               <lb facs="#facs_10_line_1625236094177_169" n="N001"/>Eccleſ. 15.</note></x:expect>
+      </x:scenario>
+   </x:scenario>
 </x:description>

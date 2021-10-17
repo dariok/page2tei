@@ -164,33 +164,37 @@
     </xsl:apply-templates>
   </xsl:template>
   
-  <!-- Templates for PAGE, facsimile -->
-  <xd:doc>
-    <xd:desc>
-      <xd:p>Create tei:facsimile/tei:surface</xd:p>
-    </xd:desc>
-    <xd:param name="imageName">
-      <xd:p>the file name of the image</xd:p>
-    </xd:param>
-    <xd:param name="numCurr">
-      <xd:p>Numerus currens of the parent facsimile</xd:p>
-    </xd:param>
-  </xd:doc>
-  <xsl:template match="p:Page" mode="facsimile">
-    <xsl:param name="imageName" />
-    <xsl:param name="numCurr" tunnel="true" />
-    
-    <xsl:variable name="coords" select="tokenize(p:PrintSpace/p:Coords/@points, ' ')" />
-    <xsl:variable name="type" select="substring-after(@imageFilename, '.')" />
-    
-    <!-- NOTE: up to now, lry and lry were mixed up. This is fiex here. -->
-    <surface ulx="0" uly="0"
-      lrx="{@imageWidth}" lry="{@imageHeight}"
-      xml:id="facs_{$numCurr}">
-      <graphic url="{encode-for-uri(substring-before($imageName, '.'))||'.'||$type}" width="{@imageWidth}px" height="{@imageHeight}px"/>
-      <xsl:apply-templates select="p:PrintSpace | p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion" mode="facsimile"/>
-    </surface>
-  </xsl:template>
+   <!-- Templates for PAGE, facsimile -->
+   <xd:doc>
+      <xd:desc>
+         <xd:p>Create tei:facsimile/tei:surface</xd:p>
+      </xd:desc>
+      <xd:param name="imageName">
+         <xd:p>the file name of the image</xd:p>
+      </xd:param>
+      <xd:param name="numCurr">
+         <xd:p>Numerus currens of the parent facsimile</xd:p>
+      </xd:param>
+   </xd:doc>
+   <xsl:template match="p:Page" mode="facsimile">
+      <xsl:param name="imageName" />
+      <xsl:param name="numCurr" tunnel="true" />
+      
+      <xsl:variable name="coords" select="tokenize(p:PrintSpace/p:Coords/@points, ' ')" />
+      <xsl:variable name="type" select="substring-after(@imageFilename, '.')" />
+      
+      <surface ulx="0" uly="0"
+            lrx="{@imageWidth}" lry="{@imageHeight}"
+            xml:id="facs_{$numCurr}">
+         <graphic
+               url="{encode-for-uri(substring-before($imageName, '.'))||'.'||$type}"
+               width="{@imageWidth}px"
+               height="{@imageHeight}px"/>
+         <xsl:apply-templates
+               select="p:PrintSpace | p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion"
+               mode="facsimile" />
+      </surface>
+   </xsl:template>
   
   <xd:doc>
     <xd:desc>create the zones within facsimile/surface</xd:desc>
@@ -260,38 +264,47 @@
    <xsl:template match="p:Page" mode="text">
       <xsl:param name="numCurr" tunnel="true" />
       <pb facs="#facs_{$numCurr}" n="{$numCurr}" xml:id="img_{format-number($numCurr, '0000')}"/>
-      <xsl:apply-templates select="p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion" mode="text" />
+      <xsl:apply-templates select="p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion" mode="text">
+         <xsl:with-param
+            name="center"
+            tunnel="true"
+            select="number(@imageWidth) div 2"
+            as="xs:double" />
+      </xsl:apply-templates>
    </xsl:template>
   
-  <xd:doc>
-   <xd:desc>
-    <xd:p>create specific elements based on the @typing of the text region</xd:p>
-    <xd:p>PAGE labels for text region see: https://www.primaresearch.org/tools/PAGELibraries
-     caption observed 
-     header observed 
-     footer observed 
-     page-number observed 
-     drop-capital ignored
-     credit ignored
-     floating ignored
-     signature-mark observed 
-     catch-word observed 
-     marginalia observed 
-     footnote observed 
-     footnote-continued observed
-     endnote ignored
-     TOC-entry ignored
-     list-label ignored
-     other observed
-    </xd:p></xd:desc>
-    <xd:param name="numCurr"/>
-  </xd:doc>
-  <xsl:template match="p:TextRegion" mode="text">
-    <xsl:param name="numCurr" tunnel="true" />
-    <xsl:variable name="custom" as="map(*)">
-      <xsl:apply-templates select="@custom" />
-    </xsl:variable>
-    
+   <xd:doc>
+      <xd:desc>
+         <xd:p>create specific elements based on the @typing of the text region</xd:p>
+         <xd:p>PAGE labels for text region see: https://www.primaresearch.org/tools/PAGELibraries
+            caption observed 
+            header observed 
+            footer observed 
+            page-number observed 
+            drop-capital ignored
+            credit ignored
+            floating ignored
+            signature-mark observed 
+            catch-word observed 
+            marginalia observed 
+            footnote observed 
+            footnote-continued observed
+            endnote ignored
+            TOC-entry ignored
+            list-label ignored
+            other observed
+         </xd:p>
+      </xd:desc>
+      <xd:param name="numCurr"/>
+      <xd:param name="center" />
+   </xd:doc>
+   <xsl:template match="p:TextRegion" mode="text">
+      <xsl:param name="numCurr" tunnel="true" />
+      <xsl:param name="center" tunnel="true" as="xs:double" />
+      <xsl:variable name="custom" as="map(*)">
+         <xsl:apply-templates select="@custom" />
+      </xsl:variable>
+      
       <xsl:choose>
          <xsl:when test="@type = 'heading'" xml:space="preserve">
             <head facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine"
@@ -313,9 +326,15 @@
          <xsl:when test="@type = 'signature-mark'" xml:space="preserve">
             <fw place="bottom" type="sig" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine"
             /></fw></xsl:when>
-      <xsl:when test="@type = 'marginalia'">
-        <note place="[direction]" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></note>
-      </xsl:when>
+         <xsl:when test="@type = 'marginalia'">
+            <xsl:variable name="side">
+               <xsl:choose>
+                  <xsl:when test="number(substring-before(p:Coords/@points, ',')) gt $center">margin-right</xsl:when>
+                  <xsl:otherwise>margin-left</xsl:otherwise>
+               </xsl:choose>
+            </xsl:variable>
+            <note place="{$side}" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></note>
+         </xsl:when>
       <xsl:when test="@type = 'footnote'">
         <note place="foot" n="[footnote reference]" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></note>
       </xsl:when>
