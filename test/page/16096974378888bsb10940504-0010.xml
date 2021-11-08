@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>prov=University of Rostock/Institute of Mathematics/CITlab|PLANET AI GmbH/Gundram Leifert/gundram.leifert@planet-ai.de:name=WrDiarium_M8(htr_id=10585)::::v=2.6.7
+prov=University of Rostock/Institute of Mathematics/CITlab|PLANET AI GmbH/Tobias Gruening/tobias.gruening@planet-ai.de:name=de.uros.citlab.module.baseline2polygon.B2PSeamMultiOriented:v=2.6.7
+prov=University of Rostock/Institute of Mathematics/CITlab|PLANET AI GmbH/Tobias Gruening/tobias.gruening@planet-ai.de:name=/net_tf/LA73_249_0mod360.pb:de.uros.citlab.segmentation.CITlab_LA_ML:v=2.6.6
+Transkribus</Creator>
+        <Created>2021-01-04T03:32:51.906+01:00</Created>
+        <LastChange>2021-09-24T15:32:37.242+02:00</LastChange>
+        <TranskribusMetadata docId="565093" pageId="23111800" pageNr="10" tsid="65236885" status="IN_PROGRESS" userId="88438" imgUrl="https://files.transkribus.eu/Get?id=SKADXBBNPSMWKZADBXVICSDR&amp;fileType=view" xmlUrl="https://files.transkribus.eu/Get?id=XGRAQLYUARLPSESQRRVJRMVX" imageId="18035781"/>
+    </Metadata>
+    <Page imageFilename="16096974378888bsb10940504-0010.jpg" imageWidth="7920" imageHeight="11412">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1634410592918" caption="Regions reading order">
+                <RegionRefIndexed index="8" regionRef="region_1625235938563_86"/>
+                <RegionRefIndexed index="9" regionRef="region_1625235942631_89"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion type="marginalia" id="region_1625235938563_86" custom="readingOrder {index:8;} structure {type:marginalia;}">
+            <Coords points="6919,2594 6319,2594 6369,2818 6969,2818"/>
+            <TextLine id="line_1625236076413_163" custom="readingOrder {index:0;}">
+                <Coords points="6375,2632 6967,2624 6932,2824 6340,2832"/>
+                <Baseline points="6340,2827 6932,2819"/>
+                <TextEquiv>
+                    <Unicode>Geneſ. 1.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>Geneſ. 1.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion type="marginalia" id="region_1625235942631_89" custom="readingOrder {index:9;} structure {type:marginalia;}">
+            <Coords points="250,4320 200,4320 200,4554 250,4554"/>
+            <TextLine id="line_1625236094177_169" custom="readingOrder {index:0;}">
+                <Coords points="201,4353 257,4353 250,4565 204,4565"/>
+                <Baseline points="6324,4560 6940,4560"/>
+                <TextEquiv>
+                    <Unicode>Eccleſ. 15.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>Eccleſ. 15.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+    </Page>
+</PcGts>
