@@ -78,8 +78,8 @@
          </sourceDesc>
       </fileDesc>
    </teiHeader>
-   <facsimile>
-      <xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID='PAGEXML']/mets:file" mode="facsimile" />
+   <facsimile
+      ><xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID='PAGEXML']/mets:file" mode="facsimile" />
    </facsimile>
    <text>
       <body
@@ -236,6 +236,8 @@
       <xsl:variable name="coords" select="tokenize(p:PrintSpace/p:Coords/@points, ' ')" />
       <xsl:variable name="type" select="substring-after(@imageFilename, '.')" />
       
+      <xsl:text>
+      </xsl:text>
       <surface ulx="0" uly="0"
             lrx="{@imageWidth}" lry="{@imageHeight}"
             xml:id="facs_{$numCurr}">
@@ -250,6 +252,8 @@
          <xsl:apply-templates
                select="p:PrintSpace | p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion"
                mode="facsimile" />
+         <xsl:text>
+      </xsl:text>
       </surface>
    </xsl:template>
   
@@ -278,10 +282,16 @@
       </xsl:map>
     </xsl:variable>
     
-    <xsl:if test="$renditionValue = ('Line', 'TableCell')">
-      <xsl:text>
-        </xsl:text>
-    </xsl:if>
+    <xsl:choose>
+      <xsl:when test="self::p:TextLine">
+        <xsl:text>
+            </xsl:text>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:text>
+         </xsl:text>
+      </xsl:otherwise>
+    </xsl:choose>
     <zone points="{p:Coords/@points}" rendition="{$renditionValue}">
       <xsl:if test="$renditionValue != 'printspace'">
         <xsl:attribute name="xml:id"><xsl:value-of select="'facs_'||$numCurr||'_'||@id"/></xsl:attribute>
@@ -293,10 +303,6 @@
         <xsl:attribute name="subtype" select="substring-after(substring-before(map:get($custom, 'structure'), ';'), ':')" />
       </xsl:if>
       <xsl:apply-templates select="p:TextLine" mode="facsimile" />
-      <xsl:if test="not($renditionValue= ('Line', 'Graphic', 'Separator', 'printspace', 'TableCell'))">
-        <xsl:text>
-      </xsl:text>
-      </xsl:if>
     </zone>
   </xsl:template>
   

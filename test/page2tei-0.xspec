@@ -473,13 +473,15 @@
          <x:context mode="facsimile" href="page/0002_17320213-001.xml" select="//p:Page">
             <x:param name="numCurr" tunnel="1">1</x:param>
          </x:context>
-         <x:expect label="." xml:space="preserve"
-         ><surface ulx="0" uly="0" lrx="2368" lry="3315" xml:id="facs_1">
+         <x:expect label="." xml:space="preserve">
+      <surface ulx="0" uly="0" lrx="2368" lry="3315" xml:id="facs_1">
          <graphic url="553792.png" width="2368px" height="3315px" />
          <graphic url="https://dbis-thure.uibk.ac.at/f/Get?id=FRXNPZZAMTDQEOWGRHMXMWZX&amp;fileType=view"
             width="2368px" height="3315px" />
-            ...
-</surface></x:expect>
+         <zone rendition="printspace" points="..." />
+         <zone rendition="TextRegion" subtype="paragraph" xml:id="facs_1_r_2_4"
+            points="1289,1095 2325,1095 2325,2541 1289,2541">...</zone>
+      </surface></x:expect>
       </x:scenario>
    </x:scenario>
 </x:description>
