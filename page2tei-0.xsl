@@ -239,10 +239,14 @@
       <surface ulx="0" uly="0"
             lrx="{@imageWidth}" lry="{@imageHeight}"
             xml:id="facs_{$numCurr}">
+         <xsl:text>
+         </xsl:text>
          <graphic
                url="{encode-for-uri(substring-before($imageName, '.'))||'.'||$type}"
                width="{@imageWidth}px"
                height="{@imageHeight}px"/>
+         <!-- include Transkribus image link as second graphic element for later evaluation -->
+         <xsl:apply-templates select="preceding-sibling::p:Metadata/*:TranskribusMetadata" />
          <xsl:apply-templates
                select="p:PrintSpace | p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion"
                mode="facsimile" />
@@ -776,6 +780,18 @@
   </xd:doc>
   <xsl:template match="p:Metadata" mode="text" />
   
+  <xd:doc>
+    <xd:desc>TranskribusMetadata contains the link to the image on Transkribus’ servers; return a tei:graphic element
+      with this URL so it can be evaluated during postprocessing</xd:desc>
+  </xd:doc>
+   <xsl:template match="*:TranskribusMetadata">
+      <xsl:text>
+         </xsl:text>
+      <graphic url="{@imgUrl}"
+         width="{following::p:Page/@imageWidth}px"
+         height="{following::p:Page/@imageHeight}px" />
+   </xsl:template>
+   
   <xd:doc>
     <xd:desc>Parse the content of an attribute such as @custom into a map.</xd:desc>
   </xd:doc>
