@@ -242,7 +242,7 @@
          <xsl:text>
          </xsl:text>
          <graphic
-               url="{encode-for-uri(substring-before($imageName, '.'))||'.'||$type}"
+               url="{encode-for-uri(@imageFilename)}"
                width="{@imageWidth}px"
                height="{@imageHeight}px"/>
          <!-- include Transkribus image link as second graphic element for later evaluation -->
