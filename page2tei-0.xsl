@@ -291,7 +291,7 @@
   </xd:doc>
   <xsl:template match="p:TextRegion" mode="text">
     <xsl:param name="numCurr" tunnel="true" />
-    <xsl:variable name="custom" as="map(*)">
+    <xsl:variable name="custom" as="map(*)?">
       <xsl:apply-templates select="@custom" />
     </xsl:variable>
     
@@ -541,12 +541,18 @@
       </xsl:for-each>
     </xsl:variable>
     
-    <xsl:variable name="pos" select="xs:integer(substring-before(substring-after(@custom, 'index:'), ';')) + 1" />
-    
     <!-- TODO parameter to create <l>...</l> - #1 -->
     <xsl:text>
       </xsl:text>
-    <lb facs="#facs_{$numCurr}_{@id}" n="N{format-number($pos, '000')}"/>
+    <lb facs="#facs_{$numCurr}_{@id}">
+      <xsl:if test="@custom">
+        <xsl:variable name="pos" select="xs:integer(substring-before(substring-after(@custom, 'index:'), ';')) + 1" />
+        <xsl:attribute name="n">
+          <xsl:text>N</xsl:text>
+          <xsl:value-of select="format-number($pos, '000')" />
+        </xsl:attribute>
+      </xsl:if>
+    </lb>
     <xsl:apply-templates select="$prepared/text()[not(preceding-sibling::local:m)]" />
     <xsl:apply-templates select="$prepared/local:m[@pos='s']
       [count(preceding-sibling::local:m[@pos='s']) = count(preceding-sibling::local:m[@pos='e'])]" />
