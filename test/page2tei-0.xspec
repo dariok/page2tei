@@ -1,397 +1,471 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" stylesheet="../page2tei-0.xsl"
-    xmlns="http://www.tei-c.org/ns/1.0"
-    xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
-    xmlns:ns2="http://www.w3.org/1999/xlink"
-    xmlns:ns3="http://www.loc.gov/METS/"
-    xslt-version="3.0">
-    
-    
-    <x:scenario label="test 1 (WD)">
-    <x:scenario label="17320213 - p.2">
-        <x:context mode="text">
+   xmlns="http://www.tei-c.org/ns/1.0"
+   xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+   xmlns:ns2="http://www.w3.org/1999/xlink"
+   xmlns:ns3="http://www.loc.gov/METS/"
+   xslt-version="3.0">
+   
+   
+   <x:scenario label="test 1 (WD)">
+      <x:scenario label="17320213 - p.2">
+         <x:context mode="text">
             <ns3:fileSec>
-                <ns3:fileGrp ID="MASTER">
-                    <ns3:fileGrp ID="PAGEXML">
-                        <ns3:file />
-                        <ns3:file ID="PAGEXML_2" SEQ="2" MIMETYPE="application/xml" CREATED="2018-04-09T14:31:22.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
-                            <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/0002_17320213-001.xml"/>
-                        </ns3:file>
-                    </ns3:fileGrp>
-                </ns3:fileGrp>
+               <ns3:fileGrp ID="MASTER">
+                  <ns3:fileGrp ID="PAGEXML">
+                     <ns3:file />
+                     <ns3:file ID="PAGEXML_2" SEQ="2" MIMETYPE="application/xml" CREATED="2018-04-09T14:31:22.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
+                        <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/0002_17320213-001.xml"/>
+                     </ns3:file>
+                  </ns3:fileGrp>
+               </ns3:fileGrp>
             </ns3:fileSec>
             <ns3:structMap ID="TRP_STRUCTMAP" TYPE="MANUSCRIPT">
-                <ns3:div ID="TRP_DOC_DIV" ADMID="MD_ORIG">
-                    <ns3:div ID="PAGE_2" ORDER="2" TYPE="SINGLE_PAGE">
-                        <ns3:fptr>
-                            <ns3:area FILEID="PAGEXML_2"/>
-                        </ns3:fptr>
-                    </ns3:div>
-                </ns3:div>
+               <ns3:div ID="TRP_DOC_DIV" ADMID="MD_ORIG">
+                  <ns3:div ID="PAGE_2" ORDER="2" TYPE="SINGLE_PAGE">
+                     <ns3:fptr>
+                        <ns3:area FILEID="PAGEXML_2"/>
+                     </ns3:fptr>
+                  </ns3:div>
+               </ns3:div>
             </ns3:structMap>
-        </x:context>
-        <x:expect label="." xml:space="preserve"><pb facs="#facs_2" xml:id="img_0002"
-                n="2" /><p facs='#facs_2_r_2_4'>
-      <lb facs='#facs_2_tl_59' n='N001'/>Gestern langete hier ein <hi rend='fontFamily:Antiqua;'>Express</hi>er von
-      <lb facs='#facs_2_tl_60' n='N002'/>de<unclear>m</unclear> Herrn Keene aus Spanien an /
-      <lb facs='#facs_2_tl_61' n='N003'/>m<unclear>i</unclear>t Zeitung / wie daß er nebst denen
-      <lb facs='#facs_2_tl_62' n='N004'/>Herren Stert / und Godert / unseren
-      <lb facs='#facs_2_tl_63' n='N005'/><hi rend='fontFamily:Antiqua;'>Commissari</hi>en / mit denen Spanischen
-      <lb facs='#facs_2_tl_64' n='N006'/>u<unclear>n</unclear>terschiedliche <hi rend='fontFamily:Antiqua;'>Conferenzi</hi>en gehalten <supplied reason=''>/</supplied>
-      <lb facs='#facs_2_tl_65' n='N007'/>u<unclear>n</unclear>d darinnen grossen Fortgang gema<supplied reason=''>=</supplied>
-      <lb facs='#facs_2_tl_66' n='N008'/>ch<unclear>e</unclear>t hätte / um den im letzteren Friedens
-      <lb facs='#facs_2_tl_67' n='N009'/>Bruch an beeden Seiten gelittenen Scha<supplied reason=''>=</supplied>
-      <lb facs='#facs_2_tl_68' n='N010'/>d<unclear>e</unclear>n zu <hi rend='fontFamily:Antiqua;'>reguli</hi>ren. Selbigen Tags über<supplied reason=''>=</supplied>
-      <lb facs='#facs_2_tl_69' n='N011'/>reichete der Herr <hi rend='fontFamily:Antiqua;'>Como</hi>, <hi rend='fontFamily:Antiqua;'>Agent</hi> vo<unclear>n</unclear>
-      <lb facs='#facs_2_tl_70' n='N012'/><hi rend='fontFamily:Antiqua;'>P<unclear>ar</unclear>ma</hi>, dem Staats=<hi rend='fontFamily:Antiqua;'>Secretario</hi>, Her<supplied reason=''>=</supplied>
-      <lb facs='#facs_2_tl_71' n='N013'/>tzog von Neucastle / ein Schreiben vo<supplied reason=''>n</supplied>
-      <lb facs='#facs_2_tl_72' n='N014'/>d<unclear>e</unclear>r verwittibten Hertzogin Dorothea a<supplied reason=''>n</supplied>
-      <lb facs='#facs_2_tl_73' n='N015'/>unseren König / worinn selbige Sr. Ma<supplied reason=''>=</supplied>
-      <lb facs='#facs_2_tl_74' n='N016'/>jestät bekannt gemachet / daß die Staa<supplied reason=''>=</supplied>
-      <lb facs='#facs_2_tl_75' n='N017'/>ten von <hi rend='fontFamily:Antiqua;'>Parma</hi>, und <hi rend='fontFamily:Antiqua;'>Piacenza</hi> für den
-      <lb facs='#facs_2_tl_76' n='N018'/><hi rend='fontFamily:Antiqua;'>Don Carlos</hi> in Besitz genommen wor<supplied reason=''>=</supplied>
-      <lb facs='#facs_2_tl_77' n='N019'/>den / und zugleich ersuchet / daß Seine
-      <lb facs='#facs_2_tl_78' n='N020'/>Majestät eine bey dieser Gelegenheit ge<supplied reason=''>=</supplied>
-      <lb facs='#facs_2_tl_79' n='N021'/>prägte <hi rend='fontFamily:Antiqua;'>Medaille</hi> anzunehmen geruhen
-      <lb facs='#facs_2_tl_80' n='N022'/><unclear>m</unclear>öchte.</p></x:expect>
+         </x:context>
+         <x:expect label="." xml:space="preserve"
+            ><pb facs="#facs_2" xml:id="img_0002" n="2" />
+            <p facs='#facs_2_r_2_4'>
+               <lb facs='#facs_2_tl_59' n='N001'/>Gestern langete hier ein <hi rend='fontFamily:Antiqua;'>Express</hi>er von
+               <lb facs='#facs_2_tl_60' n='N002'/>de<unclear>m</unclear> Herrn Keene aus Spanien an /
+               <lb facs='#facs_2_tl_61' n='N003'/>m<unclear>i</unclear>t Zeitung / wie daß er nebst denen
+               <lb facs='#facs_2_tl_62' n='N004'/>Herren Stert / und Godert / unseren
+               <lb facs='#facs_2_tl_63' n='N005'/><hi rend='fontFamily:Antiqua;'>Commissari</hi>en / mit denen Spanischen
+               <lb facs='#facs_2_tl_64' n='N006'/>u<unclear>n</unclear>terschiedliche <hi rend='fontFamily:Antiqua;'>Conferenzi</hi>en gehalten <supplied reason=''>/</supplied>
+               <lb facs='#facs_2_tl_65' n='N007'/>u<unclear>n</unclear>d darinnen grossen Fortgang gema<supplied reason=''>=</supplied>
+               <lb facs='#facs_2_tl_66' n='N008'/>ch<unclear>e</unclear>t hätte / um den im letzteren Friedens
+               <lb facs='#facs_2_tl_67' n='N009'/>Bruch an beeden Seiten gelittenen Scha<supplied reason=''>=</supplied>
+               <lb facs='#facs_2_tl_68' n='N010'/>d<unclear>e</unclear>n zu <hi rend='fontFamily:Antiqua;'>reguli</hi>ren. Selbigen Tags über<supplied reason=''>=</supplied>
+               <lb facs='#facs_2_tl_69' n='N011'/>reichete der Herr <hi rend='fontFamily:Antiqua;'>Como</hi>, <hi rend='fontFamily:Antiqua;'>Agent</hi> vo<unclear>n</unclear>
+               <lb facs='#facs_2_tl_70' n='N012'/><hi rend='fontFamily:Antiqua;'>P<unclear>ar</unclear>ma</hi>, dem Staats=<hi rend='fontFamily:Antiqua;'>Secretario</hi>, Her<supplied reason=''>=</supplied>
+               <lb facs='#facs_2_tl_71' n='N013'/>tzog von Neucastle / ein Schreiben vo<supplied reason=''>n</supplied>
+               <lb facs='#facs_2_tl_72' n='N014'/>d<unclear>e</unclear>r verwittibten Hertzogin Dorothea a<supplied reason=''>n</supplied>
+               <lb facs='#facs_2_tl_73' n='N015'/>unseren König / worinn selbige Sr. Ma<supplied reason=''>=</supplied>
+               <lb facs='#facs_2_tl_74' n='N016'/>jestät bekannt gemachet / daß die Staa<supplied reason=''>=</supplied>
+               <lb facs='#facs_2_tl_75' n='N017'/>ten von <hi rend='fontFamily:Antiqua;'>Parma</hi>, und <hi rend='fontFamily:Antiqua;'>Piacenza</hi> für den
+               <lb facs='#facs_2_tl_76' n='N018'/><hi rend='fontFamily:Antiqua;'>Don Carlos</hi> in Besitz genommen wor<supplied reason=''>=</supplied>
+               <lb facs='#facs_2_tl_77' n='N019'/>den / und zugleich ersuchet / daß Seine
+               <lb facs='#facs_2_tl_78' n='N020'/>Majestät eine bey dieser Gelegenheit ge<supplied reason=''>=</supplied>
+               <lb facs='#facs_2_tl_79' n='N021'/>prägte <hi rend='fontFamily:Antiqua;'>Medaille</hi> anzunehmen geruhen
+               <lb facs='#facs_2_tl_80' n='N022'/><unclear>m</unclear>öchte.</p></x:expect>
     </x:scenario>
-    <x:scenario label="17320213 - p.3">
-        <x:context mode="text">
+      <x:scenario label="17320213 - p.3">
+         <x:context mode="text">
             <ns3:fileSec>
-                <ns3:fileGrp ID="MASTER">
-                    <ns3:fileGrp ID="PAGEXML">
-                        <ns3:file />
-                        <ns3:file />
-                        <ns3:file ID="PAGEXML_3" SEQ="3" MIMETYPE="application/xml" CREATED="2018-04-09T14:31:22.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
-                            <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/0003_17320213-002.xml"/>
-                        </ns3:file>
-                    </ns3:fileGrp>
-                </ns3:fileGrp>
+               <ns3:fileGrp ID="MASTER">
+                  <ns3:fileGrp ID="PAGEXML">
+                     <ns3:file />
+                     <ns3:file />
+                     <ns3:file ID="PAGEXML_3" SEQ="3" MIMETYPE="application/xml" CREATED="2018-04-09T14:31:22.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
+                        <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/0003_17320213-002.xml"/>
+                     </ns3:file>
+                  </ns3:fileGrp>
+               </ns3:fileGrp>
             </ns3:fileSec>
             <ns3:structMap ID="TRP_STRUCTMAP" TYPE="MANUSCRIPT">
-                <ns3:div ID="TRP_DOC_DIV" ADMID="MD_ORIG">
-                    <ns3:div ID="PAGE_3" ORDER="3" TYPE="SINGLE_PAGE">
-                        <ns3:fptr>
-                            <ns3:area FILEID="PAGEXML_3"/>
-                        </ns3:fptr>
-                    </ns3:div>
-                </ns3:div>
+               <ns3:div ID="TRP_DOC_DIV" ADMID="MD_ORIG">
+                  <ns3:div ID="PAGE_3" ORDER="3" TYPE="SINGLE_PAGE">
+                     <ns3:fptr>
+                        <ns3:area FILEID="PAGEXML_3"/>
+                     </ns3:fptr>
+                  </ns3:div>
+               </ns3:div>
             </ns3:structMap>
-        </x:context>
-        <x:expect label="." xml:space="preserve"><pb facs="#facs_3" xml:id="img_0003"
-                n="3" /><p facs='#facs_3_TextRegion_1501850337174_559'>
-      <lb facs='#facs_3_tl_1' n='N001'/>nach=Mittag verfügte sich der der König
-      <lb facs='#facs_3_tl_2' n='N002'/>mit gewöhnlichen Ceremonien nachdem
-      <lb facs='#facs_3_tl_3' n='N003'/>Ober=Haus des Parlaments / w<unclear>or</unclear>inn
-      <lb facs='#facs_3_tl_4' n='N004'/>auch die Gemeine beruffen worden / die=
-      <lb facs='#facs_3_tl_5' n='N005'/>semnach Se. Majestät durch eine l<unclear>a</unclear>nge
-      <lb facs='#facs_3_tl_6' n='N006'/>Ansprach den Sitz von dem Parla<unclear>m</unclear>ent
-      <lb facs='#facs_3_tl_7' n='N007'/>eröfneten. Heute hat das Ober=Haus
-      <lb facs='#facs_3_tl_8' n='N008'/>schon durch eine Sr. Majestät übergebe=
-      <lb facs='#facs_3_tl_9' n='N009'/>nen Schrift sich wegen der an selbige
-      <lb facs='#facs_3_tl_10' n='N010'/>gethaner Ansprach bedanket / wo=
-      <lb facs='#facs_3_tl_11' n='N011'/>von dann künftig ein mehreres zu be=
-      <lb facs='#facs_3_tl_12' n='N012'/>richten seyn wird. Die Schiffe / der
-      <lb facs='#facs_3_tl_13' n='N013'/>Hertzog von Lothringen / Bedford / und
-      <lb facs='#facs_3_tl_14' n='N014'/>der Printz von Oranien von der Ost=
-      <lb facs='#facs_3_tl_15' n='N015'/>Jndischen Compagnie / seynd die T<unclear>em</unclear>s
-      <lb facs='#facs_3_tl_16' n='N016'/>nach Gravesand hinabgefahren / um bey
-      <lb facs='#facs_3_tl_17' n='N017'/>dem ersten günstigen Wind unter S<unclear>e</unclear>gel
-      <lb facs='#facs_3_tl_18' n='N018'/>zu gehen. Am Montag wurde in <unclear>d</unclear>em
-      <lb facs='#facs_3_tl_19' n='N019'/>Pallast von St. James ein grosser Raht
-      <lb facs='#facs_3_tl_20' n='N020'/>gehalten.Mit dem Frantzösi<unclear>sch</unclear>en
-      <lb facs='#facs_3_tl_21' n='N021'/>Botschafter Herrn von <hi rend='fontFamily:Antiqua;'>Chavig<unclear>ty</unclear></hi>,
-      <lb facs='#facs_3_tl_22' n='N022'/>werden die <hi rend='fontFamily:Antiqua;'>Conferenzi</hi>en eiferigst <unclear>fo</unclear>rt=
-      <lb facs='#facs_3_tl_23' n='N023'/>gesetzet / welchen der Kaiserl. M<unclear>i</unclear>ni=
-      <lb facs='#facs_3_tl_24' n='N024'/>ter Herr Graf von Kinsky öfters <unclear>b</unclear>ey=
-      <lb facs='#facs_3_tl_25' n='N025'/>wohnet. An vorgedachten Montag <unclear>w</unclear>a=
-      <lb facs='#facs_3_tl_26' n='N026'/>ren die Lords=<hi rend='fontFamily:Antiqua;'>Commissari</hi>en von der
-      <lb facs='#facs_3_tl_27' n='N027'/><hi rend='fontFamily:Antiqua;'>Admirali</hi>tät versammelt / und verga<unclear>b</unclear>en
-      <lb facs='#facs_3_tl_28' n='N028'/>dem Hauptmann Herrn Vincent <unclear>d</unclear>as
-      <lb facs='#facs_3_tl_29' n='N029'/>Kriegs=Schif der Sheernes / und dem
-      <lb facs='#facs_3_tl_30' n='N030'/>Hauptmann Herrn Fytch das vom Dol=
-      <lb facs='#facs_3_tl_31' n='N031'/>phin / jedes von 20. Canons / we<unclear>lc</unclear>he
-      <lb facs='#facs_3_tl_32' n='N032'/>auf das schleunigste ausgerüstet wer<unclear>d</unclear>en
-      <lb facs='#facs_3_tl_33' n='N033'/>müssen; der Obriste Cosby ehedessen <unclear>g</unclear>e=
-      <lb facs='#facs_3_tl_34' n='N034'/>wesener <hi rend='fontFamily:Antiqua;'>Gouverneur</hi> deren Leewaer<unclear>d</unclear>s=
-      <lb facs='#facs_3_tl_35' n='N035'/>Jnsulen / hatte am Samstag die E<unclear>h</unclear>re
-      <lb facs='#facs_3_tl_36' n='N036'/>des Königs Hand wegen dessen Ern<unclear>e</unclear>n=
-      <lb facs='#facs_3_tl_37' n='N037'/>nung zum Capitain / General und
-      <lb facs='#facs_3_tl_38' n='N038'/>Haupt=<hi rend='fontFamily:Antiqua;'>Commendeur </hi>von Neu=Yor<unclear>c</unclear>k /
-      <lb facs='#facs_3_tl_39' n='N039'/>und Neu=Jersey mit denen zugehörigen
-      <lb facs='#facs_3_tl_40' n='N040'/>Jnsulen / zu küssen / und unterthän<unclear>i</unclear>g=
-      <lb facs='#facs_3_tl_41' n='N041'/><unclear><supplied reason=''>s</supplied>t</unclear>en Dank abzustatten: es hat derse<unclear>l</unclear>be
-      <lb facs='#facs_3_tl_42' n='N042'/><gap />ieserhalben vorhin gehabtes Regime<unclear>n</unclear>t
-      <lb facs='#facs_3_tl_43' n='N043'/><hi rend='fontFamily:Antiqua;'><supplied reason=''>R</supplied>esigni</hi>ret / er behaltet aber seinen Ra<unclear>n</unclear>g</p></x:expect>
+         </x:context>
+         <x:expect label="." xml:space="preserve"
+            ><pb facs="#facs_3" xml:id="img_0003" n="3" />
+            <p facs='#facs_3_TextRegion_1501850337174_559'>
+               <lb facs='#facs_3_tl_1' n='N001'/>nach=Mittag verfügte sich der der König
+               <lb facs='#facs_3_tl_2' n='N002'/>mit gewöhnlichen Ceremonien nachdem
+               <lb facs='#facs_3_tl_3' n='N003'/>Ober=Haus des Parlaments / w<unclear>or</unclear>inn
+               <lb facs='#facs_3_tl_4' n='N004'/>auch die Gemeine beruffen worden / die=
+               <lb facs='#facs_3_tl_5' n='N005'/>semnach Se. Majestät durch eine l<unclear>a</unclear>nge
+               <lb facs='#facs_3_tl_6' n='N006'/>Ansprach den Sitz von dem Parla<unclear>m</unclear>ent
+               <lb facs='#facs_3_tl_7' n='N007'/>eröfneten. Heute hat das Ober=Haus
+               <lb facs='#facs_3_tl_8' n='N008'/>schon durch eine Sr. Majestät übergebe=
+               <lb facs='#facs_3_tl_9' n='N009'/>nen Schrift sich wegen der an selbige
+               <lb facs='#facs_3_tl_10' n='N010'/>gethaner Ansprach bedanket / wo=
+               <lb facs='#facs_3_tl_11' n='N011'/>von dann künftig ein mehreres zu be=
+               <lb facs='#facs_3_tl_12' n='N012'/>richten seyn wird. Die Schiffe / der
+               <lb facs='#facs_3_tl_13' n='N013'/>Hertzog von Lothringen / Bedford / und
+               <lb facs='#facs_3_tl_14' n='N014'/>der Printz von Oranien von der Ost=
+               <lb facs='#facs_3_tl_15' n='N015'/>Jndischen Compagnie / seynd die T<unclear>em</unclear>s
+               <lb facs='#facs_3_tl_16' n='N016'/>nach Gravesand hinabgefahren / um bey
+               <lb facs='#facs_3_tl_17' n='N017'/>dem ersten günstigen Wind unter S<unclear>e</unclear>gel
+               <lb facs='#facs_3_tl_18' n='N018'/>zu gehen. Am Montag wurde in <unclear>d</unclear>em
+               <lb facs='#facs_3_tl_19' n='N019'/>Pallast von St. James ein grosser Raht
+               <lb facs='#facs_3_tl_20' n='N020'/>gehalten.Mit dem Frantzösi<unclear>sch</unclear>en
+               <lb facs='#facs_3_tl_21' n='N021'/>Botschafter Herrn von <hi rend='fontFamily:Antiqua;'>Chavig<unclear>ty</unclear></hi>,
+               <lb facs='#facs_3_tl_22' n='N022'/>werden die <hi rend='fontFamily:Antiqua;'>Conferenzi</hi>en eiferigst <unclear>fo</unclear>rt=
+               <lb facs='#facs_3_tl_23' n='N023'/>gesetzet / welchen der Kaiserl. M<unclear>i</unclear>ni=
+               <lb facs='#facs_3_tl_24' n='N024'/>ter Herr Graf von Kinsky öfters <unclear>b</unclear>ey=
+               <lb facs='#facs_3_tl_25' n='N025'/>wohnet. An vorgedachten Montag <unclear>w</unclear>a=
+               <lb facs='#facs_3_tl_26' n='N026'/>ren die Lords=<hi rend='fontFamily:Antiqua;'>Commissari</hi>en von der
+               <lb facs='#facs_3_tl_27' n='N027'/><hi rend='fontFamily:Antiqua;'>Admirali</hi>tät versammelt / und verga<unclear>b</unclear>en
+               <lb facs='#facs_3_tl_28' n='N028'/>dem Hauptmann Herrn Vincent <unclear>d</unclear>as
+               <lb facs='#facs_3_tl_29' n='N029'/>Kriegs=Schif der Sheernes / und dem
+               <lb facs='#facs_3_tl_30' n='N030'/>Hauptmann Herrn Fytch das vom Dol=
+               <lb facs='#facs_3_tl_31' n='N031'/>phin / jedes von 20. Canons / we<unclear>lc</unclear>he
+               <lb facs='#facs_3_tl_32' n='N032'/>auf das schleunigste ausgerüstet wer<unclear>d</unclear>en
+               <lb facs='#facs_3_tl_33' n='N033'/>müssen; der Obriste Cosby ehedessen <unclear>g</unclear>e=
+               <lb facs='#facs_3_tl_34' n='N034'/>wesener <hi rend='fontFamily:Antiqua;'>Gouverneur</hi> deren Leewaer<unclear>d</unclear>s=
+               <lb facs='#facs_3_tl_35' n='N035'/>Jnsulen / hatte am Samstag die E<unclear>h</unclear>re
+               <lb facs='#facs_3_tl_36' n='N036'/>des Königs Hand wegen dessen Ern<unclear>e</unclear>n=
+               <lb facs='#facs_3_tl_37' n='N037'/>nung zum Capitain / General und
+               <lb facs='#facs_3_tl_38' n='N038'/>Haupt=<hi rend='fontFamily:Antiqua;'>Commendeur </hi>von Neu=Yor<unclear>c</unclear>k /
+               <lb facs='#facs_3_tl_39' n='N039'/>und Neu=Jersey mit denen zugehörigen
+               <lb facs='#facs_3_tl_40' n='N040'/>Jnsulen / zu küssen / und unterthän<unclear>i</unclear>g=
+               <lb facs='#facs_3_tl_41' n='N041'/><unclear><supplied reason=''>s</supplied>t</unclear>en Dank abzustatten: es hat derse<unclear>l</unclear>be
+               <lb facs='#facs_3_tl_42' n='N042'/><gap />ieserhalben vorhin gehabtes Regime<unclear>n</unclear>t
+               <lb facs='#facs_3_tl_43' n='N043'/><hi rend='fontFamily:Antiqua;'><supplied reason=''>R</supplied>esigni</hi>ret / er behaltet aber seinen Ra<unclear>n</unclear>g</p></x:expect>
     </x:scenario>
-    <x:scenario label="17320524 - p. 10">
-        <x:context mode="text">
+      <x:scenario label="17320524 - p. 10">
+         <x:context mode="text">
             <ns3:fileSec>
-                <ns3:fileGrp ID="MASTER">
-                    <ns3:fileGrp ID="PAGEXML">
-                        <ns3:file />
-                        <ns3:file />
-                        <ns3:file />
-                        <ns3:file />
-                        <ns3:file />
-                        <ns3:file />
-                        <ns3:file />
-                        <ns3:file />
-                        <ns3:file />
-                        <ns3:file ID="PAGEXML_10" SEQ="10" MIMETYPE="application/xml" CREATED="2018-04-11T18:00:20.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
-                            <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/0010_17320524-009.xml"/>
-                        </ns3:file>
-                    </ns3:fileGrp>
-                </ns3:fileGrp>
+               <ns3:fileGrp ID="MASTER">
+                  <ns3:fileGrp ID="PAGEXML">
+                     <ns3:file />
+                     <ns3:file />
+                     <ns3:file />
+                     <ns3:file />
+                     <ns3:file />
+                     <ns3:file />
+                     <ns3:file />
+                     <ns3:file />
+                     <ns3:file />
+                     <ns3:file ID="PAGEXML_10" SEQ="10" MIMETYPE="application/xml" CREATED="2018-04-11T18:00:20.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
+                         <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/0010_17320524-009.xml"/>
+                     </ns3:file>
+                  </ns3:fileGrp>
+               </ns3:fileGrp>
             </ns3:fileSec>
             <ns3:structMap ID="TRP_STRUCTMAP" TYPE="MANUSCRIPT">
-                <ns3:div ID="TRP_DOC_DIV" ADMID="MD_ORIG">
-                    <ns3:div ID="PAGE_10" ORDER="10" TYPE="SINGLE_PAGE">
-                        <ns3:fptr>
-                            <ns3:area FILEID="PAGEXML_10"/>
-                        </ns3:fptr>
-                    </ns3:div>
-                </ns3:div>
+               <ns3:div ID="TRP_DOC_DIV" ADMID="MD_ORIG">
+                  <ns3:div ID="PAGE_10" ORDER="10" TYPE="SINGLE_PAGE">
+                     <ns3:fptr>
+                        <ns3:area FILEID="PAGEXML_10"/>
+                     </ns3:fptr>
+                  </ns3:div>
+               </ns3:div>
             </ns3:structMap>
-        </x:context>
-        <x:expect label="." xml:space="preserve"><pb facs="#facs_10" n="10" xml:id="img_0010" /><ab facs="#facs_10_r_2_7" type="list">
-      <lb facs="#facs_10_tl_75" n="N001"/>Johann Frantz Weishaubt / ware nno 1697. <supplied reason=""><hi rend="fontFamily:Antiqua;">Ex-</hi></supplied>
-      <lb facs="#facs_10_tl_76" n="N002"/><hi rend="fontFamily:Antiqua;">peditor</hi> bey der hoch=ansehentl. Geheimen Stelle in Gr<gap/></ab></x:expect>
-    </x:scenario>
-    <x:scenario label="17410624 - p. 7">
-        <x:context mode="text">
+         </x:context>
+         <x:expect label="." xml:space="preserve"
+            ><pb facs="#facs_10" n="10" xml:id="img_0010" />
+            <ab facs="#facs_10_r_2_7" type="list">
+               <lb facs="#facs_10_tl_75" n="N001"/>Johann Frantz Weishaubt / ware nno 1697. <supplied reason=""><hi rend="fontFamily:Antiqua;">Ex-</hi></supplied>
+               <lb facs="#facs_10_tl_76" n="N002"/><hi rend="fontFamily:Antiqua;">peditor</hi> bey der hoch=ansehentl. Geheimen Stelle in Gr<gap/>
+            </ab></x:expect>
+      </x:scenario>
+      <x:scenario label="17410624 - p. 7">
+         <x:context mode="text">
             <ns3:fileSec>
-                <ns3:fileGrp ID="MASTER">
-                    <ns3:fileGrp ID="PAGEXML">
-                        <ns3:file />
-                        <ns3:file />
-                        <ns3:file />
-                        <ns3:file />
-                        <ns3:file />
-                        <ns3:file />
-                        <ns3:file ID="PAGEXML_7" SEQ="7" MIMETYPE="application/xml" CREATED="2018-05-02T14:57:16.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
-                            <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/0007_17410624-006.xml"/>
-                        </ns3:file>
-                    </ns3:fileGrp>
-                </ns3:fileGrp>
+               <ns3:fileGrp ID="MASTER">
+                  <ns3:fileGrp ID="PAGEXML">
+                     <ns3:file />
+                     <ns3:file />
+                     <ns3:file />
+                     <ns3:file />
+                     <ns3:file />
+                     <ns3:file />
+                     <ns3:file ID="PAGEXML_7" SEQ="7" MIMETYPE="application/xml" CREATED="2018-05-02T14:57:16.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
+                         <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/0007_17410624-006.xml"/>
+                     </ns3:file>
+                  </ns3:fileGrp>
+               </ns3:fileGrp>
             </ns3:fileSec>
-        </x:context>
-        <x:expect label="." xml:space="preserve"><pb facs="#facs_7" n="7" xml:id="img_0007" /><p facs="#facs_7_TextRegion_1502873594420_703">
-      <lb facs="#facs_7_tl_29" n="N001"/><hi rend="fontFamily:Antiqua;">Information Juridique &amp; conforme aux</hi>
-      <lb facs="#facs_7_tl_30" n="N002"/><hi rend="fontFamily:Antiqua;">Actes contre l&apos;Imprimé récemment publié</hi>
-      <lb facs="#facs_7_tl_31" n="N003"/><hi rend="fontFamily:Antiqua;">sous le tître</hi> Rechts=gegündete Eigentum rc.
-      <lb facs="#facs_7_tl_32" n="N004"/><hi rend="fontFamily:Antiqua;">Ou bien droit de Proprieté bien fondé de la</hi>
-      <lb facs="#facs_7_tl_33" n="N005"/><hi rend="fontFamily:Antiqua;">Maison Electorale de <unclear>B</unclear>randebourg sur les Du-</hi>
-      <lb facs="#facs_7_tl_34" n="N006"/><hi rend="fontFamily:Antiqua;">chés &amp; Principautes de la Silesie, Jagerndorf,</hi>
-      <lb facs="#facs_7_tl_35" n="N007"/><hi rend="fontFamily:Antiqua;">Li<unclear>g</unclear>nitz, Brieg, Wolau, &amp; Seigneur<unclear>iesy</unclear> / ap-</hi>
-      <lb facs="#facs_7_tl_36" n="N008"/><hi rend="fontFamily:Antiqua;">partenantes. L&apos;An 1741. </hi>Das St. geb. 30. kr.</p></x:expect>
-    </x:scenario>
-    </x:scenario>
-    
-    <x:scenario label="überlapp">
-        <x:context mode="text">
+         </x:context>
+         <x:expect label="." xml:space="preserve"
+            ><pb facs="#facs_7" n="7" xml:id="img_0007" />
+            <p facs="#facs_7_TextRegion_1502873594420_703">
+               <lb facs="#facs_7_tl_29" n="N001"/><hi rend="fontFamily:Antiqua;">Information Juridique &amp; conforme aux</hi>
+               <lb facs="#facs_7_tl_30" n="N002"/><hi rend="fontFamily:Antiqua;">Actes contre l&apos;Imprimé récemment publié</hi>
+               <lb facs="#facs_7_tl_31" n="N003"/><hi rend="fontFamily:Antiqua;">sous le tître</hi> Rechts=gegündete Eigentum rc.
+               <lb facs="#facs_7_tl_32" n="N004"/><hi rend="fontFamily:Antiqua;">Ou bien droit de Proprieté bien fondé de la</hi>
+               <lb facs="#facs_7_tl_33" n="N005"/><hi rend="fontFamily:Antiqua;">Maison Electorale de <unclear>B</unclear>randebourg sur les Du-</hi>
+               <lb facs="#facs_7_tl_34" n="N006"/><hi rend="fontFamily:Antiqua;">chés &amp; Principautes de la Silesie, Jagerndorf,</hi>
+               <lb facs="#facs_7_tl_35" n="N007"/><hi rend="fontFamily:Antiqua;"
+                  >Li<unclear>g</unclear>nitz, Brieg, Wolau, &amp; Seigneur<unclear>iesy</unclear> / ap-</hi>
+               <lb facs="#facs_7_tl_36" n="N008"/><hi rend="fontFamily:Antiqua;">partenantes. L&apos;An 1741. </hi>Das St. geb. 30. kr.</p></x:expect>
+      </x:scenario>
+   </x:scenario>
+   
+   <x:scenario label="überlapp">
+      <x:context mode="text">
+         <ns3:fileSec>
+            <ns3:fileGrp ID="MASTER">
+               <ns3:fileGrp ID="PAGEXML">
+                  <ns3:file />
+                  <ns3:file ID="PAGEXML_2" SEQ="2" MIMETYPE="application/xml" CREATED="2018-05-17T15:08:03.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
+                     <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/1518862020bsb10358355-2.xml"/>
+                  </ns3:file>
+               </ns3:fileGrp>
+            </ns3:fileGrp>
+         </ns3:fileSec>
+      </x:context>
+      <x:expect xml:space="preserve" label="."
+         ><pb  facs="#facs_2" n="2" xml:id="img_0002" />
+            <p facs="#facs_2_r_1_7">
+               <lb facs="#facs_2_r2l10" n="N010" /><choice><corr/><sic>7. Maria <supplied reason=""
+                  >Theresia</supplied></sic></choice><supplied reason="">, geb. 4 Stpt.</supplied> 1716.</p></x:expect>
+   </x:scenario>
+   
+   <x:scenario label="weitere Elemente">
+      <x:scenario label="abbrev">
+         <x:context mode="text">
             <ns3:fileSec>
-                <ns3:fileGrp ID="MASTER">
-                    <ns3:fileGrp ID="PAGEXML">
-                        <ns3:file />
-                        <ns3:file ID="PAGEXML_2" SEQ="2" MIMETYPE="application/xml" CREATED="2018-05-17T15:08:03.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
-                            <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/1518862020bsb10358355-2.xml"/>
-                        </ns3:file>
-                    </ns3:fileGrp>
-                </ns3:fileGrp>
+               <ns3:fileGrp ID="MASTER">
+                  <ns3:fileGrp ID="PAGEXML">
+                     <ns3:file ID="PAGEXML_25" SEQ="25" MIMETYPE="application/xml" CREATED="2018-05-17T14:37:25.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
+                        <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/HS_115_25_object_128293-1.xml"/>
+                     </ns3:file>
+                  </ns3:fileGrp>
+               </ns3:fileGrp>
             </ns3:fileSec>
-        </x:context>
-        <x:expect xml:space="preserve" label="."><pb  facs="#facs_2" n="2" xml:id="img_0002" /><p facs="#facs_2_r_1_7">
-      <lb facs="#facs_2_r2l10" n="N010" /><choice><corr/><sic>7. Maria <supplied reason="">Theresia</supplied></sic></choice><supplied reason="">, geb. 4 Stpt.</supplied> 1716.</p></x:expect>
-    </x:scenario>
-    
-    <x:scenario label="weitere Elemente">
-        <x:scenario label="abbrev">
-            <x:context mode="text">
-                <ns3:fileSec>
-                    <ns3:fileGrp ID="MASTER">
-                        <ns3:fileGrp ID="PAGEXML">
-                            <ns3:file ID="PAGEXML_25" SEQ="25" MIMETYPE="application/xml" CREATED="2018-05-17T14:37:25.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
-                                <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/HS_115_25_object_128293-1.xml"/>
-                            </ns3:file>
-                        </ns3:fileGrp>
-                    </ns3:fileGrp>
-                </ns3:fileSec>
-            </x:context>
-            <x:expect label="choice, expan + abbr" xml:space="preserve"><pb facs="#facs_25" n="25" xml:id="img_0025" /><ab facs="#facs_25_r1" type="page-number">
-      <lb facs="#facs_25_r1l1" n="N001"/>12.</ab><head facs="#facs_25_r2">
-      <lb facs="#facs_25_r2l1" n="N001"/><choice><expan/><abbr>H&apos;r</abbr></choice>
-      <lb facs="#facs_25_line_1459841092982_10"
-          n="N003" />getragen werden, die in <choice><expan>den</expan><abbr>d</abbr></choice>
-      <lb facs="#facs_25_r4l10" n="N010"/>vom 8<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice> <choice
-        ><expan>vorigen Monats</expan><abbr>v. M.</abbr></choice> eine Feüersgefahr</head></x:expect>
-        </x:scenario>
-        <x:scenario label="date">
-            <x:context mode="text">
-                <ns3:fileSec>
-                    <ns3:fileGrp ID="MASTER">
-                        <ns3:fileGrp ID="PAGEXML">
-                            <ns3:file ID="PAGEXML_25" SEQ="25" MIMETYPE="application/xml" CREATED="2018-05-17T14:37:25.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
-                                <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/HS_115_25_object_128293-2.xml"/>
-                            </ns3:file>
-                        </ns3:fileGrp>
-                    </ns3:fileGrp>
-                </ns3:fileSec>
-            </x:context>
-            <!-- TODO adjust to @when pending a decision -->
-            <x:expect label="date mit Attributen" xml:space="preserve"><pb facs="#facs_25" n="25" xml:id="img_0025" /><p facs="#facs_25_r4">
-      <lb facs="#facs_25_r4l10" n="N010" />vom <date
-      Ratssitzungstermin="-" month="6" year="1792" day="8">8<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice> <choice><expan>vorigen Monats</expan><abbr>v. M.</abbr></choice></date> eine Feüersgefahr
-      <lb facs="#facs_25_r8l12" n="N013"/>vom <date>1<choice><expan/><abbr><hi rend="superscript:true;">t</hi></abbr></choice></date> und <choice><expan/><abbr><rs type="org">kreißämt.</rs></abbr></choice> Inti¬</p></x:expect>
-        </x:scenario>
-        <x:scenario label="person, place, organization">
-            <x:context mode="text">
-                <ns3:fileSec>
-                    <ns3:fileGrp ID="MASTER">
-                        <ns3:fileGrp ID="PAGEXML">
-                            <ns3:file ID="PAGEXML_25" SEQ="25" MIMETYPE="application/xml" CREATED="2018-05-17T14:37:25.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
-                                <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/HS_115_25_object_128293-3.xml"/>
-                            </ns3:file>
-                        </ns3:fileGrp>
-                    </ns3:fileGrp>
-                </ns3:fileSec>
-            </x:context>
-            <x:expect label="." xml:space="preserve"><pb facs="#facs_25" n="25" xml:id="img_0025" /><head facs="#facs_25_r2">
-      <lb facs="#facs_25_r2l1" n="N001"/><choice><expan/><abbr>H&apos;r</abbr></choice> <rs type="person"><choice><expan>Herr</expan><abbr>v̄</abbr></choice> Kuglern.</rs></head><head facs="#facs_25_r3">
-      <lb facs="#facs_25_r3l1" n="N001"/><choice><expan>Numero</expan><abbr>N<hi rend="superscript:true;">o</hi></abbr></choice> 786.</head><p facs="#facs_25_r4">
-      <lb facs="#facs_25_r4l1" n="N001"/>Remisschreiben des <rs type="org">Frauenklosters</rs>
-      <lb facs="#facs_25_r4l2" n="N002"/><rs type="org"><choice><expan>Sankt</expan><abbr>St.</abbr></choice> Elisabeth zu <rs type="place">Brixen</rs></rs> mit dem 
-      <lb facs="#facs_25_r4l3" n="N003"/><choice><expan>Ansuchen</expan><abbr>Ansuch</abbr></choice>, daß der auf den <choice><expan>alldaigen</expan><abbr>alldaig</abbr></choice></p></x:expect>
-        </x:scenario>
-    </x:scenario>
-
-    <x:scenario label="convert user data">
-        <x:scenario label="person (1)">
-            <x:context mode="text">
-                <ns3:fileSec>
-                    <ns3:fileGrp ID="MASTER">
-                        <ns3:fileGrp ID="PAGEXML">
-                            <ns3:file ID="PAGEXML_1" SEQ="1" MIMETYPE="application/xml" CREATED="2018-08-09T13:01:22.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
-                                <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/A 0001_Seite_1.xml"/>
-                            </ns3:file>
-                        </ns3:fileGrp>
-                    </ns3:fileGrp>
-                </ns3:fileSec>
-            </x:context>
-            <x:expect label="name within rs" xml:space="preserve"><pb facs="#facs_1" n="1" xml:id="img_0001"/><ab type="" facs="#facs_1_region_1479996533458_8">
-      <lb facs="#facs_1_r1003" n="N001"/><hi rend="underlined:true; fontSize:0.0; kerning:0;">A. 1.</hi></ab><ab type="" facs="#facs_1_region_1479996502881_4">
-      <lb facs="#facs_1_r1005" n="N001"/>Kaiserliche Akademie der Wissenschaften.</ab><ab type="" facs="#facs_1_region_1479996509199_5">
-      <lb facs="#facs_1_r1008" n="N001"/>Protokoll</ab><ab type="" facs="#facs_1_region_1479996516875_6">
-      <lb facs="#facs_1_r1010" n="N001"/>der außerordentlichen Gesammtsitzung
-      <lb facs="#facs_1_r1011" n="N002"/>am 27. November 1847</ab><ab type="" facs="#facs_1_region_1479996526172_7">
-      <lb facs="#facs_1_r1013" n="N001"/>Anwesende: Der Präsident Freiherr <rs type="person" key="Hammer-Purgstall, von, Joseph"><choice><expan/><abbr>v.</abbr></choice> Hammer-Purgstall</rs>	
-      <lb facs="#facs_1_r1014" n="N002"/><choice><expan>Der</expan><abbr>"</abbr></choice> Vice-Präsident <rs type="person" key="Baumgartner, von, Andreas">Baumgartner</rs>
-      <lb facs="#facs_1_r1015" n="N003"/><choice><expan>Der</expan><abbr>"</abbr></choice> General-Secretär <rs type="person" key="Ettingshausen, von, Andreas"><choice><expan>von</expan><abbr>v.</abbr></choice> Ettingshausen</rs>
-      <lb facs="#facs_1_r1016" n="N004"/><choice><expan>Der</expan><abbr>"</abbr></choice> zweite Secretär <rs type="person" key="Wolf, Ferdinand">Wolf</rs></ab><ab type="" facs="#facs_1_region_1479997987283_34">
-      <lb facs="#facs_1_r1018" n="N001"/>die wirklichen Mitglieder <rs type="person" key="Prechtl, von, Johann Joseph">Prechtl</rs>	</ab></x:expect>
-        </x:scenario>
-        <x:scenario label="place (1)">
-            <x:context mode="text">
-                <ns3:fileSec>
-                    <ns3:fileGrp ID="MASTER">
-                        <ns3:fileGrp ID="PAGEXML">
-                            <ns3:file ID="PAGEXML_1" SEQ="1" MIMETYPE="application/xml" CREATED="2018-08-09T13:01:22.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
-                                <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/A 0001_Seite_2.xml"/>
-                            </ns3:file>
-                        </ns3:fileGrp>
-                    </ns3:fileGrp>
-                </ns3:fileSec>
-            </x:context>
-            <x:expect label="name within rs" xml:space="preserve"><pb facs="#facs_1" n="1" xml:id="img_0001" /><ab type="" facs="#facs_1_region_1480062023146_1">
-      <lb facs="#facs_1_r1052" n="N006" />en Oeconomie-Hofes in <rs type="place"
-        key="(Wien-)Simmering">Simmering</rs> überwachen könnte, während die Akademie</ab></x:expect>
-        </x:scenario>
-    </x:scenario>
-    
-    <x:scenario label="continued">
-        <x:call template="continuation">
-            <x:param name="context">
-                <p facs="#facs_2_r1" xml:space="preserve">
-                    <lb facs="#facs_2_r1l1" n="N001"/><hi rend="underlined:true; fontSize:0.0; kerning:0;">Verhandlungen.</hi>
-                    <lb facs="#facs_2_r1l2" n="N002"/>Der hohe <rs type="person" key="Bach, von, Alexander">Curator</rs> der kaisl.
-                    <lb facs="#facs_2_r1l3" n="N003"/>Akademie genehmigt mit Erlaß
-                    <lb facs="#facs_2_r1l4" n="N004"/>vom 24. März <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice> die Abhaltung
-                    <lb facs="#facs_2_r1l5" n="N005"/>einer feierlichen Sitzung am 30. Mai <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice>
-                    <lb facs="#facs_2_r1l6" n="N006"/>Der <rs type="person" key="Schrötter, von, Anton">General-Secretär</rs> bringt
-                    <lb facs="#facs_2_r1l7" n="N007"/>die Modalitäten der feierlichen Sit-
-                    <lb facs="#facs_2_r1l8" n="N008"/>zung zur Sprache und bemerkt,
-                    <lb facs="#facs_2_r1l9" n="N009"/>daß der 30. Mai auf den Pfingst-
-                    <lb facs="#facs_2_r1l10" n="N010"/>samstag fällt.
-                    <lb facs="#facs_2_r1l11" n="N011"/>Die Akademie entscheidet sich
-                    <lb facs="#facs_2_r1l12" n="N012"/>für den 29. Mai und der Herr
-                    <lb facs="#facs_2_r1l13" n="N013"/><rs type="person" key="Baumgartner, von, Andreas">Präsident</rs> übernimmt es, die Erlaub-
-                    <lb facs="#facs_2_r1l14" n="N014"/>niß hiezu beim Herrn <rs type="person" key="Bach, von, Alexander" continued="true">Cura-</rs>
-                    <lb facs="#facs_2_r1l15" n="N015"/><rs type="person" key="Bach, von, Alexander" continued="true">tor</rs> auszuwirken. In Betreff
-                    <lb facs="#facs_2_r1l16" n="N016"/>der Locales entscheidet sich die
-                    <lb facs="#facs_2_r1l17" n="N017"/>Akademie für den Landständi-
-                    <lb facs="#facs_2_r1l18" n="N018"/>schen Saal, für dessen Einräu-
-                    <lb facs="#facs_2_r1l19" n="N019"/>mung seiner Zeit mit Geneh-
-                    <lb facs="#facs_2_r1l20" n="N020"/>migung des Herrn <rs type="person" key="Bach, von, Alexander">Curator</rs>s
-                    <lb facs="#facs_2_r1l21" n="N021"/>die nöthigen Schritte zu machen
-                    <lb facs="#facs_2_r1l22" n="N022"/>sind.
-                    <lb facs="#facs_2_r1l23" n="N023"/>Das hohe <choice><expan>kaiserlich-königliche</expan><abbr>k. k.</abbr></choice> Ministerium
-                    <lb facs="#facs_2_line_1542113768058_321" n="N024"/>129.
-                    <lb facs="#facs_2_r1l25" n="N025"/>für Cultus <choice><expan>etcetera</expan><abbr>etc.</abbr></choice> hat mit Erlaß
-                    <lb facs="#facs_2_r1l26" n="N026"/>vom 19. Jänner <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice> Zahl 9197/164 den
-                    <lb facs="#facs_2_r1l27" n="N027"/>Wunsch ausgedrückt, zur weite-
-                    <lb facs="#facs_2_r1l28" n="N028"/>ren Betheilung von Lehran-
-                    <lb facs="#facs_2_r1l29" n="N029"/>stalten noch eine Anzahl aka-
-                    <lb facs="#facs_2_r1l30" n="N030"/>demischer Druckschriften von der
-                    <lb facs="#facs_2_r1l31" n="N031"/>Akademie zur Disposition zu er-
-                    <lb facs="#facs_2_r1l32" n="N032"/>halten.</p>
-            </x:param>
-        </x:call>
-        <x:expect label="continued rs" xml:space="preserve">
-                    <lb facs="#facs_2_r1l1" n="N001"/><hi rend="underlined:true; fontSize:0.0; kerning:0;">Verhandlungen.</hi>
-                    <lb facs="#facs_2_r1l2" n="N002"/>Der hohe <rs type="person" key="Bach, von, Alexander">Curator</rs> der kaisl.
-                    <lb facs="#facs_2_r1l3" n="N003"/>Akademie genehmigt mit Erlaß
-                    <lb facs="#facs_2_r1l4" n="N004"/>vom 24. März <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice> die Abhaltung
-                    <lb facs="#facs_2_r1l5" n="N005"/>einer feierlichen Sitzung am 30. Mai <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice>
-                    <lb facs="#facs_2_r1l6" n="N006"/>Der <rs type="person" key="Schrötter, von, Anton">General-Secretär</rs> bringt
-                    <lb facs="#facs_2_r1l7" n="N007"/>die Modalitäten der feierlichen Sit-
-                    <lb facs="#facs_2_r1l8" n="N008"/>zung zur Sprache und bemerkt,
-                    <lb facs="#facs_2_r1l9" n="N009"/>daß der 30. Mai auf den Pfingst-
-                    <lb facs="#facs_2_r1l10" n="N010"/>samstag fällt.
-                    <lb facs="#facs_2_r1l11" n="N011"/>Die Akademie entscheidet sich
-                    <lb facs="#facs_2_r1l12" n="N012"/>für den 29. Mai und der Herr
-                    <lb facs="#facs_2_r1l13" n="N013"/><rs type="person" key="Baumgartner, von, Andreas">Präsident</rs> übernimmt es, die Erlaub-
-                    <lb facs="#facs_2_r1l14" n="N014"/>niß hiezu beim Herrn <rs type="person" key="Bach, von, Alexander">Cura-<lb facs="#facs_2_r1l15" n="N015" break="no"/>tor</rs> auszuwirken. In Betreff
-                    <lb facs="#facs_2_r1l16" n="N016"/>der Locales entscheidet sich die
-                    <lb facs="#facs_2_r1l17" n="N017"/>Akademie für den Landständi-
-                    <lb facs="#facs_2_r1l18" n="N018"/>schen Saal, für dessen Einräu-
-                    <lb facs="#facs_2_r1l19" n="N019"/>mung seiner Zeit mit Geneh-
-                    <lb facs="#facs_2_r1l20" n="N020"/>migung des Herrn <rs type="person" key="Bach, von, Alexander">Curator</rs>s
-                    <lb facs="#facs_2_r1l21" n="N021"/>die nöthigen Schritte zu machen
-                    <lb facs="#facs_2_r1l22" n="N022"/>sind.
-                    <lb facs="#facs_2_r1l23" n="N023"/>Das hohe <choice><expan>kaiserlich-königliche</expan><abbr>k. k.</abbr></choice> Ministerium
-                    <lb facs="#facs_2_line_1542113768058_321" n="N024"/>129.
-                    <lb facs="#facs_2_r1l25" n="N025"/>für Cultus <choice><expan>etcetera</expan><abbr>etc.</abbr></choice> hat mit Erlaß
-                    <lb facs="#facs_2_r1l26" n="N026"/>vom 19. Jänner <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice> Zahl 9197/164 den
-                    <lb facs="#facs_2_r1l27" n="N027"/>Wunsch ausgedrückt, zur weite-
-                    <lb facs="#facs_2_r1l28" n="N028"/>ren Betheilung von Lehran-
-                    <lb facs="#facs_2_r1l29" n="N029"/>stalten noch eine Anzahl aka-
-                    <lb facs="#facs_2_r1l30" n="N030"/>demischer Druckschriften von der
-                    <lb facs="#facs_2_r1l31" n="N031"/>Akademie zur Disposition zu er-
-                    <lb facs="#facs_2_r1l32" n="N032"/>halten.</x:expect>
-    </x:scenario>
-    
-    <x:scenario label="table">
-        <x:context mode="text">
+         </x:context>
+         <x:expect label="choice, expan + abbr" xml:space="preserve"
+            ><pb facs="#facs_25" n="25" xml:id="img_0025" />
+            <ab facs="#facs_25_r1" type="page-number">
+               <lb facs="#facs_25_r1l1" n="N001"/>12.
+            </ab>
+            <head facs="#facs_25_r2">
+               <lb facs="#facs_25_r2l1" n="N001"/><choice><expan/><abbr>H&apos;r</abbr></choice>
+               <lb facs="#facs_25_line_1459841092982_10"
+                   n="N003" />getragen werden, die in <choice><expan>den</expan><abbr>d</abbr></choice>
+               <lb facs="#facs_25_r4l10" n="N010"/>vom 8<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice> <choice
+                 ><expan>vorigen Monats</expan><abbr>v. M.</abbr></choice> eine Feüersgefahr</head></x:expect>
+      </x:scenario>
+      <x:scenario label="date">
+         <x:context mode="text">
             <ns3:fileSec>
-                <ns3:fileGrp ID="MASTER">
-                    <ns3:fileGrp ID="PAGEXML">
-                        <ns3:file ID="PAGEXML_9" SEQ="9" MIMETYPE="application/xml" CREATED="2019-07-12T16:10:56.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
-                            <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/17160815-008.xml"/>
-                        </ns3:file>
-                    </ns3:fileGrp>
-                </ns3:fileGrp>
+               <ns3:fileGrp ID="MASTER">
+                  <ns3:fileGrp ID="PAGEXML">
+                     <ns3:file ID="PAGEXML_25" SEQ="25" MIMETYPE="application/xml" CREATED="2018-05-17T14:37:25.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
+                        <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/HS_115_25_object_128293-2.xml"/>
+                     </ns3:file>
+                  </ns3:fileGrp>
+               </ns3:fileGrp>
             </ns3:fileSec>
-        </x:context>
-        <x:expect label="table2" href="page/table.xml" select="*:body/node()" />
+         </x:context>
+         <!-- TODO adjust to @when pending a decision -->
+         <x:expect label="date mit Attributen" xml:space="preserve"
+            ><pb facs="#facs_25" n="25" xml:id="img_0025" />
+            <p facs="#facs_25_r4">
+               <lb facs="#facs_25_r4l10" n="N010" />vom <date
+                  Ratssitzungstermin="-" month="6" year="1792" day="8">8<choice><expan>ten</expan><abbr><hi
+                  rend="superscript:true;">t</hi></abbr></choice> <choice><expan>vorigen Monats</expan><abbr
+                     >v. M.</abbr></choice></date> eine Feüersgefahr
+               <lb facs="#facs_25_r8l12" n="N013"/>vom <date>1<choice><expan/><abbr><hi
+                  rend="superscript:true;">t</hi></abbr></choice></date> und <choice><expan/><abbr><rs
+                  type="org">kreißämt.</rs></abbr></choice> Inti¬</p></x:expect>
+        </x:scenario>
+      <x:scenario label="person, place, organization">
+         <x:context mode="text">
+            <ns3:fileSec>
+               <ns3:fileGrp ID="MASTER">
+                  <ns3:fileGrp ID="PAGEXML">
+                     <ns3:file ID="PAGEXML_25" SEQ="25" MIMETYPE="application/xml" CREATED="2018-05-17T14:37:25.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
+                        <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/HS_115_25_object_128293-3.xml"/>
+                     </ns3:file>
+                  </ns3:fileGrp>
+               </ns3:fileGrp>
+            </ns3:fileSec>
+         </x:context>
+         <x:expect label="." xml:space="preserve"
+            ><pb facs="#facs_25" n="25" xml:id="img_0025" />
+            <head facs="#facs_25_r2">
+               <lb facs="#facs_25_r2l1" n="N001"/><choice><expan/><abbr>H&apos;r</abbr></choice> <rs
+                  type="person"><choice><expan>Herr</expan><abbr>v̄</abbr></choice> Kuglern.</rs></head>
+            <head facs="#facs_25_r3">
+               <lb facs="#facs_25_r3l1" n="N001"/><choice><expan>Numero</expan><abbr>N<hi
+                  rend="superscript:true;">o</hi></abbr></choice> 786.</head>
+            <p facs="#facs_25_r4">
+               <lb facs="#facs_25_r4l1" n="N001"/>Remisschreiben des <rs type="org">Frauenklosters</rs>
+               <lb facs="#facs_25_r4l2" n="N002"/><rs type="org"><choice><expan>Sankt</expan><abbr
+                  >St.</abbr></choice> Elisabeth zu <rs type="place">Brixen</rs></rs> mit dem 
+               <lb facs="#facs_25_r4l3" n="N003"/><choice><expan>Ansuchen</expan><abbr
+                  >Ansuch</abbr></choice>, daß der auf den <choice><expan>alldaigen</expan><abbr
+                  >alldaig</abbr></choice></p></x:expect>
+      </x:scenario>
+   </x:scenario>
+   
+   <x:scenario label="convert user data">
+      <x:scenario label="person (1)">
+         <x:context mode="text">
+            <ns3:fileSec>
+               <ns3:fileGrp ID="MASTER">
+                  <ns3:fileGrp ID="PAGEXML">
+                     <ns3:file ID="PAGEXML_1" SEQ="1" MIMETYPE="application/xml" CREATED="2018-08-09T13:01:22.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
+                        <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/A 0001_Seite_1.xml"/>
+                     </ns3:file>
+                  </ns3:fileGrp>
+               </ns3:fileGrp>
+            </ns3:fileSec>
+         </x:context>
+         <x:expect label="name within rs" xml:space="preserve"
+            ><pb facs="#facs_1" n="1" xml:id="img_0001"/>
+            <ab type="" facs="#facs_1_region_1479996533458_8">
+               <lb facs="#facs_1_r1003" n="N001"/><hi rend="underlined:true; fontSize:0.0; kerning:0;">A. 1.</hi>
+            </ab>
+            <ab type="" facs="#facs_1_region_1479996502881_4">
+               <lb facs="#facs_1_r1005" n="N001"/>Kaiserliche Akademie der Wissenschaften.
+            </ab>
+            <ab type="" facs="#facs_1_region_1479996509199_5">
+               <lb facs="#facs_1_r1008" n="N001"/>Protokoll
+            </ab>
+            <ab type="" facs="#facs_1_region_1479996516875_6">
+               <lb facs="#facs_1_r1010" n="N001"/>der außerordentlichen Gesammtsitzung
+               <lb facs="#facs_1_r1011" n="N002"/>am 27. November 1847
+            </ab>
+            <ab type="" facs="#facs_1_region_1479996526172_7">
+               <lb facs="#facs_1_r1013" n="N001"/>Anwesende: Der Präsident Freiherr <rs type="person"
+                  key="Hammer-Purgstall, von, Joseph"><choice><expan/><abbr>v.</abbr></choice> Hammer-Purgstall</rs>	
+               <lb facs="#facs_1_r1014" n="N002"/><choice><expan>Der</expan><abbr>"</abbr></choice> Vice-Präsident <rs
+                  type="person" key="Baumgartner, von, Andreas">Baumgartner</rs>
+               <lb facs="#facs_1_r1015" n="N003"/><choice><expan>Der</expan><abbr>"</abbr></choice> General-Secretär <rs
+                  type="person" key="Ettingshausen, von, Andreas"><choice><expan>von</expan><abbr
+                     >v.</abbr></choice> Ettingshausen</rs>
+               <lb facs="#facs_1_r1016" n="N004"/><choice><expan>Der</expan><abbr>"</abbr></choice> zweite Secretär <rs
+                  type="person" key="Wolf, Ferdinand">Wolf</rs>
+            </ab>
+            <ab type="" facs="#facs_1_region_1479997987283_34">
+               <lb facs="#facs_1_r1018" n="N001"/>die wirklichen Mitglieder <rs type="person"
+                  key="Prechtl, von, Johann Joseph">Prechtl</rs>	
+            </ab></x:expect>
+        </x:scenario>
+      <x:scenario label="place (1)">
+         <x:context mode="text">
+            <ns3:fileSec>
+               <ns3:fileGrp ID="MASTER">
+                  <ns3:fileGrp ID="PAGEXML">
+                     <ns3:file ID="PAGEXML_1" SEQ="1" MIMETYPE="application/xml" CREATED="2018-08-09T13:01:22.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
+                        <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/A 0001_Seite_2.xml"/>
+                     </ns3:file>
+                  </ns3:fileGrp>
+               </ns3:fileGrp>
+            </ns3:fileSec>
+         </x:context>
+         <x:expect label="name within rs" xml:space="preserve"
+            ><pb facs="#facs_1" n="1" xml:id="img_0001" />
+            <ab type="" facs="#facs_1_region_1480062023146_1">
+               <lb facs="#facs_1_r1052" n="N006" />en Oeconomie-Hofes in <rs type="place"
+                  key="(Wien-)Simmering">Simmering</rs> überwachen könnte, während die Akademie
+            </ab></x:expect>
+      </x:scenario>
+   </x:scenario>
+   
+   <x:scenario label="continued">
+      <x:call template="continuation">
+         <x:param name="context">
+            <p facs="#facs_2_r1" xml:space="preserve">
+               <lb facs="#facs_2_r1l1" n="N001"/><hi rend="underlined:true; fontSize:0.0; kerning:0;">Verhandlungen.</hi>
+               <lb facs="#facs_2_r1l2" n="N002"/>Der hohe <rs type="person" key="Bach, von, Alexander">Curator</rs> der kaisl.
+               <lb facs="#facs_2_r1l3" n="N003"/>Akademie genehmigt mit Erlaß
+               <lb facs="#facs_2_r1l4" n="N004"/>vom 24. März <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice> die Abhaltung
+               <lb facs="#facs_2_r1l5" n="N005"/>einer feierlichen Sitzung am 30. Mai <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice>
+               <lb facs="#facs_2_r1l6" n="N006"/>Der <rs type="person" key="Schrötter, von, Anton">General-Secretär</rs> bringt
+               <lb facs="#facs_2_r1l7" n="N007"/>die Modalitäten der feierlichen Sit-
+               <lb facs="#facs_2_r1l8" n="N008"/>zung zur Sprache und bemerkt,
+               <lb facs="#facs_2_r1l9" n="N009"/>daß der 30. Mai auf den Pfingst-
+               <lb facs="#facs_2_r1l10" n="N010"/>samstag fällt.
+               <lb facs="#facs_2_r1l11" n="N011"/>Die Akademie entscheidet sich
+               <lb facs="#facs_2_r1l12" n="N012"/>für den 29. Mai und der Herr
+               <lb facs="#facs_2_r1l13" n="N013"/><rs type="person" key="Baumgartner, von, Andreas">Präsident</rs> übernimmt es, die Erlaub-
+               <lb facs="#facs_2_r1l14" n="N014"/>niß hiezu beim Herrn <rs type="person" key="Bach, von, Alexander" continued="true">Cura-</rs>
+               <lb facs="#facs_2_r1l15" n="N015"/><rs type="person" key="Bach, von, Alexander" continued="true">tor</rs> auszuwirken. In Betreff
+               <lb facs="#facs_2_r1l16" n="N016"/>der Locales entscheidet sich die
+               <lb facs="#facs_2_r1l17" n="N017"/>Akademie für den Landständi-
+               <lb facs="#facs_2_r1l18" n="N018"/>schen Saal, für dessen Einräu-
+               <lb facs="#facs_2_r1l19" n="N019"/>mung seiner Zeit mit Geneh-
+               <lb facs="#facs_2_r1l20" n="N020"/>migung des Herrn <rs type="person" key="Bach, von, Alexander">Curator</rs>s
+               <lb facs="#facs_2_r1l21" n="N021"/>die nöthigen Schritte zu machen
+               <lb facs="#facs_2_r1l22" n="N022"/>sind.
+               <lb facs="#facs_2_r1l23" n="N023"/>Das hohe <choice><expan>kaiserlich-königliche</expan><abbr>k. k.</abbr></choice> Ministerium
+               <lb facs="#facs_2_line_1542113768058_321" n="N024"/>129.
+               <lb facs="#facs_2_r1l25" n="N025"/>für Cultus <choice><expan>etcetera</expan><abbr>etc.</abbr></choice> hat mit Erlaß
+               <lb facs="#facs_2_r1l26" n="N026"/>vom 19. Jänner <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice> Zahl 9197/164 den
+               <lb facs="#facs_2_r1l27" n="N027"/>Wunsch ausgedrückt, zur weite-
+               <lb facs="#facs_2_r1l28" n="N028"/>ren Betheilung von Lehran-
+               <lb facs="#facs_2_r1l29" n="N029"/>stalten noch eine Anzahl aka-
+               <lb facs="#facs_2_r1l30" n="N030"/>demischer Druckschriften von der
+               <lb facs="#facs_2_r1l31" n="N031"/>Akademie zur Disposition zu er-
+               <lb facs="#facs_2_r1l32" n="N032"/>halten.</p>
+         </x:param>
+      </x:call>
+      <x:expect label="continued rs" xml:space="preserve">
+               <lb facs="#facs_2_r1l1" n="N001"/><hi rend="underlined:true; fontSize:0.0; kerning:0;">Verhandlungen.</hi>
+               <lb facs="#facs_2_r1l2" n="N002"/>Der hohe <rs type="person" key="Bach, von, Alexander">Curator</rs> der kaisl.
+               <lb facs="#facs_2_r1l3" n="N003"/>Akademie genehmigt mit Erlaß
+               <lb facs="#facs_2_r1l4" n="N004"/>vom 24. März <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice> die Abhaltung
+               <lb facs="#facs_2_r1l5" n="N005"/>einer feierlichen Sitzung am 30. Mai <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice>
+               <lb facs="#facs_2_r1l6" n="N006"/>Der <rs type="person" key="Schrötter, von, Anton">General-Secretär</rs> bringt
+               <lb facs="#facs_2_r1l7" n="N007"/>die Modalitäten der feierlichen Sit-
+               <lb facs="#facs_2_r1l8" n="N008"/>zung zur Sprache und bemerkt,
+               <lb facs="#facs_2_r1l9" n="N009"/>daß der 30. Mai auf den Pfingst-
+               <lb facs="#facs_2_r1l10" n="N010"/>samstag fällt.
+               <lb facs="#facs_2_r1l11" n="N011"/>Die Akademie entscheidet sich
+               <lb facs="#facs_2_r1l12" n="N012"/>für den 29. Mai und der Herr
+               <lb facs="#facs_2_r1l13" n="N013"/><rs type="person" key="Baumgartner, von, Andreas">Präsident</rs> übernimmt es, die Erlaub-
+               <lb facs="#facs_2_r1l14" n="N014"/>niß hiezu beim Herrn <rs type="person" key="Bach, von, Alexander">Cura-<lb facs="#facs_2_r1l15" n="N015" break="no"/>tor</rs> auszuwirken. In Betreff
+               <lb facs="#facs_2_r1l16" n="N016"/>der Locales entscheidet sich die
+               <lb facs="#facs_2_r1l17" n="N017"/>Akademie für den Landständi-
+               <lb facs="#facs_2_r1l18" n="N018"/>schen Saal, für dessen Einräu-
+               <lb facs="#facs_2_r1l19" n="N019"/>mung seiner Zeit mit Geneh-
+               <lb facs="#facs_2_r1l20" n="N020"/>migung des Herrn <rs type="person" key="Bach, von, Alexander">Curator</rs>s
+               <lb facs="#facs_2_r1l21" n="N021"/>die nöthigen Schritte zu machen
+               <lb facs="#facs_2_r1l22" n="N022"/>sind.
+               <lb facs="#facs_2_r1l23" n="N023"/>Das hohe <choice><expan>kaiserlich-königliche</expan><abbr>k. k.</abbr></choice> Ministerium
+               <lb facs="#facs_2_line_1542113768058_321" n="N024"/>129.
+               <lb facs="#facs_2_r1l25" n="N025"/>für Cultus <choice><expan>etcetera</expan><abbr>etc.</abbr></choice> hat mit Erlaß
+               <lb facs="#facs_2_r1l26" n="N026"/>vom 19. Jänner <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice> Zahl 9197/164 den
+               <lb facs="#facs_2_r1l27" n="N027"/>Wunsch ausgedrückt, zur weite-
+               <lb facs="#facs_2_r1l28" n="N028"/>ren Betheilung von Lehran-
+               <lb facs="#facs_2_r1l29" n="N029"/>stalten noch eine Anzahl aka-
+               <lb facs="#facs_2_r1l30" n="N030"/>demischer Druckschriften von der
+               <lb facs="#facs_2_r1l31" n="N031"/>Akademie zur Disposition zu er-
+               <lb facs="#facs_2_r1l32" n="N032"/>halten.</x:expect>
     </x:scenario>
+   
+   <x:scenario label="table">
+      <x:context mode="text">
+         <ns3:fileSec>
+            <ns3:fileGrp ID="MASTER">
+               <ns3:fileGrp ID="PAGEXML">
+                  <ns3:file ID="PAGEXML_9" SEQ="9" MIMETYPE="application/xml" CREATED="2019-07-12T16:10:56.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
+                     <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/17160815-008.xml"/>
+                  </ns3:file>
+               </ns3:fileGrp>
+            </ns3:fileGrp>
+         </ns3:fileSec>
+      </x:context>
+      <x:expect label="table2" href="page/table.xml" select="*:body/node()" />
+   </x:scenario>
+   
+   <x:scenario label="Marginalia">
+      <x:scenario label="T7.1">
+         <x:context mode="text">
+            <ns3:fileSec>
+               <ns3:fileGrp ID="MASTER">
+                  <ns3:fileGrp ID="PAGEXML">
+                     <ns3:file ID="PAGEXML_10" SEQ="10" MIMETYPE="application/xml" CREATED="2021-10-16T20:56:32.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
+                        <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/16096974378888bsb10940504-0010.xml"/>
+                     </ns3:file>
+                  </ns3:fileGrp>
+               </ns3:fileGrp>
+            </ns3:fileSec>
+         </x:context>
+         <x:expect label="." xml:space="preserve"
+            ><pb facs="#facs_10" n="10" xml:id="img_0010"
+            /><note place="margin-right" facs="#facs_10_region_1625235938563_86">
+               <lb facs="#facs_10_line_1625236076413_163" n="N001"/>Geneſ. 1.</note
+            ><note place="margin-left" facs="#facs_10_region_1625235942631_89">
+               <lb facs="#facs_10_line_1625236094177_169" n="N001"/>Eccleſ. 15.</note></x:expect>
+      </x:scenario>
+   </x:scenario>
 </x:description>
