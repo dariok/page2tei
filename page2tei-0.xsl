@@ -251,7 +251,7 @@
         </xsl:variable>
         <xsl:variable name="custom" as="map(xs:string, xs:string)">
             <xsl:map>
-                <xsl:for-each-group select="tokenize(@custom || ' lfd {' || $numCurr, '} ')"
+                <xsl:for-each-group select="tokenize(@custom || ' lfd {' || $numCurr, '\} ')"
                     group-by="substring-before(., ' ')">
                     <xsl:map-entry key="substring-before(., ' ')"
                         select="string-join(substring-after(., '{'), '–')"/>
