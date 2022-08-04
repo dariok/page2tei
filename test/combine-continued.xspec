@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+   xmlns:tei="http://www.tei-c.org/ns/1.0"
+   xmlns="http://www.tei-c.org/ns/1.0"
+   stylesheet="../combine-continued.xsl">
+   
+   <x:scenario label="T1">
+      <x:context>
+         <tei:p facs="#facs_1_r3">
+            <tei:lb facs="#facs_1_r3l16" n="N016"/><tei:date>Anno domini 1509 indictione XII die vero XXX mensis </tei:date>
+            <tei:lb facs="#facs_1_r3l18" n="N017"/><tei:date>Julii</tei:date> pontificatu S etc. <tei:rs type="person" key="della Rovere, Giuliano ">Julii</tei:rs> pape II. anno sexto: Cum
+            <tei:lb facs="#facs_1_r3l19" n="N018"/>sit quod dominus <tei:rs type="person">Judocus Forsbach</tei:rs> clericus <tei:rs type="place">Coloniensis</tei:rs>
+            <tei:lb facs="#facs_1_r3l20" n="N019"/>ad instantiam domini <tei:rs type="person">Bertholdi Baldrivini</tei:rs> clerici<tei:note type="footnote">eigentlich Verdensis: B.B. stammte aus Soltwedel, D. Verden, s. Schuchard, Rotanotare, S. 132.</tei:note>
+            <tei:lb facs="#facs_1_r3l21" n="N020"/><tei:rs type="place" key="Verdun">Verdunensis</tei:rs> diocesis<tei:note type="footnote">eigentlich Verdensis: B.B. stammte aus Soltwedel, D. Verden, s. Schuchard, Rotanotare, S. 132.</tei:note> iuxta permissa contentaverit D.
+            <tei:lb facs="#facs_1_r3l22" n="N021"/><tei:rs type="person">Jacobum Walpot</tei:rs> sanctissimi D. Julii papae II. <tei:rs type="work">cantorem</tei:rs> et
+            <tei:lb facs="#facs_1_r3l23" n="N022"/><tei:rs type="work">capellanum</tei:rs> et effecerit quod idem D. Jacobus cesserit
+            <tei:lb facs="#facs_1_r3l24" n="N023"/>juri sibi competenti in canonicatu et praebenda ecclesiae
+            <tei:lb facs="#facs_1_r3l25" n="N024"/>Beate Mariae <tei:rs type="place">Halberstadensis</tei:rs> alias per obitum quondam <tei:rs type="person" continued="true">Sanderi</tei:rs>
+            <tei:lb facs="#facs_1_r3l26" n="N025"/><tei:rs type="person">Bistorp</tei:rs> illorum ultimi possessoris vacantium, ita quod
+            <tei:lb facs="#facs_1_r3l27" n="N026"/>de eisdem sit domino <tei:rs type="person">Theodorico Wulff</tei:rs> clerico dicte(?)
+            <tei:lb facs="#facs_1_r3l28" n="N027"/><tei:rs type="place">Verdunensis</tei:rs> diocesis pervisum seu concessum pervideri
+         </tei:p>
+      </x:context>
+      <x:expect label=".">
+         <tei:p facs="#facs_1_r3">
+            <tei:lb facs="#facs_1_r3l16" n="N016"/><tei:date>Anno domini 1509 indictione XII die vero XXX mensis </tei:date>
+            <tei:lb facs="#facs_1_r3l18" n="N017"/><tei:date>Julii</tei:date> pontificatu S etc. <tei:rs type="person" key="della Rovere, Giuliano ">Julii</tei:rs> pape II. anno sexto: Cum
+            <tei:lb facs="#facs_1_r3l19" n="N018"/>sit quod dominus <tei:rs type="person">Judocus Forsbach</tei:rs> clericus <tei:rs type="place">Coloniensis</tei:rs>
+            <tei:lb facs="#facs_1_r3l20" n="N019"/>ad instantiam domini <tei:rs type="person">Bertholdi Baldrivini</tei:rs> clerici<tei:note type="footnote">eigentlich Verdensis: B.B. stammte aus Soltwedel, D. Verden, s. Schuchard, Rotanotare, S. 132.</tei:note>
+            <tei:lb facs="#facs_1_r3l21" n="N020"/><tei:rs type="place" key="Verdun">Verdunensis</tei:rs> diocesis<tei:note type="footnote">eigentlich Verdensis: B.B. stammte aus Soltwedel, D. Verden, s. Schuchard, Rotanotare, S. 132.</tei:note> iuxta permissa contentaverit D.
+            <tei:lb facs="#facs_1_r3l22" n="N021"/><tei:rs type="person">Jacobum Walpot</tei:rs> sanctissimi D. Julii papae II. <tei:rs type="work">cantorem</tei:rs> et
+            <tei:lb facs="#facs_1_r3l23" n="N022"/><tei:rs type="work">capellanum</tei:rs> et effecerit quod idem D. Jacobus cesserit
+            <tei:lb facs="#facs_1_r3l24" n="N023"/>juri sibi competenti in canonicatu et praebenda ecclesiae
+            <tei:lb facs="#facs_1_r3l25" n="N024"/>Beate Mariae <tei:rs type="place">Halberstadensis</tei:rs> alias per obitum quondam <tei:rs
+               type="person">Sanderi<tei:lb facs="#facs_1_r3l26" n="N025"
+               />Bistorp</tei:rs> illorum ultimi possessoris vacantium, ita quod
+            <tei:lb facs="#facs_1_r3l27" n="N026"/>de eisdem sit domino <tei:rs type="person">Theodorico Wulff</tei:rs> clerico dicte(?)
+            <tei:lb facs="#facs_1_r3l28" n="N027"/><tei:rs type="place">Verdunensis</tei:rs> diocesis pervisum seu concessum pervideri
+         </tei:p>
+      </x:expect>
+   </x:scenario>
+   
+   <x:scenario label="T2">
+      <x:context>
+         <p>
+            <lb facs="#facs_1_r2l4" n="N004"/>Auf welchen
+            <lb facs="#facs_1_r2l5" n="N005"/><rs type="person" continued="true">Ihro Excellenz,</rs>
+            <lb facs="#facs_1_r2l6" n="N006"/><rs type="person" continued="true">(Tit.)</rs>
+            <lb facs="#facs_1_r2l7" n="N007"/><rs type="person" continued="true">Herr Damian Hugo,</rs>
+            <lb facs="#facs_1_r2l8" n="N008"/><rs type="person" continued="true">Graf von Virmond /</rs>
+            <lb facs="#facs_1_r2l9" n="N009"/><rs type="person" continued="true">Der Röm. Kayserlichen Majestät Geheimer= und</rs>
+            <lb facs="#facs_1_r2l10" n="N010"/><rs type="person" continued="true">Hof=Kriegs=Rath / General=Feld=Zeugmeister / und be=</rs>
+            <lb facs="#facs_1_r2l11" n="N011"/><rs type="person" continued="true">stellter Obrister über ein Regiment zu Fuß / wie auch Groß=</rs>
+            <lb facs="#facs_1_r2l12" n="N012"/><rs type="person" continued="true">Botschaffter nach der Ottomannischen Pforten</rs>
+         </p>
+      </x:context>
+      <x:expect label=".">
+         <p>
+            <lb facs="#facs_1_r2l4" n="N004"/>Auf welchen<lb
+               facs="#facs_1_r2l5" n="N005"/><rs type="person" continued="true">Ihro Excellenz,
+            <lb facs="#facs_1_r2l6" n="N006"/>(Tit.)
+            <lb facs="#facs_1_r2l7" n="N007"/>Herr Damian Hugo,
+            <lb facs="#facs_1_r2l8" n="N008"/>Graf von Virmond /
+            <lb facs="#facs_1_r2l9" n="N009"/>Der Röm. Kayserlichen Majestät Geheimer= und
+            <lb facs="#facs_1_r2l10" n="N010"/>Hof=Kriegs=Rath / General=Feld=Zeugmeister / und be=
+            <lb facs="#facs_1_r2l11" n="N011"/>stellter Obrister über ein Regiment zu Fuß / wie auch Groß=
+            <lb facs="#facs_1_r2l12" n="N012"/>Botschaffter nach der Ottomannischen Pforten</rs>
+         </p>
+      </x:expect>
+   </x:scenario>
+</x:description>

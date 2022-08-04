@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project version="20.0">
+<project>
     <meta>
         <filters directoryPatterns="" filePatterns="page2tei.xpr" positiveFilePatterns="" showHiddenFiles="false"/>
         <options>
-            <serialized version="20.0" xml:space="preserve">
+            <serialized xml:space="preserve">
                 <serializableOrderedMap>
                     <entry>
                         <String>scenario.associations</String>
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>tests-wd/wd17160815/mets.xml</String>
+                                    <String>../../temp/thesaurus/704807/THesaurus_Pictorarum_Hs-1971_Bd004/mets.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -22,19 +22,9 @@
                                         <String>XSL</String>
                                     </list>
                                 </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>tests-wd/wd17050103/mets.xml</String>
-                                </field>
-                                <field name="scenarioIds">
+                                <field name="scenarioStorageLocations">
                                     <list>
-                                        <String>Page2TEI</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
+                                        <Byte>2</Byte>
                                     </list>
                                 </field>
                             </scenarioAssociation>
@@ -85,9 +75,6 @@
                                 </field>
                                 <field name="openInBrowser">
                                     <Boolean>false</Boolean>
-                                </field>
-                                <field name="outputFile">
-                                    <File>tei.xml</File>
                                 </field>
                                 <field name="outputResource">
                                     <String>tei.xml</String>

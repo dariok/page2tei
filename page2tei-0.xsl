@@ -654,7 +654,26 @@
     
     <xsl:choose>
       <xsl:when test="@type = 'textStyle'">
-        <hi rend="{xstring:substring-before-if-ends(substring-after(substring-after(@o, 'length'), ';'), '}')}">
+        <xsl:variable name="rend" as="xs:string*">
+           <xsl:for-each select="tokenize(@o, ';')">
+              <xsl:variable name="entry" select="tokenize(normalize-space(), ':')" />
+              <xsl:choose>
+                 <xsl:when test="$entry[1] eq 'underlined' and $entry[2] eq 'true'">
+                    <xsl:text>text-decoration: underline;</xsl:text>
+                 </xsl:when>
+                 <xsl:when test="$entry[1] eq 'fontSize' and number($entry[2]) gt 0">
+                    <xsl:value-of select="'font-size: ' || $entry[2] || 'px;'" />
+                 </xsl:when>
+                 <xsl:when test="$entry[1] eq 'kerning' and number($entry[2]) gt 0">
+                    <xsl:value-of select="'letter-spacing: ' || $entry[2] || 'px;'" />
+                 </xsl:when>
+              </xsl:choose>
+           </xsl:for-each>
+        </xsl:variable>
+        <hi>
+          <xsl:if test="count($rend) gt 0">
+            <xsl:attribute name="style" select="string-join($rend, ' ')" />
+          </xsl:if>
           <xsl:call-template name="elem">
             <xsl:with-param name="elem" select="$elem" />
           </xsl:call-template>
