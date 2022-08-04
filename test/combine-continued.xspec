@@ -5,7 +5,7 @@
    stylesheet="../combine-continued.xsl">
    
    <x:scenario label="T1">
-      <x:context>
+      <x:context xml:space="preserve">
          <tei:p facs="#facs_1_r3">
             <tei:lb facs="#facs_1_r3l16" n="N016"/><tei:date>Anno domini 1509 indictione XII die vero XXX mensis </tei:date>
             <tei:lb facs="#facs_1_r3l18" n="N017"/><tei:date>Julii</tei:date> pontificatu S etc. <tei:rs type="person" key="della Rovere, Giuliano ">Julii</tei:rs> pape II. anno sexto: Cum
@@ -21,7 +21,7 @@
             <tei:lb facs="#facs_1_r3l28" n="N027"/><tei:rs type="place">Verdunensis</tei:rs> diocesis pervisum seu concessum pervideri
          </tei:p>
       </x:context>
-      <x:expect label=".">
+      <x:expect label="." xml:space="preserve">
          <tei:p facs="#facs_1_r3">
             <tei:lb facs="#facs_1_r3l16" n="N016"/><tei:date>Anno domini 1509 indictione XII die vero XXX mensis </tei:date>
             <tei:lb facs="#facs_1_r3l18" n="N017"/><tei:date>Julii</tei:date> pontificatu S etc. <tei:rs type="person" key="della Rovere, Giuliano ">Julii</tei:rs> pape II. anno sexto: Cum
@@ -32,7 +32,8 @@
             <tei:lb facs="#facs_1_r3l23" n="N022"/><tei:rs type="work">capellanum</tei:rs> et effecerit quod idem D. Jacobus cesserit
             <tei:lb facs="#facs_1_r3l24" n="N023"/>juri sibi competenti in canonicatu et praebenda ecclesiae
             <tei:lb facs="#facs_1_r3l25" n="N024"/>Beate Mariae <tei:rs type="place">Halberstadensis</tei:rs> alias per obitum quondam <tei:rs
-               type="person">Sanderi<tei:lb facs="#facs_1_r3l26" n="N025"
+               type="person">Sanderi
+            <tei:lb facs="#facs_1_r3l26" n="N025"
                />Bistorp</tei:rs> illorum ultimi possessoris vacantium, ita quod
             <tei:lb facs="#facs_1_r3l27" n="N026"/>de eisdem sit domino <tei:rs type="person">Theodorico Wulff</tei:rs> clerico dicte(?)
             <tei:lb facs="#facs_1_r3l28" n="N027"/><tei:rs type="place">Verdunensis</tei:rs> diocesis pervisum seu concessum pervideri
@@ -41,8 +42,11 @@
    </x:scenario>
    
    <x:scenario label="T2">
-      <x:context>
-         <p>
+      <x:context xml:space="preserve">
+         <ab facs="#facs_1_r2">
+            <lb facs="#facs_1_r2l1" n="N001"/>Specification
+            <lb facs="#facs_1_r2l2" n="N002"/>Derjenigen
+            <lb facs="#facs_1_r2l3" n="N003"/>Schiffen /
             <lb facs="#facs_1_r2l4" n="N004"/>Auf welchen
             <lb facs="#facs_1_r2l5" n="N005"/><rs type="person" continued="true">Ihro Excellenz,</rs>
             <lb facs="#facs_1_r2l6" n="N006"/><rs type="person" continued="true">(Tit.)</rs>
@@ -51,21 +55,26 @@
             <lb facs="#facs_1_r2l9" n="N009"/><rs type="person" continued="true">Der Röm. Kayserlichen Majestät Geheimer= und</rs>
             <lb facs="#facs_1_r2l10" n="N010"/><rs type="person" continued="true">Hof=Kriegs=Rath / General=Feld=Zeugmeister / und be=</rs>
             <lb facs="#facs_1_r2l11" n="N011"/><rs type="person" continued="true">stellter Obrister über ein Regiment zu Fuß / wie auch Groß=</rs>
-            <lb facs="#facs_1_r2l12" n="N012"/><rs type="person" continued="true">Botschaffter nach der Ottomannischen Pforten</rs>
-         </p>
+            <lb facs="#facs_1_r2l12" n="N012"/><rs type="person" continued="true">Botschaffter nach der Ottomannischen Pforten</rs> / zu <rs type="person">Dero</rs> Ab=
+            <lb facs="#facs_1_r2l13" n="N013"/>farth nacher <rs type="place">Constantinopel</rs> den <date when="1719-05-17">17. May 1719</date>.
+            <lb facs="#facs_1_r2l14" n="N014"/>abgereiset.</ab>
       </x:context>
-      <x:expect label=".">
-         <p>
-            <lb facs="#facs_1_r2l4" n="N004"/>Auf welchen<lb
-               facs="#facs_1_r2l5" n="N005"/><rs type="person" continued="true">Ihro Excellenz,
+      <x:expect label="." xml:space="preserve">
+         <ab facs="#facs_1_r2">
+            <lb facs="#facs_1_r2l1" n="N001"/>Specification
+            <lb facs="#facs_1_r2l2" n="N002"/>Derjenigen
+            <lb facs="#facs_1_r2l3" n="N003"/>Schiffen /
+            <lb facs="#facs_1_r2l4" n="N004"/>Auf welchen
+            <lb facs="#facs_1_r2l5" n="N005"/><rs type="person">Ihro Excellenz,
             <lb facs="#facs_1_r2l6" n="N006"/>(Tit.)
             <lb facs="#facs_1_r2l7" n="N007"/>Herr Damian Hugo,
             <lb facs="#facs_1_r2l8" n="N008"/>Graf von Virmond /
             <lb facs="#facs_1_r2l9" n="N009"/>Der Röm. Kayserlichen Majestät Geheimer= und
             <lb facs="#facs_1_r2l10" n="N010"/>Hof=Kriegs=Rath / General=Feld=Zeugmeister / und be=
             <lb facs="#facs_1_r2l11" n="N011"/>stellter Obrister über ein Regiment zu Fuß / wie auch Groß=
-            <lb facs="#facs_1_r2l12" n="N012"/>Botschaffter nach der Ottomannischen Pforten</rs>
-         </p>
+            <lb facs="#facs_1_r2l12" n="N012"/>Botschaffter nach der Ottomannischen Pforten</rs> / zu <rs type="person">Dero</rs> Ab=
+            <lb facs="#facs_1_r2l13" n="N013"/>farth nacher <rs type="place">Constantinopel</rs> den <date when="1719-05-17">17. May 1719</date>.
+            <lb facs="#facs_1_r2l14" n="N014"/>abgereiset.</ab>
       </x:expect>
    </x:scenario>
 </x:description>

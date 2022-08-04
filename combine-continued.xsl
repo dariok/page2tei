@@ -22,10 +22,12 @@
       <xsl:copy>
          <xsl:apply-templates select="@*" />
          <xsl:for-each-group select="node()" group-starting-with="tei:rs[@continued eq 'true'
-            and not(preceding-sibling::*[2][@continued eq 'true'])]">
+            and preceding::text()[1]/normalize-space() != '']">
             <xsl:choose>
                <xsl:when test="current-group()[1][@continued eq 'true']">
-                  <xsl:variable name="last" select="index-of(current-group(), current-group()[self::tei:rs][last()])"/>
+                  <xsl:variable name="final"
+                     select="(current-group()[1]/following-sibling::tei:rs[@continued][last()], current-group()[1]/following-sibling::tei:rs[1])[1]" />
+                  <xsl:variable name="last" select="index-of(current-group(), $final)"/>
                   <rs>
                      <xsl:apply-templates select="@*" />
                      <xsl:apply-templates select="current-group()[position() le $last]" mode="rs"/>
