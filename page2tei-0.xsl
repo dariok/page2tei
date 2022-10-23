@@ -409,7 +409,7 @@
          <xsl:when test="@type = 'footnote-continued'">
             <note place="foot" n="[footnote-continued reference]" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></note>
          </xsl:when>
-         <xsl:when test="@type = 'page-number' or $custom?structure?type = 'page-number'">
+         <xsl:when test="'page-number' = (@type, $custom?structure?type)">
             <fw type="page-number" facs="#facs_{$numCurr}_{@id}">
                <xsl:attribute name="place">
                   <xsl:variable name="verticalPosition" select="p:Coords/@points => substring-before(' ') => substring-after(',') => number()" />
@@ -428,7 +428,7 @@
                <xsl:apply-templates select="p:TextLine" />
             </fw>
          </xsl:when>
-         <xsl:when test="@type = ('other', 'paragraph')">
+         <xsl:when test="'paragraph' = (@type, $custom?structure?type)">
             <xsl:text>
             </xsl:text>
             <p facs="#facs_{$numCurr}_{@id}">
