@@ -20,6 +20,11 @@
   </xd:doc>
   <xsl:param name="rs" select="true()" />
   
+  <xd:doc>
+    <xd:desc>Whether to export lines without baseline (true()) or not (false(), default)</xd:desc>
+  </xd:doc>
+  <xsl:param name="withoutBaseline" select="false()" />
+  
   <xd:doc scope="stylesheet">
     <xd:desc>
       <xd:p><xd:b>Author:</xd:b> Dario Kampkaspar, dario.kampkaspar@oeaw.ac.at | dario.kampkaspar@tu-darmstadt.de</xd:p>
@@ -256,55 +261,55 @@
       </xsl:text>
       </surface>
    </xsl:template>
-  
-  <xd:doc>
-    <xd:desc>create the zones within facsimile/surface</xd:desc>
-    <xd:param name="numCurr">Numerus currens of the current page</xd:param>
-  </xd:doc>
-  <xsl:template match="p:PrintSpace | p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TextLine" mode="facsimile">
-    <xsl:param name="numCurr" tunnel="true" />
-    
-    <xsl:variable name="renditionValue">
+   
+   <xd:doc>
+      <xd:desc>create the zones within facsimile/surface</xd:desc>
+      <xd:param name="numCurr">Numerus currens of the current page</xd:param>
+   </xd:doc>
+   <xsl:template match="p:PrintSpace | p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TextLine" mode="facsimile">
+      <xsl:param name="numCurr" tunnel="true" />
+      
+      <xsl:variable name="renditionValue">
+        <xsl:choose>
+          <xsl:when test="local-name(parent::*) = 'TableCell'">TableCell</xsl:when>
+          <xsl:when test="local-name() = 'TextRegion'">TextRegion</xsl:when>
+          <xsl:when test="local-name() = 'SeparatorRegion'">Separator</xsl:when>
+          <xsl:when test="local-name() = 'GraphicRegion'">Graphic</xsl:when>
+          <xsl:when test="local-name() = 'TextLine'">Line</xsl:when>
+          <xsl:otherwise>printspace</xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
+      <xsl:variable name="custom" as="map(xs:string, xs:string)">
+        <xsl:map>
+          <xsl:for-each-group select="tokenize(@custom||' lfd {'||$numCurr, '\} ')" group-by="substring-before(., ' ')">
+            <xsl:map-entry key="substring-before(., ' ')" select="string-join(substring-after(., '{'), '–')" />
+          </xsl:for-each-group>
+        </xsl:map>
+      </xsl:variable>
+      
       <xsl:choose>
-        <xsl:when test="local-name(parent::*) = 'TableCell'">TableCell</xsl:when>
-        <xsl:when test="local-name() = 'TextRegion'">TextRegion</xsl:when>
-        <xsl:when test="local-name() = 'SeparatorRegion'">Separator</xsl:when>
-        <xsl:when test="local-name() = 'GraphicRegion'">Graphic</xsl:when>
-        <xsl:when test="local-name() = 'TextLine'">Line</xsl:when>
-        <xsl:otherwise>printspace</xsl:otherwise>
+        <xsl:when test="self::p:TextLine">
+          <xsl:text>
+              </xsl:text>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:text>
+           </xsl:text>
+        </xsl:otherwise>
       </xsl:choose>
-    </xsl:variable>
-    <xsl:variable name="custom" as="map(xs:string, xs:string)">
-      <xsl:map>
-        <xsl:for-each-group select="tokenize(@custom||' lfd {'||$numCurr, '\} ')" group-by="substring-before(., ' ')">
-          <xsl:map-entry key="substring-before(., ' ')" select="string-join(substring-after(., '{'), '–')" />
-        </xsl:for-each-group>
-      </xsl:map>
-    </xsl:variable>
-    
-    <xsl:choose>
-      <xsl:when test="self::p:TextLine">
-        <xsl:text>
-            </xsl:text>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:text>
-         </xsl:text>
-      </xsl:otherwise>
-    </xsl:choose>
-    <zone points="{p:Coords/@points}" rendition="{$renditionValue}">
-      <xsl:if test="$renditionValue != 'printspace'">
-        <xsl:attribute name="xml:id"><xsl:value-of select="'facs_'||$numCurr||'_'||@id"/></xsl:attribute>
-      </xsl:if>
-      <xsl:if test="@type">
-        <xsl:attribute name="subtype"><xsl:value-of select="@type"/></xsl:attribute>
-      </xsl:if>
-      <xsl:if test="map:contains($custom, 'structure') and not(@type)">
-        <xsl:attribute name="subtype" select="substring-after(substring-before(map:get($custom, 'structure'), ';'), ':')" />
-      </xsl:if>
-      <xsl:apply-templates select="p:TextLine" mode="facsimile" />
-    </zone>
-  </xsl:template>
+      <zone points="{p:Coords/@points}" rendition="{$renditionValue}">
+        <xsl:if test="$renditionValue != 'printspace'">
+          <xsl:attribute name="xml:id"><xsl:value-of select="'facs_'||$numCurr||'_'||@id"/></xsl:attribute>
+        </xsl:if>
+        <xsl:if test="@type">
+          <xsl:attribute name="subtype"><xsl:value-of select="@type"/></xsl:attribute>
+        </xsl:if>
+        <xsl:if test="map:contains($custom, 'structure') and not(@type)">
+          <xsl:attribute name="subtype" select="substring-after(substring-before(map:get($custom, 'structure'), ';'), ':')" />
+        </xsl:if>
+        <xsl:apply-templates select="p:TextLine" mode="facsimile" />
+      </zone>
+   </xsl:template>
   
   <xd:doc>
     <xd:desc>Create the zone for a table</xd:desc>
@@ -372,11 +377,11 @@
          <xsl:when test="@type = 'heading'" xml:space="preserve">
             <head facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine"
                /></head></xsl:when>
-      <xsl:when test="@type = 'caption'">
-        <figure>
-          <head facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></head>
-        </figure>
-      </xsl:when>
+         <xsl:when test="@type = 'caption'">
+            <figure>
+               <head facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></head>
+            </figure>
+         </xsl:when>
          <xsl:when test="@type = 'header'" xml:space="preserve">
             <fw type="header" place="top" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine"
             /></fw></xsl:when>
@@ -398,12 +403,12 @@
             </xsl:variable>
             <note place="{$side}" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></note>
          </xsl:when>
-      <xsl:when test="@type = 'footnote'">
-        <note place="foot" n="[footnote reference]" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></note>
-      </xsl:when>
-      <xsl:when test="@type = 'footnote-continued'">
-        <note place="foot" n="[footnote-continued reference]" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></note>
-      </xsl:when>
+         <xsl:when test="@type = 'footnote'">
+            <note place="foot" n="[footnote reference]" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></note>
+         </xsl:when>
+         <xsl:when test="@type = 'footnote-continued'">
+            <note place="foot" n="[footnote-continued reference]" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></note>
+         </xsl:when>
          <xsl:when test="@type = ('other', 'paragraph')">
             <xsl:text>
             </xsl:text>
@@ -519,121 +524,123 @@
     </xsl:for-each>
   </xsl:template>
   
-  <xd:doc>
-    <xd:desc>Converts one line of PAGE to one line of TEI</xd:desc>
-    <xd:param name="numCurr">Numerus currens, to be tunneled through from the page level</xd:param>
-  </xd:doc>
-  <xsl:template match="p:TextLine">
-    <xsl:param name="numCurr" tunnel="true" />
-    
-    <xsl:variable name="text" select="p:TextEquiv/p:Unicode"/>
-    <xsl:variable name="custom" as="text()*">
-      <xsl:for-each select="tokenize(@custom, '\}')">
-        <xsl:choose>
-          <xsl:when test="string-length() &lt; 1 or starts-with(., 'readingOrder') or starts-with(normalize-space(), 'structure')" />
-          <xsl:otherwise>
-            <xsl:value-of select="normalize-space()"/>
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:for-each>
-    </xsl:variable>
-    <xsl:variable name="starts" as="map(*)">
-      <xsl:map>
-        <xsl:if test="count($custom) &gt; 0">
-          <xsl:for-each-group select="$custom" group-by="substring-before(substring-after(., 'offset:'), ';')">
-            <xsl:map-entry key="xs:int(current-grouping-key())" select="current-group()" />
-          </xsl:for-each-group>
-        </xsl:if>
-      </xsl:map>
-    </xsl:variable>
-    <xsl:variable name="ends" as="map(*)">
-      <xsl:map>
-        <xsl:if test="count($custom) &gt; 0">
-          <xsl:for-each-group select="$custom" group-by="xs:int(substring-before(substring-after(., 'offset:'), ';'))
-            + xs:int(substring-before(substring-after(., 'length:'), ';'))">
-            <xsl:map-entry key="current-grouping-key()" select="current-group()" />
-          </xsl:for-each-group>
-        </xsl:if>
-      </xsl:map>
-    </xsl:variable>
-    <xsl:variable name="prepped">
-      <xsl:for-each select="0 to string-length($text)">
-        <xsl:if test=". &gt; 0"><xsl:value-of select="substring($text, ., 1)"/></xsl:if>
-        <xsl:for-each select="map:get($starts, .)">
-          <!--<xsl:sort select="substring-before(substring-after(.,'offset:'), ';')" order="ascending"/>-->
-          <!-- end of current tag -->
-          <xsl:sort select="xs:int(substring-before(substring-after(., 'offset:'), ';'))
-            + xs:int(substring-before(substring-after(., 'length:'), ';'))" order="descending" />
-          <xsl:sort select="substring(., 1, 3)" order="ascending" />
-          <xsl:element name="local:m">
-            <xsl:attribute name="type" select="normalize-space(substring-before(., ' '))" />
-            <xsl:attribute name="o" select="substring-after(., 'offset:')" />
-            <xsl:attribute name="pos">s</xsl:attribute>
-          </xsl:element>
-        </xsl:for-each>
-        <xsl:for-each select="map:get($ends, .)">
-          <xsl:sort select="substring-before(substring-after(.,'offset:'), ';')" order="descending"/>
-          <xsl:sort select="substring(., 1, 3)" order="descending"/>
-          <xsl:element name="local:m">
-            <xsl:attribute name="type" select="normalize-space(substring-before(., ' '))" />
-            <xsl:attribute name="o" select="substring-after(., 'offset:')" />
-            <xsl:attribute name="pos">e</xsl:attribute>
-          </xsl:element>
-        </xsl:for-each>
-      </xsl:for-each>
-    </xsl:variable>
-    <xsl:variable name="prepared">
-      <xsl:for-each select="$prepped/node()">
-        <xsl:choose>
-          <xsl:when test="@pos = 'e'">
-            <xsl:variable name="position" select="count(preceding-sibling::node())" />
-            <xsl:variable name="o" select="@o" />
-            <xsl:variable name="id" select="@type" />
-            <xsl:variable name="precs"
-              select="preceding-sibling::local:m[@pos = 's' and preceding-sibling::local:m[@o = $o]]" />
-            
-            <xsl:for-each select="$precs">
-              <xsl:variable name="so" select="@o"/>
-              <xsl:variable name="myP" select="count(following-sibling::local:m[@pos='e' and @o=$so]/preceding-sibling::node())"/>
-              <xsl:if test="following-sibling::local:m[@pos = 'e' and @o=$so
-                and $myP &gt; $position] and not(@type = $id)">
-                <local:m type="{@type}" pos="e" o="{@o}" prev="{$myP||'.'||$position||($myP > $position)}" />
+   <xd:doc>
+      <xd:desc>Converts one line of PAGE to one line of TEI</xd:desc>
+      <xd:param name="numCurr">Numerus currens, to be tunneled through from the page level</xd:param>
+   </xd:doc>
+   <xsl:template match="p:TextLine">
+      <xsl:param name="numCurr" tunnel="true" />
+      
+      <xsl:if test="p:Baseline or $withoutBaseline">
+         <xsl:variable name="text" select="p:TextEquiv/p:Unicode"/>
+         <xsl:variable name="custom" as="text()*">
+           <xsl:for-each select="tokenize(@custom, '\}')">
+             <xsl:choose>
+               <xsl:when test="string-length() &lt; 1 or starts-with(., 'readingOrder') or starts-with(normalize-space(), 'structure')" />
+               <xsl:otherwise>
+                 <xsl:value-of select="normalize-space()"/>
+               </xsl:otherwise>
+             </xsl:choose>
+           </xsl:for-each>
+         </xsl:variable>
+         <xsl:variable name="starts" as="map(*)">
+           <xsl:map>
+             <xsl:if test="count($custom) &gt; 0">
+               <xsl:for-each-group select="$custom" group-by="substring-before(substring-after(., 'offset:'), ';')">
+                 <xsl:map-entry key="xs:int(current-grouping-key())" select="current-group()" />
+               </xsl:for-each-group>
+             </xsl:if>
+           </xsl:map>
+         </xsl:variable>
+         <xsl:variable name="ends" as="map(*)">
+           <xsl:map>
+             <xsl:if test="count($custom) &gt; 0">
+               <xsl:for-each-group select="$custom" group-by="xs:int(substring-before(substring-after(., 'offset:'), ';'))
+                 + xs:int(substring-before(substring-after(., 'length:'), ';'))">
+                 <xsl:map-entry key="current-grouping-key()" select="current-group()" />
+               </xsl:for-each-group>
+             </xsl:if>
+           </xsl:map>
+         </xsl:variable>
+         <xsl:variable name="prepped">
+           <xsl:for-each select="0 to string-length($text)">
+             <xsl:if test=". &gt; 0"><xsl:value-of select="substring($text, ., 1)"/></xsl:if>
+             <xsl:for-each select="map:get($starts, .)">
+               <!--<xsl:sort select="substring-before(substring-after(.,'offset:'), ';')" order="ascending"/>-->
+               <!-- end of current tag -->
+               <xsl:sort select="xs:int(substring-before(substring-after(., 'offset:'), ';'))
+                 + xs:int(substring-before(substring-after(., 'length:'), ';'))" order="descending" />
+               <xsl:sort select="substring(., 1, 3)" order="ascending" />
+               <xsl:element name="local:m">
+                 <xsl:attribute name="type" select="normalize-space(substring-before(., ' '))" />
+                 <xsl:attribute name="o" select="substring-after(., 'offset:')" />
+                 <xsl:attribute name="pos">s</xsl:attribute>
+               </xsl:element>
+             </xsl:for-each>
+             <xsl:for-each select="map:get($ends, .)">
+               <xsl:sort select="substring-before(substring-after(.,'offset:'), ';')" order="descending"/>
+               <xsl:sort select="substring(., 1, 3)" order="descending"/>
+               <xsl:element name="local:m">
+                 <xsl:attribute name="type" select="normalize-space(substring-before(., ' '))" />
+                 <xsl:attribute name="o" select="substring-after(., 'offset:')" />
+                 <xsl:attribute name="pos">e</xsl:attribute>
+               </xsl:element>
+             </xsl:for-each>
+           </xsl:for-each>
+         </xsl:variable>
+         <xsl:variable name="prepared">
+           <xsl:for-each select="$prepped/node()">
+             <xsl:choose>
+               <xsl:when test="@pos = 'e'">
+                 <xsl:variable name="position" select="count(preceding-sibling::node())" />
+                 <xsl:variable name="o" select="@o" />
+                 <xsl:variable name="id" select="@type" />
+                 <xsl:variable name="precs"
+                   select="preceding-sibling::local:m[@pos = 's' and preceding-sibling::local:m[@o = $o]]" />
+                 
+                 <xsl:for-each select="$precs">
+                   <xsl:variable name="so" select="@o"/>
+                   <xsl:variable name="myP" select="count(following-sibling::local:m[@pos='e' and @o=$so]/preceding-sibling::node())"/>
+                   <xsl:if test="following-sibling::local:m[@pos = 'e' and @o=$so
+                     and $myP &gt; $position] and not(@type = $id)">
+                     <local:m type="{@type}" pos="e" o="{@o}" prev="{$myP||'.'||$position||($myP > $position)}" />
+                   </xsl:if>
+                 </xsl:for-each>
+                 <xsl:sequence select="." />
+                 <xsl:for-each select="$precs">
+                   <xsl:variable name="so" select="@o"/>
+                   <xsl:variable name="myP" select="count(following-sibling::local:m[@pos='e' and @o=$so]/preceding-sibling::node())"/>
+                   <xsl:if test="following-sibling::local:m[@pos = 'e' and @o=$so
+                     and $myP &gt; $position] and not(@type = $id)">
+                     <local:m type="{@type}" pos="s" o="{@o}" prev="{$myP||'.'||$position||($myP > $position)}" />
+                   </xsl:if>
+                 </xsl:for-each>
+               </xsl:when>
+               <xsl:otherwise>
+                 <xsl:sequence select="." />
+               </xsl:otherwise>
+             </xsl:choose>
+           </xsl:for-each>
+         </xsl:variable>
+         
+           <!-- TODO parameter to create <l>...</l> - #1 -->
+           <xsl:text>
+                    </xsl:text>
+           <lb facs="#facs_{$numCurr}_{@id}">
+              <xsl:if test="@custom">
+                 <xsl:variable name="pos" select="xs:integer(substring-before(substring-after(@custom, 'index:'), ';')) + 1" />
+                 <xsl:attribute name="n">
+                   <xsl:text>N</xsl:text>
+                   <xsl:value-of select="format-number($pos, '000')" />
+                 </xsl:attribute>
               </xsl:if>
-            </xsl:for-each>
-            <xsl:sequence select="." />
-            <xsl:for-each select="$precs">
-              <xsl:variable name="so" select="@o"/>
-              <xsl:variable name="myP" select="count(following-sibling::local:m[@pos='e' and @o=$so]/preceding-sibling::node())"/>
-              <xsl:if test="following-sibling::local:m[@pos = 'e' and @o=$so
-                and $myP &gt; $position] and not(@type = $id)">
-                <local:m type="{@type}" pos="s" o="{@o}" prev="{$myP||'.'||$position||($myP > $position)}" />
-              </xsl:if>
-            </xsl:for-each>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:sequence select="." />
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:for-each>
-    </xsl:variable>
-    
-      <!-- TODO parameter to create <l>...</l> - #1 -->
-      <xsl:text>
-               </xsl:text>
-      <lb facs="#facs_{$numCurr}_{@id}">
-         <xsl:if test="@custom">
-            <xsl:variable name="pos" select="xs:integer(substring-before(substring-after(@custom, 'index:'), ';')) + 1" />
-            <xsl:attribute name="n">
-              <xsl:text>N</xsl:text>
-              <xsl:value-of select="format-number($pos, '000')" />
-            </xsl:attribute>
-         </xsl:if>
-      </lb>
-      <xsl:apply-templates select="$prepared/text()[not(preceding-sibling::local:m)]" />
-      <xsl:apply-templates select="$prepared/local:m[@pos='s']
-         [count(preceding-sibling::local:m[@pos='s']) = count(preceding-sibling::local:m[@pos='e'])]" />
-         <!--[not(preceding-sibling::local:m[1][@pos='s'])]" />-->
-  </xsl:template>
+           </lb>
+           <xsl:apply-templates select="$prepared/text()[not(preceding-sibling::local:m)]" />
+           <xsl:apply-templates select="$prepared/local:m[@pos='s']
+              [count(preceding-sibling::local:m[@pos='s']) = count(preceding-sibling::local:m[@pos='e'])]" />
+              <!--[not(preceding-sibling::local:m[1][@pos='s'])]" />-->
+      </xsl:if>
+   </xsl:template>
   
   <xd:doc>
     <xd:desc>Starting milestones for (possibly nested) elements</xd:desc>
