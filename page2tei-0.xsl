@@ -374,27 +374,27 @@
       </xsl:variable>
       
       <xsl:choose>
-         <xsl:when test="@type = 'heading'" xml:space="preserve">
+         <xsl:when test="'heading' = (@type, $custom?structure?type)" xml:space="preserve">
             <head facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine"
                /></head></xsl:when>
-         <xsl:when test="@type = 'caption'">
+         <xsl:when test="'caption' = (@type, $custom?structure?type)">
             <figure>
                <head facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></head>
             </figure>
          </xsl:when>
-         <xsl:when test="@type = 'header'" xml:space="preserve">
+         <xsl:when test="'header' = (@type, $custom?structure?type)" xml:space="preserve">
             <fw type="header" place="top" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine"
             /></fw></xsl:when>
-         <xsl:when test="@type = 'footer'" xml:space="preserve">
+         <xsl:when test="'footer' = (@type, $custom?structure?type)" xml:space="preserve">
             <fw type="header" place="bottom" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine"
             /></fw></xsl:when>
-         <xsl:when test="@type = 'catch-word'" xml:space="preserve">
+         <xsl:when test="'catch-word' = (@type, $custom?structure?type)" xml:space="preserve">
             <fw type="catch" place="bottom" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine"
             /></fw></xsl:when>
-         <xsl:when test="@type = 'signature-mark'" xml:space="preserve">
+         <xsl:when test="'signature-mark' = (@type, $custom?structure?type)" xml:space="preserve">
             <fw place="bottom" type="sig" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine"
             /></fw></xsl:when>
-         <xsl:when test="@type = 'marginalia'">
+         <xsl:when test="'marginalia' = (@type, $custom?structure?type)">
             <xsl:variable name="side">
                <xsl:choose>
                   <xsl:when test="number(substring-before(p:Coords/@points, ',')) gt $center">margin-right</xsl:when>
@@ -403,10 +403,10 @@
             </xsl:variable>
             <note place="{$side}" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></note>
          </xsl:when>
-         <xsl:when test="@type = 'footnote'">
+         <xsl:when test="'footnote' = (@type, $custom?structure?type)">
             <note place="foot" n="[footnote reference]" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></note>
          </xsl:when>
-         <xsl:when test="@type = 'footnote-continued'">
+         <xsl:when test="'footnote-continued' = (@type, $custom?structure?type)">
             <note place="foot" n="[footnote-continued reference]" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></note>
          </xsl:when>
          <xsl:when test="'page-number' = (@type, $custom?structure?type)">
