@@ -25,6 +25,11 @@
   </xd:doc>
   <xsl:param name="withoutBaseline" select="false()" />
   
+  <xd:doc>
+    <xd:desc>Whether to export regions without text lines (true()) or not (false(), default)</xd:desc>
+  </xd:doc>
+  <xsl:param name="withoutTextline" select="false()" />
+  
   <xd:doc scope="stylesheet">
     <xd:desc>
       <xd:p><xd:b>Author:</xd:b> Dario Kampkaspar, dario.kampkaspar@oeaw.ac.at | dario.kampkaspar@tu-darmstadt.de</xd:p>
@@ -374,6 +379,7 @@
       </xsl:variable>
       
       <xsl:choose>
+         <xsl:when test="not(p:TextLine or $withoutTextline)"></xsl:when>
          <xsl:when test="'heading' = (@type, $custom?structure?type)" xml:space="preserve">
             <head facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine"
                /></head></xsl:when>
@@ -687,20 +693,24 @@
     <xsl:choose>
       <xsl:when test="@type = 'textStyle'">
         <xsl:variable name="rend" as="xs:string*">
-           <xsl:for-each select="tokenize(@o, ';')">
-              <xsl:variable name="entry" select="tokenize(normalize-space(), ':')" />
-              <xsl:choose>
-                 <xsl:when test="$entry[1] eq 'underlined' and $entry[2] eq 'true'">
-                    <xsl:text>text-decoration: underline;</xsl:text>
-                 </xsl:when>
-                 <xsl:when test="$entry[1] eq 'fontSize' and number($entry[2]) gt 0">
-                    <xsl:value-of select="'font-size: ' || $entry[2] || 'px;'" />
-                 </xsl:when>
-                 <xsl:when test="$entry[1] eq 'kerning' and number($entry[2]) gt 0">
-                    <xsl:value-of select="'letter-spacing: ' || $entry[2] || 'px;'" />
-                 </xsl:when>
-              </xsl:choose>
-           </xsl:for-each>
+           <xsl:if test="$custom?italic = 'true'">
+              <xsl:text>font-style: italic;</xsl:text>
+           </xsl:if>
+           <xsl:if test="$custom?underlined = 'true'">
+              <xsl:text>text-decoration: underline;</xsl:text>
+           </xsl:if>
+           <xsl:if test="number($custom?fontSize) gt 0">
+              <xsl:value-of select="'font-size: ' || $custom?fontSize || 'px;'" />
+           </xsl:if>
+           <xsl:if test="number($custom?kerning) gt 0">
+              <xsl:value-of select="'letter-spacing: ' || $custom?fontSize || 'px;'" />
+           </xsl:if>
+           <xsl:if test="$custom?fontFamily != ''">
+              <xsl:value-of select="'font-family: ' || $custom?fontFamily || ';'" />
+           </xsl:if>
+           <xsl:if test="$custom?superscript = 'true'">
+              <xsl:text>vertical-align: superscript;</xsl:text>
+           </xsl:if>
         </xsl:variable>
         <hi>
           <xsl:if test="count($rend) gt 0">

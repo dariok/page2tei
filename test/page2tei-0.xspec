@@ -32,28 +32,33 @@
          <x:expect label="." xml:space="preserve"
             ><pb facs="#facs_2" xml:id="img_0002" n="2" />
             <p facs='#facs_2_r_2_4'>
-               <lb facs='#facs_2_tl_59' n='N001'/>Gestern langete hier ein <hi rend='fontFamily:Antiqua;'>Express</hi>er von
-               <lb facs='#facs_2_tl_60' n='N002'/>de<unclear>m</unclear> Herrn Keene aus Spanien an /
-               <lb facs='#facs_2_tl_61' n='N003'/>m<unclear>i</unclear>t Zeitung / wie daß er nebst denen
-               <lb facs='#facs_2_tl_62' n='N004'/>Herren Stert / und Godert / unseren
-               <lb facs='#facs_2_tl_63' n='N005'/><hi rend='fontFamily:Antiqua;'>Commissari</hi>en / mit denen Spanischen
-               <lb facs='#facs_2_tl_64' n='N006'/>u<unclear>n</unclear>terschiedliche <hi rend='fontFamily:Antiqua;'>Conferenzi</hi>en gehalten <supplied reason=''>/</supplied>
-               <lb facs='#facs_2_tl_65' n='N007'/>u<unclear>n</unclear>d darinnen grossen Fortgang gema<supplied reason=''>=</supplied>
-               <lb facs='#facs_2_tl_66' n='N008'/>ch<unclear>e</unclear>t hätte / um den im letzteren Friedens
-               <lb facs='#facs_2_tl_67' n='N009'/>Bruch an beeden Seiten gelittenen Scha<supplied reason=''>=</supplied>
-               <lb facs='#facs_2_tl_68' n='N010'/>d<unclear>e</unclear>n zu <hi rend='fontFamily:Antiqua;'>reguli</hi>ren. Selbigen Tags über<supplied reason=''>=</supplied>
-               <lb facs='#facs_2_tl_69' n='N011'/>reichete der Herr <hi rend='fontFamily:Antiqua;'>Como</hi>, <hi rend='fontFamily:Antiqua;'>Agent</hi> vo<unclear>n</unclear>
-               <lb facs='#facs_2_tl_70' n='N012'/><hi rend='fontFamily:Antiqua;'>P<unclear>ar</unclear>ma</hi>, dem Staats=<hi rend='fontFamily:Antiqua;'>Secretario</hi>, Her<supplied reason=''>=</supplied>
-               <lb facs='#facs_2_tl_71' n='N013'/>tzog von Neucastle / ein Schreiben vo<supplied reason=''>n</supplied>
-               <lb facs='#facs_2_tl_72' n='N014'/>d<unclear>e</unclear>r verwittibten Hertzogin Dorothea a<supplied reason=''>n</supplied>
-               <lb facs='#facs_2_tl_73' n='N015'/>unseren König / worinn selbige Sr. Ma<supplied reason=''>=</supplied>
-               <lb facs='#facs_2_tl_74' n='N016'/>jestät bekannt gemachet / daß die Staa<supplied reason=''>=</supplied>
-               <lb facs='#facs_2_tl_75' n='N017'/>ten von <hi rend='fontFamily:Antiqua;'>Parma</hi>, und <hi rend='fontFamily:Antiqua;'>Piacenza</hi> für den
-               <lb facs='#facs_2_tl_76' n='N018'/><hi rend='fontFamily:Antiqua;'>Don Carlos</hi> in Besitz genommen wor<supplied reason=''>=</supplied>
-               <lb facs='#facs_2_tl_77' n='N019'/>den / und zugleich ersuchet / daß Seine
-               <lb facs='#facs_2_tl_78' n='N020'/>Majestät eine bey dieser Gelegenheit ge<supplied reason=''>=</supplied>
-               <lb facs='#facs_2_tl_79' n='N021'/>prägte <hi rend='fontFamily:Antiqua;'>Medaille</hi> anzunehmen geruhen
-               <lb facs='#facs_2_tl_80' n='N022'/><unclear>m</unclear>öchte.</p></x:expect>
+                    <lb facs='#facs_2_tl_59' n='N001'/>Gestern langete hier ein <hi style='font-family: Antiqua;'>Express</hi>er von
+                    <lb facs='#facs_2_tl_60' n='N002'/>de<unclear>m</unclear> Herrn Keene aus Spanien an /
+                    <lb facs='#facs_2_tl_61' n='N003'/>m<unclear>i</unclear>t Zeitung / wie daß er nebst denen
+                    <lb facs='#facs_2_tl_62' n='N004'/>Herren Stert / und Godert / unseren
+                    <lb facs='#facs_2_tl_63' n='N005'/><hi style='font-family: Antiqua;'>Commissari</hi>en / mit denen Spanischen
+                    <lb facs='#facs_2_tl_64' n='N006'/>u<unclear>n</unclear>terschiedliche <hi style='font-family: Antiqua;'>Conferenzi</hi>en gehalten <supplied
+                       reason=''>/</supplied>
+                    <lb facs='#facs_2_tl_65' n='N007'/>u<unclear>n</unclear>d darinnen grossen Fortgang gema<supplied reason=''>=</supplied>
+                    <lb facs='#facs_2_tl_66' n='N008'/>ch<unclear>e</unclear>t hätte / um den im letzteren Friedens
+                    <lb facs='#facs_2_tl_67' n='N009'/>Bruch an beeden Seiten gelittenen Scha<supplied reason=''>=</supplied>
+                    <lb facs='#facs_2_tl_68' n='N010'/>d<unclear>e</unclear>n zu <hi style='font-family: Antiqua;'>reguli</hi>ren. Selbigen Tags über<supplied
+                       reason=''>=</supplied>
+                    <lb facs='#facs_2_tl_69' n='N011'/>reichete der Herr <hi style='font-family: Antiqua;'>Como</hi>, <hi
+                       style='font-family: Antiqua;'>Agent</hi> vo<unclear>n</unclear>
+                    <lb facs='#facs_2_tl_70' n='N012'/><hi style='font-family: Antiqua;'>P<unclear>ar</unclear>ma</hi>, dem Staats=<hi
+                       style='font-family: Antiqua;'>Secretario</hi>, Her<supplied reason=''>=</supplied>
+                    <lb facs='#facs_2_tl_71' n='N013'/>tzog von Neucastle / ein Schreiben vo<supplied reason=''>n</supplied>
+                    <lb facs='#facs_2_tl_72' n='N014'/>d<unclear>e</unclear>r verwittibten Hertzogin Dorothea a<supplied reason=''>n</supplied>
+                    <lb facs='#facs_2_tl_73' n='N015'/>unseren König / worinn selbige Sr. Ma<supplied reason=''>=</supplied>
+                    <lb facs='#facs_2_tl_74' n='N016'/>jestät bekannt gemachet / daß die Staa<supplied reason=''>=</supplied>
+                    <lb facs='#facs_2_tl_75' n='N017'/>ten von <hi style='font-family: Antiqua;'>Parma</hi>, und <hi
+                       style='font-family: Antiqua;'>Piacenza</hi> für den
+                    <lb facs='#facs_2_tl_76' n='N018'/><hi style='font-family: Antiqua;'>Don Carlos</hi> in Besitz genommen wor<supplied reason=''>=</supplied>
+                    <lb facs='#facs_2_tl_77' n='N019'/>den / und zugleich ersuchet / daß Seine
+                    <lb facs='#facs_2_tl_78' n='N020'/>Majestät eine bey dieser Gelegenheit ge<supplied reason=''>=</supplied>
+                    <lb facs='#facs_2_tl_79' n='N021'/>prägte <hi style='font-family: Antiqua;'>Medaille</hi> anzunehmen geruhen
+                    <lb facs='#facs_2_tl_80' n='N022'/><unclear>m</unclear>öchte.</p></x:expect>
     </x:scenario>
       <x:scenario label="17320213 - p.3">
          <x:context mode="text">
@@ -81,49 +86,49 @@
          <x:expect label="." xml:space="preserve"
             ><pb facs="#facs_3" xml:id="img_0003" n="3" />
             <p facs='#facs_3_TextRegion_1501850337174_559'>
-               <lb facs='#facs_3_tl_1' n='N001'/>nach=Mittag verfügte sich der der König
-               <lb facs='#facs_3_tl_2' n='N002'/>mit gewöhnlichen Ceremonien nachdem
-               <lb facs='#facs_3_tl_3' n='N003'/>Ober=Haus des Parlaments / w<unclear>or</unclear>inn
-               <lb facs='#facs_3_tl_4' n='N004'/>auch die Gemeine beruffen worden / die=
-               <lb facs='#facs_3_tl_5' n='N005'/>semnach Se. Majestät durch eine l<unclear>a</unclear>nge
-               <lb facs='#facs_3_tl_6' n='N006'/>Ansprach den Sitz von dem Parla<unclear>m</unclear>ent
-               <lb facs='#facs_3_tl_7' n='N007'/>eröfneten. Heute hat das Ober=Haus
-               <lb facs='#facs_3_tl_8' n='N008'/>schon durch eine Sr. Majestät übergebe=
-               <lb facs='#facs_3_tl_9' n='N009'/>nen Schrift sich wegen der an selbige
-               <lb facs='#facs_3_tl_10' n='N010'/>gethaner Ansprach bedanket / wo=
-               <lb facs='#facs_3_tl_11' n='N011'/>von dann künftig ein mehreres zu be=
-               <lb facs='#facs_3_tl_12' n='N012'/>richten seyn wird. Die Schiffe / der
-               <lb facs='#facs_3_tl_13' n='N013'/>Hertzog von Lothringen / Bedford / und
-               <lb facs='#facs_3_tl_14' n='N014'/>der Printz von Oranien von der Ost=
-               <lb facs='#facs_3_tl_15' n='N015'/>Jndischen Compagnie / seynd die T<unclear>em</unclear>s
-               <lb facs='#facs_3_tl_16' n='N016'/>nach Gravesand hinabgefahren / um bey
-               <lb facs='#facs_3_tl_17' n='N017'/>dem ersten günstigen Wind unter S<unclear>e</unclear>gel
-               <lb facs='#facs_3_tl_18' n='N018'/>zu gehen. Am Montag wurde in <unclear>d</unclear>em
-               <lb facs='#facs_3_tl_19' n='N019'/>Pallast von St. James ein grosser Raht
-               <lb facs='#facs_3_tl_20' n='N020'/>gehalten.Mit dem Frantzösi<unclear>sch</unclear>en
-               <lb facs='#facs_3_tl_21' n='N021'/>Botschafter Herrn von <hi rend='fontFamily:Antiqua;'>Chavig<unclear>ty</unclear></hi>,
-               <lb facs='#facs_3_tl_22' n='N022'/>werden die <hi rend='fontFamily:Antiqua;'>Conferenzi</hi>en eiferigst <unclear>fo</unclear>rt=
-               <lb facs='#facs_3_tl_23' n='N023'/>gesetzet / welchen der Kaiserl. M<unclear>i</unclear>ni=
-               <lb facs='#facs_3_tl_24' n='N024'/>ter Herr Graf von Kinsky öfters <unclear>b</unclear>ey=
-               <lb facs='#facs_3_tl_25' n='N025'/>wohnet. An vorgedachten Montag <unclear>w</unclear>a=
-               <lb facs='#facs_3_tl_26' n='N026'/>ren die Lords=<hi rend='fontFamily:Antiqua;'>Commissari</hi>en von der
-               <lb facs='#facs_3_tl_27' n='N027'/><hi rend='fontFamily:Antiqua;'>Admirali</hi>tät versammelt / und verga<unclear>b</unclear>en
-               <lb facs='#facs_3_tl_28' n='N028'/>dem Hauptmann Herrn Vincent <unclear>d</unclear>as
-               <lb facs='#facs_3_tl_29' n='N029'/>Kriegs=Schif der Sheernes / und dem
-               <lb facs='#facs_3_tl_30' n='N030'/>Hauptmann Herrn Fytch das vom Dol=
-               <lb facs='#facs_3_tl_31' n='N031'/>phin / jedes von 20. Canons / we<unclear>lc</unclear>he
-               <lb facs='#facs_3_tl_32' n='N032'/>auf das schleunigste ausgerüstet wer<unclear>d</unclear>en
-               <lb facs='#facs_3_tl_33' n='N033'/>müssen; der Obriste Cosby ehedessen <unclear>g</unclear>e=
-               <lb facs='#facs_3_tl_34' n='N034'/>wesener <hi rend='fontFamily:Antiqua;'>Gouverneur</hi> deren Leewaer<unclear>d</unclear>s=
-               <lb facs='#facs_3_tl_35' n='N035'/>Jnsulen / hatte am Samstag die E<unclear>h</unclear>re
-               <lb facs='#facs_3_tl_36' n='N036'/>des Königs Hand wegen dessen Ern<unclear>e</unclear>n=
-               <lb facs='#facs_3_tl_37' n='N037'/>nung zum Capitain / General und
-               <lb facs='#facs_3_tl_38' n='N038'/>Haupt=<hi rend='fontFamily:Antiqua;'>Commendeur </hi>von Neu=Yor<unclear>c</unclear>k /
-               <lb facs='#facs_3_tl_39' n='N039'/>und Neu=Jersey mit denen zugehörigen
-               <lb facs='#facs_3_tl_40' n='N040'/>Jnsulen / zu küssen / und unterthän<unclear>i</unclear>g=
-               <lb facs='#facs_3_tl_41' n='N041'/><unclear><supplied reason=''>s</supplied>t</unclear>en Dank abzustatten: es hat derse<unclear>l</unclear>be
-               <lb facs='#facs_3_tl_42' n='N042'/><gap />ieserhalben vorhin gehabtes Regime<unclear>n</unclear>t
-               <lb facs='#facs_3_tl_43' n='N043'/><hi rend='fontFamily:Antiqua;'><supplied reason=''>R</supplied>esigni</hi>ret / er behaltet aber seinen Ra<unclear>n</unclear>g</p></x:expect>
+                    <lb facs='#facs_3_tl_1' n='N001'/>nach=Mittag verfügte sich der der König
+                    <lb facs='#facs_3_tl_2' n='N002'/>mit gewöhnlichen Ceremonien nachdem
+                    <lb facs='#facs_3_tl_3' n='N003'/>Ober=Haus des Parlaments / w<unclear>or</unclear>inn
+                    <lb facs='#facs_3_tl_4' n='N004'/>auch die Gemeine beruffen worden / die=
+                    <lb facs='#facs_3_tl_5' n='N005'/>semnach Se. Majestät durch eine l<unclear>a</unclear>nge
+                    <lb facs='#facs_3_tl_6' n='N006'/>Ansprach den Sitz von dem Parla<unclear>m</unclear>ent
+                    <lb facs='#facs_3_tl_7' n='N007'/>eröfneten. Heute hat das Ober=Haus
+                    <lb facs='#facs_3_tl_8' n='N008'/>schon durch eine Sr. Majestät übergebe=
+                    <lb facs='#facs_3_tl_9' n='N009'/>nen Schrift sich wegen der an selbige
+                    <lb facs='#facs_3_tl_10' n='N010'/>gethaner Ansprach bedanket / wo=
+                    <lb facs='#facs_3_tl_11' n='N011'/>von dann künftig ein mehreres zu be=
+                    <lb facs='#facs_3_tl_12' n='N012'/>richten seyn wird. Die Schiffe / der
+                    <lb facs='#facs_3_tl_13' n='N013'/>Hertzog von Lothringen / Bedford / und
+                    <lb facs='#facs_3_tl_14' n='N014'/>der Printz von Oranien von der Ost=
+                    <lb facs='#facs_3_tl_15' n='N015'/>Jndischen Compagnie / seynd die T<unclear>em</unclear>s
+                    <lb facs='#facs_3_tl_16' n='N016'/>nach Gravesand hinabgefahren / um bey
+                    <lb facs='#facs_3_tl_17' n='N017'/>dem ersten günstigen Wind unter S<unclear>e</unclear>gel
+                    <lb facs='#facs_3_tl_18' n='N018'/>zu gehen. Am Montag wurde in <unclear>d</unclear>em
+                    <lb facs='#facs_3_tl_19' n='N019'/>Pallast von St. James ein grosser Raht
+                    <lb facs='#facs_3_tl_20' n='N020'/>gehalten.Mit dem Frantzösi<unclear>sch</unclear>en
+                    <lb facs='#facs_3_tl_21' n='N021'/>Botschafter Herrn von <hi style="font-family: Antiqua;">Chavig<unclear>ty</unclear></hi>,
+                    <lb facs='#facs_3_tl_22' n='N022'/>werden die <hi style="font-family: Antiqua;">Conferenzi</hi>en eiferigst <unclear>fo</unclear>rt=
+                    <lb facs='#facs_3_tl_23' n='N023'/>gesetzet / welchen der Kaiserl. M<unclear>i</unclear>ni=
+                    <lb facs='#facs_3_tl_24' n='N024'/>ter Herr Graf von Kinsky öfters <unclear>b</unclear>ey=
+                    <lb facs='#facs_3_tl_25' n='N025'/>wohnet. An vorgedachten Montag <unclear>w</unclear>a=
+                    <lb facs='#facs_3_tl_26' n='N026'/>ren die Lords=<hi style="font-family: Antiqua;">Commissari</hi>en von der
+                    <lb facs='#facs_3_tl_27' n='N027'/><hi style='font-family: Antiqua;'>Admirali</hi>tät versammelt / und verga<unclear>b</unclear>en
+                    <lb facs='#facs_3_tl_28' n='N028'/>dem Hauptmann Herrn Vincent <unclear>d</unclear>as
+                    <lb facs='#facs_3_tl_29' n='N029'/>Kriegs=Schif der Sheernes / und dem
+                    <lb facs='#facs_3_tl_30' n='N030'/>Hauptmann Herrn Fytch das vom Dol=
+                    <lb facs='#facs_3_tl_31' n='N031'/>phin / jedes von 20. Canons / we<unclear>lc</unclear>he
+                    <lb facs='#facs_3_tl_32' n='N032'/>auf das schleunigste ausgerüstet wer<unclear>d</unclear>en
+                    <lb facs='#facs_3_tl_33' n='N033'/>müssen; der Obriste Cosby ehedessen <unclear>g</unclear>e=
+                    <lb facs='#facs_3_tl_34' n='N034'/>wesener <hi style='font-family: Antiqua;'>Gouverneur</hi> deren Leewaer<unclear>d</unclear>s=
+                    <lb facs='#facs_3_tl_35' n='N035'/>Jnsulen / hatte am Samstag die E<unclear>h</unclear>re
+                    <lb facs='#facs_3_tl_36' n='N036'/>des Königs Hand wegen dessen Ern<unclear>e</unclear>n=
+                    <lb facs='#facs_3_tl_37' n='N037'/>nung zum Capitain / General und
+                    <lb facs='#facs_3_tl_38' n='N038'/>Haupt=<hi style="font-family: Antiqua;">Commendeur </hi>von Neu=Yor<unclear>c</unclear>k /
+                    <lb facs='#facs_3_tl_39' n='N039'/>und Neu=Jersey mit denen zugehörigen
+                    <lb facs='#facs_3_tl_40' n='N040'/>Jnsulen / zu küssen / und unterthän<unclear>i</unclear>g=
+                    <lb facs='#facs_3_tl_41' n='N041'/><unclear><supplied reason=''>s</supplied>t</unclear>en Dank abzustatten: es hat derse<unclear>l</unclear>be
+                    <lb facs='#facs_3_tl_42' n='N042'/><gap />ieserhalben vorhin gehabtes Regime<unclear>n</unclear>t
+                    <lb facs='#facs_3_tl_43' n='N043'/><hi style="font-family: Antiqua;"><supplied reason=''>R</supplied>esigni</hi>ret / er behaltet aber seinen Ra<unclear>n</unclear>g</p></x:expect>
     </x:scenario>
       <x:scenario label="17320524 - p. 10">
          <x:context mode="text">
@@ -158,8 +163,8 @@
          <x:expect label="." xml:space="preserve"
             ><pb facs="#facs_10" n="10" xml:id="img_0010" />
             <ab facs="#facs_10_r_2_7" type="list">
-               <lb facs="#facs_10_tl_75" n="N001"/>Johann Frantz Weishaubt / ware nno 1697. <supplied reason=""><hi rend="fontFamily:Antiqua;">Ex-</hi></supplied>
-               <lb facs="#facs_10_tl_76" n="N002"/><hi rend="fontFamily:Antiqua;">peditor</hi> bey der hoch=ansehentl. Geheimen Stelle in Gr<gap/>
+                    <lb facs="#facs_10_tl_75" n="N001"/>Johann Frantz Weishaubt / ware nno 1697. <supplied reason=""><hi style="font-family: Antiqua;">Ex-</hi></supplied>
+                    <lb facs="#facs_10_tl_76" n="N002"/><hi style="font-family: Antiqua;">peditor</hi> bey der hoch=ansehentl. Geheimen Stelle in Gr<gap/>
             </ab></x:expect>
       </x:scenario>
       <x:scenario label="17410624 - p. 7">
@@ -183,15 +188,15 @@
          <x:expect label="." xml:space="preserve"
             ><pb facs="#facs_7" n="7" xml:id="img_0007" />
             <p facs="#facs_7_TextRegion_1502873594420_703">
-               <lb facs="#facs_7_tl_29" n="N001"/><hi rend="fontFamily:Antiqua;">Information Juridique &amp; conforme aux</hi>
-               <lb facs="#facs_7_tl_30" n="N002"/><hi rend="fontFamily:Antiqua;">Actes contre l&apos;Imprimé récemment publié</hi>
-               <lb facs="#facs_7_tl_31" n="N003"/><hi rend="fontFamily:Antiqua;">sous le tître</hi> Rechts=gegündete Eigentum rc.
-               <lb facs="#facs_7_tl_32" n="N004"/><hi rend="fontFamily:Antiqua;">Ou bien droit de Proprieté bien fondé de la</hi>
-               <lb facs="#facs_7_tl_33" n="N005"/><hi rend="fontFamily:Antiqua;">Maison Electorale de <unclear>B</unclear>randebourg sur les Du-</hi>
-               <lb facs="#facs_7_tl_34" n="N006"/><hi rend="fontFamily:Antiqua;">chés &amp; Principautes de la Silesie, Jagerndorf,</hi>
-               <lb facs="#facs_7_tl_35" n="N007"/><hi rend="fontFamily:Antiqua;"
-                  >Li<unclear>g</unclear>nitz, Brieg, Wolau, &amp; Seigneur<unclear>iesy</unclear> / ap-</hi>
-               <lb facs="#facs_7_tl_36" n="N008"/><hi rend="fontFamily:Antiqua;">partenantes. L&apos;An 1741. </hi>Das St. geb. 30. kr.</p></x:expect>
+                    <lb facs="#facs_7_tl_29" n="N001"/><hi style="font-family: Antiqua;">Information Juridique &amp; conforme aux</hi>
+                    <lb facs="#facs_7_tl_30" n="N002"/><hi style="font-family: Antiqua;">Actes contre l&apos;Imprimé récemment publié</hi>
+                    <lb facs="#facs_7_tl_31" n="N003"/><hi style="font-family: Antiqua;">sous le tître</hi> Rechts=gegündete Eigentum rc.
+                    <lb facs="#facs_7_tl_32" n="N004"/><hi style="font-family: Antiqua;">Ou bien droit de Proprieté bien fondé de la</hi>
+                    <lb facs="#facs_7_tl_33" n="N005"/><hi style="font-family: Antiqua;">Maison Electorale de <unclear>B</unclear>randebourg sur les Du-</hi>
+                    <lb facs="#facs_7_tl_34" n="N006"/><hi style="font-family: Antiqua;">chés &amp; Principautes de la Silesie, Jagerndorf,</hi>
+                    <lb facs="#facs_7_tl_35" n="N007"/><hi style="font-family: Antiqua;"
+                        >Li<unclear>g</unclear>nitz, Brieg, Wolau, &amp; Seigneur<unclear>iesy</unclear> / ap-</hi>
+                    <lb facs="#facs_7_tl_36" n="N008"/><hi style="font-family: Antiqua;">partenantes. L&apos;An 1741. </hi>Das St. geb. 30. kr.</p></x:expect>
       </x:scenario>
    </x:scenario>
    
@@ -211,7 +216,7 @@
       <x:expect xml:space="preserve" label="."
          ><pb  facs="#facs_2" n="2" xml:id="img_0002" />
             <p facs="#facs_2_r_1_7">
-               <lb facs="#facs_2_r2l10" n="N010" /><choice><corr/><sic>7. Maria <supplied reason=""
+                    <lb facs="#facs_2_r2l10" n="N010" /><choice><corr/><sic>7. Maria <supplied reason=""
                   >Theresia</supplied></sic></choice><supplied reason="">, geb. 4 Stpt.</supplied> 1716.</p></x:expect>
    </x:scenario>
    
@@ -229,16 +234,16 @@
             </ns3:fileSec>
          </x:context>
          <x:expect label="choice, expan + abbr" xml:space="preserve"
-            ><pb facs="#facs_25" n="25" xml:id="img_0025" />
-            <ab facs="#facs_25_r1" type="page-number">
-               <lb facs="#facs_25_r1l1" n="N001"/>12.
-            </ab>
+            ><pb facs="#facs_25" n="25" xml:id="img_0025"
+            /><fw facs="#facs_25_r1" type="page-number" place="top">
+                    <lb facs="#facs_25_r1l1" n="N001"/>12.</fw>
             <head facs="#facs_25_r2">
-               <lb facs="#facs_25_r2l1" n="N001"/><choice><expan/><abbr>H&apos;r</abbr></choice>
-               <lb facs="#facs_25_line_1459841092982_10"
-                   n="N003" />getragen werden, die in <choice><expan>den</expan><abbr>d</abbr></choice>
-               <lb facs="#facs_25_r4l10" n="N010"/>vom 8<choice><expan>ten</expan><abbr><hi rend="superscript:true;">t</hi></abbr></choice> <choice
-                 ><expan>vorigen Monats</expan><abbr>v. M.</abbr></choice> eine Feüersgefahr</head></x:expect>
+                    <lb facs="#facs_25_r2l1" n="N001"/><choice><expan/><abbr>H&apos;r</abbr></choice>
+                    <lb facs="#facs_25_line_1459841092982_10"
+                       n="N003" />getragen werden, die in <choice><expan>den</expan><abbr>d</abbr></choice>
+                    <lb facs="#facs_25_r4l10" n="N010"/>vom 8<choice><expan>ten</expan><abbr><hi
+                       style="vertical-align: superscript;">t</hi></abbr></choice> <choice
+                       ><expan>vorigen Monats</expan><abbr>v. M.</abbr></choice> eine Feüersgefahr</head></x:expect>
       </x:scenario>
       <x:scenario label="date">
          <x:context mode="text">
@@ -256,13 +261,13 @@
          <x:expect label="date mit Attributen" xml:space="preserve"
             ><pb facs="#facs_25" n="25" xml:id="img_0025" />
             <p facs="#facs_25_r4">
-               <lb facs="#facs_25_r4l10" n="N010" />vom <date
-                  Ratssitzungstermin="-" month="6" year="1792" day="8">8<choice><expan>ten</expan><abbr><hi
-                  rend="superscript:true;">t</hi></abbr></choice> <choice><expan>vorigen Monats</expan><abbr
-                     >v. M.</abbr></choice></date> eine Feüersgefahr
-               <lb facs="#facs_25_r8l12" n="N013"/>vom <date>1<choice><expan/><abbr><hi
-                  rend="superscript:true;">t</hi></abbr></choice></date> und <choice><expan/><abbr><rs
-                  type="org">kreißämt.</rs></abbr></choice> Inti¬</p></x:expect>
+                    <lb facs="#facs_25_r4l10" n="N010" />vom <date
+                     Ratssitzungstermin="-" month="6" year="1792" day="8">8<choice><expan>ten</expan><abbr><hi
+                     style="vertical-align: superscript;">t</hi></abbr></choice> <choice><expan>vorigen Monats</expan><abbr
+                        >v. M.</abbr></choice></date> eine Feüersgefahr
+                    <lb facs="#facs_25_r8l12" n="N013"/>vom <date>1<choice><expan/><abbr><hi
+                     style="vertical-align: superscript;">t</hi></abbr></choice></date> und <choice><expan/><abbr><rs
+                     type="org">kreißämt.</rs></abbr></choice> Inti¬</p></x:expect>
         </x:scenario>
       <x:scenario label="person, place, organization">
          <x:context mode="text">
@@ -279,18 +284,18 @@
          <x:expect label="." xml:space="preserve"
             ><pb facs="#facs_25" n="25" xml:id="img_0025" />
             <head facs="#facs_25_r2">
-               <lb facs="#facs_25_r2l1" n="N001"/><choice><expan/><abbr>H&apos;r</abbr></choice> <rs
-                  type="person"><choice><expan>Herr</expan><abbr>v̄</abbr></choice> Kuglern.</rs></head>
+                    <lb facs="#facs_25_r2l1" n="N001"/><choice><expan/><abbr>H&apos;r</abbr></choice> <rs
+                     type="person"><choice><expan>Herr</expan><abbr>v̄</abbr></choice> Kuglern.</rs></head>
             <head facs="#facs_25_r3">
-               <lb facs="#facs_25_r3l1" n="N001"/><choice><expan>Numero</expan><abbr>N<hi
-                  rend="superscript:true;">o</hi></abbr></choice> 786.</head>
+                    <lb facs="#facs_25_r3l1" n="N001"/><choice><expan>Numero</expan><abbr>N<hi
+                  style="vertical-align: superscript;">o</hi></abbr></choice> 786.</head>
             <p facs="#facs_25_r4">
-               <lb facs="#facs_25_r4l1" n="N001"/>Remisschreiben des <rs type="org">Frauenklosters</rs>
-               <lb facs="#facs_25_r4l2" n="N002"/><rs type="org"><choice><expan>Sankt</expan><abbr
-                  >St.</abbr></choice> Elisabeth zu <rs type="place">Brixen</rs></rs> mit dem 
-               <lb facs="#facs_25_r4l3" n="N003"/><choice><expan>Ansuchen</expan><abbr
-                  >Ansuch</abbr></choice>, daß der auf den <choice><expan>alldaigen</expan><abbr
-                  >alldaig</abbr></choice></p></x:expect>
+                    <lb facs="#facs_25_r4l1" n="N001"/>Remisschreiben des <rs type="org">Frauenklosters</rs>
+                    <lb facs="#facs_25_r4l2" n="N002"/><rs type="org"><choice><expan>Sankt</expan><abbr
+                     >St.</abbr></choice> Elisabeth zu <rs type="place">Brixen</rs></rs> mit dem 
+                    <lb facs="#facs_25_r4l3" n="N003"/><choice><expan>Ansuchen</expan><abbr
+                     >Ansuch</abbr></choice>, daß der auf den <choice><expan>alldaigen</expan><abbr
+                     >alldaig</abbr></choice></p></x:expect>
       </x:scenario>
    </x:scenario>
    
@@ -310,32 +315,32 @@
          <x:expect label="name within rs" xml:space="preserve"
             ><pb facs="#facs_1" n="1" xml:id="img_0001"/>
             <ab type="" facs="#facs_1_region_1479996533458_8">
-               <lb facs="#facs_1_r1003" n="N001"/><hi rend="underlined:true; fontSize:0.0; kerning:0;">A. 1.</hi>
+                    <lb facs="#facs_1_r1003" n="N001"/><hi style="text-decoration: underline;">A. 1.</hi>
             </ab>
             <ab type="" facs="#facs_1_region_1479996502881_4">
-               <lb facs="#facs_1_r1005" n="N001"/>Kaiserliche Akademie der Wissenschaften.
+                    <lb facs="#facs_1_r1005" n="N001"/>Kaiserliche Akademie der Wissenschaften.
             </ab>
             <ab type="" facs="#facs_1_region_1479996509199_5">
-               <lb facs="#facs_1_r1008" n="N001"/>Protokoll
+                    <lb facs="#facs_1_r1008" n="N001"/>Protokoll
             </ab>
             <ab type="" facs="#facs_1_region_1479996516875_6">
-               <lb facs="#facs_1_r1010" n="N001"/>der außerordentlichen Gesammtsitzung
-               <lb facs="#facs_1_r1011" n="N002"/>am 27. November 1847
+                    <lb facs="#facs_1_r1010" n="N001"/>der außerordentlichen Gesammtsitzung
+                    <lb facs="#facs_1_r1011" n="N002"/>am 27. November 1847
             </ab>
             <ab type="" facs="#facs_1_region_1479996526172_7">
-               <lb facs="#facs_1_r1013" n="N001"/>Anwesende: Der Präsident Freiherr <rs type="person"
-                  key="Hammer-Purgstall, von, Joseph"><choice><expan/><abbr>v.</abbr></choice> Hammer-Purgstall</rs>	
-               <lb facs="#facs_1_r1014" n="N002"/><choice><expan>Der</expan><abbr>"</abbr></choice> Vice-Präsident <rs
-                  type="person" key="Baumgartner, von, Andreas">Baumgartner</rs>
-               <lb facs="#facs_1_r1015" n="N003"/><choice><expan>Der</expan><abbr>"</abbr></choice> General-Secretär <rs
-                  type="person" key="Ettingshausen, von, Andreas"><choice><expan>von</expan><abbr
-                     >v.</abbr></choice> Ettingshausen</rs>
-               <lb facs="#facs_1_r1016" n="N004"/><choice><expan>Der</expan><abbr>"</abbr></choice> zweite Secretär <rs
-                  type="person" key="Wolf, Ferdinand">Wolf</rs>
+                    <lb facs="#facs_1_r1013" n="N001"/>Anwesende: Der Präsident Freiherr <rs type="person"
+                      key="Hammer-Purgstall, von, Joseph"><choice><expan/><abbr>v.</abbr></choice> Hammer-Purgstall</rs>	
+                    <lb facs="#facs_1_r1014" n="N002"/><choice><expan>Der</expan><abbr>"</abbr></choice> Vice-Präsident <rs
+                      type="person" key="Baumgartner, von, Andreas">Baumgartner</rs>
+                    <lb facs="#facs_1_r1015" n="N003"/><choice><expan>Der</expan><abbr>"</abbr></choice> General-Secretär <rs
+                      type="person" key="Ettingshausen, von, Andreas"><choice><expan>von</expan><abbr
+                       >v.</abbr></choice> Ettingshausen</rs>
+                    <lb facs="#facs_1_r1016" n="N004"/><choice><expan>Der</expan><abbr>"</abbr></choice> zweite Secretär <rs
+                      type="person" key="Wolf, Ferdinand">Wolf</rs>
             </ab>
             <ab type="" facs="#facs_1_region_1479997987283_34">
-               <lb facs="#facs_1_r1018" n="N001"/>die wirklichen Mitglieder <rs type="person"
-                  key="Prechtl, von, Johann Joseph">Prechtl</rs>	
+                    <lb facs="#facs_1_r1018" n="N001"/>die wirklichen Mitglieder <rs type="person"
+                        key="Prechtl, von, Johann Joseph">Prechtl</rs>	
             </ab></x:expect>
         </x:scenario>
       <x:scenario label="place (1)">
@@ -353,8 +358,8 @@
          <x:expect label="name within rs" xml:space="preserve"
             ><pb facs="#facs_1" n="1" xml:id="img_0001" />
             <ab type="" facs="#facs_1_region_1480062023146_1">
-               <lb facs="#facs_1_r1052" n="N006" />en Oeconomie-Hofes in <rs type="place"
-                  key="(Wien-)Simmering">Simmering</rs> überwachen könnte, während die Akademie
+                    <lb facs="#facs_1_r1052" n="N006" />en Oeconomie-Hofes in <rs type="place"
+                        key="(Wien-)Simmering">Simmering</rs> überwachen könnte, während die Akademie
             </ab></x:expect>
       </x:scenario>
    </x:scenario>
@@ -462,9 +467,9 @@
          <x:expect label="." xml:space="preserve"
             ><pb facs="#facs_10" n="10" xml:id="img_0010"
             /><note place="margin-right" facs="#facs_10_region_1625235938563_86">
-               <lb facs="#facs_10_line_1625236076413_163" n="N001"/>Geneſ. 1.</note
+                    <lb facs="#facs_10_line_1625236076413_163" n="N001"/>Geneſ. 1.</note
             ><note place="margin-left" facs="#facs_10_region_1625235942631_89">
-               <lb facs="#facs_10_line_1625236094177_169" n="N001"/>Eccleſ. 15.</note></x:expect>
+                    <lb facs="#facs_10_line_1625236094177_169" n="N001"/>Eccleſ. 15.</note></x:expect>
       </x:scenario>
    </x:scenario>
    
@@ -478,9 +483,9 @@
          <graphic url="553792.png" width="2368px" height="3315px" />
          <graphic url="https://dbis-thure.uibk.ac.at/f/Get?id=FRXNPZZAMTDQEOWGRHMXMWZX&amp;fileType=view"
             width="2368px" height="3315px" />
-         <zone rendition="printspace" points="..." />
-         <zone rendition="TextRegion" subtype="paragraph" xml:id="facs_1_r_2_4"
-            points="1289,1095 2325,1095 2325,2541 1289,2541">...</zone>
+           <zone rendition="printspace" points="..." />
+           <zone rendition="TextRegion" subtype="paragraph" xml:id="facs_1_r_2_4"
+               points="1289,1095 2325,1095 2325,2541 1289,2541">...</zone>
       </surface></x:expect>
       </x:scenario>
    </x:scenario>
