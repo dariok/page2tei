@@ -489,4 +489,22 @@
       </surface></x:expect>
       </x:scenario>
    </x:scenario>
+   
+   <x:scenario label="T9: notes">
+      <x:scenario label="T9.1">
+         <x:context href="page/oat01.xml" select="//p:Page" mode="text">
+            <x:param name="numCurr" tunnel="1">160</x:param>
+         </x:context>
+         <x:expect label="." xml:space="preserve"
+            ><pb xmlns="http://www.tei-c.org/ns/1.0" facs="#facs_160" n="160" xml:id="img_0160"
+            /><note type="endnote" n="[footnote reference]" facs="#facs_160_TextRegion_1669387787980_5043"
+               xmlns="http://www.tei-c.org/ns/1.0">
+                    <lb facs="#facs_160_line_1663417318562_169" n="N001"/>1
+                    <lb facs="#facs_160_line_1663417318562_168" n="N002"/>Zitat aus Esr. 7,26: דתא די־אהלך ודתאדי־מלכא, zu der Bedeutung dieser Formulie¬
+                    <lb facs="#facs_160_line_1669387788005_5046" n="N003"/>rung s. unten.</note><note type="endnote" n="[footnote reference]" facs="#facs_160_TextRegion_1669389039232_5397" xmlns="http://www.tei-c.org/ns/1.0">
+                    <lb facs="#facs_160_r1l3" n="N001"/>änderungen im Tempel sind Reflexe seiner Abhängigkeit und seines Vasallentums: 2.
+                    <lb facs="#facs_160_line_1669389039280_5400" n="N002"/>Kg. 16, 1-19, bes. 10ff.; 2. Chr. 28, bes. 20-25.</note
+            ></x:expect>
+      </x:scenario>
+   </x:scenario>
 </x:description>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+   <Metadata>
+      <Creator>TRP
+         NCSR LineSegmentationTool, v0.3.0 (17_3_2015)</Creator>
+      <Created>2016-03-01T13:53:22.003+01:00</Created>
+      <LastChange>2018-02-22T16:07:52.268+01:00</LastChange>
+      <TranskribusMetadata docId="4379" pageId="113410" pageNr="25" tsid="2366048" status="FINAL" userId="3667" imgUrl="https://dbis-thure.uibk.ac.at/f/Get?id=XMBXVKXNVTBKPZNNDSGFHEMS&amp;fileType=view" xmlUrl="https://dbis-thure.uibk.ac.at/f/Get?id=NWKXIEALOIZDXGYBLGJNQVZR" imageId="109098"/>
+   </Metadata>
+   <Page imageFilename="HS_115_25_object_128293.jpg" imageWidth="2740" imageHeight="4447">
+      <ReadingOrder>
+         <OrderedGroup id="ro_1526560645228" caption="Regions reading order">
+            <RegionRefIndexed index="1" regionRef="r2"/>
+            <RegionRefIndexed index="2" regionRef="r3"/>
+            <RegionRefIndexed index="3" regionRef="r4"/>
+         </OrderedGroup>
+      </ReadingOrder>
+
+<TextRegion orientation="0.0" type="endnote" id="TextRegion_1669387787980_5043" custom="readingOrder {index:16;} structure {type:endnote;}">
+   <Coords points="196,1612 1375,1612 1375,1719 196,1719"/>
+   <TextLine id="line_1663417318562_169" custom="readingOrder {index:0;}">
+      <Coords points="214,1651 223,1650 223,1680 214,1681"/>
+      <Baseline points="205,1657 223,1657"/>
+      <TextEquiv>
+         <Unicode>1</Unicode>
+      </TextEquiv>
+   </TextLine>
+   <TextLine id="line_1663417318562_168" custom="readingOrder {index:1;}">
+      <Coords points="223,1650 1359,1649 1359,1679 223,1680"/>
+      <Baseline points="227,1670 271,1670 328,1669 385,1668 443,1668 500,1668 557,1667 614,1667 672,1667 729,1668 786,1668 843,1668 901,1668 958,1669 1015,1669 1072,1669 1130,1669 1187,1669 1244,1669 1301,1669 1365,1669"/>
+      <Word id="line_1663417318562_168_w1" custom="readingOrder {index:0;}">
+         <Coords points="219,1630 219,1690 281,1690 281,1630"/>
+         <TextEquiv>
+            <Unicode>Zitat</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="line_1663417318562_168_w2" custom="readingOrder {index:1;}">
+         <Coords points="294,1629 294,1689 331,1689 331,1629"/>
+         <TextEquiv>
+            <Unicode>aus</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="line_1663417318562_168_w3" custom="readingOrder {index:2;}">
+         <Coords points="347,1628 347,1688 397,1688 397,1628"/>
+         <TextEquiv>
+            <Unicode>Esr.</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="line_1663417318562_168_w4" custom="readingOrder {index:3;}">
+         <Coords points="407,1628 407,1688 472,1688 472,1628"/>
+         <TextEquiv>
+            <Unicode>7,26:</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="line_1663417318562_168_w5" custom="readingOrder {index:4;}">
+         <Coords points="482,1627 482,1687 571,1687 571,1627"/>
+         <TextEquiv>
+            <Unicode>-</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="line_1663417318562_168_w6" custom="readingOrder {index:5;}">
+         <Coords points="697,1628 697,1688 891,1688 891,1628"/>
+         <TextEquiv>
+            <Unicode>-,</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="line_1663417318562_168_w7" custom="readingOrder {index:6;}">
+         <Coords points="904,1628 904,1688 927,1688 927,1628"/>
+         <TextEquiv>
+            <Unicode>zu</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="line_1663417318562_168_w8" custom="readingOrder {index:7;}">
+         <Coords points="947,1629 947,1689 983,1689 983,1629"/>
+         <TextEquiv>
+            <Unicode>der</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="line_1663417318562_168_w9" custom="readingOrder {index:8;}">
+         <Coords points="996,1629 996,1689 1128,1689 1128,1629"/>
+         <TextEquiv>
+            <Unicode>Bedeutung</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="line_1663417318562_168_w10" custom="readingOrder {index:9;}">
+         <Coords points="1148,1629 1148,1689 1223,1689 1223,1629"/>
+         <TextEquiv>
+            <Unicode>dieser</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="line_1663417318562_168_w11" custom="readingOrder {index:10;}">
+         <Coords points="1237,1629 1237,1689 1365,1689 1365,1629"/>
+         <TextEquiv>
+            <Unicode>Formulie-</Unicode>
+         </TextEquiv>
+      </Word>
+      <TextEquiv>
+         <Unicode>Zitat aus Esr. 7,26: דתא די־אהלך ודתאדי־מלכא, zu der Bedeutung dieser Formulie¬</Unicode>
+      </TextEquiv>
+   </TextLine>
+   <TextLine id="line_1669387788005_5046" custom="readingOrder {index:2;}">
+      <Coords points="196,1690 392,1690 392,1719 196,1719"/>
+      <Baseline points="196,1710 224,1710 252,1710 280,1710 308,1710 336,1710 364,1710 392,1710"/>
+      <Word id="word_1669387788005_5048" custom="readingOrder {index:0;}">
+         <Coords points="195,1670 257,1670 257,1719 195,1719"/>
+         <TextEquiv>
+            <Unicode>rung</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="word_1669387788005_5050" custom="readingOrder {index:1;}">
+         <Coords points="277,1670 297,1670 297,1719 277,1719"/>
+         <TextEquiv>
+            <Unicode>s.</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="word_1669387788006_5052" custom="readingOrder {index:2;}">
+         <Coords points="307,1670 395,1670 395,1719 307,1719"/>
+         <TextEquiv>
+            <Unicode>unten.</Unicode>
+         </TextEquiv>
+      </Word>
+      <TextEquiv>
+         <Unicode>rung s. unten.</Unicode>
+      </TextEquiv>
+   </TextLine>
+   <TextEquiv>
+      <Unicode>1
+         Zitat aus Esr. 7,26: דתא די־אהלך ודתאדי־מלכא, zu der Bedeutung dieser Formulie¬
+         rung s. unten.</Unicode>
+   </TextEquiv>
+</TextRegion>
+<TextRegion orientation="0.0" type="endnote" id="TextRegion_1669389039232_5397" custom="readingOrder {index:2;} structure {type:paragraph;}">
+   <Coords points="176,239 1364,239 1364,340 176,340"/>
+   <TextLine id="r1l3" custom="readingOrder {index:0;}">
+      <Coords points="184,304 1347,303 1347,273 184,274"/>
+      <Baseline points="184,294 242,293 300,293 358,293 416,293 474,293 532,293 591,293 649,293 707,293 765,293 823,293 881,293 939,294 998,294 1056,294 1114,294 1172,294 1230,294 1288,293 1347,293"/>
+      <Word id="r1l3_w1" custom="readingOrder {index:0;}">
+         <Coords points="177,253 177,313 326,313 326,253"/>
+         <TextEquiv>
+            <Unicode>änderungen</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="r1l3_w2" custom="readingOrder {index:1;}">
+         <Coords points="346,253 346,313 365,313 365,253"/>
+         <TextEquiv>
+            <Unicode>im</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="r1l3_w3" custom="readingOrder {index:2;}">
+         <Coords points="393,253 393,313 492,313 492,253"/>
+         <TextEquiv>
+            <Unicode>Tempel</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="r1l3_w4" custom="readingOrder {index:3;}">
+         <Coords points="505,253 505,313 553,313 553,253"/>
+         <TextEquiv>
+            <Unicode>sind</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="r1l3_w5" custom="readingOrder {index:4;}">
+         <Coords points="572,253 572,313 668,313 668,253"/>
+         <TextEquiv>
+            <Unicode>Reflexe</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="r1l3_w6" custom="readingOrder {index:5;}">
+         <Coords points="687,253 687,313 763,313 763,253"/>
+         <TextEquiv>
+            <Unicode>seiner</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="r1l3_w7" custom="readingOrder {index:6;}">
+         <Coords points="779,253 779,313 958,313 958,253"/>
+         <TextEquiv>
+            <Unicode>Abhängigkeit</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="r1l3_w8" custom="readingOrder {index:7;}">
+         <Coords points="974,254 974,314 1015,314 1015,254"/>
+         <TextEquiv>
+            <Unicode>und</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="r1l3_w9" custom="readingOrder {index:8;}">
+         <Coords points="1034,254 1034,314 1111,314 1111,254"/>
+         <TextEquiv>
+            <Unicode>seines</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="r1l3_w10" custom="readingOrder {index:9;}">
+         <Coords points="1130,254 1130,314 1315,314 1315,254"/>
+         <TextEquiv>
+            <Unicode>Vasallentums:</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="r1l3_w11" custom="readingOrder {index:10;}">
+         <Coords points="1331,253 1331,313 1353,313 1353,253"/>
+         <TextEquiv>
+            <Unicode>2.</Unicode>
+         </TextEquiv>
+      </Word>
+      <TextEquiv>
+         <Unicode>änderungen im Tempel sind Reflexe seiner Abhängigkeit und seines Vasallentums: 2.</Unicode>
+      </TextEquiv>
+   </TextLine>
+   <TextLine id="line_1669389039280_5400" custom="readingOrder {index:1;}">
+      <Coords points="186,312 812,312 812,340 186,340"/>
+      <Baseline points="186,332 217,332 248,331 279,331 311,331 342,331 373,331 405,331 436,331 467,331 499,331 530,331 561,331 592,331 624,331 655,331 686,331 718,331 749,332 780,332 812,332"/>
+      <Word id="word_1669389039281_5402" custom="readingOrder {index:0;}">
+         <Coords points="183,292 230,292 230,340 183,340"/>
+         <TextEquiv>
+            <Unicode>Kg.</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="word_1669389039281_5404" custom="readingOrder {index:1;}">
+         <Coords points="241,291 281,291 281,340 241,340"/>
+         <TextEquiv>
+            <Unicode>16,</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="word_1669389039281_5406" custom="readingOrder {index:2;}">
+         <Coords points="292,291 361,291 361,340 292,340"/>
+         <TextEquiv>
+            <Unicode>1-19,</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="word_1669389039281_5408" custom="readingOrder {index:3;}">
+         <Coords points="372,291 423,291 423,340 372,340"/>
+         <TextEquiv>
+            <Unicode>bes.</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="word_1669389039281_5410" custom="readingOrder {index:4;}">
+         <Coords points="435,291 507,291 507,340 435,340"/>
+         <TextEquiv>
+            <Unicode>10ff.;</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="word_1669389039281_5412" custom="readingOrder {index:5;}">
+         <Coords points="518,291 540,291 540,340 518,340"/>
+         <TextEquiv>
+            <Unicode>2.</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="word_1669389039281_5414" custom="readingOrder {index:6;}">
+         <Coords points="551,291 609,291 609,340 551,340"/>
+         <TextEquiv>
+            <Unicode>Chr.</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="word_1669389039281_5416" custom="readingOrder {index:7;}">
+         <Coords points="617,291 657,291 657,340 617,340"/>
+         <TextEquiv>
+            <Unicode>28,</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="word_1669389039282_5418" custom="readingOrder {index:8;}">
+         <Coords points="668,291 719,291 719,340 668,340"/>
+         <TextEquiv>
+            <Unicode>bes.</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="word_1669389039282_5420" custom="readingOrder {index:9;}">
+         <Coords points="730,292 817,292 817,340 730,340"/>
+         <TextEquiv>
+            <Unicode>20-25.</Unicode>
+         </TextEquiv>
+      </Word>
+      <TextEquiv>
+         <Unicode>Kg. 16, 1-19, bes. 10ff.; 2. Chr. 28, bes. 20-25.</Unicode>
+      </TextEquiv>
+   </TextLine>
+   <TextEquiv>
+      <Unicode>änderungen im Tempel sind Reflexe seiner Abhängigkeit und seines Vasallentums: 2.
+         Kg. 16, 1-19, bes. 10ff.; 2. Chr. 28, bes. 20-25.</Unicode>
+   </TextEquiv>
+</TextRegion>
+   </Page>
+</PcGts>

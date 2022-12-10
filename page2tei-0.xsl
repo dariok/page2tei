@@ -415,6 +415,9 @@
          <xsl:when test="'footnote-continued' = (@type, $custom?structure?type)">
             <note place="foot" n="[footnote-continued reference]" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></note>
          </xsl:when>
+         <xsl:when test="'endnote' = (@type, $custom?structure?type)">
+            <note type="endnote" n="[footnote reference]" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></note>
+         </xsl:when>
          <xsl:when test="'page-number' = (@type, $custom?structure?type)">
             <fw type="page-number" facs="#facs_{$numCurr}_{@id}">
                <xsl:attribute name="place">
