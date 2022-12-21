@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextRegion xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+      orientation="0.0" type="footnote" id="TextRegion_1665567326709_1170" custom="readingOrder {index:5;} structure {type:footer;}">
+   <Coords points="73,928 735,928 735,956 73,956"/>
+   <TextLine id="line_1663938526292_2006" custom="readingOrder {index:0;} structure {type:annotation-mark;} textStyle {offset:0; length:1;fontSize:0.0; kerning:0; superscript:true;} comment {offset:0; length:1;}">
+      <Coords points="92,948 105,948 106,947 112,947 112,930 92,930"/>
+      <Baseline points="97,946 107,946"/>
+      <TextEquiv>
+         <Unicode>1</Unicode>
+      </TextEquiv>
+   </TextLine>
+   <TextLine id="line_1665567326750_1173" custom="readingOrder {index:1;}">
+      <Coords points="126,956 511,953 499,938 126,937"/>
+      <Baseline points="131,953 506,953"/>
+      <Word id="line_1665567326750_1173_w1" custom="readingOrder {index:0;}">
+         <Coords points="118,913 118,973 149,973 149,913"/>
+         <TextEquiv>
+            <Unicode>Dies</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="line_1665567326750_1173_w2" custom="readingOrder {index:1;}">
+         <Coords points="156,913 156,973 203,973 203,913"/>
+         <TextEquiv>
+            <Unicode>betont</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="line_1665567326750_1173_w3" custom="readingOrder {index:2;}">
+         <Coords points="209,913 209,973 299,973 299,913"/>
+         <TextEquiv>
+            <Unicode>Hans-Georg</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="line_1665567326750_1173_w4" custom="readingOrder {index:3;}">
+         <Coords points="308,913 308,973 377,973 377,913"/>
+         <TextEquiv>
+            <Unicode>Gadamer</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="line_1665567326750_1173_w5" custom="readingOrder {index:4;}">
+         <Coords points="381,913 381,973 440,973 440,913"/>
+         <TextEquiv>
+            <Unicode>(1990),</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="line_1665567326750_1173_w6" custom="readingOrder {index:5;}">
+         <Coords points="443,913 443,973 472,973 472,913"/>
+         <TextEquiv>
+            <Unicode>Bd.</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="line_1665567326750_1173_w7" custom="readingOrder {index:6;}">
+         <Coords points="474,913 474,973 491,973 491,913"/>
+         <TextEquiv>
+            <Unicode>1,</Unicode>
+         </TextEquiv>
+      </Word>
+      <Word id="line_1665567326750_1173_w8" custom="readingOrder {index:7;}">
+         <Coords points="494,913 494,973 519,973 519,913"/>
+         <TextEquiv>
+            <Unicode>15.</Unicode>
+         </TextEquiv>
+      </Word>
+      <TextEquiv>
+         <Unicode>Dies betont Hans-Georg Gadamer (1990), Bd. 1, 15.</Unicode>
+      </TextEquiv>
+   </TextLine>
+   <TextEquiv>
+      <Unicode>1
+         Dies betont Hans-Georg Gadamer (1990), Bd. 1, 15.</Unicode>
+   </TextEquiv>
+</TextRegion>

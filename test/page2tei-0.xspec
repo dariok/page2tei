@@ -506,5 +506,15 @@
                     <lb facs="#facs_160_line_1669389039280_5400" n="N002"/>Kg. 16, 1-19, bes. 10ff.; 2. Chr. 28, bes. 20-25.</note
             ></x:expect>
       </x:scenario>
+      <x:scenario label="T9.2">
+         <x:context href="page/oat02.xml" mode="text">
+            <x:param name="numCurr" tunnel="1">14</x:param>
+            <x:param name="center" tunnel="1" select="200" />
+         </x:context>
+         <x:expect label="." xml:space="preserve"
+            ><note place="foot" n="[footnote reference]" facs="#facs_14_TextRegion_1665567326709_1170">
+                    <lb facs="#facs_14_line_1663938526292_2006" n="N001"/><comment><hi style="vertical-align: superscript;">1</hi></comment>
+                    <lb facs="#facs_14_line_1665567326750_1173" n="N002"/>Dies betont Hans-Georg Gadamer (1990), Bd. 1, 15.</note></x:expect>
+      </x:scenario>
    </x:scenario>
 </x:description>

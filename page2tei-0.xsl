@@ -391,9 +391,6 @@
          <xsl:when test="'header' = (@type, $custom?structure?type)" xml:space="preserve">
             <fw type="header" place="top" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine"
             /></fw></xsl:when>
-         <xsl:when test="'footer' = (@type, $custom?structure?type)" xml:space="preserve">
-            <fw type="header" place="bottom" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine"
-            /></fw></xsl:when>
          <xsl:when test="'catch-word' = (@type, $custom?structure?type)" xml:space="preserve">
             <fw type="catch" place="bottom" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine"
             /></fw></xsl:when>
@@ -418,6 +415,9 @@
          <xsl:when test="'endnote' = (@type, $custom?structure?type)">
             <note type="endnote" n="[footnote reference]" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine" /></note>
          </xsl:when>
+         <xsl:when test="'footer' = (@type, $custom?structure?type)" xml:space="preserve">
+            <fw type="footer" place="bottom" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine"
+            /></fw></xsl:when>
          <xsl:when test="'page-number' = (@type, $custom?structure?type)">
             <fw type="page-number" facs="#facs_{$numCurr}_{@id}">
                <xsl:attribute name="place">
