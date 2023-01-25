@@ -816,6 +816,11 @@
       </xsl:when>
       <xsl:otherwise>
         <xsl:element name="{@type}">
+          <xsl:for-each select="map:keys($custom)">
+             <xsl:if test="not(. = ('', 'length'))">
+                <xsl:attribute name="{.}" select="$custom(.)" />
+             </xsl:if>
+          </xsl:for-each>
           <xsl:call-template name="elem">
             <xsl:with-param name="elem" select="$elem" />
           </xsl:call-template>

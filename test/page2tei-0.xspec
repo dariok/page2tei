@@ -517,4 +517,71 @@
                     <lb facs="#facs_14_line_1665567326750_1173" n="N002"/>Dies betont Hans-Georg Gadamer (1990), Bd. 1, 15.</note></x:expect>
       </x:scenario>
    </x:scenario>
+   
+   <x:scenario label="T10: custom elements and properties">
+      <x:scenario label="T10.1">
+         <x:context>
+            <x:param name="numCurr" select="25" tunnel="1"/>
+            <TextLine
+               xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+               id="r1l7" custom="readingOrder {{index:4;}} language {{offset:0; length:57;lang:grc-Grek;}}">
+               <Coords points="195,506 1338,508 1338,475 195,473"/>
+               <Baseline points="190,498 652,497 709,498 766,498 823,498 880,497 937,497 995,497 1052,497 1109,497 1166,497 1223,497 1280,497 1350,498"/>
+               <Word id="r1l7_w1" custom="readingOrder {{index:0;}}">
+                  <Coords points="188,455 188,515 217,515 217,455 188,455 188,455"/>
+                  <TextEquiv>
+                     <Unicode>oń</Unicode>
+                  </TextEquiv>
+               </Word>
+               <Word id="r1l7_w2" custom="readingOrder {{index:1;}}">
+                  <Coords points="239,456 239,516 383,516 383,456 239,456 239,456"/>
+                  <TextEquiv>
+                     <Unicode>póyaipa</Unicode>
+                  </TextEquiv>
+               </Word>
+               <Word id="r1l7_w3" custom="readingOrder {{index:2;}}">
+                  <Coords points="408,457 408,517 522,517 522,457 408,457 408,457"/>
+                  <TextEquiv>
+                     <Unicode>ávòpóg</Unicode>
+                  </TextEquiv>
+               </Word>
+               <Word id="r1l7_w4" custom="readingOrder {{index:3;}}">
+                  <Coords points="544,457 544,517 617,517 617,457 544,457 544,457"/>
+                  <TextEquiv>
+                     <Unicode>ovòè</Unicode>
+                  </TextEquiv>
+               </Word>
+               <Word id="r1l7_w5" custom="readingOrder {{index:4;}}">
+                  <Coords points="635,457 635,517 775,517 775,457 635,457 635,457"/>
+                  <TextEquiv>
+                     <Unicode>póyaipa</Unicode>
+                  </TextEquiv>
+               </Word>
+               <Word id="r1l7_w6" custom="readingOrder {{index:5;}}">
+                  <Coords points="801,457 801,517 966,517 966,457 801,457 801,457"/>
+                  <TextEquiv>
+                     <Unicode>avopónov</Unicode>
+                  </TextEquiv>
+               </Word>
+               <Word id="r1l7_w7" custom="readingOrder {{index:6;}}">
+                  <Coords points="991,457 991,517 1222,517 1222,457 991,457 991,457"/>
+                  <TextEquiv>
+                     <Unicode>karapóyerai</Unicode>
+                  </TextEquiv>
+               </Word>
+               <Word id="r1l7_w8" custom="readingOrder {{index:7;}}">
+                  <Coords points="1237,457 1237,517 1336,517 1336,457 1237,457 1237,457"/>
+                  <TextEquiv>
+                     <Unicode>avtóv</Unicode>
+                  </TextEquiv>
+               </Word>
+               <TextEquiv>
+                  <Unicode>οὐ μάχαιρα ἀνδρὸς οὐδὲ μάχαιρα ἀνϑρώπου καταφάγεται αὐτόν;</Unicode>
+               </TextEquiv>
+            </TextLine>
+         </x:context>
+         <x:expect label="." xml:space="preserve">
+                    <lb facs="#facs_25_r1l7" n="N005" /><language lang="grc-Grek">οὐ μάχαιρα ἀνδρὸς οὐδὲ μάχαιρα ἀνϑρώπου καταφάγεται αὐτόν</language>;</x:expect>
+      </x:scenario>
+   </x:scenario>
 </x:description>
