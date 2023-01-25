@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+   xmlns="http://www.tei-c.org/ns/1.0"
+   stylesheet="../tokenize.xsl">
+   
+   <x:scenario label="T1">
+      <x:context xml:space="preserve">
+         <div>
+            <head facs="#facs_212_TextRegion_1664725046222_8633">
+               <lb facs="#facs_212_r1l1" n="N001"/>Epilog</head>
+            <note type="endnote"
+               n="[footnote reference]"
+               facs="#facs_212_TextRegion_1664725063929_8644">
+               <lb facs="#facs_212_line_1664725059318_8638" n="N001"/>„Kindisch wäre es zu erwarten, ein jeder wollte oder könnte ein professioneller
+               <lb facs="#facs_212_r1l10" n="N010"/>selber als Ungeist. Das nicht Bornierte wird von Theorie vertreten. Trotz all ih¬
+               <lb facs="#facs_212_r1l11" n="N011"/>rer Unfreiheit ist sie im Unfreien Statthalter der Freiheit.“</note>
+            <p facs="#facs_212_TextRegion_1664725063929_8643">
+               <lb facs="#facs_212_r1l12" n="N001"/>(Theodor W. Adorno, Gesammelte Schriften Band 102, Kulturkritik Gesellschaft II Ein¬
+               <lb facs="#facs_212_r1l13" n="N002"/>griffe Stichworte, Frankfurt am Main 1977, Seite 476 et passim)</p>
+         </div>
+      </x:context>
+      <x:expect label="." xml:space="preserve">
+         <div>
+            <head facs="#facs_212_TextRegion_1664725046222_8633">
+               <lb facs="#facs_212_r1l1" n="N001"/><w>Epilog</w></head>
+            <note type="endnote"
+               n="[footnote reference]"
+               facs="#facs_212_TextRegion_1664725063929_8644">
+               <lb facs="#facs_212_line_1664725059318_8638" n="N001"/><pc>„</pc><w>Kindisch</w> <w>wäre</w> <w>es</w
+                  > <w>zu</w> <w>erwarten</w><pc>,</pc> <w>ein</w> <w>jeder</w> <w>wollte</w> <w>oder</w> <w>könnte</w
+                  > <w>ein</w> <w>professioneller</w>
+               <lb facs="#facs_212_r1l10" n="N010"/><w>selber</w> <w>als</w> <w>Ungeist</w><pc>.</pc> <w>Das</w> <w
+                  >nicht</w> <w>Bornierte</w> <w>wird</w> <w>von</w> <w>Theorie</w> <w>vertreten</w><pc>.</pc> <w
+                  >Trotz</w> <w>all</w> 
+               <w>ih<pc>¬</pc><lb facs="#facs_212_r1l11" n="N011"/>rer</w> <w>Unfreiheit</w> <w>ist</w> <w>sie</w> <w
+                  >im</w> <w>Unfreien</w> <w>Statthalter</w> <w>der</w> <w>Freiheit</w><pc>.</pc><pc>“</pc></note>
+            <p facs="#facs_212_TextRegion_1664725063929_8643">
+               <lb facs="#facs_212_r1l12" n="N001"/><pc>(</pc><w>Theodor</w> <w>W</w><pc>.</pc> <w>Adorno</w><pc>,</pc
+                  > <w>Gesammelte</w> <w>Schriften</w> <w>Band</w> <num>102</num><pc>,</pc> <w>Kulturkritik</w> <w
+                  >Gesellschaft</w> <w>II</w> 
+               <w>Ein<pc>¬</pc><lb facs="#facs_212_r1l13" n="N002"/>griffe</w> <w>Stichworte</w><pc>,</pc> <w
+                  >Frankfurt</w> <w>am</w> <w>Main</w> <num>1977</num><pc>,</pc> <w>Seite</w> <num>476</num> <w>et</w
+                  > <w>passim</w><pc>)</pc></p>
+         </div>
+      </x:expect>
+   </x:scenario>
+   
+</x:description>
