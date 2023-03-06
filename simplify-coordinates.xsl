@@ -68,8 +68,8 @@
          </xsl:when>
          <xsl:otherwise>
             <xsl:for-each select="tokenize($pts, ' ')">
-               <xsl:sort select="xs:integer(substring-before(current(), ','))" />
-               <xsl:value-of select="xs:integer(substring-before(current(), ','))"/>
+               <xsl:sort select="round(number(substring-before(current(), ',')))" />
+               <xsl:value-of select="round(number(substring-before(current(), ',')))" />
             </xsl:for-each>
          </xsl:otherwise>
       </xsl:choose>
@@ -88,8 +88,8 @@
          <xsl:otherwise>
             <xsl:variable name="vals" select="tokenize($pts, ' ')"/>
             <xsl:for-each select="$vals">
-               <xsl:sort select="xs:integer(substring-after(current(), ','))" />
-               <xsl:value-of select="xs:integer(substring-after(current(), ','))"/>
+               <xsl:sort select="round(number(substring-before(current(), ',')))" />
+               <xsl:value-of select="round(number(substring-before(current(), ',')))" />
             </xsl:for-each>
          </xsl:otherwise>
       </xsl:choose>
