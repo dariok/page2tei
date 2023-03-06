@@ -27,7 +27,7 @@
 						<String></String>
 					</field>
 					<field name="inputXSLURL">
-						<String>file:/home/dario/git/page2tei/page2tei-0.xsl</String>
+						<String>${pd}/../page2tei/page2tei-0.xsl</String>
 					</field>
 					<field name="inputXMLURL">
 						<String>${currentFileURL}</String>
@@ -48,7 +48,7 @@
 						<Boolean>false</Boolean>
 					</field>
 					<field name="outputResource">
-						<String>${pd}/temp/${xpath_eval(substring-before(substring-after('${cfd}', 'LB_'), '_pdf'))}.xml</String>
+						<String>${pd}/temp/page2tei/${xpath_eval((tokenize('${cfd}', '/'))[last() - 1])}.xml</String>
 					</field>
 					<field name="openOtherLocationInBrowser">
 						<Boolean>false</Boolean>
@@ -79,7 +79,7 @@
 					</field>
 					<field name="cascadingStylesheets">
 						<String-array>
-							<String>file:/home/dario/git/page2tei/combine-continued.xsl</String>
+							<String>${pd}/../page2tei/combine-continued.xsl</String>
 						</String-array>
 					</field>
 					<field name="xslTransformer">
@@ -112,7 +112,7 @@
 						<String></String>
 					</field>
 					<field name="inputXSLURL">
-						<String>file:/home/dario/git/page2tei/page2tei-0.xsl</String>
+						<String>${pd}/../page2tei/page2tei-0.xsl</String>
 					</field>
 					<field name="inputXMLURL">
 						<String>${currentFileURL}</String>
@@ -133,7 +133,7 @@
 						<Boolean>false</Boolean>
 					</field>
 					<field name="outputResource">
-						<String>${pd}/temp/${xpath_eval(substring-before(substring-after('${cfd}', 'LB_'), '_pdf'))}.xml</String>
+						<String>${pd}/temp/page2tei/${xpath_eval((tokenize('${cfd}', '/'))[last() - 1])}.xml</String>
 					</field>
 					<field name="openOtherLocationInBrowser">
 						<Boolean>false</Boolean>
@@ -164,7 +164,7 @@
 					</field>
 					<field name="cascadingStylesheets">
 						<String-array>
-							<String>file:/home/dario/git/page2tei/simplify-coordinates.xsl</String>
+							<String>${pd}/../page2tei/simplify-coordinates.xsl</String>
 						</String-array>
 					</field>
 					<field name="xslTransformer">
@@ -197,7 +197,7 @@
 						<String></String>
 					</field>
 					<field name="inputXSLURL">
-						<String>file:/home/dario/git/page2tei/page2tei-0.xsl</String>
+						<String>${pd}/../page2tei/page2tei-0.xsl</String>
 					</field>
 					<field name="inputXMLURL">
 						<String>${currentFileURL}</String>
@@ -218,7 +218,7 @@
 						<Boolean>false</Boolean>
 					</field>
 					<field name="outputResource">
-						<String>${pd}/temp/${xpath_eval(substring-before(substring-after('${cfd}', 'LB_'), '_pdf'))}.xml</String>
+						<String>${pd}/temp/page2tei/${xpath_eval((tokenize('${cfd}', '/'))[last() - 1])}.xml</String>
 					</field>
 					<field name="openOtherLocationInBrowser">
 						<Boolean>false</Boolean>
@@ -249,8 +249,8 @@
 					</field>
 					<field name="cascadingStylesheets">
 						<String-array>
-							<String>file:/home/dario/git/page2tei/simplify-coordinates.xsl</String>
-							<String>file:/home/dario/git/page2tei/combine-continued.xsl</String>
+							<String>${pd}/../page2tei/simplify-coordinates.xsl</String>
+							<String>${pd}/../page2tei/combine-continued.xsl</String>
 						</String-array>
 					</field>
 					<field name="xslTransformer">
@@ -304,7 +304,7 @@
 						<Boolean>false</Boolean>
 					</field>
 					<field name="outputResource">
-						<String>tei.xml</String>
+						<String>${pd}/temp/page2tei/${xpath_eval((tokenize('${cfd}', '/'))[last() - 1])}.xml</String>
 					</field>
 					<field name="openOtherLocationInBrowser">
 						<Boolean>false</Boolean>
