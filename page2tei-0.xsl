@@ -562,14 +562,16 @@
       <xsl:if test="p:Baseline or $withoutBaseline">
          <xsl:variable name="text" select="p:TextEquiv/p:Unicode"/>
          <xsl:variable name="custom" as="text()*">
-           <xsl:for-each select="tokenize(@custom, '\}')">
-             <xsl:choose>
-               <xsl:when test="string-length() &lt; 1 or starts-with(., 'readingOrder') or starts-with(normalize-space(), 'structure')" />
-               <xsl:otherwise>
-                 <xsl:value-of select="normalize-space()"/>
-               </xsl:otherwise>
-             </xsl:choose>
-           </xsl:for-each>
+            <xsl:for-each select="tokenize(@custom, '\}')">
+               <xsl:variable name="content" select="substring-after(., '{') => normalize-space()" />
+               <xsl:variable name="name" select="substring-before(., ' {') => normalize-space()" />
+               <xsl:choose>
+                  <xsl:when test="$content = '' or $name = ('readingOrder', 'structure')" />
+                  <xsl:otherwise>
+                     <xsl:value-of select="normalize-space()"/>
+                  </xsl:otherwise>
+               </xsl:choose>
+            </xsl:for-each>
          </xsl:variable>
          <xsl:variable name="starts" as="map(*)">
            <xsl:map>
