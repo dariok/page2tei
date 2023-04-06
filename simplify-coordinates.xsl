@@ -19,40 +19,17 @@
       <xd:desc>evaluate coordinates and return bounding rectangle</xd:desc>
    </xd:doc>
    <xsl:template match="tei:zone/@points">
-      <xsl:variable name="x" as="xs:integer+" >
-         <xsl:variable name="pts" as="xs:integer+">
-            <xsl:variable name="t" select="local:pointsX(.)"/>
-            <xsl:sequence select="$t[1], $t[last()]"/>
-         </xsl:variable>
-         <xsl:variable name="sorted" as="xs:integer+">
-            <xsl:for-each select="$pts">
-               <xsl:sort select="xs:integer(current())" />
-               <xsl:value-of select="xs:integer(current())"/>
-            </xsl:for-each>
-         </xsl:variable>
-         <xsl:sequence select="$sorted[1], xs:integer($sorted[last()] - $sorted[1]), $sorted[last()]"/>
-      </xsl:variable>
-      <xsl:variable name="y" as="xs:integer+" >
-         <xsl:variable name="pts" as="xs:integer+">
-            <xsl:variable name="t" select="local:pointsY(.)"/>
-            <xsl:sequence select="$t[1], $t[last()]"/>
-         </xsl:variable>
-         <xsl:variable name="sorted" as="xs:integer+">
-            <xsl:for-each select="$pts">
-               <xsl:sort select="xs:integer(current())" />
-               <xsl:value-of select="xs:integer(current())"/>
-            </xsl:for-each>
-         </xsl:variable>
-         <xsl:sequence select="$sorted[1], xs:integer($sorted[last()] - $sorted[1]), $sorted[last()]"/>
-      </xsl:variable>
+      <xsl:variable name="x" select="local:pointsX(.)" />
+      <xsl:variable name="y" select="local:pointsY(.)" />
       <xsl:attribute name="points">
-         <xsl:value-of select="$x[1] || ',' || $y[1]"/>
+         <xsl:value-of select="min($x) || ',' || min($y)"/>
          <xsl:text> </xsl:text>
-         <xsl:value-of select="$x[last()] || ',' || $y[1]"/>
+         <xsl:value-of select="max($x) || ',' || min($y)"/>
          <xsl:text> </xsl:text>
-         <xsl:value-of select="$x[last()] || ',' || $y[last()]"/>
+         <xsl:value-of select="max($x) || ',' || max($y)"/>
          <xsl:text> </xsl:text>
-         <xsl:value-of select="$x[1] || ',' || $y[last()]"/>
+         <xsl:value-of select="min($x) || ',' || max($y)
+            "/>
       </xsl:attribute>
    </xsl:template>
    
@@ -68,7 +45,6 @@
          </xsl:when>
          <xsl:otherwise>
             <xsl:for-each select="tokenize($pts, ' ')">
-               <xsl:sort select="round(number(substring-before(current(), ',')))" />
                <xsl:value-of select="round(number(substring-before(current(), ',')))" />
             </xsl:for-each>
          </xsl:otherwise>
@@ -88,8 +64,7 @@
          <xsl:otherwise>
             <xsl:variable name="vals" select="tokenize($pts, ' ')"/>
             <xsl:for-each select="$vals">
-               <xsl:sort select="round(number(substring-before(current(), ',')))" />
-               <xsl:value-of select="round(number(substring-before(current(), ',')))" />
+               <xsl:value-of select="round(number(substring-after(current(), ',')))" />
             </xsl:for-each>
          </xsl:otherwise>
       </xsl:choose>
