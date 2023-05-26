@@ -732,7 +732,8 @@
             <xsl:variable name="t" select="tokenize(@o, ';')"/>
             <xsl:if test="count($t) &gt; 1">
                <xsl:for-each select="$t[. != '']">
-                  <xsl:map-entry key="normalize-space(substring-before(., ':'))"
+                  <xsl:map-entry
+                     key="normalize-space(substring-before(., ':'))"
                      select="normalize-space(substring-after(., ':'))"/>
                </xsl:for-each>
             </xsl:if>
@@ -866,6 +867,9 @@
                <xsl:if test="$custom('placeName') != ''">
                   <xsl:attribute name="key" select="replace($custom('placeName'), '\\u0020', ' ')"/>
                </xsl:if>
+               <xsl:if test="$custom?continued">
+                  <xsl:attribute name="continued" select="true()"/>
+               </xsl:if>
 
                <xsl:call-template name="elem">
                   <xsl:with-param name="elem" select="$elem"/>
@@ -881,6 +885,9 @@
             <xsl:element name="{$elName}">
                <xsl:if test="$rs">
                   <xsl:attribute name="type">org</xsl:attribute>
+               </xsl:if>
+               <xsl:if test="$custom?continued">
+                  <xsl:attribute name="continued" select="true()"/>
                </xsl:if>
                <xsl:call-template name="elem">
                   <xsl:with-param name="elem" select="$elem"/>
