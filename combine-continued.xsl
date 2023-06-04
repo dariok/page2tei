@@ -18,20 +18,20 @@
    <xd:doc>
       <xd:desc>Combine continued rs</xd:desc>
    </xd:doc>
-   <xsl:template match="tei:*[tei:rs[@continued]]" mode="continued">
+   <xsl:template match="tei:*[tei:*[@continued = 'true']]" mode="continued">
       <xsl:copy>
          <xsl:apply-templates select="@*" mode="continued" />
-         <xsl:for-each-group select="node()" group-starting-with="tei:rs[@continued eq 'true'
-            and preceding::text()[1]/normalize-space() != '']">
+         <xsl:for-each-group select="node()"
+               group-starting-with="tei:*[@continued eq 'true' and normalize-space(preceding::text()[1]) != '']">
             <xsl:choose>
                <xsl:when test="current-group()[1][@continued eq 'true']">
                   <xsl:variable name="final"
-                     select="(current-group()[1]/following-sibling::tei:rs[@continued][last()], current-group()[1]/following-sibling::tei:rs[1])[1]" />
-                  <xsl:variable name="last" select="index-of(current-group(), $final)"/>
-                  <rs>
+                     select="(current-group()[position() gt 1 and @continued = 'true'][last()], current-group()[4])[1]" />
+                  <xsl:variable name="last" select="index-of(current-group(), $final)[1]"/>
+                  <xsl:element name="{local-name()}">
                      <xsl:apply-templates select="@*" mode="continued" />
                      <xsl:apply-templates select="current-group()[position() le $last]" mode="rs-continued" />
-                  </rs>
+                  </xsl:element>
                   <xsl:apply-templates select="current-group()[position() gt $last]" mode="continued" />
                </xsl:when>
                <xsl:otherwise>
@@ -46,13 +46,15 @@
       <xd:desc>lb will be returned unaltered</xd:desc>
    </xd:doc>
    <xsl:template match="tei:lb" mode="rs-continued">
-      <xsl:sequence select="." />
+      <lb break="no">
+         <xsl:sequence select="@*" />
+      </lb>
    </xsl:template>
    
    <xd:doc>
       <xd:desc>For continued rs, only return the content</xd:desc>
    </xd:doc>
-   <xsl:template match="tei:rs[@continued]" mode="rs-continued">
+   <xsl:template match="*" mode="rs-continued">
       <xsl:apply-templates select="node()" mode="continued" />
    </xsl:template>
    

@@ -26,15 +26,16 @@
             <tei:lb facs="#facs_1_r3l16" n="N016"/><tei:date>Anno domini 1509 indictione XII die vero XXX mensis </tei:date>
             <tei:lb facs="#facs_1_r3l18" n="N017"/><tei:date>Julii</tei:date> pontificatu S etc. <tei:rs type="person" key="della Rovere, Giuliano ">Julii</tei:rs> pape II. anno sexto: Cum
             <tei:lb facs="#facs_1_r3l19" n="N018"/>sit quod dominus <tei:rs type="person">Judocus Forsbach</tei:rs> clericus <tei:rs type="place">Coloniensis</tei:rs>
-            <tei:lb facs="#facs_1_r3l20" n="N019"/>ad instantiam domini <tei:rs type="person">Bertholdi Baldrivini</tei:rs> clerici<tei:note type="footnote">eigentlich Verdensis: B.B. stammte aus Soltwedel, D. Verden, s. Schuchard, Rotanotare, S. 132.</tei:note>
-            <tei:lb facs="#facs_1_r3l21" n="N020"/><tei:rs type="place" key="Verdun">Verdunensis</tei:rs> diocesis<tei:note type="footnote">eigentlich Verdensis: B.B. stammte aus Soltwedel, D. Verden, s. Schuchard, Rotanotare, S. 132.</tei:note> iuxta permissa contentaverit D.
+            <tei:lb facs="#facs_1_r3l20" n="N019"/>ad instantiam domini <tei:rs type="person">Bertholdi Baldrivini</tei:rs> clerici<tei:note
+               type="footnote">eigentlich Verdensis: B.B. stammte aus Soltwedel, D. Verden, s. Schuchard, Rotanotare, S. 132.</tei:note>
+            <tei:lb facs="#facs_1_r3l21" n="N020"/><tei:rs type="place" key="Verdun">Verdunensis</tei:rs> diocesis<tei:note
+               type="footnote">eigentlich Verdensis: B.B. stammte aus Soltwedel, D. Verden, s. Schuchard, Rotanotare, S. 132.</tei:note> iuxta permissa contentaverit D.
             <tei:lb facs="#facs_1_r3l22" n="N021"/><tei:rs type="person">Jacobum Walpot</tei:rs> sanctissimi D. Julii papae II. <tei:rs type="work">cantorem</tei:rs> et
             <tei:lb facs="#facs_1_r3l23" n="N022"/><tei:rs type="work">capellanum</tei:rs> et effecerit quod idem D. Jacobus cesserit
             <tei:lb facs="#facs_1_r3l24" n="N023"/>juri sibi competenti in canonicatu et praebenda ecclesiae
             <tei:lb facs="#facs_1_r3l25" n="N024"/>Beate Mariae <tei:rs type="place">Halberstadensis</tei:rs> alias per obitum quondam <tei:rs
                type="person">Sanderi
-            <tei:lb facs="#facs_1_r3l26" n="N025"
-               />Bistorp</tei:rs> illorum ultimi possessoris vacantium, ita quod
+            <tei:lb facs="#facs_1_r3l26" n="N025" break="no" />Bistorp</tei:rs> illorum ultimi possessoris vacantium, ita quod
             <tei:lb facs="#facs_1_r3l27" n="N026"/>de eisdem sit domino <tei:rs type="person">Theodorico Wulff</tei:rs> clerico dicte(?)
             <tei:lb facs="#facs_1_r3l28" n="N027"/><tei:rs type="place">Verdunensis</tei:rs> diocesis pervisum seu concessum pervideri
          </tei:p>
@@ -66,15 +67,165 @@
             <lb facs="#facs_1_r2l3" n="N003"/>Schiffen /
             <lb facs="#facs_1_r2l4" n="N004"/>Auf welchen
             <lb facs="#facs_1_r2l5" n="N005"/><rs type="person">Ihro Excellenz,
-            <lb facs="#facs_1_r2l6" n="N006"/>(Tit.)
-            <lb facs="#facs_1_r2l7" n="N007"/>Herr Damian Hugo,
-            <lb facs="#facs_1_r2l8" n="N008"/>Graf von Virmond /
-            <lb facs="#facs_1_r2l9" n="N009"/>Der Röm. Kayserlichen Majestät Geheimer= und
-            <lb facs="#facs_1_r2l10" n="N010"/>Hof=Kriegs=Rath / General=Feld=Zeugmeister / und be=
-            <lb facs="#facs_1_r2l11" n="N011"/>stellter Obrister über ein Regiment zu Fuß / wie auch Groß=
-            <lb facs="#facs_1_r2l12" n="N012"/>Botschaffter nach der Ottomannischen Pforten</rs> / zu <rs type="person">Dero</rs> Ab=
+            <lb break="no" facs="#facs_1_r2l6" n="N006"/>(Tit.)
+            <lb break="no" facs="#facs_1_r2l7" n="N007"/>Herr Damian Hugo,
+            <lb break="no" facs="#facs_1_r2l8" n="N008"/>Graf von Virmond /
+            <lb break="no" facs="#facs_1_r2l9" n="N009"/>Der Röm. Kayserlichen Majestät Geheimer= und
+            <lb break="no" facs="#facs_1_r2l10" n="N010"/>Hof=Kriegs=Rath / General=Feld=Zeugmeister / und be=
+            <lb break="no" facs="#facs_1_r2l11" n="N011"/>stellter Obrister über ein Regiment zu Fuß / wie auch Groß=
+            <lb break="no" facs="#facs_1_r2l12" n="N012"/>Botschaffter nach der Ottomannischen Pforten</rs> / zu <rs type="person">Dero</rs> Ab=
             <lb facs="#facs_1_r2l13" n="N013"/>farth nacher <rs type="place">Constantinopel</rs> den <date when="1719-05-17">17. May 1719</date>.
             <lb facs="#facs_1_r2l14" n="N014"/>abgereiset.</ab>
+      </x:expect>
+   </x:scenario>
+   
+   <x:scenario label="T3: rs">
+      <x:context mode="continued" xml:space="preserve">
+         <div>
+            <p facs="#facs_2_r1">
+               <lb facs="#facs_2_r1l1" n="N001"/><hi rend="underlined:true; fontSize:0.0; kerning:0;">Verhandlungen.</hi>
+               <lb facs="#facs_2_r1l2" n="N002"/>Der hohe <rs type="person" key="Bach, von, Alexander">Curator</rs> der kaisl.
+               <lb facs="#facs_2_r1l3" n="N003"/>Akademie genehmigt mit Erlaß
+               <lb facs="#facs_2_r1l4" n="N004"/>vom 24. März <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice> die Abhaltung
+               <lb facs="#facs_2_r1l5" n="N005"/>einer feierlichen Sitzung am 30. Mai <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice>
+               <lb facs="#facs_2_r1l6" n="N006"/>Der <rs type="person" key="Schrötter, von, Anton">General-Secretär</rs> bringt
+               <lb facs="#facs_2_r1l7" n="N007"/>die Modalitäten der feierlichen Sit-
+               <lb facs="#facs_2_r1l8" n="N008"/>zung zur Sprache und bemerkt,
+               <lb facs="#facs_2_r1l9" n="N009"/>daß der 30. Mai auf den Pfingst-
+               <lb facs="#facs_2_r1l10" n="N010"/>samstag fällt.
+               <lb facs="#facs_2_r1l11" n="N011"/>Die Akademie entscheidet sich
+               <lb facs="#facs_2_r1l12" n="N012"/>für den 29. Mai und der Herr
+               <lb facs="#facs_2_r1l13" n="N013"/><rs type="person" key="Baumgartner, von, Andreas">Präsident</rs> übernimmt es, die Erlaub-
+               <lb facs="#facs_2_r1l14" n="N014"/>niß hiezu beim Herrn <rs type="person" key="Bach, von, Alexander" continued="true">Cura-</rs>
+               <lb facs="#facs_2_r1l15" n="N015"/><rs type="person" key="Bach, von, Alexander" continued="true">tor</rs> auszuwirken. In Betreff
+               <lb facs="#facs_2_r1l16" n="N016"/>der Locales entscheidet sich die
+               <lb facs="#facs_2_r1l17" n="N017"/>Akademie für den Landständi-
+               <lb facs="#facs_2_r1l18" n="N018"/>schen Saal, für dessen Einräu-
+               <lb facs="#facs_2_r1l19" n="N019"/>mung seiner Zeit mit Geneh-
+               <lb facs="#facs_2_r1l20" n="N020"/>migung des Herrn <rs type="person" key="Bach, von, Alexander">Curator</rs>s
+               <lb facs="#facs_2_r1l21" n="N021"/>die nöthigen Schritte zu machen
+               <lb facs="#facs_2_r1l22" n="N022"/>sind.
+               <lb facs="#facs_2_r1l23" n="N023"/>Das hohe <choice><expan>kaiserlich-königliche</expan><abbr>k. k.</abbr></choice> Ministerium
+               <lb facs="#facs_2_line_1542113768058_321" n="N024"/>129.
+               <lb facs="#facs_2_r1l25" n="N025"/>für Cultus <choice><expan>etcetera</expan><abbr>etc.</abbr></choice> hat mit Erlaß
+               <lb facs="#facs_2_r1l26" n="N026"/>vom 19. Jänner <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice> Zahl 9197/164 den
+               <lb facs="#facs_2_r1l27" n="N027"/>Wunsch ausgedrückt, zur weite-
+               <lb facs="#facs_2_r1l28" n="N028"/>ren Betheilung von Lehran-
+               <lb facs="#facs_2_r1l29" n="N029"/>stalten noch eine Anzahl aka-
+               <lb facs="#facs_2_r1l30" n="N030"/>demischer Druckschriften von der
+               <lb facs="#facs_2_r1l31" n="N031"/>Akademie zur Disposition zu er-
+               <lb facs="#facs_2_r1l32" n="N032"/>halten.</p>
+         </div>
+      </x:context>
+      <x:expect label="continued rs" xml:space="preserve">
+         <div>
+            <p facs="#facs_2_r1">
+               <lb facs="#facs_2_r1l1" n="N001"/><hi rend="underlined:true; fontSize:0.0; kerning:0;">Verhandlungen.</hi>
+               <lb facs="#facs_2_r1l2" n="N002"/>Der hohe <rs type="person" key="Bach, von, Alexander">Curator</rs> der kaisl.
+               <lb facs="#facs_2_r1l3" n="N003"/>Akademie genehmigt mit Erlaß
+               <lb facs="#facs_2_r1l4" n="N004"/>vom 24. März <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice> die Abhaltung
+               <lb facs="#facs_2_r1l5" n="N005"/>einer feierlichen Sitzung am 30. Mai <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice>
+               <lb facs="#facs_2_r1l6" n="N006"/>Der <rs type="person" key="Schrötter, von, Anton">General-Secretär</rs> bringt
+               <lb facs="#facs_2_r1l7" n="N007"/>die Modalitäten der feierlichen Sit-
+               <lb facs="#facs_2_r1l8" n="N008"/>zung zur Sprache und bemerkt,
+               <lb facs="#facs_2_r1l9" n="N009"/>daß der 30. Mai auf den Pfingst-
+               <lb facs="#facs_2_r1l10" n="N010"/>samstag fällt.
+               <lb facs="#facs_2_r1l11" n="N011"/>Die Akademie entscheidet sich
+               <lb facs="#facs_2_r1l12" n="N012"/>für den 29. Mai und der Herr
+               <lb facs="#facs_2_r1l13" n="N013"/><rs type="person" key="Baumgartner, von, Andreas">Präsident</rs> übernimmt es, die Erlaub-
+               <lb facs="#facs_2_r1l14" n="N014"/>niß hiezu beim Herrn <rs type="person" key="Bach, von, Alexander">Cura-
+               <lb facs="#facs_2_r1l15" n="N015" break="no"/>tor</rs> auszuwirken. In Betreff
+               <lb facs="#facs_2_r1l16" n="N016"/>der Locales entscheidet sich die
+               <lb facs="#facs_2_r1l17" n="N017"/>Akademie für den Landständi-
+               <lb facs="#facs_2_r1l18" n="N018"/>schen Saal, für dessen Einräu-
+               <lb facs="#facs_2_r1l19" n="N019"/>mung seiner Zeit mit Geneh-
+               <lb facs="#facs_2_r1l20" n="N020"/>migung des Herrn <rs type="person" key="Bach, von, Alexander">Curator</rs>s
+               <lb facs="#facs_2_r1l21" n="N021"/>die nöthigen Schritte zu machen
+               <lb facs="#facs_2_r1l22" n="N022"/>sind.
+               <lb facs="#facs_2_r1l23" n="N023"/>Das hohe <choice><expan>kaiserlich-königliche</expan><abbr>k. k.</abbr></choice> Ministerium
+               <lb facs="#facs_2_line_1542113768058_321" n="N024"/>129.
+               <lb facs="#facs_2_r1l25" n="N025"/>für Cultus <choice><expan>etcetera</expan><abbr>etc.</abbr></choice> hat mit Erlaß
+               <lb facs="#facs_2_r1l26" n="N026"/>vom 19. Jänner <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice> Zahl 9197/164 den
+               <lb facs="#facs_2_r1l27" n="N027"/>Wunsch ausgedrückt, zur weite-
+               <lb facs="#facs_2_r1l28" n="N028"/>ren Betheilung von Lehran-
+               <lb facs="#facs_2_r1l29" n="N029"/>stalten noch eine Anzahl aka-
+               <lb facs="#facs_2_r1l30" n="N030"/>demischer Druckschriften von der
+               <lb facs="#facs_2_r1l31" n="N031"/>Akademie zur Disposition zu er-
+               <lb facs="#facs_2_r1l32" n="N032"/>halten.</p>
+         </div>
+      </x:expect>
+   </x:scenario>
+   
+   <x:scenario label="T4: *Name">
+      <x:context mode="continued" xml:space="preserve">
+         <p facs="#facs_2_r1">
+            <lb facs="#facs_2_r1l1" n="N001"/><hi rend="underlined:true; fontSize:0.0; kerning:0;">Verhandlungen.</hi>
+            <lb facs="#facs_2_r1l2" n="N002"/>Der hohe <persName key="Bach, von, Alexander">Curator</persName> der kaisl.
+            <lb facs="#facs_2_r1l3" n="N003"/>Akademie genehmigt mit Erlaß
+            <lb facs="#facs_2_r1l4" n="N004"/>vom 24. März <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice> die Abhaltung
+            <lb facs="#facs_2_r1l5" n="N005"/>einer feierlichen Sitzung am 30. Mai <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice>
+            <lb facs="#facs_2_r1l6" n="N006"/>Der <persName key="Schrötter, von, Anton">General-Secretär</persName> bringt
+            <lb facs="#facs_2_r1l7" n="N007"/>die Modalitäten der feierlichen Sit-
+            <lb facs="#facs_2_r1l8" n="N008"/>zung zur Sprache und bemerkt,
+            <lb facs="#facs_2_r1l9" n="N009"/>daß der 30. Mai auf den Pfingst-
+            <lb facs="#facs_2_r1l10" n="N010"/>samstag fällt.
+            <lb facs="#facs_2_r1l11" n="N011"/>Die Akademie entscheidet sich
+            <lb facs="#facs_2_r1l12" n="N012"/>für den 29. Mai und der Herr
+            <lb facs="#facs_2_r1l13" n="N013"/><persName key="Baumgartner, von, Andreas">Präsident</persName> übernimmt es, die Erlaub-
+            <lb facs="#facs_2_r1l14" n="N014"/>niß hiezu beim Herrn <persName key="Bach, von, Alexander" continued="true">Cura-</persName>
+            <lb facs="#facs_2_r1l15" n="N015"/><persName key="Bach, von, Alexander" continued="true">tor</persName> auszuwirken. In Betreff
+            <lb facs="#facs_2_r1l16" n="N016"/>der Locales entscheidet sich die
+            <lb facs="#facs_2_r1l17" n="N017"/>Akademie für den Landständi-
+            <lb facs="#facs_2_r1l18" n="N018"/>schen Saal, für dessen Einräu-
+            <lb facs="#facs_2_r1l19" n="N019"/>mung seiner Zeit mit Geneh-
+            <lb facs="#facs_2_r1l20" n="N020"/>migung des Herrn <persName key="Bach, von, Alexander">Curator</persName>s
+            <lb facs="#facs_2_r1l21" n="N021"/>die nöthigen Schritte zu machen
+            <lb facs="#facs_2_r1l22" n="N022"/>sind.
+            <lb facs="#facs_2_r1l23" n="N023"/>Das hohe <choice><expan>kaiserlich-königliche</expan><abbr>k. k.</abbr></choice> Ministerium
+            <lb facs="#facs_2_line_1542113768058_321" n="N024"/>129.
+            <lb facs="#facs_2_r1l25" n="N025"/>für Cultus <choice><expan>etcetera</expan><abbr>etc.</abbr></choice> hat mit Erlaß
+            <lb facs="#facs_2_r1l26" n="N026"/>vom 19. Jänner <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice> Zahl 9197/164 den
+            <lb facs="#facs_2_r1l27" n="N027"/>Wunsch ausgedrückt, zur weite-
+            <lb facs="#facs_2_r1l28" n="N028"/>ren Betheilung von Lehran-
+            <lb facs="#facs_2_r1l29" n="N029"/>stalten noch eine Anzahl aka-
+            <lb facs="#facs_2_r1l30" n="N030"/>demischer Druckschriften von der
+            <lb facs="#facs_2_r1l31" n="N031"/>Akademie zur Disposition zu er-
+            <lb facs="#facs_2_r1l32" n="N032"/>halten.</p>
+      </x:context>
+      <x:expect label="continued rs" xml:space="preserve">
+         <p facs="#facs_2_r1">
+            <lb facs="#facs_2_r1l1" n="N001"/><hi rend="underlined:true; fontSize:0.0; kerning:0;">Verhandlungen.</hi>
+            <lb facs="#facs_2_r1l2" n="N002"/>Der hohe <persName key="Bach, von, Alexander">Curator</persName> der kaisl.
+            <lb facs="#facs_2_r1l3" n="N003"/>Akademie genehmigt mit Erlaß
+            <lb facs="#facs_2_r1l4" n="N004"/>vom 24. März <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice> die Abhaltung
+            <lb facs="#facs_2_r1l5" n="N005"/>einer feierlichen Sitzung am 30. Mai <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice>
+            <lb facs="#facs_2_r1l6" n="N006"/>Der <persName key="Schrötter, von, Anton">General-Secretär</persName> bringt
+            <lb facs="#facs_2_r1l7" n="N007"/>die Modalitäten der feierlichen Sit-
+            <lb facs="#facs_2_r1l8" n="N008"/>zung zur Sprache und bemerkt,
+            <lb facs="#facs_2_r1l9" n="N009"/>daß der 30. Mai auf den Pfingst-
+            <lb facs="#facs_2_r1l10" n="N010"/>samstag fällt.
+            <lb facs="#facs_2_r1l11" n="N011"/>Die Akademie entscheidet sich
+            <lb facs="#facs_2_r1l12" n="N012"/>für den 29. Mai und der Herr
+            <lb facs="#facs_2_r1l13" n="N013"/><persName key="Baumgartner, von, Andreas">Präsident</persName> übernimmt es, die Erlaub-
+            <lb facs="#facs_2_r1l14" n="N014"/>niß hiezu beim Herrn <persName key="Bach, von, Alexander">Cura-
+            <lb facs="#facs_2_r1l15" n="N015" break="no"/>tor</persName> auszuwirken. In Betreff
+            <lb facs="#facs_2_r1l16" n="N016"/>der Locales entscheidet sich die
+            <lb facs="#facs_2_r1l17" n="N017"/>Akademie für den Landständi-
+            <lb facs="#facs_2_r1l18" n="N018"/>schen Saal, für dessen Einräu-
+            <lb facs="#facs_2_r1l19" n="N019"/>mung seiner Zeit mit Geneh-
+            <lb facs="#facs_2_r1l20" n="N020"/>migung des Herrn <persName key="Bach, von, Alexander">Curator</persName>s
+            <lb facs="#facs_2_r1l21" n="N021"/>die nöthigen Schritte zu machen
+            <lb facs="#facs_2_r1l22" n="N022"/>sind.
+            <lb facs="#facs_2_r1l23" n="N023"/>Das hohe <choice><expan>kaiserlich-königliche</expan><abbr>k. k.</abbr></choice> Ministerium
+            <lb facs="#facs_2_line_1542113768058_321" n="N024"/>129.
+            <lb facs="#facs_2_r1l25" n="N025"/>für Cultus <choice><expan>etcetera</expan><abbr>etc.</abbr></choice> hat mit Erlaß
+            <lb facs="#facs_2_r1l26" n="N026"/>vom 19. Jänner <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice> Zahl 9197/164 den
+            <lb facs="#facs_2_r1l27" n="N027"/>Wunsch ausgedrückt, zur weite-
+            <lb facs="#facs_2_r1l28" n="N028"/>ren Betheilung von Lehran-
+            <lb facs="#facs_2_r1l29" n="N029"/>stalten noch eine Anzahl aka-
+            <lb facs="#facs_2_r1l30" n="N030"/>demischer Druckschriften von der
+            <lb facs="#facs_2_r1l31" n="N031"/>Akademie zur Disposition zu er-
+            <lb facs="#facs_2_r1l32" n="N032"/>halten.</p>
       </x:expect>
    </x:scenario>
 </x:description>
