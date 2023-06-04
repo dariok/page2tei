@@ -9,6 +9,7 @@
    
    <x:param name="rs" select="true()" />
    <x:param name="tokenize" select="false()" />
+   <x:param name="combine" select="false()" />
    
    <x:scenario label="test 1 (WD)">
       <x:scenario label="17320213 - p.2">
@@ -779,6 +780,75 @@
             <p facs="#facs_25_r4">
                <lb facs="#facs_25_r4l1" n="N001"/><w>Remisschreiben</w> <w>des</w> <rs type="org" continued="true"><w>Frauenklosters</w></rs>
                <lb facs="#facs_25_r4l2" n="N002"/><rs type="org" continued="true"><choice><expan><w>Sankt</w></expan><abbr
+                  ><w>St</w><pc>.</pc></abbr></choice> <w>Elisabeth</w> <w>zu</w> <rs type="place"><w>Brixen</w></rs></rs> <w>mit</w> <w>dem</w> 
+               <lb facs="#facs_25_r4l3" n="N003"/><choice><expan><w>Ansuchen</w></expan><abbr
+                  ><w>Ansuch</w></abbr></choice><pc>,</pc> <w>daß</w> <w>der</w> <w>auf</w> <w>den</w> <choice><expan><w>alldaigen</w></expan><abbr
+                  ><w>alldaig</w></abbr></choice></p>
+         </div>
+      </body>
+   </text>
+</TEI></x:expect>
+   </x:scenario>
+   
+   <!-- This is for integration testing only; see tokenize.xspec for specific tests -->
+   <x:scenario label="T12: combine-continued">
+      <x:context href="mets/mets-t111.xml">
+         <x:param name="combine" select="true()" />
+      </x:context>
+      <x:expect label="." xml:space="preserve"
+><TEI>
+   <teiHeader>...</teiHeader>
+   <facsimile>...</facsimile>
+   <text>
+      <body>
+         <div>
+            <pb facs="#facs_25" n="25" xml:id="img_0025" />
+            <head facs="#facs_25_r2">
+               <lb facs="#facs_25_r2l1" n="N001"/><choice><expan/><abbr>H&apos;r</abbr></choice> <rs
+                  type="person"><choice><expan>Herr</expan><abbr>v̄</abbr></choice> Kuglern.</rs></head>
+         </div>
+         <div>
+            <head facs="#facs_25_r3">
+               <lb facs="#facs_25_r3l1" n="N001"/><choice><expan>Numero</expan><abbr>N<hi
+                  style="vertical-align: superscript;">o</hi></abbr></choice> 786.</head>
+            <p facs="#facs_25_r4">
+               <lb facs="#facs_25_r4l1" n="N001"/>Remisschreiben des <rs type="org">Frauenklosters
+               <lb facs="#facs_25_r4l2" n="N002"/><choice><expan>Sankt</expan><abbr
+                  >St.</abbr></choice> Elisabeth zu <rs type="place">Brixen</rs></rs> mit dem 
+               <lb facs="#facs_25_r4l3" n="N003"/><choice><expan>Ansuchen</expan><abbr
+                  >Ansuch</abbr></choice>, daß der auf den <choice><expan>alldaigen</expan><abbr
+                  >alldaig</abbr></choice></p>
+         </div>
+      </body>
+   </text>
+</TEI></x:expect>
+   </x:scenario>
+   
+   <!-- This is for integration testing only; see tokenize.xspec for specific tests -->
+   <x:scenario label="T11: tokenization">
+      <x:context href="mets/mets-t111.xml">
+         <x:param name="tokenize" select="true()" />
+         <x:param name="combine" select="true()" />
+      </x:context>
+      <x:expect label="." xml:space="preserve"
+><TEI>
+   <teiHeader>...</teiHeader>
+   <facsimile>...</facsimile>
+   <text>
+      <body>
+         <div>
+            <pb facs="#facs_25" n="25" xml:id="img_0025" />
+            <head facs="#facs_25_r2">
+               <lb facs="#facs_25_r2l1" n="N001"/><choice><expan/><abbr><w>H&apos;r</w></abbr></choice> <rs
+                  type="person"><choice><expan><w>Herr</w></expan><abbr><w>v̄</w></abbr></choice> <w>Kuglern</w><pc>.</pc></rs></head>
+         </div>
+         <div>
+            <head facs="#facs_25_r3">
+               <lb facs="#facs_25_r3l1" n="N001"/><choice><expan><w>Numero</w></expan><abbr><w>N</w><hi
+                  style="vertical-align: superscript;"><w>o</w></hi></abbr></choice> <num>786</num><pc>.</pc></head>
+            <p facs="#facs_25_r4">
+               <lb facs="#facs_25_r4l1" n="N001"/><w>Remisschreiben</w> <w>des</w> <rs type="org"><w>Frauenklosters</w>
+               <lb facs="#facs_25_r4l2" n="N002"/><choice><expan><w>Sankt</w></expan><abbr
                   ><w>St</w><pc>.</pc></abbr></choice> <w>Elisabeth</w> <w>zu</w> <rs type="place"><w>Brixen</w></rs></rs> <w>mit</w> <w>dem</w> 
                <lb facs="#facs_25_r4l3" n="N003"/><choice><expan><w>Ansuchen</w></expan><abbr
                   ><w>Ansuch</w></abbr></choice><pc>,</pc> <w>daß</w> <w>der</w> <w>auf</w> <w>den</w> <choice><expan><w>alldaigen</w></expan><abbr

@@ -26,6 +26,7 @@
       <xd:desc>Whether to combine entities over line breaks</xd:desc>
    </xd:doc>
    <xsl:param name="combine" select="false()"/>
+   <xsl:include href="combine-continued.xsl" />
 
    <xd:doc>
       <xd:desc>If true(), region types that correspond to valid TEI elements will be returned as
@@ -159,13 +160,23 @@
                   <xsl:text>
          </xsl:text>
                   <div xmlns="http://www.tei-c.org/ns/1.0">
+                     <xsl:variable name="combined">
+                        <xsl:choose>
+                           <xsl:when test="$combine">
+                              <xsl:apply-templates select="current-group()" mode="continued" />
+                           </xsl:when>
+                           <xsl:otherwise>
+                              <xsl:copy-of select="current-group()" />
+                           </xsl:otherwise>
+                        </xsl:choose>
+                     </xsl:variable>
                      <xsl:variable name="tokenized">
                         <xsl:choose>
                            <xsl:when test="$tokenize">
-                              <xsl:apply-templates select="current-group()" mode="tokenize" />
+                              <xsl:apply-templates select="$combined" mode="tokenize" />
                            </xsl:when>
                            <xsl:otherwise>
-                              <xsl:copy-of select="current-group()"/>
+                              <xsl:copy-of select="$combined" />
                            </xsl:otherwise>
                         </xsl:choose>
                      </xsl:variable>

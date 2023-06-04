@@ -5,7 +5,7 @@
    stylesheet="../combine-continued.xsl">
    
    <x:scenario label="T1">
-      <x:context xml:space="preserve">
+      <x:context xml:space="preserve" mode="continued">
          <tei:p facs="#facs_1_r3">
             <tei:lb facs="#facs_1_r3l16" n="N016"/><tei:date>Anno domini 1509 indictione XII die vero XXX mensis </tei:date>
             <tei:lb facs="#facs_1_r3l18" n="N017"/><tei:date>Julii</tei:date> pontificatu S etc. <tei:rs type="person" key="della Rovere, Giuliano ">Julii</tei:rs> pape II. anno sexto: Cum
@@ -42,7 +42,7 @@
    </x:scenario>
    
    <x:scenario label="T2">
-      <x:context xml:space="preserve">
+      <x:context xml:space="preserve" mode="continued">
          <ab facs="#facs_1_r2">
             <lb facs="#facs_1_r2l1" n="N001"/>Specification
             <lb facs="#facs_1_r2l2" n="N002"/>Derjenigen
