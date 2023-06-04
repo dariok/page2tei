@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns3:mets xmlns:ns3="http://www.loc.gov/METS/" xmlns:ns2="http://www.w3.org/1999/xlink">
+   <ns3:fileSec>
+      <ns3:fileGrp ID="MASTER">
+         <ns3:fileGrp ID="PAGEXML">
+            <ns3:file ID="PAGEXML_25" SEQ="25" MIMETYPE="application/xml" CREATED="2018-05-17T14:37:25.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
+               <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/HS_115_25_object_128293-3.xml"/>
+            </ns3:file>
+         </ns3:fileGrp>
+      </ns3:fileGrp>
+   </ns3:fileSec>
+</ns3:mets>

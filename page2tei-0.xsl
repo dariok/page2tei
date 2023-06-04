@@ -20,7 +20,8 @@
       <xd:desc>Whether to run white space tokenization</xd:desc>
    </xd:doc>
    <xsl:param name="tokenize" select="false()"/>
-
+   <xsl:include href="tokenize.xsl" />
+   
    <xd:doc>
       <xd:desc>Whether to combine entities over line breaks</xd:desc>
    </xd:doc>
@@ -98,37 +99,95 @@
          <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file" mode="text" />
       </div>
    </xsl:variable>
+   
    <xd:doc>
       <xd:desc>Entry point: start at the top of METS.xml</xd:desc>
    </xd:doc>
-   <xsl:template match="/mets:mets" xml:space="preserve">
-<TEI>
-   <teiHeader>
-      <fileDesc>
-         <titleStmt>
-            <xsl:apply-templates select="mets:amdSec" mode="titleStmt"/>
-         </titleStmt>
-         <seriesStmt>
-            <xsl:apply-templates select="mets:amdSec" mode="seriesStmt"/>
-         </seriesStmt>
-         <sourceDesc>
-            <bibl>
-               <xsl:apply-templates select="mets:amdSec" mode="sourceDesc"/>
-            </bibl>
-         </sourceDesc>
-      </fileDesc>
-   </teiHeader>
-   <facsimile><xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file" mode="facsimile"/>
-   </facsimile>
-   <text>
-      <body><xsl:for-each-group select="$make_div//*[local-name() = 'div']/*" group-starting-with="*[local-name() = 'head']">
-         <div xmlns="http://www.tei-c.org/ns/1.0">
-           <xsl:copy-of select="current-group()"/>
-         </div>
-      </xsl:for-each-group></body>
-   </text>
-</TEI>
-</xsl:template>
+   <xsl:template match="/mets:mets">
+      <TEI>
+         <xsl:text>
+   </xsl:text>
+         <teiHeader>
+            <xsl:text>
+      </xsl:text>
+            <fileDesc>
+               <xsl:text>
+         </xsl:text>
+               <titleStmt>
+                  <xsl:apply-templates select="mets:amdSec" mode="titleStmt"/>
+               </titleStmt>
+               <xsl:text>
+         </xsl:text>
+               <seriesStmt>
+                  <xsl:apply-templates select="mets:amdSec" mode="seriesStmt"/>
+               </seriesStmt>
+               <xsl:text>
+         </xsl:text>
+               <sourceDesc>
+                  <xsl:text>
+            </xsl:text>
+                  <bibl>
+                     <xsl:apply-templates select="mets:amdSec" mode="sourceDesc"/>
+                  </bibl>
+                  <xsl:text>
+         </xsl:text>
+               </sourceDesc>
+               <xsl:text>
+      </xsl:text>
+            </fileDesc>
+            <xsl:text>
+   </xsl:text>
+         </teiHeader>
+         <xsl:text>
+   </xsl:text>
+         <facsimile>
+            <xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file" mode="facsimile"/>
+            <xsl:text>
+   </xsl:text>
+         </facsimile>
+         <xsl:text>
+   </xsl:text>
+         <text>
+            <xsl:text>
+      </xsl:text>
+            <body>
+               <xsl:for-each-group
+                     select="$make_div//*[local-name() = 'div']/*"
+                     group-starting-with="*[local-name() = 'pb' and following-sibling::*[1][local-name() = 'head']]
+                        | *[local-name() = 'head' and not(preceding-sibling::*[1][local-name() = 'pb'])]"
+               >
+                  <xsl:text>
+         </xsl:text>
+                  <div xmlns="http://www.tei-c.org/ns/1.0">
+                     <xsl:variable name="tokenized">
+                        <xsl:choose>
+                           <xsl:when test="$tokenize">
+                              <xsl:apply-templates select="current-group()" mode="tokenize" />
+                           </xsl:when>
+                           <xsl:otherwise>
+                              <xsl:copy-of select="current-group()"/>
+                           </xsl:otherwise>
+                        </xsl:choose>
+                     </xsl:variable>
+                     <xsl:for-each select="$tokenized/*">
+                        <xsl:text>
+            </xsl:text>
+                        <xsl:sequence select="." />
+            </xsl:for-each>
+                        <xsl:text>
+         </xsl:text>
+                  </div>
+               </xsl:for-each-group>
+               <xsl:text>
+      </xsl:text>
+            </body>
+            <xsl:text>
+   </xsl:text>
+         </text>
+         <xsl:text>
+</xsl:text>
+      </TEI>
+   </xsl:template>
 
    <!-- create teiHeader from METS and (if present) included Transkribus Meta data -->
    <xd:doc>
@@ -406,8 +465,11 @@
 
       <xsl:choose>
          <xsl:when test="not(p:TextLine or $withoutTextline)"/>
-         <xsl:when test="'heading' = (@type, $custom?structure?type)" xml:space="preserve">
-            <head facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine"/></head></xsl:when>
+         <xsl:when test="'heading' = (@type, $custom?structure?type)">
+            <head facs="#facs_{$numCurr}_{@id}">
+               <xsl:apply-templates select="p:TextLine"/>
+            </head>
+         </xsl:when>
          <xsl:when test="'caption' = (@type, $custom?structure?type)">
             <figure>
                <head facs="#facs_{$numCurr}_{@id}">
@@ -415,12 +477,21 @@
                </head>
             </figure>
          </xsl:when>
-         <xsl:when test="'header' = (@type, $custom?structure?type)" xml:space="preserve">
-            <fw type="header" place="top" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine"/></fw></xsl:when>
-         <xsl:when test="'catch-word' = (@type, $custom?structure?type)" xml:space="preserve">
-            <fw type="catch" place="bottom" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine"/></fw></xsl:when>
-         <xsl:when test="'signature-mark' = (@type, $custom?structure?type)" xml:space="preserve">
-            <fw place="bottom" type="sig" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine"/></fw></xsl:when>
+         <xsl:when test="'header' = (@type, $custom?structure?type)">
+            <fw type="header" place="top" facs="#facs_{$numCurr}_{@id}">
+               <xsl:apply-templates select="p:TextLine"/>
+            </fw>
+         </xsl:when>
+         <xsl:when test="'catch-word' = (@type, $custom?structure?type)">
+            <fw type="catch" place="bottom" facs="#facs_{$numCurr}_{@id}">
+               <xsl:apply-templates select="p:TextLine"/>
+            </fw>
+         </xsl:when>
+         <xsl:when test="'signature-mark' = (@type, $custom?structure?type)">
+            <fw place="bottom" type="sig" facs="#facs_{$numCurr}_{@id}">
+               <xsl:apply-templates select="p:TextLine"/>
+            </fw>
+         </xsl:when>
          <xsl:when test="'marginalia' = (@type, $custom?structure?type)">
             <xsl:variable name="side">
                <xsl:choose>
@@ -448,8 +519,11 @@
                <xsl:apply-templates select="p:TextLine"/>
             </note>
          </xsl:when>
-         <xsl:when test="'footer' = (@type, $custom?structure?type)" xml:space="preserve">
-            <fw type="footer" place="bottom" facs="#facs_{$numCurr}_{@id}"><xsl:apply-templates select="p:TextLine"/></fw></xsl:when>
+         <xsl:when test="'footer' = (@type, $custom?structure?type)">
+            <fw type="footer" place="bottom" facs="#facs_{$numCurr}_{@id}">
+               <xsl:apply-templates select="p:TextLine"/>
+            </fw>
+         </xsl:when>
          <xsl:when test="'page-number' = (@type, $custom?structure?type)">
             <fw type="page-number" facs="#facs_{$numCurr}_{@id}">
                <xsl:attribute name="place">
@@ -703,7 +777,7 @@
 
          <!-- TODO parameter to create <l>...</l> - #1 -->
          <xsl:text>
-                    </xsl:text>
+               </xsl:text>
          <lb facs="#facs_{$numCurr}_{@id}">
             <xsl:if test="@custom">
                <xsl:variable name="pos"

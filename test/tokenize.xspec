@@ -4,7 +4,7 @@
    stylesheet="../tokenize.xsl">
    
    <x:scenario label="T1">
-      <x:context xml:space="preserve">
+      <x:context xml:space="preserve" mode="tokenize">
          <div>
             <head facs="#facs_212_TextRegion_1664725046222_8633">
                <lb facs="#facs_212_r1l1" n="N001"/>Epilog</head>

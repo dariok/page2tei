@@ -14,7 +14,7 @@
       </xd:desc>
    </xd:doc>
    
-   <xsl:template match="tei:div/*[descendant::text()]">
+   <xsl:template match="tei:div/*[descendant::text()]" mode="tokenize">
       <xsl:copy>
          <xsl:sequence select="@*" />
          
@@ -29,7 +29,7 @@
    <xd:doc>
       <xd:desc>Basic white space tokenisation: it’s a word if it’s not a pc or a num</xd:desc>
    </xd:doc>
-   <xsl:template match="text()" mode="tokenize" priority="2">
+   <xsl:template match="text()[normalize-space() != '']" mode="tokenize" priority="2">
       <xsl:analyze-string select="." regex="\s+">
          <xsl:matching-substring>
             <xsl:sequence select="." />
@@ -107,7 +107,7 @@
    <xd:doc>
       <xd:desc>Default</xd:desc>
    </xd:doc>
-   <xsl:template match="@* | node()" mode="#all">
+   <xsl:template match="@* | node()" mode="tokenize combine">
       <xsl:copy>
          <xsl:apply-templates select="@* | node()" mode="#current" />
       </xsl:copy>
