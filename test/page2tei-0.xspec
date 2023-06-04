@@ -10,7 +10,8 @@
    <x:param name="rs" select="true()" />
    <x:param name="tokenize" select="false()" />
    <x:param name="combine" select="false()" />
-   <x:param name="ab" select="false()"/>
+   <x:param name="ab" select="false()" />
+   <x:param name="word-coordinates" select="false()"/>
    
    <x:scenario label="test 1 (WD)">
       <x:scenario label="17320213 - p.2">
@@ -463,151 +464,6 @@
       </x:scenario>
    </x:scenario>
    
-   <x:scenario label="continued">
-      <x:scenario label="T5.1a: rs">
-         <x:call template="continuation">
-            <x:param name="context">
-               <p facs="#facs_2_r1" xml:space="preserve">
-                  <lb facs="#facs_2_r1l1" n="N001"/><hi rend="underlined:true; fontSize:0.0; kerning:0;">Verhandlungen.</hi>
-                  <lb facs="#facs_2_r1l2" n="N002"/>Der hohe <rs type="person" key="Bach, von, Alexander">Curator</rs> der kaisl.
-                  <lb facs="#facs_2_r1l3" n="N003"/>Akademie genehmigt mit Erlaß
-                  <lb facs="#facs_2_r1l4" n="N004"/>vom 24. März <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice> die Abhaltung
-                  <lb facs="#facs_2_r1l5" n="N005"/>einer feierlichen Sitzung am 30. Mai <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice>
-                  <lb facs="#facs_2_r1l6" n="N006"/>Der <rs type="person" key="Schrötter, von, Anton">General-Secretär</rs> bringt
-                  <lb facs="#facs_2_r1l7" n="N007"/>die Modalitäten der feierlichen Sit-
-                  <lb facs="#facs_2_r1l8" n="N008"/>zung zur Sprache und bemerkt,
-                  <lb facs="#facs_2_r1l9" n="N009"/>daß der 30. Mai auf den Pfingst-
-                  <lb facs="#facs_2_r1l10" n="N010"/>samstag fällt.
-                  <lb facs="#facs_2_r1l11" n="N011"/>Die Akademie entscheidet sich
-                  <lb facs="#facs_2_r1l12" n="N012"/>für den 29. Mai und der Herr
-                  <lb facs="#facs_2_r1l13" n="N013"/><rs type="person" key="Baumgartner, von, Andreas">Präsident</rs> übernimmt es, die Erlaub-
-                  <lb facs="#facs_2_r1l14" n="N014"/>niß hiezu beim Herrn <rs type="person" key="Bach, von, Alexander" continued="true">Cura-</rs>
-                  <lb facs="#facs_2_r1l15" n="N015"/><rs type="person" key="Bach, von, Alexander" continued="true">tor</rs> auszuwirken. In Betreff
-                  <lb facs="#facs_2_r1l16" n="N016"/>der Locales entscheidet sich die
-                  <lb facs="#facs_2_r1l17" n="N017"/>Akademie für den Landständi-
-                  <lb facs="#facs_2_r1l18" n="N018"/>schen Saal, für dessen Einräu-
-                  <lb facs="#facs_2_r1l19" n="N019"/>mung seiner Zeit mit Geneh-
-                  <lb facs="#facs_2_r1l20" n="N020"/>migung des Herrn <rs type="person" key="Bach, von, Alexander">Curator</rs>s
-                  <lb facs="#facs_2_r1l21" n="N021"/>die nöthigen Schritte zu machen
-                  <lb facs="#facs_2_r1l22" n="N022"/>sind.
-                  <lb facs="#facs_2_r1l23" n="N023"/>Das hohe <choice><expan>kaiserlich-königliche</expan><abbr>k. k.</abbr></choice> Ministerium
-                  <lb facs="#facs_2_line_1542113768058_321" n="N024"/>129.
-                  <lb facs="#facs_2_r1l25" n="N025"/>für Cultus <choice><expan>etcetera</expan><abbr>etc.</abbr></choice> hat mit Erlaß
-                  <lb facs="#facs_2_r1l26" n="N026"/>vom 19. Jänner <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice> Zahl 9197/164 den
-                  <lb facs="#facs_2_r1l27" n="N027"/>Wunsch ausgedrückt, zur weite-
-                  <lb facs="#facs_2_r1l28" n="N028"/>ren Betheilung von Lehran-
-                  <lb facs="#facs_2_r1l29" n="N029"/>stalten noch eine Anzahl aka-
-                  <lb facs="#facs_2_r1l30" n="N030"/>demischer Druckschriften von der
-                  <lb facs="#facs_2_r1l31" n="N031"/>Akademie zur Disposition zu er-
-                  <lb facs="#facs_2_r1l32" n="N032"/>halten.</p>
-            </x:param>
-         </x:call>
-         <x:expect label="continued rs" xml:space="preserve">
-                  <lb facs="#facs_2_r1l1" n="N001"/><hi rend="underlined:true; fontSize:0.0; kerning:0;">Verhandlungen.</hi>
-                  <lb facs="#facs_2_r1l2" n="N002"/>Der hohe <rs type="person" key="Bach, von, Alexander">Curator</rs> der kaisl.
-                  <lb facs="#facs_2_r1l3" n="N003"/>Akademie genehmigt mit Erlaß
-                  <lb facs="#facs_2_r1l4" n="N004"/>vom 24. März <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice> die Abhaltung
-                  <lb facs="#facs_2_r1l5" n="N005"/>einer feierlichen Sitzung am 30. Mai <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice>
-                  <lb facs="#facs_2_r1l6" n="N006"/>Der <rs type="person" key="Schrötter, von, Anton">General-Secretär</rs> bringt
-                  <lb facs="#facs_2_r1l7" n="N007"/>die Modalitäten der feierlichen Sit-
-                  <lb facs="#facs_2_r1l8" n="N008"/>zung zur Sprache und bemerkt,
-                  <lb facs="#facs_2_r1l9" n="N009"/>daß der 30. Mai auf den Pfingst-
-                  <lb facs="#facs_2_r1l10" n="N010"/>samstag fällt.
-                  <lb facs="#facs_2_r1l11" n="N011"/>Die Akademie entscheidet sich
-                  <lb facs="#facs_2_r1l12" n="N012"/>für den 29. Mai und der Herr
-                  <lb facs="#facs_2_r1l13" n="N013"/><rs type="person" key="Baumgartner, von, Andreas">Präsident</rs> übernimmt es, die Erlaub-
-                  <lb facs="#facs_2_r1l14" n="N014"/>niß hiezu beim Herrn <rs type="person" key="Bach, von, Alexander">Cura-<lb facs="#facs_2_r1l15" n="N015" break="no"/>tor</rs> auszuwirken. In Betreff
-                  <lb facs="#facs_2_r1l16" n="N016"/>der Locales entscheidet sich die
-                  <lb facs="#facs_2_r1l17" n="N017"/>Akademie für den Landständi-
-                  <lb facs="#facs_2_r1l18" n="N018"/>schen Saal, für dessen Einräu-
-                  <lb facs="#facs_2_r1l19" n="N019"/>mung seiner Zeit mit Geneh-
-                  <lb facs="#facs_2_r1l20" n="N020"/>migung des Herrn <rs type="person" key="Bach, von, Alexander">Curator</rs>s
-                  <lb facs="#facs_2_r1l21" n="N021"/>die nöthigen Schritte zu machen
-                  <lb facs="#facs_2_r1l22" n="N022"/>sind.
-                  <lb facs="#facs_2_r1l23" n="N023"/>Das hohe <choice><expan>kaiserlich-königliche</expan><abbr>k. k.</abbr></choice> Ministerium
-                  <lb facs="#facs_2_line_1542113768058_321" n="N024"/>129.
-                  <lb facs="#facs_2_r1l25" n="N025"/>für Cultus <choice><expan>etcetera</expan><abbr>etc.</abbr></choice> hat mit Erlaß
-                  <lb facs="#facs_2_r1l26" n="N026"/>vom 19. Jänner <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice> Zahl 9197/164 den
-                  <lb facs="#facs_2_r1l27" n="N027"/>Wunsch ausgedrückt, zur weite-
-                  <lb facs="#facs_2_r1l28" n="N028"/>ren Betheilung von Lehran-
-                  <lb facs="#facs_2_r1l29" n="N029"/>stalten noch eine Anzahl aka-
-                  <lb facs="#facs_2_r1l30" n="N030"/>demischer Druckschriften von der
-                  <lb facs="#facs_2_r1l31" n="N031"/>Akademie zur Disposition zu er-
-                  <lb facs="#facs_2_r1l32" n="N032"/>halten.</x:expect>
-       </x:scenario>
-      <x:scenario label="T5.1b: *Name">
-         <x:call template="continuation">
-            <x:param name="context">
-               <p facs="#facs_2_r1" xml:space="preserve">
-                  <lb facs="#facs_2_r1l1" n="N001"/><hi rend="underlined:true; fontSize:0.0; kerning:0;">Verhandlungen.</hi>
-                  <lb facs="#facs_2_r1l2" n="N002"/>Der hohe <persName key="Bach, von, Alexander">Curator</persName> der kaisl.
-                  <lb facs="#facs_2_r1l3" n="N003"/>Akademie genehmigt mit Erlaß
-                  <lb facs="#facs_2_r1l4" n="N004"/>vom 24. März <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice> die Abhaltung
-                  <lb facs="#facs_2_r1l5" n="N005"/>einer feierlichen Sitzung am 30. Mai <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice>
-                  <lb facs="#facs_2_r1l6" n="N006"/>Der <persName key="Schrötter, von, Anton">General-Secretär</persName> bringt
-                  <lb facs="#facs_2_r1l7" n="N007"/>die Modalitäten der feierlichen Sit-
-                  <lb facs="#facs_2_r1l8" n="N008"/>zung zur Sprache und bemerkt,
-                  <lb facs="#facs_2_r1l9" n="N009"/>daß der 30. Mai auf den Pfingst-
-                  <lb facs="#facs_2_r1l10" n="N010"/>samstag fällt.
-                  <lb facs="#facs_2_r1l11" n="N011"/>Die Akademie entscheidet sich
-                  <lb facs="#facs_2_r1l12" n="N012"/>für den 29. Mai und der Herr
-                  <lb facs="#facs_2_r1l13" n="N013"/><persName key="Baumgartner, von, Andreas">Präsident</persName> übernimmt es, die Erlaub-
-                  <lb facs="#facs_2_r1l14" n="N014"/>niß hiezu beim Herrn <persName key="Bach, von, Alexander" continued="true">Cura-</persName>
-                  <lb facs="#facs_2_r1l15" n="N015"/><persName key="Bach, von, Alexander" continued="true">tor</persName> auszuwirken. In Betreff
-                  <lb facs="#facs_2_r1l16" n="N016"/>der Locales entscheidet sich die
-                  <lb facs="#facs_2_r1l17" n="N017"/>Akademie für den Landständi-
-                  <lb facs="#facs_2_r1l18" n="N018"/>schen Saal, für dessen Einräu-
-                  <lb facs="#facs_2_r1l19" n="N019"/>mung seiner Zeit mit Geneh-
-                  <lb facs="#facs_2_r1l20" n="N020"/>migung des Herrn <persName key="Bach, von, Alexander">Curator</persName>s
-                  <lb facs="#facs_2_r1l21" n="N021"/>die nöthigen Schritte zu machen
-                  <lb facs="#facs_2_r1l22" n="N022"/>sind.
-                  <lb facs="#facs_2_r1l23" n="N023"/>Das hohe <choice><expan>kaiserlich-königliche</expan><abbr>k. k.</abbr></choice> Ministerium
-                  <lb facs="#facs_2_line_1542113768058_321" n="N024"/>129.
-                  <lb facs="#facs_2_r1l25" n="N025"/>für Cultus <choice><expan>etcetera</expan><abbr>etc.</abbr></choice> hat mit Erlaß
-                  <lb facs="#facs_2_r1l26" n="N026"/>vom 19. Jänner <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice> Zahl 9197/164 den
-                  <lb facs="#facs_2_r1l27" n="N027"/>Wunsch ausgedrückt, zur weite-
-                  <lb facs="#facs_2_r1l28" n="N028"/>ren Betheilung von Lehran-
-                  <lb facs="#facs_2_r1l29" n="N029"/>stalten noch eine Anzahl aka-
-                  <lb facs="#facs_2_r1l30" n="N030"/>demischer Druckschriften von der
-                  <lb facs="#facs_2_r1l31" n="N031"/>Akademie zur Disposition zu er-
-                  <lb facs="#facs_2_r1l32" n="N032"/>halten.</p>
-            </x:param>
-         </x:call>
-         <x:expect label="continued rs" xml:space="preserve">
-                  <lb facs="#facs_2_r1l1" n="N001"/><hi rend="underlined:true; fontSize:0.0; kerning:0;">Verhandlungen.</hi>
-                  <lb facs="#facs_2_r1l2" n="N002"/>Der hohe <persName key="Bach, von, Alexander">Curator</persName> der kaisl.
-                  <lb facs="#facs_2_r1l3" n="N003"/>Akademie genehmigt mit Erlaß
-                  <lb facs="#facs_2_r1l4" n="N004"/>vom 24. März <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice> die Abhaltung
-                  <lb facs="#facs_2_r1l5" n="N005"/>einer feierlichen Sitzung am 30. Mai <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice>
-                  <lb facs="#facs_2_r1l6" n="N006"/>Der <persName key="Schrötter, von, Anton">General-Secretär</persName> bringt
-                  <lb facs="#facs_2_r1l7" n="N007"/>die Modalitäten der feierlichen Sit-
-                  <lb facs="#facs_2_r1l8" n="N008"/>zung zur Sprache und bemerkt,
-                  <lb facs="#facs_2_r1l9" n="N009"/>daß der 30. Mai auf den Pfingst-
-                  <lb facs="#facs_2_r1l10" n="N010"/>samstag fällt.
-                  <lb facs="#facs_2_r1l11" n="N011"/>Die Akademie entscheidet sich
-                  <lb facs="#facs_2_r1l12" n="N012"/>für den 29. Mai und der Herr
-                  <lb facs="#facs_2_r1l13" n="N013"/><persName key="Baumgartner, von, Andreas">Präsident</persName> übernimmt es, die Erlaub-
-                  <lb facs="#facs_2_r1l14" n="N014"/>niß hiezu beim Herrn <persName key="Bach, von, Alexander">Cura-<lb facs="#facs_2_r1l15" n="N015" break="no"/>tor</persName> auszuwirken. In Betreff
-                  <lb facs="#facs_2_r1l16" n="N016"/>der Locales entscheidet sich die
-                  <lb facs="#facs_2_r1l17" n="N017"/>Akademie für den Landständi-
-                  <lb facs="#facs_2_r1l18" n="N018"/>schen Saal, für dessen Einräu-
-                  <lb facs="#facs_2_r1l19" n="N019"/>mung seiner Zeit mit Geneh-
-                  <lb facs="#facs_2_r1l20" n="N020"/>migung des Herrn <persName key="Bach, von, Alexander">Curator</persName>s
-                  <lb facs="#facs_2_r1l21" n="N021"/>die nöthigen Schritte zu machen
-                  <lb facs="#facs_2_r1l22" n="N022"/>sind.
-                  <lb facs="#facs_2_r1l23" n="N023"/>Das hohe <choice><expan>kaiserlich-königliche</expan><abbr>k. k.</abbr></choice> Ministerium
-                  <lb facs="#facs_2_line_1542113768058_321" n="N024"/>129.
-                  <lb facs="#facs_2_r1l25" n="N025"/>für Cultus <choice><expan>etcetera</expan><abbr>etc.</abbr></choice> hat mit Erlaß
-                  <lb facs="#facs_2_r1l26" n="N026"/>vom 19. Jänner <choice><expan>dieses Jahres</expan><abbr>d.J.</abbr></choice> Zahl 9197/164 den
-                  <lb facs="#facs_2_r1l27" n="N027"/>Wunsch ausgedrückt, zur weite-
-                  <lb facs="#facs_2_r1l28" n="N028"/>ren Betheilung von Lehran-
-                  <lb facs="#facs_2_r1l29" n="N029"/>stalten noch eine Anzahl aka-
-                  <lb facs="#facs_2_r1l30" n="N030"/>demischer Druckschriften von der
-                  <lb facs="#facs_2_r1l31" n="N031"/>Akademie zur Disposition zu er-
-                  <lb facs="#facs_2_r1l32" n="N032"/>halten.</x:expect>
-       </x:scenario>
-   </x:scenario>
-   
    <x:scenario label="table">
       <x:context mode="text">
          <ns3:fileSec>
@@ -677,9 +533,69 @@
          <graphic url="553792.png" width="2368px" height="3315px" />
          <graphic url="https://dbis-thure.uibk.ac.at/f/Get?id=FRXNPZZAMTDQEOWGRHMXMWZX&amp;fileType=view"
             width="2368px" height="3315px" />
-           <zone rendition="printspace" points="..." />
-           <zone rendition="TextRegion" subtype="paragraph" xml:id="facs_1_r_2_4"
+         <zone rendition="printspace" points="..." />
+         <zone rendition="TextRegion" subtype="paragraph" xml:id="facs_1_r_2_4"
                points="1289,1095 2325,1095 2325,2541 1289,2541">...</zone>
+      </surface></x:expect>
+      </x:scenario>
+      <x:scenario label="T8.2: Wortkoordinaten">
+         <x:context href="page/oat01.xml" select="//p:Page" mode="facsimile">
+            <x:param name="numCurr" tunnel="true">160</x:param>
+            <x:param name="word-coordinates" select="true()"/>
+         </x:context>
+         <x:expect label="." xml:space="preserve">
+      <surface ulx="0" uly="0" lrx="2740" lry="4447" xml:id="facs_160">
+         <graphic url="HS_115_25_object_128293.jpg" width="2740px" height="4447px" />
+         <graphic url="https://dbis-thure.uibk.ac.at/f/Get?id=XMBXVKXNVTBKPZNNDSGFHEMS&amp;fileType=view" width="2740px" height="4447px" />
+         <zone rendition="TextRegion" subtype="endnote" xml:id="facs_160_TextRegion_1669387787980_5043"
+               points="196,1612 1375,1612 1375,1719 196,1719">
+            <zone rendition="Line" xml:id="facs_160_line_1663417318562_169" points="214,1651 223,1650 223,1680 214,1681" />
+            <zone rendition="Line" xml:id="facs_160_line_1663417318562_168" points="223,1650 1359,1649 1359,1679 223,1680">
+               <zone type="word" xml:id="facs_160_line_1663417318562_168_w1" points="219,1630 219,1690 281,1690 281,1630"/>
+               <zone type="word" xml:id="facs_160_line_1663417318562_168_w2" points="294,1629 294,1689 331,1689 331,1629"/>
+               <zone type="word" xml:id="facs_160_line_1663417318562_168_w3" points="347,1628 347,1688 397,1688 397,1628"/>
+               <zone type="word" xml:id="facs_160_line_1663417318562_168_w4" points="407,1628 407,1688 472,1688 472,1628"/>
+               <zone type="word" xml:id="facs_160_line_1663417318562_168_w5" points="482,1627 482,1687 571,1687 571,1627"/>
+               <zone type="word" xml:id="facs_160_line_1663417318562_168_w6" points="697,1628 697,1688 891,1688 891,1628"/>
+               <zone type="word" xml:id="facs_160_line_1663417318562_168_w7" points="904,1628 904,1688 927,1688 927,1628"/>
+               <zone type="word" xml:id="facs_160_line_1663417318562_168_w8" points="947,1629 947,1689 983,1689 983,1629"/>
+               <zone type="word" xml:id="facs_160_line_1663417318562_168_w9" points="996,1629 996,1689 1128,1689 1128,1629"/>
+               <zone type="word" xml:id="facs_160_line_1663417318562_168_w10" points="1148,1629 1148,1689 1223,1689 1223,1629"/>
+               <zone type="word" xml:id="facs_160_line_1663417318562_168_w11" points="1237,1629 1237,1689 1365,1689 1365,1629"/>
+            </zone>
+            <zone rendition="Line" xml:id="facs_160_line_1669387788005_5046" points="196,1690 392,1690 392,1719 196,1719">
+               <zone type="word" xml:id="facs_160_word_1669387788005_5048" points="195,1670 257,1670 257,1719 195,1719"/>
+               <zone type="word" xml:id="facs_160_word_1669387788005_5050" points="277,1670 297,1670 297,1719 277,1719"/>
+               <zone type="word" xml:id="facs_160_word_1669387788006_5052" points="307,1670 395,1670 395,1719 307,1719"/>
+            </zone>
+         </zone>
+         <zone rendition="TextRegion" subtype="endnote" xml:id="facs_160_TextRegion_1669389039232_5397" points="176,239 1364,239 1364,340 176,340">
+            <zone rendition="Line" xml:id="facs_160_r1l3" points="184,304 1347,303 1347,273 184,274">
+               <zone type="word" xml:id="facs_160_r1l3_w1" points="177,253 177,313 326,313 326,253"/>
+               <zone type="word" xml:id="facs_160_r1l3_w2" points="346,253 346,313 365,313 365,253"/>
+               <zone type="word" xml:id="facs_160_r1l3_w3" points="393,253 393,313 492,313 492,253"/>
+               <zone type="word" xml:id="facs_160_r1l3_w4" points="505,253 505,313 553,313 553,253"/>
+               <zone type="word" xml:id="facs_160_r1l3_w5" points="572,253 572,313 668,313 668,253"/>
+               <zone type="word" xml:id="facs_160_r1l3_w6" points="687,253 687,313 763,313 763,253"/>
+               <zone type="word" xml:id="facs_160_r1l3_w7" points="779,253 779,313 958,313 958,253"/>
+               <zone type="word" xml:id="facs_160_r1l3_w8" points="974,254 974,314 1015,314 1015,254"/>
+               <zone type="word" xml:id="facs_160_r1l3_w9" points="1034,254 1034,314 1111,314 1111,254"/>
+               <zone type="word" xml:id="facs_160_r1l3_w10" points="1130,254 1130,314 1315,314 1315,254"/>
+               <zone type="word" xml:id="facs_160_r1l3_w11" points="1331,253 1331,313 1353,313 1353,253"/>
+            </zone>
+            <zone rendition="Line" xml:id="facs_160_line_1669389039280_5400" points="186,312 812,312 812,340 186,340">
+               <zone type="word" xml:id="facs_160_word_1669389039281_5402" points="183,292 230,292 230,340 183,340"/>
+               <zone type="word" xml:id="facs_160_word_1669389039281_5404" points="241,291 281,291 281,340 241,340"/>
+               <zone type="word" xml:id="facs_160_word_1669389039281_5406" points="292,291 361,291 361,340 292,340"/>
+               <zone type="word" xml:id="facs_160_word_1669389039281_5408" points="372,291 423,291 423,340 372,340"/>
+               <zone type="word" xml:id="facs_160_word_1669389039281_5410" points="435,291 507,291 507,340 435,340"/>
+               <zone type="word" xml:id="facs_160_word_1669389039281_5412" points="518,291 540,291 540,340 518,340"/>
+               <zone type="word" xml:id="facs_160_word_1669389039281_5414" points="551,291 609,291 609,340 551,340"/>
+               <zone type="word" xml:id="facs_160_word_1669389039281_5416" points="617,291 657,291 657,340 617,340"/>
+               <zone type="word" xml:id="facs_160_word_1669389039282_5418" points="668,291 719,291 719,340 668,340"/>
+               <zone type="word" xml:id="facs_160_word_1669389039282_5420" points="730,292 817,292 817,340 730,340"/>
+            </zone>
+         </zone>
       </surface></x:expect>
       </x:scenario>
    </x:scenario>

@@ -399,11 +399,11 @@
       <xsl:choose>
          <xsl:when test="self::p:TextLine">
             <xsl:text>
-              </xsl:text>
+            </xsl:text>
          </xsl:when>
          <xsl:otherwise>
             <xsl:text>
-           </xsl:text>
+         </xsl:text>
          </xsl:otherwise>
       </xsl:choose>
       <zone points="{p:Coords/@points}" rendition="{$renditionValue}">
@@ -422,6 +422,35 @@
                select="substring-after(substring-before(map:get($custom, 'structure'), ';'), ':')"/>
          </xsl:if>
          <xsl:apply-templates select="p:TextLine" mode="facsimile"/>
+         <xsl:if test="$word-coordinates">
+            <xsl:apply-templates select="p:Word" mode="facsimile" />
+         </xsl:if>
+         <xsl:choose>
+            <xsl:when test="self::p:TextLine and p:Word and $word-coordinates">
+               <xsl:text>
+            </xsl:text>
+            </xsl:when>
+            <xsl:when test="self::p:TextRegion">
+               <xsl:text>
+         </xsl:text>
+            </xsl:when>
+         </xsl:choose>
+      </zone>
+   </xsl:template>
+   
+   <xd:doc>
+      <xd:desc>create a zone for each word within facsimile/surface</xd:desc>
+      <xd:param name="numCurr">Numerus currens of the current page</xd:param>
+   </xd:doc>
+   <xsl:template match="p:Word" mode="facsimile">
+      <xsl:param name="numCurr" tunnel="true"/>
+      
+      <xsl:text>
+               </xsl:text>
+      <zone points="{p:Coords/@points}" type="word">
+         <xsl:attribute name="xml:id">
+            <xsl:value-of select="'facs_' || $numCurr || '_' || @id"/>
+         </xsl:attribute>
       </zone>
    </xsl:template>
 
@@ -637,46 +666,6 @@
             <xsl:attribute name="cols" select="."/>
          </xsl:when>
       </xsl:choose>
-   </xsl:template>
-
-   <xd:doc>
-      <xd:desc> Combine taggings marked with “continued” – cf.
-         https://github.com/dariok/page2tei/issues/10 Thanks to @thodel for reporting. </xd:desc>
-      <xd:param name="context"/>
-   </xd:doc>
-   <xsl:template name="continuation">
-      <xsl:param name="context"/>
-      <xsl:for-each select="$context/node()">
-         <xsl:choose>
-            <xsl:when test="
-                  @continued
-                  and following-sibling::*[1][self::tei:lb]
-                  and string-length(normalize-space(following-sibling::node()[1])) = 0">
-               <xsl:element name="{local-name()}">
-                  <xsl:sequence select="@*[not(local-name() = 'continued')]"/>
-                  <xsl:sequence select="node()"/>
-                  <lb>
-                     <xsl:sequence select="following-sibling::*[1]/@*"/>
-                     <xsl:attribute name="break" select="'no'"/>
-                  </lb>
-                  <xsl:sequence select="following-sibling::*[2]/node()"/>
-               </xsl:element>
-            </xsl:when>
-            <xsl:when test="
-                  (self::tei:lb
-                  and preceding-sibling::*[1]/@continued
-                  and string-length(normalize-space(preceding-sibling::node()[1])) = 0
-                  and following-sibling::node()[1]/@continued)
-                  or (@continued and preceding-sibling::node()[1][self::tei:lb])
-                  or (self::text()
-                  and normalize-space() = ''
-                  and preceding-sibling::node()[1]/@continued
-                  and following-sibling::node()[1][self::tei:lb])"/>
-            <xsl:otherwise>
-               <xsl:sequence select="."/>
-            </xsl:otherwise>
-         </xsl:choose>
-      </xsl:for-each>
    </xsl:template>
 
    <xd:doc>
