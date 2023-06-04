@@ -29,7 +29,7 @@
    <xsl:include href="combine-continued.xsl" />
 
    <xd:doc>
-      <xd:desc>If true(), region types that correspond to valid TEI elements will be returned as
+      <xd:desc>If false(), region types that correspond to valid TEI elements will be returned as
          this element; types that do not correspond to a TEI element will be returned as
          tei:ab[@type]. If set to true(), all region types (except for paragraph, heading) will be
          returned as tei:ab.</xd:desc>
@@ -470,40 +470,42 @@
    <xsl:template match="p:TextRegion" mode="text">
       <xsl:param name="numCurr" tunnel="true"/>
       <xsl:param name="center" tunnel="true" as="xs:double"/>
+      
       <xsl:variable name="custom" as="map(*)">
          <xsl:apply-templates select="@custom"/>
       </xsl:variable>
+      <xsl:variable name="regionType" as="xs:string*" select="(@type, $custom?structure?type)" />
 
       <xsl:choose>
          <xsl:when test="not(p:TextLine or $withoutTextline)"/>
-         <xsl:when test="'heading' = (@type, $custom?structure?type)">
+         <xsl:when test="'heading' = $regionType">
             <head facs="#facs_{$numCurr}_{@id}">
                <xsl:apply-templates select="p:TextLine"/>
             </head>
          </xsl:when>
-         <xsl:when test="'caption' = (@type, $custom?structure?type)">
+         <xsl:when test="'caption' = $regionType and not($ab)">
             <figure>
                <head facs="#facs_{$numCurr}_{@id}">
                   <xsl:apply-templates select="p:TextLine"/>
                </head>
             </figure>
          </xsl:when>
-         <xsl:when test="'header' = (@type, $custom?structure?type)">
+         <xsl:when test="'header' = $regionType and not($ab)">
             <fw type="header" place="top" facs="#facs_{$numCurr}_{@id}">
                <xsl:apply-templates select="p:TextLine"/>
             </fw>
          </xsl:when>
-         <xsl:when test="'catch-word' = (@type, $custom?structure?type)">
+         <xsl:when test="'catch-word' = $regionType and not($ab)">
             <fw type="catch" place="bottom" facs="#facs_{$numCurr}_{@id}">
                <xsl:apply-templates select="p:TextLine"/>
             </fw>
          </xsl:when>
-         <xsl:when test="'signature-mark' = (@type, $custom?structure?type)">
+         <xsl:when test="'signature-mark' = $regionType and not($ab)">
             <fw place="bottom" type="sig" facs="#facs_{$numCurr}_{@id}">
                <xsl:apply-templates select="p:TextLine"/>
             </fw>
          </xsl:when>
-         <xsl:when test="'marginalia' = (@type, $custom?structure?type)">
+         <xsl:when test="'marginalia' = $regionType and not($ab)">
             <xsl:variable name="side">
                <xsl:choose>
                   <xsl:when test="number(substring-before(p:Coords/@points, ',')) gt $center"
@@ -515,27 +517,27 @@
                <xsl:apply-templates select="p:TextLine"/>
             </note>
          </xsl:when>
-         <xsl:when test="'footnote' = (@type, $custom?structure?type)">
+         <xsl:when test="'footnote' = $regionType and not($ab)">
             <note place="foot" n="[footnote reference]" facs="#facs_{$numCurr}_{@id}">
                <xsl:apply-templates select="p:TextLine"/>
             </note>
          </xsl:when>
-         <xsl:when test="'footnote-continued' = (@type, $custom?structure?type)">
+         <xsl:when test="'footnote-continued' = $regionType and not($ab)">
             <note place="foot" n="[footnote-continued reference]" facs="#facs_{$numCurr}_{@id}">
                <xsl:apply-templates select="p:TextLine"/>
             </note>
          </xsl:when>
-         <xsl:when test="'endnote' = (@type, $custom?structure?type)">
+         <xsl:when test="'endnote' = $regionType and not($ab)">
             <note type="endnote" n="[footnote reference]" facs="#facs_{$numCurr}_{@id}">
                <xsl:apply-templates select="p:TextLine"/>
             </note>
          </xsl:when>
-         <xsl:when test="'footer' = (@type, $custom?structure?type)">
+         <xsl:when test="'footer' = $regionType and not($ab)">
             <fw type="footer" place="bottom" facs="#facs_{$numCurr}_{@id}">
                <xsl:apply-templates select="p:TextLine"/>
             </fw>
          </xsl:when>
-         <xsl:when test="'page-number' = (@type, $custom?structure?type)">
+         <xsl:when test="'page-number' = $regionType and not($ab)">
             <fw type="page-number" facs="#facs_{$numCurr}_{@id}">
                <xsl:attribute name="place">
                   <xsl:variable name="verticalPosition"
@@ -557,7 +559,7 @@
                <xsl:apply-templates select="p:TextLine"/>
             </fw>
          </xsl:when>
-         <xsl:when test="'paragraph' = (@type, $custom?structure?type)">
+         <xsl:when test="'paragraph' = $regionType">
             <xsl:text>
             </xsl:text>
             <p facs="#facs_{$numCurr}_{@id}">
@@ -565,9 +567,15 @@
             </p>
          </xsl:when>
          <!-- the fallback option should be a semantically open element such as <ab> -->
-         <xsl:otherwise xml:space="preserve">
-            <ab facs="#facs_{$numCurr}_{@id}" type="{@type}{$custom?structure?type}"><xsl:apply-templates select="p:TextLine"/>
-            </ab></xsl:otherwise>
+         <xsl:otherwise>
+            <xsl:text>
+            </xsl:text>
+            <ab facs="#facs_{$numCurr}_{@id}" type="{(@type,$custom?structure?type)[normalize-space() != ''][1]}">
+               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:text>
+            </xsl:text>
+            </ab>
+         </xsl:otherwise>
       </xsl:choose>
    </xsl:template>
 

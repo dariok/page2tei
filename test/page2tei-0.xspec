@@ -10,6 +10,7 @@
    <x:param name="rs" select="true()" />
    <x:param name="tokenize" select="false()" />
    <x:param name="combine" select="false()" />
+   <x:param name="ab" select="false()"/>
    
    <x:scenario label="test 1 (WD)">
       <x:scenario label="17320213 - p.2">
@@ -623,7 +624,7 @@
    </x:scenario>
    
    <x:scenario label="Marginalia">
-      <x:scenario label="T7.1">
+      <x:scenario label="T7.1a">
          <x:context mode="text">
             <ns3:fileSec>
                <ns3:fileGrp ID="MASTER">
@@ -641,6 +642,28 @@
                <lb facs="#facs_10_line_1625236076413_163" n="N001"/>Geneſ. 1.</note
             ><note place="margin-left" facs="#facs_10_region_1625235942631_89">
                <lb facs="#facs_10_line_1625236094177_169" n="N001"/>Eccleſ. 15.</note></x:expect>
+      </x:scenario>
+      <x:scenario label="T7.1b (ab = true())">
+         <x:context mode="text">
+            <x:param name="ab" select="true()" />
+            <ns3:fileSec>
+               <ns3:fileGrp ID="MASTER">
+                  <ns3:fileGrp ID="PAGEXML">
+                     <ns3:file ID="PAGEXML_10" SEQ="10" MIMETYPE="application/xml" CREATED="2021-10-16T20:56:32.000+02:00" CHECKSUM="" CHECKSUMTYPE="MD5">
+                        <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="../page/16096974378888bsb10940504-0010.xml"/>
+                     </ns3:file>
+                  </ns3:fileGrp>
+               </ns3:fileGrp>
+            </ns3:fileSec>
+         </x:context>
+         <x:expect label="." xml:space="preserve"
+            ><pb facs="#facs_10" n="10" xml:id="img_0010" />
+            <ab type="marginalia" facs="#facs_10_region_1625235938563_86">
+               <lb facs="#facs_10_line_1625236076413_163" n="N001"/>Geneſ. 1.
+            </ab>
+            <ab type="marginalia" facs="#facs_10_region_1625235942631_89">
+               <lb facs="#facs_10_line_1625236094177_169" n="N001"/>Eccleſ. 15.
+            </ab></x:expect>
       </x:scenario>
    </x:scenario>
    
@@ -677,7 +700,7 @@
                <lb facs="#facs_160_line_1669389039280_5400" n="N002"/>Kg. 16, 1-19, bes. 10ff.; 2. Chr. 28, bes. 20-25.</note
             ></x:expect>
       </x:scenario>
-      <x:scenario label="T9.2">
+      <x:scenario label="T9.2a">
          <x:context href="page/oat02.xml" mode="text">
             <x:param name="numCurr" tunnel="1">14</x:param>
             <x:param name="center" tunnel="1" select="200" />
@@ -686,6 +709,18 @@
             ><note place="foot" n="[footnote reference]" facs="#facs_14_TextRegion_1665567326709_1170">
                <lb facs="#facs_14_line_1663938526292_2006" n="N001"/><comment><hi style="vertical-align: superscript;">1</hi></comment>
                <lb facs="#facs_14_line_1665567326750_1173" n="N002"/>Dies betont Hans-Georg Gadamer (1990), Bd. 1, 15.</note></x:expect>
+      </x:scenario>
+      <x:scenario label="T9.2a (ab = true()">
+         <x:context href="page/oat02.xml" mode="text">
+            <x:param name="numCurr" tunnel="1">14</x:param>
+            <x:param name="center" tunnel="1" select="200" />
+            <x:param name="ab" select="true()" />
+         </x:context>
+         <x:expect label="." xml:space="preserve">
+            <ab type="footnote" facs="#facs_14_TextRegion_1665567326709_1170">
+               <lb facs="#facs_14_line_1663938526292_2006" n="N001"/><comment><hi style="vertical-align: superscript;">1</hi></comment>
+               <lb facs="#facs_14_line_1665567326750_1173" n="N002"/>Dies betont Hans-Georg Gadamer (1990), Bd. 1, 15.
+            </ab></x:expect>
       </x:scenario>
    </x:scenario>
    
@@ -790,7 +825,7 @@
 </TEI></x:expect>
    </x:scenario>
    
-   <!-- This is for integration testing only; see tokenize.xspec for specific tests -->
+   <!-- This is for integration testing only; see combine-continued.xspec for specific tests -->
    <x:scenario label="T12: combine-continued">
       <x:context href="mets/mets-t111.xml">
          <x:param name="combine" select="true()" />
@@ -824,8 +859,8 @@
 </TEI></x:expect>
    </x:scenario>
    
-   <!-- This is for integration testing only; see tokenize.xspec for specific tests -->
-   <x:scenario label="T11: tokenization">
+   <!-- This is for integration testing only; see tokenize.xspec and combine-continued for specific tests -->
+   <x:scenario label="T13: tokenization and combination">
       <x:context href="mets/mets-t111.xml">
          <x:param name="tokenize" select="true()" />
          <x:param name="combine" select="true()" />
