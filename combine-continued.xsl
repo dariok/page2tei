@@ -16,17 +16,35 @@
    </xd:doc>
    
    <xd:doc>
-      <xd:desc>Combine continued rs</xd:desc>
+      <xd:desc>
+         <xd:p>Combine continued elements (e.g. rs)</xd:p>
+         <xd:p>This works on an element that contains (more than one) continued element (there may be just one element
+            if the continuation happens across region borders).</xd:p>
+      </xd:desc>
    </xd:doc>
-   <xsl:template match="tei:*[tei:*[@continued = 'true']]" mode="continued">
+   <xsl:template match="tei:*[count(tei:*[@continued = 'true']) gt 1]" mode="continued">
       <xsl:copy>
          <xsl:apply-templates select="@*" mode="continued" />
          <xsl:for-each-group select="node()"
-               group-starting-with="tei:*[@continued eq 'true' and normalize-space(preceding::text()[1]) != '']">
+               group-starting-with="tei:*[
+                  @continued eq 'true'
+                  and normalize-space() != ''
+                  and (normalize-space(preceding::text()[1]) != '' or preceding::text()[1][not(preceding-sibling::*)])
+               ]">
             <xsl:choose>
                <xsl:when test="current-group()[1][@continued eq 'true']">
-                  <xsl:variable name="final"
-                     select="(current-group()[position() gt 1 and @continued = 'true'][last()], current-group()[4])[1]" />
+                  <xsl:variable
+                     name="final"
+                     select="
+                        (
+                           current-group()[
+                                 position() gt 1
+                                 and @continued = 'true'
+                                 and node()
+                              ][last()],
+                           current-group()[4]
+                        )[1]"
+                  />
                   <xsl:variable name="last" select="index-of(current-group(), $final)[1]"/>
                   <xsl:element name="{local-name()}">
                      <xsl:apply-templates select="@*" mode="continued" />
@@ -46,7 +64,7 @@
       <xd:desc>lb will be returned unaltered</xd:desc>
    </xd:doc>
    <xsl:template match="tei:lb" mode="rs-continued">
-      <lb break="no">
+      <lb>
          <xsl:sequence select="@*" />
       </lb>
    </xsl:template>
