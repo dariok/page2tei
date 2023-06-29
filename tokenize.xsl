@@ -70,7 +70,10 @@
                </xsl:text>
             <w>
                <xsl:sequence select="text()" />
-               <xsl:sequence select="following-sibling::*[1] | following-sibling::*[2]" />
+               <xsl:sequence select="following-sibling::*[1]" />
+               <lb break="no">
+                  <xsl:sequence select="following-sibling::*[2]/@*" />
+               </lb>
                <xsl:sequence select="following-sibling::*[3]/text()" />
             </w>
          </xsl:when>
