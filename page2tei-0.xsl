@@ -46,6 +46,7 @@
       <xd:desc>Whether to create bounding rectangles from polygons (default: true())</xd:desc>
    </xd:doc>
    <xsl:param name="bounding-rectangles" select="true()"/>
+   <xsl:include href="simplify-coordinates.xsl" />
 
    <xd:doc>
       <xd:desc>Whether to export lines without baseline (true()) or not (false(), default)</xd:desc>
@@ -91,6 +92,10 @@
    <xsl:include href="string-pack.xsl"/>
 
    <xsl:param name="debug" select="false()"/>
+
+   <xsl:template match="/">
+      <xsl:apply-templates select="mets:mets" />
+   </xsl:template>
 
    <xd:doc>
       <xd:desc>helper: gather page contents</xd:desc>
@@ -142,7 +147,17 @@
          <xsl:text>
    </xsl:text>
          <facsimile>
-            <xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file" mode="facsimile"/>
+            <xsl:choose>
+               <xsl:when test="$bounding-rectangles">
+                  <xsl:variable name="facs">
+                     <xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file" mode="facsimile"/>
+                  </xsl:variable>
+                  <xsl:apply-templates select="$facs" mode="bounding-rectangle" />
+               </xsl:when>
+               <xsl:otherwise>
+                  <xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file" mode="facsimile"/>
+               </xsl:otherwise>
+            </xsl:choose>
             <xsl:text>
    </xsl:text>
          </facsimile>

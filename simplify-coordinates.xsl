@@ -18,7 +18,7 @@
    <xd:doc>
       <xd:desc>evaluate coordinates and return bounding rectangle</xd:desc>
    </xd:doc>
-   <xsl:template match="tei:zone/@points">
+   <xsl:template match="tei:zone/@points" mode="bounding-rectangle">
       <xsl:variable name="x" select="local:pointsX(.)" />
       <xsl:variable name="y" select="local:pointsY(.)" />
       <xsl:attribute name="points">
@@ -73,9 +73,9 @@
    <xd:doc>
       <xd:desc>Default</xd:desc>
    </xd:doc>
-   <xsl:template match="@* | node()">
+   <xsl:template match="@* | node()" mode="bounding-rectangle">
       <xsl:copy>
-         <xsl:apply-templates select="@* | node()" />
+         <xsl:apply-templates select="@* | node()" mode="#current" />
       </xsl:copy>
    </xsl:template>
    
