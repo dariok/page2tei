@@ -9,6 +9,9 @@
    version="3.0">
 
    <xsl:output indent="0"/>
+   
+   <xsl:variable name="langs" select="map { 'French': 'fr', 'German': 'de', 'English': 'en', 'Latin': 'la',
+      'Spanish': 'es', 'Ancient Greek': 'grc' }"/>
 
    <xd:doc>
       <xd:desc>Whether to create `rs type="..."` for person/place/org (default) or `persName` etc.
@@ -93,6 +96,9 @@
 
    <xsl:param name="debug" select="false()"/>
 
+   <xd:doc>
+      <xd:desc>Entry</xd:desc>
+   </xd:doc>
    <xsl:template match="/">
       <xsl:apply-templates select="mets:mets" />
    </xsl:template>
@@ -141,6 +147,13 @@
                <xsl:text>
       </xsl:text>
             </fileDesc>
+            <xsl:text>
+      </xsl:text>
+            <profileDesc>
+               <xsl:apply-templates select="descendant::*:trpDocMetadata/*:language" />
+               <xsl:text>
+      </xsl:text>
+            </profileDesc>
             <xsl:text>
    </xsl:text>
          </teiHeader>
@@ -318,6 +331,22 @@
       <idno type="external">
          <xsl:value-of select="."/>
       </idno>
+   </xsl:template>
+   
+   <xd:doc>
+      <xd:desc>Transkribus meta data: languages</xd:desc>
+   </xd:doc>
+   <xsl:template match="language">
+      <langUsage>
+         <xsl:for-each select="tokenize(., ', ')">
+            <language>
+               <xsl:attribute name="ident">
+                  <xsl:value-of select="map:get($langs, .)" />
+               </xsl:attribute>
+               <xsl:value-of select="." />
+            </language>
+         </xsl:for-each>
+      </langUsage>
    </xsl:template>
 
    <!-- Templates for METS -->
