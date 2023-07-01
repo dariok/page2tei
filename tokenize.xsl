@@ -38,7 +38,7 @@
             <xsl:sequence select="." />
          </xsl:matching-substring>
          <xsl:non-matching-substring>
-            <xsl:analyze-string select="." regex="[\.,;:\-–—„“”=\?!\[\]\(\)\*¬/]">
+            <xsl:analyze-string select="." regex="[\.,;:\-–—„“”=\?!\[\]\(\)\*¬/〈〉]">
                <xsl:matching-substring>
                   <pc><xsl:sequence select="."></xsl:sequence></pc>
                </xsl:matching-substring>
