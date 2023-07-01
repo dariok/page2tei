@@ -337,8 +337,12 @@
       <xd:desc>Transkribus meta data: languages</xd:desc>
    </xd:doc>
    <xsl:template match="language">
+      <xsl:text>
+         </xsl:text>
       <langUsage>
          <xsl:for-each select="tokenize(., ', ')">
+            <xsl:text>
+            </xsl:text>
             <language>
                <xsl:attribute name="ident">
                   <xsl:value-of select="map:get($langs, .)" />
@@ -346,6 +350,8 @@
                <xsl:value-of select="." />
             </language>
          </xsl:for-each>
+         <xsl:text>
+         </xsl:text>
       </langUsage>
    </xsl:template>
 
@@ -760,9 +766,21 @@
                <xsl:if test=". &gt; 0">
                   <xsl:value-of select="substring($text, ., 1)"/>
                </xsl:if>
+               <!-- place end marker for all non-void elements that end here; we must not place void elements here
+                  as this would mean closing a tei:gap before it was opened -->
+               <xsl:for-each select="map:get($ends, .)">
+                  <xsl:sort select="substring-before(substring-after(., 'offset:'), ';')"
+                     order="descending"/>
+                  <xsl:sort select="substring(., 1, 3)" order="descending"/>
+                  <xsl:if test="substring-after(., 'length:') => substring-before(';') != '0'">
+                     <xsl:element name="local:m">
+                        <xsl:attribute name="type" select="normalize-space(substring-before(., ' '))"/>
+                        <xsl:attribute name="o" select="substring-after(., 'offset:')"/>
+                        <xsl:attribute name="pos">e</xsl:attribute>
+                     </xsl:element>
+                  </xsl:if>
+               </xsl:for-each>
                <xsl:for-each select="map:get($starts, .)">
-                  <!--<xsl:sort select="substring-before(substring-after(.,'offset:'), ';')" order="ascending"/>-->
-                  <!-- end of current tag -->
                   <xsl:sort select="
                         xs:int(substring-before(substring-after(., 'offset:'), ';'))
                         + xs:int(substring-before(substring-after(., 'length:'), ';'))"
@@ -774,15 +792,18 @@
                      <xsl:attribute name="pos">s</xsl:attribute>
                   </xsl:element>
                </xsl:for-each>
+               <!-- place end marker for void elements such as tei:gap -->
                <xsl:for-each select="map:get($ends, .)">
                   <xsl:sort select="substring-before(substring-after(., 'offset:'), ';')"
                      order="descending"/>
                   <xsl:sort select="substring(., 1, 3)" order="descending"/>
-                  <xsl:element name="local:m">
-                     <xsl:attribute name="type" select="normalize-space(substring-before(., ' '))"/>
-                     <xsl:attribute name="o" select="substring-after(., 'offset:')"/>
-                     <xsl:attribute name="pos">e</xsl:attribute>
-                  </xsl:element>
+                  <xsl:if test="substring-after(., 'length:') => substring-before(';') = '0'">
+                     <xsl:element name="local:m">
+                        <xsl:attribute name="type" select="normalize-space(substring-before(., ' '))"/>
+                        <xsl:attribute name="o" select="substring-after(., 'offset:')"/>
+                        <xsl:attribute name="pos">e</xsl:attribute>
+                     </xsl:element>
+                  </xsl:if>
                </xsl:for-each>
             </xsl:for-each>
          </xsl:variable>

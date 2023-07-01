@@ -464,6 +464,19 @@
       </x:scenario>
    </x:scenario>
    
+   <x:scenario label="T5: tag immediately following each other">
+      <x:scenario label="T5.1">
+         <x:context href="page/0302_0243.xml" select="/*[1]"/>
+         <x:expect label="2 italics, 2 superscript comment" xml:space="preserve">
+               <lb facs="..." n="..." /><hi style="font-style: italic;"
+                  >dialectis</hi><comment
+                  ><hi style="vertical-align: superscript;">13</hi></comment> und den Lennep <hi style="font-style: italic;"
+                  >de analogia</hi><comment
+                  ><hi style="vertical-align: superscript;"
+                  >14</hi></comment> nicht habe hier bekommen können?</x:expect>
+      </x:scenario>
+   </x:scenario>
+   
    <x:scenario label="table">
       <x:context mode="text">
          <ns3:fileSec>

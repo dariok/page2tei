@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextLine xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+    id="TextRegion_1678105686975_3339_tl_9" custom="readingOrder {index:8;} textStyle {offset:0; length:9;italic:true;} comment {offset:9; length:2;} textStyle {offset:9; length:2;superscript:true;} textStyle {offset:27; length:11;italic:true;} comment {offset:38; length:2;} textStyle {offset:38; length:2;superscript:true;}">
+    <Coords points="234,4183 2046,4198 2307,4159 2480,4192 2448,4080 234,4118"/>
+    <Baseline points="250,4152 297,4147 375,4147 453,4147 532,4152 610,4152 688,4147 766,4147 845,4147 923,4147 1001,4147 1079,4147 1158,4147 1236,4147 1314,4147 1392,4147 1471,4147 1549,4147 1627,4147 1705,4142 1784,4142 1862,4142 1940,4142 2019,4142 2097,4142 2175,4142 2253,4142 2332,4142 2410,4142 2486,4149"/>
+    <TextEquiv>
+        <Unicode>dialectis13 und den Lennep de analogia14 nicht habe hier bekommen können?</Unicode>
+    </TextEquiv>
+</TextLine>
