@@ -31,7 +31,23 @@
                   and normalize-space() != ''
                   and (normalize-space(preceding::text()[1]) != '' or preceding::text()[1][not(preceding-sibling::*)])
                ]">
+            
             <xsl:choose>
+               <xsl:when test="current-group()[1][@continued eq 'true' and tei:abbr]">
+                  <!-- we assume there is exactly 2 choice with one lb in between, so no multi-line abbreviations:
+                     1=choice, 2=text(), 3=lb, 4=text(), 5=choice -->
+                  <choice>
+                     <expan>
+                        <xsl:sequence select="current-group()[1]/tei:expan/node()" />
+                     </expan>
+                     <abbr>
+                        <xsl:sequence select="current-group()[1]/tei:abbr/node()" />
+                        <xsl:sequence select="current-group()[3]" />
+                        <xsl:sequence select="current-group()[4]/tei:abbr/node()" />
+                     </abbr>
+                  </choice>
+                  <xsl:apply-templates select="current-group()[position() gt 4]" mode="continued" />
+               </xsl:when>
                <xsl:when test="current-group()[1][@continued eq 'true']">
                   <xsl:variable
                      name="final"

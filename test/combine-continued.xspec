@@ -244,4 +244,15 @@
       </x:expect>
    </x:scenario>
    
+   <x:scenario label="T7: choice/abbr">
+      <x:context mode="continued" xml:space="preserve">
+         <ab>mit <choice continued="true"><expan/><abbr>V.[ie¬</abbr></choice>
+            <lb facs="#facs_136_TextRegion_1679296982571_4603_tl_10" n="N010"/><choice continued="true"><expan/><abbr>weg]</abbr></choice> darüber</ab>
+      </x:context>
+      <x:expect label="." xml:space="preserve">
+         <ab>mit <choice><expan/><abbr>V.[ie¬<lb
+            facs="#facs_136_TextRegion_1679296982571_4603_tl_10" n="N010"/>weg]</abbr></choice> darüber</ab>
+      </x:expect>
+   </x:scenario>
+   
 </x:description>

@@ -733,7 +733,7 @@
                <xsl:variable name="content" select="substring-after(., '{') => normalize-space()"/>
                <xsl:variable name="name" select="substring-before(., ' {') => normalize-space()"/>
                <xsl:choose>
-                  <xsl:when test="$content = '' or $name = ('readingOrder', 'structure')"/>
+                  <xsl:when test="not(contains(., 'offset:'))" />
                   <xsl:otherwise>
                      <xsl:value-of select="normalize-space()"/>
                   </xsl:otherwise>
@@ -763,7 +763,7 @@
          </xsl:variable>
          <xsl:variable name="prepped">
             <xsl:for-each select="0 to string-length($text)">
-               <xsl:if test=". &gt; 0">
+               <xsl:if test=".">
                   <xsl:value-of select="substring($text, ., 1)"/>
                </xsl:if>
                <!-- place end marker for all non-void elements that end here; we must not place void elements here
@@ -936,6 +936,9 @@
          </xsl:when>
          <xsl:when test="@type = 'abbrev'">
             <choice>
+               <xsl:if test="$custom('continued')">
+                  <xsl:attribute name="continued" select="true()"/>
+               </xsl:if>
                <expan>
                   <xsl:value-of select="replace(map:get($custom, 'expansion'), '\\u0020', ' ')"/>
                </expan>
