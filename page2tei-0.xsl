@@ -922,6 +922,9 @@
                <xsl:if test="$custom?superscript = 'true'">
                   <xsl:text>vertical-align: superscript;</xsl:text>
                </xsl:if>
+               <xsl:if test="$custom?smallCaps = 'true'">
+                  <xsl:text>font-variant-caps: small-caps;</xsl:text>
+               </xsl:if>
             </xsl:variable>
             <hi>
                <xsl:if test="count($rend) gt 0">
