@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+   xmlns:tei="http://www.tei-c.org/ns/1.0"
+   xmlns="http://www.tei-c.org/ns/1.0"
+   stylesheet="../combine-hi.xsl">
+   
+   <x:scenario label="T1">
+      <x:context mode="combine-hi">
+         <p facs="#facs_108_TextRegion_1679295339003_2280">
+            <lb facs="#facs_108_TextRegion_1679295339003_2280_tl_1" n="N001"/>Ich denke zu dem ersten Stück folgendes zu geben, wobey ich Euch
+            <lb facs="#facs_108_TextRegion_1679295339003_2280_tl_2" n="N002"/>noch allerley um Rath zu fragen habe. Erstlich <hi style="font-style: italic;">vier <hi style="font-weight: bold;">Briefe</hi> über W[il¬</hi><x:text>
+            </x:text><lb facs="#facs_108_TextRegion_1679295339003_2280_tl_3" n="N003"/><hi style="font-style: italic;">helm] M[eister]</hi>, vielleicht auch nur <hi style="font-style: italic;">drey</hi><comment superscript="true"><hi style="vertical-align: superscript;">37</hi></comment>, nach Befinden der Um¬
+            <lb facs="#facs_108_TextRegion_1679295339003_2280_tl_4" n="N004"/>stände.</p>
+      </x:context>
+      <x:expect label=".">
+         <p facs="#facs_108_TextRegion_1679295339003_2280">
+            <lb facs="#facs_108_TextRegion_1679295339003_2280_tl_1" n="N001"/>Ich denke zu dem ersten Stück folgendes zu geben, wobey ich Euch
+            <lb facs="#facs_108_TextRegion_1679295339003_2280_tl_2" n="N002"/>noch allerley um Rath zu fragen habe. Erstlich <hi style="font-style: italic;">vier <hi style="font-weight: bold;">Briefe</hi> über W[il¬
+            <lb facs="#facs_108_TextRegion_1679295339003_2280_tl_3" n="N003"/>helm] M[eister]</hi>, vielleicht auch nur <hi style="font-style: italic;">drey</hi><comment superscript="true"><hi style="vertical-align: superscript;">37</hi></comment>, nach Befinden der Um¬
+            <lb facs="#facs_108_TextRegion_1679295339003_2280_tl_4" n="N004"/>stände.</p>
+      </x:expect>
+   </x:scenario>
+   
+</x:description>

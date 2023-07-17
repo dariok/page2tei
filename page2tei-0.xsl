@@ -13,6 +13,8 @@
    <xsl:variable name="langs" select="map { 'French': 'fr', 'German': 'de', 'English': 'en', 'Latin': 'la',
       'Spanish': 'es', 'Ancient Greek': 'grc' }"/>
 
+   <xsl:include href="combine-hi.xsl" />
+
    <xd:doc>
       <xd:desc>Whether to create `rs type="..."` for person/place/org (default) or `persName` etc.
          (false())</xd:desc>
@@ -188,13 +190,16 @@
                   <xsl:text>
          </xsl:text>
                   <div xmlns="http://www.tei-c.org/ns/1.0">
+                     <xsl:variable name="combine-hi">
+                        <xsl:apply-templates select="current-group()" mode="combine-hi" />
+                     </xsl:variable>
                      <xsl:variable name="combined">
                         <xsl:choose>
                            <xsl:when test="$combine">
-                              <xsl:apply-templates select="current-group()" mode="continued" />
+                              <xsl:apply-templates select="$combine-hi" mode="continued" />
                            </xsl:when>
                            <xsl:otherwise>
-                              <xsl:copy-of select="current-group()" />
+                              <xsl:copy-of select="$combine-hi" />
                            </xsl:otherwise>
                         </xsl:choose>
                      </xsl:variable>
