@@ -21,4 +21,17 @@
       </x:expect>
    </x:scenario>
    
+   <x:scenario label="T2">
+      <x:context mode="combine-hi">
+         <p facs="#facs_97_TextRegion_1679294369682_1465">
+            <lb facs="#facs_97_TextRegion_1679294369682_1465_tl_1" n="N001"/>Die <hi style="font-style: italic;">Kleine</hi> <supplied reason="">[Rahel Levin]</supplied> werde ich diesen Abend wohl sehen, sie
+            <lb facs="#facs_97_TextRegion_1679294369682_1465_tl_2" n="N002"/>hatt mich zum Thee eingeladen. ich bin aber noch nicht gewiß, ob ich</p>
+      </x:context>
+      <x:expect label=".">
+         <p facs="#facs_97_TextRegion_1679294369682_1465">
+            <lb facs="#facs_97_TextRegion_1679294369682_1465_tl_1" n="N001"/>Die <hi style="font-style: italic;">Kleine</hi> <supplied reason="">[Rahel Levin]</supplied> werde ich diesen Abend wohl sehen, sie
+            <lb facs="#facs_97_TextRegion_1679294369682_1465_tl_2" n="N002"/>hatt mich zum Thee eingeladen. ich bin aber noch nicht gewiß, ob ich</p>
+      </x:expect>
+   </x:scenario>
+   
 </x:description>

@@ -15,8 +15,14 @@
                <xsl:when test="current-group()[1][self::tei:hi]">
                   <hi>
                      <xsl:sequence select="current-group()[1]/@style" />
-                     <xsl:apply-templates select="current-group()" mode="do-combine-hi" />
+                     <xsl:apply-templates select="current-group()[position() != last()]" mode="do-combine-hi" />
+                     <xsl:if test="current-group()[last()] != ' '">
+                        <xsl:apply-templates select="current-group()[last()]" mode="do-combine-hi" />
+                     </xsl:if>
                   </hi>
+                  <xsl:if test="current-group()[last()] = ' '">
+                     <xsl:text> </xsl:text>
+                  </xsl:if>
                </xsl:when>
                <xsl:otherwise>
                   <xsl:apply-templates select="current-group()" mode="combine-hi"/>
@@ -27,7 +33,7 @@
    </xsl:template>
    
    <xsl:template match="tei:hi" mode="do-combine-hi">
-      <xsl:apply-templates />
+      <xsl:apply-templates mode="combine-hi"/>
    </xsl:template>
    <xsl:template match="@* | node()" mode="do-combine-hi">
       <xsl:copy>
