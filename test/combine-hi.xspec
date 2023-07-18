@@ -34,4 +34,19 @@
       </x:expect>
    </x:scenario>
    
+   <x:scenario label="T3">
+      <x:context mode="combine-hi" xml:space="preserve">
+         <p>
+            <lb facs="#facs_122_TextRegion_1679296131533_3340_tl_7" n="N007"/>mit dem <hi style="font-style: italic;">Studium</hi> zusammen eine Art [Ganzes?] gleichsam eine<comment><hi style="vertical-align: superscript;">17</hi></comment> <hi style="font-style: italic;">Grund¬</hi>
+            <lb facs="#facs_122_TextRegion_1679296131533_3340_tl_8" n="N008"/><hi style="font-style: italic;">lage der Alterthumslehre</hi> bilden, und als solche würde ich sie auch wohl
+         </p>
+      </x:context>
+      <x:expect label="." xml:space="preserve">
+         <p>
+            <lb facs="#facs_122_TextRegion_1679296131533_3340_tl_7" n="N007"/>mit dem <hi style="font-style: italic;">Studium</hi> zusammen eine Art [Ganzes?] gleichsam eine<comment><hi style="vertical-align: superscript;">17</hi></comment> <hi style="font-style: italic;">Grund¬
+            <lb facs="#facs_122_TextRegion_1679296131533_3340_tl_8" n="N008"/>lage der Alterthumslehre</hi> bilden, und als solche würde ich sie auch wohl
+         </p>
+      </x:expect>
+   </x:scenario>
+   
 </x:description>
