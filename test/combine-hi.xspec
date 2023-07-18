@@ -49,4 +49,19 @@
       </x:expect>
    </x:scenario>
    
+   <x:scenario label="T4">
+      <x:context mode="combine-hi" xml:space="preserve">
+         <p facs="#facs_166_TextRegion_1679298594201_7123">
+            <lb facs="#facs_166_TextRegion_1679298594201_7123_tl_1" n="N001"/>Ich denke darüber so: <hi style="font-style: italic;">dem gottgesalbten Paroden Ehre Dank und Ge</hi>¬
+            <lb facs="#facs_166_TextRegion_1679298594201_7123_tl_2" n="N002"/><hi style="font-style: italic;">lächter</hi> (– ich<comment><hi style="vertical-align: superscript;">21</hi></comment> dächte Du müßtest es wohl schon aus alten Zeiten wis¬
+         </p>
+      </x:context>
+      <x:expect label="." xml:space="preserve">
+         <p facs="#facs_166_TextRegion_1679298594201_7123">
+            <lb facs="#facs_166_TextRegion_1679298594201_7123_tl_1" n="N001"/>Ich denke darüber so: <hi style="font-style: italic;">dem gottgesalbten Paroden Ehre Dank und Ge</hi>¬
+            <lb facs="#facs_166_TextRegion_1679298594201_7123_tl_2" n="N002"/><hi style="font-style: italic;">lächter</hi> (– ich<comment><hi style="vertical-align: superscript;">21</hi></comment> dächte Du müßtest es wohl schon aus alten Zeiten wis¬
+         </p>
+      </x:expect>
+   </x:scenario>
+   
 </x:description>

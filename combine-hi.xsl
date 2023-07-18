@@ -21,7 +21,7 @@
                      <xsl:apply-templates
                         select="$firstHi | current-group()[position() != last()] intersect $firstHi/following-sibling::node()"
                         mode="do-combine-hi" />
-                     <xsl:if test="count(current-group()) gt 1 and current-group()[last()] != ' '">
+                     <xsl:if test="count(current-group()) gt 1 and current-group()[last()] != ' ' and not(current-group()[last()] is $firstHi)">
                         <xsl:apply-templates select="current-group()[last()]" mode="do-combine-hi" />
                      </xsl:if>
                   </hi>
