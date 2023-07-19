@@ -190,26 +190,26 @@
                   <xsl:text>
          </xsl:text>
                   <div xmlns="http://www.tei-c.org/ns/1.0">
-                     <xsl:variable name="combine-hi">
-                        <xsl:apply-templates select="current-group()" mode="combine-hi" />
-                     </xsl:variable>
                      <xsl:variable name="combined">
                         <xsl:choose>
                            <xsl:when test="$combine">
-                              <xsl:apply-templates select="$combine-hi" mode="continued" />
+                              <xsl:apply-templates select="current-group()" mode="continued" />
                            </xsl:when>
                            <xsl:otherwise>
-                              <xsl:copy-of select="$combine-hi" />
+                              <xsl:copy-of select="current-group()" />
                            </xsl:otherwise>
                         </xsl:choose>
+                     </xsl:variable>
+                     <xsl:variable name="combined-hi">
+                        <xsl:apply-templates select="$combined" mode="combine-hi" />
                      </xsl:variable>
                      <xsl:variable name="tokenized">
                         <xsl:choose>
                            <xsl:when test="$tokenize">
-                              <xsl:apply-templates select="$combined" mode="tokenize" />
+                              <xsl:apply-templates select="$combined-hi" mode="tokenize" />
                            </xsl:when>
                            <xsl:otherwise>
-                              <xsl:copy-of select="$combined" />
+                              <xsl:copy-of select="$combined-hi" />
                            </xsl:otherwise>
                         </xsl:choose>
                      </xsl:variable>
@@ -924,6 +924,9 @@
                </xsl:if>
                <xsl:if test="$custom?smallCaps = 'true'">
                   <xsl:text>font-variant-caps: small-caps;</xsl:text>
+               </xsl:if>
+               <xsl:if test="$custom?letterSpaced = 'true'">
+                  <xsl:text>latter-spacing: 5px;</xsl:text>
                </xsl:if>
             </xsl:variable>
             <hi>
