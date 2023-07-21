@@ -65,7 +65,7 @@
          <xsl:when test="following-sibling::*[1][self::tei:pc] = ('=', '-', '¬')
             and following-sibling::*[2][self::tei:lb]
             and following-sibling::*[3][self::tei:w[not(. = 'und')]]
-            and matches(following-sibling::*[3], '^[a-zäöüßſ]')">
+            and matches(following-sibling::*[3], '^[a-zäöüßſα-ω]')">
             <xsl:text>
                </xsl:text>
             <w>
