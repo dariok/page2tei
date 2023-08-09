@@ -926,7 +926,7 @@
                   <xsl:text>font-variant-caps: small-caps;</xsl:text>
                </xsl:if>
                <xsl:if test="$custom?letterSpaced = 'true'">
-                  <xsl:text>latter-spacing: 5px;</xsl:text>
+                  <xsl:text>letter-spacing: 5px;</xsl:text>
                </xsl:if>
             </xsl:variable>
             <hi>
