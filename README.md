@@ -15,3 +15,8 @@ Additional stylesheets can be applied to the output created by the basic transfo
 - @tboenig
 - @peterstadler
 - @tillgrallert
+
+---
+
+Some contributions to this software were created within the scope of a project funded by the German BMBF, project ID 16TOA015A.
+
