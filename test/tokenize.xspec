@@ -45,4 +45,20 @@
       </x:expect>
    </x:scenario>
    
+   <x:scenario label="T2">
+      <x:context xml:space="preserve" mode="tokenize">
+         <p>
+            <lb facs="#facs_35_r1l18" n="N016"/>aufbauen und sich auf diese Weise einen herausgehobenen Status si-¬
+            <lb facs="#facs_35_r1l19" n="N017"/>chern. Diesem politischen Ziel dienten auch weitere Maßnahmen
+            <lb facs="#facs_35_r1l20" n="N018"/>Nehemias. Die baulichen Veränderungen Jerusalems dienten dessen
+         </p>
+      </x:context>
+      <x:expect xml:space="preserve" label=".">
+         <p>
+            <lb facs="#facs_35_r1l18" n="N016"/><w>aufbauen</w> <w>und</w> <w>sich</w> <w>auf</w> <w>diese</w> <w>Weise</w> <w>einen</w> <w>herausgehobenen</w> <w>Status</w> <w>si</w><pc>-</pc><pc>¬</pc><lb facs="#facs_35_r1l19" n="N017"/><w>chern</w><pc>.</pc> <w>Diesem</w> <w>politischen</w> <w>Ziel</w> <w>dienten</w> <w>auch</w> <w>weitere</w> <w>Maßnahmen</w>
+            <lb facs="#facs_35_r1l20" n="N018"/><w>Nehemias</w><pc>.</pc> <w>Die</w> <w>baulichen</w> <w>Veränderungen</w> <w>Jerusalems</w> <w>dienten</w> <w>dessen</w>
+         </p>
+      </x:expect>
+   </x:scenario>
+   
 </x:description>

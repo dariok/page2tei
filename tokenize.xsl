@@ -38,7 +38,7 @@
             <xsl:sequence select="." />
          </xsl:matching-substring>
          <xsl:non-matching-substring>
-            <xsl:analyze-string select="." regex="[\.,;:\-–—„“”‚‘=\?!\[\]\(\)\*¬/〈〉]">
+            <xsl:analyze-string select="." regex="[\.,;:\-–—„“”‚‘=\?!\[\]\(\)\*¬/〈〉¿…]">
                <xsl:matching-substring>
                   <pc><xsl:sequence select="."></xsl:sequence></pc>
                </xsl:matching-substring>
@@ -80,7 +80,8 @@
          <xsl:when test=". != 'und'
             and matches(., '^[a-zäöüßſ]')
             and preceding-sibling::*[1][self::tei:lb]
-            and preceding-sibling::*[2][self::tei:pc[. = ('=', '-', '¬')]]" />
+            and preceding-sibling::*[2][self::tei:pc[. = ('=', '-', '¬')]]
+            and preceding-sibling::*[2]/preceding-sibling::node()[1][self::tei:w]" />
          <xsl:otherwise>
             <xsl:sequence select="." />
          </xsl:otherwise>
@@ -91,6 +92,7 @@
       <xd:desc/>
    </xd:doc>
    <xsl:template match="tei:pc[. = ('=', '-',  '¬')
+      and preceding-sibling::node()[1][self::tei:w]
       and following-sibling::*[1][self::tei:lb]
       and following-sibling::*[2][self::tei:w] != 'und'
       and matches(following-sibling::*[2], '^[a-zäöüßſ]')]" mode="combine-tokens" />
@@ -98,8 +100,10 @@
    <xd:doc>
       <xd:desc/>
    </xd:doc>
-   <xsl:template match="tei:lb[preceding-sibling::*[1][self::tei:pc[. = ('=', '-', '¬')]]
-      and following-sibling::*[1][self::tei:w[. != 'und' and matches(., '^[a-zäöüßſ]')]]]"
+   <xsl:template match="tei:lb[
+             preceding-sibling::*[1][self::tei:pc[. = ('=', '-', '¬')]]
+         and preceding-sibling::*[1]/preceding-sibling::node()[1][self::tei:w]
+         and following-sibling::*[1][self::tei:w[. != 'und' and matches(., '^[a-zäöüßſ]')]]]"
       mode="combine-tokens" />
    
    <xd:doc>
