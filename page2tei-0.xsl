@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<?xml version="1.0" encoding="UTF-8"?><xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
    xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
    xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
@@ -63,6 +62,12 @@
          default)</xd:desc>
    </xd:doc>
    <xsl:param name="withoutTextline" select="false()"/>
+   
+   <xd:doc>
+      <xd:desc>Whether to export custom attributes from tags that we do not know how to convert to valid TEI (true(),
+         default) or whether to discard them (false()).</xd:desc>
+   </xd:doc>
+   <xsl:param name="unknownAttributes" select="true()" />
 
    <xd:doc scope="stylesheet">
       <xd:desc>
@@ -910,6 +915,9 @@
                <xsl:if test="$custom?underlined = 'true'">
                   <xsl:text>text-decoration: underline;</xsl:text>
                </xsl:if>
+               <xsl:if test="$custom?strikethrough = 'true'">
+                  <xsl:text>text-decoration: line-through;</xsl:text>
+               </xsl:if>
                <xsl:if test="number($custom?fontSize) gt 0">
                   <xsl:value-of select="'font-size: ' || $custom?fontSize || 'px;'"/>
                </xsl:if>
@@ -1009,7 +1017,14 @@
                <xsl:if test="$custom('continued')">
                   <xsl:attribute name="continued" select="true()"/>
                </xsl:if>
-
+               <xsl:if test="$unknownAttributes">
+                  <xsl:for-each select="map:keys($custom)">
+                     <xsl:if test="not(. = ('', 'length', 'lastname', 'firstnam'))">
+                        <xsl:attribute name="{.}" select="$custom(.)"/>
+                     </xsl:if>
+                  </xsl:for-each>
+               </xsl:if>
+               
                <xsl:call-template name="elem">
                   <xsl:with-param name="elem" select="$elem"/>
                </xsl:call-template>
