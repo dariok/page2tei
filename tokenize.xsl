@@ -14,7 +14,10 @@
       </xd:desc>
    </xd:doc>
    
-   <xsl:template match="tei:div/*[descendant::text()]" mode="tokenize">
+   <xsl:template match="*[
+         descendant::text()
+         and local-name() != 'div'
+      ]" mode="tokenize">
       <xsl:copy>
          <xsl:sequence select="@*" />
          
@@ -22,7 +25,7 @@
             <xsl:apply-templates select="node()" mode="tokenize" />
          </xsl:variable>
          
-         <xsl:apply-templates select="$content/node()" mode="combine"/>
+         <xsl:apply-templates select="$content/node()" mode="combine-tokens"/>
       </xsl:copy>
    </xsl:template>
    
@@ -35,7 +38,7 @@
             <xsl:sequence select="." />
          </xsl:matching-substring>
          <xsl:non-matching-substring>
-            <xsl:analyze-string select="." regex="[\.,;:\-–—„“”=\?!\[\]\(\)\*¬/]">
+            <xsl:analyze-string select="." regex="[\.,;:\-–—„“”‚‘=\?!\[\]\(\)\*¬/〈〉¿…]">
                <xsl:matching-substring>
                   <pc><xsl:sequence select="."></xsl:sequence></pc>
                </xsl:matching-substring>
@@ -57,24 +60,28 @@
    <xd:doc>
       <xd:desc/>
    </xd:doc>
-   <xsl:template match="tei:w" mode="combine" priority="2">
+   <xsl:template match="tei:w" mode="combine-tokens" priority="2">
       <xsl:choose>
          <xsl:when test="following-sibling::*[1][self::tei:pc] = ('=', '-', '¬')
             and following-sibling::*[2][self::tei:lb]
             and following-sibling::*[3][self::tei:w[not(. = 'und')]]
-            and matches(following-sibling::*[3], '^[a-zäöüßſ]')">
+            and matches(following-sibling::*[3], '^[a-zäöüßſα-ω]')">
             <xsl:text>
                </xsl:text>
             <w>
                <xsl:sequence select="text()" />
-               <xsl:sequence select="following-sibling::*[1] | following-sibling::*[2]" />
+               <xsl:sequence select="following-sibling::*[1]" />
+               <lb break="no">
+                  <xsl:sequence select="following-sibling::*[2]/@*" />
+               </lb>
                <xsl:sequence select="following-sibling::*[3]/text()" />
             </w>
          </xsl:when>
          <xsl:when test=". != 'und'
             and matches(., '^[a-zäöüßſ]')
             and preceding-sibling::*[1][self::tei:lb]
-            and preceding-sibling::*[2][self::tei:pc[. = ('=', '-', '¬')]]" />
+            and preceding-sibling::*[2][self::tei:pc[. = ('=', '-', '¬')]]
+            and preceding-sibling::*[2]/preceding-sibling::node()[1][self::tei:w]" />
          <xsl:otherwise>
             <xsl:sequence select="." />
          </xsl:otherwise>
@@ -85,16 +92,19 @@
       <xd:desc/>
    </xd:doc>
    <xsl:template match="tei:pc[. = ('=', '-',  '¬')
+      and preceding-sibling::node()[1][self::tei:w]
       and following-sibling::*[1][self::tei:lb]
       and following-sibling::*[2][self::tei:w] != 'und'
-      and matches(following-sibling::*[2], '^[a-zäöüßſ]')]" mode="combine" />
+      and matches(following-sibling::*[2], '^[a-zäöüßſ]')]" mode="combine-tokens" />
    
    <xd:doc>
       <xd:desc/>
    </xd:doc>
-   <xsl:template match="tei:lb[preceding-sibling::*[1][self::tei:pc[. = ('=', '-', '¬')]]
-      and following-sibling::*[1][self::tei:w[. != 'und' and matches(., '^[a-zäöüßſ]')]]]"
-      mode="combine" />
+   <xsl:template match="tei:lb[
+             preceding-sibling::*[1][self::tei:pc[. = ('=', '-', '¬')]]
+         and preceding-sibling::*[1]/preceding-sibling::node()[1][self::tei:w]
+         and following-sibling::*[1][self::tei:w[. != 'und' and matches(., '^[a-zäöüßſ]')]]]"
+      mode="combine-tokens" />
    
    <xd:doc>
       <xd:desc/>
@@ -102,12 +112,12 @@
    <xsl:template match="text()[preceding-sibling::*[1][self::tei:pc[. = ('=', '-', '¬')]]
       and following-sibling::*[1][self::tei:lb]
       and following-sibling::*[2][self::tei:w[. != 'und' and matches(., '^[a-zäöüßſ]')]]]"
-      mode="combine" />
+      mode="combine-tokens" />
    
    <xd:doc>
       <xd:desc>Default</xd:desc>
    </xd:doc>
-   <xsl:template match="@* | node()" mode="tokenize combine">
+   <xsl:template match="@* | node()" mode="tokenize combine-tokens">
       <xsl:copy>
          <xsl:apply-templates select="@* | node()" mode="#current" />
       </xsl:copy>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<?xml version="1.0" encoding="UTF-8"?><xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
    xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
    xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
@@ -9,6 +8,11 @@
    version="3.0">
 
    <xsl:output indent="0"/>
+   
+   <xsl:variable name="langs" select="map { 'French': 'fr', 'German': 'de', 'English': 'en', 'Latin': 'la',
+      'Spanish': 'es', 'Ancient Greek': 'grc' }"/>
+
+   <xsl:include href="combine-hi.xsl" />
 
    <xd:doc>
       <xd:desc>Whether to create `rs type="..."` for person/place/org (default) or `persName` etc.
@@ -46,6 +50,7 @@
       <xd:desc>Whether to create bounding rectangles from polygons (default: true())</xd:desc>
    </xd:doc>
    <xsl:param name="bounding-rectangles" select="true()"/>
+   <xsl:include href="simplify-coordinates.xsl" />
 
    <xd:doc>
       <xd:desc>Whether to export lines without baseline (true()) or not (false(), default)</xd:desc>
@@ -57,6 +62,12 @@
          default)</xd:desc>
    </xd:doc>
    <xsl:param name="withoutTextline" select="false()"/>
+   
+   <xd:doc>
+      <xd:desc>Whether to export custom attributes from tags that we do not know how to convert to valid TEI (true(),
+         default) or whether to discard them (false()).</xd:desc>
+   </xd:doc>
+   <xsl:param name="unknownAttributes" select="true()" />
 
    <xd:doc scope="stylesheet">
       <xd:desc>
@@ -91,6 +102,13 @@
    <xsl:include href="string-pack.xsl"/>
 
    <xsl:param name="debug" select="false()"/>
+
+   <xd:doc>
+      <xd:desc>Entry</xd:desc>
+   </xd:doc>
+   <xsl:template match="/">
+      <xsl:apply-templates select="mets:mets" />
+   </xsl:template>
 
    <xd:doc>
       <xd:desc>helper: gather page contents</xd:desc>
@@ -137,12 +155,29 @@
       </xsl:text>
             </fileDesc>
             <xsl:text>
+      </xsl:text>
+            <profileDesc>
+               <xsl:apply-templates select="descendant::*:trpDocMetadata/*:language" />
+               <xsl:text>
+      </xsl:text>
+            </profileDesc>
+            <xsl:text>
    </xsl:text>
          </teiHeader>
          <xsl:text>
    </xsl:text>
          <facsimile>
-            <xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file" mode="facsimile"/>
+            <xsl:choose>
+               <xsl:when test="$bounding-rectangles">
+                  <xsl:variable name="facs">
+                     <xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file" mode="facsimile"/>
+                  </xsl:variable>
+                  <xsl:apply-templates select="$facs" mode="bounding-rectangle" />
+               </xsl:when>
+               <xsl:otherwise>
+                  <xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file" mode="facsimile"/>
+               </xsl:otherwise>
+            </xsl:choose>
             <xsl:text>
    </xsl:text>
          </facsimile>
@@ -170,13 +205,16 @@
                            </xsl:otherwise>
                         </xsl:choose>
                      </xsl:variable>
+                     <xsl:variable name="combined-hi">
+                        <xsl:apply-templates select="$combined" mode="combine-hi" />
+                     </xsl:variable>
                      <xsl:variable name="tokenized">
                         <xsl:choose>
                            <xsl:when test="$tokenize">
-                              <xsl:apply-templates select="$combined" mode="tokenize" />
+                              <xsl:apply-templates select="$combined-hi" mode="tokenize" />
                            </xsl:when>
                            <xsl:otherwise>
-                              <xsl:copy-of select="$combined" />
+                              <xsl:copy-of select="$combined-hi" />
                            </xsl:otherwise>
                         </xsl:choose>
                      </xsl:variable>
@@ -303,6 +341,28 @@
       <idno type="external">
          <xsl:value-of select="."/>
       </idno>
+   </xsl:template>
+   
+   <xd:doc>
+      <xd:desc>Transkribus meta data: languages</xd:desc>
+   </xd:doc>
+   <xsl:template match="language">
+      <xsl:text>
+         </xsl:text>
+      <langUsage>
+         <xsl:for-each select="tokenize(., ', ')">
+            <xsl:text>
+            </xsl:text>
+            <language>
+               <xsl:attribute name="ident">
+                  <xsl:value-of select="map:get($langs, .)" />
+               </xsl:attribute>
+               <xsl:value-of select="." />
+            </language>
+         </xsl:for-each>
+         <xsl:text>
+         </xsl:text>
+      </langUsage>
    </xsl:template>
 
    <!-- Templates for METS -->
@@ -683,7 +743,7 @@
                <xsl:variable name="content" select="substring-after(., '{') => normalize-space()"/>
                <xsl:variable name="name" select="substring-before(., ' {') => normalize-space()"/>
                <xsl:choose>
-                  <xsl:when test="$content = '' or $name = ('readingOrder', 'structure')"/>
+                  <xsl:when test="not(contains(., 'offset:'))" />
                   <xsl:otherwise>
                      <xsl:value-of select="normalize-space()"/>
                   </xsl:otherwise>
@@ -713,12 +773,24 @@
          </xsl:variable>
          <xsl:variable name="prepped">
             <xsl:for-each select="0 to string-length($text)">
-               <xsl:if test=". &gt; 0">
+               <xsl:if test=".">
                   <xsl:value-of select="substring($text, ., 1)"/>
                </xsl:if>
+               <!-- place end marker for all non-void elements that end here; we must not place void elements here
+                  as this would mean closing a tei:gap before it was opened -->
+               <xsl:for-each select="map:get($ends, .)">
+                  <xsl:sort select="substring-before(substring-after(., 'offset:'), ';')"
+                     order="descending"/>
+                  <xsl:sort select="substring(., 1, 3)" order="descending"/>
+                  <xsl:if test="substring-after(., 'length:') => substring-before(';') != '0'">
+                     <xsl:element name="local:m">
+                        <xsl:attribute name="type" select="normalize-space(substring-before(., ' '))"/>
+                        <xsl:attribute name="o" select="substring-after(., 'offset:')"/>
+                        <xsl:attribute name="pos">e</xsl:attribute>
+                     </xsl:element>
+                  </xsl:if>
+               </xsl:for-each>
                <xsl:for-each select="map:get($starts, .)">
-                  <!--<xsl:sort select="substring-before(substring-after(.,'offset:'), ';')" order="ascending"/>-->
-                  <!-- end of current tag -->
                   <xsl:sort select="
                         xs:int(substring-before(substring-after(., 'offset:'), ';'))
                         + xs:int(substring-before(substring-after(., 'length:'), ';'))"
@@ -730,15 +802,18 @@
                      <xsl:attribute name="pos">s</xsl:attribute>
                   </xsl:element>
                </xsl:for-each>
+               <!-- place end marker for void elements such as tei:gap -->
                <xsl:for-each select="map:get($ends, .)">
                   <xsl:sort select="substring-before(substring-after(., 'offset:'), ';')"
                      order="descending"/>
                   <xsl:sort select="substring(., 1, 3)" order="descending"/>
-                  <xsl:element name="local:m">
-                     <xsl:attribute name="type" select="normalize-space(substring-before(., ' '))"/>
-                     <xsl:attribute name="o" select="substring-after(., 'offset:')"/>
-                     <xsl:attribute name="pos">e</xsl:attribute>
-                  </xsl:element>
+                  <xsl:if test="substring-after(., 'length:') => substring-before(';') = '0'">
+                     <xsl:element name="local:m">
+                        <xsl:attribute name="type" select="normalize-space(substring-before(., ' '))"/>
+                        <xsl:attribute name="o" select="substring-after(., 'offset:')"/>
+                        <xsl:attribute name="pos">e</xsl:attribute>
+                     </xsl:element>
+                  </xsl:if>
                </xsl:for-each>
             </xsl:for-each>
          </xsl:variable>
@@ -840,6 +915,9 @@
                <xsl:if test="$custom?underlined = 'true'">
                   <xsl:text>text-decoration: underline;</xsl:text>
                </xsl:if>
+               <xsl:if test="$custom?strikethrough = 'true'">
+                  <xsl:text>text-decoration: line-through;</xsl:text>
+               </xsl:if>
                <xsl:if test="number($custom?fontSize) gt 0">
                   <xsl:value-of select="'font-size: ' || $custom?fontSize || 'px;'"/>
                </xsl:if>
@@ -851,6 +929,12 @@
                </xsl:if>
                <xsl:if test="$custom?superscript = 'true'">
                   <xsl:text>vertical-align: superscript;</xsl:text>
+               </xsl:if>
+               <xsl:if test="$custom?smallCaps = 'true'">
+                  <xsl:text>font-variant-caps: small-caps;</xsl:text>
+               </xsl:if>
+               <xsl:if test="$custom?letterSpaced = 'true'">
+                  <xsl:text>letter-spacing: 5px;</xsl:text>
                </xsl:if>
             </xsl:variable>
             <hi>
@@ -871,6 +955,9 @@
          </xsl:when>
          <xsl:when test="@type = 'abbrev'">
             <choice>
+               <xsl:if test="$custom('continued')">
+                  <xsl:attribute name="continued" select="true()"/>
+               </xsl:if>
                <expan>
                   <xsl:value-of select="replace(map:get($custom, 'expansion'), '\\u0020', ' ')"/>
                </expan>
@@ -930,7 +1017,14 @@
                <xsl:if test="$custom('continued')">
                   <xsl:attribute name="continued" select="true()"/>
                </xsl:if>
-
+               <xsl:if test="$unknownAttributes">
+                  <xsl:for-each select="map:keys($custom)">
+                     <xsl:if test="not(. = ('', 'length', 'lastname', 'firstnam'))">
+                        <xsl:attribute name="{.}" select="$custom(.)"/>
+                     </xsl:if>
+                  </xsl:for-each>
+               </xsl:if>
+               
                <xsl:call-template name="elem">
                   <xsl:with-param name="elem" select="$elem"/>
                </xsl:call-template>

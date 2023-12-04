@@ -7,6 +7,7 @@
    xmlns="http://www.tei-c.org/ns/1.0"
    exclude-result-prefixes="#all"
    version="3.0">
+   
    <xd:doc scope="stylesheet">
       <xd:desc>
          <xd:p><xd:b>Created on:</xd:b> 2021-11-08</xd:p>
@@ -18,7 +19,7 @@
    <xd:doc>
       <xd:desc>evaluate coordinates and return bounding rectangle</xd:desc>
    </xd:doc>
-   <xsl:template match="tei:zone/@points">
+   <xsl:template match="tei:zone/@points" mode="bounding-rectangle">
       <xsl:variable name="x" select="local:pointsX(.)" />
       <xsl:variable name="y" select="local:pointsY(.)" />
       <xsl:attribute name="points">
@@ -73,9 +74,9 @@
    <xd:doc>
       <xd:desc>Default</xd:desc>
    </xd:doc>
-   <xsl:template match="@* | node()">
+   <xsl:template match="@* | node()" mode="bounding-rectangle">
       <xsl:copy>
-         <xsl:apply-templates select="@* | node()" />
+         <xsl:apply-templates select="@* | node()" mode="#current" />
       </xsl:copy>
    </xsl:template>
    

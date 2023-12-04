@@ -32,16 +32,32 @@
                <lb facs="#facs_212_r1l10" n="N010"/><w>selber</w> <w>als</w> <w>Ungeist</w><pc>.</pc> <w>Das</w> <w
                   >nicht</w> <w>Bornierte</w> <w>wird</w> <w>von</w> <w>Theorie</w> <w>vertreten</w><pc>.</pc> <w
                   >Trotz</w> <w>all</w> 
-               <w>ih<pc>¬</pc><lb facs="#facs_212_r1l11" n="N011"/>rer</w> <w>Unfreiheit</w> <w>ist</w> <w>sie</w> <w
+               <w>ih<pc>¬</pc><lb facs="#facs_212_r1l11" n="N011" break="no" />rer</w> <w>Unfreiheit</w> <w>ist</w> <w>sie</w> <w
                   >im</w> <w>Unfreien</w> <w>Statthalter</w> <w>der</w> <w>Freiheit</w><pc>.</pc><pc>“</pc></note>
             <p facs="#facs_212_TextRegion_1664725063929_8643">
                <lb facs="#facs_212_r1l12" n="N001"/><pc>(</pc><w>Theodor</w> <w>W</w><pc>.</pc> <w>Adorno</w><pc>,</pc
                   > <w>Gesammelte</w> <w>Schriften</w> <w>Band</w> <num>102</num><pc>,</pc> <w>Kulturkritik</w> <w
                   >Gesellschaft</w> <w>II</w> 
-               <w>Ein<pc>¬</pc><lb facs="#facs_212_r1l13" n="N002"/>griffe</w> <w>Stichworte</w><pc>,</pc> <w
+               <w>Ein<pc>¬</pc><lb facs="#facs_212_r1l13" n="N002" break="no"/>griffe</w> <w>Stichworte</w><pc>,</pc> <w
                   >Frankfurt</w> <w>am</w> <w>Main</w> <num>1977</num><pc>,</pc> <w>Seite</w> <num>476</num> <w>et</w
                   > <w>passim</w><pc>)</pc></p>
          </div>
+      </x:expect>
+   </x:scenario>
+   
+   <x:scenario label="T2">
+      <x:context xml:space="preserve" mode="tokenize">
+         <p>
+            <lb facs="#facs_35_r1l18" n="N016"/>aufbauen und sich auf diese Weise einen herausgehobenen Status si-¬
+            <lb facs="#facs_35_r1l19" n="N017"/>chern. Diesem politischen Ziel dienten auch weitere Maßnahmen
+            <lb facs="#facs_35_r1l20" n="N018"/>Nehemias. Die baulichen Veränderungen Jerusalems dienten dessen
+         </p>
+      </x:context>
+      <x:expect xml:space="preserve" label=".">
+         <p>
+            <lb facs="#facs_35_r1l18" n="N016"/><w>aufbauen</w> <w>und</w> <w>sich</w> <w>auf</w> <w>diese</w> <w>Weise</w> <w>einen</w> <w>herausgehobenen</w> <w>Status</w> <w>si</w><pc>-</pc><pc>¬</pc><lb facs="#facs_35_r1l19" n="N017"/><w>chern</w><pc>.</pc> <w>Diesem</w> <w>politischen</w> <w>Ziel</w> <w>dienten</w> <w>auch</w> <w>weitere</w> <w>Maßnahmen</w>
+            <lb facs="#facs_35_r1l20" n="N018"/><w>Nehemias</w><pc>.</pc> <w>Die</w> <w>baulichen</w> <w>Veränderungen</w> <w>Jerusalems</w> <w>dienten</w> <w>dessen</w>
+         </p>
       </x:expect>
    </x:scenario>
    

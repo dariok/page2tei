@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+   xmlns:tei="http://www.tei-c.org/ns/1.0"
+   xmlns="http://www.tei-c.org/ns/1.0"
+   stylesheet="../combine-hi.xsl">
+   
+   <x:scenario label="T1">
+      <x:context mode="combine-hi">
+         <p facs="#facs_108_TextRegion_1679295339003_2280">
+            <lb facs="#facs_108_TextRegion_1679295339003_2280_tl_1" n="N001"/>Ich denke zu dem ersten Stück folgendes zu geben, wobey ich Euch
+            <lb facs="#facs_108_TextRegion_1679295339003_2280_tl_2" n="N002"/>noch allerley um Rath zu fragen habe. Erstlich <hi style="font-style: italic;">vier <hi style="font-weight: bold;">Briefe</hi> über W[il¬</hi><x:text>
+            </x:text><lb facs="#facs_108_TextRegion_1679295339003_2280_tl_3" n="N003"/><hi style="font-style: italic;">helm] M[eister]</hi>, vielleicht auch nur <hi style="font-style: italic;">drey</hi><comment superscript="true"><hi style="vertical-align: superscript;">37</hi></comment>, nach Befinden der Um¬
+            <lb facs="#facs_108_TextRegion_1679295339003_2280_tl_4" n="N004"/>stände.</p>
+      </x:context>
+      <x:expect label=".">
+         <p facs="#facs_108_TextRegion_1679295339003_2280">
+            <lb facs="#facs_108_TextRegion_1679295339003_2280_tl_1" n="N001"/>Ich denke zu dem ersten Stück folgendes zu geben, wobey ich Euch
+            <lb facs="#facs_108_TextRegion_1679295339003_2280_tl_2" n="N002"/>noch allerley um Rath zu fragen habe. Erstlich <hi style="font-style: italic;">vier <hi style="font-weight: bold;">Briefe</hi> über W[il¬
+            <lb facs="#facs_108_TextRegion_1679295339003_2280_tl_3" n="N003"/>helm] M[eister]</hi>, vielleicht auch nur <hi style="font-style: italic;">drey</hi><comment superscript="true"><hi style="vertical-align: superscript;">37</hi></comment>, nach Befinden der Um¬
+            <lb facs="#facs_108_TextRegion_1679295339003_2280_tl_4" n="N004"/>stände.</p>
+      </x:expect>
+   </x:scenario>
+   
+   <x:scenario label="T2">
+      <x:context mode="combine-hi">
+         <p facs="#facs_97_TextRegion_1679294369682_1465">
+            <lb facs="#facs_97_TextRegion_1679294369682_1465_tl_1" n="N001"/>Die <hi style="font-style: italic;">Kleine</hi> <supplied reason="">[Rahel Levin]</supplied> werde ich diesen Abend wohl sehen, sie
+            <lb facs="#facs_97_TextRegion_1679294369682_1465_tl_2" n="N002"/>hatt mich zum Thee eingeladen. ich bin aber noch nicht gewiß, ob ich</p>
+      </x:context>
+      <x:expect label=".">
+         <p facs="#facs_97_TextRegion_1679294369682_1465">
+            <lb facs="#facs_97_TextRegion_1679294369682_1465_tl_1" n="N001"/>Die <hi style="font-style: italic;">Kleine</hi> <supplied reason="">[Rahel Levin]</supplied> werde ich diesen Abend wohl sehen, sie
+            <lb facs="#facs_97_TextRegion_1679294369682_1465_tl_2" n="N002"/>hatt mich zum Thee eingeladen. ich bin aber noch nicht gewiß, ob ich</p>
+      </x:expect>
+   </x:scenario>
+   
+   <x:scenario label="T3">
+      <x:context mode="combine-hi" xml:space="preserve">
+         <p>
+            <lb facs="#facs_122_TextRegion_1679296131533_3340_tl_7" n="N007"/>mit dem <hi style="font-style: italic;">Studium</hi> zusammen eine Art [Ganzes?] gleichsam eine<comment><hi style="vertical-align: superscript;">17</hi></comment> <hi style="font-style: italic;">Grund¬</hi>
+            <lb facs="#facs_122_TextRegion_1679296131533_3340_tl_8" n="N008"/><hi style="font-style: italic;">lage der Alterthumslehre</hi> bilden, und als solche würde ich sie auch wohl
+         </p>
+      </x:context>
+      <x:expect label="." xml:space="preserve">
+         <p>
+            <lb facs="#facs_122_TextRegion_1679296131533_3340_tl_7" n="N007"/>mit dem <hi style="font-style: italic;">Studium</hi> zusammen eine Art [Ganzes?] gleichsam eine<comment><hi style="vertical-align: superscript;">17</hi></comment> <hi style="font-style: italic;">Grund¬
+            <lb facs="#facs_122_TextRegion_1679296131533_3340_tl_8" n="N008"/>lage der Alterthumslehre</hi> bilden, und als solche würde ich sie auch wohl
+         </p>
+      </x:expect>
+   </x:scenario>
+   
+   <x:scenario label="T4">
+      <x:context mode="combine-hi" xml:space="preserve">
+         <p facs="#facs_166_TextRegion_1679298594201_7123">
+            <lb facs="#facs_166_TextRegion_1679298594201_7123_tl_1" n="N001"/>Ich denke darüber so: <hi style="font-style: italic;">dem gottgesalbten Paroden Ehre Dank und Ge</hi>¬
+            <lb facs="#facs_166_TextRegion_1679298594201_7123_tl_2" n="N002"/><hi style="font-style: italic;">lächter</hi> (– ich<comment><hi style="vertical-align: superscript;">21</hi></comment> dächte Du müßtest es wohl schon aus alten Zeiten wis¬
+         </p>
+      </x:context>
+      <x:expect label="." xml:space="preserve">
+         <p facs="#facs_166_TextRegion_1679298594201_7123">
+            <lb facs="#facs_166_TextRegion_1679298594201_7123_tl_1" n="N001"/>Ich denke darüber so: <hi style="font-style: italic;">dem gottgesalbten Paroden Ehre Dank und Ge</hi>¬
+            <lb facs="#facs_166_TextRegion_1679298594201_7123_tl_2" n="N002"/><hi style="font-style: italic;">lächter</hi> (– ich<comment><hi style="vertical-align: superscript;">21</hi></comment> dächte Du müßtest es wohl schon aus alten Zeiten wis¬
+         </p>
+      </x:expect>
+   </x:scenario>
+   
+</x:description>
