@@ -718,6 +718,40 @@
          <x:expect label="." xml:space="preserve">
                <lb facs="#facs_25_r1l7" n="N005" /><language lang="grc-Grek">οὐ μάχαιρα ἀνδρὸς οὐδὲ μάχαιρα ἀνϑρώπου καταφάγεται αὐτόν</language>;</x:expect>
       </x:scenario>
+      <x:scenario label="T10.2">
+         <x:context mode="text">
+            <x:param name="numCurr" select="90" tunnel="1" />
+            <x:param name="center" select="200" tunnel="1" />
+            <TextRegion
+                  xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+                  id="r_486" custom="readingOrder {{index:5;}} structure {{type:heading;}}">
+               <Coords points="706,288 706,373 78,373 78,288"/>
+               <TextLine id="r1l7" custom="readingOrder {{index:0;}} textStyle {{offset:0; length:17;letterSpaced:true;}}">
+                  <Coords points="272,323 426,328 513,321 512,312 464,301 452,307 433,301 271,306"/>
+                  <Baseline points="277,323 303,322 329,323 356,323 382,324 409,324 435,325 462,325 488,324 515,322"/>
+                  <TextEquiv>
+                     <Unicode>Erster Abschnitt.</Unicode>
+                  </TextEquiv>
+               </TextLine>
+               <TextLine id="r1l8" custom="readingOrder {{index:1;}} textStyle {{offset:0; length:25;bold:true;}}">
+                  <Coords points="237,355 332,365 538,359 510,339 477,336 296,347 253,339 237,347"/>
+                  <Baseline points="242,358 269,358 296,358 323,358 350,358 377,358 404,358 431,358 458,358 485,358 512,358 540,358"/>
+                  <TextEquiv>
+                     <Unicode>Die exegetische Theologie</Unicode>
+                  </TextEquiv>
+               </TextLine>
+               <TextEquiv>
+                  <Unicode>Erster Abschnitt.
+                     Die exegetische Theologie</Unicode>
+               </TextEquiv>
+            </TextRegion>
+         </x:context>
+         <x:expect label="." xml:space="preserve"
+            ><head facs="#facs_90_r_486">
+               <lb facs="#facs_90_r1l7" n="N001" /><hi style="letter-spacing: 5px;">Erster Abschnitt.</hi>
+               <lb facs="#facs_90_r1l8" n="N002" /><hi style="font-weight: bold;">Die exegetische Theologie</hi></head
+            ></x:expect>
+      </x:scenario>
    </x:scenario>
    
    <!-- This is for integration testing only; see tokenize.xspec for specific tests -->

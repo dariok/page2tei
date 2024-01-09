@@ -912,6 +912,9 @@
                <xsl:if test="$custom?italic = 'true'">
                   <xsl:text>font-style: italic;</xsl:text>
                </xsl:if>
+               <xsl:if test="$custom?bold = 'true'">
+                  <xsl:text>font-weight: bold;</xsl:text>
+               </xsl:if>
                <xsl:if test="$custom?underlined = 'true'">
                   <xsl:text>text-decoration: underline;</xsl:text>
                </xsl:if>
