@@ -41,8 +41,8 @@
    <xsl:function name="local:pointsX" as="xs:integer+">
       <xsl:param name="pts" />
       <xsl:choose>
-         <xsl:when test="$pts=''">
-            <xsl:sequence select="(0, 0)"/>
+         <xsl:when test="$pts = ('', 'null,null')">
+            <xsl:sequence select="0"/>
          </xsl:when>
          <xsl:otherwise>
             <xsl:for-each select="tokenize($pts, ' ')">
@@ -59,8 +59,8 @@
    <xsl:function name="local:pointsY" as="xs:integer+">
       <xsl:param name="pts" />
       <xsl:choose>
-         <xsl:when test="$pts=''">
-            <xsl:sequence select="(0, 0)"/>
+         <xsl:when test="$pts = ('', 'null,null')">
+            <xsl:sequence select="0"/>
          </xsl:when>
          <xsl:otherwise>
             <xsl:variable name="vals" select="tokenize($pts, ' ')"/>
