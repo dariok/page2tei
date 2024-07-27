@@ -61,4 +61,29 @@
       </x:expect>
    </x:scenario>
    
+   <x:scenario label="T3: cb">
+      <x:context xml:space="preserve" mode="tokenize">
+         <p facs="#P1_TB00034 #P1_TB00035">
+               <cb/>
+               <lb facs="#P1_TL00169"/>Ein Sprecher des britischen Luftfahrt¬
+               <lb facs="#P1_TL00170" break="no"/>ministeriums in London erklärte am Don¬
+               <lb facs="#P1_TL00171" break="no"/>nerstag, die Übungsbombardements wür-<cb/>
+               <lb facs="#P1_TL00172"/>den festgesetzt. Sie seien zwar zeitweilig
+               <lb facs="#P1_TL00173"/>eingestellt worden, jedoch nicht wegen
+               <lb facs="#P1_TL00174"/>der „Invasoren“. Helgoland wurde zuletzt
+               <lb facs="#P1_TL00175"/>am 18. Dezember bombardiert.</p>
+      </x:context>
+      <x:expect xml:space="preserve" label=".">
+         <p facs="#P1_TB00034 #P1_TB00035">
+               <cb/>
+               <lb facs="#P1_TL00169"/><w>Ein</w> <w>Sprecher</w> <w>des</w> <w>britischen</w> 
+               <w>Luftfahrt<pc>¬</pc><lb facs="#P1_TL00170" break="no"/>ministeriums</w> <w>in</w> <w>London</w> <w>erklärte</w> <w>am</w> 
+               <w>Don<pc>¬</pc><lb facs="#P1_TL00171" break="no"/>nerstag</w><pc>,</pc> <w>die</w> <w>Übungsbombardements</w> 
+               <w>wür<pc>-</pc><cb/><lb break="no" facs="#P1_TL00172"/>den</w> <w>festgesetzt</w><pc>.</pc> <w>Sie</w> <w>seien</w> <w>zwar</w> <w>zeitweilig</w>
+               <lb facs="#P1_TL00173"/><w>eingestellt</w> <w>worden</w><pc>,</pc> <w>jedoch</w> <w>nicht</w> <w>wegen</w>
+               <lb facs="#P1_TL00174"/><w>der</w> <pc>„</pc><w>Invasoren</w><pc>“</pc><pc>.</pc> <w>Helgoland</w> <w>wurde</w> <w>zuletzt</w>
+               <lb facs="#P1_TL00175"/><w>am</w> <num>18</num><pc>.</pc> <w>Dezember</w> <w>bombardiert</w><pc>.</pc></p>
+      </x:expect>
+   </x:scenario>
+   
 </x:description>

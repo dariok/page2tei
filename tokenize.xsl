@@ -63,6 +63,23 @@
    <xsl:template match="tei:w" mode="combine-tokens" priority="2">
       <xsl:choose>
          <xsl:when test="following-sibling::*[1][self::tei:pc] = ('=', '-', '¬')
+            and following-sibling::*[2][self::tei:cb]
+            and following-sibling::*[3][self::tei:lb]
+            and following-sibling::*[4][self::tei:w[not(. = 'und')]]
+            and matches(following-sibling::*[4], '^[a-zäöüßſα-ω]')">
+            <xsl:text>
+               </xsl:text>
+            <w>
+               <xsl:sequence select="text()" />
+               <xsl:sequence select="following-sibling::*[1]" />
+               <xsl:sequence select="following-sibling::*[2]" />
+               <lb break="no">
+                  <xsl:sequence select="following-sibling::*[3]/@*" />
+               </lb>
+               <xsl:sequence select="following-sibling::*[4]/text()" />
+            </w>
+         </xsl:when>
+         <xsl:when test="following-sibling::*[1][self::tei:pc] = ('=', '-', '¬')
             and following-sibling::*[2][self::tei:lb]
             and following-sibling::*[3][self::tei:w[not(. = 'und')]]
             and matches(following-sibling::*[3], '^[a-zäöüßſα-ω]')">
@@ -82,6 +99,12 @@
             and preceding-sibling::*[1][self::tei:lb]
             and preceding-sibling::*[2][self::tei:pc[. = ('=', '-', '¬')]]
             and preceding-sibling::*[2]/preceding-sibling::node()[1][self::tei:w]" />
+         <xsl:when test=". != 'und'
+            and matches(., '^[a-zäöüßſ]')
+            and preceding-sibling::*[1][self::tei:lb]
+            and preceding-sibling::*[2][self::tei:cb]
+            and preceding-sibling::*[3][self::tei:pc[. = ('=', '-', '¬')]]
+            and preceding-sibling::*[3]/preceding-sibling::node()[1][self::tei:w]" />
          <xsl:otherwise>
             <xsl:sequence select="." />
          </xsl:otherwise>
@@ -100,6 +123,16 @@
    <xd:doc>
       <xd:desc/>
    </xd:doc>
+   <xsl:template match="tei:pc[. = ('=', '-',  '¬')
+      and preceding-sibling::node()[1][self::tei:w]
+      and following-sibling::*[1][self::tei:cb]
+      and following-sibling::*[2][self::tei:lb]
+      and following-sibling::*[3][self::tei:w] != 'und'
+      and matches(following-sibling::*[3], '^[a-zäöüßſ]')]" mode="combine-tokens" />
+   
+   <xd:doc>
+      <xd:desc/>
+   </xd:doc>
    <xsl:template match="tei:lb[
              preceding-sibling::*[1][self::tei:pc[. = ('=', '-', '¬')]]
          and preceding-sibling::*[1]/preceding-sibling::node()[1][self::tei:w]
@@ -109,9 +142,36 @@
    <xd:doc>
       <xd:desc/>
    </xd:doc>
+   <xsl:template match="tei:lb[
+             preceding-sibling::*[1][self::tei:cb]
+         and preceding-sibling::*[2][self::tei:pc[. = ('=', '-', '¬')]]
+         and preceding-sibling::*[2]/preceding-sibling::node()[1][self::tei:w]
+         and following-sibling::*[1][self::tei:w[. != 'und' and matches(., '^[a-zäöüßſ]')]]]"
+      mode="combine-tokens" />
+   
+   <xd:doc>
+      <xd:desc/>
+   </xd:doc>
    <xsl:template match="text()[preceding-sibling::*[1][self::tei:pc[. = ('=', '-', '¬')]]
       and following-sibling::*[1][self::tei:lb]
       and following-sibling::*[2][self::tei:w[. != 'und' and matches(., '^[a-zäöüßſ]')]]]"
+      mode="combine-tokens" />
+   
+   <xd:doc>
+      <xd:desc/>
+   </xd:doc>
+   <xsl:template match="text()[preceding-sibling::*[2][self::tei:pc[. = ('=', '-', '¬')]]
+      and preceding-sibling::*[1][self::tei:cb]
+      and following-sibling::*[1][self::tei:lb]
+      and following-sibling::*[2][self::tei:w[. != 'und' and matches(., '^[a-zäöüßſ]')]]]"
+      mode="combine-tokens" />
+   
+   <xd:doc>
+      <xd:desc></xd:desc>
+   </xd:doc>
+   <xsl:template match="tei:cb[
+         preceding-sibling::*[1][self::tei:pc[. = ('=', '-', '¬')]]
+      ]" 
       mode="combine-tokens" />
    
    <xd:doc>
