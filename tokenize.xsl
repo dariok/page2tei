@@ -94,6 +94,13 @@
                <xsl:sequence select="following-sibling::*[3]/text()" />
             </w>
          </xsl:when>
+         <xsl:when test="following-sibling::*[1][self::tei:pc] = ('=', '-', '¬')
+            and following-sibling::*[2][self::tei:lb]
+            and following-sibling::*[3][self::tei:w[matches(., '^[A-ZÄÖÜ]')]]">
+            <xsl:text>
+               </xsl:text>
+            <xsl:sequence select="." />
+         </xsl:when>
          <xsl:when test=". != 'und'
             and matches(., '^[a-zäöüßſ]')
             and preceding-sibling::*[1][self::tei:lb]
@@ -155,6 +162,14 @@
    <xsl:template match="text()[preceding-sibling::*[1][self::tei:pc[. = ('=', '-', '¬')]]
       and following-sibling::*[1][self::tei:lb]
       and following-sibling::*[2][self::tei:w[. != 'und' and matches(., '^[a-zäöüßſ]')]]]"
+      mode="combine-tokens" />
+   
+   <xd:doc>
+      <xd:desc/>
+   </xd:doc>
+   <xsl:template match="text()[preceding-sibling::*[1][self::tei:pc[. = ('=', '-', '¬')]]
+      and following-sibling::*[1][self::tei:lb]
+      and following-sibling::*[2][self::tei:w[matches(., '^[A-ZÄÖÜ]')]]]"
       mode="combine-tokens" />
    
    <xd:doc>

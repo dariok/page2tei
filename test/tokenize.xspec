@@ -86,4 +86,19 @@
       </x:expect>
    </x:scenario>
    
+   <x:scenario label="T4">
+      <x:context mode="tokenize" xml:space="preserve">
+            <p facs="#P1_TB00054">
+               <lb facs="#P1_TL00250" break="no"/>gonnen. Unter dem Druck der Vietminh-
+               <lb facs="#P1_TL00251"/>Angriffe mußten die Franzosen im Ost¬
+               <lb facs="#P1_TL00252" break="no"/>teil ihrer Front die Forts Binhlieu und</p>
+      </x:context>
+      <x:expect label="no hyphenation" xml:space="preserve">
+            <p facs="#P1_TB00054">
+               <lb facs="#P1_TL00250" break="no"/><w>gonnen</w><pc>.</pc> <w>Unter</w> <w>dem</w> <w>Druck</w> <w>der</w> 
+               <w>Vietminh</w><pc>-</pc><lb facs="#P1_TL00251"/><w>Angriffe</w> <w>mußten</w> <w>die</w> <w>Franzosen</w> <w>im</w> 
+               <w>Ost<pc>¬</pc><lb facs="#P1_TL00252" break="no"/>teil</w> <w>ihrer</w> <w>Front</w> <w>die</w> <w>Forts</w> <w>Binhlieu</w> <w>und</w></p>
+      </x:expect>
+   </x:scenario>
+   
 </x:description>
