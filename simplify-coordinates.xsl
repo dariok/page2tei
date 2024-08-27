@@ -46,7 +46,11 @@
          </xsl:when>
          <xsl:otherwise>
             <xsl:for-each select="tokenize($pts, ' ')">
-               <xsl:value-of select="round(number(substring-before(current(), ',')))" />
+               <xsl:variable name="part" select="substring-before(., ',')" />
+               <xsl:value-of select="
+                  if ( $part = 'NaN' ) then 0
+                  else round(number($part))
+               " />
             </xsl:for-each>
          </xsl:otherwise>
       </xsl:choose>
@@ -65,7 +69,11 @@
          <xsl:otherwise>
             <xsl:variable name="vals" select="tokenize($pts, ' ')"/>
             <xsl:for-each select="$vals">
-               <xsl:value-of select="round(number(substring-after(current(), ',')))" />
+               <xsl:variable name="part" select="substring-after(., ',')" />
+               <xsl:value-of select="
+                  if ( $part = 'NaN' ) then 0
+                  else round(number($part))
+                  " />
             </xsl:for-each>
          </xsl:otherwise>
       </xsl:choose>
