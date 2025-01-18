@@ -1166,7 +1166,7 @@
       <xd:desc>TranskribusMetadata contains the link to the image on Transkribus’ servers; return a
          tei:graphic element with this URL so it can be evaluated during postprocessing</xd:desc>
    </xd:doc>
-   <xsl:template match="*:TranskribusMetadata">
+   <xsl:template match="*:TranskribusMetadata[@imgUrl]">
       <xsl:text>
          </xsl:text>
       <graphic url="{@imgUrl}" width="{following::p:Page/@imageWidth}px"
