@@ -17,7 +17,7 @@ NCSR LineSegmentationTool, v0.3.0 (17_3_2015)</Creator>
         </ReadingOrder>
         <TextRegion type="heading" id="r2" custom="readingOrder {index:1;}">
             <Coords points="589,318 1220,318 1220,433 589,433"/>
-            <TextLine id="r2l1" custom="readingOrder {index:0;} abbrev {offset:0; length:3;} person {offset:4; length:11;} abbrev {offset:4; length:2;expansion:Herr;}">
+            <TextLine id="r2l1" custom="readingOrder {index:0;} abbrev {offset:0; length:3;expansion:Herr;} person {offset:0; length:14;} abbrev {offset:4; length:2;expansion:von;}">
                 <Coords points="757,316 633,319 591,352 590,359 590,432 595,434 643,434 666,434 938,434 1129,422 1144,398 1144,394 861,316 758,316"/>
                 <Baseline points="594,410 687,414 782,430 874,425 966,426 1152,416"/>
                 <TextEquiv>

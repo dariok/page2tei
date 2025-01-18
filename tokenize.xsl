@@ -14,7 +14,10 @@
       </xd:desc>
    </xd:doc>
    
-   <xsl:variable name="hyphens" select="('=', '-', '¬', '⸗')"/>
+   <xsl:variable name="hyphens" select="('=', '-', '¬', '⸗')" />
+   <xsl:variable name="quotationMarks" select="('„', '“', '”', '‚', '‘', '’', '»', '«', '›', '‹')" />
+   <xsl:variable name="punctuationCharacters"
+      select="'[' || $hyphens => string-join() => replace('\-', '\\-') || string-join($quotationMarks) || '\.,;:–—\?!\[\]\(\)\*/〈〉¿…]'"/>
    
    <xd:doc>
       <xd:desc>Tokenize elements within a div if they contain text</xd:desc>
@@ -30,9 +33,16 @@
             <xsl:apply-templates select="node()" mode="tokenize" />
          </xsl:variable>
          
-         <!-- evaluate tei:w; all other nodes are to be handled by that template. That way, we do not have to provide
+         <xsl:choose>
+            <!-- evaluate tei:w; all other nodes are to be handled by that template. That way, we do not have to provide
             templates for all possible combinations of hyphens with tei:pb, tei:cb, tei:lb -->
-         <xsl:apply-templates select="$content/tei:w" mode="combine-tokens"/>
+            <xsl:when test="tei:w">
+               <xsl:apply-templates select="$content/tei:w" mode="combine-tokens"/>
+            </xsl:when>
+            <xsl:otherwise>
+               <xsl:sequence select="$content/node()" />
+            </xsl:otherwise>
+         </xsl:choose>
       </xsl:copy>
    </xsl:template>
    
@@ -45,7 +55,7 @@
             <xsl:sequence select="." />
          </xsl:matching-substring>
          <xsl:non-matching-substring>
-            <xsl:analyze-string select="." regex="[\.,;:\-–—„“”‚‘=\?!\[\]\(\)\*¬/〈〉¿…»«⸗]">
+            <xsl:analyze-string select="." regex="{$punctuationCharacters}">
                <xsl:matching-substring>
                   <pc><xsl:sequence select="."></xsl:sequence></pc>
                </xsl:matching-substring>
@@ -87,7 +97,7 @@
             lower case letter; to avoid errors with a German speciality, this word must not be “und” or “oder” -->
          <xsl:when test="following-sibling::node()[1] = $hyphens
                and following-sibling::*[2][local-name() = ('pb', 'cb', 'lb')]
-               and following-sibling::tei:w[1][matches(., '^[a-zäöü]') and . != 'und' and . != 'oder']">
+               and following-sibling::tei:w[1][matches(., '^[a-zäöüß]') and . != 'und' and . != 'oder']">
             <xsl:sequence select="$preceding" />
             <xsl:if test="preceding-sibling::node()[1][self::text()]">
                <xsl:text>
@@ -111,6 +121,18 @@
             </xsl:if>
             <xsl:sequence select="." />
             <xsl:sequence select="following-sibling::* intersect following-sibling::tei:w[1]/preceding-sibling::*" />
+            <xsl:sequence select="following-sibling::tei:w[1]" />
+         </xsl:when>
+         <!-- after the breaks, the next tei:w is „und“ or „oder“ -->
+         <xsl:when test="following-sibling::node()[1] = $hyphens
+               and following-sibling::*[2][local-name() = ('pb', 'cb', 'lb')]
+               and following-sibling::tei:w[1] = ('und', 'oder')">
+            <xsl:sequence select="$preceding" />
+            <xsl:sequence select="." />
+            <xsl:sequence select="following-sibling::*[1]" />
+            <xsl:text>
+               </xsl:text>
+            <xsl:sequence select="following-sibling::*[1]/following-sibling::* intersect following-sibling::tei:w[1]/preceding-sibling::*" />
             <xsl:sequence select="following-sibling::tei:w[1]" />
          </xsl:when>
          <!-- second part of a hyphenated word. If this is the last word in its parent, restore the following nodes, if
@@ -140,6 +162,16 @@
          <xsl:sequence select="@*" />
          <xsl:attribute name="break">no</xsl:attribute>
       </lb>
+   </xsl:template>
+   
+   <xd:doc>
+      <xd:desc>add @break="no" to lb if there was hyphenation</xd:desc>
+   </xd:doc>
+   <xsl:template match="tei:cb" mode="break">
+      <cb>
+         <xsl:sequence select="@*" />
+         <xsl:attribute name="break">no</xsl:attribute>
+      </cb>
    </xsl:template>
    
    <xd:doc>

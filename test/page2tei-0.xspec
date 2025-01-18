@@ -4,6 +4,7 @@
    xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
    xmlns:ns2="http://www.w3.org/1999/xlink"
    xmlns:ns3="http://www.loc.gov/METS/"
+   xmlns:xs="http://www.w3.org/2001/XMLSchema"
    run-as="external"
    xslt-version="3.0">
    
@@ -320,15 +321,15 @@
          <x:expect label="." xml:space="preserve"
             ><pb facs="#facs_25" n="25" xml:id="img_0025"
             /><head facs="#facs_25_r2">
-               <lb facs="#facs_25_r2l1" n="N001"/><choice><expan/><abbr>H&apos;r</abbr></choice> <persName
-                  ><choice><expan>Herr</expan><abbr>v̄</abbr></choice> Kuglern.</persName></head
+               <lb facs="#facs_25_r2l1" n="N001"/><choice><expan/><abbr>H&apos;r</abbr></choice> <rs type="person"
+                  ><choice><expan>Herr</expan><abbr>v̄</abbr></choice> Kuglern.</rs></head
             ><head facs="#facs_25_r3">
                <lb facs="#facs_25_r3l1" n="N001"/><choice><expan>Numero</expan><abbr>N<hi
                   style="vertical-align: superscript;">o</hi></abbr></choice> 786.</head>
             <p facs="#facs_25_r4">
-               <lb facs="#facs_25_r4l1" n="N001"/>Remisschreiben des <orgName continued="true">Frauenklosters</orgName>
-               <lb facs="#facs_25_r4l2" n="N002"/><orgName continued="true"><choice><expan>Sankt</expan><abbr
-                  >St.</abbr></choice> Elisabeth zu <placeName>Brixen</placeName></orgName> mit dem 
+               <lb facs="#facs_25_r4l1" n="N001"/>Remisschreiben des <rs type="org" continued="true">Frauenklosters</rs>
+               <lb facs="#facs_25_r4l2" n="N002"/><rs type="org" continued="true"><choice><expan>Sankt</expan><abbr
+                  >St.</abbr></choice> Elisabeth zu <rs type="place">Brixen</rs></rs> mit dem 
                <lb facs="#facs_25_r4l3" n="N003"/><choice><expan>Ansuchen</expan><abbr
                   >Ansuch</abbr></choice>, daß der auf den <choice><expan>alldaigen</expan><abbr
                   >alldaig</abbr></choice></p></x:expect>
@@ -410,17 +411,17 @@
             <ab type="" facs="#facs_1_region_1479996526172_7">
                <lb facs="#facs_1_r1013" n="N001"/>Anwesende: Der Präsident Freiherr <persName
                   key="Hammer-Purgstall, von, Joseph"><choice><expan/><abbr>v.</abbr></choice> Hammer-Purgstall</persName>	
-               <lb facs="#facs_1_r1014" n="N002"/><choice><expan>Der</expan><abbr>"</abbr></choice> Vice-Präsident <persName
-                  key="Baumgartner, von, Andreas">Baumgartner</persName>
-               <lb facs="#facs_1_r1015" n="N003"/><choice><expan>Der</expan><abbr>"</abbr></choice> General-Secretär <persName
+               <lb facs="#facs_1_r1014" n="N002"/><choice><expan>Der</expan><abbr>"</abbr></choice> Vice-Präsident <rs type="person"
+                  key="Baumgartner, von, Andreas">Baumgartner</rs>
+               <lb facs="#facs_1_r1015" n="N003"/><choice><expan>Der</expan><abbr>"</abbr></choice> General-Secretär <rs type="person"
                   key="Ettingshausen, von, Andreas"><choice><expan>von</expan><abbr
-                   >v.</abbr></choice> Ettingshausen</persName>
-               <lb facs="#facs_1_r1016" n="N004"/><choice><expan>Der</expan><abbr>"</abbr></choice> zweite Secretär <persName
-                  key="Wolf, Ferdinand">Wolf</persName>
+                   >v.</abbr></choice> Ettingshausen</rs>
+               <lb facs="#facs_1_r1016" n="N004"/><choice><expan>Der</expan><abbr>"</abbr></choice> zweite Secretär <rs type="person"
+                  key="Wolf, Ferdinand">Wolf</rs>
             </ab>
             <ab type="" facs="#facs_1_region_1479997987283_34">
-               <lb facs="#facs_1_r1018" n="N001"/>die wirklichen Mitglieder <persName
-                  key="Prechtl, von, Johann Joseph">Prechtl</persName>	
+               <lb facs="#facs_1_r1018" n="N001"/>die wirklichen Mitglieder <rs type="person"
+                  key="Prechtl, von, Johann Joseph">Prechtl</rs>	
             </ab></x:expect>
         </x:scenario>
       <x:scenario label="T4.2a: place (1)">
@@ -458,8 +459,8 @@
          <x:expect label="name within rs" xml:space="preserve"
             ><pb facs="#facs_1" n="1" xml:id="img_0001" />
             <ab type="" facs="#facs_1_region_1480062023146_1">
-               <lb facs="#facs_1_r1052" n="N006" />en Oeconomie-Hofes in <placeName
-                  key="(Wien-)Simmering">Simmering</placeName> überwachen könnte, während die Akademie
+               <lb facs="#facs_1_r1052" n="N006" />en Oeconomie-Hofes in <rs type="place"
+                  key="(Wien-)Simmering">Simmering</rs> überwachen könnte, während die Akademie
             </ab></x:expect>
       </x:scenario>
    </x:scenario>
@@ -752,13 +753,53 @@
                <lb facs="#facs_90_r1l8" n="N002" /><hi style="font-weight: bold;">Die exegetische Theologie</hi></head
             ></x:expect>
       </x:scenario>
+      <x:scenario label="T10.3">
+         <x:context mode="text">
+            <x:param name="numCurr" select="492" tunnel="1" />
+            <x:param name="center" select="1767.5" tunnel="1" />
+            <TextRegion id="tr_1701636205" custom="readingOrder {{index:1;}} structure {{score:0.99; type:dateline;}}" xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15">
+               <Coords points="2374,765 3227,765 3227,865 2374,865"/>
+               <TextLine id="tr_1701636205_tl_1" custom="readingOrder {{index:0;}}">
+                  <Coords points="2363,852 3215,871 3212,778 2676,794 2360,767"/>
+                  <Baseline points="2379,830 2397,830 2485,830 2573,830 2662,830 2750,830 2838,830 2927,836 3015,836 3103,836 3221,840"/>
+                  <Word id="tr_1701636205_tl_1_w1" custom="readingOrder {{index:0;}}">
+                     <Coords points="2353,790 2353,850 2741,850 2741,790"/>
+                     <TextEquiv>
+                        <Unicode>[Grüningen,</Unicode>
+                     </TextEquiv>
+                  </Word>
+                  <Word id="tr_1701636205_tl_1_w2" custom="readingOrder {{index:1;}}">
+                     <Coords points="2749,792 2749,852 2993,852 2993,792"/>
+                     <TextEquiv>
+                        <Unicode>Sommer</Unicode>
+                     </TextEquiv>
+                  </Word>
+                  <Word id="tr_1701636205_tl_1_w3" custom="readingOrder {{index:2;}}">
+                     <Coords points="3025,796 3025,856 3213,856 3213,796"/>
+                     <TextEquiv>
+                        <Unicode>1795.]</Unicode>
+                     </TextEquiv>
+                  </Word>
+                  <TextEquiv>
+                     <Unicode>[Grüningen, Sommer 1795.]</Unicode>
+                  </TextEquiv>
+               </TextLine>
+               <TextEquiv>
+                  <Unicode></Unicode>
+               </TextEquiv>
+            </TextRegion>
+         </x:context>
+         <x:expect label="." xml:space="preserve">
+            <ab type="dateline" facs="...">
+               <lb facs="..." n="..." />[Grüningen, Sommer 1795.]
+            </ab></x:expect>
+      </x:scenario>
    </x:scenario>
    
    <!-- This is for integration testing only; see tokenize.xspec for specific tests -->
    <x:scenario label="T11: tokenization">
-      <x:context href="mets/mets-t111.xml">
-         <x:param name="tokenize" select="true()" />
-      </x:context>
+      <x:param name="tokenize" select="true()" as="xs:boolean"/>
+      <x:context href="mets/mets-t111.xml" />
       <x:expect label="." xml:space="preserve"
 ><TEI>
    <teiHeader>...</teiHeader>
@@ -768,8 +809,8 @@
          <div>
             <pb facs="#facs_25" n="25" xml:id="img_0025" />
             <head facs="#facs_25_r2">
-               <lb facs="#facs_25_r2l1" n="N001"/><choice><expan/><abbr><w>H&apos;r</w></abbr></choice> <rs
-                  type="person"><choice><expan><w>Herr</w></expan><abbr><w>v̄</w></abbr></choice> <w>Kuglern</w><pc>.</pc></rs></head>
+               <lb facs="#facs_25_r2l1" n="N001"/><rs type="person"
+                  ><choice><expan><w>Herr</w></expan><abbr><w>H&apos;r</w></abbr></choice> <choice><expan><w>von</w></expan><abbr><w>v̄</w></abbr></choice> <w>Kuglern</w></rs><pc>.</pc></head>
          </div>
          <div>
             <head facs="#facs_25_r3">
@@ -790,9 +831,8 @@
    
    <!-- This is for integration testing only; see combine-continued.xspec for specific tests -->
    <x:scenario label="T12: combine-continued">
-      <x:context href="mets/mets-t111.xml">
          <x:param name="combine" select="true()" />
-      </x:context>
+      <x:context href="mets/mets-t111.xml" />
       <x:expect label="." xml:space="preserve"
 ><TEI>
    <teiHeader>...</teiHeader>
@@ -802,8 +842,8 @@
          <div>
             <pb facs="#facs_25" n="25" xml:id="img_0025" />
             <head facs="#facs_25_r2">
-               <lb facs="#facs_25_r2l1" n="N001"/><choice><expan/><abbr>H&apos;r</abbr></choice> <rs
-                  type="person"><choice><expan>Herr</expan><abbr>v̄</abbr></choice> Kuglern.</rs></head>
+               <lb facs="#facs_25_r2l1" n="N001"/><rs type="person"
+                  ><choice><expan>Herr</expan><abbr>H&apos;r</abbr></choice> <choice><expan>von</expan><abbr>v̄</abbr></choice> Kuglern</rs>.</head>
          </div>
          <div>
             <head facs="#facs_25_r3">
@@ -824,10 +864,9 @@
    
    <!-- This is for integration testing only; see tokenize.xspec and combine-continued for specific tests -->
    <x:scenario label="T13: tokenization and combination">
-      <x:context href="mets/mets-t111.xml">
          <x:param name="tokenize" select="true()" />
          <x:param name="combine" select="true()" />
-      </x:context>
+      <x:context href="mets/mets-t111.xml" />
       <x:expect label="." xml:space="preserve"
 ><TEI>
    <teiHeader>...</teiHeader>
@@ -837,8 +876,8 @@
          <div>
             <pb facs="#facs_25" n="25" xml:id="img_0025" />
             <head facs="#facs_25_r2">
-               <lb facs="#facs_25_r2l1" n="N001"/><choice><expan/><abbr><w>H&apos;r</w></abbr></choice> <rs
-                  type="person"><choice><expan><w>Herr</w></expan><abbr><w>v̄</w></abbr></choice> <w>Kuglern</w><pc>.</pc></rs></head>
+               <lb facs="#facs_25_r2l1" n="N001"/><rs type="person"
+                  ><choice><expan><w>Herr</w></expan><abbr><w>H&apos;r</w></abbr></choice> <choice><expan><w>von</w></expan><abbr><w>v̄</w></abbr></choice> <w>Kuglern</w></rs><pc>.</pc></head>
          </div>
          <div>
             <head facs="#facs_25_r3">
