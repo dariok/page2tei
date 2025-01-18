@@ -1036,7 +1036,7 @@
                </xsl:if>
                <xsl:if test="$unknownAttributes">
                   <xsl:for-each select="map:keys($custom)">
-                     <xsl:if test="not(. = ('', 'length', 'lastname', 'firstnam'))">
+                     <xsl:if test="not(. = ('', 'length', 'lastname', 'firstname'))">
                         <xsl:attribute name="{.}" select="$custom(.)"/>
                      </xsl:if>
                   </xsl:for-each>
