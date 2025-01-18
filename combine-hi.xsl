@@ -37,10 +37,6 @@
       <xsl:apply-templates mode="combine-hi"/>
    </xsl:template>
    
-   <xsl:template match="/">
-      <xsl:apply-templates mode="combine-hi" />
-   </xsl:template>
-   
    <xsl:template match="@* | node()" mode="combine-hi do-combine-hi">
       <xsl:copy>
          <xsl:apply-templates select="@* | node()" mode="#current"/>
