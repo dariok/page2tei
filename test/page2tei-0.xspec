@@ -292,8 +292,8 @@
          <x:expect label="." xml:space="preserve"
             ><pb facs="#facs_25" n="25" xml:id="img_0025"
             /><head facs="#facs_25_r2">
-               <lb facs="#facs_25_r2l1" n="N001"/><choice><expan/><abbr>H&apos;r</abbr></choice> <rs
-                  type="person"><choice><expan>Herr</expan><abbr>v̄</abbr></choice> Kuglern.</rs></head
+               <lb facs="#facs_25_r2l1" n="N001"/><rs type="person"
+                  ><choice><expan>Herr</expan><abbr>H&apos;r</abbr></choice> <choice><expan>von</expan><abbr>v̄</abbr></choice> Kuglern</rs>.</head
             ><head facs="#facs_25_r3">
                <lb facs="#facs_25_r3l1" n="N001"/><choice><expan>Numero</expan><abbr>N<hi
                   style="vertical-align: superscript;">o</hi></abbr></choice> 786.</head>
@@ -321,8 +321,8 @@
          <x:expect label="." xml:space="preserve"
             ><pb facs="#facs_25" n="25" xml:id="img_0025"
             /><head facs="#facs_25_r2">
-               <lb facs="#facs_25_r2l1" n="N001"/><choice><expan/><abbr>H&apos;r</abbr></choice> <rs type="person"
-                  ><choice><expan>Herr</expan><abbr>v̄</abbr></choice> Kuglern.</rs></head
+               <lb facs="#facs_25_r2l1" n="N001"/><rs type="person"
+                  ><choice><expan>Herr</expan><abbr>H&apos;r</abbr></choice> <choice><expan>von</expan><abbr>v̄</abbr></choice> Kuglern</rs>.</head
             ><head facs="#facs_25_r3">
                <lb facs="#facs_25_r3l1" n="N001"/><choice><expan>Numero</expan><abbr>N<hi
                   style="vertical-align: superscript;">o</hi></abbr></choice> 786.</head>
@@ -641,10 +641,10 @@
                <lb facs="#facs_14_line_1665567326750_1173" n="N002"/>Dies betont Hans-Georg Gadamer (1990), Bd. 1, 15.</note></x:expect>
       </x:scenario>
       <x:scenario label="T9.2a (ab = true()">
+         <x:param name="ab" select="true()" />
          <x:context href="page/oat02.xml" mode="text">
             <x:param name="numCurr" tunnel="1">14</x:param>
             <x:param name="center" tunnel="1" select="200" />
-            <x:param name="ab" select="true()" />
          </x:context>
          <x:expect label="." xml:space="preserve">
             <ab type="footnote" facs="#facs_14_TextRegion_1665567326709_1170">
