@@ -255,4 +255,19 @@
       </x:expect>
    </x:scenario>
    
+   <x:scenario label="T8: only one continued">
+      <x:context mode="continued" xml:space="preserve">
+         <ab facs="#facs_492_tr_1701636213" type="">
+               <lb facs="#facs_492_tr_1701636213_tl_1" n="N001"/><foreign lang="fr" continued="true"><w>revoir</w></foreign><pc>,</pc> <foreign lang="fr" continued="true"><w>beaucoup</w></foreign>
+               <lb facs="#facs_492_tr_1701636213_tl_2" n="N002"/><foreign lang="fr" continued="true"><w>des</w> <w>compliments</w> <w>de</w> <w>touttes</w> <w>la</w> <w>famille</w></foreign><pc>,</pc>
+            </ab>
+      </x:context>
+      <x:expect label="." xml:space="preserve">
+         <ab facs="#facs_492_tr_1701636213" type="">
+               <lb facs="#facs_492_tr_1701636213_tl_1" n="N001"/><foreign lang="fr"><w>revoir</w></foreign><pc>,</pc> <foreign lang="fr"><w>beaucoup</w>
+               <lb facs="#facs_492_tr_1701636213_tl_2" n="N002"/><w>des</w> <w>compliments</w> <w>de</w> <w>touttes</w> <w>la</w> <w>famille</w></foreign><pc>,</pc>
+            </ab>
+      </x:expect>
+   </x:scenario>
+   
 </x:description>

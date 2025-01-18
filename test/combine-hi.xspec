@@ -64,4 +64,17 @@
       </x:expect>
    </x:scenario>
    
+   <x:scenario label="T5">
+      <x:context mode="combine-hi" xml:space="preserve">
+         <head facs="#facs_90_r_486">
+            <lb facs="#facs_90_r1l7" n="N001" /><hi style="letter-spacing: 5px;">Erster Abschnitt.</hi>
+            <lb facs="#facs_90_r1l8" n="N002" /><hi style="font-weight: bold;">Die exegetische Theologie</hi></head>
+      </x:context>
+      <x:expect label="." xml:space="preserve">
+         <head facs="#facs_90_r_486">
+            <lb facs="#facs_90_r1l7" n="N001" /><hi style="letter-spacing: 5px;">Erster Abschnitt.</hi>
+            <lb facs="#facs_90_r1l8" n="N002" /><hi style="font-weight: bold;">Die exegetische Theologie</hi></head>
+      </x:expect>
+   </x:scenario>
+   
 </x:description>

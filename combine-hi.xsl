@@ -10,27 +10,23 @@
    <xsl:template match="*[tei:hi]" mode="combine-hi">
       <xsl:copy>
          <xsl:sequence select="@*" />
-         <xsl:for-each-group select="node()" group-adjacent="@style or normalize-space() = ''">
+         <xsl:for-each-group select="node()"
+               group-starting-with="tei:hi[
+                  @style != preceding-sibling::tei:hi[1]/@style
+                  or not(preceding-sibling::tei:hi)
+                  or normalize-space(string-join(preceding-sibling::tei:hi[1]/following-sibling::node() intersect preceding-sibling::node())) != ''
+               ]">
             <xsl:choose>
-               <xsl:when test="current-group()[self::tei:hi]">
-                  <xsl:variable name="firstHi" select="current-group()[self::tei:hi][1]" />
-                  
-                  <xsl:sequence select="current-group() intersect $firstHi/preceding-sibling::node()" />
-                  <hi>
-                     <xsl:sequence select="$firstHi/@style" />
-                     <xsl:apply-templates
-                        select="$firstHi | current-group()[position() != last()] intersect $firstHi/following-sibling::node()"
-                        mode="do-combine-hi" />
-                     <xsl:if test="count(current-group()) gt 1 and current-group()[last()] != ' ' and not(current-group()[last()] is $firstHi)">
-                        <xsl:apply-templates select="current-group()[last()]" mode="do-combine-hi" />
-                     </xsl:if>
-                  </hi>
-                  <xsl:if test="current-group()[last()] = ' '">
-                     <xsl:text> </xsl:text>
-                  </xsl:if>
+               <xsl:when test="not(current-group()[self::tei:hi])">
+                  <xsl:sequence select="current-group()" />
                </xsl:when>
                <xsl:otherwise>
-                  <xsl:apply-templates select="current-group()" mode="combine-hi"/>
+                  <xsl:variable name="lastHi" select="index-of(current-group(), current-group()[self::tei:hi][last()])"/>
+                  
+                  <hi style="{current-group()[1]/@style}">
+                     <xsl:apply-templates select="current-group()[position() le $lastHi]" mode="do-combine-hi" />
+                  </hi>
+                  <xsl:sequence select="current-group()[position() gt $lastHi]" />
                </xsl:otherwise>
             </xsl:choose>
          </xsl:for-each-group>

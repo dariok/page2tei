@@ -15,6 +15,10 @@
       </xd:desc>
    </xd:doc>
    
+   <!--<xsl:template match="/">
+      <xsl:apply-templates mode="continued" />
+   </xsl:template>-->
+   
    <xd:doc>
       <xd:desc>
          <xd:p>Combine continued elements (e.g. rs)</xd:p>
@@ -29,7 +33,11 @@
                group-starting-with="tei:*[
                   @continued eq 'true'
                   and normalize-space() != ''
-                  and (normalize-space(preceding::text()[1]) != '' or preceding::text()[1][not(preceding-sibling::*)])
+                  and (
+                        normalize-space(preceding::text()[1]) != ''
+                     or preceding::text()[1][not(preceding-sibling::*)]
+                     or preceding-sibling::*[1][not(@continued = 'true') and not(self::tei:lb)]
+                  )
                ]">
             
             <xsl:choose>
@@ -48,7 +56,7 @@
                   </choice>
                   <xsl:apply-templates select="current-group()[position() gt 4]" mode="continued" />
                </xsl:when>
-               <xsl:when test="current-group()[1][@continued eq 'true']">
+               <xsl:when test="current-group()[1][@continued eq 'true'] and count(current-group()[@continued = 'true']) gt 1">
                   <xsl:variable
                      name="final"
                      select="
@@ -61,12 +69,18 @@
                            current-group()[4]
                         )[1]"
                   />
-                  <xsl:variable name="last" select="index-of(current-group(), $final)[1]"/>
+                  <xsl:try>
+                     <xsl:variable name="last" select="index-of(current-group(), $final)[1]"/>
+                     
                   <xsl:element name="{local-name()}">
                      <xsl:apply-templates select="@*" mode="continued" />
                      <xsl:apply-templates select="current-group()[position() le $last]" mode="rs-continued" />
                   </xsl:element>
                   <xsl:apply-templates select="current-group()[position() gt $last]" mode="continued" />
+                     <xsl:catch>
+                        <xsl:message select="current-group()" />
+                     </xsl:catch>
+                  </xsl:try>
                </xsl:when>
                <xsl:otherwise>
                   <xsl:apply-templates select="current-group()" mode="continued" />
