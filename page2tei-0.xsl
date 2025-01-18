@@ -743,6 +743,21 @@
    </xsl:template>
 
    <xd:doc>
+      <xd:desc>create a figure for graphics
+         – Provided by github:@liladude in https://github.com/dariok/page2tei/issues/25#issuecomment-1543625106
+         – Reported by github:@giorgiaagostini</xd:desc>
+      <xd:param name="numCurr"/>
+   </xd:doc>
+   <xsl:template match="p:GraphicRegion" mode="text">
+      <xsl:param name="numCurr" tunnel="true" />
+      <xsl:text>
+      </xsl:text>
+      <figure facs="#facs_{$numCurr}_{@id}">
+         <graphic xml:id="#facs_{$numCurr}_{@id}" />
+      </figure>
+   </xsl:template>
+
+   <xd:doc>
       <xd:desc>Converts one line of PAGE to one line of TEI</xd:desc>
       <xd:param name="numCurr">Numerus currens, to be tunneled through from the page
          level</xd:param>
