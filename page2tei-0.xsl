@@ -135,12 +135,14 @@
          </xsl:text>
                <titleStmt>
                   <xsl:apply-templates select="mets:amdSec" mode="titleStmt"/>
+                  <xsl:text>
+         </xsl:text>
                </titleStmt>
                <xsl:text>
          </xsl:text>
-               <seriesStmt>
-                  <xsl:apply-templates select="mets:amdSec" mode="seriesStmt"/>
-               </seriesStmt>
+               <publicationStmt>
+                  <xsl:apply-templates select="mets:amdSec" mode="publicationStmt"/>
+               </publicationStmt>
                <xsl:text>
          </xsl:text>
                <sourceDesc>
@@ -249,10 +251,14 @@
    </xsl:template>
 
    <xd:doc>
-      <xd:desc>Contents for seriesStmt</xd:desc>
+      <xd:desc>Contents for publicationStmt</xd:desc>
    </xd:doc>
-   <xsl:template match="mets:amdSec" mode="seriesStmt">
-      <xsl:apply-templates select="descendant::trpDocMetadata//colList[1]/colName"/>
+   <xsl:template match="mets:amdSec" mode="publicationStmt">
+      <xsl:text>
+            </xsl:text>
+      <xsl:apply-templates select="descendant::trpDocMetadata//colList[1]/colName" />
+      <xsl:text>
+         </xsl:text>
    </xsl:template>
 
    <xd:doc>
@@ -262,9 +268,13 @@
       <xsl:apply-templates select="descendant::trpDocMetadata/title"/>
       <xsl:apply-templates
          select="descendant::trpDocMetadata/author | descendant::trpDocMetadata/writer"/>
+      <xsl:text>
+               </xsl:text>
       <idno type="Transkribus">
          <xsl:value-of select="descendant::trpDocMetadata/docId"/>
       </idno>
+      <xsl:text>
+            </xsl:text>
       <xsl:apply-templates select="descendant::trpDocMetadata/externalId"/>
       <xsl:apply-templates select="descendant::trpDocMetadata/desc"/>
    </xsl:template>
@@ -284,6 +294,8 @@
       </xd:desc>
    </xd:doc>
    <xsl:template match="title">
+      <xsl:text>
+            </xsl:text>
       <title>
          <xsl:if test="position() = 1">
             <xsl:attribute name="type">main</xsl:attribute>
@@ -297,6 +309,8 @@
          titleStmt/author</xd:desc>
    </xd:doc>
    <xsl:template match="author">
+      <xsl:text>
+            </xsl:text>
       <author>
          <xsl:apply-templates/>
       </author>
@@ -307,6 +321,8 @@
          titleStmt/respStmt</xd:desc>
    </xd:doc>
    <xsl:template match="writer">
+      <xsl:text>
+            </xsl:text>
       <respStmt>
          <resp>Writer</resp>
          <name>
@@ -330,9 +346,9 @@
          seriesStmt/title</xd:desc>
    </xd:doc>
    <xsl:template match="colName">
-      <title>
+      <p>
          <xsl:apply-templates/>
-      </title>
+      </p>
    </xsl:template>
 
    <xd:doc>

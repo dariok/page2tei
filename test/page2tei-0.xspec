@@ -984,4 +984,37 @@
    </text>
 </TEI></x:expect>
    </x:scenario>
+
+   <x:scenario label="T14: teiheader">
+      <x:scenario label="T14.1">
+         <x:context href="mets/mets.xml" />
+         <x:expect label="." xml:space="preserve"><TEI>
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title type="main">Heft 7-1</title>
+            <author>Herausgegeben von o. Prof. Dr.-Ing. H. Breth</author>
+         </titleStmt>
+         <publicationStmt>
+            <p>Volltextservice ULB 001</p>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+            <title type="main">Heft 7-1</title>
+            <author>Herausgegeben von o. Prof. Dr.-Ing. H. Breth</author>
+               <idno type="Transkribus">4677957</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="de">German</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <facsimile>...</facsimile>
+   <text>...</text>
+</TEI></x:expect>
+      </x:scenario>
+   </x:scenario>
 </x:description>
