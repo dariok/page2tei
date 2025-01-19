@@ -2,6 +2,7 @@
 <x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" stylesheet="../page2tei-0.xsl"
    xmlns="http://www.tei-c.org/ns/1.0"
    xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+   xmlns:pc="http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15"
    xmlns:ns2="http://www.w3.org/1999/xlink"
    xmlns:ns3="http://www.loc.gov/METS/"
    xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -1015,6 +1016,26 @@
    <facsimile>...</facsimile>
    <text>...</text>
 </TEI></x:expect>
+      </x:scenario>
+   </x:scenario>
+
+   <x:scenario label="T15: PAGE 2019">
+      <x:scenario label="T15.1">
+         <x:context href="page/0001_p001.xml" select="//pc:Page" mode="text">
+            <x:param name="numCurr" tunnel="1">1</x:param>
+         </x:context>
+         <x:expect label="." xml:space="preserve"><pb
+               xmlns="http://www.tei-c.org/ns/1.0" facs="#facs_1" n="1" xml:id="img_0001" />
+            <p xmlns="http://www.tei-c.org/ns/1.0" facs="#facs_1_r">
+               <lb facs="#facs_1_l" n="N001" />Mitteilungen der Versuchsanstalt für Bodenmechanik und Grundbau
+               <lb facs="#facs_1_l_1" n="N002" />der Technischen Hochschule Darmstadt
+               <lb facs="#facs_1_l_2" n="N003" />Herausgegeben von o. Prof. Dr.-Ing. H. Breth
+               <lb facs="#facs_1_l_3" n="N004" />Hest 7</p>
+            <p xmlns="http://www.tei-c.org/ns/1.0" facs="#facs_1_r_2">
+               <lb facs="#facs_1_l_7" n="N001" />Beiträge in den Jahren
+               <lb facs="#facs_1_l_8" n="N002" />1968 - 1970</p>
+            <p xmlns="http://www.tei-c.org/ns/1.0" facs="#facs_1_r_3">
+               <lb facs="#facs_1_l_9" n="N001" />Januar 1971</p></x:expect>
       </x:scenario>
    </x:scenario>
 </x:description>

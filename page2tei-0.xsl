@@ -796,7 +796,7 @@
    <xsl:template match="p:TextLine | pc:TextLine">
       <xsl:param name="numCurr" tunnel="true"/>
 
-      <xsl:if test="p:Baseline or $withoutBaseline">
+      <xsl:if test="p:Baseline or pc:Baseline or $withoutBaseline">
          <xsl:variable name="text" select="p:TextEquiv/p:Unicode, pc:TextEquiv/pc:Unicode"/>
          <xsl:variable name="custom" as="text()*">
             <xsl:for-each select="tokenize(@custom, '\}')">
