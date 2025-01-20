@@ -22,34 +22,21 @@
    <xd:doc>
       <xd:desc>Tokenize elements within a div if they contain text</xd:desc>
    </xd:doc>
-   <xsl:template match="*[
-         descendant::text()
-         and local-name() != 'div'
-      ]" mode="tokenize">
+   <xsl:template match="*" mode="tokenize">
       <xsl:copy>
          <xsl:sequence select="@*" />
-         
          <xsl:variable name="content">
-            <xsl:apply-templates select="node()" mode="tokenize" />
+            <xsl:apply-templates mode="doTokenize" />
          </xsl:variable>
          
-         <xsl:choose>
-            <!-- evaluate tei:w; all other nodes are to be handled by that template. That way, we do not have to provide
-            templates for all possible combinations of hyphens with tei:pb, tei:cb, tei:lb -->
-            <xsl:when test="tei:w">
-               <xsl:apply-templates select="$content/tei:w" mode="combine-tokens"/>
-            </xsl:when>
-            <xsl:otherwise>
-               <xsl:sequence select="$content/node()" />
-            </xsl:otherwise>
-         </xsl:choose>
+         <xsl:apply-templates select="$content" mode="combine-tokens"/>
       </xsl:copy>
    </xsl:template>
    
    <xd:doc>
       <xd:desc>Basic white space tokenisation: it’s a word if it’s not a pc or a num</xd:desc>
    </xd:doc>
-   <xsl:template match="text()[normalize-space() != '']" mode="tokenize" priority="2">
+   <xsl:template match="text()[normalize-space() != '']" mode="doTokenize" priority="2">
       <xsl:analyze-string select="." regex="\s+">
          <xsl:matching-substring>
             <xsl:sequence select="." />
@@ -57,7 +44,7 @@
          <xsl:non-matching-substring>
             <xsl:analyze-string select="." regex="{$punctuationCharacters}">
                <xsl:matching-substring>
-                  <pc><xsl:sequence select="."></xsl:sequence></pc>
+                  <pc><xsl:sequence select="." /></pc>
                </xsl:matching-substring>
                <xsl:non-matching-substring>
                   <xsl:analyze-string select="." regex="\d+">
@@ -155,6 +142,11 @@
    </xsl:template>
    
    <xd:doc>
+      <xd:desc>If a node has a sibling tei:w, it is handled by the previous template</xd:desc>
+   </xd:doc>
+   <xsl:template match="node()[../tei:w]" mode="combine-tokens" />
+   
+   <xd:doc>
       <xd:desc>add @break="no" to lb if there was hyphenation</xd:desc>
    </xd:doc>
    <xsl:template match="tei:lb" mode="break">
@@ -177,7 +169,7 @@
    <xd:doc>
       <xd:desc>Default</xd:desc>
    </xd:doc>
-   <xsl:template match="@* | node()" mode="tokenize combine-tokens break">
+   <xsl:template match="@* | node()" mode="doTokenize combine-tokens break">
       <xsl:copy>
          <xsl:apply-templates select="@* | node()" mode="#current" />
       </xsl:copy>
