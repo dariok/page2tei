@@ -70,11 +70,11 @@
       <xsl:variable name="preceding">
          <xsl:choose>
             <xsl:when test="preceding-sibling::tei:w">
-               <xsl:sequence select="preceding-sibling::node()
-                     intersect preceding-sibling::tei:w[1]/following-sibling::node()" />
+               <xsl:apply-templates select="preceding-sibling::node()
+                     intersect preceding-sibling::tei:w[1]/following-sibling::node()" mode="combine-tokens-hi" />
             </xsl:when>
             <xsl:otherwise>
-               <xsl:sequence select="preceding-sibling::node()" />
+               <xsl:apply-templates select="preceding-sibling::node()" mode="combine-tokens-hi" />
             </xsl:otherwise>
          </xsl:choose>
       </xsl:variable>
@@ -141,6 +141,14 @@
       </xsl:choose>
    </xsl:template>
    
+   
+   <xsl:template match="tei:hi" mode="combine-tokens-hi">
+      <hi>
+         <xsl:sequence select="@*" />
+         <xsl:apply-templates mode="combine-tokens" />
+      </hi>
+   </xsl:template>
+   
    <xd:doc>
       <xd:desc>If a node has a sibling tei:w, it is handled by the previous template</xd:desc>
    </xd:doc>
@@ -169,7 +177,7 @@
    <xd:doc>
       <xd:desc>Default</xd:desc>
    </xd:doc>
-   <xsl:template match="@* | node()" mode="doTokenize combine-tokens break">
+   <xsl:template match="@* | node()" mode="doTokenize combine-tokens combine-tokens-hi break">
       <xsl:copy>
          <xsl:apply-templates select="@* | node()" mode="#current" />
       </xsl:copy>

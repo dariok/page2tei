@@ -185,5 +185,24 @@
             </div>
          </x:expect>
       </x:scenario>
+      <x:scenario label="T9.2">
+         <x:context xml:space="preserve" mode="tokenize">
+            <p>
+               <lb/>Wenn ich aber auch jener <hi style="letter-spacing: 5px;">Nachtfeyer der Freundschaft</hi>
+               <lb/>beygewohnt hätte, so würde es doch in Ansehung der <hi style="letter-spacing: 5px;">bewuß¬
+               <lb/>ten Sache</hi> schwerlich unter uns zu einer so zusammenhängen¬
+               <lb/>den und bestimmten Erklärung gekommen seyn, als Sie mir
+               <lb/>zurückzulaßen beliebt haben.
+            </p>
+         </x:context>
+         <x:expect label="." xml:space="preserve">
+            <p>
+               <lb/><w>Wenn</w> <w>ich</w> <w>aber</w> <w>auch</w> <w>jener</w> <hi style="letter-spacing: 5px;"><w>Nachtfeyer</w> <w>der</w> <w>Freundschaft</w></hi>
+               <lb/><w>beygewohnt</w> <w>hätte</w><pc>,</pc> <w>so</w> <w>würde</w> <w>es</w> <w>doch</w> <w>in</w> <w>Ansehung</w> <w>der</w> <hi style="letter-spacing: 5px;"><w>bewuß<pc>¬</pc><lb break="no" />ten</w> <w>Sache</w></hi> <w>schwerlich</w> <w>unter</w> <w>uns</w> <w>zu</w> <w>einer</w> <w>so</w> 
+               <w>zusammenhängen<pc>¬</pc><lb break="no" />den</w> <w>und</w> <w>bestimmten</w> <w>Erklärung</w> <w>gekommen</w> <w>seyn</w><pc>,</pc> <w>als</w> <w>Sie</w> <w>mir</w>
+               <lb/><w>zurückzulaßen</w> <w>beliebt</w> <w>haben</w><pc>.</pc>
+            </p>
+         </x:expect>
+      </x:scenario>
    </x:scenario>
 </x:description>
