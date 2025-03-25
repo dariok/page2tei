@@ -27,6 +27,7 @@ You can set the following parameters when calling `page2tei-0.xsl` (via command 
 - bounding-rectangles (default: `true()`): Whether to create bounding rectangles from polygons (default: true())
 - withoutBaseline (default: `false()`): Whether to export lines without baseline or not
 - withoutTextline (default: `false()`): Whether to export regions without text lines
+- unknownAttributes (default: `true()`): Whether to export custom attributes from tags that we do not know how to convert to valid TEI (true(), default) or whether to discard them (false())
 
 
 ## Contributors
