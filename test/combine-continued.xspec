@@ -270,4 +270,12 @@
       </x:expect>
    </x:scenario>
    
+   <x:scenario label="T9: issue 33">
+      <x:context href="page2tei-0.xspec" select="//x:scenario[starts-with(@label, 'T16:')]//tei:p" mode="continued" />
+      <x:expect label="." xml:space="preserve"><p facs="#facs__r1">
+               <lb facs="..." n="N006"/><add xmlid="add1" place="inspace">BLABLABLA ADDED</add>
+               <lb facs="..." n="N007"/><del>BLABLABLA DELETED
+               <lb facs="..." n="N008"/>BLABLABLA DELETED</del></p></x:expect>
+   </x:scenario>
+   
 </x:description>

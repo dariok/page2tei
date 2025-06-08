@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><html xmlns="http://www.w3.org/1999/xhtml">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-      <title>Test Report for /home/kampkaspar/git/page2tei/combine-continued.xsl (passed: 8 / pending: 0 / failed: 0 / total: 8)</title>
+      <title>Test Report for /home/kampkaspar/git/page2tei/combine-continued.xsl (passed: 8 / pending: 0 / failed: 1 / total: 9)</title>
       <style type="text/css">/****************************************************************************/
 /*  File:       test-report.css                                             */
 /*  Author:     Jeni Tennison                                               */
@@ -402,6 +402,13 @@ a.img:active {
 	background: white;
 }
 
+.unknown {
+	font-style: italic;
+	font-weight: bold;
+	color: #999;
+	background: white;
+}
+
 .hit {
 }
 
@@ -592,7 +599,7 @@ span.scenario-totals {
       <h1>Test Report</h1>
       <p>Stylesheet: <a href="file:/home/kampkaspar/git/page2tei/combine-continued.xsl">/home/kampkaspar/git/page2tei/combine-continued.xsl</a></p>
       <p>XSpec: <a href="file:/home/kampkaspar/git/page2tei/test/combine-continued.xspec">/home/kampkaspar/git/page2tei/test/combine-continued.xspec</a></p>
-      <p>Tested: 25 April 2024 at 00:20</p>
+      <p>Tested: 8 June 2025 at 14:46</p>
       <h2>Contents</h2>
       <table class="xspec">
          <colgroup>
@@ -607,8 +614,8 @@ span.scenario-totals {
                <th></th>
                <th class="totals">passed: 8</th>
                <th class="totals">pending: 0</th>
-               <th class="totals">failed: 0</th>
-               <th class="totals">total: 8</th>
+               <th class="totals">failed: 1</th>
+               <th class="totals">total: 9</th>
             </tr>
          </thead>
          <tbody>
@@ -666,6 +673,13 @@ span.scenario-totals {
                <th class="totals">1</th>
                <th class="totals">0</th>
                <th class="totals">0</th>
+               <th class="totals">1</th>
+            </tr>
+            <tr class="failed">
+               <th><a href="#top_scenario9">T9: issue 33</a></th>
+               <th class="totals">0</th>
+               <th class="totals">0</th>
+               <th class="totals">1</th>
                <th class="totals">1</th>
             </tr>
          </tbody>
@@ -821,6 +835,78 @@ span.scenario-totals {
                </tr>
             </tbody>
          </table>
+      </div>
+      <div id="top_scenario9">
+         <h2 class="failed">T9: issue 33<span class="scenario-totals">passed: 0 / pending: 0 / failed: 1 / total: 1</span></h2>
+         <table class="xspec" id="table_scenario9">
+            <colgroup>
+               <col style="width:75%" />
+               <col style="width:25%" />
+            </colgroup>
+            <tbody>
+               <tr class="failed">
+                  <th>T9: issue 33</th>
+                  <th>passed: 0 / pending: 0 / failed: 1 / total: 1</th>
+               </tr>
+               <tr class="failed">
+                  <td><a href="#scenario9-expect1">.</a></td>
+                  <td>Failure</td>
+               </tr>
+            </tbody>
+         </table>
+         <div id="scenario9">
+            <h3>T9: issue 33</h3>
+            <div id="scenario9-expect1" class="xTestReport">
+               <h4 class="xTestReportTitle">.</h4>
+               <div class="xTestReportHint"><a href="https://github.com/xspec/xspec/wiki/Understanding-Test-Results" target="_blank" title="What does this report mean?">[?]</a></div>
+               <table class="xspecResult">
+                  <thead>
+                     <tr>
+                        <th>Result</th>
+                        <th>Expected Result</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>
+                           <p>XPath <code class="same">/element()</code> from:</p>
+                           <pre>&lt;<span class="inner-diff">p</span> <span class="xmlns">xmlns="http://www.tei-c.org/ns/1.0"</span>
+   <span class="xmlns">xmlns:ns2="http://www.w3.org/1999/xlink"</span>
+   <span class="xmlns">xmlns:ns3="http://www.loc.gov/METS/"</span>
+   <span class="xmlns">xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"</span>
+   <span class="xmlns">xmlns:pc="http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15"</span>
+   <span class="xmlns trivial">xmlns:x="http://www.jenitennison.com/xslt/xspec"</span>
+   <span class="xmlns trivial">xmlns:xs="http://www.w3.org/2001/XMLSchema"</span>
+   <span class="same">facs</span>=<span class="same">"#facs__r1"</span>&gt;<span class="same whitespace">\n␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs__tr_1_tl_7"</span>
+       <span class="same">n</span>=<span class="same">"N006"</span> /&gt;
+   &lt;<span class="same">add</span> <span class="same">place</span>=<span class="same">"inspace"</span>
+        <span class="same">xmlid</span>=<span class="same">"add1"</span>&gt;<span class="same">BLABLABLA ADDED</span>&lt;/add&gt;<span class="same whitespace">\n␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"#facs__tr_1_tl_8"</span>
+       <span class="same">n</span>=<span class="same">"N007"</span> /&gt;
+   &lt;<span class="inner-diff">del</span>&gt;<span class="diff">BLABLABLA DELETED</span>&lt;/del&gt;<span class="diff whitespace">\n␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣</span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>=<span class="diff">"#facs__tr_1_tl_9"</span>
+       <span class="diff">n</span>=<span class="diff">"N008"</span> /&gt;
+   &lt;<span class="diff">del</span>&gt;<span class="diff">BLABLABLA DELETED</span>&lt;/del&gt;
+&lt;/p&gt;</pre>
+                        </td>
+                        <td>
+                           <p>XPath <code class="same">/element()</code> from:</p>
+                           <pre>&lt;<span class="inner-diff">p</span> <span class="xmlns">xmlns="http://www.tei-c.org/ns/1.0"</span>
+   <span class="xmlns">xmlns:tei="http://www.tei-c.org/ns/1.0"</span>
+   <span class="xmlns trivial">xmlns:x="http://www.jenitennison.com/xslt/xspec"</span>
+   <span class="same">facs</span>=<span class="same">"#facs__r1"</span>&gt;<span class="same whitespace">\n␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"..."</span>
+       <span class="same">n</span>=<span class="same">"N006"</span> /&gt;
+   &lt;<span class="same">add</span> <span class="same">xmlid</span>=<span class="same">"add1"</span>
+        <span class="same">place</span>=<span class="same">"inspace"</span>&gt;<span class="same">BLABLABLA ADDED</span>&lt;/add&gt;<span class="same whitespace">\n␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣</span>&lt;<span class="same">lb</span> <span class="same">facs</span>=<span class="same">"..."</span>
+       <span class="same">n</span>=<span class="same">"N007"</span> /&gt;
+   &lt;<span class="inner-diff">del</span>&gt;<span class="diff">BLABLABLA DELETED
+               </span>&lt;<span class="diff">lb</span> <span class="diff">facs</span>=<span class="diff">"..."</span>
+          <span class="diff">n</span>=<span class="diff">"N008"</span> /&gt;<span class="diff">BLABLABLA DELETED</span>&lt;/del&gt;
+&lt;/p&gt;</pre>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
       </div>
    </body>
 </html>

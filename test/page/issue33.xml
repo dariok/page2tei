@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextRegion xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15" custom="readingOrder {index:1;} structure {type:paragraph;}" id="r1">
+   <TextLine id="tr_1_tl_7" custom="readingOrder {index:5;} add {offset:0; length:15;place:inspace; xmlid:add1;}">
+      <Coords points="somecoords"/>
+      <Baseline points="somepoints"/>
+      <TextEquiv>
+         <Unicode>BLABLABLA ADDED</Unicode>
+      </TextEquiv>
+   </TextLine>
+   <TextLine id="tr_1_tl_8" custom="readingOrder {index:6;} del {offset:0; length:17; continued:true;}">
+      <Coords points="somecoords"/>
+      <Baseline points="somepoints"/>
+      <TextEquiv>
+         <Unicode>BLABLABLA DELETED</Unicode>
+      </TextEquiv>
+   </TextLine>
+   <TextLine id="tr_1_tl_9" custom="readingOrder {index:7;} del {offset:0; length:17; continued:true;}">
+      <Coords points="somecoords"/>
+      <Baseline points="somepoints"/>
+      <TextEquiv>
+         <Unicode>BLABLABLA DELETED</Unicode>
+      </TextEquiv>
+   </TextLine>
+</TextRegion>

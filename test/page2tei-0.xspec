@@ -1038,4 +1038,15 @@
                <lb facs="#facs_1_l_9" n="N001" />Januar 1971</p></x:expect>
       </x:scenario>
    </x:scenario>
+   
+   <x:scenario label="T16: issue #33">
+      <x:context href="page/issue33.xml" mode="text">
+         <x:param name="center" tunnel="1" select="200" />
+      </x:context>
+      <x:expect label="." xml:space="preserve">
+            <p facs="#facs__r1">
+               <lb facs="#facs__tr_1_tl_7" n="N006" /><add place="inspace" xmlid="add1">BLABLABLA ADDED</add>
+               <lb facs="#facs__tr_1_tl_8" n="N007" /><del continued="true">BLABLABLA DELETED</del>
+               <lb facs="#facs__tr_1_tl_9" n="N008" /><del continued="true">BLABLABLA DELETED</del></p></x:expect>
+   </x:scenario>
 </x:description>
