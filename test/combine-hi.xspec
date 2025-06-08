@@ -77,4 +77,19 @@
       </x:expect>
    </x:scenario>
    
+   <x:scenario label="T6">
+      <x:context mode="combine-hi" xml:space="preserve">
+         <p>
+            <lb facs="#facs_227_r_3_1_tl_37" n="N037"/><w>uns</w> <w>daran</w> <w>ergötzt</w> <w>haben</w><pc>,</pc> <w>so</w> <w>wie</w> <w>auch</w> <w>Dein</w> <w>berühmtes</w> <w>von</w> <hi style="text-decoration: underline;"><w>nehmlich</w></hi>
+            <lb facs="#facs_227_r_3_1_tl_38" n="N038"/><hi style="text-decoration: underline;"><w>nehmlich</w></hi><pc>.</pc> <w>Deinen</w> <w>Jungen</w> <w>möchte</w> <w>ich</w> <w>wohl</w> <w>sehen</w><pc>;</pc> <w>spricht</w> <w>er</w> <w>schon</w><pc>?</pc> <pc>—</pc>
+         </p>
+      </x:context>
+      <x:expect label="." xml:space="preserve">
+         <p>
+            <lb facs="#facs_227_r_3_1_tl_37" n="N037"/><w>uns</w> <w>daran</w> <w>ergötzt</w> <w>haben</w><pc>,</pc> <w>so</w> <w>wie</w> <w>auch</w> <w>Dein</w> <w>berühmtes</w> <w>von</w> <hi style="text-decoration: underline;"><w>nehmlich</w>
+            <lb facs="#facs_227_r_3_1_tl_38" n="N038"/><w>nehmlich</w></hi><pc>.</pc> <w>Deinen</w> <w>Jungen</w> <w>möchte</w> <w>ich</w> <w>wohl</w> <w>sehen</w><pc>;</pc> <w>spricht</w> <w>er</w> <w>schon</w><pc>?</pc> <pc>—</pc>
+         </p>
+      </x:expect>
+   </x:scenario>
+   
 </x:description>

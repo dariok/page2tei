@@ -21,7 +21,7 @@
                   <xsl:sequence select="current-group()" />
                </xsl:when>
                <xsl:otherwise>
-                  <xsl:variable name="lastHi" select="index-of(current-group(), current-group()[self::tei:hi][last()])"/>
+                  <xsl:variable name="lastHi" select="(index-of(current-group(), current-group()[self::tei:hi][last()]))[last()]"/>
                   
                   <hi style="{current-group()[1]/@style}">
                      <xsl:apply-templates select="current-group()[position() le $lastHi]" mode="do-combine-hi" />
