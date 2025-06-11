@@ -103,7 +103,7 @@
       <xsl:copy>
          <xsl:apply-templates/>
          <revisionDesc>
-            <change xml:id="{$cdt}" when="{$cdt}">auto-resolved wikiData entities against lobid and generated standOff</change>
+            <change xml:id="chg{$cdt}" when="{$cdt}">auto-resolved wikiData entities against lobid and generated standOff</change>
          </revisionDesc>
       </xsl:copy>
    </xsl:template>
@@ -117,7 +117,7 @@
       <xsl:variable name="wd_orgs" select="distinct-values(.//tei:text//tei:rs[@type='org'][@wikiData]/@wikiData)"/>
       <xsl:copy>
          <xsl:apply-templates/>
-         <standOff change="{'#'||$cdt}">
+         <standOff change="{'#chg'||$cdt}">
             <xsl:if test=".//tei:rs[@type='person'][@wikiData]">
                <listPerson>
                   <xsl:for-each select="$wd_pers">
