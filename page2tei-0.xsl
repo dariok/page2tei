@@ -114,6 +114,12 @@
    </xd:doc>
    <xsl:template match="/">
       <xsl:apply-templates select="mets:mets" />
+      <xsl:apply-templates select="*/p:Page | */pc:Page" mode="facsimile">
+         <xsl:with-param name="numCurr" tunnel="1" select="*/*:Metadata/*:TranskribusMetadata/@pageNr" />
+      </xsl:apply-templates>
+      <xsl:apply-templates select="*/p:Page | */pc:Page" mode="text">
+         <xsl:with-param name="numCurr" tunnel="1" select="*/*:Metadata/*:TranskribusMetadata/@pageNr" />
+      </xsl:apply-templates>
    </xsl:template>
 
    <xd:doc>
