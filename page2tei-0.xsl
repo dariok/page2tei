@@ -110,7 +110,7 @@
    <xsl:param name="debug" select="false()"/>
 
    <xd:doc>
-      <xd:desc>Entry</xd:desc>
+      <xd:desc>Entry – note: we also allow execution on a singe PAGE file</xd:desc>
    </xd:doc>
    <xsl:template match="/">
       <xsl:apply-templates select="mets:mets" />
@@ -474,11 +474,11 @@
 
       <xsl:variable name="renditionValue">
          <xsl:choose>
-            <xsl:when test="local-name(parent::*) = 'TableCell'">TableCell</xsl:when>
             <xsl:when test="local-name() = 'TextRegion'">TextRegion</xsl:when>
             <xsl:when test="local-name() = 'SeparatorRegion'">Separator</xsl:when>
             <xsl:when test="local-name() = 'GraphicRegion'">Graphic</xsl:when>
             <xsl:when test="local-name() = 'TextLine'">Line</xsl:when>
+            <xsl:when test="local-name(parent::*) = 'TableCell'">TableCell</xsl:when>
             <xsl:otherwise>printspace</xsl:otherwise>
          </xsl:choose>
       </xsl:variable>
@@ -493,6 +493,10 @@
       </xsl:variable>
 
       <xsl:choose>
+         <xsl:when test="(self::p:TextLine or self::pc:TextLine) and (parent::p:TableCell or parent::pc:TableCell)">
+            <xsl:text>
+               </xsl:text>
+         </xsl:when>
          <xsl:when test="self::p:TextLine or self::pc:TextLine">
             <xsl:text>
             </xsl:text>
@@ -565,11 +569,30 @@
    <xsl:template match="p:TableRegion | pc:TableRegion" mode="facsimile">
       <xsl:param name="numCurr" tunnel="true"/>
 
+      <xsl:text>
+         </xsl:text>
       <zone points="{(p:Coords/@points, pc:Coords/@points)}" rendition="Table">
          <xsl:attribute name="xml:id">
             <xsl:value-of select="'facs_' || $numCurr || '_' || @id"/>
          </xsl:attribute>
-         <xsl:apply-templates select="p:TableCell//p:TextLine | pc:TableCell//pc:TextLine" mode="facsimile"/>
+         <xsl:apply-templates select="p:TableCell | pc:TableCell" mode="facsimile"/>
+         <xsl:text>
+         </xsl:text>
+      </zone>
+   </xsl:template>
+   
+   <xsl:template match="p:TableCell | pc:TableCell" mode="facsimile">
+      <xsl:param name="numCurr" tunnel="true"/>
+      
+      <xsl:text>
+            </xsl:text>
+      <zone points="{(p:Coords/@points, pc:Coords/@points)}" rendition="TableCell">
+         <xsl:attribute name="xml:id">
+            <xsl:value-of select="'facs_' || $numCurr || '_' || @id"/>
+         </xsl:attribute>
+         <xsl:apply-templates select="p:TextLine | pc:TextLine" mode="facsimile" />
+         <xsl:text>
+            </xsl:text>
       </zone>
    </xsl:template>
 
@@ -943,6 +966,7 @@
       <xd:desc>Starting milestones for (possibly nested) elements</xd:desc>
    </xd:doc>
    <xsl:template match="local:m[@pos = 's']">
+      <xsl:param name="numCurr" tunnel="true" />
       <xsl:variable name="o" select="@o"/>
       <xsl:variable name="custom" as="map(*)">
          <xsl:map>
@@ -1140,7 +1164,13 @@
             <xsl:element name="{@type}">
                <xsl:for-each select="map:keys($custom)">
                   <xsl:if test="not(. = ('', 'length'))">
-                     <xsl:attribute name="{.}" select="$custom(.)"/>
+                     <xsl:try>
+                        <xsl:attribute name="{.}" select="$custom(.)"/>
+                        <xsl:catch>
+                           <xsl:message select="string($o)" />
+                           <xsl:message select="string($numCurr)"/>
+                        </xsl:catch>
+                     </xsl:try>
                   </xsl:if>
                </xsl:for-each>
                <xsl:call-template name="elem">
@@ -1211,9 +1241,9 @@
    </xsl:template>
 
    <xd:doc>
-      <xd:desc>Text nodes to be copied</xd:desc>
+      <xd:desc>Text nodes to be copied – we replace U+xA0 by a regular space U+x20</xd:desc>
    </xd:doc>
    <xsl:template match="text()">
-      <xsl:value-of select="."/>
+      <xsl:value-of select="translate(., '', ' ')"/>
    </xsl:template>
 </xsl:stylesheet>
