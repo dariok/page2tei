@@ -12,6 +12,7 @@ Additional stylesheets can be applied to the output created by the basic transfo
 - `combine-continued.xsl` (or set parameter `combine=true()`) — try to combine entities that are split over a line break into one element
 - `simplify-coordinates.xsl` (parameter `bounding-rectangles=true()` by default) — convert polygons into bounding rectangles
 - `tokenize.xsl` (or set parameter `tokenize=true()`) — perform (very basic!) whitespace tokenization
+- `resolve-wikiData-lobid.xsl` – a separate helper stylesheet that can be used to resolve WikiData named entities tagged in Transkribus against LOBID and returns `tei:idno` from GND, GeoNames, WikiData instead of `tei:rs/@wikiData`. 
 
 ## Parameters
 You can set the following parameters when calling `page2tei-0.xsl` (via command line or via an oXygen scenario; in oXygen, the parameters should be marked as “XPath“):
@@ -34,6 +35,7 @@ You can set the following parameters when calling `page2tei-0.xsl` (via command 
 - @tboenig
 - @peterstadler
 - @tillgrallert
+- @skurzinz
 
 ---
 
