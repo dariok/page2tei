@@ -71,8 +71,11 @@
                         )[1]"
                   />
                   <xsl:try>
-                     <xsl:variable name="last" select="index-of(current-group(), $final)[last()]"/>
-                     
+                     <xsl:variable name="last" select="let $group := current-group()
+                        return
+                        for $i in 1 to count($group)
+                        return
+                           if ($group[$i] is $final) then $i else ()"/>
                   <xsl:element name="{local-name()}">
                      <xsl:apply-templates select="@*" mode="continued" />
                      <xsl:apply-templates select="current-group()[position() le $last]" mode="rs-continued" />
