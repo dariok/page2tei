@@ -108,12 +108,13 @@
    <xsl:include href="string-pack.xsl"/>
 
    <xsl:param name="debug" select="false()"/>
-
+   
    <xd:doc>
       <xd:desc>Entry – note: we also allow execution on a singe PAGE file</xd:desc>
    </xd:doc>
    <xsl:template match="/">
       <xsl:apply-templates select="mets:mets" />
+      <!-- these are entry points when working on a single PAGE file only -->
       <xsl:apply-templates select="*/p:Page | */pc:Page" mode="facsimile">
          <xsl:with-param name="numCurr" tunnel="1" select="*/*:Metadata/*:TranskribusMetadata/@pageNr" />
       </xsl:apply-templates>
@@ -587,6 +588,10 @@
       </zone>
    </xsl:template>
    
+   <xd:doc>
+      <xd:desc>Create the zone for a table cell</xd:desc>
+      <xd:param name="numCurr">Numerus currens of the current page</xd:param>
+   </xd:doc>
    <xsl:template match="p:TableCell | pc:TableCell" mode="facsimile">
       <xsl:param name="numCurr" tunnel="true"/>
       
