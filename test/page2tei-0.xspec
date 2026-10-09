@@ -244,9 +244,10 @@
          </x:context>
          <x:expect label="choice, expan + abbr" xml:space="preserve"
             ><pb facs="#facs_25" n="25" xml:id="img_0025"
-            /><fw facs="#facs_25_r1" type="page-number" place="top">
-               <lb facs="#facs_25_r1l1" n="N001"/>12.</fw
-            ><head facs="#facs_25_r2">
+            />
+            <fw facs="#facs_25_r1" type="page-number" place="top">
+               <lb facs="#facs_25_r1l1" n="N001"/>12.</fw>
+            <head facs="#facs_25_r2">
                <lb facs="#facs_25_r2l1" n="N001"/><choice><expan/><abbr>H&apos;r</abbr></choice>
                <lb facs="#facs_25_line_1459841092982_10"
                   n="N003" />getragen werden, die in <choice><expan>den</expan><abbr>d</abbr></choice>
@@ -291,11 +292,11 @@
             </ns3:fileSec>
          </x:context>
          <x:expect label="." xml:space="preserve"
-            ><pb facs="#facs_25" n="25" xml:id="img_0025"
-            /><head facs="#facs_25_r2">
+            ><pb facs="#facs_25" n="25" xml:id="img_0025" />
+            <head facs="#facs_25_r2">
                <lb facs="#facs_25_r2l1" n="N001"/><rs type="person"
-                  ><choice><expan>Herr</expan><abbr>H&apos;r</abbr></choice> <choice><expan>von</expan><abbr>v̄</abbr></choice> Kuglern</rs>.</head
-            ><head facs="#facs_25_r3">
+                  ><choice><expan>Herr</expan><abbr>H&apos;r</abbr></choice> <choice><expan>von</expan><abbr>v̄</abbr></choice> Kuglern</rs>.</head>
+            <head facs="#facs_25_r3">
                <lb facs="#facs_25_r3l1" n="N001"/><choice><expan>Numero</expan><abbr>N<hi
                   style="vertical-align: superscript;">o</hi></abbr></choice> 786.</head>
             <p facs="#facs_25_r4">
@@ -320,11 +321,11 @@
             </ns3:fileSec>
          </x:context>
          <x:expect label="." xml:space="preserve"
-            ><pb facs="#facs_25" n="25" xml:id="img_0025"
-            /><head facs="#facs_25_r2">
+            ><pb facs="#facs_25" n="25" xml:id="img_0025" />
+            <head facs="#facs_25_r2">
                <lb facs="#facs_25_r2l1" n="N001"/><rs type="person"
-                  ><choice><expan>Herr</expan><abbr>H&apos;r</abbr></choice> <choice><expan>von</expan><abbr>v̄</abbr></choice> Kuglern</rs>.</head
-            ><head facs="#facs_25_r3">
+                  ><choice><expan>Herr</expan><abbr>H&apos;r</abbr></choice> <choice><expan>von</expan><abbr>v̄</abbr></choice> Kuglern</rs>.</head>
+            <head facs="#facs_25_r3">
                <lb facs="#facs_25_r3l1" n="N001"/><choice><expan>Numero</expan><abbr>N<hi
                   style="vertical-align: superscript;">o</hi></abbr></choice> 786.</head>
             <p facs="#facs_25_r4">
@@ -837,8 +838,8 @@
                </TextEquiv>
             </TextRegion>
          </x:context>
-         <x:expect label="." xml:space="preserve"
-            ><head facs="#facs_90_r_486">
+         <x:expect label="." xml:space="preserve">
+            <head facs="#facs_90_r_486">
                <lb facs="#facs_90_r1l7" n="N001" /><hi style="letter-spacing: 5px;">Erster Abschnitt.</hi>
                <lb facs="#facs_90_r1l8" n="N002" /><hi style="font-weight: bold;">Die exegetische Theologie</hi></head
             ></x:expect>
@@ -901,8 +902,6 @@
             <head facs="#facs_25_r2">
                <lb facs="#facs_25_r2l1" n="N001"/><rs type="person"
                   ><choice><expan><w>Herr</w></expan><abbr><w>H&apos;r</w></abbr></choice> <choice><expan><w>von</w></expan><abbr><w>v̄</w></abbr></choice> <w>Kuglern</w></rs><pc>.</pc></head>
-         </div>
-         <div>
             <head facs="#facs_25_r3">
                <lb facs="#facs_25_r3l1" n="N001"/><choice><expan><w>Numero</w></expan><abbr><w>N</w><hi
                   style="vertical-align: superscript;"><w>o</w></hi></abbr></choice> <num>786</num><pc>.</pc></head>
@@ -934,8 +933,6 @@
             <head facs="#facs_25_r2">
                <lb facs="#facs_25_r2l1" n="N001"/><rs type="person"
                   ><choice><expan>Herr</expan><abbr>H&apos;r</abbr></choice> <choice><expan>von</expan><abbr>v̄</abbr></choice> Kuglern</rs>.</head>
-         </div>
-         <div>
             <head facs="#facs_25_r3">
                <lb facs="#facs_25_r3l1" n="N001"/><choice><expan>Numero</expan><abbr>N<hi
                   style="vertical-align: superscript;">o</hi></abbr></choice> 786.</head>
@@ -968,8 +965,6 @@
             <head facs="#facs_25_r2">
                <lb facs="#facs_25_r2l1" n="N001"/><rs type="person"
                   ><choice><expan><w>Herr</w></expan><abbr><w>H&apos;r</w></abbr></choice> <choice><expan><w>von</w></expan><abbr><w>v̄</w></abbr></choice> <w>Kuglern</w></rs><pc>.</pc></head>
-         </div>
-         <div>
             <head facs="#facs_25_r3">
                <lb facs="#facs_25_r3l1" n="N001"/><choice><expan><w>Numero</w></expan><abbr><w>N</w><hi
                   style="vertical-align: superscript;"><w>o</w></hi></abbr></choice> <num>786</num><pc>.</pc></head>

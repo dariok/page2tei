@@ -129,7 +129,7 @@
          rung s. unten.</Unicode>
    </TextEquiv>
 </TextRegion>
-<TextRegion orientation="0.0" type="endnote" id="TextRegion_1669389039232_5397" custom="readingOrder {index:2;} structure {type:paragraph;}">
+<TextRegion orientation="0.0" type="endnote" id="TextRegion_1669389039232_5397" custom="readingOrder {index:2;} structure {type:endnote;}">
    <Coords points="176,239 1364,239 1364,340 176,340"/>
    <TextLine id="r1l3" custom="readingOrder {index:0;}">
       <Coords points="184,304 1347,303 1347,273 184,274"/>
