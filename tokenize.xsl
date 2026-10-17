@@ -110,8 +110,9 @@
 
    <xsl:function name="tei:is-inline-word-part-node" as="xs:boolean">
       <xsl:param name="node" as="node()?" />
-      <xsl:sequence
-         select="exists($node[self::tei:supplied or self::tei:unclear or self::tei:choice[tei:corr or tei:sic]])" />
+      <!--<xsl:sequence
+         select="exists($node[self::tei:supplied or self::tei:unclear or self::tei:choice[tei:corr or tei:sic]])" />-->
+      <xsl:sequence select="local-name($node) = ('supplied', 'unclear', 'choice')" />
    </xsl:function>
 
    <xsl:function name="tei:mergeable-following-paragraph" as="element(tei:p)?">
@@ -259,7 +260,7 @@
       <!-- collect the nodes between this and the preceding word; will be used later to “restore” the content between
          words as the calling template only evaluates tei:w. -->
       <xsl:variable name="previous-token"
-         select="../*[self::tei:w or self::tei:num][. &lt;&lt; current()][last()]" />
+         select="preceding-sibling::*[self::tei:w or self::tei:num][1]" />
       <xsl:variable name="previous-word" select="preceding-sibling::tei:w[1]" />
       <xsl:variable name="previous-word-next-delimiter"
          select="$previous-word/following-sibling::node()[not(tei:is-inline-word-part-node(.))][1]" />

@@ -47,24 +47,24 @@
    
    <x:scenario label="T2">
       <x:context xml:space="preserve" mode="tokenize">
-         <p>
+         <body><p>
             <lb facs="#facs_35_r1l18" n="N016"/>aufbauen und sich auf diese Weise einen herausgehobenen Status si-¬
             <lb facs="#facs_35_r1l19" n="N017"/>chern. Diesem politischen Ziel dienten auch weitere Maßnahmen
             <lb facs="#facs_35_r1l20" n="N018"/>Nehemias. Die baulichen Veränderungen Jerusalems dienten dessen
-         </p>
+         </p></body>
       </x:context>
       <x:expect xml:space="preserve" label=".">
-         <p>
+         <body><p>
             <lb facs="#facs_35_r1l18" n="N016"/><w>aufbauen</w> <w>und</w> <w>sich</w> <w>auf</w> <w>diese</w> <w>Weise</w> <w>einen</w> <w>herausgehobenen</w> <w>Status</w> <w>si</w><pc>-</pc><pc>¬</pc>
             <lb facs="#facs_35_r1l19" n="N017"/><w>chern</w><pc>.</pc> <w>Diesem</w> <w>politischen</w> <w>Ziel</w> <w>dienten</w> <w>auch</w> <w>weitere</w> <w>Maßnahmen</w>
             <lb facs="#facs_35_r1l20" n="N018"/><w>Nehemias</w><pc>.</pc> <w>Die</w> <w>baulichen</w> <w>Veränderungen</w> <w>Jerusalems</w> <w>dienten</w> <w>dessen</w>
-         </p>
+         </p></body>
       </x:expect>
    </x:scenario>
    
    <x:scenario label="T3: cb">
       <x:context xml:space="preserve" mode="tokenize">
-         <p facs="#P1_TB00034 #P1_TB00035">
+         <body><p facs="#P1_TB00034 #P1_TB00035">
                <cb/>
                <lb facs="#P1_TL00169"/>Ein Sprecher des britischen Luftfahrt¬
                <lb facs="#P1_TL00170" break="no"/>ministeriums in London erklärte am Don¬
@@ -72,96 +72,97 @@
                <lb facs="#P1_TL00172"/>den festgesetzt. Sie seien zwar zeitweilig
                <lb facs="#P1_TL00173"/>eingestellt worden, jedoch nicht wegen
                <lb facs="#P1_TL00174"/>der „Invasoren“. Helgoland wurde zuletzt
-               <lb facs="#P1_TL00175"/>am 18. Dezember bombardiert.</p>
+               <lb facs="#P1_TL00175"/>am 18. Dezember bombardiert.</p></body>
       </x:context>
       <x:expect xml:space="preserve" label=".">
-         <p facs="#P1_TB00034 #P1_TB00035">
-               <cb/>
-               <lb facs="#P1_TL00169"/><w>Ein</w> <w>Sprecher</w> <w>des</w> <w>britischen</w> 
+         <body><p facs="#P1_TB00034 #P1_TB00035">
+               <cb/><lb facs="#P1_TL00169"/><w>Ein</w> <w>Sprecher</w> <w>des</w> <w>britischen</w> 
                <w>Luftfahrt<pc>¬</pc><lb facs="#P1_TL00170" break="no"/>ministeriums</w> <w>in</w> <w>London</w> <w>erklärte</w> <w>am</w> 
                <w>Don<pc>¬</pc><lb facs="#P1_TL00171" break="no"/>nerstag</w><pc>,</pc> <w>die</w> <w>Übungsbombardements</w> 
                <w>wür<pc>-</pc><cb break="no"/><lb break="no" facs="#P1_TL00172"/>den</w> <w>festgesetzt</w><pc>.</pc> <w>Sie</w> <w>seien</w> <w>zwar</w> <w>zeitweilig</w>
                <lb facs="#P1_TL00173"/><w>eingestellt</w> <w>worden</w><pc>,</pc> <w>jedoch</w> <w>nicht</w> <w>wegen</w>
                <lb facs="#P1_TL00174"/><w>der</w> <pc>„</pc><w>Invasoren</w><pc>“</pc><pc>.</pc> <w>Helgoland</w> <w>wurde</w> <w>zuletzt</w>
-               <lb facs="#P1_TL00175"/><w>am</w> <num>18</num><pc>.</pc> <w>Dezember</w> <w>bombardiert</w><pc>.</pc></p>
+               <lb facs="#P1_TL00175"/><w>am</w> <num>18</num><pc>.</pc> <w>Dezember</w> <w>bombardiert</w><pc>.</pc></p></body>
       </x:expect>
    </x:scenario>
    
    <x:scenario label="T4">
       <x:context mode="tokenize" xml:space="preserve">
-            <p facs="#P1_TB00054">
+            <body><div><p facs="#P1_TB00054">
                <lb/>be¬
                <lb facs="#P1_TL00250" break="no"/>gonnen. Unter dem Druck der Vietminh-
                <lb facs="#P1_TL00251"/>Angriffe mußten die Franzosen im Ost¬
-               <lb facs="#P1_TL00252" break="no"/>teil ihrer Front die Forts Binhlieu und</p>
+               <lb facs="#P1_TL00252" break="no"/>teil ihrer Front die Forts Binhlieu und</p></div></body>
       </x:context>
       <x:expect label="no hyphenation" xml:space="preserve">
-            <p facs="#P1_TB00054">
+            <body><div><p facs="#P1_TB00054">
                <lb/><w>be<pc>¬</pc><lb facs="#P1_TL00250" break="no"/>gonnen</w><pc>.</pc> <w>Unter</w> <w>dem</w> <w>Druck</w> <w>der</w> 
                <w>Vietminh</w><pc>-</pc><lb facs="#P1_TL00251"/><w>Angriffe</w> <w>mußten</w> <w>die</w> <w>Franzosen</w> <w>im</w> 
-               <w>Ost<pc>¬</pc><lb facs="#P1_TL00252" break="no"/>teil</w> <w>ihrer</w> <w>Front</w> <w>die</w> <w>Forts</w> <w>Binhlieu</w> <w>und</w></p>
+               <w>Ost<pc>¬</pc><lb facs="#P1_TL00252" break="no"/>teil</w> <w>ihrer</w> <w>Front</w> <w>die</w> <w>Forts</w> <w>Binhlieu</w> <w>und</w></p></div></body>
       </x:expect>
    </x:scenario>
    
    <x:scenario label="T5: pb + cb + lb">
       <x:context xml:space="preserve" mode="tokenize">
-         <p>
+         <div><p>
             <lb facs="#P1_TL00541"/>keiner amtlichen Verlautbarung den Rus¬
             <lb facs="#P1_TL00542" break="no"/>sen als den eigentlichen Angreifer be-<pb n="2" facs="#IMG00002"/>
             <cb/>
             <lb facs="#P2_TL00001"/>zeichnet haben. Sie haben jedoch die
-         </p>
+         </p></div>
       </x:context>
       <x:expect xml:space="preserve" label="w mit (pb + cb + lb)">
-         <p>
+         <div><p>
             <lb facs="#P1_TL00541"/><w>keiner</w> <w>amtlichen</w> <w>Verlautbarung</w> <w>den</w> 
                <w>Rus<pc>¬</pc><lb facs="#P1_TL00542" break="no"/>sen</w> <w>als</w> <w>den</w> <w>eigentlichen</w> <w>Angreifer</w> 
                <w>be<pc>-</pc><pb n="2" facs="#IMG00002" break="no"/><cb break="no"/><lb facs="#P2_TL00001" break="no" />zeichnet</w> <w>haben</w><pc>.</pc> <w>Sie</w> <w>haben</w> <w>jedoch</w> <w>die</w>
-         </p>
+         </p></div>
       </x:expect>
    </x:scenario>
    
    <x:scenario label="T6: spaced letters">
       <x:context xml:space="preserve" mode="tokenize">
-         <p>
+         <div><p>
             <lb facs="#P4_TL00126"/>Kriege von dem deutschen Forscher Do -
             <lb facs="#P4_TL00127"/>ma g k entwickelten Sulfonamide-Medika¬
             <lb facs="#P4_TL00128" break="no"/>mente dar, von denen in den letzten
-         </p>
+         </p></div>
       </x:context>
       <x:expect xml:space="preserve" label=".">
-         <p>
+         <div><p>
             <lb facs="#P4_TL00126"/><w>Kriege</w> <w>von</w> <w>dem</w> <w>deutschen</w> <w>Forscher</w> <w>Do</w> <pc>-</pc>
             <lb facs="#P4_TL00127"/><w>ma</w> <w>g</w> <w>k</w> <w>entwickelten</w> <w>Sulfonamide</w><pc>-</pc><w>Medika<pc>¬</pc><lb facs="#P4_TL00128" break="no"/>mente</w> <w>dar</w><pc>,</pc> <w>von</w> <w>denen</w> <w>in</w> <w>den</w> <w>letzten</w>
-         </p>
+         </p></div>
       </x:expect>
    </x:scenario>
    
    <x:scenario label="T7">
       <x:context xml:space="preserve" mode="tokenize">
-         <p facs="#P2_TB00105">
+         <div><p facs="#P2_TB00105">
             <lb facs="#P2_TL00578"/>„Ich habe mich nicht darum bemüht“,
             <lb facs="#P2_TL00579"/>entgegnete Ungersbach seelenruhig. „An¬
-            <lb facs="#P2_TL00580" break="no"/>schließend bin ich in der Dahlienstraße</p>
+            <lb facs="#P2_TL00580" break="no"/>schließend bin ich in der Dahlienstraße</p></div>
       </x:context>
       <x:expect label="." xml:space="preserve">
-         <p facs="#P2_TB00105">
+         <div><p facs="#P2_TB00105">
             <lb facs="#P2_TL00578"/><pc>„</pc><w>Ich</w> <w>habe</w> <w>mich</w> <w>nicht</w> <w>darum</w> <w>bemüht</w><pc>“</pc><pc>,</pc>
-            <lb facs="#P2_TL00579"/><w>entgegnete</w> <w>Ungersbach</w> <w>seelenruhig</w><pc>.</pc> <pc>„</pc><w>An<pc>¬</pc><lb facs="#P2_TL00580" break="no"/>schließend</w> <w>bin</w> <w>ich</w> <w>in</w> <w>der</w> <w>Dahlienstraße</w></p>
+            <lb facs="#P2_TL00579"/><w>entgegnete</w> <w>Ungersbach</w> <w>seelenruhig</w><pc>.</pc> 
+               <pc>„</pc><w>An<pc>¬</pc><lb facs="#P2_TL00580" break="no"/>schließend</w> <w>bin</w> <w>ich</w> <w>in</w> <w>der</w> <w>Dahlienstraße</w></p></div>
       </x:expect>
    </x:scenario>
    
    <x:scenario label="T8: words with multiple hyphens">
       <x:context xml:space="preserve" mode="tokenize">
-         <p>
+         <div><p>
             <lb facs="#P8_TL00093"/>nun einmal angekurbelte Lohn-Preis-
             <lb facs="#P8_TL00094"/>Spirale nicht weiterzudrehen.
-         </p>
+         </p></div>
       </x:context>
       <x:expect xml:space="preserve" label="all words kept">
-         <p>
-            <lb facs="#P8_TL00093"/><w>nun</w> <w>einmal</w> <w>angekurbelte</w> <w>Lohn</w><pc>-</pc><w>Preis</w><pc>-</pc><lb facs="#P8_TL00094"/><w>Spirale</w> <w>nicht</w> <w>weiterzudrehen</w><pc>.</pc>
-         </p>
+         <div><p>
+            <lb facs="#P8_TL00093"/><w>nun</w> <w>einmal</w> <w>angekurbelte</w> 
+               <w>Lohn</w><pc>-</pc><w>Preis</w><pc>-</pc><lb facs="#P8_TL00094"/><w>Spirale</w> <w>nicht</w> <w>weiterzudrehen</w><pc>.</pc>
+         </p></div>
       </x:expect>
    </x:scenario>
    
@@ -186,36 +187,36 @@
       </x:scenario>
       <x:scenario label="T9.2">
          <x:context xml:space="preserve" mode="tokenize">
-            <p>
+            <div><p>
                <lb/>Wenn ich aber auch jener <hi style="letter-spacing: 5px;">Nachtfeyer der Freundschaft</hi>
                <lb/>beygewohnt hätte, so würde es doch in Ansehung der <hi style="letter-spacing: 5px;">bewuß¬
                <lb/>ten Sache</hi> schwerlich unter uns zu einer so zusammenhängen¬
                <lb/>den und bestimmten Erklärung gekommen seyn, als Sie mir
                <lb/>zurückzulaßen beliebt haben.
-            </p>
+            </p></div>
          </x:context>
          <x:expect label="." xml:space="preserve">
-            <p>
+            <div><p>
                <lb/><w>Wenn</w> <w>ich</w> <w>aber</w> <w>auch</w> <w>jener</w> <hi style="letter-spacing: 5px;"><w>Nachtfeyer</w> <w>der</w> <w>Freundschaft</w></hi>
                <lb/><w>beygewohnt</w> <w>hätte</w><pc>,</pc> <w>so</w> <w>würde</w> <w>es</w> <w>doch</w> <w>in</w> <w>Ansehung</w> <w>der</w> 
                <hi style="letter-spacing: 5px;"><w>bewuß<pc>¬</pc><lb break="no" />ten</w> <w>Sache</w></hi> <w>schwerlich</w> <w>unter</w> <w>uns</w> <w>zu</w> <w>einer</w> <w>so</w> 
                <w>zusammenhängen<pc>¬</pc><lb break="no" />den</w> <w>und</w> <w>bestimmten</w> <w>Erklärung</w> <w>gekommen</w> <w>seyn</w><pc>,</pc> <w>als</w> <w>Sie</w> <w>mir</w>
                <lb/><w>zurückzulaßen</w> <w>beliebt</w> <w>haben</w><pc>.</pc>
-            </p>
+            </p></div>
          </x:expect>
       </x:scenario>
       <x:scenario label="T9.3">
          <x:context mode="tokenize" xml:space="preserve">
-            <p>
+            <div><p>
                <lb facs="#facs_136_tr_1749674503_tl_7" n="N007"/>oder unglückliche Zustand ist schlechthin unbestimmbar, und <hi style="font-style: italic;">indivi¬
                   <lb facs="#facs_136_tr_1749674503_tl_8" n="N008"/>duel.</hi>.
-            </p>
+            </p></div>
          </x:context>
          <x:expect label="." xml:space="preserve">
-            <p>
+            <div><p>
                <lb facs="#facs_136_tr_1749674503_tl_7" n="N007"/><w>oder</w> <w>unglückliche</w> <w>Zustand</w> <w>ist</w> <w>schlechthin</w> <w>unbestimmbar</w><pc>,</pc> <w>und</w> 
-                  <hi style="font-style: italic;"><w>indivi<pc>¬</pc><lb facs="#facs_136_tr_1749674503_tl_8" n="N008" break="no" />duel</w><pc>.</pc></hi><pc>.</pc>
-            </p>
+               <hi style="font-style: italic;"><w>indivi<pc>¬</pc><lb facs="#facs_136_tr_1749674503_tl_8" n="N008" break="no" />duel</w><pc>.</pc></hi><pc>.</pc>
+            </p></div>
          </x:expect>
       </x:scenario>
    </x:scenario>
@@ -223,53 +224,53 @@
    <x:scenario label="T10: pb + lb + hi">
       <x:scenario label="T10.1">
          <x:context mode="tokenize" xml:space="preserve">
-            <p>
+            <div><p>
                <lb facs="#facs_2_r_1_1l28" n="N002"/>allerley noch wohl⸗
                <lb facs="#facs_2_r_1_1l29" n="N003"/><hi style="font-family: antiqua;">conditioni</hi>rter Haußrath an
-            </p>
+            </p></div>
          </x:context>
          <x:expect label="." xml:space="preserve">
-            <p>
+            <div><p>
                <lb facs="#facs_2_r_1_1l28" n="N002"/><w>allerley</w> <w>noch</w> 
                <w>wohl<pc>⸗</pc><lb facs="#facs_2_r_1_1l29" n="N003" break="no"/><hi style="font-family: antiqua;">conditioni</hi>rter</w> <w>Haußrath</w> <w>an</w>
-            </p>
+            </p></div>
          </x:expect>
       </x:scenario>
    </x:scenario>
    
    <x:scenario label="T11: hyphenation in quote with sign">
       <x:context xml:space="preserve" mode="tokenize">
-         <p>
+         <div><p>
             <lb facs="#facs_2_TextRegion_1589531276393_139l9" n="N009"/>Stands=Perſonen, un=
             <lb facs="#facs_2_TextRegion_1589531276393_139l10" n="N010"/>„ zehlich=gluͤckliche Proben
-         </p>
+         </p></div>
       </x:context>
       <x:expect xml:space="preserve" label=".">
-         <p>
+         <div><p>
             <lb facs="#facs_2_TextRegion_1589531276393_139l9" n="N009"/><w>Stands</w><pc>=</pc><w>Perſonen</w><pc>,</pc> 
                <w>un<pc>=</pc><lb facs="#facs_2_TextRegion_1589531276393_139l10" n="N010" break="no"/><pc>„</pc>zehlich</w><pc>=</pc><w>gluͤckliche</w> <w>Proben</w>
-         </p>
+         </p></div>
       </x:expect>
    </x:scenario>
    
    <x:scenario label="T12: hyphenation with long s">
       <x:scenario label="T12.1">
          <x:context xml:space="preserve" mode="tokenize">
-            <p>
+            <div><p>
                <lb />Stands=Perſonen, un=
                <lb />ſichere Proben
-            </p>
+            </p></div>
          </x:context>
          <x:expect xml:space="preserve" label=".">
-            <p>
+            <div><p>
                <lb /><w>Stands</w><pc>=</pc><w>Perſonen</w><pc>,</pc> 
                <w>un<pc>=</pc><lb break="no"/>ſichere</w> <w>Proben</w>
-            </p>
+            </p></div>
          </x:expect>
       </x:scenario>
       <x:scenario label="T12.2">
          <x:context xml:space="preserve" mode="tokenize">
-             <p facs="#facs_100_TextRegion_1625744546420_3198">
+             <div><p facs="#facs_100_TextRegion_1625744546420_3198">
                <lb facs="#facs_100_r2l14" n="N001"/>Ob nuhn dieſe oder die obige die rechte
                <lb facs="#facs_100_r2l15" n="N002"/>verzeignüs ſey der ordenlichen ſuc⸗</p>
             <pb facs="#facs_101" n="101" xml:id="img_0101"/>
@@ -278,17 +279,17 @@
             <p facs="#facs_101_TextRegion_1625744645601_3246">
                <lb facs="#facs_101_r1l2" n="N001"/>ceſsion vnnd nachvolge der Pfalz⸗
                <lb facs="#facs_101_r1l3" n="N002"/>grauen bey Rhein, vnnd Hertzog
-            </p>
+            </p></div>
          </x:context>
          <x:expect xml:space="preserve" label=".">
-             <p facs="#facs_100_TextRegion_1625744546420_3198 #facs_101_TextRegion_1625744645601_3246">
+             <div><p facs="#facs_100_TextRegion_1625744546420_3198 #facs_101_TextRegion_1625744645601_3246">
                <lb facs="#facs_100_r2l14" n="N001"/><w>Ob</w> <w>nuhn</w> <w>dieſe</w> <w>oder</w> <w>die</w> <w>obige</w> <w>die</w> <w>rechte</w>
                <lb facs="#facs_100_r2l15" n="N002"/><w>verzeignüs</w> <w>ſey</w> <w>der</w> <w>ordenlichen</w> 
                <w>ſuc<pc>⸗</pc><pb facs="#facs_101" n="101" xml:id="img_0101" break="no"/><fw
                    type="page-number" facs="#facs_101_region_1625132014858_681" place="top"><lb facs="#facs_101_r1l1" n="N001"/>48</fw><lb
                    facs="#facs_101_r1l2" n="N001" break="no"/>ceſsion</w> <w>vnnd</w> <w>nachvolge</w> <w>der</w> 
                <w>Pfalz<pc>⸗</pc><lb facs="#facs_101_r1l3" n="N002" break="no"/>grauen</w> <w>bey</w> <w>Rhein</w><pc>,</pc> <w>vnnd</w> <w>Hertzog</w>
-            </p>
+            </p></div>
          </x:expect>
       </x:scenario>
    </x:scenario>
@@ -517,6 +518,23 @@
          <x:expect xml:space="preserve" label=".">
             <p>
                <lb facs="#facs_614_r1l18" n="N016"/><w><unclear>u</unclear>m</w> <w>Contra</w> <w>leges</w> <w>amor</w> <w>irr<choice><corr>e</corr><sic>i</sic></choice>quie<pc>⸗</pc><lb facs="#facs_614_r1l19" n="N017" break="no"/>tus</w> <w>hortoris</w><pc>,</pc>
+            </p>
+         </x:expect>
+      </x:scenario>
+   </x:scenario>
+   
+   <x:scenario label="T18: German Auslassung">
+      <x:scenario label="T18.1">
+         <x:context xml:space="preserve" mode="tokenize">
+            <p>
+               <lb/>Der Haus- und Hof-Liferant sowie der Haus-
+               <lb/>und Hof-Liferant
+            </p>
+         </x:context>
+         <x:expect xml:space="preserve" label=".">
+            <p>
+               <lb/><w>Der</w> <w>Haus</w><pc>-</pc> <w>und</w> <w>Hof</w><pc>-</pc><w>Liferant</w> <w>sowie</w> <w>der</w> <w>Haus</w><pc>-</pc>
+               <lb/><w>und</w> <w>Hof</w><pc>-</pc><w>Liferant</w>
             </p>
          </x:expect>
       </x:scenario>
