@@ -132,10 +132,56 @@
       <xd:desc>helper: gather page contents</xd:desc>
    </xd:doc>
    <xsl:variable name="make_div">
-<!--      <div>-->
-         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[(@ID, @USE) = $PAGEXML]/mets:file" mode="text" />
-      <!--</div>-->
+      <xsl:call-template name="make_div">
+         <xsl:with-param name="context">
+            <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[(@ID, @USE) = $PAGEXML]/mets:file" mode="text" />
+         </xsl:with-param>
+         <xsl:with-param name="level" select="1" />
+      </xsl:call-template>
    </xsl:variable>
+   
+   <xsl:template name="make_div">
+      <xsl:param name="context" as="node()+"/>
+      <xsl:param name="level" as="xs:integer" />
+      <xsl:for-each-group select="$context/*" group-starting-with="tei:head[@depth = $level]">
+         <xsl:variable name="indent">
+            <xsl:text>
+      </xsl:text>
+            <xsl:for-each select="1 to (3 * $level)"><xsl:text> </xsl:text></xsl:for-each>
+         </xsl:variable>
+         
+         <xsl:choose>
+            <xsl:when test="current-group()[@depth = $level + 1]">
+               <xsl:sequence select="$indent" />
+               <div>
+                  <xsl:call-template name="make_div">
+                     <xsl:with-param name="context">
+                           <xsl:sequence select="current-group()" />
+                     </xsl:with-param>
+                     <xsl:with-param name="level" select="$level + 1" />
+                  </xsl:call-template>
+                  <xsl:sequence select="$indent" />
+               </div>
+            </xsl:when>
+            <xsl:when test="$level gt 1 and not(current-group()[1]/@depth=$level)">
+               <xsl:for-each select="current-group()">
+                  <xsl:sequence select="$indent" />
+                  <xsl:sequence select="." />
+               </xsl:for-each>
+            </xsl:when>
+            <xsl:otherwise>
+               <xsl:sequence select="$indent" />
+               <div>
+                  <xsl:for-each select="current-group()">
+                     <xsl:sequence select="$indent || '   '" />
+                     <xsl:sequence select="." />
+                  </xsl:for-each>
+                  <xsl:sequence select="$indent" />
+               </div>
+            </xsl:otherwise>
+         </xsl:choose>
+      </xsl:for-each-group>
+   </xsl:template>
    
    <xd:doc>
       <xd:desc>Entry point: start at the top of METS.xml</xd:desc>
@@ -207,46 +253,37 @@
             <xsl:text>
       </xsl:text>
             <body>
-               <xsl:for-each-group
-                     select="$make_div"
-                     group-starting-with="*[local-name() = 'pb' and following-sibling::*[1][local-name() = 'head']]
-                        | *[local-name() = 'head' and not(preceding-sibling::*[1][local-name() = 'pb'])]"
-               >
+               <xsl:sequence select="$make_div"></xsl:sequence>
+               <!--<xsl:variable name="combined">
+                  <xsl:choose>
+                     <xsl:when test="$combine">
+                        <xsl:apply-templates select="$make_div" mode="continued"/>
+                     </xsl:when>
+                     <xsl:otherwise>
+                        <xsl:sequence select="$make_div" />
+                     </xsl:otherwise>
+                  </xsl:choose>
+               </xsl:variable>
+               <xsl:variable name="combined-hi">
+                  <xsl:apply-templates select="$combined" mode="combine-hi" />
+               </xsl:variable>
+               <xsl:variable name="tokenized">
+                  <xsl:choose>
+                     <xsl:when test="$tokenize">
+                        <xsl:apply-templates select="$combined-hi" mode="tokenize" />
+                     </xsl:when>
+                     <xsl:otherwise>
+                        <xsl:copy-of select="$combined-hi" />
+                     </xsl:otherwise>
+                  </xsl:choose>
+               </xsl:variable>
+               <xsl:for-each select="$tokenized/*">
                   <xsl:text>
-         </xsl:text>
-                  <div xmlns="http://www.tei-c.org/ns/1.0">
-                     <xsl:variable name="combined">
-                        <xsl:choose>
-                           <xsl:when test="$combine">
-                              <xsl:apply-templates select="current-group()" mode="continued" />
-                           </xsl:when>
-                           <xsl:otherwise>
-                              <xsl:copy-of select="current-group()" />
-                           </xsl:otherwise>
-                        </xsl:choose>
-                     </xsl:variable>
-                     <xsl:variable name="combined-hi">
-                        <xsl:apply-templates select="$combined" mode="combine-hi" />
-                     </xsl:variable>
-                     <xsl:variable name="tokenized">
-                        <xsl:choose>
-                           <xsl:when test="$tokenize">
-                              <xsl:apply-templates select="$combined-hi" mode="tokenize" />
-                           </xsl:when>
-                           <xsl:otherwise>
-                              <xsl:copy-of select="$combined-hi" />
-                           </xsl:otherwise>
-                        </xsl:choose>
-                     </xsl:variable>
-                     <xsl:for-each select="$tokenized/*">
-                        <xsl:text>
             </xsl:text>
-                        <xsl:sequence select="." />
-            </xsl:for-each>
-                        <xsl:text>
-         </xsl:text>
-                  </div>
-               </xsl:for-each-group>
+                  <xsl:sequence select="." />
+               </xsl:for-each>
+               <xsl:text>
+         </xsl:text>-->
                <xsl:text>
       </xsl:text>
             </body>
@@ -623,10 +660,17 @@
       <!-- check whether this PAGE file has been created by Transkribus Smart Extract -->
       <xsl:variable name="isSmartExtract" as="xs:boolean" select="starts-with(//*:Metadata/*:Creator, 'Smart Extract')"/>
       
-      <xsl:variable name="thisPage" select="."/>
+      <xsl:variable name="thisPage" select="." />
       <xsl:variable name="imageWidth" select="@imageWidth" />
       
-      <pb facs="#facs_{$numCurr}" n="{$numCurr}" xml:id="img_{format-number($numCurr, '0000')}"/>
+      <pb facs="#facs_{$numCurr}" n="{$numCurr}" xml:id="img_{format-number($numCurr, '0000')}">
+         <xsl:if test="$isSmartExtract and $useSmartExtract">
+            <xsl:variable name="langs" as="xs:string+">
+               <xsl:apply-templates select="//*:TranskribusMetadata/*:Property[@key='language']" />
+            </xsl:variable>
+            <xsl:attribute name="xml:lang" select="string-join($langs)" />
+         </xsl:if>
+      </pb>
       <xsl:choose>
          <!-- With Smart Extract, use the parent information for grouping -->
          <xsl:when test="$isSmartExtract and $useSmartExtract">
@@ -640,22 +684,16 @@
                </xsl:map>
             </xsl:variable>
             
-            <xsl:for-each-group select="map:keys($contents)" group-by="map:get($contents, .)?parent?id">
-               <xsl:sort select="$thisPage//*:RegionRefIndexed[@regionRef=current-grouping-key()]/@index => number()" />
-               <xsl:text>
-         </xsl:text>
-               <div>
-                  <xsl:for-each select="current-group()">
-                     <xsl:sort select="number($contents(.)?parent?index)" />
-                     <xsl:variable name="id" select="."/>
-                     <xsl:apply-templates select="$thisPage//*[@id = $id]" mode="text">
-                        <xsl:with-param name="center" tunnel="true" select="number($imageWidth) div 2"
-                           as="xs:double"/>
-                        <xsl:with-param name="isSmartExtract" tunnel="true" select="true()" />
-                     </xsl:apply-templates>
-                  </xsl:for-each>
-               </div>
-            </xsl:for-each-group>
+            <xsl:for-each select="map:keys($contents)">
+               <xsl:sort select="$thisPage//*:RegionRefIndexed[@regionRef=current()]/@index => number()" />
+               <xsl:if test="not(map:contains(map:get($contents, .), 'parent'))">
+                  <xsl:call-template name="makeDiv">
+                     <xsl:with-param name="thisPage" select="$thisPage" tunnel="1" />
+                     <xsl:with-param name="contents" select="$contents" tunnel="1" />
+                     <xsl:with-param name="imageWidth" select="$imageWidth" tunnel="1" />
+                  </xsl:call-template>
+               </xsl:if>
+            </xsl:for-each>
          </xsl:when>
          <!-- else, use the previously established processing -->
          <xsl:otherwise>
@@ -665,6 +703,48 @@
                <xsl:with-param name="center" tunnel="true" select="number($imageWidth) div 2"
                   as="xs:double"/>
                <xsl:with-param name="isSmartExtract" tunnel="true" select="$isSmartExtract" />
+            </xsl:apply-templates>
+         </xsl:otherwise>
+      </xsl:choose>
+   </xsl:template>
+   
+   <xsl:template name="makeDiv">
+      <xsl:param name="thisPage" tunnel="1" />
+      <xsl:param name="contents" tunnel="1" />
+      <xsl:param name="imageWidth" tunnel="1" />
+      <xsl:param name="depth" select="0" as="xs:integer"/>
+      
+      <xsl:variable name="current" select="." />
+      <xsl:variable name="children" as="xs:string*">
+         <xsl:for-each select="map:keys($contents)">
+            <xsl:if test="$contents(.)?parent?id = $current">
+               <xsl:value-of select="."/>
+            </xsl:if>
+         </xsl:for-each>
+      </xsl:variable>
+      
+      <xsl:choose>
+         <xsl:when test="count($children)">
+            <xsl:text>
+         </xsl:text>
+<!--            <div xml:id="{.}">-->
+               <xsl:for-each select="$children">
+                  <xsl:sort select="$thisPage//*:RegionRefIndexed[@regionRef = current()]/@index => number()" />
+                  <xsl:call-template name="makeDiv">
+                     <xsl:with-param name="depth" select="$depth + 1" />
+                  </xsl:call-template>
+               </xsl:for-each>
+               <xsl:text>
+         </xsl:text>
+            <!--</div>-->
+         </xsl:when>
+         <xsl:otherwise>
+            <xsl:apply-templates select="$thisPage//*[@id = $current]" mode="text">
+               <xsl:sort select="$thisPage//*:RegionRefIndexed[@regionRef = current()]/@index => number()" />
+               <xsl:with-param name="center" tunnel="true" select="number($imageWidth) div 2"
+                  as="xs:double"/>
+               <xsl:with-param name="isSmartExtract" tunnel="true" select="true()" />
+               <xsl:with-param name="depth" select="$depth" />
             </xsl:apply-templates>
          </xsl:otherwise>
       </xsl:choose>
@@ -687,6 +767,7 @@
       <xsl:param name="numCurr" tunnel="true"/>
       <xsl:param name="center" tunnel="true" as="xs:double"/>
       <xsl:param name="withoutTextline" tunnel="true" />
+      <xsl:param name="depth" as="xs:integer"/>
       
       <xsl:variable name="custom" as="map(*)">
          <xsl:apply-templates select="@custom"/>
@@ -699,6 +780,9 @@
             <xsl:text>
             </xsl:text>
             <head facs="#facs_{$numCurr}_{@id}">
+               <xsl:if test="exists($depth)">
+                  <xsl:attribute name="depth" select="$depth" />
+               </xsl:if>
                <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
             </head>
          </xsl:when>
@@ -795,6 +879,14 @@
             <p facs="#facs_{$numCurr}_{@id}">
                <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
             </p>
+         </xsl:when>
+         <xsl:when test="$custom?structure?type = ('salute', 'signed')">
+            <xsl:text>
+            </xsl:text>
+            <xsl:element name="{$custom?structure?type}">
+               <xsl:attribute name="facs" select="'#facs_' || $numCurr || '_' || @id" />
+               <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
+            </xsl:element>
          </xsl:when>
          <!-- the fallback option should be a semantically open element such as <ab> -->
          <xsl:otherwise>
@@ -1145,7 +1237,7 @@
                </sic>
             </choice>
          </xsl:when>
-         <xsl:when test="@type = 'date'">
+         <xsl:when test="@type = ('date', 'datetime')">
             <date>
                <!--<xsl:variable name="year" select="if(map:keys($custom) = 'year') then format-number(xs:integer(map:get($custom, 'year')), '0000') else '00'"/>
           <xsl:variable name="month" select=" if(map:keys($custom) = 'month') then format-number(xs:integer(map:get($custom, 'month')), '00') else '00'"/>
@@ -1294,6 +1386,18 @@
          </xsl:text>
       <graphic url="{@imgUrl}" width="{following::p:Page/@imageWidth}px"
          height="{following::p:Page/@imageHeight}px"/>
+   </xsl:template>
+   
+   <xsl:template match="*:TranskribusMetadata/*:Property[@key='language']">
+      <xsl:choose>
+         <xsl:when test="@value = 'German'">de</xsl:when>
+         <xsl:when test="@value = 'French'">fr</xsl:when>
+         <xsl:when test="@value = 'Latin'">la</xsl:when>
+         <xsl:when test="@value = 'Italian'">it</xsl:when>
+         <xsl:otherwise>
+            <xsl:message select="string(@value)"/>
+         </xsl:otherwise>
+      </xsl:choose>
    </xsl:template>
 
    <xd:doc>
